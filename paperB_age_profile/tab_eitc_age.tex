@@ -1,0 +1,27 @@
+\begin{table}[!htbp]
+\centering
+\caption{The EITC in childhood scored at different ages of the son (PSID)}
+\label{tab:eitc_age}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}25--29\end{tabular} & \begin{tabular}[b]{@{}c@{}}30--34\end{tabular} & \begin{tabular}[b]{@{}c@{}}35--39\end{tabular} & \begin{tabular}[b]{@{}c@{}}40--44\end{tabular} & \begin{tabular}[b]{@{}c@{}}Change\end{tabular} & \begin{tabular}[b]{@{}c@{}}Within son\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{l}{\textit{Coefficient of exposure (thousands of 2000 dollars of maximum credit over the son's 13--18)}} \\
+ln earnings, all sons & $-0.0160^{*}$ & $-0.0157$ & $-0.0096$ & $-0.0025$ & $0.0136$ & $0.0294^{***}$ \\
+ & (0.0083) & (0.0109) & (0.0129) & (0.0185) & (0.0186) & (0.0095) \\
+\quad + ln parental income & $-0.0159^{**}$ & $-0.0145^{*}$ & $-0.0086$ & $-0.0061$ & $0.0098$ & $0.0274^{***}$ \\
+ & (0.0077) & (0.0084) & (0.0118) & (0.0162) & (0.0167) & (0.0091) \\
+ln earnings, mother $\le$ 12 years of schooling & $-0.0112$ & $0.0067$ & $0.0012$ & $0.0107$ & $0.0219$ & $0.0256$ \\
+ & (0.0119) & (0.0135) & (0.0206) & (0.0401) & (0.0399) & (0.0171) \\
+employed, all sons & $-0.0003$ & $-0.0019$ & $0.0038$ & $0.0060$ & $0.0063$ & $0.0090^{***}$ \\
+ & (0.0016) & (0.0023) & (0.0032) & (0.0066) & (0.0066) & (0.0027) \\
+employed, mother $\le$ 12 years of schooling & $0.0015$ & $0.0000$ & $0.0008$ & $0.0034$ & $0.0020$ & $0.0088$ \\
+ & (0.0035) & (0.0044) & (0.0061) & (0.0193) & (0.0197) & (0.0082) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Exposure: the maximum federal and state EITC for the family's number of children in each year of the son's 13--18, summed (intent to treat, as \citet{bastian2018long}); sons whose teens fall in 1975 and later (2,925 sons with a valid wage). Birth-year, state-at-17 and number-of-children fixed effects, single-age dummies, PSID weights; change = 40--44 minus 25--29 from one stacked regression; within son: exposure $\times$ (age $-$ 40)/10 with son fixed effects and birth-year and children $\times$ age. Standard errors clustered by 1968 family. Source: \texttt{101.EITCByAge.py}; table built by \texttt{100.PaperBFableTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}

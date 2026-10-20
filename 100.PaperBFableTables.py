@@ -94,9 +94,14 @@ def t_layoff_exog():
             rows_d.append((f"{sex.capitalize()}, {lab}: layoff 45--49 minus 25--29", [cell(e["change"])]))
             rows_d.append((f"{sex.capitalize()}, {lab}: within person, layoff $\\times$ age", [cell(e["fe"])]))
     k = "rr (1 s.d.), + layoff x father's ln wage x age"
+    Wk = J("ui_duration_weeks")
     rows_u = [("Layoff share $\\times$ replacement rate $\\times$ age", [cell(U["fe|rr (1 s.d.)"]["lay_rr_z_xa"])]),
               ("\\quad + layoff share $\\times$ father's ln wage $\\times$ age", [cell(U[f"fe|{k}"]["lay_rr_z_xa"])]),
-              ("Placebo: father's ln wage $\\times$ replacement rate $\\times$ age", [cell(U[f"fe|{k}"]["flw_rr_z_xa"])])]
+              ("Placebo: father's ln wage $\\times$ replacement rate $\\times$ age", [cell(U[f"fe|{k}"]["flw_rr_z_xa"])]),
+              ("Layoff share $\\times$ weeks of benefit available $\\times$ age",
+               [cell(Wk["+ layoff x state unemployment rate x age"]["lay_wk_xa"])]),
+              ("Placebo: father's ln wage $\\times$ weeks $\\times$ age",
+               [cell(Wk["+ layoff x state unemployment rate x age"]["flw_wk_xa"])])]
     table("tab_layoff_exog", "Layoffs the father did not choose, daughters, and insurance at the father's wage (PSID)",
           "tab:layoff_exog", heads, [("A. National employment decline of the father's sector at the son's 12--18", rows_i),
                                      ("B. Sons and daughters, one reduced specification", rows_d),
@@ -109,8 +114,32 @@ def t_layoff_exog():
           "father present; clustered by 1968 family. Panel C: the benefit the state's law would have paid the father "
           "(half his weekly earnings between the state's minimum and maximum), over his weekly earnings, mean over the "
           "son's 12--18 (1976 and later), standardised; within-son design of Table~\\ref{tab:layoff_selection}, with "
-          "state-at-17 $\\times$ age. " + src("93.LayoffIndustryShocks.py", "92.LayoffDaughters.py",
-                                                  "99.SimulatedReplacementRate.py"))
+          "state-at-17 $\\times$ age. Weeks available: the state's regular maximum, 13 weeks when Extended Benefits were "
+          "on (DOL ETA 539) and the federal emergency programmes with tiers approximated from the state's insured and "
+          "total unemployment rates, mean over the son's 12--18 (1984 and later), standardised, with layoff share "
+          "$\\times$ the state's unemployment rate $\\times$ age. " + src("93.LayoffIndustryShocks.py", "92.LayoffDaughters.py",
+                                                  "99.SimulatedReplacementRate.py", "102.UIDurationWeeks.py"))
+
+
+def t_eitc():
+    E = J("eitc_by_age")
+    heads = ["25--29", "30--34", "35--39", "40--44", "Change", "Within son"]
+    rows = []
+    for key, lab in (("ln earnings, all sons", "ln earnings, all sons"),
+                     ("ln earnings, all sons, + ln parental income", "\\quad + ln parental income"),
+                     ("ln earnings, mother with <= 12 years of schooling", "ln earnings, mother $\\le$ 12 years of schooling"),
+                     ("employed, all sons", "employed, all sons"),
+                     ("employed, mother with <= 12 years of schooling", "employed, mother $\\le$ 12 years of schooling")):
+        e = E[key]
+        rows.append((lab, [cell(b, dec=4) for b in e["bands"]] + [cell(e["change"], dec=4), cell(e["fe"], dec=4)]))
+    table("tab_eitc_age", "The EITC in childhood scored at different ages of the son (PSID)", "tab:eitc_age", heads,
+          [("Coefficient of exposure (thousands of 2000 dollars of maximum credit over the son's 13--18)", rows)],
+          f"Exposure: the maximum federal and state EITC for the family's number of children in each year of the son's "
+          f"13--18, summed (intent to treat, as \\citet{{bastian2018long}}); sons whose teens fall in 1975 and later "
+          f"({E['ln earnings, all sons']['sons']:,} sons with a valid wage). Birth-year, state-at-17 and "
+          "number-of-children fixed effects, single-age dummies, PSID weights; change = 40--44 minus 25--29 from one "
+          "stacked regression; within son: exposure $\\times$ (age $-$ 40)/10 with son fixed effects and birth-year and "
+          "children $\\times$ age. Standard errors clustered by 1968 family. " + src("101.EITCByAge.py"))
 
 
 def t_split_robust():
@@ -185,3 +214,4 @@ if __name__ == "__main__":
     t_layoff_exog()
     t_split_robust()
     t_age_period()
+    t_eitc()

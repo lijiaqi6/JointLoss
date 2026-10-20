@@ -40,8 +40,15 @@ wage is held fixed; without that control the interaction is $-0.218^{*}$, the fa
 the cap makes the replacement rate fall with it (panel C of Table~\ref{tab:layoff_exog}).\footnote{Dependants'
 allowances and the exact benefit formulas are not coded; the cap binds in three quarters of the window years. On the sons
 whose teens fall in 1976 and later the layoff's within-son cost is itself small (0.040, s.e.\ 0.113). Code:
-\texttt{99.SimulatedReplacementRate.py}.} Unemployment insurance as legislated is not shown to weaken what a father's
-layoff passes on.
+\texttt{99.SimulatedReplacementRate.py}.} The duration of benefits gives the same answer. Weeks available in the
+family's state---the regular maximum, Extended Benefits when the state's trigger was on, and the federal emergency
+programmes of 1984--85, 1991--94, 2002--04 and 2008--13---average 34 weeks over the son's 12--18 (s.d.\ 10), and a
+standard deviation more changes the bend of the layoff's cost by $-0.191$ (s.e.\ 0.395), with the layoff's interaction
+with the state's unemployment rate held fixed, since the weeks are set by it.\footnote{Extended Benefits status from the
+Labor Department's weekly ETA 539 report (1984 on); the federal programmes' tiers are approximated from their schedules
+and the state's insured and total unemployment rates. 1,569 sons, 209 with a teen layoff year. Code:
+\texttt{102.UIDurationWeeks.py}.} Unemployment insurance as legislated, in its level or its duration, is not shown to
+weaken what a father's layoff passes on, and the duration design is too imprecise to rule it out.
 
 \subsection{Group search friction}
 
@@ -81,6 +88,20 @@ from 0.017$^{**}$ to 0.060$^{***}$, and a teen layoff's cost from nothing to 0.1
 any of these---schooling, the stability of parents' employment, insurance in the son's teens---would be scored at 30
 before most of its effect has appeared. The son's own spells run the other way: a policy that raises young men's
 employment shows its effect on the IGE early, and its share falls with age.
+
+The EITC shows that the sign of an evaluation can depend on the age at which it is scored. Following
+\citet{bastian2018long}, a son's exposure is the maximum federal and state credit his family could receive, given its
+number of children, in each year of his 13--18; the variation comes from the federal schedule by year and number of
+children, which expanded most in 1993--96, and from the state credits. Scored at 25--29, a thousand dollars more of
+exposure goes with earnings lower by 0.016$^{*}$ ($p = 0.052$); scored at 40--44, the coefficient is $-0.003$. Within the
+same son, exposure raises the growth of earnings by 0.029$^{***}$ ($p = 0.002$) and of employment by 0.009$^{***}$ a
+decade (Table~\ref{tab:eitc_age}). A credit that keeps teenagers in school and delays their entry into work looks
+costly at 25 and pays off later; \citet{bastian2018long} find more schooling and employment at 18--27. In the sons of
+mothers with at most twelve years of schooling, the families the credit reaches, the signs are the same and the
+estimates imprecise.\footnote{Exposure is intent to treat: it depends only on the year, the state and the number of
+children, with birth-year, state and number-of-children fixed effects. Code: \texttt{101.EITCByAge.py}.}
+
+\input{tab_eitc_age}
 
 \subsection{By race}
 
