@@ -1,0 +1,47 @@
+22:47:24 steps ['age', 'rehire', 'xacc'], fixed at 0 ['dgx', 'du', 'muG']
+22:47:24 workers 30, popsize 30, maxfevals {'A': 12000, 'B': 12000, 'C': 12000, 'D': 12000, 'E': 12000, 'F': 12000, 'G': 12000, 'H': 12000}, output /mnt/parscratch/users/cm1jil/ige_smm_results/ige_full_20261018_224720_j11861516
+22:47:28 start candidates: hpc_runs/ige_full_20261018_214332_j11860455/estimates.json:E Q 168.41; hpc_runs/ige_full_20261018_215612_j11860456/estimates.json:E Q 274.33 -> hpc_runs/ige_full_20261018_214332_j11860455/estimates.json:E
+22:47:42 sensitivity at start: condition number 638.3
+22:49:03 model E iter 10 evals 300 best Q 168.41
+22:50:17 model E iter 20 evals 600 best Q 168.41
+22:51:31 model E iter 30 evals 900 best Q 168.41
+22:52:45 model E iter 40 evals 1200 best Q 168.41
+22:53:59 model E iter 50 evals 1500 best Q 168.41
+22:55:13 model E iter 60 evals 1800 best Q 168.41
+22:56:31 model E iter 70 evals 2100 best Q 167.47
+22:57:45 model E iter 80 evals 2400 best Q 164.84
+22:59:00 model E iter 90 evals 2700 best Q 164.13
+23:00:15 model E iter 100 evals 3000 best Q 162.42
+23:01:28 model E iter 110 evals 3300 best Q 162.37
+23:02:43 model E iter 120 evals 3600 best Q 161.81
+23:03:57 model E iter 130 evals 3900 best Q 161.53
+23:05:12 model E iter 140 evals 4200 best Q 161.37
+23:06:26 model E iter 150 evals 4500 best Q 161.19
+23:07:40 model E iter 160 evals 4800 best Q 160.97
+23:08:53 model E iter 170 evals 5100 best Q 160.97
+23:10:08 model E iter 180 evals 5400 best Q 160.97
+23:11:21 model E iter 190 evals 5700 best Q 160.90
+23:12:33 model E iter 200 evals 6000 best Q 160.85
+23:13:48 model E iter 210 evals 6300 best Q 160.84
+23:15:01 model E iter 220 evals 6600 best Q 160.79
+23:16:18 model E iter 230 evals 6900 best Q 160.79
+23:17:34 model E iter 240 evals 7200 best Q 160.75
+23:18:52 model E iter 250 evals 7500 best Q 160.73
+23:20:10 model E iter 260 evals 7800 best Q 160.73
+23:21:23 model E iter 270 evals 8100 best Q 160.71
+23:22:39 model E iter 280 evals 8400 best Q 160.71
+23:23:52 model E iter 290 evals 8700 best Q 160.69
+23:25:07 model E iter 300 evals 9000 best Q 160.69
+23:26:19 model E iter 310 evals 9300 best Q 160.68
+23:27:32 model E iter 320 evals 9600 best Q 160.67
+23:28:44 model E iter 330 evals 9900 best Q 160.67
+23:29:59 model E iter 340 evals 10200 best Q 160.66
+23:31:12 model E iter 350 evals 10500 best Q 160.65
+23:32:24 model E iter 360 evals 10800 best Q 160.65
+23:33:39 model E iter 370 evals 11100 best Q 160.65
+23:34:56 model E iter 380 evals 11400 best Q 160.65
+23:36:12 model E iter 390 evals 11700 best Q 160.64
+23:37:25 model E iter 400 evals 12000 best Q 160.64
+23:37:32 model E done: Q 160.64 evals 12030 stop {'maxfevals': 12000}
+23:37:49 model E: Q 160.64
+23:38:18 ALL DONE

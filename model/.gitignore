@@ -1,0 +1,9 @@
+# Person-level PSID-derived files: never commit (PSID conditions of use). Copied to Stanage separately.
+output/sons_types.csv
+output/data_panel.pkl
+# local scratch outputs of estimate.py when run without IGE_OUT
+output/estimates.json
+output/smm_report.md
+output/smm_progress.log
+output/smm_stdout.log
+output/ipw_sons.pkl

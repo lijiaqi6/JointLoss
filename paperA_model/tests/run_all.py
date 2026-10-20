@@ -1,5 +1,5 @@
 """Run every staged test and print a pass/fail table (writes ../results/tests_<date>.txt).
-Run: .venv/Scripts/python.exe IGE/paperA_model/tests/run_all.py   (about 10-15 minutes on 2 threads)"""
+Run: .venv/Scripts/python.exe paperA_model/tests/run_all.py   (about 10-15 minutes on 2 threads)"""
 import datetime
 import importlib
 import time

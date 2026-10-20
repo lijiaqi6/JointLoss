@@ -29,7 +29,7 @@ Reading: **the 12+ exit rate is structurally pinned.**
   12+ gap at intake needs a feature that reaches established wives: the birth jump or a type. WP2's residual
   decides between them, as the plan says. Re-estimating the preferences alone will not do it.
 
-## (b) Separated wives' employment in the model vs the PSID (WP3, `IGE/output/separated_mothers.md`)
+## (b) Separated wives' employment in the model vs the PSID (WP3, `output/separated_mothers.md`)
 
 `sep_state_sim.py` (new), one simulation at the start, `results/sep_state_20261020_012047_p16664/`. The model has no
 child support and no remarriage. Employment there is the monthly share of wife-months with positive hours, wives

@@ -1,0 +1,7 @@
+run ige_full_20261018_194443_j11859356
+job 11859356
+code 20e3f5aad7b71de1760150fbd8c888bb01435313
+mode full
+status 0
+cores 32 workers 30 popsize 30 maxfevals 15000,8000,8000,8000
+settings IGE_MODELS=H IGE_START=hpc_runs/ige_full_20261018_125238/estimates.json:D 

@@ -1,25 +1,25 @@
 r"""Pre-set inputs of Paper A's structural model from PSID / CPS data (2026-10-18). [Paper A]
 
-Replaces the PLACEHOLDER fixed inputs of IGE/paperA_model/params.py (FIXED_STATUS) and the synthetic entry population
-of IGE/paperA_model/simulate.py by coded mappings from data (proposals/paperA_identification_plan.md Sections 1.2,
+Replaces the PLACEHOLDER fixed inputs of paperA_model/params.py (FIXED_STATUS) and the synthetic entry population
+of paperA_model/simulate.py by coded mappings from data (proposals/paperA_identification_plan.md Sections 1.2,
 1.5 and 1.6; model section paperA_joint_loss/sec7_model.tex). Nothing in paperA_model/*.py is edited: the outputs are
 input files that params.load_fixed() and simulate.load_entry() already read.
 
 OUTPUTS
-  IGE/paperA_model/inputs/fixed_inputs.json        keys read by params.load_fixed() over FIXED_DEFAULTS:
+  paperA_model/inputs/fixed_inputs.json        keys read by params.load_fixed() over FIXED_DEFAULTS:
         mu_w, mu_h {B, W} (log 2000 $ an hour), psi_w, psi_h, b0_annual, b2_annual {B, W: 7 age groups},
         n_children {B, W: 3 buckets x 7 age groups, integers}, p_cc [3] (2000 $ an hour), share_s {B, W: [s0, s1, s2]}
         + 'status' / 'source' blocks (ignored by the model code; documentation)
-  IGE/paperA_model/inputs/psid_entry_couples.csv   simulate.ENTRY_COLS (id, year0, age0, race 0 = Black / 1 = White,
+  paperA_model/inputs/psid_entry_couples.csv   simulate.ENTRY_COLS (id, year0, age0, race 0 = Black / 1 = White,
         s, a0 thousand 2000 $, ew0, eh0, k0, hw0, hh0 levels 1-7, uw0, uh0) + documentation columns
-  IGE/paperA_model/inputs/psid_entry_couples_25_30.csv   the subset entering at wife's age 25-30 (lead's wording)
-  IGE/paperA_model/inputs/start_overrides.json      a_bar start value (thousand 2000 $) for analytic_start.py / the lead
-  IGE/output/paperA_inputs.md, IGE/output/paperA_inputs.csv   every value with source, window, N
-  IGE/output/paperA_inputs_T7.csv                  CPS husband monthly hazard by race in the id format of
+  paperA_model/inputs/psid_entry_couples_25_30.csv   the subset entering at wife's age 25-30 (lead's wording)
+  paperA_model/inputs/start_overrides.json      a_bar start value (thousand 2000 $) for analytic_start.py / the lead
+  output/paperA_inputs.md, output/paperA_inputs.csv   every value with source, window, N
+  output/paperA_inputs_T7.csv                  CPS husband monthly hazard by race in the id format of
         paperA_targets.csv (ids cps_h_hazard_B / _W, the keys analytic_start.py looks for)
-  IGE/output/cps_couple_state_shares.csv           CPS couples' state distribution by year (wife's composite weight),
+  output/cps_couple_state_shares.csv           CPS couples' state distribution by year (wife's composite weight),
         read by IGE/61.PolicySchedules.py to weight the UI cap and the AFDC/TANF maximum
-  IGE/data/paperA_inputs_fam.pkl                   cache of the family-file items read here
+  data/paperA_inputs_fam.pkl                   cache of the family-file items read here
 
 DATA (raw files read only; builders imported read-only)
   PSID  60.PaperATargets.psid_build() (men panel m: male heads, Black / White, with the wife's pid, ages, hours, labor
@@ -748,7 +748,7 @@ def main():
               "p_cc": [float(v) for v in pcc], "share_s": share,
               "status": {k: "IGE/62 (data)" for k in ("mu_w", "mu_h", "psi_w", "psi_h", "b0_annual", "b2_annual",
                                                        "n_children", "p_cc", "share_s")},
-              "source": "IGE/62.PaperAInputs.py; values, windows and definitions in IGE/output/paperA_inputs.md"}
+              "source": "IGE/62.PaperAInputs.py; values, windows and definitions in output/paperA_inputs.md"}
     INPUTS.mkdir(parents=True, exist_ok=True)
     (INPUTS / "fixed_inputs.json").write_text(json.dumps(fx_new, indent=1))
     entry.to_csv(INPUTS / "psid_entry_couples.csv", index=False)

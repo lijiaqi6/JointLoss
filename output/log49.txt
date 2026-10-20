@@ -1,0 +1,46 @@
+son frame ...
+D1 ...
+D2 ...
+  govt item 1980: V7097
+  govt item 1981: V7708
+  govt item 1982: V8376
+  govt item 1983: V9007
+  govt item 1984: V10457
+  govt item 1985: V11648
+  govt item 1986: V13051
+  govt item 1987: V14151
+  govt item 1988: V15159
+  govt item 1989: V16660
+  govt item 1990: V18098
+  govt item 1991: V19398
+  govt item 1992: V20698
+  govt item 1993: V22453
+  govt item 1994: ER2078
+  govt item 1995: ER5077
+  govt item 1996: ER7173
+  govt item 1997: ER10088
+  govt item 1999: ER13212
+  govt item 2001: ER17223
+  govt item 2003: ER21149
+  govt item 2005: ER25131
+  govt item 2007: ER36136
+  govt item 2009: ER42171
+  govt item 2011: ER47484
+  govt item 2013: ER53184
+  govt item 2015: ER60199
+  govt item 2017: ER66200
+  govt item 2019: ER72200
+  govt item 2021: ER78205
+  govt item 2023: ER82188
+D3 ...
+family files: head hours > 0 / AFDC / food stamps by decade
+         hh   afdc     fs
+dec                      
+1960  0.822  0.056  0.092
+1970  0.813  0.065  0.110
+1980  0.792  0.055  0.142
+1990  0.737  0.048  0.139
+2000  0.815  0.020  0.116
+2010  0.783  0.012  0.184
+2020  0.747  0.008  0.176
+done

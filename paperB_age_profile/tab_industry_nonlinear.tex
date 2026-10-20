@@ -1,0 +1,45 @@
+\begin{table}[!htbp]
+\centering
+\caption{Industry and occupation $\times$ industry career profiles: linear and nonlinear (PSID, sons)}
+\label{tab:industrynonlinear}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccc}
+\toprule
+Piece of the log wage & \begin{tabular}[b]{@{}c@{}}Pooled\\change\end{tabular} & \begin{tabular}[b]{@{}c@{}}Share of\\pooled rise\end{tabular} & \begin{tabular}[b]{@{}c@{}}Change of\\White $-$ Black\\gap\end{tabular} & \begin{tabular}[b]{@{}c@{}}Share of\\gap change\end{tabular} \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+\multicolumn{5}{l}{\textit{A. Sample of Table~\ref{tab:industrydecomp}}} \\
+Log wage (total) & $0.155^{***}$ &  & $0.170^{***}$ &  \\
+ & (0.024) &  & (0.038) &  \\
+Current industry: linear slope $B_j t$ & $0.013^{***}$ & $0.084^{***}$ & $0.009^{***}$ & $0.050^{***}$ \\
+ & (0.002) & (0.014) & (0.002) & (0.016) \\
+Current industry: age-band profile & $0.018^{***}$ & $0.118^{***}$ & $0.013^{***}$ & $0.074^{***}$ \\
+ & (0.002) & (0.020) & (0.003) & (0.023) \\
+Current industry: piecewise profile (knots 30/35/45) & $0.018^{***}$ & $0.117^{***}$ & $0.012^{***}$ & $0.072^{***}$ \\
+ & (0.002) & (0.019) & (0.003) & (0.023) \\
+\addlinespace
+\multicolumn{5}{l}{\textit{B. Sons with an industry and cell at 25--34}} \\
+Log wage (total) & $0.146^{***}$ &  & $0.159^{***}$ &  \\
+ & (0.024) &  & (0.039) &  \\
+Industry at 25--34: linear slope & $0.014^{***}$ & $0.093^{***}$ & $0.009^{***}$ & $0.058^{***}$ \\
+ & (0.002) & (0.017) & (0.003) & (0.022) \\
+Industry at 25--34: age-band profile & $0.019^{***}$ & $0.132^{***}$ & $0.014^{***}$ & $0.086^{***}$ \\
+ & (0.003) & (0.024) & (0.004) & (0.032) \\
+Current occupation $\times$ industry cell: age-band profile & $0.036^{***}$ & $0.246^{***}$ & $0.022^{***}$ & $0.138^{***}$ \\
+ & (0.003) & (0.038) & (0.004) & (0.035) \\
+Current occupation group only: age-band profile & $0.031^{***}$ & $0.215^{***}$ & $0.021^{***}$ & $0.131^{***}$ \\
+ & (0.002) & (0.034) & (0.003) & (0.032) \\
+\quad What industry adds within the current cell & $0.005^{***}$ & $0.031^{***}$ & $0.001$ & $0.007$ \\
+ & (0.001) & (0.010) & (0.002) & (0.015) \\
+Cell at 25--34: age-band profile & $0.039^{***}$ & $0.267^{***}$ & $0.024^{***}$ & $0.148^{***}$ \\
+ & (0.003) & (0.043) & (0.005) & (0.042) \\
+Occupation group at 25--34 only: age-band profile & $0.033^{***}$ & $0.222^{***}$ & $0.019^{***}$ & $0.120^{***}$ \\
+ & (0.003) & (0.036) & (0.004) & (0.033) \\
+\quad What industry adds within the cell at 25--34 & $0.007^{***}$ & $0.045^{***}$ & $0.004$ & $0.028$ \\
+ & (0.002) & (0.014) & (0.003) & (0.019) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Each row is a piece of the son's log wage regressed on log parental income by age band (stacked, controls as in Table~\ref{tab:industrydecomp}); columns (1) and (3) give the change of the coefficient from 25--34 to 35--55, pooled and for the White $-$ Black gap, and columns (2) and (4) its share of the change for the log wage. Linear: $B_j t$ as in Table~\ref{tab:industrydecomp}. Age-band profile: the CPS MORG relative wage of the son's industry or cell in his five-year age band, around its age-weighted level (men 25--64, 1992--2002). Cells: 11 occupation groups $\times$ 33 industry groups (267 cells with at least 200 men; smaller cells take their occupation group's profile). `At 25--34': the son's modal industry or cell at 25--34, evaluated at his current age. Standard errors clustered by 1968 family; shares by the delta method. Pooled: weighted. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/35.EarlyIndustryLatePayoff.py} (\texttt{output/early\_industry\_late\_payoff.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

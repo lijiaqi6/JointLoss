@@ -1,6 +1,6 @@
 /* [bps_reconciliation, 2026-10-18] BPS (2016) estimator on an arbitrary PSID-shaped household-year panel
    (simulated data from Paper A's model, written by sim_panel_writer.py, or BPS's own psid_cons.dta for the check).
-   Usage and the input layout: IGE/bps_reconciliation/HARNESS.md.
+   Usage and the input layout: bps_reconciliation/HARNESS.md.
 
    Call (Stata batch):  StataMP-64.exe /e do caller.do   where caller.do sets the globals below and then
                         do "G:\My Drive\JointLoss\bps_reconciliation\code\bps_on_sim.do"

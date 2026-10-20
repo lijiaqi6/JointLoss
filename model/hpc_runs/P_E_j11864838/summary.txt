@@ -1,0 +1,7 @@
+run P_E_j11864838
+job 11864838
+code 745dcbb2cf8485447db1594e8906050ca0026aac
+mode full
+status 0
+cores 32 workers 30 popsize 30 maxfevals 4000,4000,4000,4000,4000,4000,4000,4000
+settings IGE_FIX=muG,du IGE_MODELS=E IGE_R=20 IGE_RUN=P_E IGE_SIG0=0.15 IGE_START=hpc_runs/Lx4_E_j11861512/estimates.json:E,hpc_runs/Lx4_D_j11861513/estimates.json:D IGE_STEPS=age,rehire,xacc 

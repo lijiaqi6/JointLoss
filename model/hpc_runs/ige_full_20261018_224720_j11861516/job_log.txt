@@ -1,0 +1,24 @@
+job 11861516 mode full code snapshot 8ac9043d81acffbfb3251b1bbe7899f56c4505a3 run ige_full_20261018_224720_j11861516 on node118.stanage.hpc.shef.ac.uk with 32 cores
+settings: IGE_FIX=muG,du,dgx IGE_MAXFEV=12000,12000,12000,12000,12000,12000,12000,12000 IGE_STEPS=age,rehire,xacc IGE_MODELS=E IGE_START=hpc_runs/ige_full_20261018_214332_j11860455/estimates.json:E,hpc_runs/ige_full_20261018_215612_j11860456/estimates.json:E IGE_R=20 
+/users/cm1jil/ige/.venv/lib/python3.12/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+python 3.12.13 {'numpy': '2.5.3', 'pandas': '3.0.5', 'scipy': '1.18.1', 'cma': '4.5.0'} PASS
+Q at the starting values 22856.15 (local 22856.15): PASS
+/users/cm1jil/ige/.venv/lib/python3.12/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+# Post-estimation, model E
+
+Q at the estimate 160.6; at other simulation seeds 164.8, 165.2.
+
+| Experiment | gap 30-34 (level or change) | p | gap 45-49 | p | mean log wage 25-34 B | W |
+|---|---|---|---|---|---|---|
+| Baseline | 0.079*** (0.011) | 0.000 | 0.154*** (0.016) | 0.000 | 2.400 | 2.719 |
+| Equalising schooling | -0.011*** (0.002) | 0.000 | -0.022*** (0.003) | 0.000 | 0.010 | 0.000 |
+| Equal access by parental income (a1 = 0) | -0.005 (0.003) | 0.102 | -0.012** (0.005) | 0.035 | 0.001 | -0.002 |
+| Equal pay-off of schooling (dg1 = 0) | -0.035*** (0.009) | 0.000 | -0.047*** (0.013) | 0.000 | 0.031 | 0.000 |
+| Equal displacement risk (d0B = d0W) | 0.006*** (0.002) | 0.001 | 0.005* (0.003) | 0.074 | 0.032 | 0.000 |
+| Depreciation out of work halved | 0.000 (0.000) | nan | 0.000 (0.000) | nan | 0.000 | 0.000 |
+| Recession at entry (+3 points, 3 years) | -0.000 (0.001) | 0.753 | -0.001 (0.001) | 0.536 | -0.021 | -0.013 |
+
+Entry wage scar per point (recession / 3): Black -0.0069, White -0.0044; PSID (paper Section 7) -0.013** per point of state unemployment at entry.
+status 0 (0 ok, 1 checks failed, 2 estimation failed, 3 post-estimation failed)

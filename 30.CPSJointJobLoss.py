@@ -7,7 +7,7 @@ for households in sample for months 1-4 and 13-16 (rotation groups MIS 1-4, then
 
 DATA (downloaded here, sequential requests, retries; raw files are data only -> run this script with `python -I`)
   api.census.gov/data/YYYY/cps/basic/MON, 1994-2023 (2024 lacks GESTFIPS in the API and is not used), two requests per
-  month, saved unchanged (header + rows) as csv.gz in IGE/data/ext/cps_couples/ (git-ignored):
+  month, saved unchanged (header + rows) as csv.gz in data/ext/cps_couples/ (git-ignored):
     cpl_YYYY_MM.csv.gz  persons with PEMARITL = 1 (married, spouse present) and PRTAGE 20-62
     kid_YYYY_MM.csv.gz  persons with PRTAGE 0-17: identifiers, line number, age, parent line(s)
   Variables requested (VARS / KIDVARS below); a variable the API does not have for that month is dropped from the
@@ -52,7 +52,7 @@ ESTIMATES (all weighted by the wife's composite weight at m where stated; regres
      at m+k), k = 1..3, by whether the husband (employed at m) becomes a job loser at m+1 vs stays employed at m+1.
 Nothing here is a randomised design: the excess joint job loss within couples is an association conditional on the
 fixed effects listed (state x month absorbs common local shocks; a shared employer / sector remains inside it).
-Writes IGE/output/cps_joint_job_loss.csv (every estimate), .md (tables), .png (figure).
+Writes output/cps_joint_job_loss.csv (every estimate), .md (tables), .png (figure).
 """
 import gzip
 import importlib.util

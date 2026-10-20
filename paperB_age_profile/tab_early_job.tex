@@ -1,0 +1,35 @@
+\begin{table}[!htbp]
+\centering
+\caption{Where sons start: the job at 25--34 and the rise of wage persistence after 35 (PSID, sons)}
+\label{tab:earlyjob}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Accounted\\for at\\25--34\end{tabular} & \begin{tabular}[b]{@{}c@{}}Accounted\\for at\\35--55\end{tabular} & \begin{tabular}[b]{@{}c@{}}Change\end{tabular} & \begin{tabular}[b]{@{}c@{}}Share of\\pooled rise\end{tabular} & \begin{tabular}[b]{@{}c@{}}Change,\\White $-$ Black\end{tabular} & \begin{tabular}[b]{@{}c@{}}Share of\\gap change\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{l}{\textit{Fixed effects for the son's job at 25--34, by age band}} \\
+Finance, insurance, legal, professional (example; 2 groups) & $0.014^{***}$ & $0.027^{***}$ & $0.013^{**}$ & $0.097^{**}$ & $0.012^{*}$ & $0.085^{*}$ \\
+ & (0.003) & (0.007) & (0.005) & (0.039) & (0.006) & (0.046) \\
+Industry groups ranked by pay and later growth (4 sets) & $0.024^{***}$ & $0.029^{***}$ & $0.005$ & $0.034$ & $0.001$ & $0.006$ \\
+ & (0.005) & (0.008) & (0.005) & (0.037) & (0.008) & (0.058) \\
+Industry group (33) & $0.034^{***}$ & $0.052^{***}$ & $0.018^{*}$ & $0.135^{*}$ & $0.015$ & $0.108$ \\
+ & (0.007) & (0.013) & (0.010) & (0.072) & (0.016) & (0.105) \\
+Manager or professional (2 groups) & $0.042^{***}$ & $0.076^{***}$ & $0.035^{***}$ & $0.257^{***}$ & $0.035^{***}$ & $0.246^{***}$ \\
+ & (0.005) & (0.010) & (0.008) & (0.064) & (0.010) & (0.086) \\
+Occupation group (11) & $0.057^{***}$ & $0.108^{***}$ & $0.051^{***}$ & $0.377^{***}$ & $0.045^{***}$ & $0.318^{***}$ \\
+ & (0.007) & (0.013) & (0.010) & (0.078) & (0.015) & (0.111) \\
+Occupation group + industry group (11 + 33) & $0.078^{***}$ & $0.129^{***}$ & $0.050^{***}$ & $0.376^{***}$ & $0.050^{**}$ & $0.352^{***}$ \\
+ & (0.010) & (0.017) & (0.012) & (0.087) & (0.020) & (0.129) \\
+Cells ranked by pay and later growth (4 sets) & $0.056^{***}$ & $0.093^{***}$ & $0.036^{***}$ & $0.271^{***}$ & $0.033^{***}$ & $0.237^{***}$ \\
+ & (0.006) & (0.012) & (0.009) & (0.067) & (0.011) & (0.087) \\
+Occupation $\times$ industry cell (11 $\times$ 33) & $0.091^{***}$ & $0.146^{***}$ & $0.054^{***}$ & $0.405^{***}$ & $0.070^{***}$ & $0.493^{***}$ \\
+ & (0.011) & (0.020) & (0.015) & (0.099) & (0.025) & (0.171) \\
+Detailed occupation (occ1990dd) & $0.086^{***}$ & $0.165^{***}$ & $0.079^{***}$ & $0.591^{***}$ & $0.101^{***}$ & $0.713^{***}$ \\
+ & (0.011) & (0.020) & (0.017) & (0.120) & (0.026) & (0.211) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Short regression: the son's log wage on log parental income in each age band (25--34, 35--55), controls as in Table~\ref{tab:industrydecomp}. Long regression: adds fixed effects for the son's job at 25--34 (row), estimated separately in each age band and race sample, so they absorb any wage profile of where he started, linear or not. Accounted for = short $-$ long. On this sample the pooled coefficient rises by 0.132$^{***}$ and the White $-$ Black gap changes by 0.140$^{***}$ from 25--34 to 35--55. Ranked sets: cells (or industries) in the top quartile of men's employment by CPS wage level and by CPS wage growth after 35, and their intersection. Permuting the cell labels across sons gives shares of about 0.03. The son's early job also reflects his own skills, so the rows measure how much where a son stands at 25--34 predicts how far he pulls away, not a causal payoff. 93\% of sons observed at 35--55 have a job at 25--34. Standard errors clustered by 1968 family. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/35.EarlyIndustryLatePayoff.py} (\texttt{output/early\_industry\_late\_payoff.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

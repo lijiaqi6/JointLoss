@@ -1025,7 +1025,7 @@ Exposure at 0-17, closure or layoff (19's design). Relative earnings loss = fath
 
 ## 5. Safety-net buffering: exposure x UI generosity
 
-UI generosity from `IGE/data/ui_generosity.csv` (measures: repl_rate, max_wba_2000), z-scored over the state-year panel, in the state of the father's family at the (pseudo) event year d (interview in d or d-1, else d+1) and year d; events from 1976 on. The interaction compares the displaced-control gap across states and years with more or less generous UI; UI generosity is not randomly assigned (it co-moves with state wages and politics), so the state-FE rows use only within-state changes.
+UI generosity from `data/ui_generosity.csv` (measures: repl_rate, max_wba_2000), z-scored over the state-year panel, in the state of the father's family at the (pseudo) event year d (interview in d or d-1, else d+1) and year d; events from 1976 on. The interaction compares the displaced-control gap across states and years with more or less generous UI; UI generosity is not randomly assigned (it co-moves with state wages and politics), so the state-FE rows use only within-state changes.
 
 ### UI measure `repl_rate`, closure or layoff, adult outcomes
 

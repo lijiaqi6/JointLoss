@@ -1,22 +1,22 @@
 # Paper A: what the lead can do in the next three hours without the PI (2026-10-19, 09:30-12:30)
 
-Read only, nothing run: `IGE/paperA_model/README.md`, `results/diagnostics_20261018.md` (with 'Follow-ups 2026-10-19'),
+Read only, nothing run: `paperA_model/README.md`, `results/diagnostics_20261018.md` (with 'Follow-ups 2026-10-19'),
 `results/evaluate_20261019_064228_p27000/`, `estimate.py` (CLI, `EXT_DEFAULTS`), `model.py` (hazard block),
 `params.py` (`Config`, `SIZES`, schedules), `bps_check.py`, `hpc_job_a.py` (`--push` into `results/hpc_runs/`),
-`IGE/paperA_joint_loss/sec7_model.tex`, `model_document.tex`, `main.tex`, `tab_joint_job_loss.tex`,
-`IGE/output/paperA_targets.csv`, `IGE/30`, `39`, `40`, `21`, `60`, and my notes `fable_estimation_review_paperA.md`,
+`paperA_joint_loss/sec7_model.tex`, `model_document.tex`, `main.tex`, `tab_joint_job_loss.tex`,
+`output/paperA_targets.csv`, `IGE/30`, `39`, `40`, `21`, `60`, and my notes `fable_estimation_review_paperA.md`,
 `fable_marriage_divorce_paperA.md`. Terminology: search friction; human capital level / accumulation / depreciation.
 
 ## 0. The constraint, stated as a file list
 
 The HPC chain (`Joint-test` -> `Joint-recovery-gn` -> `Joint-gn-main` -> `Joint-noise` -> `Joint-smm-main` + 2 restarts)
 runs a snapshot of commit 6adfd1a and the later jobs must be consistent with the LM run. Until the CMA-ES jobs have
-started, **no edit** to any of these: `IGE/paperA_model/{model,solve,simulate,panels,moments,params,estimate,
-analytic_start,borrowing_wedge,hpc_job_a}.py`, `IGE/paperA_model/inputs/*` (start, wage process, noise, expected
-moments, schedules, wedge), `IGE/paperA_model/tests/*`, `IGE/60.PaperATargets.py`, `IGE/output/paperA_targets*.csv`,
+started, **no edit** to any of these: `paperA_model/{model,solve,simulate,panels,moments,params,estimate,
+analytic_start,borrowing_wedge,hpc_job_a}.py`, `paperA_model/inputs/*` (start, wage process, noise, expected
+moments, schedules, wedge), `paperA_model/tests/*`, `IGE/60.PaperATargets.py`, `output/paperA_targets*.csv`,
 `IGE/61.PolicySchedules.py`, `IGE/62.PaperAInputs.py`. Running `IGE/60` or `62` is also out (they rewrite targets and
 inputs). `bps_check.py --apply` is out (it rewrites `inputs/wage_process.json`). Everything below is new scripts, new
-outputs under `IGE/output/` or `results/`, data work, and paper text. Local evaluations of the model (new
+outputs under `output/` or `results/`, data work, and paper text. Local evaluations of the model (new
 `results/evaluate_*` folders) are harmless. Each package ends with its own commit on main (shared working tree; no
 branches; no PSID/SIPP/CPS microdata in git, aggregates only).
 
@@ -45,11 +45,11 @@ the spell lasts* (return to work within 3, 6, 12, 24 months). Each maps to one c
 | SIPP reasons: a large 'own illness / disability' share | a health shock to the work cost (one state; probably not for this paper, but it belongs in the footnote) |
 
 **Inputs (all public files already local, read only).** SIPP: `IGE/40.SIPPJointLoss.py`'s cached monthly panel
-(`PANEL_PKL` under `IGE/data/`; 2004 and 2008 panels carry `ersend{j}`, `tsjdate{j}`, `tejdate{j}`, `ejbind{j}`,
+(`PANEL_PKL` under `data/`; 2004 and 2008 panels carry `ersend{j}`, `tsjdate{j}`, `tejdate{j}`, `ejbind{j}`,
 `rmesr`, children through `epnmom`; the 2014 panel `RMESR`, `RPNPAR1/2_EHC`, `TAGE_EHC`). CPS: `IGE/30`'s cached
-couples panel `IGE/data/cps_couples_panel.pkl` (PEMLR, PRUNTYPE job leaver vs loser, PRCHLD and children's ages from
+couples panel `data/cps_couples_panel.pkl` (PEMLR, PRUNTYPE job leaver vs loser, PRCHLD and children's ages from
 the kids file, PEEDUCA, PRTAGE, race, industry PRDTIND1; no hours variable in this extract: part-time is not
-observable here without a new API pull, which is not for these three hours). PSID: `IGE/data/psid_person_year.pkl`
+observable here without a new API pull, which is not for these three hours). PSID: `data/psid_person_year.pkl`
 (annual hours, employment-status codes 1-8 incl. 'keeping house', child ages, spouse's labor income, state), through
 the loaders of `IGE/21.WifeSearch.py` / `IGE/19` imported read only.
 
@@ -67,9 +67,9 @@ entry, which is what the CPS shows (3.2% White, 4.0% Black): the data describe a
 spells, the model a low-churn one; the spell-length distribution in (iv) is the statistic that decides between a
 transitory shock and persistent types.
 
-**Deliverables.** `IGE/output/wife_exit_why.csv` (every estimate: dataset, sample, cell, outcome, coef, se, p, stars,
-n), `IGE/output/wife_exit_why.md` (tables in the paper's layout: one outcome per column, covariates as rows, samples
-as row panels), and a two-page memo `IGE/proposals/wife_exit_evidence.md`: findings, the decomposition, the feature
+**Deliverables.** `output/wife_exit_why.csv` (every estimate: dataset, sample, cell, outcome, coef, se, p, stars,
+n), `output/wife_exit_why.md` (tables in the paper's layout: one outcome per column, covariates as rows, samples
+as row panels), and a two-page memo `proposals/wife_exit_evidence.md`: findings, the decomposition, the feature
 each finding points to, the cost in states and parameters of each (none for a birth-timed theta jump: the child
 state is there; one state for a persistent type, doubling solve time), and a recommendation for the PI. Footnote-ready
 sentences with numbers and the script name (PI rule). Commit script + outputs + memo. Risk to the HPC: none (no file
@@ -125,30 +125,30 @@ Hermite already there?), `sec:targets` (persistent flows; hemp and the six exclu
 CPS flows; borrowing wedge; eta_up; ridge start / memory rejected; hemp reported only; sigma_eps fixed). Compile
 `model_document.tex`. Commit both with their PDFs.
 
-Deliverables: `IGE/paperA_joint_loss/sec7_model.tex`, `model_document.tex`, `main.pdf`, `model_document.pdf`.
+Deliverables: `paperA_joint_loss/sec7_model.tex`, `model_document.tex`, `main.pdf`, `model_document.pdf`.
 
 ## WP3. Post-estimation tooling, tested at the analytic start (sub-agent, 60-75 min, risk: none if Section 0 is obeyed)
 
-**Goal.** When `IGE/paperA_model/results/hpc_runs/<run>/` arrives (`best.json`, `report.md`, `se.csv`, `moments.csv`,
+**Goal.** When `paperA_model/results/hpc_runs/<run>/` arrives (`best.json`, `report.md`, `se.csv`, `moments.csv`,
 `q_by_block.csv`, `iterations.csv`, `jacobian.npz`, `recovery_report.md`, `evals.csv.gz`), the tables and the two
 marriage diagnostics should be one command each. All new files; nothing in Section 0 is edited; `inputs/` is never
 written; `--apply` is never passed.
 
-1. `IGE/paperA_model/fit_table.py <moments.csv> [--indep <moments.csv>] [--params best.json se.csv]` -> LaTeX in the
+1. `paperA_model/fit_table.py <moments.csv> [--indep <moments.csv>] [--params best.json se.csv]` -> LaTeX in the
    paper's layout (one specification per column: data (s.e.), main model, independent-shock model, z; moments as rows;
-   blocks as row panels; `in_objective = 0` rows marked 'reported'): `IGE/paperA_joint_loss/tab_model_fit.tex`,
+   blocks as row panels; `in_objective = 0` rows marked 'reported'): `paperA_joint_loss/tab_model_fit.tex`,
    `tab_q_by_block.tex`, `tab_params_estimates.tex` (rows and order of `tab:model_params`: start, estimate, s.e.,
    bounds). Test on `results/evaluate_20261019_064228_p27000/moments.csv` (the start), compile a scratch wrapper.
    Also `recovery_table.py` from `recovery_report.md` -> `tab_recovery.tex` (parameter, truth, recovered, in noise
    s.e., in data s.e.).
-2. `IGE/paperA_model/diagnostics_marriage.py --start <best.json>`: (A) one evaluation with sig_E = sig_N = 0 through
+2. `paperA_model/diagnostics_marriage.py --start <best.json>`: (A) one evaluation with sig_E = sig_N = 0 through
    the existing test override (`ov` in `model.py`), Q by block against the start on common draws (noise floor about
    30 units); (B) the simulated 'still with baseline wife' path by event year 1-6 by race from the stacked event panel
    `panels.py` already builds (no change to `moments.py`: compute the yearly coefficients from the returned panel),
    next to the PSID -0.027 / -0.037 / -0.050 (pooled) and -0.037 / -0.053 / -0.074 (Black) from `father_displacement.md`.
    Output `results/marriage_diag_<stamp>/` (json + md). Run once at the analytic start now (two evaluations, ~3 min)
    to debug; keep the output as the pre-estimate reference.
-3. `IGE/paperA_model/counterfactuals.py --start <best.json> --size full`: scenario runner with the paper's scoring
+3. `paperA_model/counterfactuals.py --start <best.json> --size full`: scenario runner with the paper's scoring
    (consumption in the loss month and over 12 months, couple-months with no earner and with no earner and no credit,
    consumption-equivalent welfare at entry, by workplace match and race; main vs independent shocks). Implement now the
    scenarios that need only theta or schedule overrides: (i) pi_c = 0, m_H = 1; (ii) UI expiry 1/6 -> 1/12 and both
@@ -158,7 +158,7 @@ written; `--apply` is never passed.
    transfer and (iv) childcare subsidy as a documented scenario spec with the exact `model.py` hooks they need (a
    transfer term in the budget, a childcare price multiplier), to be coded behind flags after the CMA-ES jobs start.
    Smoke-test (i) and (v) at the analytic start at the default size (3-4 evaluations, ~5 min).
-4. `bps_check.py` readiness: read `IGE/bps_reconciliation/HARNESS.md`, confirm `bps_on_sim.do` and the Stata path, then
+4. `bps_check.py` readiness: read `bps_reconciliation/HARNESS.md`, confirm `bps_on_sim.do` and the Stata path, then
    one smoke run at the analytic start with `--K 1` and **without `--apply`** (writes `results/bps_<stamp>/` only). Fill
    `BPS_RUN_PLACEHOLDER` in the README with the smoke numbers, flagged as 'start values, not estimates'.
 
@@ -170,23 +170,23 @@ under 'How to run' (the README is documentation, not code; editing it is fine). 
 M2b: the separation response ('still with baseline wife', years 1-3) interacted with state UI generosity (schedule
 from `IGE/12b.UIGenerosity.py`: replacement cap and duration in the father's state-year) in `IGE/19`'s stacked design,
 by race; M3: her displacement as the event in the same design, outcome 'still with baseline husband'. One new script
-`IGE/64.SeparationUIAndHerLoss.py` importing `IGE/19` read only; outputs `IGE/output/separation_ui_her_loss.csv/.md`
-with stars and p-values; plus the PSID path by event year 1-6 copied into one small csv for WP3.2 (`IGE/output/
+`IGE/64.SeparationUIAndHerLoss.py` importing `IGE/19` read only; outputs `output/separation_ui_her_loss.csv/.md`
+with stars and p-values; plus the PSID path by event year 1-6 copied into one small csv for WP3.2 (`output/
 bw_present_by_year.csv`). Deliverable: footnote sentences for sec7 (marriage paragraph) either way: if the UI
 interaction is not significant, 'one sigma_J' stays with the number; if her displacement moves separations, M3 goes
 on the PI's list. Commit.
 
 ## WP5. Housekeeping and the intake checklist (lead, 20-30 min, risk: none)
 
-1. `IGE/paperA_model/results/INTAKE.md`: what to read first when `hpc_runs/` lands (recovery: count within 2 noise
+1. `paperA_model/results/INTAKE.md`: what to read first when `hpc_runs/` lands (recovery: count within 2 noise
    s.e. and 2 data s.e., the weakest directions in `report.md`; main: Q by block against 11,726, the exit rate, the
    employment level, `se.csv`), the exact next sbatch lines with `<gn>` filled from the run folder name
    (`Joint-noise`, then `Joint-smm-main` / `-s2` / `-s3` with `--noise-file`), the squeue format with full names,
    and the one-step-at-a-time rule (new moment set -> baseline first).
 2. README: 'Open issues' item 2 (kappa_S) is resolved; item 4 points to WP1's memo; `BPS_RUN_PLACEHOLDER` from WP3.4.
-3. Untracked files in `IGE/output/` (`log41-60.txt`, `cps_couple_state_shares.csv`,
+3. Untracked files in `output/` (`log41-60.txt`, `cps_couple_state_shares.csv`,
    `policy_schedules_memory_version.json`) and `paperA_age_profile/model_document.pdf`: logs are scratch (git-ignore
-   pattern `IGE/output/log*.txt`), the csv and json are Paper B / 61 by-products: leave them for the PI, list them in
+   pattern `output/log*.txt`), the csv and json are Paper B / 61 by-products: leave them for the PI, list them in
    the summary. Commit the ignore rule only.
 4. Final summary to the PI: Q state, what each WP produced, the decisions waiting (exit-rate feature from WP1; M2a/M2b
    from WP3.2 and WP4; counterfactual hooks (iii)-(iv) to code after CMA-ES starts).

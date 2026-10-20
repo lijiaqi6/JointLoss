@@ -1,6 +1,6 @@
 # Joint displacement of spouses: CPS Displaced Worker Supplement 1984-2024
 
-Script `IGE/39.CPSDisplacedWorkers.py` (2026-10-17). Data: IPUMS CPS extract of the 21 biennial Displaced Worker Supplements (January 1984-1992, February 1994-2000, January 2002-2024), persons married with spouse present; raw files in `IGE/data/ext/cps_dws/`. Stars: \*\*\* p<0.01, \*\* p<0.05, \* p<0.1; cells are estimate (s.e.; p). Associations, not causal effects.
+Script `IGE/39.CPSDisplacedWorkers.py` (2026-10-17). Data: IPUMS CPS extract of the 21 biennial Displaced Worker Supplements (January 1984-1992, February 1994-2000, January 2002-2024), persons married with spouse present; raw files in `data/ext/cps_dws/`. Stars: \*\*\* p<0.01, \*\* p<0.05, \* p<0.1; cells are estimate (s.e.; p). Associations, not causal effects.
 
 **Measure.** *Displaced* = lost a wage job in the last three calendar years because the plant or company closed or moved, there was insufficient work, or the position or shift was abolished (the BLS definition; IPUMS DWSTAT = 1 from 1994; 1984-1992 harmonised from the five-year window: reasons 1-3, not self-employed, lost 1-3 calendar years before the survey). The comparison group is always couples whose husband was **not displaced**. *Respondent / recall:* the CPS accepts proxy answers from any responsible household member, so both spouses' supplement answers usually come from one respondent at one interview (the extract carries no self / proxy flag, so the two cannot be separated); recall covers three calendar years with the year of loss in whole years, and only one lost job per person (the longest held). Couples are observed married at the survey, so couples who split after a displacement are missing.
 
@@ -270,4 +270,4 @@ Weeks without work: DWWKSUN (weeks before the next job or to the survey). Employ
 | Race | B +0.088***, W +0.077*** | H x Black +0.0055 (p=0.309) | H x Black -0.001 (0.008; p=0.894) |
 
 
-PSID and CPS-monthly numbers from `IGE/EVIDENCE.md` rows 3.16, 3.20, 3.21, 3.24, 3.27, 3.28.
+PSID and CPS-monthly numbers from `EVIDENCE.md` rows 3.16, 3.20, 3.21, 3.24, 3.27, 3.28.

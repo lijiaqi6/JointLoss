@@ -19,6 +19,8 @@ venv/
 *.blg
 paperA_joint_loss/main.pdf
 paperA_joint_loss/model_document.pdf
+paperB_age_profile/main.pdf
+paperB_age_profile/model_document.pdf
 
 # OS and editor files
 .DS_Store

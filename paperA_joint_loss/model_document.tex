@@ -143,7 +143,7 @@ employer or an industry, and a permanent couple component; their separation shoc
 months at about 1.25, against about 10 in the CPS.\footnote{With independent hazards that depend only on the human
 capital level, the ratio is $1 + \mathrm{cov}(\delta_w, \delta_h)/(\E\delta_w\,\E\delta_h)$; with their hazards between
 1.0\% and 5.0\% a month and a mean near 2\%, perfectly correlated levels give at most about 1.25. Paper A's CPS ratio is
-5.45\% against 0.54\% (\code{IGE/30.CPSJointJobLoss.py}); bound in \code{IGE/proposals/fable\_bacher2025\_paperA.md},
+5.45\% against 0.54\% (\code{IGE/30.CPSJointJobLoss.py}); bound in \code{proposals/fable\_bacher2025\_paperA.md},
 Section 2.3.} (ii) The search friction is exogenous and race-specific; their endogenous job-finding rates answer why
 spousal insurance is available to the young and not the old, a question this model does not ask. (iii) The government
 is a set of schedules (a progressive tax, the Earned Income Tax Credit, food stamps, a childcare price and a consumption
@@ -398,7 +398,7 @@ The government is represented by its schedules, because the paper's policy quest
 state in which no one earns.\footnote{BPS's tax-and-transfer function is log-linear in positive family earnings and
 contains the federal income tax, the EITC and food stamps, but no unemployment insurance (their
 \code{tax\_rate\_estimation\_snap.do}); the state in which no one earns is outside its domain. Code reading in
-\code{IGE/proposals/fable\_bps2016\_paperA.md}, Section 2.2.} All schedules are set by policy era $e$, of which there
+\code{proposals/fable\_bps2016\_paperA.md}, Section 2.2.} All schedules are set by policy era $e$, of which there
 are three (Decision~\ref{od:eras}).
 
 \paragraph{Income and payroll taxes.} On positive annualised income $Y^a = 12\,(y_w + y_h + b_w + b_h)$ the household
@@ -510,7 +510,7 @@ $-0.030$ and $-0.030$; wife employed at baseline $-0.036^{***}$ against not empl
 about 0.017); the race difference in the targeted mean is 0.5 standard errors. The outcome is one by construction
 before the displacement, so it has no placebo test. The gap keeps widening after he is re-employed: $-0.027$, $-0.037$
 and $-0.050$ in years 1, 3 and 6 (Black $-0.037$, $-0.053$, $-0.074$; White $-0.017$, $-0.022$, $-0.030$). Code:
-\code{IGE/19.FatherDisplacement.py}, \code{IGE/38.PSIDJointLossChecks.py}; \code{IGE/proposals/fable\_marriage\_divorce\_paperA.md}.}
+\code{IGE/19.FatherDisplacement.py}, \code{IGE/38.PSIDJointLossChecks.py}; \code{proposals/fable\_marriage\_divorce\_paperA.md}.}
 Its time path is an untargeted test of the form: the hazard is raised only while he is out of work, whereas the PSID
 gap keeps widening after he is back at work. The husband's welfare after a separation is not counted.
 

@@ -1,0 +1,657 @@
+table,group,outcome,term,coef,se,p
+A PSID same-employer growth,Pooled Black + White (weighted),(1) growth on years of education,"educ, 25-34",0.008365273770117653,0.001564868014099107,9.008136778447085e-08
+A PSID same-employer growth,Pooled Black + White (weighted),(2) growth on education + ln parental income,"educ, 25-34",0.008204622126636585,0.001683921548360615,1.1028953103511043e-06
+A PSID same-employer growth,Pooled Black + White (weighted),(2) growth on education + ln parental income,"lyp, 25-34",0.001572223351761659,0.005705202359147496,0.7828728693124086
+A PSID same-employer growth,Pooled Black + White (weighted),(1) growth on years of education,"educ, 35-55",0.0038808767341761666,0.0009118532895000792,2.0808698339980025e-05
+A PSID same-employer growth,Pooled Black + White (weighted),(2) growth on education + ln parental income,"educ, 35-55",0.004283416157985815,0.0010144278667423142,2.416132226061106e-05
+A PSID same-employer growth,Pooled Black + White (weighted),(2) growth on education + ln parental income,"lyp, 35-55",-0.004337686257519072,0.0032188304980117666,0.17778804252549285
+A PSID same-employer growth,Black,(1) growth on years of education,"educ, 25-34",0.002552718847354382,0.00289640579695159,0.37813371711791754
+A PSID same-employer growth,Black,(2) growth on education + ln parental income,"educ, 25-34",0.0024356915460163053,0.003015475862783008,0.41924579522153416
+A PSID same-employer growth,Black,(2) growth on education + ln parental income,"lyp, 25-34",0.0017543144515057563,0.008128304970930684,0.8291219516349406
+A PSID same-employer growth,Black,(1) growth on years of education,"educ, 35-55",0.003354219329517355,0.0016855859198414847,0.046597252274727496
+A PSID same-employer growth,Black,(2) growth on education + ln parental income,"educ, 35-55",0.0034595906867481985,0.0017213666274589544,0.044453096536887504
+A PSID same-employer growth,Black,(2) growth on education + ln parental income,"lyp, 35-55",-0.0017284806743016478,0.0040705844210883815,0.6711084955754019
+A PSID same-employer growth,White,(1) growth on years of education,"educ, 25-34",0.009653775721477046,0.0015488805306234687,4.5833505927359347e-10
+A PSID same-employer growth,White,(2) growth on education + ln parental income,"educ, 25-34",0.008878794518479172,0.001649242267141393,7.302693399728876e-08
+A PSID same-employer growth,White,(2) growth on education + ln parental income,"lyp, 25-34",0.008127265962934338,0.005968772965405468,0.17331438478054584
+A PSID same-employer growth,White,(1) growth on years of education,"educ, 35-55",0.003631819795956325,0.00101182897921112,0.00033148912604077067
+A PSID same-employer growth,White,(2) growth on education + ln parental income,"educ, 35-55",0.003996288246877533,0.001095636687616393,0.0002648481082891893
+A PSID same-employer growth,White,(2) growth on education + ln parental income,"lyp, 35-55",-0.00444704314671592,0.004133525001683041,0.28199539903463466
+A PSID same-employer growth,Black - White,(1) growth on years of education,"educ, 25-34",-0.0071010568741226646,0.003278330149243197,0.03030667056770326
+A PSID same-employer growth,Black - White,(2) growth on education + ln parental income,"educ, 25-34",-0.006443102972462866,0.0034323981108148483,0.060498461942232865
+A PSID same-employer growth,Black - White,(2) growth on education + ln parental income,"lyp, 25-34",-0.006372951511428582,0.010099434832204381,0.5280270497058392
+A PSID same-employer growth,Black - White,(1) growth on years of education,"educ, 35-55",-0.0002776004664389697,0.001965944735447383,0.8877083015864708
+A PSID same-employer growth,Black - White,(2) growth on education + ln parental income,"educ, 35-55",-0.0005366975601293344,0.0020402030873959568,0.7925036779575281
+A PSID same-employer growth,Black - White,(2) growth on education + ln parental income,"lyp, 35-55",0.0027185624724142725,0.005803850992321252,0.6394938045115759
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(1) growth on years of education,"educ, 25-34",0.004539723973451825,0.0009655997643058607,2.5831402086379815e-06
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(2) growth on education + ln parental income,"educ, 25-34",0.004407861308733163,0.0010106862177794442,1.293179673911017e-05
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(4) growth on AFQT + education,"educ, 25-34",0.004269325650217634,0.0011500620088647784,0.00020541931237922232
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(3) growth on AFQT (1 s.d.),"afqt, 25-34",0.0076975125857006955,0.002148343777734234,0.0003396725272205832
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(4) growth on AFQT + education,"afqt, 25-34",0.001061338779847154,0.0024993180090050254,0.6710908498836452
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(2) growth on education + ln parental income,"lyp, 25-34",0.0019443598241128957,0.004117198949265526,0.636746166968714
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(1) growth on years of education,"educ, 35-55",0.0021699144766082895,0.0004875564103688567,8.563404767295567e-06
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(2) growth on education + ln parental income,"educ, 35-55",0.002136561120760094,0.0005141837925292948,3.2493505285931784e-05
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(4) growth on AFQT + education,"educ, 35-55",0.001167620339617741,0.0006107942279916414,0.05592203587439853
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(3) growth on AFQT (1 s.d.),"afqt, 35-55",0.00584108179477085,0.0011789080227561275,7.245896902895211e-07
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(4) growth on AFQT + education,"afqt, 35-55",0.00399038689934695,0.0014771070540793836,0.006902998282318847
+A NLSY79 same-employer growth,Pooled Black + White (weighted),(2) growth on education + ln parental income,"lyp, 35-55",0.0005032416883371405,0.002103165779554083,0.8108898807939992
+A NLSY79 same-employer growth,Black,(1) growth on years of education,"educ, 25-34",0.002713697582740165,0.0020530175477121307,0.18623167773266758
+A NLSY79 same-employer growth,Black,(2) growth on education + ln parental income,"educ, 25-34",0.002911781096005761,0.0020781052283320497,0.16116289876931456
+A NLSY79 same-employer growth,Black,(4) growth on AFQT + education,"educ, 25-34",0.003377770201571262,0.0023621165345644396,0.1527238772829969
+A NLSY79 same-employer growth,Black,(3) growth on AFQT (1 s.d.),"afqt, 25-34",0.00247878809194848,0.004669985124586703,0.5955633180221117
+A NLSY79 same-employer growth,Black,(4) growth on AFQT + education,"afqt, 25-34",-0.0028817219191854537,0.005238656339621786,0.5822590260002469
+A NLSY79 same-employer growth,Black,(2) growth on education + ln parental income,"lyp, 25-34",-0.0022617402372439033,0.005069982161768224,0.6555219932067812
+A NLSY79 same-employer growth,Black,(1) growth on years of education,"educ, 35-55",0.0019305183968417773,0.0010246179736283553,0.05954674194565857
+A NLSY79 same-employer growth,Black,(2) growth on education + ln parental income,"educ, 35-55",0.0022526770280951753,0.0010347860795819589,0.029484336300385078
+A NLSY79 same-employer growth,Black,(4) growth on AFQT + education,"educ, 35-55",0.0013065481071854704,0.0012615693876345075,0.3003640616036083
+A NLSY79 same-employer growth,Black,(3) growth on AFQT (1 s.d.),"afqt, 35-55",0.004859677737454653,0.0024746799711619426,0.04955792158538553
+A NLSY79 same-employer growth,Black,(4) growth on AFQT + education,"afqt, 35-55",0.0028501507164380643,0.0030465259953090422,0.34950943899890663
+A NLSY79 same-employer growth,Black,(2) growth on education + ln parental income,"lyp, 35-55",-0.003593824134511456,0.0029484676269316955,0.22289026781951526
+A NLSY79 same-employer growth,White,(1) growth on years of education,"educ, 25-34",0.004396566406281447,0.0010257109330423506,1.8162450101444333e-05
+A NLSY79 same-employer growth,White,(2) growth on education + ln parental income,"educ, 25-34",0.004294191385025459,0.0010660477542576517,5.621946409533326e-05
+A NLSY79 same-employer growth,White,(4) growth on AFQT + education,"educ, 25-34",0.0035019519571695412,0.0012322328306984837,0.004483762557732727
+A NLSY79 same-employer growth,White,(3) growth on AFQT (1 s.d.),"afqt, 25-34",0.009490498561625097,0.0025006789825715585,0.00014754310719881743
+A NLSY79 same-employer growth,White,(4) growth on AFQT + education,"afqt, 25-34",0.0036372764335024232,0.002964636256920216,0.21986471659744344
+A NLSY79 same-employer growth,White,(2) growth on education + ln parental income,"lyp, 25-34",0.0016266849274222395,0.005052759782897931,0.747498232952444
+A NLSY79 same-employer growth,White,(1) growth on years of education,"educ, 35-55",0.0022844813010759607,0.0005329461105323369,1.814982526493011e-05
+A NLSY79 same-employer growth,White,(2) growth on education + ln parental income,"educ, 35-55",0.00219853337550015,0.0005472655669910627,5.886720326219132e-05
+A NLSY79 same-employer growth,White,(4) growth on AFQT + education,"educ, 35-55",0.0015419144545713599,0.0006743674466212898,0.02222733889601054
+A NLSY79 same-employer growth,White,(3) growth on AFQT (1 s.d.),"afqt, 35-55",0.005699245575444585,0.001354583565259201,2.5835038838595574e-05
+A NLSY79 same-employer growth,White,(4) growth on AFQT + education,"afqt, 35-55",0.0030774757093341345,0.0017086163254067944,0.07167911023342714
+A NLSY79 same-employer growth,White,(2) growth on education + ln parental income,"lyp, 35-55",0.001450041945497711,0.0026378950016290267,0.5825274809608033
+A NLSY79 same-employer growth,Black - White,(1) growth on years of education,"educ, 25-34",-0.0016828688235412822,0.002294986703529356,0.4633874120666748
+A NLSY79 same-employer growth,Black - White,(2) growth on education + ln parental income,"educ, 25-34",-0.0013824102890196976,0.002335589680226127,0.553924791579424
+A NLSY79 same-employer growth,Black - White,(4) growth on AFQT + education,"educ, 25-34",-0.00012418175559827938,0.002664205748795298,0.9628231267846431
+A NLSY79 same-employer growth,Black - White,(3) growth on AFQT (1 s.d.),"afqt, 25-34",-0.007011710469676617,0.00529737259759366,0.1856291444975967
+A NLSY79 same-employer growth,Black - White,(4) growth on AFQT + education,"afqt, 25-34",-0.006518998352687877,0.006019351159427853,0.27880539626044676
+A NLSY79 same-employer growth,Black - White,(2) growth on education + ln parental income,"lyp, 25-34",-0.0038884251646661427,0.007157869832870583,0.5869661122293708
+A NLSY79 same-employer growth,Black - White,(1) growth on years of education,"educ, 35-55",-0.0003539629042341834,0.0011549344347684084,0.7592401290442004
+A NLSY79 same-employer growth,Black - White,(2) growth on education + ln parental income,"educ, 35-55",5.4143652595025314e-05,0.0011705903772501504,0.963108371061398
+A NLSY79 same-employer growth,Black - White,(4) growth on AFQT + education,"educ, 35-55",-0.00023536634738588946,0.0014304994837045643,0.8693104832420531
+A NLSY79 same-employer growth,Black - White,(3) growth on AFQT (1 s.d.),"afqt, 35-55",-0.000839567837989932,0.0028211589099057144,0.7660109242134252
+A NLSY79 same-employer growth,Black - White,(4) growth on AFQT + education,"afqt, 35-55",-0.00022732499289607015,0.003492948666605389,0.9481094168178017
+A NLSY79 same-employer growth,Black - White,(2) growth on education + ln parental income,"lyp, 35-55",-0.005043866080009167,0.003956254717113602,0.2023413337347899
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,25-29,0.05694485690105466,0.004716076174058927,1.4381629408832841e-33
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),25-29,0.22934264203831844,0.02075297480011478,2.166099518339443e-28
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),25-29,0.23877934738447948,0.015274865298651151,4.395491157515837e-55
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",25-29,0.19364485189180491,0.01608025047520175,2.1266981628064405e-33
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),25-29,0.045134495492674565,0.0067326492797515885,2.0303485724484416e-11
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),25-29,0.189021772557237,0.0295749450237289,1.6450218226222094e-10
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,30-34,0.0986276209927093,0.005679978145657794,1.5434181189217664e-67
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),30-34,0.3987427074826942,0.0252433318590353,3.316949103368502e-56
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),30-34,0.3465587350174506,0.021020597775865044,4.578102578564221e-61
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",30-34,0.2545160492152263,0.021856053827356205,2.4302118226662925e-31
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),30-34,0.0920426858022243,0.009184384088701961,1.2244111011430788e-23
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),30-34,0.26559043677715866,0.029232388212783206,1.0323697595744963e-19
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,35-39,0.11836740751896449,0.006770476652677191,1.934872461191459e-68
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),35-39,0.4841539269710925,0.03031918512989641,2.115927424099837e-57
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),35-39,0.39598301736651315,0.023713089293628156,1.3345519515155207e-62
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",35-39,0.28551466740840775,0.02391669370929171,7.511151472332356e-33
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),35-39,0.1104683499581054,0.011204714772074197,6.261101992669823e-23
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),35-39,0.27897244354764417,0.029557447923539152,3.788294370298721e-21
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,40-44,0.13173959167185226,0.008154048767228597,1.0246598042526339e-58
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),40-44,0.5202163771341657,0.036720618609316046,1.4689530632516455e-45
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),40-44,0.4223712047734295,0.031017731356528768,3.169519662696622e-42
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",40-44,0.2911988576331256,0.03080487758239006,3.2922021395880684e-21
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),40-44,0.1311723471403039,0.014281100777889046,4.114104626767313e-20
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),40-44,0.3105617657119122,0.03585288145843396,4.630927004331345e-18
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,45-49,0.13229339802796858,0.009406478984940915,6.314572043346343e-45
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),45-49,0.5206903914851182,0.04198289263523834,2.534790262751805e-35
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),45-49,0.42416950564415856,0.0415659804748773,1.8885044625070613e-24
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",45-49,0.2996973383031272,0.042247306091358065,1.3040280123541728e-12
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),45-49,0.12447216734103134,0.016107852570062673,1.0974673902490133e-14
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),45-49,0.29344911806425966,0.044033793148662626,2.6614734322893634e-11
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,50-55,0.1321198554521108,0.011391846457631583,4.230252978984509e-31
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),50-55,0.5362846369399812,0.049168047711989106,1.0651180452660116e-27
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),50-55,0.44924451678166216,0.042702405125729294,6.960984804546934e-26
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",50-55,0.31376168300013657,0.04231897080784758,1.223530868567997e-13
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),50-55,0.1354828337815256,0.020586610787009282,4.669361800282616e-11
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),50-55,0.30157927079913976,0.04732518016158039,1.8598269216930313e-10
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,change >= 35 minus < 35,0.050843824220842035,0.0062769631345455466,5.492876440431587e-16
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),change >= 35 minus < 35,0.201293658372083,0.027105596690892603,1.1169729960725699e-13
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,0.1302730199404758,0.023736397293946738,4.0576712555704827e-08
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",change >= 35 minus < 35,0.07346268603268369,0.02438009042391753,0.002584876107989725
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),change >= 35 minus < 35,0.05681033390779211,0.01093148043150445,2.0258714731480407e-07
+"B PSID premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),change >= 35 minus < 35,0.4360867195198962,0.10526135050468591,3.4294903079735214e-05
+"B PSID premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,25-29,0.0761815584207568,0.0070319862855690776,2.3864921558794037e-27
+"B PSID premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),25-29,0.3084693301088919,0.03428426500897184,2.311210264740563e-19
+"B PSID premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),25-29,0.17377614169436129,0.02005325102891495,4.486127886215337e-18
+"B PSID premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",25-29,0.1369699646832246,0.019310163162524,1.310892625728934e-12
+"B PSID premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),25-29,0.0368061770111367,0.006830243975744163,7.09667690774727e-08
+"B PSID premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),25-29,0.21180224541911896,0.04012340603641961,1.3005368905535516e-07
+"B PSID premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,30-34,0.10143725815276461,0.007963027785768444,3.611411013375094e-37
+"B PSID premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),30-34,0.41182702483713846,0.03847642246714823,9.815257046144601e-27
+"B PSID premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),30-34,0.19853568981612474,0.02263950025387372,1.795605387476123e-18
+"B PSID premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",30-34,0.14074893278802847,0.020999591914384916,2.0493915393394724e-11
+"B PSID premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),30-34,0.05778675702809627,0.009664327892299186,2.2397880311294406e-09
+"B PSID premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),30-34,0.29106483112238357,0.04746613592465493,8.675253600523543e-10
+"B PSID premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,35-39,0.10569319933945362,0.009451140297807721,4.9326977621756864e-29
+"B PSID premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),35-39,0.42452781605412904,0.04578458335906302,1.8219593338137252e-20
+"B PSID premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),35-39,0.18727922666032837,0.03031033528274705,6.462133990337688e-10
+"B PSID premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",35-39,0.1250212644203172,0.02782985904223031,7.044394264044485e-06
+"B PSID premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),35-39,0.06225796224001118,0.010378614548628259,1.989309139050583e-09
+"B PSID premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),35-39,0.33243389216322183,0.05981678555241886,2.7361079447984825e-08
+"B PSID premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,40-44,0.09610785011015427,0.011488565099451703,5.984909540837265e-17
+"B PSID premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),40-44,0.39545674304615724,0.0594881591269835,2.977998402818448e-11
+"B PSID premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),40-44,0.14014581940192192,0.0342613023563944,4.3044626372140316e-05
+"B PSID premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",40-44,0.09818723318670353,0.03213286984886096,0.0022456323009844114
+"B PSID premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),40-44,0.04195858621521839,0.010681810200235418,8.564068684950555e-05
+"B PSID premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),40-44,0.2993923500128537,0.08528223497383225,0.00044708604031469675
+"B PSID premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,45-49,0.11842067685313395,0.012457434188769528,1.9808807459696068e-21
+"B PSID premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),45-49,0.437805420571749,0.058459347101626376,6.936986826382297e-14
+"B PSID premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),45-49,0.1453483105988198,0.04243936445706028,0.0006151467738207807
+"B PSID premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",45-49,0.08873125947557922,0.037832897036534655,0.019009395019181363
+"B PSID premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),45-49,0.056617051123240586,0.01591747642094999,0.0003752408407853607
+"B PSID premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),45-49,0.3895267230144215,0.11592792544174708,0.0007792083214474267
+"B PSID premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,50-55,0.12058589464414417,0.015595599330711548,1.0583151417987164e-14
+"B PSID premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),50-55,0.4742297370605602,0.0725243174230167,6.197021324179183e-11
+"B PSID premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),50-55,0.15028327334104608,0.05744272936123225,0.008890718470807727
+"B PSID premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",50-55,0.11049205010513641,0.053041918923017566,0.03724137267467413
+"B PSID premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),50-55,0.03979122323590967,0.018816830782296373,0.034458827754110695
+"B PSID premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),50-55,0.2647747972963649,0.1267618549900827,0.036729542318469116
+"B PSID premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,change >= 35 minus < 35,0.021392496949960788,0.008577460130670672,0.012629962648150844
+"B PSID premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),change >= 35 minus < 35,0.0728567517101337,0.040305319956115616,0.07066547297725766
+"B PSID premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,-0.030391758254713963,0.028652992787376937,0.2888337359199974
+"B PSID premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",change >= 35 minus < 35,-0.03325149693869245,0.02664418513927864,0.21203718890144985
+"B PSID premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),change >= 35 minus < 35,0.0028597386839784855,0.009370382849094942,0.7602221355838333
+"B PSID premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),change >= 35 minus < 35,,,
+"B PSID premium and IGE by band, ln hourly wage",White,(1) return to a year of education,25-29,0.04892432263278579,0.004989924719381396,1.0754956607545294e-22
+"B PSID premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),25-29,0.18700326628004404,0.021466814161544525,3.0048254435672808e-18
+"B PSID premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),25-29,0.21984618436908931,0.01827468779859774,2.4688405416186673e-33
+"B PSID premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",25-29,0.17386680971772323,0.019548214996511812,5.881248791637804e-19
+"B PSID premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),25-29,0.04597937465136609,0.008403047233647752,4.456128740492098e-08
+"B PSID premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),25-29,0.20914338260323637,0.04081759751440079,2.9935389063956633e-07
+"B PSID premium and IGE by band, ln hourly wage",White,(1) return to a year of education,30-34,0.09030967431530554,0.005983691441176058,1.8106289849126713e-51
+"B PSID premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),30-34,0.36168373193932113,0.026194413609449282,2.291338179569502e-43
+"B PSID premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),30-34,0.341806716646986,0.024318900188513605,7.159143707861014e-45
+"B PSID premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",30-34,0.24102469819968064,0.024373249148763775,4.6509607825560186e-23
+"B PSID premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),30-34,0.10078201844730533,0.010972348235594526,4.111790115920142e-20
+"B PSID premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),30-34,0.29485090122261065,0.034254898082616725,7.463568765663339e-18
+"B PSID premium and IGE by band, ln hourly wage",White,(1) return to a year of education,35-39,0.11038906236546361,0.007046658075201844,2.6058308172213813e-55
+"B PSID premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),35-39,0.4502761389780534,0.03142878446766916,1.4866966130411939e-46
+"B PSID premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),35-39,0.38431152465543145,0.029969307756918185,1.2110215534769248e-37
+"B PSID premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",35-39,0.25679995942597644,0.029710640491277942,5.45804108028924e-18
+"B PSID premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),35-39,0.127511565229455,0.013930838455905366,5.527833498369289e-20
+"B PSID premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),35-39,0.33179219734245585,0.03889449269903502,1.456282281181487e-17
+"B PSID premium and IGE by band, ln hourly wage",White,(1) return to a year of education,40-44,0.12821229616597596,0.008249221963164173,1.7928623486081637e-54
+"B PSID premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),40-44,0.4996297866970773,0.03706722730739591,2.0785768382679938e-41
+"B PSID premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),40-44,0.43961373569764706,0.03746105789289597,8.410787770443872e-32
+"B PSID premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",40-44,0.2871043082906426,0.03688045608593843,6.986350933109187e-15
+"B PSID premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),40-44,0.15250942740700446,0.017243124618670044,9.181443473102772e-19
+"B PSID premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),40-44,0.34691688412551286,0.04244034200764617,2.9777486713161607e-16
+"B PSID premium and IGE by band, ln hourly wage",White,(1) return to a year of education,45-49,0.12534433381836152,0.009868041650546071,5.7602662590165105e-37
+"B PSID premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),45-49,0.47924688737543875,0.04249311244246267,1.6810336058335736e-29
+"B PSID premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),45-49,0.46512687554900367,0.05042713581802691,2.86909635358266e-20
+"B PSID premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",45-49,0.32555060675852676,0.05115979112442836,1.9732604251942743e-10
+"B PSID premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),45-49,0.1395762687904769,0.019797513714109077,1.7867134175671201e-12
+"B PSID premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),45-49,0.30008214129903954,0.049291932659460636,1.1443339837383279e-09
+"B PSID premium and IGE by band, ln hourly wage",White,(1) return to a year of education,50-55,0.1283644963486941,0.011986238711063935,9.203281570545163e-27
+"B PSID premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),50-55,0.5067709386854826,0.05162071971396892,9.494385242635666e-23
+"B PSID premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),50-55,0.4549566858913645,0.05306293688219548,1.0003221725877971e-17
+"B PSID premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",50-55,0.29333549227839123,0.05339106385260024,3.9272258543643545e-08
+"B PSID premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),50-55,0.16162119361297328,0.025512761506939468,2.3747106424230307e-10
+"B PSID premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),50-55,0.35524523240343264,0.061678264534694556,8.428839685495716e-09
+"B PSID premium and IGE by band, ln hourly wage",White,(1) return to a year of education,change >= 35 minus < 35,0.053460548700578134,0.006543065301402097,3.069452628837752e-16
+"B PSID premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),change >= 35 minus < 35,0.20963743882433045,0.027996355085382042,6.991710215933145e-14
+"B PSID premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,0.155175754940324,0.03001188118976548,2.3349664916352216e-07
+"B PSID premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",change >= 35 minus < 35,0.08325183772968234,0.030430901721047694,0.006223519296663612
+"B PSID premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),change >= 35 minus < 35,0.07192391721064167,0.013236466391426473,5.5175616389393845e-08
+"B PSID premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),change >= 35 minus < 35,0.46349970869032653,0.11147678962157029,3.2130806672471285e-05
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,25-29,0.027257235787971013,0.008626695134861199,0.0015796514499242583
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),25-29,0.12146606382884784,0.04037789573769871,0.0026277275779578503
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),25-29,-0.04607004267472803,0.027099545905786476,0.08912527127457393
+"B PSID premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",25-29,-0.03689684503449864,0.027463770109243137,0.17911872854317745
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),25-29,-0.009173197640229391,0.010839587121546626,0.397403155954381
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),25-29,,,
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,30-34,0.01112758383745907,0.00994627084278885,0.263238513225599
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),30-34,0.050143292897817326,0.0464726607536742,0.280594519714631
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),30-34,-0.14327102683086124,0.033170975265544564,1.5661827114500752e-05
+"B PSID premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",30-34,-0.10027576541165217,0.03217830658698434,0.0018316464753494143
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),30-34,-0.04299526141920906,0.014632051528180824,0.0032987897874966763
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),30-34,0.3000973914283951,0.10573204380968086,0.004535704397672637
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,35-39,-0.004695863026009994,0.011825682565751042,0.6913009232689526
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),35-39,-0.02574832292392437,0.05553100349471535,0.64288080629847
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),35-39,-0.19703229799510308,0.04263635683717948,3.814764559171332e-06
+"B PSID premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",35-39,-0.13177869500565925,0.04070679387029678,0.0012068112320787875
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),35-39,-0.06525360298944383,0.017395554511419012,0.00017601450177622642
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),35-39,0.33118226632602943,0.09474861512605126,0.00047339003504795696
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,40-44,-0.03210444605582169,0.0141606934113421,0.023380934716397225
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),40-44,-0.10417304365092006,0.07012558715593717,0.1374058220942211
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),40-44,-0.2994679162957251,0.05076672752857747,3.6592998264742082e-09
+"B PSID premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",40-44,-0.18891707510393907,0.04890751491405197,0.00011212175025288162
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),40-44,-0.11055084119178604,0.02029901056397145,5.1480501049765905e-08
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),40-44,0.3691575463550389,0.07779462737136976,2.0821471080431336e-06
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,45-49,-0.006923656965227565,0.01590757607147702,0.6633862439043232
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),45-49,-0.041441466803689764,0.07228252721276471,0.5664238475106264
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),45-49,-0.31977856495018386,0.0659076009907982,1.2227047263113828e-06
+"B PSID premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",45-49,-0.23681934728294754,0.0636178056239095,0.0001972345328860533
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),45-49,-0.08295921766723632,0.0254192337370158,0.0010999098474571234
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),45-49,0.2594270747326669,0.08237678043906622,0.0016367650427477893
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,50-55,-0.007778601704549928,0.019669586597656243,0.6925009232795678
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),50-55,-0.03254120162492241,0.08901952213679101,0.714699923905582
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),50-55,-0.30467341255031843,0.07820065490155204,9.777549719168321e-05
+"B PSID premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",50-55,-0.18284344217325482,0.07525988880106324,0.015119918562557486
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),50-55,-0.12182997037706361,0.03170132679241593,0.00012151178729520949
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),50-55,0.39987069878289017,0.12282977584867674,0.001131982074224549
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,change >= 35 minus < 35,-0.03206805175061733,0.010775159157955011,0.0029193076324155634
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),change >= 35 minus < 35,-0.13678068711419672,0.04901448537310674,0.005260757998486267
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,-0.18556751319503795,0.041462552650375795,7.621670353364642e-06
+"B PSID premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",change >= 35 minus < 35,-0.11650333466837476,0.04042447966733805,0.00395160221599899
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),change >= 35 minus < 35,-0.06906417852666319,0.016216949875630934,2.0555943129246167e-05
+"B PSID premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),change >= 35 minus < 35,0.37217817568139916,0.10388143679597034,0.0003400340959531984
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(1) return to a year of education,25-29,0.06111919572504121,0.006385425182030464,1.0519049213643946e-21
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(2) BA premium (education >= 16),25-29,0.23605080939159961,0.026959521275375587,2.0275194983428886e-18
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),25-29,0.2910494748139172,0.021582759034759903,1.9094810834161432e-41
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),"(4) ln parental income, + education",25-29,0.24826253568774942,0.02205036183256806,2.093860744169485e-29
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),25-29,0.04278693912616777,0.008378718603647018,3.2797088545137975e-07
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(6) share = (5) / (3),25-29,0.14700916108343315,0.029345577769899652,5.454758076548166e-07
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(1) return to a year of education,30-34,0.116842782357928,0.007104748836409427,8.999320380929981e-61
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(2) BA premium (education >= 16),30-34,0.4540212701479802,0.02982656963417004,2.52527662651704e-52
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),30-34,0.409512951101372,0.025752792742628275,6.167723073147271e-57
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),"(4) ln parental income, + education",30-34,0.30029564538835984,0.026309169903999424,3.555421806973217e-30
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),30-34,0.10921730571301214,0.011104136188587894,7.899119192703452e-23
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(6) share = (5) / (3),30-34,0.26670049242466126,0.029436671912133727,1.3027820745476553e-19
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(1) return to a year of education,35-39,0.13106018580312406,0.007824845970037,5.735891068467093e-63
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(2) BA premium (education >= 16),35-39,0.539236298934556,0.03448598329941767,4.1139601572632306e-55
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),35-39,0.4363933152738949,0.029708516857535512,7.56397799911153e-49
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),"(4) ln parental income, + education",35-39,0.31376266731654123,0.030124497340018593,2.1061661337867118e-25
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),35-39,0.12263064795735368,0.01264744650085465,3.1330645300880887e-22
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(6) share = (5) / (3),35-39,0.2810094556109014,0.03172710033334757,8.213782664371225e-19
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(1) return to a year of education,40-44,0.15107995772396118,0.009058289544956168,1.8743514253680105e-62
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(2) BA premium (education >= 16),40-44,0.5849129521572126,0.040183375976739426,5.34252586846215e-48
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),40-44,0.47144823165577,0.035108813426725255,4.1332648919376767e-41
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),"(4) ln parental income, + education",40-44,0.3190309656463943,0.03499679232793607,7.794400606495342e-20
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),40-44,0.15241726600937566,0.01626978301206312,7.38365018294881e-21
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(6) share = (5) / (3),40-44,0.32329586956784645,0.037069524658682046,2.7493236579104275e-18
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(1) return to a year of education,45-49,0.14468486659814062,0.010958263206193313,8.401179645998591e-40
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(2) BA premium (education >= 16),45-49,0.5732238389068698,0.047662818554525234,2.5740711764017927e-33
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),45-49,0.4405800027461737,0.048104067957300795,5.243248741466984e-20
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),"(4) ln parental income, + education",45-49,0.30178257694083954,0.049644238243638054,1.210064928609385e-09
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),45-49,0.13879742580533416,0.018611238235867848,8.803170060271306e-14
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(6) share = (5) / (3),45-49,0.31503342171727644,0.05147552429884841,9.353870962831577e-10
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(1) return to a year of education,50-55,0.13294450696763477,0.013994569782782209,2.1045361048403064e-21
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(2) BA premium (education >= 16),50-55,0.5441846920539313,0.05980865500641189,9.136767761191161e-20
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),50-55,0.4658010638571814,0.06458258880053136,5.493919152606764e-13
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),"(4) ln parental income, + education",50-55,0.3311415948646783,0.0641747050831347,2.469474451305739e-07
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),50-55,0.13465946899250308,0.022950340195426584,4.426070655116649e-09
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(6) share = (5) / (3),50-55,0.2890922315149345,0.05711748306580816,4.1627301200529637e-07
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(1) return to a year of education,change >= 35 minus < 35,0.050961390231730574,0.007315538645986428,3.256525544090228e-12
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(2) BA premium (education >= 16),change >= 35 minus < 35,0.2153534057433525,0.031099355263494215,4.3693012812745906e-12
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,0.10327444042561046,0.030735621546930058,0.000779172156144252
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),"(4) ln parental income, + education",change >= 35 minus < 35,0.04215036065405872,0.03141840437520256,0.1797316186302027
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),change >= 35 minus < 35,0.06112407977155174,0.01215816972083051,4.971538547629008e-07
+"B PSID premium and IGE by band, ln annual earnings",Pooled Black + White (weighted),(6) share = (5) / (3),change >= 35 minus < 35,0.591860672588974,0.1975814749961837,0.002739709110160137
+"B PSID premium and IGE by band, ln annual earnings",Black,(1) return to a year of education,25-29,0.12397881372771735,0.010148970258247968,2.556540465608132e-34
+"B PSID premium and IGE by band, ln annual earnings",Black,(2) BA premium (education >= 16),25-29,0.4645341701216239,0.04479530633059301,3.389823867385282e-25
+"B PSID premium and IGE by band, ln annual earnings",Black,(3) ln parental income (IGE of the outcome),25-29,0.26051299137907336,0.03084555093183373,3.021683778797574e-17
+"B PSID premium and IGE by band, ln annual earnings",Black,"(4) ln parental income, + education",25-29,0.19972429186360233,0.029639428286260736,1.6006705256739248e-11
+"B PSID premium and IGE by band, ln annual earnings",Black,(5) accounted for by education = (3) - (4),25-29,0.06078869951547103,0.010485230081466648,6.728866156641478e-09
+"B PSID premium and IGE by band, ln annual earnings",Black,(6) share = (5) / (3),25-29,0.23334229588196306,0.04188602777493401,2.5344677862956144e-08
+"B PSID premium and IGE by band, ln annual earnings",Black,(1) return to a year of education,30-34,0.1508420377428022,0.0100698079731742,9.976494052753098e-51
+"B PSID premium and IGE by band, ln annual earnings",Black,(2) BA premium (education >= 16),30-34,0.5825421103131391,0.04685437602930827,1.7294076865495862e-35
+"B PSID premium and IGE by band, ln annual earnings",Black,(3) ln parental income (IGE of the outcome),30-34,0.27520829122480706,0.030590940128888723,2.3324326449372703e-19
+"B PSID premium and IGE by band, ln annual earnings",Black,"(4) ln parental income, + education",30-34,0.18826142887655806,0.02824664512862968,2.648224027223258e-11
+"B PSID premium and IGE by band, ln annual earnings",Black,(5) accounted for by education = (3) - (4),30-34,0.086946862348249,0.013966886869013392,4.808985621156286e-10
+"B PSID premium and IGE by band, ln annual earnings",Black,(6) share = (5) / (3),30-34,0.31593111516115424,0.04919108205726604,1.3402934844615957e-10
+"B PSID premium and IGE by band, ln annual earnings",Black,(1) return to a year of education,35-39,0.1441135815611625,0.012176009275772486,2.547090976038301e-32
+"B PSID premium and IGE by band, ln annual earnings",Black,(2) BA premium (education >= 16),35-39,0.5554039013670448,0.05615146969715637,4.5466875335121297e-23
+"B PSID premium and IGE by band, ln annual earnings",Black,(3) ln parental income (IGE of the outcome),35-39,0.2560415967040479,0.0386373789929255,3.430771645331102e-11
+"B PSID premium and IGE by band, ln annual earnings",Black,"(4) ln parental income, + education",35-39,0.17118580511032833,0.0371205496619379,3.995462173901418e-06
+"B PSID premium and IGE by band, ln annual earnings",Black,(5) accounted for by education = (3) - (4),35-39,0.08485579159371959,0.014171703947918172,2.1284024602775816e-09
+"B PSID premium and IGE by band, ln annual earnings",Black,(6) share = (5) / (3),35-39,0.33141408539098544,0.062995628373664,1.4334723226367822e-07
+"B PSID premium and IGE by band, ln annual earnings",Black,(1) return to a year of education,40-44,0.12655190774189606,0.014228440005492459,5.879263418004812e-19
+"B PSID premium and IGE by band, ln annual earnings",Black,(2) BA premium (education >= 16),40-44,0.5095407471085976,0.06720890198038938,3.417212995248862e-14
+"B PSID premium and IGE by band, ln annual earnings",Black,(3) ln parental income (IGE of the outcome),40-44,0.16906347079404713,0.045892449106874345,0.00022968693000039288
+"B PSID premium and IGE by band, ln annual earnings",Black,"(4) ln parental income, + education",40-44,0.11337400419934629,0.04327420726719181,0.008795609944830383
+"B PSID premium and IGE by band, ln annual earnings",Black,(5) accounted for by education = (3) - (4),40-44,0.05568946659470084,0.013812443141515543,5.534346601023906e-05
+"B PSID premium and IGE by band, ln annual earnings",Black,(6) share = (5) / (3),40-44,0.3293997593515731,0.09889812653553406,0.0008662863391646353
+"B PSID premium and IGE by band, ln annual earnings",Black,(1) return to a year of education,45-49,0.14557669238092785,0.016480933432321133,1.0187144119396868e-18
+"B PSID premium and IGE by band, ln annual earnings",Black,(2) BA premium (education >= 16),45-49,0.5745626650514168,0.07210103261052081,1.6015139704677008e-15
+"B PSID premium and IGE by band, ln annual earnings",Black,(3) ln parental income (IGE of the outcome),45-49,0.19626766094370396,0.055648947851637216,0.00042047303091996297
+"B PSID premium and IGE by band, ln annual earnings",Black,"(4) ln parental income, + education",45-49,0.12724115696317587,0.05090423285743315,0.012432714719577726
+"B PSID premium and IGE by band, ln annual earnings",Black,(5) accounted for by education = (3) - (4),45-49,0.06902650398052809,0.019740075240953916,0.000470927568361486
+"B PSID premium and IGE by band, ln annual earnings",Black,(6) share = (5) / (3),45-49,0.35169575898867605,0.1090233178990762,0.0012558753605407054
+"B PSID premium and IGE by band, ln annual earnings",Black,(1) return to a year of education,50-55,0.14287600659249264,0.02074171996473985,5.6447415522621634e-12
+"B PSID premium and IGE by band, ln annual earnings",Black,(2) BA premium (education >= 16),50-55,0.5112893854392692,0.0943730194673298,6.035387160884074e-08
+"B PSID premium and IGE by band, ln annual earnings",Black,(3) ln parental income (IGE of the outcome),50-55,0.21509062757663977,0.0691500489413913,0.001867763798851991
+"B PSID premium and IGE by band, ln annual earnings",Black,"(4) ln parental income, + education",50-55,0.16843597583077008,0.06536967582215106,0.009975760931640454
+"B PSID premium and IGE by band, ln annual earnings",Black,(5) accounted for by education = (3) - (4),50-55,0.04665465174586969,0.022228387646523764,0.03582774417348203
+"B PSID premium and IGE by band, ln annual earnings",Black,(6) share = (5) / (3),50-55,0.21690694881275566,0.10412515776779827,0.03723875510142565
+"B PSID premium and IGE by band, ln annual earnings",Black,(1) return to a year of education,change >= 35 minus < 35,0.002369121333859997,0.011414812034966845,0.83558191516983
+"B PSID premium and IGE by band, ln annual earnings",Black,(2) BA premium (education >= 16),change >= 35 minus < 35,0.014161034524200644,0.051109373646009884,0.7817239476157305
+"B PSID premium and IGE by band, ln annual earnings",Black,(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,-0.058744802297330506,0.03711930178543936,0.11351392129577309
+"B PSID premium and IGE by band, ln annual earnings",Black,"(4) ln parental income, + education",change >= 35 minus < 35,-0.04893362484417506,0.0354230768890957,0.16715438859250276
+"B PSID premium and IGE by band, ln annual earnings",Black,(5) accounted for by education = (3) - (4),change >= 35 minus < 35,-0.009811177453155448,0.01140464396972038,0.3896351817208572
+"B PSID premium and IGE by band, ln annual earnings",Black,(6) share = (5) / (3),change >= 35 minus < 35,,,
+"B PSID premium and IGE by band, ln annual earnings",White,(1) return to a year of education,25-29,0.04520783173256859,0.006505818314817529,3.683255562564931e-12
+"B PSID premium and IGE by band, ln annual earnings",White,(2) BA premium (education >= 16),25-29,0.1635724647967436,0.026749109129246277,9.651933944263717e-10
+"B PSID premium and IGE by band, ln annual earnings",White,(3) ln parental income (IGE of the outcome),25-29,0.23973725559335435,0.02489766803646014,6.036991897660461e-22
+"B PSID premium and IGE by band, ln annual earnings",White,"(4) ln parental income, + education",25-29,0.2036784077870267,0.026185337586006587,7.348349125228791e-15
+"B PSID premium and IGE by band, ln annual earnings",White,(5) accounted for by education = (3) - (4),25-29,0.03605884780632765,0.010169198990265017,0.0003912914334424244
+"B PSID premium and IGE by band, ln annual earnings",White,(6) share = (5) / (3),25-29,0.150409863152397,0.04410000359681897,0.0006480722328925312
+"B PSID premium and IGE by band, ln annual earnings",White,(1) return to a year of education,30-34,0.10149053158711402,0.0074642844062873265,4.18225912032394e-42
+"B PSID premium and IGE by band, ln annual earnings",White,(2) BA premium (education >= 16),30-34,0.3946686563319739,0.030789345147891157,1.29422527386568e-37
+"B PSID premium and IGE by band, ln annual earnings",White,(3) ln parental income (IGE of the outcome),30-34,0.37768725370919665,0.029434988744861855,1.0960319973203034e-37
+"B PSID premium and IGE by band, ln annual earnings",White,"(4) ln parental income, + education",30-34,0.26333102478838555,0.029407784310561885,3.4138184668070534e-19
+"B PSID premium and IGE by band, ln annual earnings",White,(5) accounted for by education = (3) - (4),30-34,0.1143562289208111,0.013490015858010029,2.3087421641609673e-17
+"B PSID premium and IGE by band, ln annual earnings",White,(6) share = (5) / (3),30-34,0.3027802177535507,0.03798543998215429,1.5745334367558856e-15
+"B PSID premium and IGE by band, ln annual earnings",White,(1) return to a year of education,35-39,0.1217369665928691,0.0080068960753222,3.3259670635127183e-52
+"B PSID premium and IGE by band, ln annual earnings",White,(2) BA premium (education >= 16),35-39,0.49981419206906536,0.035469384791867065,4.288175551541742e-45
+"B PSID premium and IGE by band, ln annual earnings",White,(3) ln parental income (IGE of the outcome),35-39,0.4260625262831137,0.034029313650902074,5.7702638422400585e-36
+"B PSID premium and IGE by band, ln annual earnings",White,"(4) ln parental income, + education",35-39,0.2857923558216007,0.03398763601454342,4.145258452154549e-17
+"B PSID premium and IGE by band, ln annual earnings",White,(5) accounted for by education = (3) - (4),35-39,0.14027017046151302,0.015532010848982902,1.7005199823367529e-19
+"B PSID premium and IGE by band, ln annual earnings",White,(6) share = (5) / (3),35-39,0.32922437860283704,0.039720384262575,1.1463767205682926e-16
+"B PSID premium and IGE by band, ln annual earnings",White,(1) return to a year of education,40-44,0.14269987261646785,0.009096535904190567,1.8481700565515837e-55
+"B PSID premium and IGE by band, ln annual earnings",White,(2) BA premium (education >= 16),40-44,0.5370740999562745,0.04089539586193321,2.133996610380781e-39
+"B PSID premium and IGE by band, ln annual earnings",White,(3) ln parental income (IGE of the outcome),40-44,0.4836077651849934,0.0410620819491176,5.099615799658114e-32
+"B PSID premium and IGE by band, ln annual earnings",White,"(4) ln parental income, + education",40-44,0.31300849473984194,0.040626699706650574,1.3135438044573426e-14
+"B PSID premium and IGE by band, ln annual earnings",White,(5) accounted for by education = (3) - (4),40-44,0.17059927044515144,0.019348917457743482,1.1757455337252633e-18
+"B PSID premium and IGE by band, ln annual earnings",White,(6) share = (5) / (3),40-44,0.3527637120960878,0.0433540353469156,4.058161895974897e-16
+"B PSID premium and IGE by band, ln annual earnings",White,(1) return to a year of education,45-49,0.13016521869212738,0.011214712366237016,3.8127076674465513e-31
+"B PSID premium and IGE by band, ln annual earnings",White,(2) BA premium (education >= 16),45-49,0.5049451348354523,0.04790868815104733,5.665508603406642e-26
+"B PSID premium and IGE by band, ln annual earnings",White,(3) ln parental income (IGE of the outcome),45-49,0.4503756469835025,0.055445329853487546,4.552571022158627e-16
+"B PSID premium and IGE by band, ln annual earnings",White,"(4) ln parental income, + education",45-49,0.3016631250202737,0.05754355594446772,1.5854927828750985e-07
+"B PSID premium and IGE by band, ln annual earnings",White,(5) accounted for by education = (3) - (4),45-49,0.14871252196322882,0.022458104203976488,3.5491003731129346e-11
+"B PSID premium and IGE by band, ln annual earnings",White,(6) share = (5) / (3),45-49,0.3301966324317625,0.060859407392017735,5.777170407971312e-08
+"B PSID premium and IGE by band, ln annual earnings",White,(1) return to a year of education,50-55,0.1277058470392804,0.014362383309448229,6.018690122137376e-19
+"B PSID premium and IGE by band, ln annual earnings",White,(2) BA premium (education >= 16),50-55,0.5097181835185803,0.06151963868009273,1.1765862357593118e-16
+"B PSID premium and IGE by band, ln annual earnings",White,(3) ln parental income (IGE of the outcome),50-55,0.45280902134566003,0.07168543301730339,2.673607928362317e-10
+"B PSID premium and IGE by band, ln annual earnings",White,"(4) ln parental income, + education",50-55,0.2920422011010859,0.07193366801589138,4.909753038694286e-05
+"B PSID premium and IGE by band, ln annual earnings",White,(5) accounted for by education = (3) - (4),50-55,0.16076682024457412,0.02865145122372474,2.0101768299033768e-08
+"B PSID premium and IGE by band, ln annual earnings",White,(6) share = (5) / (3),50-55,0.35504332437283714,0.0761792774971452,3.1524502063650173e-06
+"B PSID premium and IGE by band, ln annual earnings",White,(1) return to a year of education,change >= 35 minus < 35,0.05722779457534488,0.007554802084101001,3.5906583478742876e-14
+"B PSID premium and IGE by band, ln annual earnings",White,(2) BA premium (education >= 16),change >= 35 minus < 35,0.23376734203048444,0.03185015185959024,2.142347835335675e-13
+"B PSID premium and IGE by band, ln annual earnings",White,(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,0.14450148529804197,0.03480167648809834,3.293784862634962e-05
+"B PSID premium and IGE by band, ln annual earnings",White,"(4) ln parental income, + education",change >= 35 minus < 35,0.06462182788299442,0.03557654481209599,0.06930648501999491
+"B PSID premium and IGE by band, ln annual earnings",White,(5) accounted for by education = (3) - (4),change >= 35 minus < 35,0.07987965741504754,0.014954435959639792,9.216232950827389e-08
+"B PSID premium and IGE by band, ln annual earnings",White,(6) share = (5) / (3),change >= 35 minus < 35,0.5527947152258783,0.1547845268813052,0.0003551021605419718
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(1) return to a year of education,25-29,0.07877098199514876,0.012073384674946779,6.829726015952591e-11
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(2) BA premium (education >= 16),25-29,0.3009617053248803,0.05212570146679727,7.75181683295543e-09
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(3) ln parental income (IGE of the outcome),25-29,0.020775735785719007,0.039608454792418056,0.5999114869334823
+"B PSID premium and IGE by band, ln annual earnings",Black - White,"(4) ln parental income, + education",25-29,-0.003954115923424373,0.03953077558671877,0.9203234717699792
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(5) accounted for by education = (3) - (4),25-29,0.02472985170914338,0.014622017387382112,0.09078430225053895
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(6) share = (5) / (3),25-29,,,
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(1) return to a year of education,30-34,0.049351506155688174,0.012536205554117488,8.260357814355482e-05
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(2) BA premium (education >= 16),30-34,0.18787345398116517,0.05594430401155226,0.0007844527186429501
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(3) ln parental income (IGE of the outcome),30-34,-0.10247896248438959,0.042399642675177505,0.015650004624890104
+"B PSID premium and IGE by band, ln annual earnings",Black - White,"(4) ln parental income, + education",30-34,-0.07506959591182749,0.04075906187992414,0.06550600501090166
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(5) accounted for by education = (3) - (4),30-34,-0.0274093665725621,0.019442628206696726,0.15861166993148867
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(6) share = (5) / (3),30-34,0.2674633496288305,0.1874531654003821,0.1536295943391511
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(1) return to a year of education,35-39,0.022376614968293393,0.014613262378733824,0.12570665490572136
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(2) BA premium (education >= 16),35-39,0.055589709297979406,0.06644824903107138,0.4028250262897508
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(3) ln parental income (IGE of the outcome),35-39,-0.17002092957906578,0.05150966240706346,0.0009642401798041009
+"B PSID premium and IGE by band, ln annual earnings",Black - White,"(4) ln parental income, + education",35-39,-0.11460655071127235,0.050313577623940536,0.022735791061411773
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(5) accounted for by education = (3) - (4),35-39,-0.055414378867793435,0.021063838797324593,0.008518853137293062
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(6) share = (5) / (3),35-39,0.3259268079817419,0.13683248798176814,0.01722169239296696
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(1) return to a year of education,40-44,-0.01614796487457179,0.016904822004661754,0.3394622427011137
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(2) BA premium (education >= 16),40-44,-0.027533352847676884,0.0786961808701331,0.7264370248627512
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(3) ln parental income (IGE of the outcome),40-44,-0.3145442943909462,0.061583157945277384,3.26215978947342e-07
+"B PSID premium and IGE by band, ln annual earnings",Black - White,"(4) ln parental income, + education",40-44,-0.19963449054049565,0.05934954803060534,0.0007690313873923293
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(5) accounted for by education = (3) - (4),40-44,-0.11490980385045058,0.023788163989818877,1.3615962790418834e-06
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(6) share = (5) / (3),40-44,0.36532153308630516,0.08802515490389752,3.321925547983921e-05
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(1) return to a year of education,45-49,0.01541147368880047,0.01994621364092004,0.4397286036315272
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(2) BA premium (education >= 16),45-49,0.06961753021596451,0.08656861366490962,0.4212878081987481
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(3) ln parental income (IGE of the outcome),45-49,-0.25410798603979856,0.0785544954455481,0.0012172848540238051
+"B PSID premium and IGE by band, ln annual earnings",Black - White,"(4) ln parental income, + education",45-49,-0.17442196805709784,0.07681702432439333,0.02317023122841997
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(5) accounted for by education = (3) - (4),45-49,-0.07968601798270072,0.029915359298033788,0.007728280303552942
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(6) share = (5) / (3),45-49,0.3135911595089351,0.1326660646797826,0.018090372255918336
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(1) return to a year of education,50-55,0.015170159553212242,0.025228892195718874,0.5476394854544571
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(2) BA premium (education >= 16),50-55,0.001571201920688825,0.11265404008161524,0.9888721513122568
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(3) ln parental income (IGE of the outcome),50-55,-0.23771839376902026,0.09960186030127702,0.017000991862357203
+"B PSID premium and IGE by band, ln annual earnings",Black - White,"(4) ln parental income, + education",50-55,-0.12360622527031584,0.09719900776918247,0.20348614075525528
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(5) accounted for by education = (3) - (4),50-55,-0.11411216849870442,0.03626302351693262,0.0016507271504743151
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(6) share = (5) / (3),50-55,0.48003087472306344,0.2203079729068366,0.02933847971617634
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(1) return to a year of education,change >= 35 minus < 35,-0.054858673241484884,0.01367868163837808,6.0584286963982004e-05
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(2) BA premium (education >= 16),change >= 35 minus < 35,-0.2196063075062838,0.0601656851573231,0.00026221389530832034
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,-0.20324628759537244,0.05085203510629578,6.419984308655532e-05
+"B PSID premium and IGE by band, ln annual earnings",Black - White,"(4) ln parental income, + education",change >= 35 minus < 35,-0.11355545272716949,0.05018566438485541,0.023653758723249818
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(5) accounted for by education = (3) - (4),change >= 35 minus < 35,-0.08969083486820295,0.018806478131487267,1.8500879183378021e-06
+"B PSID premium and IGE by band, ln annual earnings",Black - White,(6) share = (5) / (3),change >= 35 minus < 35,0.44129138066601054,0.12749460958654601,0.0005376628596852754
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,25-29,0.04894254332386411,0.0037618669085430017,1.0709784795491243e-38
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),25-29,0.2570940947743224,0.020343374213720195,1.307731783054217e-36
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),25-29,0.22443774180338855,0.014097788162913228,4.5987914013462157e-57
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",25-29,0.17967701298534772,0.0147047308448269,2.4611236662949955e-34
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),25-29,0.04476072881804083,0.005570445125182135,9.327764954586141e-16
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),25-29,0.1994349455594328,0.026819802274692953,1.0369509020754245e-13
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,30-34,0.0760929388923243,0.004304381357573919,6.19335104587634e-70
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),30-34,0.3801144886768583,0.02431072181574652,4.160579755269458e-55
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),30-34,0.28564864343690843,0.015972423629192954,1.5753265601204272e-71
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",30-34,0.20973326163607453,0.01610930829240857,9.493434191713322e-39
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),30-34,0.0759153818008339,0.0072535492411702155,1.2381043164200617e-25
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),30-34,0.26576489524831726,0.02661932748273105,1.79265457447793e-23
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,35-39,0.10086160195192306,0.004912735154882899,1.146523949150662e-93
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),35-39,0.5085738105266984,0.028777905100404493,6.845836922366208e-70
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),35-39,0.32992103575369924,0.019641014630776374,2.5431041092621974e-63
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",35-39,0.22525671362762031,0.018969941457206378,1.6077936525573624e-32
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),35-39,0.10466432212607893,0.00956587767541058,7.30436314576523e-28
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),35-39,0.3172405235906676,0.029242918628462636,2.028219200232775e-27
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,40-44,0.12360842304403802,0.0052309587431053515,1.8879606591020724e-123
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),40-44,0.6279945701603729,0.030420416115523825,1.1086497509732215e-94
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),40-44,0.35663258917435803,0.022995778764445397,3.033703613244954e-54
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",40-44,0.21623329663317037,0.02032352536574389,1.9505552344326882e-26
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),40-44,0.14039929254118766,0.011466992192127717,1.8139130072842862e-34
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),40-44,0.3936804902385023,0.030214414582297875,8.308673484409615e-39
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,45-49,0.12839901234116297,0.006045754322925298,4.2670671231749565e-100
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),45-49,0.6385326647158749,0.034890519905945196,8.119006811907154e-75
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),45-49,0.3701791553290792,0.025529357658502932,1.2091028558373805e-47
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",45-49,0.2244588764733635,0.023005201522656907,1.7238518741608786e-22
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),45-49,0.1457202788557157,0.012682927296762035,1.4900079396541283e-30
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),45-49,0.393647985733217,0.03311875376950136,1.40026999459819e-32
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,50-55,0.12890226019094736,0.0067111404591029735,3.2214087420646685e-82
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),50-55,0.6502348211855813,0.037218272135234515,2.389119708066163e-68
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),50-55,0.3918262730561288,0.028266788992270357,1.0805583652594148e-43
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",50-55,0.24676285999635184,0.025118458469703838,8.878118059328994e-23
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),50-55,0.145063413059777,0.013598011067495211,1.4370501023890186e-26
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),50-55,0.3702238033410199,0.03265768920893662,8.653934337311647e-30
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(1) return to a year of education,change >= 35 minus < 35,0.05792508327392365,0.003989800433502707,9.279516176170466e-48
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(2) BA premium (education >= 16),change >= 35 minus < 35,0.28772967492154156,0.022940822696546712,4.3833564209873105e-36
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,0.10709657070816783,0.01652275873298543,9.065826064545866e-11
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),"(4) ln parental income, + education",change >= 35 minus < 35,0.033472799371915385,0.014728583807741339,0.0230477575112344
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(5) accounted for by education = (3) - (4),change >= 35 minus < 35,0.07362377133625245,0.007846588015197397,6.4181038455647e-21
+"B NLSY79 premium and IGE by band, ln hourly wage",Pooled Black + White (weighted),(6) share = (5) / (3),change >= 35 minus < 35,0.6874521831037252,0.09780439910824162,2.082467795697927e-12
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,25-29,0.06848515376162366,0.005945678688481054,1.0647830529696468e-30
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),25-29,0.3789471345865374,0.036252278849053354,1.4187702902969335e-25
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),25-29,0.14564921748166398,0.017741074715961657,2.2170889247760625e-16
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",25-29,0.09832456768279063,0.0168238908460352,5.085752430696028e-09
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),25-29,0.04732464979887335,0.007406674702387214,1.6647286141592568e-10
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),25-29,0.32492210131394034,0.05316560908487471,9.869340168887106e-10
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,30-34,0.08567106967464597,0.007634337763552094,3.186888520598931e-29
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),30-34,0.47606292609026873,0.04868397401494424,1.3907022769061251e-22
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),30-34,0.17795404271942106,0.020331272386814092,2.0826114682137367e-18
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",30-34,0.11842562877131968,0.019347722371435797,9.304361272133296e-10
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),30-34,0.05952841394810138,0.009712540854300488,8.841876223869719e-10
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),30-34,0.334515659427639,0.05505258772338402,1.2299250880031611e-09
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,35-39,0.10467845456820513,0.008227822331782717,4.434521984994382e-37
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),35-39,0.569904628945963,0.05266467344295864,2.7263043594545983e-27
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),35-39,0.16479917788427656,0.024837193556049107,3.2411315039839336e-11
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",35-39,0.09037247275795371,0.022355075879667757,5.286333981037202e-05
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),35-39,0.07442670512632285,0.012884830263500747,7.635905717602034e-09
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),35-39,0.45162060928839065,0.07769891116658957,6.156709682870721e-09
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,40-44,0.11537459430358286,0.010307325860790636,4.3898499911772587e-29
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),40-44,0.6491125261104808,0.06377797364984042,2.4940840441145526e-24
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),40-44,0.2248645212502236,0.02663555320078799,3.112344625429759e-17
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",40-44,0.13534139543336576,0.024940815944105986,5.746908050781696e-08
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),40-44,0.08952312581685784,0.01580969193655893,1.4914238840709377e-08
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),40-44,0.3981202784641991,0.06716283403209489,3.072308260066968e-09
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,45-49,0.126734359883603,0.00970534234783663,5.7056524735022414e-39
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),45-49,0.6710571610701875,0.058989859934251127,5.5191069059267885e-30
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),45-49,0.20600699020629576,0.029450789597505543,2.6534136680399906e-12
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",45-49,0.11115140092942966,0.027079507499781257,4.0495977636143316e-05
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),45-49,0.0948555892768661,0.016512780704186537,9.226162805041418e-09
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),45-49,0.4604484012017143,0.07965730298621607,7.453809076067255e-09
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,50-55,0.13232793723856173,0.010467534483997827,1.2425973054413953e-36
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),50-55,0.7163845199726306,0.06478152108107597,1.9947057913173291e-28
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),50-55,0.23819785211880617,0.03181979683360716,7.109191079466879e-14
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",50-55,0.1330946298601532,0.030535524120536832,1.3084826607737003e-05
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),50-55,0.10510322225865298,0.017231681664315233,1.0645562596783165e-09
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),50-55,0.4412433669058886,0.07599839184481477,6.39995284538686e-09
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(1) return to a year of education,change >= 35 minus < 35,0.042700724780353375,0.00626189879795577,9.159116584289743e-12
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(2) BA premium (education >= 16),change >= 35 minus < 35,0.22410967868641238,0.039752473585503795,1.72407929249018e-08
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,0.046665505264358004,0.017593957300467727,0.007993131268895023
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,"(4) ln parental income, + education",change >= 35 minus < 35,0.009114876518170417,0.016969475096399983,0.5911752813561303
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(5) accounted for by education = (3) - (4),change >= 35 minus < 35,0.037550628746187587,0.008854012607456142,2.2244089822535612e-05
+"B NLSY79 premium and IGE by band, ln hourly wage",Black,(6) share = (5) / (3),change >= 35 minus < 35,0.8046763564106925,0.30182110554388075,0.007674358949939029
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(1) return to a year of education,25-29,0.04644837084050768,0.0038970997282375217,9.457026092516934e-33
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),25-29,0.23824674854833464,0.021261556307472975,3.831067746154297e-29
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),25-29,0.22170105812438118,0.01847881035503913,3.65824645530884e-33
+"B NLSY79 premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",25-29,0.1739654782529964,0.019094821087250625,8.191965273476533e-20
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),25-29,0.04773557987138477,0.006571404066462761,3.7542717230594093e-13
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),25-29,0.2153150746109819,0.033359848086741216,1.087071888815861e-10
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(1) return to a year of education,30-34,0.07235096580048048,0.004520455840692472,1.1746561713649353e-57
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),30-34,0.3592102451569572,0.02545927525949933,3.3329364332759695e-45
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),30-34,0.2633914523440839,0.022684691659284273,3.624467588995109e-31
+"B NLSY79 premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",30-34,0.18090623965599661,0.022330107560816853,5.430816994031978e-16
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),30-34,0.08248521268808728,0.008786463432512163,6.128961615841312e-21
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),30-34,0.3131658675860595,0.03767936149986463,9.462984552454655e-17
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(1) return to a year of education,35-39,0.0971390612435421,0.005024525306467458,2.8354178302711303e-83
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),35-39,0.4943841136003968,0.02991548339967292,2.3834163203538116e-61
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),35-39,0.31920126559015216,0.02536395491681857,2.5586690688641724e-36
+"B NLSY79 premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",35-39,0.20356450925171726,0.024258474658131066,4.800592848706596e-17
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),35-39,0.1156367563384349,0.011688717039580585,4.4633824004169e-23
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),35-39,0.36226910355333647,0.03858430637437056,6.055693349461831e-21
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(1) return to a year of education,40-44,0.11980753906485889,0.005429379450032246,6.629464305348905e-108
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),40-44,0.6068825753328713,0.032232632861551466,4.435532514046335e-79
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),40-44,0.3379167444101434,0.028451271944118794,1.5579652843971458e-32
+"B NLSY79 premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",40-44,0.18887336778357167,0.025131315188465897,5.671162741127989e-14
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),40-44,0.14904337662657174,0.014368930398788728,3.303599736822552e-25
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),40-44,0.4410653780615017,0.04126228529473071,1.1421695385764999e-26
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(1) return to a year of education,45-49,0.12228452159022454,0.006151210868296104,6.09392086589653e-88
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),45-49,0.61393779989728,0.03574920386050266,4.1958642958812753e-66
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),45-49,0.3475208286888627,0.030656805091012533,8.718527821353396e-30
+"B NLSY79 premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",45-49,0.19404011985079705,0.028027177094156273,4.412903511472572e-12
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),45-49,0.15348070883806564,0.01497053178396688,1.1569426141138887e-24
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),45-49,0.44164463297674095,0.04460621476512049,4.122717866008503e-23
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(1) return to a year of education,50-55,0.1230146878573627,0.007090420073072889,1.992398144007396e-67
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),50-55,0.6227848826176775,0.0394869468309058,4.855274641130828e-56
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),50-55,0.3674578775597457,0.03517751944167584,1.5313355714572454e-25
+"B NLSY79 premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",50-55,0.2209903310977097,0.032098238543940755,5.786398708602288e-12
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),50-55,0.14646754646203597,0.016354482961351946,3.372682261938605e-19
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),50-55,0.39859683356011744,0.04512026636311247,1.0090958468790888e-18
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(1) return to a year of education,change >= 35 minus < 35,0.05616178411850298,0.004187328170593229,5.121155936670488e-41
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(2) BA premium (education >= 16),change >= 35 minus < 35,0.28576884600941044,0.023909115565901536,6.315532446255544e-33
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,0.10047792382799345,0.020027879612157594,5.251113721481603e-07
+"B NLSY79 premium and IGE by band, ln hourly wage",White,"(4) ln parental income, + education",change >= 35 minus < 35,0.024431223041452427,0.018527205139570055,0.18728030092437342
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(5) accounted for by education = (3) - (4),change >= 35 minus < 35,0.07604670078654102,0.009321760648391653,3.406848443863888e-16
+"B NLSY79 premium and IGE by band, ln hourly wage",White,(6) share = (5) / (3),change >= 35 minus < 35,0.7568498421277509,0.14322733436910753,1.2621693308292478e-07
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,25-29,0.02203678292111598,0.0071090422251163165,0.0019363537043925333
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),25-29,0.14070038603820276,0.042027151918317816,0.000814425783454733
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),25-29,-0.0760518406427172,0.025616638425344482,0.0029892089033717825
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",25-29,-0.07564091057020578,0.025449076516711133,0.002956299104290513
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),25-29,-0.00041093007251141733,0.009901625197496924,0.9668962762477891
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),25-29,0.00540328898076142,0.1298254870740476,0.966801922822962
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,30-34,0.01332010387416549,0.0088722958751187,0.13327431127600864
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),30-34,0.11685268093331153,0.05493909375505498,0.033424274911385034
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),30-34,-0.08543740962466284,0.030462368137484493,0.005036545363394849
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",30-34,-0.062480610884676935,0.029546032976354157,0.03445663582946562
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),30-34,-0.022956798739985906,0.0130971519612979,0.0796348907628325
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),30-34,0.26869727021029755,0.15601058929308584,0.0850149181615886
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,35-39,0.007539393324663024,0.009640690581006856,0.434191818356092
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),35-39,0.07552051534556625,0.0605681762635262,0.21244593489080454
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),35-39,-0.1544020877058756,0.035499526655478834,1.3650268715761739e-05
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",35-39,-0.11319203649376355,0.03298822532851518,0.0006007268441074817
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),35-39,-0.04121005121211205,0.017396693851149024,0.017843785305042024
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),35-39,0.2669008678860231,0.1055777464258813,0.01147133464218547
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,40-44,-0.0044329447612760225,0.011649855261459511,0.7035631585692114
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),40-44,0.04222995077760949,0.07146028648184462,0.554549286468704
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),40-44,-0.1130522231599198,0.03897342132210371,0.0037226857858909355
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",40-44,-0.0535319723502059,0.03540659971050296,0.1305540277830549
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),40-44,-0.059520250809713904,0.021363813328479798,0.005335773322533874
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),40-44,0.526484567450908,0.19728913851792146,0.007616951167506695
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,45-49,0.004449838293378444,0.011490477154363745,0.6985614087089034
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),45-49,0.0571193611729075,0.06897687403559503,0.40761705667244397
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),45-49,-0.14151383848256693,0.04251104216912205,0.0008719831823756639
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",45-49,-0.0828887189213674,0.03897207182455031,0.03343048408653431
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),45-49,-0.058625119561199535,0.022288758343149532,0.008532082656189731
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),45-49,0.4142712839240917,0.15508758379680374,0.007557866785001755
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,50-55,0.009313249381199026,0.012642916395607405,0.46134267692049236
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),50-55,0.09359963735495314,0.07586741358188423,0.21730484196966338
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),50-55,-0.1292600254409395,0.047433715273015646,0.006428854950707715
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",50-55,-0.08789570123755652,0.04430254113411115,0.047257199693295525
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),50-55,-0.041364324203382985,0.023757103483241577,0.08165991883982637
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),50-55,0.3200086342415494,0.17680130224072174,0.07029729829445909
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(1) return to a year of education,change >= 35 minus < 35,-0.013461059338149617,0.00753293394130624,0.07394378853227056
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(2) BA premium (education >= 16),change >= 35 minus < 35,-0.061659167322998046,0.046388629676999645,0.18378625584168862
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(3) ln parental income (IGE of the outcome),change >= 35 minus < 35,-0.053812418563635445,0.02665826879693727,0.043528665996430606
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,"(4) ln parental income, + education",change >= 35 minus < 35,-0.015316346523281982,0.025124100288986477,0.5421084830835063
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(5) accounted for by education = (3) - (4),change >= 35 minus < 35,-0.03849607204035346,0.012856467665688561,0.0027507877315342292
+"B NLSY79 premium and IGE by band, ln hourly wage",Black - White,(6) share = (5) / (3),change >= 35 minus < 35,0.7153752436313607,0.3495910276903404,0.04072486014363942
+C within vs between jobs,Pooled Black + White (weighted),"(1) annual ln wage growth, all pairs",25-34,0.015220926160111219,0.004663473143056699,0.0010990523359680345
+C within vs between jobs,Pooled Black + White (weighted),(2) contribution: stayed,25-34,0.013084774526643314,0.0037250904406673064,0.0004437351888818558
+C within vs between jobs,Pooled Black + White (weighted),"(3) contribution: moved, not displaced",25-34,0.0022823265986427204,0.0025379224058432143,0.36849855692818967
+C within vs between jobs,Pooled Black + White (weighted),(4) contribution: displaced,25-34,-0.00014617496517421957,0.0025500178681642123,0.9542878082467678
+C within vs between jobs,Pooled Black + White (weighted),(5) P(stayed),25-34,0.03867318426818485,0.01100255509060093,0.0004398739351964613
+C within vs between jobs,Pooled Black + White (weighted),"(6) P(moved, not displaced)",25-34,1.3961717157395803e-05,0.00695162177621305,0.9983975205453285
+C within vs between jobs,Pooled Black + White (weighted),(7) P(displaced),25-34,-0.03868714598536724,0.00816444300771733,2.153147739872204e-06
+C within vs between jobs,Pooled Black + White (weighted),(8) growth | stayed,25-34,0.014877407731210827,0.005141989056153222,0.0038119555509114667
+C within vs between jobs,Pooled Black + White (weighted),(9) growth | moved,25-34,0.010402126178811925,0.016330410692297567,0.5241386219430479
+C within vs between jobs,Pooled Black + White (weighted),(10) growth | displaced,25-34,0.016090420862142924,0.018565232154861177,0.3861083492814169
+C within vs between jobs,Pooled Black + White (weighted),"(1) annual ln wage growth, all pairs",35-55,0.0035578901689857652,0.002708439775620947,0.1889704462953523
+C within vs between jobs,Pooled Black + White (weighted),(2) contribution: stayed,35-55,0.0027450718852117433,0.0023191015230415923,0.23654013550498865
+C within vs between jobs,Pooled Black + White (weighted),"(3) contribution: moved, not displaced",35-55,0.0019441589161794562,0.0014697228834725333,0.18589975031193506
+C within vs between jobs,Pooled Black + White (weighted),(4) contribution: displaced,35-55,-0.00113134063240574,0.0012697066492757649,0.37291564639753527
+C within vs between jobs,Pooled Black + White (weighted),(5) P(stayed),35-55,0.02734829356285652,0.009737578403552829,0.0049768046978330965
+C within vs between jobs,Pooled Black + White (weighted),"(6) P(moved, not displaced)",35-55,-0.007624146806853593,0.006120404302716848,0.2128770039132254
+C within vs between jobs,Pooled Black + White (weighted),(7) P(displaced),35-55,-0.019724146756000586,0.007094717211460954,0.005433924990557564
+C within vs between jobs,Pooled Black + White (weighted),(8) growth | stayed,35-55,0.0025238634042536417,0.002838454380840708,0.37391268439963055
+C within vs between jobs,Pooled Black + White (weighted),(9) growth | moved,35-55,0.021746043740693395,0.015038017201109697,0.14815722959375727
+C within vs between jobs,Pooled Black + White (weighted),(10) growth | displaced,35-55,-0.02212865186589604,0.015086975840101683,0.14244714125912528
+C within vs between jobs,Black,"(1) annual ln wage growth, all pairs",25-34,-0.0011225491990724309,0.006391192858792892,0.8605767648748686
+C within vs between jobs,Black,(2) contribution: stayed,25-34,0.004952772294775742,0.0053951803502127445,0.35861918285349603
+C within vs between jobs,Black,"(3) contribution: moved, not displaced",25-34,-0.008294174099119112,0.0033390857949937187,0.012992837508350735
+C within vs between jobs,Black,(4) contribution: displaced,25-34,0.0022188526052708975,0.00433037913641617,0.6083765306368338
+C within vs between jobs,Black,(5) P(stayed),25-34,0.03484408967316623,0.015795962769162657,0.027391998034893363
+C within vs between jobs,Black,"(6) P(moved, not displaced)",25-34,0.003440652827548806,0.010259240139760428,0.737345152753845
+C within vs between jobs,Black,(7) P(displaced),25-34,-0.03828474250070732,0.013893308646442103,0.005858019519316251
+C within vs between jobs,Black,(8) growth | stayed,25-34,0.0037391891290646335,0.008153201702538334,0.646509911582223
+C within vs between jobs,Black,(9) growth | moved,25-34,-0.06354526537854355,0.02278660229692933,0.005291814238931537
+C within vs between jobs,Black,(10) growth | displaced,25-34,0.022236877340236796,0.02466781453602033,0.36734747115628397
+C within vs between jobs,Black,"(1) annual ln wage growth, all pairs",35-55,-0.001985177946364787,0.0038439381984106845,0.6055445000370376
+C within vs between jobs,Black,(2) contribution: stayed,35-55,0.0004053467170316504,0.0030963694584740823,0.8958462506657242
+C within vs between jobs,Black,"(3) contribution: moved, not displaced",35-55,-0.0016978899524875304,0.0022387019673876345,0.4481959512258312
+C within vs between jobs,Black,(4) contribution: displaced,35-55,-0.0006926347109088044,0.002714472257528324,0.7985966874722915
+C within vs between jobs,Black,(5) P(stayed),35-55,-0.005261898442749047,0.01524259791758906,0.7299364414846667
+C within vs between jobs,Black,"(6) P(moved, not displaced)",35-55,0.0052997104570739785,0.009425425306068566,0.5739265407528373
+C within vs between jobs,Black,(7) P(displaced),35-55,-3.781201433605483e-05,0.010984818267258474,0.997253521893692
+C within vs between jobs,Black,(8) growth | stayed,35-55,0.00019546038640429132,0.004011756529486657,0.9611409257145291
+C within vs between jobs,Black,(9) growth | moved,35-55,-0.012547636838136386,0.02032557300772997,0.5370154330506045
+C within vs between jobs,Black,(10) growth | displaced,35-55,-0.011187278403539532,0.021567087181745388,0.6039560469118885
+C within vs between jobs,White,"(1) annual ln wage growth, all pairs",25-34,0.02005114929442666,0.005057288212641611,7.345671946169542e-05
+C within vs between jobs,White,(2) contribution: stayed,25-34,0.016829572200385202,0.004253978320239551,7.615267438957027e-05
+C within vs between jobs,White,"(3) contribution: moved, not displaced",25-34,0.0005986598672662715,0.0023932398721573326,0.802474286501346
+C within vs between jobs,White,(4) contribution: displaced,25-34,0.002622917226774495,0.002006012418530574,0.19103348207754
+C within vs between jobs,White,(5) P(stayed),25-34,0.03510727729444823,0.011857672113384857,0.003069182830325259
+C within vs between jobs,White,"(6) P(moved, not displaced)",25-34,0.002239340278916894,0.007422801020369344,0.7628929689566973
+C within vs between jobs,White,(7) P(displaced),25-34,-0.03734661757336871,0.008998989510212184,3.32344379205315e-05
+C within vs between jobs,White,(8) growth | stayed,25-34,0.019607634210965137,0.005694692000841425,0.0005749969398305278
+C within vs between jobs,White,(9) growth | moved,25-34,0.00536158118732076,0.016925368034803708,0.751412195266707
+C within vs between jobs,White,(10) growth | displaced,25-34,0.03526105244911762,0.019188239676171302,0.06611565732476943
+C within vs between jobs,White,"(1) annual ln wage growth, all pairs",35-55,0.006795477869074677,0.0033451874993752303,0.04221249579080543
+C within vs between jobs,White,(2) contribution: stayed,35-55,0.0032418756180604643,0.0030491436216944644,0.28768737856358717
+C within vs between jobs,White,"(3) contribution: moved, not displaced",35-55,0.003928393527970105,0.001540075430835986,0.010748216473388144
+C within vs between jobs,White,(4) contribution: displaced,35-55,-0.00037479127695580857,0.0013932564533737726,0.7879267603086305
+C within vs between jobs,White,(5) P(stayed),35-55,0.033308888745302356,0.011197174660817823,0.0029321943828872045
+C within vs between jobs,White,"(6) P(moved, not displaced)",35-55,-0.01264311006919967,0.0069268671772808104,0.06796667052176215
+C within vs between jobs,White,(7) P(displaced),35-55,-0.02066577867610627,0.008099213262394656,0.010723615423354505
+C within vs between jobs,White,(8) growth | stayed,35-55,0.002607514108956506,0.003668175578052036,0.47717862899356045
+C within vs between jobs,White,(9) growth | moved,35-55,0.04614440688347865,0.016779803668345646,0.005959584137088922
+C within vs between jobs,White,(10) growth | displaced,35-55,-0.014196487781461353,0.01982881605390339,0.47402076174655994
+C within vs between jobs,Black - White,"(1) annual ln wage growth, all pairs",25-34,-0.021173698493499093,0.008154989683292852,0.009420352310895538
+C within vs between jobs,Black - White,(2) contribution: stayed,25-34,-0.01187679990560946,0.006878316520765952,0.08422127434343911
+C within vs between jobs,Black - White,"(3) contribution: moved, not displaced",25-34,-0.008892833966385384,0.004105053772981316,0.030287228390022694
+C within vs between jobs,Black - White,(4) contribution: displaced,25-34,-0.00040406462150359727,0.004770434987506964,0.932498433041304
+C within vs between jobs,Black - White,(5) P(stayed),25-34,-0.00026318762128199613,0.019755932983692093,0.9893709333522531
+C within vs between jobs,Black - White,"(6) P(moved, not displaced)",25-34,0.001201312548631912,0.012670539311641742,0.9244645704813431
+C within vs between jobs,Black - White,(7) P(displaced),25-34,-0.0009381249273386072,0.01656006808116745,0.9548241451442209
+C within vs between jobs,Black - White,(8) growth | stayed,25-34,-0.015868445081900502,0.009954732137841144,0.11092248957517362
+C within vs between jobs,Black - White,(9) growth | moved,25-34,-0.06890684656586431,0.02837675543988914,0.015170421259015413
+C within vs between jobs,Black - White,(10) growth | displaced,25-34,-0.013024175108880823,0.03123755259647584,0.676722530665794
+C within vs between jobs,Black - White,"(1) annual ln wage growth, all pairs",35-55,-0.008780655815439464,0.00509467727328443,0.08479887096688923
+C within vs between jobs,Black - White,(2) contribution: stayed,35-55,-0.0028365289010288137,0.004349447942183917,0.514299009450109
+C within vs between jobs,Black - White,"(3) contribution: moved, not displaced",35-55,-0.005626283480457635,0.00271837420424494,0.03847822726853116
+C within vs between jobs,Black - White,(4) contribution: displaced,35-55,-0.0003178434339529958,0.0030511254957887807,0.9170324405858002
+C within vs between jobs,Black - White,(5) P(stayed),35-55,-0.0385707871880514,0.018923132172804422,0.04152117117070374
+C within vs between jobs,Black - White,"(6) P(moved, not displaced)",35-55,0.017942820526273648,0.011708088136130406,0.12539540238919472
+C within vs between jobs,Black - White,(7) P(displaced),35-55,0.020627966661770216,0.013649757770938863,0.13072905492980333
+C within vs between jobs,Black - White,(8) growth | stayed,35-55,-0.002412053722552215,0.005443188886608437,0.6576699222825324
+C within vs between jobs,Black - White,(9) growth | moved,35-55,-0.05869204372161504,0.026357239520018207,0.025961295977232204
+C within vs between jobs,Black - White,(10) growth | displaced,35-55,0.003009209377921821,0.02929801304733931,0.9181928534671305

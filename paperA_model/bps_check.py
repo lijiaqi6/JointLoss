@@ -1,7 +1,7 @@
 """Paper A model: BPS (2016) estimator on simulated couples (check (7) of the identification plan) and the one-time
 wage-process correction (plan Section 1.2). Validation, not a target: the SMM objective does not use it.
 
-Steps (IGE/bps_reconciliation/HARNESS.md):
+Steps (bps_reconciliation/HARNESS.md):
  1. simulate the model at --start (default: the analytic start values), built exactly as 'estimate.py evaluate --start
     <start>' builds it (post_common.setup: estimate._init_worker and start_theta, i.e. EXT_DEFAULTS or the run's
     run.json extensions, the borrowing wedge r_wedge, --set-fixed entries, the extras as fixed inputs, the run's size
@@ -27,7 +27,7 @@ Steps (IGE/bps_reconciliation/HARNESS.md):
  --sigma-nu-zero: check (7) proper: the same run with the transitory shocks switched off (sigma_nu = 0); the BPS
     transitory variance then comes only from displacement, within-year human capital moves and the measurement error.
 Outputs: results/bps_<stamp>/bps_check.json (aggregate numbers only; the simulated panel stays in the work folder).
-Run: .venv/Scripts/python.exe IGE/paperA_model/bps_check.py [--apply] [--sigma-nu-zero] [--K 3]
+Run: .venv/Scripts/python.exe paperA_model/bps_check.py [--apply] [--sigma-nu-zero] [--K 3]
 """
 from __future__ import annotations
 

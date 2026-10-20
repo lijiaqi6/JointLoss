@@ -1,7 +1,7 @@
 # What moves an established wife off her job? Evidence for the exit-feature decision (WP2, 2026-10-20)
 
-Script `IGE/75.EstablishedWifeExits.py`. Every estimate is in `IGE/output/established_wife_exits.csv`, with tables in
-`IGE/output/established_wife_exits.md`. The script uses 63's sample and loaders, imported read only.
+Script `IGE/75.EstablishedWifeExits.py`. Every estimate is in `output/established_wife_exits.csv`, with tables in
+`output/established_wife_exits.md`. The script uses 63's sample and loaders, imported read only.
 
 - **SIPP 2003-2016.** Married wives aged 25-59 whose husband is employed, employed in months t-1 and t, all four
   months observed. The outcome is the persistent exit: no job in any week of t+1 and t+2, for any reason, involuntary

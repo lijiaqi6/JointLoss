@@ -1,0 +1,47 @@
+\begin{table}[!htbp]
+\centering
+\caption{State unemployment insurance in childhood and the stability channel (PSID)}
+\label{tab:ui_stability}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}25--29\end{tabular} & \begin{tabular}[b]{@{}c@{}}35--39\end{tabular} & \begin{tabular}[b]{@{}c@{}}45--49\end{tabular} & \begin{tabular}[b]{@{}c@{}}25--55\end{tabular} & \begin{tabular}[b]{@{}c@{}}Share of\\the IGE,\\25--55 (\%)\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{l}{\textit{A. Split by UI generosity relative to the son's cohort}} \\
+IGE, more generous states & $0.258^{***}$ & $0.433^{***}$ & $0.378^{***}$ & $0.374^{***}$ &  \\
+ & (0.036) & (0.050) & (0.077) & (0.035) &  \\
+IGE, less generous states & $0.288^{***}$ & $0.381^{***}$ & $0.408^{***}$ & $0.373^{***}$ &  \\
+ & (0.038) & (0.056) & (0.088) & (0.044) &  \\
+IGE, difference & $-0.031$ & $0.052$ & $-0.031$ & $0.002$ &  \\
+ & (0.049) & (0.077) & (0.111) & (0.056) &  \\
+Parents' spells (stability), more generous states & $0.037^{**}$ & $0.019$ & $0.071$ & $0.035^{**}$ & $9.3^{**}$ \\
+ & (0.016) & (0.022) & (0.043) & (0.016) & (4.4) \\
+Parents' spells (stability), less generous states & $0.026^{*}$ & $0.054^{***}$ & $0.101^{**}$ & $0.050^{***}$ & $13.3^{***}$ \\
+ & (0.015) & (0.019) & (0.041) & (0.015) & (4.3) \\
+Parents' spells (stability), difference & $0.011$ & $-0.035$ & $-0.031$ & $-0.015$ & $-4.1$ \\
+ & (0.023) & (0.031) & (0.060) & (0.023) & (6.0) \\
+\addlinespace
+\multicolumn{6}{l}{\textit{B. Interactions (first column; per standard deviation of each)}} \\
+closure share $\times$ UI, ln earnings, sons 25--55 & $0.034^{**}$ &  &  &  &  \\
+ & (0.017) &  &  &  &  \\
+layoff share $\times$ UI, ln earnings, sons 25--55 & $0.021$ &  &  &  &  \\
+ & (0.016) &  &  &  &  \\
+mother's unemployment $\times$ UI, son's years unemployed, sons 25--55 & $-0.010^{**}$ &  &  &  &  \\
+ & (0.005) &  &  &  &  \\
+placebo: father's wage $\times$ UI, ln earnings, sons 25--55 & $-0.004$ &  &  &  &  \\
+ & (0.016) &  &  &  &  \\
+closure share $\times$ UI, ln earnings, sons 40--55 & $0.057^{**}$ &  &  &  &  \\
+ & (0.025) &  &  &  &  \\
+layoff share $\times$ UI, ln earnings, sons 40--55 & $0.027$ &  &  &  &  \\
+ & (0.030) &  &  &  &  \\
+mother's unemployment $\times$ UI, son's years unemployed, sons 40--55 & $-0.009^{*}$ &  &  &  &  \\
+ & (0.005) &  &  &  &  \\
+placebo: father's wage $\times$ UI, ln earnings, sons 40--55 & $0.000$ &  &  &  &  \\
+ & (0.029) &  &  &  &  \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} UI generosity = the state's maximum weekly benefit over its average weekly wage, mean over the son's ages 12--18 in his state at 17 (DOL Significant Provisions; IGE/12b). Panel A: sons above and below the median of generosity net of five-year cohort means, Table~\ref{tab:passed_on} panel A split in each half, common bootstrap draws. Panel B: the son's outcome on all components (one s.d.), ln parental income, UI and UI $\times$ each element, with state fixed effects, five-year cohort and single-age dummies; standard errors clustered by 1968 family. Sons born 1958 and later (3,495). Source: \texttt{IGE/82.UIStabilityChannel.py}; table built by \texttt{IGE/90.PaperBRaceNeutralTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}

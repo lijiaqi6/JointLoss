@@ -1,4 +1,4 @@
-﻿r"""Verification of the BPS-on-simulated-data harness (IGE/bps_reconciliation, 2026-10-18). Results: HARNESS.md.
+﻿r"""Verification of the BPS-on-simulated-data harness (bps_reconciliation, 2026-10-18). Results: HARNESS.md.
 
   python verify_harness.py roundtrip <WORK_NEW>/<spec> <WORK_REF>/<spec>
       every number of every run (est_gmm10 / est_gmm9 / est_beta) of the harness run vs the reference run of

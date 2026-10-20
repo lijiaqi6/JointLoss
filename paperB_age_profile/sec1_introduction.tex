@@ -1,0 +1,106 @@
+\section{Introduction}\label{sec:intro}
+
+How much of a child's economic position is inherited is usually summarised by one number, the intergenerational
+elasticity of income (IGE) or its rank analogue, measured when the children are in their early thirties. This paper
+shows that the number depends heavily on the age at which children are observed, and that it depends on age
+differently for Black and White Americans. In the Panel Study of Income Dynamics (PSID), the elasticity of sons' own
+earnings with respect to their parents' income is 0.28 at ages 25--29 and 0.49 at 40--44, and the rise is concentrated
+among White sons. The White--Black gap in the elasticity is zero at 25--29 ($-0.04$), 0.10 in the 31--37 window used by
+the benchmark administrative estimates of \citet{chetty2020race}, and 0.29 at 40--49 (Figure~\ref{fig:headline}). Measured
+by potential experience rather than age, the gap is zero throughout the first ten years of the career and opens
+after.\footnote{Child-year regressions within five-year age bands, Table~\ref{tab:ige_sons}; 31--37: 0.099$^{**}$
+(0.048); 40--44 and 45--49: 0.294$^{***}$ (0.067) and 0.299$^{***}$ (0.088). By potential experience: $-0.121$ at 0--4
+years, 0.043 at 5--9, 0.220$^{***}$ at 15--19 and 0.272$^{***}$ at 20--24 (Appendix Table~\ref{tab:experience}). Code:
+\texttt{IGE/26.IGEByAge.py} and \texttt{IGE/46.AgeProfileRound2.py}.} A window that ends at 37 sees a third of the racial
+gap in persistence that is present in midlife; a window in the late twenties sees none of it.
+
+The racial half of this fact is estimated on 500 to 1,700 Black sons per age band in the PSID, and I state it at its
+precision. With one year of parental income, the one measure four public data sets share, the gap opens by 0.09 log
+points between the late twenties and the early forties (0.086$^{***}$, s.e.\ 0.024); corrected by each data set's own
+reliability ratio of one year of parental income, by 0.19 (0.191$^{***}$, s.e.\ 0.046; Table~\ref{tab:threedata}). The
+PSID estimate survives the standard objections: selective attrition, period effects, the dollar-weighted elasticity of
+\citet{mitnik2020intergenerational}, and an experience clock in place of age all leave its opening between 0.20 and 0.26
+(Table~\ref{tab:gaprobust}). In the fourth data set, the children of the NLSY79 mothers, the gap is zero at 25--34 as in
+the others and does not open, but it is measured at 35--44 on fewer than 300 sons of each race, born to young mothers. The object of
+the paper is sons' earnings and wages. Their family income, the object of \citet{chetty2020race}, shows the same profile
+with a smaller and more fragile opening: it is not significant in a fixed calendar window (0.084, s.e.\ 0.084), and among sons
+of parents below the median it is 0.023 (s.e.\ 0.086).
+
+The log gap is the age timing of a known fact. Black sons of well-off parents are far more likely than White sons to
+fall down the distribution \citep{hertz2005rags, bhattacharya2011nonparametric, mazumder2014black, chetty2020race}, and
+racial differences have shaped American mobility over the century \citep{jacome2025mobility}. This paper shows when the
+difference appears: it is absent in the late twenties and builds through the thirties as White sons' earnings spread out
+with parental income. Ranks of family income normalise that spread away, and sons' rank--rank slopes of family income are
+similar by race at every age, as \citet{chetty2020race} find at 31--37.
+
+What opens is the transmission of hourly wages, not hours, shocks or marriage (Section~\ref{sec:contains}), and it is
+built at 25--34. The job a son holds then accounts for half of the racial divergence (0.49), and access to the
+well-paid jobs whose wages keep growing is unequal by parental income---20 percent of sons from the top third of
+parental incomes start in one, 5 percent from the bottom third---and by race at equal parental income (4.2 percentage
+points). The economic channel is the return to schooling. It rises with age much faster for White than for Black sons
+(a difference of 0.058$^{***}$ in the rise of the earnings return), and the difference is the same within the job a son
+started in, net of the calendar rise of the college premium, and in the NLSY79 holding measured ability fixed. Education
+accounts for 0.44 of the racial divergence in earnings persistence.\footnote{Section~\ref{sec:careers},
+Tables~\ref{tab:earlyjob}, \ref{tab:access}, \ref{tab:schooling} and \ref{tab:withincell}. Within the early job cell
+the difference in the rise is 0.061$^{***}$ (0.018); with schooling $\times$ calendar trend 0.063$^{**}$ (0.027); in
+the NLSY79 with the AFQT 0.021$^{**}$ (0.009). Code: \texttt{IGE/35.EarlyIndustryLatePayoff.py},
+\texttt{IGE/42.SchoolingAndJobGrowth.py}, \texttt{IGE/45.WithinCellIdentification.py}.} Both the schooling and the AFQT
+returns rise with age, which is the complementarity of schooling with human capital accumulated on the job rather than
+employers learning about ability \citep{altonji2001employer, lange2007speed}. Fathers' jobs add a separate channel: sons
+of richer White parents converge on their fathers' occupations after 35, and convergence on the father's exact job is
+the inheritance of a family business (0.065$^{***}$ for sons of self-employed fathers, zero for others).
+
+The facts bear on how policies and shocks affect racial disparities (Section~\ref{sec:policy}). Long-run
+evaluations of childhood policies---Food Stamps, school finance, the EITC, Moving to Opportunity---measure adult
+earnings in the late twenties or early thirties \citep{hoynes2016long, jackson2016effects, bastian2018long,
+chetty2016effects}, before the racial gap in persistence has opened, so their racial comparisons are scored too early.
+Two shocks to the start of the career do not produce the gap: recessions at labor-market entry leave average access to
+good jobs unchanged and the racial gap opens among sons who entered tight markets too, although they leave a longer
+wage scar on Black sons; and public employment, where Black sons start more often, carries none of the
+divergence.\footnote{Section~\ref{sec:policy}, Tables~\ref{tab:entry} and \ref{tab:openinggroups}. Shocks to the household a
+son grows up in---his parents' job losses and the family safety net---are the subject of a companion paper; a shock to
+the son's own career is this paper's.} These facts leave four explanations: at equal background, Black sons may have less
+access to the jobs in which human capital accumulates fast, a lower pay-off of schooling in accumulation, a different
+return to schooling at entry, or a lower pay-off of parental income in accumulation. Section~\ref{sec:model} nests all
+four in one life-cycle model of careers---jobs that differ in accumulation, reached through offers and search
+frictions, job loss that falls with age and parental income, and accumulation that depends on schooling and
+background---and estimates every combination of the first three, with and without the fourth, on the same 66 moments. The data select one model. Parental
+income raises the growth of human capital for White sons (0.019$^{***}$ a year per log point, $p = 0.009$) and not for
+Black sons (difference $-0.019^{***}$, $p < 0.001$), a channel seen with a multi-year measure of parental income and
+absorbed by schooling with a one-year measure, in the PSID as in the NLSY79 and NLSY97 (Section~\ref{sec:model}); for
+Black sons schooling buys a higher wage at entry and slower
+growth; and a racial difference in offers of good jobs is rejected: the lower Black share in good jobs at equal
+parental income is reproduced without one. The model reproduces the rising White elasticity
+and the flat Black one, and switching off the racial difference in the pay-off of parental income closes three fifths
+of the gap at 45--49 and two fifths of its opening since 25--29. Equalising schooling, access across parental income or entry conditions closes less than a tenth:
+the gap at 45 is built by what background and schooling buy in growth, not by where careers start. The paper also makes a falsifiable prediction for administrative data: for the cohorts born 1978--83, the racial
+gap in the log elasticity of individual earnings at 43--47 should be 0.25--0.30, against about 0.10 at 31--37.
+
+\paragraph{Contributions and literature.} The paper contributes to four literatures. First, the measurement of
+intergenerational persistence: short snapshots of parental income understate persistence
+\citep{solon1992intergenerational, mazumder2005fortunate, mazumder2016estimating}, current income early in the career
+understates the dispersion of lifetime income \citep{haider2006life, grawe2006lifecycle}, heterogeneous profiles leave a
+life-cycle bias that no single correction removes \citep{nybom2016heterogeneous, nybom2017biases}, ranks stabilise early
+\citep{chetty2014where, chetty2014still}, and the elasticity can be redefined on expected income
+\citep{mitnik2015new, mitnik2020intergenerational}. I show that the life-cycle bias differs by race. Second, race and
+mobility \citep{hertz2005rags, bhattacharya2011nonparametric, mazumder2014black, chetty2020race, bayer2018divergent,
+jacome2025mobility}: I date the racial difference in log persistence to the first decade of the career and reconcile it
+with stable rank gaps. Third, careers and the Black--White wage gap: wages grow through job mobility and on-the-job
+accumulation \citep{topel1992job, altonji2013modeling, bagger2014tenure}; the racial gap widens with experience
+\citep{oettinger1996statistical, lang2012racial}; premarket skills, schooling and employer learning shape it
+\citep{neal1996role, altonji2001employer, pinkston2006test, lange2007speed, arcidiacono2010beyond, lang2011education};
+search frictions can differ by race \citep{bowlus2002discrimination}; promotion is slower for equally eligible Black
+workers \citep{hegde2026racial}; education premiums rise over the life cycle \citep{bhuller2017life}; and lifetime
+inequality is largely set at entry \citep{huggett2011sources}; a calibrated life-cycle model with learning by doing
+attributes the widening of the racial gap to premarket differences in the ability to accumulate human capital, holding
+accumulation race-neutral given the AFQT \citep{rauh2023black}. I connect these to family background and show that the
+rise of the return to schooling with age is steeper for White men within the same job. Fourth, family networks and the
+inheritance of jobs \citep{corak2011intergenerational, kramarz2014strong, staiger2022, laband1992self,
+fagereng2021wealthy}: following the father pays at entry, not in growth, and late convergence on the father's exact job
+is business inheritance. Structural models of intergenerational transmission concentrate family background before
+entry \citep{lee2019intergenerational, caucutt2020early, abbott2019education, bolt2024intergenerational}; the evidence
+here requires that background, and race, also shape what happens after entry.
+
+Section~\ref{sec:data} describes the data, Section~\ref{sec:ageprofile} the age profile and its precision,
+Section~\ref{sec:contains} what opens, Section~\ref{sec:careers} where it is built, Section~\ref{sec:fathers} fathers'
+jobs, Section~\ref{sec:policy} shocks and policies, and Section~\ref{sec:model} the model and the policy experiments.

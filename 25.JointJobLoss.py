@@ -4,17 +4,17 @@ Publication version of the joint job-loss result of 23.CorrelatedShocks.py (EVID
 race differences second. Unweighted PSID SRC + SEO, married (wife / partner present) male heads, Black and White
 (head's race). S.e. clustered by 1968 family (fam68); *** p<0.01, ** p<0.05, * p<0.1.
 
-Reads (read only): IGE/data/psid_person_year.pkl, psid_displacement.pkl (19: the husband's displacements),
+Reads (read only): data/psid_person_year.pkl, psid_displacement.pkl (19: the husband's displacements),
 correlated_shocks_fam.pkl (23: occupation codes, retrospective industry codes and the WIFE's reason-for-job-end reports,
 1984-2023 waves), correlated_shocks_units.pkl (23: sectors and state unemployment of each father x stack unit),
 husband_shocks_fam.pkl (18: industry codes / 16 sectors, state), the raw PSID family files (Dropbox/PSID/Family; family
 hours via 9.family() and the self-employment items below). Imports functions of 1, 9, 18, 19 and 23 via importlib (no
 edits). Writes (new files only)
-  IGE/data/joint_job_loss_selfemp.pkl   cache: head / wife 'work for self or others' at each interview
-  IGE/output/joint_job_loss.csv         every estimate
-  IGE/output/joint_job_loss.md          tables + paragraph-level summary for paperA_joint_loss/sec6_why.tex
-  IGE/output/joint_job_loss_es.png      event-study figure
-  IGE/paperA_joint_loss/tab_joint_job_loss.tex      three LaTeX tables (window / identification / magnitudes)
+  data/joint_job_loss_selfemp.pkl   cache: head / wife 'work for self or others' at each interview
+  output/joint_job_loss.csv         every estimate
+  output/joint_job_loss.md          tables + paragraph-level summary for paperA_joint_loss/sec6_why.tex
+  output/joint_job_loss_es.png      event-study figure
+  paperA_joint_loss/tab_joint_job_loss.tex      three LaTeX tables (window / identification / magnitudes)
 
 DEFINITIONS
   Husband's displacement: 19's first main displacement (job ended because the company folded / moved / went out of
@@ -995,7 +995,7 @@ def main():
             + r"). ``Event study'': sum of the coefficients for years $-1$, $0$ and $+1$ "
             r"from a regression of the wife's annual job-loss indicator in years $-4$ to $+4$ on displaced $\times$ "
             r"year dummies with couple and calendar-year fixed effects, reference years $-4$ and $-3$ (event years "
-            r"1987--2018; figure \texttt{IGE/output/joint\_job\_loss\_es.png}). PSID SRC and SEO, unweighted. Standard errors clustered by 1968 family "
+            r"1987--2018; figure \texttt{output/joint\_job\_loss\_es.png}). PSID SRC and SEO, unweighted. Standard errors clustered by 1968 family "
             r"in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.1$. Source: \texttt{IGE/25.JointJobLoss.py}.")
     tex.append(ttable("The wife's own job loss around her husband's displacement", "tab:joint_job_loss", head, body,
                       note, len(cols)))

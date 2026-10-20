@@ -1,0 +1,33 @@
+20:04:59 steps ['age', 'rehire'], fixed at 0 none
+20:04:59 workers 30, popsize 30, maxfevals {'A': 8000, 'B': 8000, 'C': 8000, 'D': 8000, 'E': 8000, 'F': 8000, 'G': 8000, 'H': 8000}, output /mnt/parscratch/users/cm1jil/ige_smm_results/ige_full_20261018_200455_j11859361
+20:04:59 start: model A of output/start_step23.json
+20:05:06 sensitivity at start: condition number 790.0
+20:05:47 model A iter 10 evals 300 best Q 361.20
+20:06:27 model A iter 20 evals 600 best Q 361.20
+20:07:08 model A iter 30 evals 900 best Q 361.20
+20:07:47 model A iter 40 evals 1200 best Q 332.85
+20:08:27 model A iter 50 evals 1500 best Q 258.79
+20:09:08 model A iter 60 evals 1800 best Q 237.76
+20:09:47 model A iter 70 evals 2100 best Q 206.42
+20:10:26 model A iter 80 evals 2400 best Q 198.17
+20:11:05 model A iter 90 evals 2700 best Q 189.69
+20:11:45 model A iter 100 evals 3000 best Q 184.89
+20:12:23 model A iter 110 evals 3300 best Q 180.65
+20:13:02 model A iter 120 evals 3600 best Q 177.70
+20:13:41 model A iter 130 evals 3900 best Q 177.11
+20:14:19 model A iter 140 evals 4200 best Q 176.26
+20:14:57 model A iter 150 evals 4500 best Q 175.33
+20:15:36 model A iter 160 evals 4800 best Q 174.25
+20:16:15 model A iter 170 evals 5100 best Q 173.33
+20:16:54 model A iter 180 evals 5400 best Q 173.04
+20:17:34 model A iter 190 evals 5700 best Q 172.76
+20:18:13 model A iter 200 evals 6000 best Q 172.58
+20:18:53 model A iter 210 evals 6300 best Q 172.32
+20:19:32 model A iter 220 evals 6600 best Q 172.24
+20:20:11 model A iter 230 evals 6900 best Q 171.94
+20:20:51 model A iter 240 evals 7200 best Q 171.84
+20:21:30 model A iter 250 evals 7500 best Q 171.71
+20:22:08 model A iter 260 evals 7800 best Q 171.69
+20:22:35 model A done: Q 171.64 evals 8010 stop {'maxfevals': 8000}
+20:22:43 model A: Q 171.64
+20:22:57 ALL DONE

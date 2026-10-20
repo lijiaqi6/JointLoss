@@ -1,0 +1,48 @@
+\section{Career Evidence: Further Results}\label{app:careers}
+
+\subsection{Industries}
+
+Industry codes of all PSID waves and of the CPS Outgoing Rotation Groups are mapped to the 222 industries of the
+ind1990ddx scheme and grouped into 33 industry groups.\footnote{1970 Census codes are bridged to 1980 codes with the
+Census Bureau's 1970--1980 table, weighted by the male experienced civilian labor force; 2000 codes use Dorn's weighted
+crosswalk; 2002 and 2012 codes use the first three digits. Code: \texttt{IGE/32.IndustryCareers.py}
+(\texttt{output/industry\_careers.md}).} For each industry $j$, among men aged 25--64 in the 1992--2002 CPS, I estimate
+its wage level at 40, $P_j$, and the slope of its age--wage profile, $B_j$, relative to the average industry
+(Table~\ref{tab:industrygroups}). Sons of richer parents sort into better-paid and steeper industries by 25--34
+(Table~\ref{tab:industrysorting}). Writing the son's log wage as his industry's level, plus its career slope times his
+age, plus a within-industry residual, the career slope accounts for 0.084$^{***}$ of the pooled rise of wage
+persistence and 0.051$^{***}$ of the change in the racial gap (Table~\ref{tab:industrydecomp}); with each industry's
+full nonlinear profile, 0.118$^{***}$ and 0.074$^{***}$, and with the industry fixed at 25--34, 0.132$^{***}$ and
+0.086$^{***}$ (Table~\ref{tab:industrynonlinear}). Same-employer wage growth rises with parental income for White sons
+within detailed industries (0.015$^{***}$) and most steeply in high-paying service industries (0.040$^{**}$), and not for
+Black sons (Table~\ref{tab:industrygrowth}). Following the father's industry is described in
+Table~\ref{tab:fatherindustry}.
+
+\input{tab_industry_groups}
+\input{tab_industry_sorting}
+\input{tab_industry_decomp}
+\input{tab_industry_nonlinear}
+\input{tab_industry_growth}
+\input{tab_father_industry}
+
+\subsection{Growth, tenure, promotion and displacement}
+
+Table~\ref{tab:careergrowth} splits annual wage growth into occupational-score and residual growth with the same and a
+new employer; Table~\ref{tab:tenure} reports wage--tenure profiles within sons, which steepen with parental income for
+White sons (0.068$^{***}$ per ten years of tenure and log point of parental income) and not for Black sons (0.013).
+Tables~\ref{tab:promotion} and \ref{tab:hegde} report entry into supervisory and managerial occupations and the
+analogue to \citet{hegde2026racial}: the after-35 change relative to 25--34 is not significant (triple interaction
+0.008, s.e.\ 0.011, for the change of the White $-$ Black difference), and holding the wage and occupation at 28--32 fixed the gradients are 0.014 for White and
+$-0.010$ for Black sons. Table~\ref{tab:careerdisp} reports the wage loss after displacement, 0.131$^{***}$, of which
+0.028$^{***}$ is a lower occupational score. Table~\ref{tab:mediation} reports the coefficient movements when education
+and instability shares are added to the IGE, and Table~\ref{tab:nlsycareer} the NLSY79 version of the occupational
+decomposition: the pooled wage gradient rises from 0.252$^{***}$ at 25--34 to 0.381$^{***}$ at 45--55, almost all within
+occupations, and the White--Black gap changes by 0.059$^{*}$.
+
+\input{tab_career_growth}
+\input{tab_tenure}
+\input{tab_promotion}
+\input{tab_hegde}
+\input{tab_career_displacement}
+\input{tab_mediation}
+\input{tab_nlsy_career}

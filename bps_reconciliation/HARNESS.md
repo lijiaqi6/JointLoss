@@ -1,8 +1,8 @@
 # BPS (2016) estimator on simulated data: the harness (2026-10-18)
 
-Step 4 of `IGE/proposals/fable_bps2016_nextsteps.md`: run Blundell, Pistaferri and Saporta-Eksten (2016)'s own
+Step 4 of `proposals/fable_bps2016_nextsteps.md`: run Blundell, Pistaferri and Saporta-Eksten (2016)'s own
 estimator, unchanged, on a PSID-shaped panel built from Paper A's simulated couples (protocol in
-`IGE/proposals/fable_bps2016_paperA.md`, Section 3.4), and verify the harness now on BPS's own panel.
+`proposals/fable_bps2016_paperA.md`, Section 3.4), and verify the harness now on BPS's own panel.
 Nothing in the existing results (`bps_reconciliation.md/.csv`, `tables/`, `logs/`) or in BPS's do-file copies was
 changed; the harness only calls them.
 
@@ -267,7 +267,7 @@ Reading:
   dummy in `mortgage2` (flag `mort_placeholder = 1`). Estimates are identical to the run with mortgages (checked on the
   synthetic panel), because the participation correction is off in all runs used (fix_var 10).
 
-## 7. Paper A model panels (`IGE/paperA_model/bps_check.py`, 2026-10-19)
+## 7. Paper A model panels (`paperA_model/bps_check.py`, 2026-10-19)
 
 `bps_check.py` builds the model exactly as `estimate.py evaluate --start <start>` (`post_common.setup`:
 `estimate._init_worker` and `start_theta`, i.e. `EXT_DEFAULTS` or the run's `run.json` extensions, the borrowing wedge
@@ -292,7 +292,7 @@ panel and changes nothing there: round trip after the fix (`rt_fix` vs `base`, `
 s.e. of each run (gmm10, gmm9, beta); 73 of 74 published cells (the savings share, as before).
 
 **Simulated Table 3 at the analytic start** (start values, not estimates; all ages, T4C41; GMM s.e.): see
-`IGE/paperA_model/POSTESTIMATION.md` ("bps_check.py") for the table at K = 1 and K = 3 next to BPS's published
+`paperA_model/POSTESTIMATION.md` ("bps_check.py") for the table at K = 1 and K = 3 next to BPS's published
 values. Note for the reading: the writer sets the husband's age to the wife's + 2 and both spouses' race to the
 couple's race, so in BPS's joint projection for pi (log total earnings on both spouses' age polynomials, race and
 cohort dummies) the collinear terms are omitted by Stata (log at the analytic start: `age`, `age2`, `agew`, the race

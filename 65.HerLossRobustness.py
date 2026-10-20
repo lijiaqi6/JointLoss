@@ -4,13 +4,13 @@ Paper A headline candidate (IGE/64, M3): the wife's own displacement lowers 'sti
 -0.046*** in years 1-3 and -0.090*** in years 4-6, at least as much as his displacement does. This script checks it.
 Imports 64.SeparationUIAndHerLoss.py (and through it 19 / 9) read only; nothing existing is edited or rerun.
 
-Reads (read only): IGE/data/psid_person_year.pkl, psid_displacement.pkl (19), correlated_shocks_wife_disp.pkl (23),
+Reads (read only): data/psid_person_year.pkl, psid_displacement.pkl (19), correlated_shocks_wife_disp.pkl (23),
 sep_ui_femhead_reports.pkl (64's cache), the raw PSID family files (hours via 9.family; split-off indicator and
 family composition change, 1984-2023 waves) and the individual file (sequence numbers, 1984-2023 waves).
 Writes (aggregates only):
-  IGE/data/her_loss_who_cache.pkl         cache: split-off indicator by family-wave, sequence numbers (git-ignored)
-  IGE/output/her_loss_robustness.csv      every estimate
-  IGE/output/her_loss_robustness.md       tables
+  data/her_loss_who_cache.pkl         cache: split-off indicator by family-wave, sequence numbers (git-ignored)
+  output/her_loss_robustness.csv      every estimate
+  output/her_loss_robustness.md       tables
 
 DESIGN = 64's M3 (19's stacked event study, roles reversed): wives of male heads with a child 0-17 and positive own
 hours at baseline (last observed of ev-1, ev-2); treated = her first displacement (closure or layoff / firing) in ev;

@@ -1,0 +1,7 @@
+run ige_full_20261018_200456_j11859363
+job 11859363
+code 20e3f5aad7b71de1760150fbd8c888bb01435313
+mode full
+status 0
+cores 32 workers 30 popsize 30 maxfevals 8000,8000,8000,8000
+settings IGE_FIX=muG IGE_MODELS=D IGE_START=output/start_step23.json:D IGE_STEPS=age,rehire 

@@ -1,10 +1,10 @@
-r"""Displacement flags for BPS's household-year panel (IGE/bps_reconciliation, 2026-10-18).
+r"""Displacement flags for BPS's household-year panel (bps_reconciliation, 2026-10-18).
 
 Keys: BPS's psid_cons.dta rows (year = income year - 1900, 98..108; id = interview number of wave year + 1901).
-Husband's displacements: IGE/data/psid_displacement.pkl (saved output of IGE/19.FatherDisplacement.py; flags main /
+Husband's displacements: data/psid_displacement.pkl (saved output of IGE/19.FatherDisplacement.py; flags main /
 strict / quit by male head pid x calendar year). Wife's job ends: IGE/25.JointJobLoss.wife_events() called on
-IGE/data/psid_person_year.pkl and the wife's reason-for-job-end reports R of IGE/23.CorrelatedShocks.extras()
-(cached in IGE/data/correlated_shocks_fam.pkl). Nothing in IGE/ is edited; the modules are imported via importlib.
+data/psid_person_year.pkl and the wife's reason-for-job-end reports R of IGE/23.CorrelatedShocks.extras()
+(cached in data/correlated_shocks_fam.pkl). Nothing in IGE/ is edited; the modules are imported via importlib.
 
 For a BPS row with income year Y (wave Y + 1), the two-year difference x_Y - x_{Y-2} spans calendar years Y-1 and Y.
   hd / wd   husband / wife displaced (code 1 closure or 3 layoff) in calendar year Y-1 or Y
@@ -26,7 +26,7 @@ IGE = Path(__file__).resolve().parents[2]                    # repository root
 SHIP = Path(DROPBOX / "ReplicationPapers/Consumption Inequality and Family Labor Supply"
             "/116142-V1/AER_2012_1549_data/output")
 sys.path.insert(0, str(IGE))
-DATA = Path(os.environ.get("JOINTLOSS_DATA", IGE / "data"))
+DATA = Path(os.environ.get("IGE_DATA", IGE / "data"))
 
 
 def _load(name, file):

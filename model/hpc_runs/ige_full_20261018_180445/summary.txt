@@ -1,0 +1,6 @@
+run ige_full_20261018_180445
+job 11858551
+code 8edf5ad883b9ea99ec28d297adbb9dba4521f5e3
+mode full
+status 0
+cores 32 workers 30 popsize 30 maxfevals 15000,8000,8000,8000

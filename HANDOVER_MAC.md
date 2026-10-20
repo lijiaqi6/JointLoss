@@ -29,10 +29,10 @@ python3.12 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 ```sh
 export DROPBOX="$HOME/Library/CloudStorage/Dropbox"            # or ~/Dropbox, wherever Dropbox syncs
-export JOINTLOSS_DATA="$HOME/Library/CloudStorage/GoogleDrive-<account>/My Drive/Selection vs risk/IGE/data"
+export IGE_DATA="$HOME/Library/CloudStorage/GoogleDrive-<account>/My Drive/Selection vs risk/IGE/data"
 ```
 
-`JOINTLOSS_DATA` is the PC's person-level cache folder seen through Google Drive (6.7 GB; files stream on demand).
+`IGE_DATA` is the PC's person-level cache folder seen through Google Drive (6.7 GB; files stream on demand).
 The data scripts read it and also write new caches into it.
 
 **Git-ignored model inputs** (person-level; never commit): copy

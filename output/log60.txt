@@ -1,0 +1,288 @@
+[      0s] CPS: loading panel
+[     11s] CPS: 6,666,364 couple-months, 1,273,587 households
+[     17s] cps: cps_jl_nt = 0.0258458
+[     18s] cps: cps_jl_nt_s2 = 0.192044
+[     18s] cps: cps_jl_nt_s1 = 0.0687623
+[     18s] cps: cps_jl_nt_s0 = 0.0140268
+[     18s] cps: cps_share_s2 = 0.0628033
+[     18s] cps: cps_share_s1 = 0.114669
+[     18s] cps: cps_share_s0 = 0.822527
+[     18s] cps: cps_jl_nt_m3 = 0.00670748
+[     18s] cps: cps_jl_nt_m2 = 0.00510551
+[     18s] cps: cps_jl_nt_m1 = 0.00640806
+[     18s] cps: cps_jl_nt_p1 = 0.00555725
+[     18s] cps: cps_jl_nt_p2 = 0.00564873
+[     18s] cps: cps_jl_nt_p3 = 0.00607416
+[     18s] cps: cps_wife_hazard_pooled = 0.00227879
+[     18s] cps: cps_wife_hazard_black = 0.00336838
+[     18s] cps: cps_wife_hazard_white = 0.00216851
+[     18s] cps: cps_entry_pooled = 0.0749753
+[     18s] cps: cps_entry_black = 0.0941796
+[     18s] cps: cps_entry_white = 0.0750922
+[     18s] cps: cps_wife_exit = 0.0261484
+[     19s] cps: replication 1/200
+[     30s] cps: replication 10/200
+[     42s] cps: replication 20/200
+[     55s] cps: replication 30/200
+[     67s] cps: replication 40/200
+[     79s] cps: replication 50/200
+[     93s] cps: replication 60/200
+[    107s] cps: replication 70/200
+[    119s] cps: replication 80/200
+[    131s] cps: replication 90/200
+[    144s] cps: replication 100/200
+[    157s] cps: replication 110/200
+[    170s] cps: replication 120/200
+[    182s] cps: replication 130/200
+[    196s] cps: replication 140/200
+[    213s] cps: replication 150/200
+[    227s] cps: replication 160/200
+[    237s] cps: replication 170/200
+[    249s] cps: replication 180/200
+[    261s] cps: replication 190/200
+[    272s] cps: replication 200/200
+[    272s] PSID: 4,070 1968 families
+[    284s] psid: psid_es_hh_13_B = -104.674
+[    284s] psid: psid_es_hlab_13_B = -3725.97
+[    284s] psid: psid_es_fs_13_B = 0.0109091
+[    284s] psid: psid_es_bw_present_13_B = -0.0403108
+[    284s] psid: psid_es_hlab_6_B = -924.839
+[    284s] psid: psid_es_hh_13_W = -128.421
+[    284s] psid: psid_es_hlab_13_W = -12054.4
+[    284s] psid: psid_es_fs_13_W = 0.0188552
+[    284s] psid: psid_es_bw_present_13_W = -0.0266671
+[    284s] psid: psid_es_hlab_6_W = -12126.9
+[    284s] psid: psid_es_w_hrs_13_y05 = 87.934
+[    284s] psid: psid_es_w_emp_13_y05 = 0.0416344
+[    284s] psid: psid_es_w_hrs_13_y617 = -40.0913
+[    284s] psid: psid_es_w_emp_13_y617 = -0.0391945
+[    284s] psid: psid_gross_all = 47.3356
+[    284s] psid: psid_offset_all = -35.9834
+[    284s] psid: psid_gross_05 = 93.71
+[    284s] psid: psid_wife_own_disp_lab13 = -4608.45
+[    284s] psid: psid_perm = 0.020083
+[    284s] psid: psid_contemp = 0.0327022
+[    284s] psid: psid_cy_diff_all = 0.0626917
+[    284s] psid: psid_cy_diff_same = 0.184048
+[    284s] psid: psid_cy_diff_diff = 0.0412349
+[    284s] psid: psid_cy_wbase_B = 0.0499376
+[    284s] psid: psid_cy_wbase_W = 0.0357969
+[    284s] psid: psid_h_disp_rate_B = 0.0646504
+[    284s] psid: psid_h_disp_rate_W = 0.044005
+[    284s] psid: psid_disp2plus_B = 0.15142
+[    284s] psid: psid_disp2plus_W = 0.133363
+[    284s] psid: psid_wemp_none = 0.80881
+[    284s] psid: psid_wemp_05 = 0.753982
+[    284s] psid: psid_wemp_617 = 0.823328
+[    284s] psid: psid_pt_w = 0.337379
+[    284s] psid: psid_pt_h = 0.10564
+[    284s] psid: psid_snap_B = 0.150345
+[    284s] psid: psid_snap_W = 0.0379237
+[    284s] psid: psid_sep_rate_B = 0.0316418
+[    284s] psid: psid_sep_rate_W = 0.0151667
+[    284s] psid: psid_wg_w_25 = 0.0801395
+[    284s] psid: psid_wg_w_35 = 0.0463016
+[    284s] psid: psid_wg_w_45 = 0.0271603
+[    284s] psid: psid_wg_h_25 = 0.0673979
+[    284s] psid: psid_wg_h_35 = 0.0294673
+[    284s] psid: psid_wg_h_45 = 0.01325
+[    284s] psid: psid_reentry_wage = -0.555468
+[    284s] psid: psid_liq_le0_25 = 0.568053
+[    284s] psid: psid_liq_hi_25 = 0.0343594
+[    284s] psid: psid_liq_le0_35 = 0.461633
+[    284s] psid: psid_liq_hi_35 = 0.0774577
+[    284s] psid: psid_liq_le0_45 = 0.38104
+[    284s] psid: psid_liq_hi_45 = 0.177182
+[    284s] psid: psid_cons_single_all = -0.0127717
+[    284s] psid: psid_cons_wife_alone = -0.0307328
+[    284s] psid: psid_cons_joint_minus_single = -0.058529
+[    284s] psid: psid_cons_single_black = -0.00533049
+[    284s] psid: psid_cons_single_white = -0.00534208
+[    293s] psid: replication 1/200
+[    363s] psid: replication 10/200
+[    437s] psid: replication 20/200
+[    516s] psid: replication 30/200
+[    597s] psid: replication 40/200
+[    677s] psid: replication 50/200
+[    736s] psid: replication 60/200
+[    791s] psid: replication 70/200
+[    845s] psid: replication 80/200
+[    898s] psid: replication 90/200
+[    951s] psid: replication 100/200
+[   1005s] psid: replication 110/200
+[   1059s] psid: replication 120/200
+[   1113s] psid: replication 130/200
+[   1167s] psid: replication 140/200
+[   1220s] psid: replication 150/200
+[   1273s] psid: replication 160/200
+[   1328s] psid: replication 170/200
+[   1382s] psid: replication 180/200
+[   1436s] psid: replication 190/200
+[   1489s] psid: replication 200/200
+[   1491s] SIPP: 1,595,445 couple-months, 47,669 households
+[   1498s] SIPP re-employment h: separations 6,702, with duration 1-24 and earnings 1,851
+[   1498s] SIPP re-employment w: separations 4,778, with duration 1-24 and earnings 1,307
+[   1498s] sipp: sipp_wife_emp_s0 = 0.0189169
+[   1498s] sipp: sipp_wife_emp_s1 = 0.0367278
+[   1498s] sipp: sipp_wife_emp_s6 = 0.0543294
+[   1498s] sipp: sipp_his_emp_s3_sep = 0.586273
+[   1498s] sipp: sipp_his_emp_s3_nosep = 0.982827
+[   1498s] sipp: sipp_his_emp_s6_sep = 0.70768
+[   1498s] sipp: sipp_his_emp_s6_nosep = 0.971821
+[   1498s] sipp: sipp_his_emp_s12_sep = 0.790961
+[   1498s] sipp: sipp_his_emp_s12_nosep = 0.960153
+[   1498s] sipp: sipp_wife_exit = 0.00807552
+[   1498s] sipp: sipp_reemp_h_1_3 = -0.057761
+[   1498s] sipp: sipp_reemp_h_4_12 = -0.161682
+[   1498s] sipp: sipp_reemp_h_13_24 = -0.275686
+[   1498s] sipp: sipp_reemp_w_1_3 = -0.0603995
+[   1498s] sipp: sipp_reemp_w_4_12 = -0.112332
+[   1498s] sipp: sipp_reemp_w_13_24 = -0.199497
+[   1499s] sipp: replication 1/200
+[   1499s] sipp: replication 10/200
+[   1500s] sipp: replication 20/200
+[   1500s] sipp: replication 30/200
+[   1501s] sipp: replication 40/200
+[   1502s] sipp: replication 50/200
+[   1503s] sipp: replication 60/200
+[   1503s] sipp: replication 70/200
+[   1504s] sipp: replication 80/200
+[   1505s] sipp: replication 90/200
+[   1505s] sipp: replication 100/200
+[   1506s] sipp: replication 110/200
+[   1506s] sipp: replication 120/200
+[   1507s] sipp: replication 130/200
+[   1508s] sipp: replication 140/200
+[   1509s] sipp: replication 150/200
+[   1509s] sipp: replication 160/200
+[   1510s] sipp: replication 170/200
+[   1511s] sipp: replication 180/200
+[   1511s] sipp: replication 190/200
+[   1512s] sipp: replication 200/200
+[   1518s] DWS: 417,269 couples, 414,732 households
+[   1518s] dws: dws_ui_h = 0.504039
+[   1518s] dws: dws_ui_w = 0.48241
+[   1518s] dws: dws_ui_w_minus_h = -0.0216292
+[   1518s] dws: replication 1/200
+[   1519s] dws: replication 10/200
+[   1519s] dws: replication 20/200
+[   1519s] dws: replication 30/200
+[   1519s] dws: replication 40/200
+[   1519s] dws: replication 50/200
+[   1519s] dws: replication 60/200
+[   1519s] dws: replication 70/200
+[   1519s] dws: replication 80/200
+[   1519s] dws: replication 90/200
+[   1519s] dws: replication 100/200
+[   1519s] dws: replication 110/200
+[   1519s] dws: replication 120/200
+[   1519s] dws: replication 130/200
+[   1519s] dws: replication 140/200
+[   1519s] dws: replication 150/200
+[   1519s] dws: replication 160/200
+[   1519s] dws: replication 170/200
+[   1520s] dws: replication 180/200
+[   1520s] dws: replication 190/200
+[   1520s] dws: replication 200/200
+                                           block                                                                                                                                                  moment         value           se        n
+0                            Joint loss, monthly                                                       Wife's same-month job-loss excess when he loses his, non-temporary losses (LPM, state x month FE)      0.025846     0.001593  2893414
+1                            Joint loss, monthly                                                        Same, shared-employer cell (same detailed industry x detailed occupation x class of worker; s=2)      0.192044     0.019629   178156
+2                            Joint loss, monthly                                                                                    Same, same detailed industry, outside the shared-employer cell (s=1)      0.068762     0.009320   334979
+3                            Joint loss, monthly                                                                                             Same, different detailed industry or industry unknown (s=0)      0.014027     0.001342  2380279
+7                            Joint loss, monthly                                                              Wife's excess job-loss hazard in month -3 relative to his loss month, non-temporary losses      0.006707     0.002074   833287
+8                            Joint loss, monthly                                                              Wife's excess job-loss hazard in month -2 relative to his loss month, non-temporary losses      0.005106     0.001937   828458
+9                            Joint loss, monthly                                                              Wife's excess job-loss hazard in month -1 relative to his loss month, non-temporary losses      0.006408     0.001213  1787209
+10                           Joint loss, monthly                                                              Wife's excess job-loss hazard in month +1 relative to his loss month, non-temporary losses      0.005557     0.001081  1784240
+11                           Joint loss, monthly                                                              Wife's excess job-loss hazard in month +2 relative to his loss month, non-temporary losses      0.005649     0.001657   825393
+12                           Joint loss, monthly                                                              Wife's excess job-loss hazard in month +3 relative to his loss month, non-temporary losses      0.006074     0.001595   825664
+38                            Joint loss, annual                                                                                                                              Permanent couple component      0.020083     0.008601    43168
+39                            Joint loss, annual                                                                                                                               Contemporaneous component      0.032702     0.014618    43168
+40                            Joint loss, annual                                                                             P(she displaced | he is) - P( | he is not), same interval, all couple-years      0.062692     0.004906    60061
+41                            Joint loss, annual                                                                     P(she displaced | he is) - P( | he is not), same interval, same sector (16 sectors)      0.184048     0.022257    10091
+42                            Joint loss, annual                                                                             P(she displaced | he is) - P( | he is not), same interval, different sector      0.041235     0.005440    43084
+13                                  Base hazards                                                                                         Wife's monthly non-temporary job-loss rate, he employed, pooled      0.002279     0.000035  2883286
+14                                  Base hazards                                                                                          Wife's monthly non-temporary job-loss rate, he employed, Black      0.003368     0.000138   174208
+15                                  Base hazards                                                                                          Wife's monthly non-temporary job-loss rate, he employed, White      0.002169     0.000036  2528044
+43                                  Base hazards                                                                                   Wife's displacement rate per interval when he is not displaced, Black      0.049938     0.002207    13617
+44                                  Base hazards                                                                                   Wife's displacement rate per interval when he is not displaced, White      0.035797     0.001085    43244
+45                                  Base hazards                                                                                   Husband's annual displacement rate, working married male heads, Black      0.064650     0.002327    18020
+46                                  Base hazards                                                                                   Husband's annual displacement rate, working married male heads, White      0.044005     0.001283    52494
+47                                  Base hazards                                                            Share of husbands displaced two or more times among husbands observed 10+ years, Black (T28)      0.151420     0.013705      634
+48                                  Base hazards                                                            Share of husbands displaced two or more times among husbands observed 10+ years, White (T28)      0.133363     0.007807     2242
+16                                    Her search                                                                                Monthly employment entry of non-employed wives, husband employed, pooled      0.074975     0.000302  1065884
+17                                    Her search                                                                                 Monthly employment entry of non-employed wives, husband employed, Black      0.094180     0.001627    52605
+18                                    Her search                                                                                 Monthly employment entry of non-employed wives, husband employed, White      0.075092     0.000325   925926
+76                                    Her search              Employment of wives with no job the month before, relative to wives whose husband stays employed, month 0 after his involuntary separation      0.018917     0.004420   392530
+77                                    Her search              Employment of wives with no job the month before, relative to wives whose husband stays employed, month 1 after his involuntary separation      0.036728     0.006648   376130
+78                                    Her search              Employment of wives with no job the month before, relative to wives whose husband stays employed, month 6 after his involuntary separation      0.054329     0.010116   306460
+19                                     Her exits                                                                         Wives' monthly exit from employment without a job-loss reason, husband employed      0.026148     0.000104  2892230
+85                                     Her exits                                              Wives' monthly exit from employment outside an involuntary separation, husband employed (SIPP counterpart)      0.008076     0.000126   950980
+20                                    His search                                                                                                   His annual hours, years 1-3 after displacement, Black   -104.673542    46.012146    60074
+25                                    His search                                                                                                   His annual hours, years 1-3 after displacement, White   -128.421020    33.641084   170087
+79                                    His search                                                                                                 His employment 3 months after an involuntary separation      0.586273     0.014302     1958
+80                                    His search                                                                                                      His employment 3 months no separation (comparison)      0.982827     0.000418   341802
+81                                    His search                                                                                                 His employment 6 months after an involuntary separation      0.707680     0.012500     1754
+82                                    His search                                                                                                      His employment 6 months no separation (comparison)      0.971821     0.000727   304706
+83                                    His search                                                                                                His employment 12 months after an involuntary separation      0.790961     0.013251     1432
+84                                    His search                                                                                                     His employment 12 months no separation (comparison)      0.960153     0.001149   242451
+21                                  His earnings                                                                                          His labor income, years 1-3 after displacement (2000 $), Black  -3725.966317  1065.453568    60074
+24                                  His earnings                                                                                             His labor income, year 6 after displacement (2000 $), Black   -924.838744  1751.757929    60074
+26                                  His earnings                                                                                          His labor income, years 1-3 after displacement (2000 $), White -12054.383752  1752.336169   170089
+29                                  His earnings                                                                                             His labor income, year 6 after displacement (2000 $), White -12126.853589  1973.199365   170089
+37                                  Her earnings                                                                                         Her labor income after her own displacement, years 1-3 (2000 $)  -4608.452950   751.480396   198436
+58                                   Wage growth                                                                                       Two-year log wage growth, continuously employed wives, ages 25-34      0.080140     0.002880    11717
+59                                   Wage growth                                                                                       Two-year log wage growth, continuously employed wives, ages 35-44      0.046302     0.002818    11904
+60                                   Wage growth                                                                                       Two-year log wage growth, continuously employed wives, ages 45-54      0.027160     0.003462     7876
+61                                   Wage growth                                                                                    Two-year log wage growth, continuously employed husbands, ages 25-34      0.067398     0.002932    14904
+62                                   Wage growth                                                                                    Two-year log wage growth, continuously employed husbands, ages 35-44      0.029467     0.002627    18011
+63                                   Wage growth                                                                                    Two-year log wage growth, continuously employed husbands, ages 45-54      0.013250     0.003486    11195
+64                                   Wage growth                                                                  Her log wage at re-entry after 12+ months out, relative to continuously employed wives     -0.555468     0.021973    20390
+86                                   Wage growth    Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 1-3 months without a job, husbands     -0.057761     0.023441      963
+87                                   Wage growth   Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 4-12 months without a job, husbands     -0.161682     0.028931      753
+88                                   Wage growth  Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 13-24 months without a job, husbands     -0.275686     0.065469      135
+89                                   Wage growth       Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 1-3 months without a job, wives     -0.060399     0.029513      614
+90                                   Wage growth      Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 4-12 months without a job, wives     -0.112332     0.037168      569
+91                                   Wage growth     Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 13-24 months without a job, wives     -0.199497     0.082443      124
+30                                    Added work                                                                                     Wife's annual hours, years 1-3 after his displacement, youngest 0-5     87.933978    43.570992   107907
+31                                    Added work                                                                                           Wife employed, years 1-3 after his displacement, youngest 0-5      0.041634     0.022358   107907
+32                                    Added work                                                                                    Wife's annual hours, years 1-3 after his displacement, youngest 6-17    -40.091251    43.077727   106283
+33                                    Added work                                                                                          Wife employed, years 1-3 after his displacement, youngest 6-17     -0.039195     0.022837   106283
+34                                    Added work                                                                                  Gross response of the wife's hours (wife kept her job), years 1-3, all     47.335554    30.350166   198435
+35                                    Added work                                                                                        Offset of the wife's hours response from joint losses, years 1-3    -35.983369    13.767177   198435
+36                                    Added work                                                                         Gross response of the wife's hours (wife kept her job), years 1-3, youngest 0-5     93.710030    41.908509   100068
+49                             Employment levels                                                                                                                    Wives' employment, no child under 18      0.808810     0.005407    30943
+50                             Employment levels                                                                                                                         Wives' employment, youngest 0-5      0.753982     0.005704    19775
+51                             Employment levels                                                                                                                        Wives' employment, youngest 6-17      0.823328     0.004337    27152
+52                             Employment levels                                                                                                                       Part-time share of employed wives      0.337379     0.004598    62292
+53                             Employment levels                                                                                                                    Part-time share of employed husbands      0.105640     0.002176    72113
+22                                    Safety net                                                                                      SNAP (food stamp) receipt after his displacement, years 1-3, Black      0.010909     0.022050    59978
+27                                    Safety net                                                                                      SNAP (food stamp) receipt after his displacement, years 1-3, White      0.018855     0.012890   170054
+54                                    Safety net                                                                                                                          SNAP receipt of couples, Black      0.150345     0.006926    21178
+55                                    Safety net                                                                                                                          SNAP receipt of couples, White      0.037924     0.002677    56640
+23                                    Separation                                                                                                Still with wife, years 1-3 after his displacement, Black     -0.040311     0.020808    57291
+28                                    Separation                                                                                                Still with wife, years 1-3 after his displacement, White     -0.026667     0.012049   166759
+56                                    Separation                                                                                                                Annual separation rate of couples, Black      0.031642     0.001383    18221
+57                                    Separation                                                                                                                Annual separation rate of couples, White      0.015167     0.000536    50871
+65                                        Wealth                                                                                                    Share of couples with liquid wealth <= 0, wife 25-34      0.568053     0.007344    14261
+66                                        Wealth                                                                              Share of couples with liquid wealth above one year of earnings, wife 25-34      0.034359     0.002317    14261
+67                                        Wealth                                                                                                    Share of couples with liquid wealth <= 0, wife 35-44      0.461633     0.008210    13814
+68                                        Wealth                                                                              Share of couples with liquid wealth above one year of earnings, wife 35-44      0.077458     0.003544    13814
+69                                        Wealth                                                                                                    Share of couples with liquid wealth <= 0, wife 45-59      0.381040     0.008455    15295
+70                                        Wealth                                                                              Share of couples with liquid wealth above one year of earnings, wife 45-59      0.177182     0.005968    15295
+71                                   Consumption                                          Change in log total consumption, first three interviews after his single displacement, married couples, pooled     -0.012772     0.016767    83825
+72                                   Consumption                                                                                                      Same after her own displacement (he not displaced)     -0.030733     0.019800    83825
+73                                   Consumption                                                                                                                         Joint minus single displacement     -0.058529     0.064762    83825
+74                                   Consumption                                           Change in log total consumption, first three interviews after his single displacement, married couples, black     -0.005330     0.024727    18494
+75                                   Consumption                                           Change in log total consumption, first three interviews after his single displacement, married couples, white     -0.005342     0.022609    65331
+4               Calibration check (not a target)                                            Share of couples, shared-employer cell (same detailed industry x detailed occupation x class of worker; s=2)      0.062803     0.000319  2883286
+5               Calibration check (not a target)                                                                        Share of couples, same detailed industry, outside the shared-employer cell (s=1)      0.114669     0.000426  2883286
+6               Calibration check (not a target)                                                                                 Share of couples, different detailed industry or industry unknown (s=0)      0.822527     0.000526  2883286
+92  Calibration input (UI take-up, not a target)                                                                                                      Share of displaced husbands who received UI (q_UI)      0.504039     0.003731    23353
+93  Calibration input (UI take-up, not a target)                                                                                                         Share of displaced wives who received UI (q_UI)      0.482410     0.004579    14618
+94  Calibration input (UI take-up, not a target)                                                                                              UI receipt share, displaced wives minus displaced husbands     -0.021629     0.005991    37971
+95                     Validation (not a target)                                                                                                Added-worker effect (Bacher et al. definition), all ages      0.056353     0.003887  1082535
+96                     Validation (not a target)                                                                                            Added-worker effect (Bacher et al. definition), spouse 26-35      0.063510     0.007168  1082535
+97                     Validation (not a target)                                                                                            Added-worker effect (Bacher et al. definition), spouse 36-45      0.071719     0.007652  1082535
+98                     Validation (not a target)                                                                                            Added-worker effect (Bacher et al. definition), spouse 46-55      0.050218     0.007656  1082535
+99                     Validation (not a target)                                                                                            Added-worker effect (Bacher et al. definition), spouse 56-62      0.012221     0.007356  1082535
+[   1520s] done

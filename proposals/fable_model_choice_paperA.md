@@ -1,12 +1,12 @@
 # Paper A: build its own two-earner model or extend the companion model? (2026-10-17)
 
-Read, nothing edited or run: `IGE/paperA_joint_loss/` (main.tex, sec1-sec8, appA-appC, tab_*.tex), my review
-`IGE/proposals/fable_review_paperA.md`, the companion paper (`paper/sec4_model.tex`, `model_nobargaining.tex`,
+Read, nothing edited or run: `paperA_joint_loss/` (main.tex, sec1-sec8, appA-appC, tab_*.tex), my review
+`proposals/fable_review_paperA.md`, the companion paper (`paper/sec4_model.tex`, `model_nobargaining.tex`,
 `sec7_counterfactuals.tex`, `appB_family_insurance.tex`, `appD_spouse_shocks.tex`), the companion code
 (`model/core.py`, `husband.py`, `bargaining.py`, `params.py`, `ages.py`, `step7_engine.py`, `steps.txt`,
 `model_description.md`; `estimation/smm.py`, `data_moments.py`, `model_moments.py`, `sim_panel.py`;
 `scripts/hpc_job.py`; `config/settings.yaml`, `config/params.yaml`; `docs/bargaining_design.md`),
-`HPC_ReadMe.txt`, `README.md`, `IGE/EVIDENCE.md`, `IGE/PLAN.md`, the git log since 2026-10-11 and the PI's
+`HPC_ReadMe.txt`, `README.md`, `EVIDENCE.md`, `PLAN.md`, the git log since 2026-10-11 and the PI's
 decision notes. Facts about the companion model below are taken from these files, with the file and function named.
 
 ---
@@ -179,7 +179,7 @@ estimates its own and reports the companion's annualised counterparts in the con
 ### 4.3 Share as data moments
 
 The PSID couple-year sample and the displacement coding are the same; Paper A's targets are the ones already in
-`IGE/output/joint_job_loss.md`, `cps_joint_job_loss.md`, `cps_joint_loss_checks.md`, `sipp_joint_loss.md`,
+`output/joint_job_loss.md`, `cps_joint_job_loss.md`, `cps_joint_loss_checks.md`, `sipp_joint_loss.md`,
 `psid_joint_loss_checks.md`, `father_displacement.md`. The companion's `spouse_exit` block (annual wife's exit by
 husband's employment next year) is the annual version of Paper A's added-worker target and should agree with it.
 
@@ -211,7 +211,7 @@ block, Paper A's `data_moments` / `model_moments` pair (monthly and annual), and
 | Week | Milestone | Deliverable / test |
 |---|---|---|
 | 0-1 | **Targets file.** Paper A's moments with bootstrap SEs from the existing scripts (25, 30, 37, 38, 40, 19), one `EstimationMoments/couples_*.csv`; sample definitions written down | the targets table of Sec. 5.3 reproduces the paper's numbers |
-| 0-1 (parallel) | **Model document** in the PI's style (economics, simulator order, every choice visible, no results): `model/couples_description.md` or `IGE/paperA_joint_loss/model_description.tex` | PI sign-off on state space, timing and schedules before code |
+| 0-1 (parallel) | **Model document** in the PI's style (economics, simulator order, every choice visible, no results): `model/couples_description.md` or `paperA_joint_loss/model_description.tex` | PI sign-off on state space, timing and schedules before code |
 | 1-3 | **Solver** (`model/couples.py`, numba): backward induction over 420 months; staged checks in the spirit of `model/steps.txt`: (1) flat consumption with no risk, (2) precautionary buffer with risk, (3) her work choice rises with lower assets / his loss, (4) search friction lengthens non-employment, (5) UI duration shows in the hazard of her exit | unit tests under `tests/test_couples_*.py` |
 | 3-4 | **Simulator with CRN** and the **monthly -> annual panel** (`estimation/couples_panel.py` after `sim_panel.py`); model moments at monthly (CPS/SIPP) and annual (PSID) frequency | the paper's definitions run unchanged on simulated couples |
 | 4-5 | **SMM wiring**: Paper A parameter table with bounds, `apply_theta`, reuse of the CMA-ES engine and `hpc_job.py`; **pseudo-data recovery** (`--pseudo-seed`) and a Jacobian on the start values | every parameter has a non-flat profile and a named moment block; recovery within noise |

@@ -1,0 +1,34 @@
+\begin{table}[!htbp]
+\centering
+\caption{The pay-off of parental income in accumulation in long differences: growth of a son's own wage}
+\label{tab:h4longdiff}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lccccccc}
+\toprule
+ & \multicolumn{2}{c}{PSID} & \multicolumn{3}{c}{NLSY79} & \multicolumn{2}{c}{Model E} \\
+ & (1) & (2) & (3) & (4) & (5) & (6) & (7) \\
+Controls & none & schooling & none & schooling & schooling, AFQT & none & schooling \\
+\midrule
+\multicolumn{8}{l}{\textit{Change 25--29 to 35--39: coefficient on log parental income}} \\
+\quad White & $0.180^{***}$ & $0.073^{***}$ & $0.081^{***}$ & $-0.001$ & $-0.001$ & $0.160$ & $0.069$ \\
+ & (0.025) & (0.027) & (0.021) & (0.020) & (0.021) & [0.002] & [0.002] \\
+\quad Black & $0.064^{**}$ & $0.040$ & $0.027$ & $-0.007$ & $-0.009$ & $0.026$ & $0.009$ \\
+ & (0.028) & (0.030) & (0.019) & (0.018) & (0.018) & [0.003] & [0.003] \\
+\quad White $-$ Black & $0.116^{***}$ & $0.033$ & $0.053^{*}$ & $0.006$ & $0.009$ & $0.134$ & $0.060$ \\
+ & (0.038) & (0.040) & (0.028) & (0.027) & (0.028) &  &  \\
+\quad Sons, White & 1,655 & 1,655 & 1,588 & 1,588 & 1,534 & & \\
+\quad Sons, Black & 819 & 819 & 856 & 856 & 834 & & \\
+\multicolumn{8}{l}{\textit{Change 25--29 to 45--49: coefficient on log parental income}} \\
+\quad White & $0.242^{***}$ & $0.135^{***}$ & $0.139^{***}$ & $0.021$ & $0.023$ & $0.226$ & $0.097$ \\
+ & (0.046) & (0.049) & (0.027) & (0.026) & (0.027) & [0.003] & [0.004] \\
+\quad Black & $0.026$ & $-0.002$ & $0.081^{***}$ & $0.028$ & $0.024$ & $0.030$ & $0.012$ \\
+ & (0.055) & (0.053) & (0.024) & (0.024) & (0.024) & [0.003] & [0.004] \\
+\quad White $-$ Black & $0.216^{***}$ & $0.137^{*}$ & $0.058$ & $-0.007$ & $-0.001$ & $0.196$ & $0.086$ \\
+ & (0.071) & (0.072) & (0.037) & (0.035) & (0.036) &  &  \\
+\quad Sons, White & 886 & 886 & 1,366 & 1,366 & 1,321 & & \\
+\quad Sons, Black & 366 & 366 & 734 & 734 & 715 & & \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Outcome: the change of the son's mean log hourly wage between the bands, on sons with a wage in both; regressor: log parental income (PSID 13--19 mean; NLSY79 1979--81), with years of schooling (PSID; NLSY79 highest grade completed by 35) and the AFQT (NLSY79, standardised within birth year) as controls. Columns (1)--(5): OLS by race, standard errors clustered by 1968 family (PSID) or 1979 household (NLSY79) in parentheses; White $-$ Black from the pooled regression with every regressor interacted with race. Columns (6)--(7): the same statistic on model E's simulated panel (PSID observation scheme, 20 simulated sons per PSID son), mean over ten seeds with the seed s.d.\ in brackets. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Code: \texttt{IGE/67.LongDifferenceH4.py}.\end{minipage}
+\end{table}

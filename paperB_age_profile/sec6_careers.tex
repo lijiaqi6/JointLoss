@@ -1,0 +1,192 @@
+\section{Where the Divergence Is Built: The First Decade of the Career}\label{sec:careers}
+
+If the divergence is a divergence in wage growth, it can arise between jobs---sons from richer families moving into
+better-paid occupations---or within them, through faster wage growth in the job a son holds. This section follows the
+order in which the evidence answers the question: how much is occupational upgrading, how much is predicted by the job
+a son holds at 25--34 and who gets those jobs, how wages grow within them, and what role schooling plays. All results are
+descriptive: sons select into schooling, occupations and employers, and nothing here identifies a causal effect of
+parental income or race. Racial differences are White minus Black.
+
+\subsection{About one fifth is occupational upgrading}
+
+All PSID occupation codes are mapped to David Dorn's consistent occ1990dd scheme, and each occupation gets a wage score:
+the mean log hourly wage of men aged 25--64 in the occupation relative to all men, from 2.9 million CPS Outgoing
+Rotation Group records of 1979--2019. Each son's log wage is the sum of the score of his occupation and his wage
+relative to it, so the parental-income gradient of the log wage splits exactly into a between- and a
+within-occupation part.\footnote{Code: \texttt{IGE/27.CareerWageGrowth.py} (\texttt{output/career\_wage\_growth.md},
+Section 0). The score accounts for about a quarter of the variance of sons' log wages.} Pooled, the gradient rises
+from 0.259$^{***}$ at 25--34 to 0.410$^{***}$ at 35--55; the between-occupation part barely moves (0.158 to 0.176) and
+the within-occupation part more than doubles (0.102 to 0.235) (Figure~\ref{fig:career}, Table~\ref{tab:careerdecomp}).
+By race, the occupational gap is in place at 25--34: the White--Black difference in the wage gradient, 0.090$^{***}$, is
+almost all between occupations (0.082$^{***}$). From 25--34 to 35--55 the difference grows by 0.167$^{***}$ (0.037), of
+which 0.031$^{*}$ is the occupational score (a share of 0.18$^{**}$; 0.27$^{***}$ with a time-varying score) and
+0.136$^{***}$ is within occupations. Background buys a better-paid occupation at the start, and the occupational
+advantage hardly grows afterwards; what grows is the wage within the occupation.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{career_wage_growth.png}
+\caption{Wage persistence by the son's age: between and within occupations (PSID)}\label{fig:career}
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Coefficient of the son's log wage, of his occupation's wage
+score and of his within-occupation residual on log parental income, by age band, with 95\% confidence intervals. The
+score and the residual add up to the log wage. Code: \texttt{IGE/27.CareerWageGrowth.py}.\end{minipage}
+\end{figure}
+
+\input{tab_career_decomp}
+
+\subsection{Where sons start: the job at 25--34}\label{sec:earlystart}
+
+A within-occupation divergence can still be produced by where a son starts, if the jobs that sons of richer White
+parents enter pay off later. I classify each son by the job he held at 25--34---his modal cell of 11 occupation groups
+$\times$ 33 industry groups---whatever he does later, and add fixed effects for that early job to the regression of his
+log wage on parental income, separately in each age band. The early job may then have any wage path afterwards, and
+the drop in the parental-income coefficient it produces at 35--55 relative to 25--34 is the part of the rise of
+persistence predicted by where the son started (Table~\ref{tab:earlyjob}).\footnote{93 percent of sons observed at
+35--55 have an early job, and they look like all sons at 25--34. Randomly reassigning cells across sons gives shares of
+about 0.03. Code: \texttt{IGE/35.EarlyIndustryLatePayoff.py} (\texttt{output/early\_industry\_late\_payoff.md}).}
+
+The son's occupation-by-industry cell at 25--34 accounts for 0.405$^{***}$ of the pooled rise of persistence after 35
+and 0.493$^{***}$ ($p=0.004$) of the racial divergence, mostly through occupation (his occupation group alone: 0.377$^{***}$
+and 0.318$^{***}$); his detailed occupation accounts for 0.591$^{***}$ and 0.713$^{***}$. His industry group alone accounts
+for 0.135$^{*}$ of the pooled rise and 0.108 ($p=0.30$) of the racial divergence, and the career slopes of industries,
+estimated in the CPS, for 0.05--0.13 of either.\footnote{Appendix~\ref{app:careers}, Tables~\ref{tab:industrydecomp}
+and \ref{tab:industrynonlinear}. Finance, insurance and legal services have relative wages that rise steeply from
+25--29 to 35--39 and then flatten; their pay-off comes in the early thirties.} The early job also reflects the son's
+own skills, so these shares measure how much where a son stands at 25--34 predicts how far he pulls away after 35, not a
+causal return to the job. Within sons, the extra wage growth of well-paid starting jobs comes before 35: relative to
+sons who started in cells that are neither well paid nor fast growing, their wages grow faster by 0.33--0.39 log points
+per ten years between 25 and 35, and by 0.012--0.059 after 35.
+
+\input{tab_early_job}
+
+\paragraph{Access to the jobs that build the gap.} Who gets these jobs differs by background and by race
+(Table~\ref{tab:access}). Of sons from the top third of the parental income distribution, 20.2 percent start in cells
+that are well paid with high later growth, against 4.7 percent from the bottom third; of White sons, 16.1 percent
+against 5.7 percent of Black sons. The racial gap in access is not only a gap in parental income: at equal parental
+income White sons are 4.2 percentage points more likely to start in these jobs (0.042$^{***}$), and 3.5 points
+(0.035$^{*}$, $p=0.083$) holding the father's job and the son's education fixed as well. Parental income buys access more
+steeply for White than for Black sons (a difference of 0.055$^{***}$ per log point), but not once education and the
+father's job are held fixed ($-0.022$, s.e.\ 0.024). A father who held such a job raises his son's chance of holding one
+by 6.4 percentage points (0.064$^{**}$; White sons 0.048$^{**}$, Black sons 0.008).\footnote{Son-level linear probability
+models on the son's job at 25--34, clustered by 1968 family. For well-paid starting jobs of any kind, sons of rich White
+parents are 24.7 points more likely than sons of rich Black parents to start in one (0.247$^{***}$;
+\texttt{output/early\_industry\_late\_payoff.md}, Section D3).}
+
+\input{tab_access}
+
+\subsection{Wage growth with the same employer}
+
+Using pairs of consecutive interviews one to two years apart at which the son stayed with the same employer, I regress
+the annualised growth of his log wage on parental income (Table~\ref{tab:growthladder}). For White sons at 25--34 the
+gradient is 0.021$^{***}$ (0.006): a White son whose parents had twice the income sees his wage grow about 1.4 percentage
+points a year faster with the same employer, on mean growth of 5.7 percent. For Black sons it is 0.003 (0.008), and the
+racial difference, 0.018$^{*}$ ($p=0.062$), is less precisely estimated than its components. The White gradient is not
+measurement: over two intervals it is 0.019$^{***}$ and among strict stayers whose tenure covers both income years
+0.013$^{**}$.\footnote{Controlling for the wage at the interview before the pair raises it to 0.036$^{***}$, so it is not
+catch-up after a low start; over whole employer spells it is 0.019$^{***}$. \texttt{output/same\_employer\_growth\_checks.md},
+Section B. Code: \texttt{IGE/36.SameEmployerGrowthChecks.py}.} About half of it is sorting into steep jobs: within the
+cell of the first interview of the pair it is 0.011$^{*}$ ($p=0.095$), within the cell of the later interview 0.006
+($p=0.34$), and within cells the racial difference is 0.006--0.007, not significant. Controlling for the son's years of
+education lowers it to 0.008 ($p=0.17$). In the NLSY79, where the employer is observed directly in the job roster, the
+White gradient is 0.008$^{*}$ and the Black gradient zero, and holding the AFQT and education fixed brings the White
+gradient to 0.002: the part explained runs through education (0.0046$^{***}$), not measured ability (0.0014, $p=0.31$).
+The precise statement is: for White sons the gradient is precisely estimated, half sorting and half growth within jobs,
+and mostly schooling; for Black sons it is a precise zero; the racial difference in growth within the same job is not
+established.\footnote{Annual growth between two interviews is too noisy to settle the part that does not run through
+schooling. Cumulated over ten and twenty years of a son's own wage, the PSID gradient at equal schooling is
+0.073$^{***}$ and 0.135$^{***}$ for White sons and about zero for Black sons with the 13--19 mean of parental income,
+and about zero with a one-year measure, in the PSID as in the NLSY79 and NLSY97 (Section~\ref{sec:model},
+Tables~\ref{tab:h4longdiff} and \ref{tab:h4measure}).}
+
+\input{tab_growth_ladder}
+
+\subsection{Schooling: a return that rises with age, faster for White sons}\label{sec:schooling}
+
+If schooling carries the gradient, the distinctive prediction is that its pay-off grows over the career.
+\citet{bhuller2017life} show in Norwegian registers that education premiums rise steeply with age.
+Table~\ref{tab:schooling} estimates the return to a year of schooling in the PSID by age band and race. For White sons the
+return in hourly wages rises from 0.049 at 25--29 to 0.128 at 40--44, and in earnings from 0.045 to 0.143; for Black sons
+it starts higher---0.076 in wages and 0.124 in earnings at 25--29---and rises much less in wages and not at all in
+earnings (0.12--0.15 at every age). The White--Black difference in the rise is 0.032$^{***}$ (0.011) in wages and
+0.055$^{***}$ (0.014) in earnings, and 0.013$^{*}$ (0.008) for the NLSY79 hourly rate of pay. Education accounts for a
+large part of the divergence: adding years of schooling to the regression of the log wage on parental income by band
+removes 0.057$^{***}$ of the pooled rise of wage persistence after 35 (a share of 0.44$^{***}$), and 0.069$^{***}$ of the
+0.186$^{***}$ change in the racial gap (0.37$^{***}$); for earnings 0.090$^{***}$ of 0.203$^{***}$ (0.44$^{***}$), and in
+the NLSY79 0.038$^{***}$ of 0.054$^{**}$ (0.72$^{**}$). Education is an outcome of the same background, so these are
+shares of accounting, not causal mediation.\footnote{Code: \texttt{IGE/42.SchoolingAndJobGrowth.py}
+(\texttt{output/schooling\_job\_growth.md}).}
+
+\input{tab_schooling}
+
+\paragraph{Within jobs, net of the calendar, holding ability fixed.} A steeper White return could reflect access alone:
+if good jobs accumulate human capital faster and educated White sons get more of them, the return to schooling rises
+faster with age for White sons with no racial difference in what schooling does on a given job. The test holds the job
+fixed (Table~\ref{tab:withincell}). On son-years with an early job, the White--Black difference in the rise of the
+earnings return is 0.058$^{***}$ (0.014) without cell controls, 0.061$^{***}$ (0.018) with fixed effects for the son's
+cell at 25--34 and 0.066$^{***}$ (0.016) with fixed effects for his current cell; in wages 0.031$^{***}$, 0.029$^{*}$ and
+0.036$^{***}$. Holding the early job fixed halves the rise of the earnings return in the pooled sample (from 0.050$^{***}$ to
+0.025$^{***}$), so half of the rising return is the sorting of the educated into steep jobs; but it lowers the rise for
+both races alike, and the racial difference does not move (changes of $-0.002$ to 0.009, s.e.\ 0.011--0.016).
+The rise of the college premium over 1980--2000 could make a return rise with age that is really a rise with calendar
+time; allowing the return to trend with the calendar leaves the racial difference in the rise at 0.063$^{**}$ (0.027)
+for earnings and 0.035 ($p=0.12$) for wages, and within the cohorts born 1955--69 it is 0.051$^{***}$ and 0.029$^{*}$. In
+the NLSY79, a single cohort, the difference is 0.017$^{*}$ within the current cell and 0.021$^{**}$ (0.009) when the AFQT
+is held fixed. The Black sons' higher return at 25--29 also survives the job (0.061$^{***}$ in earnings within the early
+cell) in the PSID, but not in the NLSY79 (0.008).\footnote{Code: \texttt{IGE/45.WithinCellIdentification.py}
+(\texttt{output/within\_cell\_identification.md}); NLSY79 AFQT results in Appendix Table~\ref{tab:afqtgrowth}.}
+
+The age pattern of the returns says which mechanism this is. Under employer learning the coefficient on schooling, which
+employers see, falls with experience, and the coefficient on ability, which they learn, rises
+\citep{altonji2001employer, lange2007speed, arcidiacono2010beyond}. In the NLSY79 both rise: with the AFQT and schooling
+in the same regression, the schooling coefficient rises by 0.049$^{***}$ from the bands below 35 to the bands above, and
+the AFQT coefficient by 0.036$^{***}$, and the AFQT rise does not differ by race ($-0.031$, s.e.\ 0.025). A rising return
+to schooling is the complementarity of schooling with human capital accumulated on the job \citep{bhuller2017life},
+and it is this complementarity that is weaker for Black sons, within the same job and at equal measured ability.
+The return to experience itself does not differ by race at equal AFQT: in the within-decile regression of
+\citet{rauh2023black}, run on the NLSY79 with its supplemental Black sample, hourly earnings grow with experience at the
+same rate for Black and White men (Black $\times$ experience 0.003 in logs, s.e.\ 0.003, $p = 0.30$; 1,184 Black men).
+Their model holds accumulation race-neutral given the AFQT and has no schooling; the racial difference here is in how
+growth varies with schooling.\footnote{Hourly earnings (2018 dollars, and logs) on Black, years of accumulated
+experience, their product and region fixed effects by AFQT decile, men aged 23--54 not in school, at least 500 hours and
+25 weeks in the year; standard errors clustered by person. On the cross-sectional sample (285 Black men) the regression
+reproduces their pattern: no difference in deciles 1--5, and negative Black $\times$ experience in deciles 9 and 10
+($-1.03^{**}$ and $-1.93^{***}$ dollars a year, $p = 0.034$ and $p < 0.001$), cells that hold 4 and 3 Black men. With
+the supplemental sample no decile differs and the slope pooled within deciles is 0.028 dollars a year (s.e.\ 0.071,
+$p = 0.70$). Code: \texttt{IGE/70.RauhReplication.py}; output \texttt{output/rauh\_replication.md}.}
+The same-employer evidence points the same way but is weaker: a year of schooling raises same-employer wage growth at
+25--34 by 0.010$^{***}$ for White and 0.003 for Black sons (difference 0.007$^{**}$, $p=0.030$), and within the cell of
+the first interview the difference is 0.004 ($p=0.37$); in the NLSY79 it is 0.002 ($p=0.47$) and 0.005$^{*}$ within the
+cell.
+
+\input{tab_within_cell}
+
+\subsection{Wage growth within and between jobs}
+
+Wage growth comes from staying, from moving and from losing jobs \citep{topel1992job, altonji2013modeling}.
+Table~\ref{tab:jobmoves} splits the parental-income gradient of annual wage growth into these three parts. For White
+sons at 25--34 the gradient of 0.020$^{***}$ is almost all within jobs: 0.017$^{***}$ comes from years with the same
+employer, 0.001 from moves and 0.003 from displacements. For Black sons the within-job part is 0.005, and moves
+contribute $-0.008^{**}$: Black sons of richer parents gain less, not more, when they change employers. Of the racial
+difference in the growth gradient at 25--34, 0.021$^{***}$, about three fifths is within jobs (0.012$^{*}$) and two fifths
+at moves (0.009$^{**}$); the racial difference in the gain at a move is 0.069$^{**}$ (0.028). Family background buys the
+same protection from job loss in both races: the probability of displacement falls with parental income by 0.037$^{***}$
+for White and 0.038$^{***}$ for Black sons.
+
+\input{tab_job_moves}
+
+\subsection{What does not carry the divergence}
+
+Entry into supervisory and managerial occupations, the closest observable analogue to the promotion delays documented
+by \citet{hegde2026racial}, rises with parental income after 35 for White and not for Black sons (a racial difference of
+0.024$^{***}$ at 35--55), but the change of that difference relative to 25--34 is 0.008 (0.011), and self-reported
+position changes and promotions show no Black deficit. Job loss is frequent and costly---displacement lowers the son's log
+wage two to three years later by 0.131$^{***}$, of which 0.028$^{***}$ is a lower occupational score---but the
+occupational loss is not larger for Black sons, and shocks do not account for the divergence (Section~\ref{sec:contains}).
+These results, the industry decompositions and the NLSY79 replication of the occupational split are in
+Appendix~\ref{app:careers}.
+
+\paragraph{Summary.} The divergence is built at 25--34. Sons of richer White parents start in jobs whose wages grow,
+to which access is unequal by parental income and by race at equal parental income, and their wages grow faster in
+them; schooling carries most of both, and its return rises with age faster for White than for Black sons within the same
+job. Family background protects both races equally from displacement. The advantage built by the mid-thirties is what
+the IGE measures from 35 on.

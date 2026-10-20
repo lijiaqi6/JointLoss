@@ -1,0 +1,48 @@
+\begin{table}[!htbp]
+\centering
+\caption{Estimates of the selected model (E: H2, H3 and H4; job finding out of work by race)}
+\label{tab:modelest}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lc}
+\toprule
+Parameter & Estimate (s.e.) \\
+\midrule
+\multicolumn{2}{l}{\textit{Race}} \\
+\quad $\mu_B$, racial wage level & $-0.1458^{***}$ (0.0248) \\
+\quad $\gamma_1(B) - \gamma_1(W)$, pay-off of schooling (H2) & $-0.0080^{***}$ (0.0029) \\
+\quad $b_1(B) - b_1(W)$, entry return to schooling (H3) & $0.0341^{**}$ (0.0136) \\
+\quad $\gamma_x(B) - \gamma_x(W)$, pay-off of parental income (H4) & $-0.0194^{***}$ (0.0054) \\
+\multicolumn{2}{l}{\textit{Parental income}} \\
+\quad $b_x$, starting level & $0.0938^{***}$ (0.0332) \\
+\quad $\alpha_1$, access to $G$ jobs & $0.2073^{*}$ (0.1186) \\
+\quad $\gamma_x(W)$, accumulation & $0.0186^{***}$ (0.0072) \\
+\quad $\delta_1$, displacement & $-0.2033^{***}$ (0.0554) \\
+\multicolumn{2}{l}{\textit{Schooling}} \\
+\quad $b_1(W)$, starting level & $0.0764^{***}$ (0.0117) \\
+\quad $\alpha_2$, access to $G$ jobs & $0.6862^{***}$ (0.0455) \\
+\quad $\gamma_1(W)$, accumulation & $0.0125^{***}$ (0.0024) \\
+\multicolumn{2}{l}{\textit{Jobs, search frictions and job loss}} \\
+\quad $\alpha_0$, access to $G$ jobs & $-5.5035^{***}$ (0.2147) \\
+\quad $\gamma_O$, accumulation on $O$ jobs & $0.0878^{***}$ (0.0114) \\
+\quad $\gamma_G$, accumulation on $G$ jobs & $0.1629^{***}$ (0.0351) \\
+\quad $\ln\rho$, decline of accumulation with age & $-2.3960$ (0.1014) \\
+\quad $\ln\sigma_m$, match component & $-2.1313$ (0.1968) \\
+\quad logit $\lambda_e$ at 30, on-the-job search friction & $0.1579$ (0.1688) \\
+\quad $\lambda_a$, its age slope (per decade) & $-0.7308$ (0.1161) \\
+\quad logit $\bar\lambda_u$, job finding out of work & $0.3099$ (0.0703) \\
+\quad $\Delta\ell_u$, job finding out of work, Black $-$ White (logit) & $-0.5389^{***}$ (0.0946) \\
+\quad $\delta_{0B}$, displacement, Black & $-2.3353^{***}$ (0.0495) \\
+\quad $\delta_{0W}$, displacement, White & $-2.8068^{***}$ (0.0475) \\
+\quad $\delta_a$, its age slope (per decade) & $-0.4219^{***}$ (0.0416) \\
+\multicolumn{2}{l}{\textit{Starting level and shocks}} \\
+\quad $b_0$, starting level & $1.9033^{***}$ (0.0522) \\
+\quad $\ln\sigma_0$, starting level & $-0.8759$ (0.0267) \\
+\quad $\ln\sigma_\eta$, permanent shock & $-2.6922$ (0.0764) \\
+\quad $\ln\sigma_\varepsilon$, transitory shock & $-1.5213$ (0.0292) \\
+\midrule
+$Q$ (66 moments), estimation draws & 95.9 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Simulated method of moments, 66 moments, diagonal weights equal to the inverse cluster-bootstrap variances (500 draws of 1968 families), 20 simulated sons per PSID son. Sandwich standard errors $(1 + 1/R)\,(G'WG)^{-1}G'W\Omega WG(G'WG)^{-1}$ with $\Omega$ the bootstrap covariance of the moments; $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$ (not shown for parameters on a log or logit scale). Accumulation parameters per year; parental income and schooling are centred at the sample mean and at 12 years. Fixed: $\beta = 0.95$, $b = 0.4$, cyclical elasticities $\mp 0.10$, $\alpha_3 = 0$ (H1 rejected), the match premium of $G$ jobs $\mu_G = 0$ and depreciation out of work $d_u = 0$ (Section~\ref{sec:model}). Code: \texttt{model/estimate.py}; output \texttt{model/output/final\_x4/estimates\_E.json}.\end{minipage}
+\end{table}

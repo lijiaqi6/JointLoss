@@ -1,0 +1,39 @@
+\begin{table}[!htbp]
+\centering
+\caption{Accounting decomposition of the Black--White gap in the earnings IGE (PSID)}
+\label{tab:decomposition}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccccc}
+\toprule
+Row & \begin{tabular}[b]{@{}c@{}}Sons 25--55,\\father's\\childhood\end{tabular} & \begin{tabular}[b]{@{}c@{}}Sons 25--55,\\father's\\working life\end{tabular} & \begin{tabular}[b]{@{}c@{}}Sons,\\lifetime\\mean\end{tabular} & \begin{tabular}[b]{@{}c@{}}Sons 35--55,\\father's\\childhood\end{tabular} & \begin{tabular}[b]{@{}c@{}}Daughters 25--55,\\father's\\childhood\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{l}{\textit{Earnings IGE on the father's earnings}} \\
+Black earnings IGE & $0.255^{***}$ & $0.316^{***}$ & $0.251^{***}$ & $0.248^{***}$ & $0.270^{***}$ \\
+ & (0.041) & (0.053) & (0.045) & (0.061) & (0.048) \\
+White earnings IGE & $0.315^{***}$ & $0.369^{***}$ & $0.296^{***}$ & $0.389^{***}$ & $0.298^{***}$ \\
+ & (0.025) & (0.030) & (0.024) & (0.033) & (0.028) \\
+White $-$ Black gap & $0.060$ & $0.053$ & $0.044$ & $0.141^{**}$ & $0.029$ \\
+ & (0.049) & (0.059) & (0.050) & (0.068) & (0.056) \\
+\addlinespace
+\multicolumn{6}{l}{\textit{Decomposition of the gap}} \\
+Composition (White re-weighted to Black) & $0.035$ & $0.076^{*}$ & $0.021$ & $0.087^{*}$ & $0.051$ \\
+ & (0.030) & (0.041) & (0.027) & (0.049) & (0.040) \\
+Human capital (wage) transmission & $0.085^{**}$ & $0.014$ & $0.054$ & $0.115^{**}$ & $-0.079$ \\
+ & (0.038) & (0.047) & (0.037) & (0.054) & (0.054) \\
+Hours / instability, total & $0.003$ & $0.016$ & $0.016$ & $-0.016$ & $0.055^{*}$ \\
+ & (0.026) & (0.040) & (0.026) & (0.038) & (0.032) \\
+\quad wage share of father's variance & $0.003$ & $-0.006$ & $-0.005$ & $0.008$ & $-0.067^{***}$ \\
+ & (0.017) & (0.028) & (0.017) & (0.022) & (0.023) \\
+\quad hours transmission & $-0.019$ & $-0.019$ & $-0.003$ & $-0.033$ & $-0.018$ \\
+ & (0.022) & (0.027) & (0.020) & (0.029) & (0.024) \\
+\quad hours share of father's variance & $-0.025^{**}$ & $-0.030^{**}$ & $-0.013$ & $-0.025^{**}$ & $-0.006$ \\
+ & (0.010) & (0.015) & (0.009) & (0.013) & (0.006) \\
+Wage--hours cross terms & $-0.064$ & $-0.054$ & $-0.046$ & $-0.046$ & $0.003$ \\
+ & (0.042) & (0.048) & (0.038) & (0.055) & (0.038) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Each column is one decomposition. Exact identity: gap = composition + wage transmission + (wage share + hours transmission + hours share) + cross terms, where the White children are re-weighted to the Black distribution of the father's log earnings (20 quantile bins) and the shares are the shares of the partialled variance of the father's log earnings due to his log wage and log hours. Slopes over child-years without the age interactions (Lee--Solon columns) or one row per son (lifetime mean). Bootstrap standard errors over 200 draws of 1968 families within race. An accounting identity, not a causal decomposition: the hours rows mix shocks, labor supply and search frictions. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/24.IGEDecomposition.py} (\texttt{output/ige\_decomposition.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

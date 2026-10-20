@@ -1,6 +1,6 @@
 # Both parents present in childhood and adult outcomes (beta_P for the child block)
 
-Built by `IGE/79.ParentsPresentOutcomes.py` (2026-10-20; WP7 of `IGE/proposals/fable_10h_plan_paperA.md`); definitions in its docstring. PSID children born 1968-1995 (SRC + SEO, unweighted), Black / White, >= 3 childhood interviews at 0-17. Both parents present = the head and wife of the child's family unit are the mother and the father at birth. Controls in every column: female, birth-year FE, parental education (max of the two parents; 5 groups), + Black in pooled rows. S.e. clustered by 1968 family; *** p<0.01, ** p<0.05, * p<0.1. No sibling comparisons. Associations, not causal effects.
+Built by `IGE/79.ParentsPresentOutcomes.py` (2026-10-20; WP7 of `proposals/fable_10h_plan_paperA.md`); definitions in its docstring. PSID children born 1968-1995 (SRC + SEO, unweighted), Black / White, >= 3 childhood interviews at 0-17. Both parents present = the head and wife of the child's family unit are the mother and the father at birth. Controls in every column: female, birth-year FE, parental education (max of the two parents; 5 groups), + Black in pooled rows. S.e. clustered by 1968 family; *** p<0.01, ** p<0.05, * p<0.1. No sibling comparisons. Associations, not causal effects.
 
 ## 1. Children and the share of childhood with both parents
 

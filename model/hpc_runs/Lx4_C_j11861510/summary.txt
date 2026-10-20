@@ -1,0 +1,7 @@
+run Lx4_C_j11861510
+job 11861510
+code 7159bb7ab4a882bddd8f0d7d766a69033c771099
+mode full
+status 0
+cores 32 workers 30 popsize 30 maxfevals 12000,12000,12000,12000,12000,12000,12000,12000
+settings IGE_FIX=muG,du IGE_MODELS=C IGE_POLISH=0 IGE_R=20 IGE_RUN=Lx4_C IGE_START=/mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_B_j11861507/estimates.json:B,/mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_F_j11861508/estimates.json:F IGE_STEPS=age,rehire,xacc 

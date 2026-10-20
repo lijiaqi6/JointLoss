@@ -1,0 +1,45 @@
+\begin{table}[!htbp]
+\centering
+\caption{Does the racial difference in the pay-off of schooling survive within jobs?}
+\label{tab:withincell}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Baseline\end{tabular} & \begin{tabular}[b]{@{}c@{}}Early-cell\\fixed effects\end{tabular} & \begin{tabular}[b]{@{}c@{}}Current-cell\\fixed effects\end{tabular} & \begin{tabular}[b]{@{}c@{}}Schooling $\times$\\calendar trend\end{tabular} & \begin{tabular}[b]{@{}c@{}}Born\\1955--69\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{l}{\textit{PSID, log annual earnings}} \\
+White: rise of the return, 35+ minus below 35 & $0.057^{***}$ & $0.035^{***}$ & $0.032^{***}$ & $0.041^{***}$ & $0.064^{***}$ \\
+ & (0.008) & (0.010) & (0.009) & (0.015) & (0.010) \\
+Black: rise of the return, 35+ minus below 35 & $-0.001$ & $-0.025^{*}$ & $-0.034^{***}$ & $-0.022$ & $0.013$ \\
+ & (0.012) & (0.015) & (0.013) & (0.023) & (0.016) \\
+White $-$ Black: rise of the return & $0.058^{***}$ & $0.061^{***}$ & $0.066^{***}$ & $0.063^{**}$ & $0.051^{***}$ \\
+ & (0.014) & (0.018) & (0.016) & (0.027) & (0.019) \\
+White $-$ Black: return at 25--29 & $-0.077^{***}$ & $-0.061^{***}$ & $-0.066^{***}$ & $-0.079^{***}$ & $-0.057^{***}$ \\
+ & (0.012) & (0.015) & (0.012) & (0.012) & (0.019) \\
+\addlinespace
+\multicolumn{6}{l}{\textit{PSID, log hourly wage}} \\
+White: rise of the return, 35+ minus below 35 & $0.052^{***}$ & $0.032^{***}$ & $0.028^{***}$ & $0.038^{***}$ & $0.060^{***}$ \\
+ & (0.007) & (0.009) & (0.008) & (0.014) & (0.009) \\
+Black: rise of the return, 35+ minus below 35 & $0.021^{**}$ & $0.003$ & $-0.008$ & $0.003$ & $0.031^{**}$ \\
+ & (0.009) & (0.012) & (0.010) & (0.018) & (0.013) \\
+White $-$ Black: rise of the return & $0.031^{***}$ & $0.029^{*}$ & $0.036^{***}$ & $0.035$ & $0.029^{*}$ \\
+ & (0.011) & (0.015) & (0.013) & (0.023) & (0.016) \\
+White $-$ Black: return at 25--29 & $-0.028^{***}$ & $-0.023^{**}$ & $-0.030^{***}$ & $-0.028^{***}$ & $-0.016$ \\
+ & (0.009) & (0.010) & (0.009) & (0.009) & (0.014) \\
+\addlinespace
+\multicolumn{6}{l}{\textit{NLSY79, log hourly rate of pay}} \\
+White: rise of the return, 35+ minus below 35 & $0.056^{***}$ & $0.044^{***}$ & $0.046^{***}$ &  &  \\
+ & (0.004) & (0.006) & (0.005) &  &  \\
+Black: rise of the return, 35+ minus below 35 & $0.044^{***}$ & $0.027^{***}$ & $0.029^{***}$ &  &  \\
+ & (0.006) & (0.009) & (0.007) &  &  \\
+White $-$ Black: rise of the return & $0.012$ & $0.017$ & $0.017^{*}$ &  &  \\
+ & (0.008) & (0.010) & (0.009) &  &  \\
+White $-$ Black: return at 25--29 & $-0.022^{***}$ & $-0.008$ & $-0.004$ &  &  \\
+ & (0.007) & (0.008) & (0.007) &  &  \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Coefficient on years of schooling in a regression of the log outcome by age band (25--29 to 50--55) and race; rows give its rise (mean over the bands from 35 minus mean below 35) and, for the race difference, its value at 25--29. Controls: quartic in age, year (round) fixed effects. Early cell: the son's modal occupation group $\times$ industry group (11 $\times$ 33) at 25--34; current cell: the same at each observation. Column (4) adds schooling $\times$ (year $-$ 1995)/10, so the return is evaluated in 1995 and the rise is net of the calendar trend of the return; column (5) keeps sons born 1955--69. The NLSY79 is one cohort, so (4)--(5) are not defined there. All columns use the same son-years (early cell known). Standard errors clustered by 1968 family (PSID) or 1979 household (NLSY79). $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/45.WithinCellIdentification.py} (\texttt{output/within\_cell\_identification.csv}).\end{minipage}
+\end{table}

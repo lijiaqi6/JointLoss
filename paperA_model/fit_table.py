@@ -17,7 +17,7 @@ Writes to results/fit_table_<stamp>/ (or --out):
                           sandwich); parameters not free in the run are marked 'fixed'
   fit_table.json          the numbers behind the tables; test_wrapper.tex (a scratch document that \\input's the three
                           tables; --compile runs pdflatex on it in the output folder)
---paper copies the .tex tables into IGE/paperA_joint_loss/ (off by default: the paper's tables change only when the
+--paper copies the .tex tables into paperA_joint_loss/ (off by default: the paper's tables change only when the
 lead decides).
 """
 from __future__ import annotations
@@ -255,7 +255,7 @@ def main():
     ap.add_argument("--caption", default="Fit of the model: targeted and reported moments")
     ap.add_argument("--out", default=None)
     ap.add_argument("--compile", action="store_true")
-    ap.add_argument("--paper", action="store_true", help="also copy the tables into IGE/paperA_joint_loss/")
+    ap.add_argument("--paper", action="store_true", help="also copy the tables into paperA_joint_loss/")
     a = ap.parse_args()
     src = a.source or a.start or find_default_source()
     out = Path(a.out) if a.out else PC.out_dir("fit_table")

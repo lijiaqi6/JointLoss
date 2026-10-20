@@ -5,7 +5,7 @@ the birth (the cross-spouse insurance margin), does it differ by race, and is it
 generous? State-level shocks were weak (8.FirstStage.py), so the shock is built from the husband's own sector.
 
 PSID (main)
-  births     IGE/data/first_stage_births.pkl (8.FirstStage.py, read only): PSID Childbirth and Adoption History births
+  births     data/first_stage_births.pkl (8.FirstStage.py, read only): PSID Childbirth and Adoption History births
              1977-2021 to SRC/SEO mothers, White/Black head, state, controls, mother's employment b-1..b+3.
              Kept: married at the birth (CAH8 = 1) and the mother is wife / partner of the head in the latest family-
              file wave in [b-3, b-1]; the head of that family = the husband. Birth years 1980-2019 (CPS MORG).
@@ -33,9 +33,9 @@ Shocks (CPS MORG 1979-2019, Dropbox/MORG, read only; sector codes as in 8a.State
 Specification: OLS, state FE + birth-year FE + husband-sector FE, controls: mother's age, age^2, education
   (<12, 13-15, 16+, missing), birth order (2, 3+, missing), Black. Clusters: state x sector, and sector (16; wild
   cluster bootstrap-t p-value, Webb weights, null imposed, 999 draws).
-Crowd-out: shock x AFDC/TANF maximum benefit for a family of three (and AFDC + food stamps), IGE/data/
+Crowd-out: shock x AFDC/TANF maximum benefit for a family of three (and AFDC + food stamps), data/
   policy_calendar.csv (UKCPR), in hundreds of 2000 dollars per month, centred; UI generosity from
-  IGE/data/ui_generosity.csv when that file exists.
+  data/ui_generosity.csv when that file exists.
 Placebos: shock in b-2; women's employment growth in the WIFE's own pre-birth sector; childless married women.
 
 NLSY79 (complement; the public file has no state and the spouse questions give occupation only, no industry):
@@ -56,6 +56,8 @@ import pandas as pd
 from scipy import stats
 
 from common import CPI, DATA, OUT, stars, to2000
+import os
+NLSY79_DIR = Path(os.environ.get("NLSY79_DIR", r"G:\My Drive\Selection vs risk\NLSY79"))   # Selection-vs-risk/NLSY79 (helpers + extracts), read only
 
 HERE = Path(__file__).resolve().parent
 
@@ -486,7 +488,7 @@ def table(res, tid, cols, panels, title, fe_line, extra_rows=(), single=False, c
 
 # ---------------------------------------------------------------- NLSY79
 def nlsy79(results, rows):
-    NC = _load("nlsy_common", HERE.parent / "NLSY79" / "common.py")
+    NC = _load("nlsy_common", NLSY79_DIR / "common.py")
     d = NC.load()
     W = NC.weekly(d)
     E = NC.employed_matrix(W)

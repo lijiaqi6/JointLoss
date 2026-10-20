@@ -1,7 +1,7 @@
 # Referee and editor review of Paper A: "Who Insures the Children?" (2026-10-17)
 
-Read: `IGE/paperA_joint_loss/` (main.tex, sec1-sec9, appA, tab_*.tex; main.pdf compiles to 32 pages), `IGE/EVIDENCE.md`
-(Paper A rows and the PI-questions table), `IGE/PLAN.md`, `IGE/proposals/*.md`, and the output files behind the numbers
+Read: `paperA_joint_loss/` (main.tex, sec1-sec9, appA, tab_*.tex; main.pdf compiles to 32 pages), `EVIDENCE.md`
+(Paper A rows and the PI-questions table), `PLAN.md`, `proposals/*.md`, and the output files behind the numbers
 (`father_displacement.md`, `joint_job_loss.md`, `cps_joint_job_loss.md`, `correlated_shocks.md`, `wife_search.md`,
 `displacement_id.md`), plus the docstring of `30.CPSJointJobLoss.py`. Every headline number listed in the brief was checked
 against the tables and the output files; the checks are in Section 3.1. Nothing in the repo was edited or run.

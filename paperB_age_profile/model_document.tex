@@ -1,0 +1,537 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,array}
+\usepackage[utf8]{inputenc}
+\usepackage[semicolon]{natbib}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlist{itemsep=2pt,topsep=3pt}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{3em}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\1}{\mathbf{1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{A Life-Cycle Model of Careers, Schooling and the Age Profile of Persistence\\[4pt]
+\large Model document for Paper B (\emph{Built in the First Decade of the Career})}
+\author{Paper B --- model documentation}
+\date{19 October 2026 (as coded in \code{model/})}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent This document states the structural model of Paper B, in the order in which the simulator runs it
+(\code{model/core.py}), so that the state space, the timing, the parameters and the moments can be checked against
+the code.
+Part~I sets out the model: the environment, the jobs and the search frictions, human capital and wages, the son's
+problem as Bellman equations, the aggregate labor market, the initial conditions, the timing within the year and the
+solution method. Section~\ref{sec:analytic} states what can be solved without simulation. Part~II sets out the estimation: every parameter with its status (calibrated, with the source, or
+estimated, with the moments that identify it), the targets, the simulated observation scheme, the nested models that
+apply the parsimony rule, the untargeted validation, the counterfactuals, and the design decisions that need the PI's
+sign-off (Section~\ref{sec:decisions}). Every modelling choice that rests on a data moment carries a footnote with the
+number and the script that produced it. The document contains no model results.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% #####################################################################################################
+\part{The model}
+
+% =====================================================================================================
+\section{Environment}\label{sec:env}
+
+\paragraph{Agents and time.} The model follows men---the sons of the PSID benchmark sample---from the end of school
+to age 55. Time is discrete and the period is a year.\footnote{The paper's moments are annual or biennial (PSID
+interviews annual to 1997, biennial after), the career objects are measured over five-year age bands, and the
+same-employer pairs are one to two years apart. A shorter period would add states without adding identifying moments.
+Decision~\ref{dec:period}.} A son enters the labor market at age $a_0(e) = 18 + \max(e - 12, 0)$, with $e$ his years of
+schooling, and leaves the model at 55. Calendar time $t$ matters only through the aggregate labor market
+(Section~\ref{sec:agg}): a son born in year $c$ is aged $a = t - c$.
+
+\paragraph{Heterogeneity.} Sons differ in four permanent characteristics, all known to them:
+\begin{itemize}
+  \item race $r \in \{B, W\}$;
+  \item log parental income $x$, the mean of the parental family's income at the son's ages 13--19;
+  \item years of schooling $e$;
+  \item birth cohort $c$, which fixes the calendar years of his career.
+\end{itemize}
+The joint distribution of $(r, x, e, c)$ is taken from the PSID sons: the simulation draws sons from the data with
+replacement (Section~\ref{sec:init}). Schooling is not chosen in the model.\footnote{The paper's mechanism acts after
+school; the schooling gradient in parental income by race is reproduced exactly by drawing $(r, x, e)$ from the data.
+Endogenous schooling \citep[as in][]{abbott2019education} would add a cost of schooling in $x$ and $r$ and a forward-looking
+valuation, two to three parameters identified by the schooling distribution that the draw already matches. The
+counterfactual that changes schooling is therefore a shift of the schooling distribution, named ``equalising
+schooling'', not a priced policy. Decision~\ref{dec:school}.}
+
+\paragraph{Preferences.} Sons are risk neutral and discount the future at $\beta$. There is no saving, no consumption
+choice and no hours choice: a son maximises the expected present value of his earnings and of the value of time out of
+work.\footnote{Risk neutrality is the standard assumption of job-ladder models with human capital
+\citep[e.g.][]{bagger2014tenure}; the paper's moments are wages, job moves and displacements, not consumption or assets
+(consumption is not a target of the companion structural work either). The son's hours carry 0.010 of the 0.220 (Black)
+and 0.012 of the 0.389 (White) elasticity of earnings with respect to fathers' earnings at 40, so hours are not a margin.
+Code: \code{IGE/24.IGEDecomposition.py}. Decision~\ref{dec:prefs}.} The only decisions are whether to accept a job
+offer, when employed and when not employed.
+
+% =====================================================================================================
+\section{Jobs, offers and search frictions}\label{sec:jobs}
+
+\paragraph{Job types.} There are two job types, $j \in \{G, O\}$. A $G$ job is an occupation $\times$ industry cell in
+the top quartile of men's employment by both the CPS wage level and the CPS wage growth after 35; an $O$ job is any
+other cell. The definition is the same in the data and in the simulation, so the share of sons in $G$ jobs and every
+moment computed by job type are the same objects in both.\footnote{Table~\ref{tab:accessmom} lists the access moments:
+20.2\% of sons from the top parental-income tercile start in $G$ against 4.7\% from the bottom tercile, 16.1\% of White
+against 5.7\% of Black sons; at equal parental income White sons are 4.2 points more likely (0.042$^{***}$, s.e.\
+0.016), 3.5 points with schooling and the father's job held fixed (0.035$^{*}$, $p=0.083$). Classifying the early job into
+four sets by pay and later growth accounts for 0.271$^{***}$ (s.e.\ 0.067) of the pooled rise of persistence after 35 and
+0.237$^{***}$ (0.087) of the racial divergence, about half of what the 11 $\times$ 33 early cell accounts for (0.405$^{***}$
+and 0.493$^{***}$; paper Table 7), so two job types capture a large part, not all, of the early-job channel; the rest is
+carried by the match component and $h$. Decision~\ref{dec:types}. Code: \code{IGE/35.EarlyIndustryLatePayoff.py}, Section D3.} Jobs differ in two ways: the mean of the match
+component (Section~\ref{sec:wages}) and the rate at which human capital accumulates on them.
+
+\paragraph{Offers.} An employed son of age $a$ receives an outside offer with probability $\lambda_e(a) =
+\Lambda(\ell_e + \lambda_a (a - 30)/10)$ per year; a son out of work receives one with probability
+$\lambda_u(t)$.\footnote{The age slope $\lambda_a$ (step 2 of the model's development, Decision~\ref{dec:age}): move
+rates without displacement fall from 0.131 at 25--34 to 0.091 at 35--55 (White), which a constant search friction cannot
+reproduce under the PSID's interview scheme. Code: \code{model/core.py} (\code{IGE\_STEPS=age}).} Every offer---the first offer at labor-market entry, offers out of work and
+offers on the job---is of type $G$ with probability
+\begin{equation}\label{eq:access}
+p(x, e, r) = \Lambda\left(\alpha_0 + \alpha_1 (x - \bar x) + \alpha_2 (e - 12) + \alpha_3 \1[r = B]\right),
+\end{equation}
+where $\Lambda$ is the logistic function, and carries a match draw $m' \sim N(\mu_{j'}, \sigma_m^2)$, with $\mu_O = 0$ and $\mu_G = 0$ in the estimated
+model (Decision~\ref{dec:fixed}).
+One access function governs the whole career, so one race parameter, $\alpha_3$, governs access.\footnote{There is no
+race $\times$ parental-income term: the racial difference in the parental-income gradient of access is
+$-0.022$ (s.e.\ 0.024) once schooling and the father's job are held fixed. The logistic form lets access depend
+nonlinearly on parental income, which is how position in the parental distribution can account for part of the racial
+divergence before race is asked to (paper Section 3.4). Code: \code{IGE/35.EarlyIndustryLatePayoff.py}.} The search
+friction $\lambda_e(a)$ is common to both races and both job types.\footnote{Rates of moving to a new employer without
+displacement are 0.125 (Black) and 0.130 (White) per year at 25--34; Black sons of richer parents gain less at a move
+(racial difference in the parental-income gradient of the gain 0.069$^{**}$, s.e.\ 0.028), which a common access
+function produces through fewer $G$ offers. A race-specific search friction on the job \citep[as in][]{bowlus2002discrimination}
+is added only if the move moments cannot be matched without it. Code: \code{IGE/42.SchoolingAndJobGrowth.py}, Section C.}
+
+\paragraph{Displacement.} An employed son loses his job, with its match component, with probability
+\begin{equation}\label{eq:delta}
+\delta(x, r, a, t) = \Lambda\left(\delta_{0r} + \delta_1 (x - \bar x) + \delta_a (a - 30)/10 + \phi_\delta (u_t -
+\bar u)\right),
+\end{equation}
+where $u_t$ is the national unemployment rate (Section~\ref{sec:agg}).\footnote{At 25--34, 17.6\% of Black and 10.3\% of
+White sons' interview pairs include a displacement (plant closure or move, layoff or firing); the probability falls with
+parental income by 0.037$^{***}$ (s.e.\ 0.009) for White and 0.038$^{***}$ (s.e.\ 0.014) for Black sons, so $\delta_1$ is
+common. Code: \code{IGE/42.SchoolingAndJobGrowth.py}, Section C.} The age slope $\delta_a$ is step 2 of the model's development (Decision~\ref{dec:age}): displacement per interview
+pair falls from 0.173 (Black) and 0.102 (White) at 25--34 to 0.111 and 0.076 at 35--55. There are no voluntary quits
+into non-employment. A son displaced in a year can be re-employed in the same year: he draws an out-of-work offer with
+probability $\lambda_u(t)$ and accepts it by the rule for a son out of work (step 3, Decision~\ref{dec:rehire}).
+
+% =====================================================================================================
+\section{Human capital and wages}\label{sec:wages}
+
+\paragraph{Human capital.} A son's human capital level $h$ evolves as
+\begin{equation}\label{eq:hc}
+h_{a+1} = \begin{cases} h_a + \left[\gamma_j + \gamma_1(r)\, (e - 12) + \gamma_x(r)\, (x - \bar x)\right] g(a) +
+\eta_{a+1} & \text{employed, job type } j, \\ h_a - d_u + \eta_{a+1} & \text{not employed,} \end{cases}
+\end{equation}
+with $g(a) = \exp\{-\rho\,(a - 18)\}$ a declining age profile of accumulation, $\gamma_G - \gamma_O$ the faster
+accumulation on good jobs, $\gamma_1(r)$ the pay-off of schooling in accumulation, $\gamma_x(r)$ the pay-off of parental income in
+accumulation (step 4, Decision~\ref{dec:xacc}), $d_u$ the depreciation of human capital in a year out of work ($d_u = 0$
+in the estimated model, Decision~\ref{dec:fixed}), and $\eta \sim N(0, \sigma_\eta^2)$ a permanent shock. Accumulation loads on schooling and, through $\gamma_x(r)$, on parental income; not on measured ability.\footnote{Once schooling is held fixed, the parental-income gradient of
+same-employer wage growth at 25--34 is 0.008 ($p=0.17$) in the PSID and 0.002 ($p=0.73$) in the NLSY79; in the NLSY79 the
+rise of the AFQT return with age does not differ by race ($-0.031$, s.e.\ 0.025) while the racial difference in the rise
+of the schooling return survives the AFQT (0.021$^{**}$, s.e.\ 0.009). Code: \code{IGE/36.SameEmployerGrowthChecks.py},
+\code{IGE/45.WithinCellIdentification.py}.} The race-specific pay-off $\gamma_1(r)$ is a parameter of accumulation, not of
+access.\footnote{The racial difference in the rise of the return to schooling with age is 0.058$^{***}$ (s.e.\ 0.014) in
+earnings without job controls, 0.061$^{***}$ (0.018) with fixed effects for the son's job at 25--34 and 0.066$^{***}$
+(0.016) with fixed effects for his current job; it is 0.063$^{**}$ (0.027) net of the calendar trend of the return.
+Code: \code{IGE/45.WithinCellIdentification.py}.}
+
+\paragraph{Wages and earnings.} The log hourly wage is
+\begin{equation}\label{eq:wage}
+\ln w_a = \mu_r + h_a + m_a + \varepsilon_a ,
+\end{equation}
+where $m_a$ is the match component of the current job (drawn at the offer, fixed while the son stays, lost at a move or
+displacement), $\varepsilon_a \sim N(0, \sigma_\varepsilon^2)$ a transitory shock that includes measurement error, and
+$\mu_r$ the racial wage level at equal human capital, with $\mu_W = 0$.\footnote{$\mu_r$ is the residual of
+\citet{neal1996role}: the wage gap at equal skills. It carries most of the 11--15 percentile gap in expected rank at the
+25th parental percentile, which is present at every age, and it is held fixed in every counterfactual.} A son employed at the start of a year earns the wage of (\ref{eq:wage}) that year; a son not employed at the start
+of a year has zero hours that year. The targets use wages and zero-hours years, not annual earnings, because the son's
+hours carry almost none of the IGE. Transitory shocks do not enter the decisions.
+
+% =====================================================================================================
+\section{The son's problem}\label{sec:bellman}
+
+The state of an employed son at the start of age $a$ is $(h, m, j)$, and of a son out of work $h$; his type is
+$\theta = (r, x, e)$. Let $W(h, m, j) = \mu_r + h + m$ be his expected log wage and $\omega(h) = \ln b + \mu_r + h$ the
+log value of a year out of work, proportional to his potential wage. With risk neutrality the flow payoff is the level
+$\exp\{W + \sigma_\varepsilon^2/2\}$ when employed and $\exp\{\omega(h)\}$ when not employed. Sons hold
+stationary expectations about the aggregate labor market (Section~\ref{sec:agg}), so the value functions depend on age,
+type and the individual state only.\footnote{Decision~\ref{dec:agg}. With perfect foresight of the aggregate path the
+value functions would depend on the calendar year; the stationary version is the standard simplification and keeps the
+state space small.}
+
+\paragraph{Employed.}
+\begin{multline}
+V^E_a(h, m, j; \theta) = e^{W(h,m,j) + \sigma_\varepsilon^2/2} + \beta\, \E_{\eta}\Big\{ \bar\delta(x,r,a)\, \Big[
+\bar\lambda_u\, \E_{j', m'} \max\left\{ V^U_{a+1}(h'), V^E_{a+1}(h', m', j') \right\} \\
++ (1 - \bar\lambda_u) V^U_{a+1}(h') \Big] + \left(1 - \bar\delta(x,r,a)\right) \Big[ (1 - \lambda_e(a))\,
+V^E_{a+1}(h', m, j) \\
++ \lambda_e(a)\, \E_{j', m'} \max\left\{ V^E_{a+1}(h', m, j),\ V^E_{a+1}(h', m', j') \right\} \Big] \Big\},
+\end{multline}
+with $h' = h + [\gamma_j + \gamma_1(r) (e - 12) + \gamma_x(r) (x - \bar x)] g(a) + \eta$ from (\ref{eq:hc}), $j' = G$ with probability $p(x, e, r)$,
+$m' \sim N(\mu_{j'}, \sigma_m^2)$, and $\bar\delta$ the displacement probability at the average aggregate state.
+
+\paragraph{Not employed.}
+\begin{equation}
+V^U_a(h; \theta) = e^{\omega(h)} + \beta\, \E_{\eta}\Big\{ \bar\lambda_u\, \E_{j', m'} \max\left\{ V^U_{a+1}(h'),\
+V^E_{a+1}(h', m', j') \right\} + (1 - \bar\lambda_u)\, V^U_{a+1}(h') \Big\},
+\end{equation}
+with $h' = h - d_u + \eta$. At 55 the continuation values are zero.
+
+\paragraph{Decisions.} An employed son accepts an outside offer when $V^E_{a+1}(h', m', j') > V^E_{a+1}(h', m, j)$; a son
+out of work accepts when $V^E_{a+1}(h', m', j') > V^U_{a+1}(h')$. A $G$ offer with a lower match than the current job can
+be accepted because it raises future accumulation; this is why acceptance is forward-looking. At entry a son receives one
+offer and accepts it if it is worth more than starting out of work.
+
+% =====================================================================================================
+\section{The aggregate labor market}\label{sec:agg}
+
+The national unemployment rate $u_t$ (BLS annual averages) shifts the job-finding probability out of work and the
+displacement probability:
+\begin{equation}
+\lambda_u(t) = \bar\lambda_u\, \exp\{\phi_\lambda (u_t - \bar u)\}, \qquad \delta(x, r, t) \text{ as in (\ref{eq:delta})}.
+\end{equation}
+The elasticities $\phi_\lambda$ and $\phi_\delta$ are calibrated outside the model from the CPS: the annual job-finding
+rate of non-employed men and the job-loss rate of employed men on the unemployment rate. There is no other aggregate
+shock and no shifter of access by entry conditions.\footnote{The state unemployment rate at entry leaves access to good
+jobs unchanged (0.004, s.e.\ 0.008 per point), so access gets no aggregate shifter; the observed national path of each
+cohort, fed through $\lambda_u(t)$ and $\delta(t)$, must reproduce the entry scar (wages at 25--34 $-0.013^{**}$, s.e.\
+0.005, per point) and the larger racial opening after slack entries (0.362$^{***}$ against 0.208$^{**}$) without a
+parameter of its own. Code: \code{IGE/49.PaperBPolicyShocks.py}, design D1.}
+
+% =====================================================================================================
+\section{Initial conditions}\label{sec:init}
+
+A son's initial human capital level is
+\begin{equation}\label{eq:h0}
+h_0 = b_0 + b_x\, (x - \bar x) + b_1(r)\, (e - 12) + \nu, \qquad \nu \sim N(0, \sigma_0^2).
+\end{equation}
+Parental income enters the starting position directly as well as through schooling and access.\footnote{The
+parental-income gradient of sons' log wages at 25--29 is 0.220$^{***}$ (White) and 0.174$^{***}$ (Black); holding years of
+schooling fixed it is 0.174$^{***}$ and 0.137$^{***}$. Access to $G$ jobs at entry carries part of the rest; $b_x$ carries
+the remainder, common by race unless the nested models require otherwise. Code: \code{IGE/42.SchoolingAndJobGrowth.py},
+Section B.} The entry return to schooling may differ by race.\footnote{At 25--29 the return to a year of schooling in
+earnings is 0.124$^{***}$ (Black) against 0.045$^{***}$ (White), and the difference survives fixed effects for the son's
+early job (0.061$^{***}$, s.e.\ 0.015) in the PSID but not in the NLSY79 (0.008). $b_1(B) - b_1(W)$ is therefore
+optional (model D). Code: \code{IGE/45.WithinCellIdentification.py}.} At entry the son receives one offer from
+(\ref{eq:access}).
+
+The simulated population is drawn from the PSID sons with replacement: race, log parental income (13--19 mean), years of
+schooling and birth year, 5 simulated sons per data son. A one-year parental-income measure is simulated as
+$x_1 = x + \zeta$, with $\mathrm{Var}(\zeta)$ set so that the reliability ratio of $x_1$ equals the PSID's (White 0.585,
+Black 0.565), so that the one-year moments of the paper's three-data-set comparison can be computed in the same way.
+
+% =====================================================================================================
+\section{Timing within the year}\label{sec:timing}
+
+For each son and year, in this order:
+\begin{enumerate}
+  \item \textit{Displacement.} An employed son is displaced with probability $\delta(x, r, t)$ and loses his match.
+  \item \textit{Offers.} A son who was not displaced receives an outside offer with probability $\lambda_e(a)$; a son
+  out of work, including one just displaced, with probability $\lambda_u(t)$ (the displaced son uses the uniform draw
+  that his on-the-job offer would have used, so common random numbers are preserved). The offer's type is $G$ with probability
+  $p(x, e, r)$; its match is drawn.
+  \item \textit{Decision.} Accept or reject by the rules of Section~\ref{sec:bellman}.
+  \item \textit{Wage.} A son employed at the start of the year draws $\varepsilon_a$ and earns the wage of
+  (\ref{eq:wage}); a son not employed at the start of the year records a zero-hours year.
+  \item \textit{Human capital.} $h$ is updated by (\ref{eq:hc}) according to the year's employment status and job type.
+  \item \textit{Recording.} Employer identifier, tenure, job type, displacement and move flags are recorded for the
+  observation scheme of Section~\ref{sec:obs}.
+\end{enumerate}
+
+% =====================================================================================================
+\section{Solution and simulation}\label{sec:solution}
+
+By Proposition~1 (Section~\ref{sec:analytic}) the model is solved by backward induction from age 55 on the
+normalised values $v^E_a(m, j)$ and $v^U_a$ only: for each PSID son's type exactly (no interpolation over parental
+income or schooling), on a grid of 31 points for $m$, with 9 Gauss--Hermite nodes for the offered match, for 2 job types
+and 37 career years. The simulation interpolates $v^E$ at each son's match. Simulation uses common random numbers across parameter values, so
+the SMM criterion is smooth in the parameters.
+
+
+% =====================================================================================================
+\section{Analytical results: what can be solved without simulation}\label{sec:analytic}
+
+\paragraph{Proposition 1 (homogeneity).} For every type $\theta$ and age $a$, $V^E_a(h, m, j; \theta) = e^{\mu_r + h}\,
+v^E_a(m, j; \theta)$ and $V^U_a(h; \theta) = e^{\mu_r + h}\, v^U_a(\theta)$, where $v^E$ and $v^U$ solve the Bellman
+equations of Section~\ref{sec:bellman} with flow payoffs $e^{m + \sigma_\varepsilon^2/2}$ and $b$ and continuation values
+multiplied by $e^{\Delta_j(a) + \sigma_\eta^2/2}$ (employed) or $e^{-d_u + \sigma_\eta^2/2}$ (not employed), with
+$\Delta_j(a) = [\gamma_j + \gamma_1(r)(e - 12)]\,g(a)$. \emph{Proof:} by backward induction from the zero terminal value;
+flows are proportional to $e^{\mu_r + h}$, and $h' - h$ does not depend on $h$ and its shock is independent of the state,
+so $\E[e^{h'}] = e^{h}\, e^{\Delta + \sigma_\eta^2/2}$ factors out of every term, including the maxima. $\square$
+
+\emph{Corollary.} Every acceptance decision compares two values that share the factor $e^{\mu_r + h'}$, so decisions
+depend on $(m, j, a, \theta)$ and the offer only, not on $h$, $\eta$ or $\varepsilon$. The model is solved on the match
+grid alone (no human capital grid), per type, in about two seconds for all 4,765 PSID sons.
+
+\paragraph{Proposition 2 (stayers' wage growth).} For a son who stays with his employer between years $a$ and $a+1$,
+$\Delta \ln w = \Delta_j(a) + \eta_{a+1} + \Delta\varepsilon_{a+1}$. Because staying depends on $(m, j, a, \theta)$ and
+the offer draws only (Corollary), it is independent of $\eta_{a+1}$, so
+\begin{equation}\label{eq:stayers}
+\E[\Delta \ln w \mid \text{stay}, j, a, r, e, x] = \left[\gamma_j + \gamma_1(r)(e - 12) + \gamma_x(r)(x - \bar x)
+\right] e^{-\rho(a - 18)} .
+\end{equation}
+The accumulation parameters $(\gamma_O, \gamma_G, \gamma_1, \gamma_1(B) - \gamma_1(W), \rho)$ are therefore identified,
+and can be estimated, by nonlinear least squares on stayers' wage growth, without solving or simulating the model. On
+the PSID same-employer pairs this gives $\gamma_O = 0.123$ (0.018), $\gamma_G = 0.145$ (0.030), $\rho = 0.090$, $\gamma_1 =
+0.023$ (0.005) and $\gamma_1(B) - \gamma_1(W) = -0.008$ (0.007).\footnote{Homoskedastic standard errors, for orientation.
+Code: \code{model/build\_data.py} (\code{model/output/first\_steps.md}).} The racial difference in the pay-off of
+schooling is not precisely identified from stayers' growth alone, as in the reduced form; in the joint estimation it is
+identified mainly by the rise of the return to schooling with age, which also reflects moves into $G$ jobs.
+
+\paragraph{Proposition 3 (shock variances).} For annual stayers, $\mathrm{Var}(\Delta \ln w) = \mathrm{Var}(\Delta_j(a)) +
+\sigma_\eta^2 + 2\sigma_\varepsilon^2$ and $\mathrm{Cov}(\Delta \ln w_{a+1}, \Delta \ln w_a) = -\sigma_\varepsilon^2$
+\citep[the covariance structure of][]{altonji2013modeling}. The PSID gives $\sigma_\varepsilon^2 = 0.037$ and an upper bound
+$\sigma_\eta^2 \le 0.047$. The permanent variance implied by the rise of the cross-sectional variance of log wages with
+age is much smaller, so the two sets of moments must be reconciled jointly.
+
+\paragraph{Proposition 4 (displacement).} Displacement is an exogenous hazard: $(\delta_{0B}, \delta_{0W}, \delta_1)$ are
+identified by a logit of displacement on parental income and race on annual interview pairs (PSID: constant $-2.10$,
+parental income $-0.37$, Black $+0.50$), with $P(\text{displaced in an interval of } k \text{ years}) = 1 - \prod (1 -
+\delta_t)$ on biennial pairs.
+
+\paragraph{What needs the model.} The remaining parameters are not identified by a closed form, because the moments that
+carry them are equilibrium outcomes of offers and acceptance decisions. The job type observed at 25--34 is an offer
+($p(x, e, r)$) that was accepted and survived later offers and displacements; the gain at a move is the difference
+between a selected new match and a selected old one; move and re-employment rates combine the search frictions with
+acceptance; the starting wage reflects acceptance at entry and accumulation before 25; and the wage loss after
+displacement reflects the selection of re-employment. These are $\mu_r$, $b_0$, $b_x$, $b_1(r)$, $\sigma_0$, the access
+coefficients, $\lambda_e$, $\bar\lambda_u$, $\mu_G$, $\sigma_m$ and $d_u$. Following the PI's rule, all parameters,
+including those of Propositions 2--4, are estimated jointly in one SMM run per nested model; the closed forms are the
+starting values and a check that the SMM estimates are sensible.
+
+% #####################################################################################################
+\part{Estimation}
+
+% =====================================================================================================
+\section{Parameters}\label{sec:params}
+
+\begin{longtable}{L{2.8cm}L{5.4cm}L{2.2cm}L{4.6cm}}
+\toprule
+Parameter & Meaning & Status & Source or identifying moments \\
+\midrule
+\endhead
+$\beta$ & discount factor & calibrated & 0.95 \\
+$b$ & value of a year out of work, share of the potential wage & calibrated & 0.4 (UI replacement and home production) \\
+$\phi_\lambda$, $\phi_\delta$ & cyclical elasticities & calibrated & $-0.10$ and $0.10$ per point of national
+unemployment (job finding falls and job loss rises by about 10\% per point; to be replaced by CPS-flow estimates) \\
+\midrule
+$\mu_B$ & racial wage level & estimated & mean log wage at 25--29 by race given schooling; expected rank at parental p25 \\
+$b_0$, $b_x$, $b_1$, $\sigma_0$ & initial human capital & estimated & log wage at 25--29 on parental income and schooling; its variance \\
+$b_1(B) - b_1(W)$ & racial entry return to schooling & estimated (model D) & return to schooling at 25--29 by race \\
+$\alpha_0$--$\alpha_3$ & access to $G$ jobs & estimated (race term from model B) & share in $G$ at 25--34 by parental tercile, schooling and race \\
+$\ell_e$, $\lambda_a$, $\bar\lambda_u$ & search frictions and the age slope on the job & estimated & move rates by
+age; zero-hours years given the displacement rates \\
+$\sigma_m$ & match component & estimated & wage gain at moves and its parental-income slope \\
+$\mu_G$ & match premium of $G$ jobs & fixed at 0 & Decision~\ref{dec:fixed} \\
+$\delta_{0B}$, $\delta_{0W}$, $\delta_1$, $\delta_a$ & displacement & estimated & displacement rates by age, race and parental income \\
+$\gamma_O$, $\gamma_G$, $\rho$ & accumulation & estimated & same-employer wage growth by age and job type; growth of $G$ starters before 35 \\
+$\gamma_1$, $\gamma_1(B) - \gamma_1(W)$ & pay-off of schooling in accumulation & estimated (race term from model C) & rise of the return to schooling with age, within job type, by race \\
+$\gamma_x$, $\gamma_x(B) - \gamma_x(W)$ & pay-off of parental income in accumulation & estimated (race term = H4) & rise of the IGE with age given the return to schooling by age and the $G$ shares \\
+$d_u$ & depreciation out of work & fixed at 0 & Decision~\ref{dec:fixed} \\
+$\sigma_\eta$, $\sigma_\varepsilon$ & permanent and transitory shocks & estimated & variance of log earnings by age; autocovariance of wage growth \\
+\bottomrule
+\end{longtable}
+
+With all four race parameters there are 27 estimated parameters; there are 66 targets.
+
+% =====================================================================================================
+\section{Targets}\label{sec:targets}
+
+All moments are computed from the PSID sons (Black and White, as male heads, ages 25--55), with the same code applied
+to the simulated panel (\code{model/core.py}, function \code{moments}); 66 in all:
+\begin{enumerate}
+  \item \textit{Persistence by age} (12): the coefficient of the log wage on log parental income, by age band 25--29 to
+  50--55 and race, with single-age dummies.
+  \item \textit{The return to schooling by age} (12): the coefficient of the log wage on years of schooling, by band and
+  race.
+  \item \textit{Wage levels and dispersion} (8): the mean log wage at 25--29 by race; the variance of log wages net of
+  single-age means at 25--29, 35--39 and 45--49, by race.
+  \item \textit{Access} (9): the share of sons whose modal job at 25--34 is a $G$ job, by race and parental-income tercile,
+  and by schooling (12 or less, 13--15, 16 or more years).
+  \item \textit{Growth with the same employer} (10): mean annualised wage growth of stayers at 25--34 and 35--55 by job
+  type; at 25--34 by race; its slope in schooling at 25--34 by race; the variance of annual stayer growth and its lag-1
+  autocovariance.
+  \item \textit{Mobility and job loss} (13): the rates of moving without displacement and of displacement per interview
+  pair, at 25--34 and 35--55 by race; the slope of displacement in parental income; the wage growth at a move at 25--34 by
+  race and its slope in parental income; the wage growth across a displacement.
+  \item \textit{Non-employment} (2): the share of zero-hours years by race.
+\end{enumerate}
+Rank moments, the earnings IGE and the one-year parental measure are validation, not targets.
+
+\begin{table}[h]
+\centering
+\caption{Access moments (PSID sons; share whose job at 25--34 is a $G$ job)}\label{tab:accessmom}
+\begin{tabular}{lcc}
+\toprule
+ & Black & White \\
+\midrule
+All & 0.057 & 0.161 \\
+Parental tercile 1 / 3 (pooled) & \multicolumn{2}{c}{0.047 / 0.202} \\
+Race at equal parental income (White $-$ Black) & \multicolumn{2}{c}{0.042$^{***}$ (0.016)} \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+{\footnotesize Source: \code{IGE/35.EarlyIndustryLatePayoff.py}, Section D3. $^{***}$ $p<0.01$.}
+\end{table}
+
+\paragraph{Weighting and estimation.} The weighting matrix is diagonal, with the inverse of each moment's bootstrap
+variance (500 draws of 1968 families). All parameters are estimated jointly in one SMM run per model, with no hand tuning,
+by CMA-ES with per-parameter scales and 20 simulated sons per PSID son, on the Sheffield cluster (32 cores, 30 workers,
+population 30, 12,000 evaluations per model; code \code{model/hpc\_ige.sh}, \code{hpc\_ige\_chain.sh}). Each model
+is started from the best solution of the models nested in it (Section~\ref{sec:nested}). Standard errors are of the sandwich form $(1 + 1/R)(G'WG)^{-1}G'W\Omega WG(G'WG)^{-1}$, with $G$ a numerical
+Jacobian, $\Omega$ the covariance of the 500 bootstrap draws of the moments and $R = 20$. Before the first run the
+sensitivity matrix of the moments with respect to the parameters is computed at a calibrated starting point
+\citep{andrews2017measuring}, and any parameter whose column is collinear with another's is dropped.
+
+% =====================================================================================================
+\section{The simulated observation scheme}\label{sec:obs}
+
+The simulated panel is observed as the PSID observes sons: interviews annual to 1997 and biennial afterwards, by birth
+cohort; the wage of the calendar year before the interview, computed as earnings over hours with the PSID's measurement
+error in hours; same-employer pairs as two interviews one to two years apart with no move or displacement between them;
+the job type of the main job at the interview; the early job as the modal type at 25--34; displacement in an income year
+between two wage years; and parental income as the 13--19 mean and as one year. No attrition is simulated. The
+robustness version of the targets is the inverse-probability-weighted moment set (\code{IGE\_MOMENTS=ipw}): the 66
+moments on the sons with family income at 25--29 (the base of the paper's attrition analysis), each son-year weighted by
+the inverse predicted probability of being observed in its age band (a logit on parental income and income at 25--29,
+each interacted with race, sample, the parent's age and five-year cohorts; weights clipped at 20, equal to 1 at 25--29),
+with the simulation restricted to the same sons (\code{model/ipw\_build.py}, \code{moments\_set.py}). A second set,
+\code{IGE\_MOMENTS=g35}, adds the share whose modal job at 35--55 is a $G$ job by race and parental tercile (bottom and
+top) to the 66 targets; the sets compose (\code{g35,ipw}).
+
+% =====================================================================================================
+\section{Four hypotheses and the lattice}\label{sec:nested}
+
+Each hypothesis about why the racial gap in persistence opens with age is one race parameter:
+\begin{itemize}
+  \item[H1] access to good jobs, $\alpha_3$;
+  \item[H2] the pay-off of schooling in accumulation, $\gamma_1(B) - \gamma_1(W)$;
+  \item[H3] the entry return to schooling, $b_1(B) - b_1(W)$;
+  \item[H4] the pay-off of parental income in accumulation, $\gamma_x(B) - \gamma_x(W)$.
+\end{itemize}
+Every model has the racial wage level $\mu_B$ and race-specific displacement $\delta_{0r}$, and the race-neutral
+parameters of all four channels ($\alpha_0$--$\alpha_2$, $\gamma_1$, $b_1$, $\gamma_x$). The lattice estimates all eight
+combinations of H1--H3 with H4 in the model: A (none), B (H1), F (H2), G (H3), C (H1, H2), H (H1, H3), E (H2, H3),
+D (all three); H4 is tested by estimating A and E without it. A is started from the best of two given solutions; B, F
+and G from A; C from the better of B and F; H from the better of B and G; E from the better of F and G; D from the best
+of C, H, E and a given solution. A race parameter is kept if adding it lowers $Q$ by more than 3.84 at each of ten
+simulation seeds (7--16), alone and given the other race parameters; the sandwich Wald test of the parameter is
+reported with it. With diagonal weights the 3.84 rule is on the scale of a one-restriction test, not an exact
+$\chi^2$ test \citep{newey1987hypothesis}. A more general model must not fit worse than a model nested in it; this is
+checked at every seed (\code{model/lattice\_q.py}).
+
+% =====================================================================================================
+\section{Untargeted validation}\label{sec:validation}
+
+Computed at the selected model with the same code on the PSID and the simulated panel (\code{model/core.py},
+functions \code{validation} and \code{untargeted}; PSID standard errors from 300 cluster-bootstrap draws; model values
+over ten simulation seeds; \code{model/validation\_run.py}):
+\begin{itemize}
+  \item the mean log wage by race at 35--39 and 45--49, and the racial wage gap at those ages (only 25--29 is targeted);
+  \item rank--rank slopes of the son's hourly-wage percentile on the parental-income percentile, by race at 25--29,
+  30--34 and 45--49, and their White $-$ Black gap;
+  \item the share whose modal job at 35--55 is a $G$ job, by race and parental tercile (targeted only at 25--34);
+  \item the log-wage IGE below the median of parental income, by race, at 25--29 and 45--49;
+  \item the parental-income gradient of log wages at 25--34 and 35--55 with and without a dummy for a $G$ job;
+  \item the same-employer growth gradient in parental income at 25--34 by race, raw and net of schooling;
+  \item the entry wage scar per point of national unemployment (from the recession-at-entry counterfactual);
+  \item the routes into and out of $G$ jobs between interviews (stayers, movers, displaced sons), the displacement rate by
+  job type, and the split of wage growth between 25--29 and 35--39 into growth within sons and composition
+  (\code{core.routes}, \code{core.levels}, \code{model/panel\_diag.py});
+  \item the change of a son's own mean log wage from 25--29 to 35--39 and to 45--49 on parental income, raw and net of
+  schooling, with the 13--19 mean and with a one-year measure of parental income (\code{core.longdiff},
+  \code{IGE/67.LongDifferenceH4.py}, \code{IGE/68.LongDifferenceMeasurement.py}).
+\end{itemize}
+Not computed, because the model does not contain the object: the NLSY79 and NLSY97 profiles (they need a types file and
+the reliability correction of the NLSY parental measures), the earnings IGE (no hours margin) and the opening among
+private-sector starters (no public sector).
+
+% =====================================================================================================
+\section{Counterfactuals}\label{sec:cf}
+
+Each counterfactual is reported as the White $-$ Black gap in the log-wage IGE at 30--34 and at 45--49 and the mean log
+wage at 25--34 by race, with $\mu_r$ held fixed and delta-method standard errors (\code{model/postestimation.py}),
+on the selected model:
+\begin{enumerate}
+  \item \textit{Equal pay-off of parental income in accumulation}: $\gamma_x(B) = \gamma_x(W)$, if H4 is selected. With
+  $x$ centred at the pooled mean this raises the Black IGE and lowers the wage of Black sons below the mean; it is a
+  decomposition of the gap, not a policy.
+  \item \textit{Equal pay-off of schooling in accumulation}: $\gamma_1(B) = \gamma_1(W)$, if H2 is selected.
+  \item \textit{Equalising schooling}: Black sons' schooling drawn from White sons' distribution in the same
+  parental-income decile.
+  \item \textit{Equal access}: $\alpha_3 = 0$, if H1 is selected (the bound on what anti-discrimination enforcement in
+  hiring for good jobs could achieve), and $\alpha_1 = 0$ (access equal across parental income).
+  \item \textit{Equal displacement risk}: $\delta_{0B} = \delta_{0W}$.
+  \item \textit{A recession at entry}: national unemployment 3 points higher in each son's first three years in the
+  labor market; also the untargeted check of the entry wage scar.
+\end{enumerate}
+
+% =====================================================================================================
+\section{Design decisions for the PI}\label{sec:decisions}
+
+Each item is the recommended choice, with the alternative and what it would cost.
+\begin{enumerate}[label=D\arabic*.]
+  \item\label{dec:period} \textit{An annual period.} Alternative: monthly, as in Paper A. The paper's moments are annual
+  or biennial; a monthly model would add states and no identifying moments.
+  \item\label{dec:prefs} \textit{Risk neutrality, no savings.} Alternative: CRRA utility with a savings choice. The
+  moments are wages, moves and displacements; risk aversion would matter for acceptance decisions only through income
+  risk, which no target disciplines.
+  \item\label{dec:school} \textit{Schooling taken from the data.} Alternative: a schooling choice with a cost in parental
+  income and race. It would make ``equalising schooling'' a priced policy at the cost of two or three parameters and a
+  forward-looking schooling problem.
+  \item\label{dec:agg} \textit{Stationary expectations about the aggregate labor market.} Alternative: perfect foresight of
+  each cohort's unemployment path. The paper's entry results are validation, not targets.
+  \item \textit{Sons only.} Daughters' divergence runs through their husbands' earnings and needs a marriage block;
+  they are out of the model, as they are out of the mechanism sections of the paper.
+  \item\label{dec:types} \textit{Two job types.} Alternative: the four sets of the data (well paid and fast growing, well
+  paid only, fast growing only, neither), which account for about half of the early-cell share of the divergence; two
+  types are the parsimonious start, and a third type (well paid only) is added if the fit to the early-job and
+  same-employer moments requires it.
+  \item\label{dec:age} \textit{Age slopes in displacement and in the on-the-job search friction} ($\delta_a$,
+  $\lambda_a$; step 2). Alternative: tenure slopes, which would need tenure as a state and break the match-grid-only
+  solution of Proposition~1; age is already a state.
+  \item\label{dec:rehire} \textit{Re-employment in the year of a displacement} (step 3). Alternative: a full year out of
+  work after every displacement, which forces the share of zero-hours years to be at least the annual displacement rate.
+  \item\label{dec:xacc} \textit{Parental income in accumulation} ($\gamma_x(r)$; step 4). Alternative: accumulation on
+  schooling only, which leaves the race-neutral learning-ability channel \citep{huggett2011sources} untested next to the
+  job side.
+  \item\label{dec:fixed} \textit{No match premium of $G$ jobs and no depreciation out of work} ($\mu_G = d_u = 0$).
+  $\mu_G$ is not separated from the access and accumulation parameters by the moments; $d_u$, estimated freely, takes a
+  negative value (human capital rising out of work), which the model has no mechanism for; both are fixed at zero.
+  \item\label{dec:ufric} \textit{A race-specific search friction out of work} (step 5, estimated and kept: part of the
+  selected model, judged against the lattice's model E on the same draws by \code{judge\_step.py}):
+  $\lambda_u(t) = \Lambda(\ell_u + \Delta\ell_u \1[r = B])\exp\{\phi_\lambda(u_t - \bar u)\}$, one parameter
+  (\code{IGE\_STEPS=ufric}). Motivation: with the displacement rates fitted, a common job-finding rate cannot produce
+  the racial ratio of zero-hours years in the data together with the ratio of displacement. With $\Delta\ell_u = 0$ the
+  model is unchanged to machine precision, so the step is compared with the selected model on the same draws.
+  \item\label{dec:gloss} \textit{A job-loss rate specific to good jobs} (step 6, coded, not yet estimated): the
+  displacement logit of (\ref{eq:delta}) gains $\delta_G \1[j = G]$, one parameter (\code{IGE\_STEPS=gloss}), estimated
+  on the \code{g35} moment set. Motivation: in the PSID $G$ jobs are lost at about half the rate of $O$ jobs at equal
+  age, and the share in $G$ jobs rises with age for White sons, while a common displacement rate makes the model lose
+  $G$ jobs after 35.\footnote{Displacement per interview pair at 35--55 by the job type at the earlier interview: White
+  sons 0.041 from $G$ and 0.083 from $O$ jobs, Black sons 0.045 and 0.113. Code: \code{model/core.py}
+  (\code{routes}), \code{model/panel\_diag.py}.} Alternative: access to $G$ jobs that rises with age
+  (\code{IGE\_STEPS=aage}, one parameter), which a profile at the selected model's estimates found to barely move the
+  share after 35. With $\delta_G = 0$ the model is unchanged.
+  \item \textit{Parental income in the starting position} ($b_x$, common by race). Alternative: no $b_x$, leaving the
+  early parental gradient to schooling and access alone; the data say schooling leaves 0.174 (White) and 0.137 (Black)
+  of the gradient at 25--29.
+\end{enumerate}
+
+\bibliographystyle{chicago}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,59 @@
+\begin{table}[!htbp]
+\centering
+\caption{Schooling and ability: growth within cells and returns by age}
+\label{tab:afqtgrowth}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}(1)\end{tabular} & \begin{tabular}[b]{@{}c@{}}(2)\end{tabular} & \begin{tabular}[b]{@{}c@{}}(3)\end{tabular} \\
+ & (1) & (2) & (3) \\
+\midrule
+\multicolumn{4}{l}{\textit{PSID: same-employer wage growth at 25--34 on years of schooling}} \\
+White & $0.010^{***}$ & $0.007^{***}$ & $0.009^{***}$ \\
+ & (0.002) & (0.002) & (0.002) \\
+Black & $0.003$ & $0.003$ & $0.001$ \\
+ & (0.003) & (0.004) & (0.004) \\
+White $-$ Black & $0.007^{**}$ & $0.004$ & $0.008$ \\
+ & (0.003) & (0.005) & (0.005) \\
+\addlinespace
+\multicolumn{4}{l}{\textit{NLSY79: same-employer wage growth at 25--34 on years of schooling}} \\
+White & $0.004^{***}$ & $0.004^{**}$ & $0.002$ \\
+ & (0.001) & (0.001) & (0.001) \\
+Black & $0.003$ & $-0.001$ & $-0.002$ \\
+ & (0.002) & (0.002) & (0.003) \\
+White $-$ Black & $0.002$ & $0.005^{*}$ & $0.004$ \\
+ & (0.002) & (0.003) & (0.003) \\
+\addlinespace
+\multicolumn{4}{l}{\textit{NLSY79: log hourly rate of pay on AFQT (1 s.d.), by age}} \\
+White: return to AFQT (1 s.d.) at 25--29 & $0.140^{***}$ &  & $0.103^{***}$ \\
+ & (0.010) &  & (0.014) \\
+White: rise of the return to AFQT (1 s.d.) & $0.110^{***}$ &  & $0.021^{*}$ \\
+ & (0.010) &  & (0.013) \\
+Black: return to AFQT (1 s.d.) at 25--29 & $0.188^{***}$ &  & $0.121^{***}$ \\
+ & (0.017) &  & (0.020) \\
+Black: rise of the return to AFQT (1 s.d.) & $0.098^{***}$ &  & $0.053^{**}$ \\
+ & (0.019) &  & (0.022) \\
+White $-$ Black: return to AFQT (1 s.d.) at 25--29 & $-0.048^{**}$ &  & $-0.018$ \\
+ & (0.020) &  & (0.024) \\
+White $-$ Black: rise of the return to AFQT (1 s.d.) & $0.012$ &  & $-0.031$ \\
+ & (0.022) &  & (0.025) \\
+\addlinespace
+\multicolumn{4}{l}{\textit{NLSY79: log hourly rate of pay on years of schooling, by age}} \\
+White: return to years of schooling at 25--29 &  & $0.048^{***}$ & $0.022^{***}$ \\
+ &  & (0.004) & (0.005) \\
+White: rise of the return to years of schooling &  & $0.057^{***}$ & $0.052^{***}$ \\
+ &  & (0.004) & (0.005) \\
+Black: return to years of schooling at 25--29 &  & $0.069^{***}$ & $0.043^{***}$ \\
+ &  & (0.006) & (0.007) \\
+Black: rise of the return to years of schooling &  & $0.042^{***}$ & $0.030^{***}$ \\
+ &  & (0.006) & (0.007) \\
+White $-$ Black: return to years of schooling at 25--29 &  & $-0.022^{***}$ & $-0.022^{**}$ \\
+ &  & (0.007) & (0.008) \\
+White $-$ Black: rise of the return to years of schooling &  & $0.015^{*}$ & $0.021^{**}$ \\
+ &  & (0.008) & (0.009) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Top panels: same-employer pairs at 25--34 (Table~\ref{tab:growthladder}); columns: (1) no cell controls, (2) fixed effects for the occupation group $\times$ industry group at the first interview of the pair, (3) for the early cell. Bottom panels: NLSY79 men 25--55, log hourly rate of pay on the AFQT (standardised within birth year) alone (1), schooling alone (2) or both (3), by age band; rise = mean over bands from 35 minus mean below 35. Employer learning predicts that with both included the schooling coefficient falls and the AFQT coefficient rises with experience. Controls: quartic in age, year (round) fixed effects. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/45.WithinCellIdentification.py}.\end{minipage}
+\end{table}

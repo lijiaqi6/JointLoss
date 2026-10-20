@@ -1,0 +1,53 @@
+\begin{table}[!htbp]
+\centering
+\caption{Fit of the selected model (E): targeted moments}
+\label{tab:modelfit}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Moment & PSID & (s.e.) & Model & $t$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Persistence by age (log-wage IGE)}} \\
+\quad IGE, 25--29, White & $0.205$ & (0.017) & $0.223$ & $1.1$ \\
+\quad IGE, 30--34, White & $0.335$ & (0.023) & $0.322$ & $-0.6$ \\
+\quad IGE, 35--39, White & $0.381$ & (0.030) & $0.386$ & $0.2$ \\
+\quad IGE, 40--44, White & $0.439$ & (0.036) & $0.428$ & $-0.3$ \\
+\quad IGE, 45--49, White & $0.470$ & (0.049) & $0.457$ & $-0.3$ \\
+\quad IGE, 50--55, White & $0.450$ & (0.054) & $0.483$ & $0.6$ \\
+\quad IGE, 25--29, Black & $0.148$ & (0.021) & $0.140$ & $-0.4$ \\
+\quad IGE, 30--34, Black & $0.182$ & (0.024) & $0.154$ & $-1.2$ \\
+\quad IGE, 35--39, Black & $0.182$ & (0.030) & $0.172$ & $-0.4$ \\
+\quad IGE, 40--44, Black & $0.146$ & (0.034) & $0.169$ & $0.7$ \\
+\quad IGE, 45--49, Black & $0.140$ & (0.044) & $0.176$ & $0.8$ \\
+\quad IGE, 50--55, Black & $0.151$ & (0.059) & $0.173$ & $0.4$ \\
+\multicolumn{5}{l}{\textit{Return to schooling}} \\
+\quad return to schooling, 25--29, White & $0.047$ & (0.005) & $0.046$ & $-0.2$ \\
+\quad return to schooling, 45--49, White & $0.125$ & (0.010) & $0.138$ & $1.2$ \\
+\quad return to schooling, 25--29, Black & $0.067$ & (0.007) & $0.073$ & $1.0$ \\
+\quad return to schooling, 45--49, Black & $0.119$ & (0.012) & $0.110$ & $-0.7$ \\
+\multicolumn{5}{l}{\textit{Careers}} \\
+\quad share in $G$ jobs at 25--34, bottom tercile, Black & $0.031$ & (0.005) & $0.032$ & $0.2$ \\
+\quad share in $G$ jobs at 25--34, top tercile, Black & $0.117$ & (0.022) & $0.100$ & $-0.8$ \\
+\quad share in $G$ jobs at 25--34, bottom tercile, White & $0.066$ & (0.013) & $0.047$ & $-1.5$ \\
+\quad share in $G$ jobs at 25--34, top tercile, White & $0.180$ & (0.011) & $0.181$ & $0.1$ \\
+\quad same-employer growth, 25--34, $O$ jobs & $0.055$ & (0.003) & $0.054$ & $-0.4$ \\
+\quad same-employer growth, 25--34, $G$ jobs & $0.075$ & (0.007) & $0.078$ & $0.4$ \\
+\quad displacement rate, 25--34, Black & $0.173$ & (0.009) & $0.170$ & $-0.4$ \\
+\quad displacement rate, 25--34, White & $0.102$ & (0.005) & $0.107$ & $0.9$ \\
+\quad displacement rate, 35--55, Black & $0.111$ & (0.006) & $0.115$ & $0.6$ \\
+\quad displacement rate, 35--55, White & $0.076$ & (0.004) & $0.074$ & $-0.6$ \\
+\quad move rate, 25--34, White & $0.131$ & (0.004) & $0.132$ & $0.3$ \\
+\quad move rate, 35--55, White & $0.091$ & (0.004) & $0.087$ & $-1.1$ \\
+\quad wage growth at a move, 25--34, Black & $-0.006$ & (0.019) & $0.060$ & $3.5$ \\
+\quad wage growth at a move, 25--34, White & $0.052$ & (0.010) & $0.071$ & $2.0$ \\
+\quad zero-hours years, Black & $0.109$ & (0.006) & $0.109$ & $-0.1$ \\
+\quad zero-hours years, White & $0.039$ & (0.003) & $0.039$ & $0.2$ \\
+\quad variance of log wages, 45--49, Black & $0.345$ & (0.021) & $0.417$ & $3.5$ \\
+\quad variance of log wages, 45--49, White & $0.503$ & (0.023) & $0.470$ & $-1.5$ \\
+\quad variance of stayers' growth & $0.121$ & (0.005) & $0.103$ & $-3.3$ \\
+\quad autocovariance of stayers' growth & $-0.037$ & (0.003) & $-0.048$ & $-3.6$ \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} PSID sons (Black and White male heads, 25--55), cluster-bootstrap standard errors; model moments from the simulated panel with the PSID's observation scheme at the estimate (20 simulated sons per PSID son). $t$ = (model $-$ PSID) / s.e. Rates per interview pair, growth annualised. All 66 moments: \texttt{model/output/final\_x4/estimates\_E.json}.\end{minipage}
+\end{table}

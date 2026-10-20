@@ -1,8 +1,8 @@
 r"""PSID children born 1968-2020: mother's work at the birth, father's job loss, parents' separation, family income
 and welfare in early childhood (2026-10-17).
 
-Reads the raw PSID files in Dropbox/PSID (read only) and IGE/data/psid_person_year.pkl (from 1.PSID.py); writes
-IGE/data/psid_child_exposure.pkl, one row per child.
+Reads the raw PSID files in Dropbox/PSID (read only) and data/psid_person_year.pkl (from 1.PSID.py); writes
+data/psid_child_exposure.pkl, one row per child.
 
 Children: (a) every childbirth record of the Childbirth and Adoption History 1985-2023 (Others/cah85_23; CAH2 = 1)
 with a PSID person id for the child (CAH10/CAH11), birth year 1968-2020 (CAH15) and an SRC or SEO 1968 ID; mother and

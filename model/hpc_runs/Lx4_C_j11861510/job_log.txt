@@ -1,0 +1,25 @@
+job 11861510 mode full code snapshot 7159bb7ab4a882bddd8f0d7d766a69033c771099 run Lx4_C_j11861510 on node045.stanage.hpc.shef.ac.uk with 32 cores
+settings: IGE_FIX=muG,du IGE_RUN=Lx4_C IGE_MAXFEV=12000,12000,12000,12000,12000,12000,12000,12000 IGE_STEPS=age,rehire,xacc IGE_POLISH=0 IGE_MODELS=C IGE_START=/mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_B_j11861507/estimates.json:B,/mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_F_j11861508/estimates.json:F IGE_R=20 
+/users/cm1jil/ige/.venv/lib/python3.12/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+python 3.12.13 {'numpy': '2.5.3', 'pandas': '3.0.5', 'scipy': '1.18.1', 'cma': '4.5.0'} PASS
+Q at the starting values 22856.15 (local 22856.15): PASS
+/users/cm1jil/ige/.venv/lib/python3.12/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+# Post-estimation, model C
+
+Q at the estimate 133.8; at other simulation seeds 134.1, 134.0.
+
+| Experiment | gap 30-34 (level or change) | p | gap 45-49 | p | mean log wage 25-34 B | W |
+|---|---|---|---|---|---|---|
+| Baseline | 0.168*** (0.031) | 0.000 | 0.266*** (0.044) | 0.000 | 2.403 | 2.716 |
+| Equalising schooling | -0.009*** (0.002) | 0.000 | -0.022*** (0.003) | 0.000 | 0.008 | 0.000 |
+| Equal access by race (a3 = 0) | -0.001 (0.001) | 0.183 | -0.002 (0.002) | 0.173 | 0.002 | 0.000 |
+| Equal access by parental income (a1 = 0) | -0.001 (0.002) | 0.515 | -0.004 (0.005) | 0.469 | 0.000 | -0.000 |
+| Equal pay-off of schooling (dg1 = 0) | -0.004 (0.006) | 0.465 | -0.006 (0.008) | 0.465 | 0.004 | 0.000 |
+| Equal displacement risk (d0B = d0W) | 0.005*** (0.002) | 0.001 | 0.005 (0.003) | 0.114 | 0.035 | 0.000 |
+| Depreciation out of work halved | 0.000 (0.000) | nan | 0.000 (0.000) | nan | 0.000 | 0.000 |
+| Recession at entry (+3 points, 3 years) | -0.001 (0.001) | 0.531 | -0.001 (0.001) | 0.282 | -0.021 | -0.013 |
+
+Entry wage scar per point (recession / 3): Black -0.0070, White -0.0045; PSID (paper Section 7) -0.013** per point of state unemployment at entry.
+status 0 (0 ok, 1 checks failed, 2 estimation failed, 3 post-estimation failed)

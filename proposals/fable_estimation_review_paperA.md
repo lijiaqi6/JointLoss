@@ -1,9 +1,9 @@
 # Paper A: where the structural model and its SMM estimation stand, and what to do before spending HPC time
 
-Independent review, 2026-10-18 evening. Read only: `IGE/paperA_joint_loss/sec7_model.tex`, `model_document.tex`
-(D1-D18), `IGE/proposals/paperA_identification_plan.md`, the three earlier notes, every file of `IGE/paperA_model/`
+Independent review, 2026-10-18 evening. Read only: `paperA_joint_loss/sec7_model.tex`, `model_document.tex`
+(D1-D18), `proposals/paperA_identification_plan.md`, the three earlier notes, every file of `paperA_model/`
 (`params.py`, `analytic_start.py`, `model.py`, `solve.py`, `simulate.py`, `panels.py`, `moments.py`, `estimate.py`,
-`hpc_job_a.py`, `tests/`), `IGE/output/paperA_targets.csv`, and the results folders named in the brief. Nothing was run
+`hpc_job_a.py`, `tests/`), `output/paperA_targets.csv`, and the results folders named in the brief. Nothing was run
 except one-line reads of CSV/JSON files. Terminology: search friction; human capital level / accumulation /
 depreciation. D1-D18 are taken as settled; I raise two of them (taste-shock scale, borrowing) only because the start
 evaluation shows validity problems that no estimated parameter can absorb.
@@ -51,7 +51,7 @@ start.
 Three design features multiply the budget CMA-ES needs.
 
 **Weighting.** `moments.py:74-78` uses W = diag(1/se^2). Shares of the total weight by block (from
-`IGE/output/paperA_targets.csv`):
+`output/paperA_targets.csv`):
 
 | block | moments | share of total weight |
 |---|---:|---:|

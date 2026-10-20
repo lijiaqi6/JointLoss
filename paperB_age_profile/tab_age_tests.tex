@@ -1,0 +1,63 @@
+\begin{table}[!htbp]
+\centering
+\caption{Does the log IGE of sons, and the racial gap in it, change with age? (PSID)}
+\label{tab:agetests}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcc}
+\toprule
+Panel / statistic & \begin{tabular}[b]{@{}c@{}}ln own earnings\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln family income\end{tabular} \\
+ & (1) & (2) \\
+\midrule
+\multicolumn{3}{l}{\textit{A. Pooled (weighted), all sons}} \\
+Equal in all bands: Wald $\chi^2$ [p-value] & $\chi^2(5)=45.27^{***}$ & $\chi^2(5)=62.97^{***}$ \\
+ & [$<$0.001] & [$<$0.001] \\
+Linear trend per 10 years of age & $0.078^{***}$ & $0.072^{***}$ \\
+ & (0.022) & (0.020) \\
+Mean over bands below 35 & $0.340^{***}$ & $0.376^{***}$ \\
+ & (0.022) & (0.022) \\
+Mean over bands 35 and above & $0.482^{***}$ & $0.511^{***}$ \\
+ & (0.037) & (0.036) \\
+Opening: mean 35 and above minus mean below 35 & $0.142^{***}$ & $0.135^{***}$ \\
+ & (0.032) & (0.030) \\
+\addlinespace
+\multicolumn{3}{l}{\textit{B. Black sons}} \\
+Equal in all bands: Wald $\chi^2$ [p-value] & $\chi^2(5)=3.75$ & $\chi^2(5)=5.03$ \\
+ & [0.586] & [0.412] \\
+Linear trend per 10 years of age & $-0.013$ & $-0.008$ \\
+ & (0.029) & (0.033) \\
+Mean over bands below 35 & $0.272^{***}$ & $0.274^{***}$ \\
+ & (0.032) & (0.033) \\
+Mean over bands 35 and above & $0.234^{***}$ & $0.266^{***}$ \\
+ & (0.046) & (0.055) \\
+Opening: mean 35 and above minus mean below 35 & $-0.038$ & $-0.008$ \\
+ & (0.041) & (0.047) \\
+\addlinespace
+\multicolumn{3}{l}{\textit{C. White sons}} \\
+Equal in all bands: Wald $\chi^2$ [p-value] & $\chi^2(5)=50.23^{***}$ & $\chi^2(5)=61.80^{***}$ \\
+ & [$<$0.001] & [$<$0.001] \\
+Linear trend per 10 years of age & $0.102^{***}$ & $0.074^{***}$ \\
+ & (0.026) & (0.026) \\
+Mean over bands below 35 & $0.295^{***}$ & $0.335^{***}$ \\
+ & (0.027) & (0.026) \\
+Mean over bands 35 and above & $0.480^{***}$ & $0.476^{***}$ \\
+ & (0.043) & (0.045) \\
+Opening: mean 35 and above minus mean below 35 & $0.185^{***}$ & $0.141^{***}$ \\
+ & (0.036) & (0.037) \\
+\addlinespace
+\multicolumn{3}{l}{\textit{D. White $-$ Black}} \\
+Equal in all bands: Wald $\chi^2$ [p-value] & $\chi^2(5)=26.79^{***}$ & $\chi^2(5)=23.05^{***}$ \\
+ & [$<$0.001] & [$<$0.001] \\
+Linear trend per 10 years of age & $0.115^{***}$ & $0.082^{**}$ \\
+ & (0.038) & (0.042) \\
+Mean over bands below 35 & $0.023$ & $0.060$ \\
+ & (0.041) & (0.042) \\
+Mean over bands 35 and above & $0.246^{***}$ & $0.210^{***}$ \\
+ & (0.063) & (0.071) \\
+Opening: mean 35 and above minus mean below 35 & $0.223^{***}$ & $0.150^{**}$ \\
+ & (0.055) & (0.060) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Tests on the band-specific log IGEs of Table~\ref{tab:ige_sons} (child-year design; bands 25--29 to 50--55, the 31--37 window excluded), estimated jointly across bands in one stacked, fully interacted regression with standard errors clustered by 1968 family. Wald test of equality across bands (p-value in brackets); linear trend in the band midpoint per 10 years; mean of the band coefficients from 35 minus their mean below 35 (the opening). Bands 25--55 here; the robustness checks of Table~\ref{tab:gaprobust} use bands 25--49 (opening 0.232$^{***}$ for earnings, 0.157$^{***}$ for family income). Race-specific weights and balanced panels: Table~\ref{tab:gaprobust} and Appendix~\ref{app:checks}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/26.IGEByAge.py} (\texttt{output/ige\_by\_age.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

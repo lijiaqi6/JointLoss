@@ -25,8 +25,8 @@ copied here.
 
 Nothing machine-specific is hard-coded in the model. Two environment variables point at what is not in git:
 
-- `JOINTLOSS_DATA`: the person-level caches the data scripts read and write (default `./data`, git-ignored). On the
-  PC they are in `G:/My Drive/Selection vs risk/IGE/data`; on the Mac the same folder through Google Drive.
+- `IGE_DATA`: the person-level caches the data scripts read and write (default `./data`, git-ignored). On the
+  PC they are in `G:/My Drive/JointLoss/data`; on the Mac the same folder through Google Drive.
 - `DROPBOX`: raw data and replication packages, read only (default `~/Dropbox`).
 - `STATA_EXE`: only for the Stata-based BPS harness (being ported to Python).
 

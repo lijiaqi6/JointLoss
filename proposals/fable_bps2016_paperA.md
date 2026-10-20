@@ -6,7 +6,7 @@ Read, nothing edited or run outside this file: the BPS paper (AER 106(2), 387-43
 `psid_sample.do`, `prepare_bootstrap.do`, `residual_measures.do`, `tax_rate_estimation_snap.do`,
 `pi_s_estimation.do`, `variance_estimation.do`, `frisch_estimation.do`, `gmm_ado/gmm_age_fv4_pi5_ns_nltax_b0.ado`,
 `paramfiles/T4C1.do`, `bootstrap.do`, `tables_7_8_9.do`, `insurance_extensive_margin.do`); Paper A
-(`IGE/paperA_joint_loss/main.tex`, `sec1`-`sec8`, `appB_other.tex`, `appC_robust.tex`); my two earlier memos
+(`paperA_joint_loss/main.tex`, `sec1`-`sec8`, `appB_other.tex`, `appC_robust.tex`); my two earlier memos
 (`fable_review_paperA.md`, `fable_model_choice_paperA.md`); the local data holdings (`Dropbox/PSID/Family/fam1999er`
 to `fam2023er`, `wlth1999`-`wlth2007`, `Individual/ind2023er`; StataMP-64 installed under `C:/Program Files/Stata*`;
 `IGE/19.FatherDisplacement.py`, `IGE/25.JointJobLoss.py`, `IGE/38.PSIDJointLossChecks.py`). Line numbers below are
@@ -203,7 +203,7 @@ All data are on disk: `Dropbox/PSID/Family/fam1999er` to `fam2009er` (and to `fa
 files named `f99`, `f01`, ..., `f09`, `faminc99` and `ind6809`; the local folders hold the PSID text files with their
 setup do-files, which produce the .dta in minutes. StataMP-64 is installed, and the GMM step needs only Stata 11+
 and BPS's ado files (`ivreg2` only for Table 8). The replication package is the AEA's public one; the PSID public
-files are the licence the repo already uses. Write outputs to a repo folder (`IGE/bps_reconciliation/` with the
+files are the licence the repo already uses. Write outputs to a repo folder (`bps_reconciliation/` with the
 do-files copied and edited, logs and a results markdown), nothing to Dropbox.
 
 ### 4.1 Step 0: replicate BPS as shipped (1999-2009)

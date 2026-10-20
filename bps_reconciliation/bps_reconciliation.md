@@ -2,7 +2,7 @@
 
 Blundell, Pistaferri and Saporta-Eksten (2016, AER, "BPS"), PSID waves 1999-2009 (income years 1998-2008), run with
 BPS's own code (copies in `code/`, every edit listed in `README.md`) on BPS's own constructed PSID panel. Protocol:
-`IGE/proposals/fable_bps2016_paperA.md`, Steps 0-2. Every number here is in `bps_reconciliation.csv`.
+`proposals/fable_bps2016_paperA.md`, Steps 0-2. Every number here is in `bps_reconciliation.csv`.
 Stars: \*\*\* p<0.01, \*\* p<0.05, \* p<0.10; p-values from the normal. Standard errors: GMM clustered by household
 for the wage process (as in BPS Table 3); block bootstrap over households for preferences, elasticities, the
 insurance chain and beta (50 replications; BPS 200; s.e. = IQR/1.349 as in BPS's `bootstrap.do`); a dagger (†)

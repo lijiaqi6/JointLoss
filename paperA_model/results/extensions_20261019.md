@@ -1,9 +1,9 @@
 # Pre-built extensions, 2026-10-19: new-job exit hazard and separation after her displacement
 
 Both are behind `estimate.py` flags that default to off (`EXT_DEFAULTS`), ready to be tested one at a time on the first
-HPC estimate. Evidence: `IGE/proposals/wife_exit_evidence.md` (IGE/63) and `IGE/proposals/separation_ui_evidence.md`,
-`IGE/output/her_loss_robustness.md` (IGE/64, 65). Targets: `IGE/66.PaperATargetsExt.py` ->
-`IGE/output/paperA_targets_ext.csv` (+ `paperA_targets_ext_vcov_sipp.csv`), merged only when a flag is on or
+HPC estimate. Evidence: `proposals/wife_exit_evidence.md` (IGE/63) and `proposals/separation_ui_evidence.md`,
+`output/her_loss_robustness.md` (IGE/64, 65). Targets: `IGE/66.PaperATargetsExt.py` ->
+`output/paperA_targets_ext.csv` (+ `paperA_targets_ext_vcov_sipp.csv`), merged only when a flag is on or
 `--ext-targets` names the extension.
 
 ## Design
@@ -33,7 +33,7 @@ used only when the flag is on; no new state, no cost (solve 153 s).
 `PARAMS`, `N_PARAMS` = 33, the indices of earlier runs' vectors (run.json idx, jacobian.npz) and the default free set
 (30 at the default size) are unchanged; `pad_vec` completes older vectors with the nested values 0.
 
-## Targets (`IGE/output/paperA_targets_ext.csv`)
+## Targets (`output/paperA_targets_ext.csv`)
 
 | id | ext | data | s.e. | role | source |
 |---|---|---:|---:|---|---|

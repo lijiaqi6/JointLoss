@@ -1,6 +1,6 @@
 # The separated wife's state in the PSID: child support, remarriage, work, program receipt
 
-Built by `IGE/76.SeparatedMothers.py` (2026-10-20; WP3 of `IGE/proposals/fable_10h_plan_paperA.md`); definitions in its docstring. Mothers whose marriage ended (marital history: separation, else divorce year s) in 1984-2020, observed as that husband's wife at an interview in s-3..s+1 with a child 0-17 in the family unit, aged 25-59 at s, Black / White (head's race). Event time k = income year - s (income years <= 2021; all observed years, no balanced panel). Amounts in 2000 dollars. Unweighted SRC + SEO. Means with s.e. in parentheses; differences with stars and p-values; s.e. clustered by 1968 family; *** p<0.01, ** p<0.05, * p<0.1.
+Built by `IGE/76.SeparatedMothers.py` (2026-10-20; WP3 of `proposals/fable_10h_plan_paperA.md`); definitions in its docstring. Mothers whose marriage ended (marital history: separation, else divorce year s) in 1984-2020, observed as that husband's wife at an interview in s-3..s+1 with a child 0-17 in the family unit, aged 25-59 at s, Black / White (head's race). Event time k = income year - s (income years <= 2021; all observed years, no balanced panel). Amounts in 2000 dollars. Unweighted SRC + SEO. Means with s.e. in parentheses; differences with stars and p-values; s.e. clustered by 1968 family; *** p<0.01, ** p<0.05, * p<0.1.
 
 ## 1. Sample
 

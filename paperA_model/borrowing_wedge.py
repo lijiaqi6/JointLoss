@@ -8,7 +8,7 @@ minus the model's real saving rate (3% a year, params.FIXED_DEFAULTS r_m). Publi
 Liquid wealth in the targets nets unsecured debt (credit cards, student, medical and other loans) against liquid
 assets (ReducedForm/62.PoorMarriedCouples.py: low liquid wealth is mostly debt, 82% of low person-years with liquid
 wealth below zero); the credit-card rate is the marginal rate on that debt.
-Run: .venv/Scripts/python.exe -I IGE/paperA_model/borrowing_wedge.py [<folder with the three FRED csv files>]
+Run: .venv/Scripts/python.exe -I paperA_model/borrowing_wedge.py [<folder with the three FRED csv files>]
 (without a folder the csv files are downloaded from fred.stlouisfed.org/graph/fredgraph.csv?id=<series> into a new
 temporary folder). Writes inputs/borrowing_wedge.json.
 """

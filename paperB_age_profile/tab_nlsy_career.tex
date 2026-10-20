@@ -1,0 +1,49 @@
+\begin{table}[!htbp]
+\centering
+\caption{Wage persistence by age, between and within occupations (NLSY79, men)}
+\label{tab:nlsycareer}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccc}
+\toprule
+Panel / row & \begin{tabular}[b]{@{}c@{}}ln wage\end{tabular} & \begin{tabular}[b]{@{}c@{}}Occupation\\score\end{tabular} & \begin{tabular}[b]{@{}c@{}}Within-\\occupation\\residual\end{tabular} \\
+ & (1) & (2) & (3) \\
+\midrule
+\multicolumn{4}{l}{\textit{Pooled (weighted)}} \\
+ln parental income, ages 25--34 & $0.252^{***}$ & $0.133^{***}$ & $0.119^{***}$ \\
+ & (0.014) & (0.008) & (0.012) \\
+ln parental income, ages 35--44 & $0.345^{***}$ & $0.128^{***}$ & $0.217^{***}$ \\
+ & (0.020) & (0.009) & (0.016) \\
+ln parental income, ages 45--55 & $0.381^{***}$ & $0.105^{***}$ & $0.276^{***}$ \\
+ & (0.026) & (0.011) & (0.023) \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Black}} \\
+ln parental income, ages 25--34 & $0.161^{***}$ & $0.076^{***}$ & $0.085^{***}$ \\
+ & (0.017) & (0.011) & (0.013) \\
+ln parental income, ages 35--44 & $0.192^{***}$ & $0.069^{***}$ & $0.123^{***}$ \\
+ & (0.023) & (0.013) & (0.019) \\
+ln parental income, ages 45--55 & $0.215^{***}$ & $0.061^{***}$ & $0.153^{***}$ \\
+ & (0.029) & (0.014) & (0.024) \\
+\addlinespace
+\multicolumn{4}{l}{\textit{White}} \\
+ln parental income, ages 25--34 & $0.241^{***}$ & $0.120^{***}$ & $0.121^{***}$ \\
+ & (0.019) & (0.010) & (0.015) \\
+ln parental income, ages 35--44 & $0.329^{***}$ & $0.107^{***}$ & $0.222^{***}$ \\
+ & (0.025) & (0.011) & (0.020) \\
+ln parental income, ages 45--55 & $0.354^{***}$ & $0.086^{***}$ & $0.268^{***}$ \\
+ & (0.032) & (0.013) & (0.028) \\
+\addlinespace
+\multicolumn{4}{l}{\textit{White $-$ Black}} \\
+ln parental income, ages 25--34 & $0.080^{***}$ & $0.044^{***}$ & $0.036^{*}$ \\
+ & (0.026) & (0.015) & (0.020) \\
+ln parental income, ages 35--44 & $0.137^{***}$ & $0.038^{**}$ & $0.099^{***}$ \\
+ & (0.034) & (0.017) & (0.027) \\
+ln parental income, ages 45--55 & $0.140^{***}$ & $0.025$ & $0.115^{***}$ \\
+ & (0.043) & (0.020) & (0.037) \\
+Change of the gap, (45--55) $-$ (25--34) & $0.059^{*}$ & $-0.019$ & $0.079^{**}$ \\
+ & (0.036) & (0.019) & (0.037) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Men of the NLSY79 living with a parent in 1979; regressor: log mean parental family income 1979--81; outcome: hourly wage of the main (CPS) job at each interview and its occupation score; controls: quartic in age and birth-year fixed effects; standard errors clustered by 1979 household; pooled weighted by the 1979 sampling weight. Occupational wage score: mean log hourly wage of men aged 25--64 in the occupation relative to all men (CPS MORG, base 1992--2002), occupations harmonised to Dorn's occ1990dd scheme; log wage = score (between occupations) + residual (within occupation), so the score and residual columns add up to the log-wage column on the same sample. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/27.CareerWageGrowth.py} (\texttt{output/career\_wage\_growth.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

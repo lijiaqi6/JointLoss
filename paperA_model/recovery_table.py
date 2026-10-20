@@ -5,10 +5,10 @@ recovery_report.py at the end of the polish; for a CMA run, run recovery_report.
 e.g. results/hpc_runs/recovery_gn_all_<stamp>/. Rows in the order of tab:model_params (fit_table.PARAM_PANELS);
 columns: truth, start, recovered, noise s.e., z (noise), data s.e., z (data); 'yes' when the estimate is within 2
 noise s.e. of the truth.
-  .venv/Scripts/python.exe IGE/paperA_model/recovery_table.py <run dir> [--compile] [--paper]
+  .venv/Scripts/python.exe paperA_model/recovery_table.py <run dir> [--compile] [--paper]
   (--start <run dir> is accepted as an alias of the positional argument)
 Output: results/recovery_table_<stamp>/tab_recovery.tex, recovery_table.json, test_wrapper.tex (--compile: pdflatex);
---paper copies tab_recovery.tex into IGE/paperA_joint_loss/.
+--paper copies tab_recovery.tex into paperA_joint_loss/.
 """
 from __future__ import annotations
 

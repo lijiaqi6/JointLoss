@@ -1,0 +1,43 @@
+\begin{table}[!htbp]
+\centering
+\caption{Parental income tied to spells: which spells pass on more strongly (PSID)}
+\label{tab:shea_spell}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}$R^2$\end{tabular} & \begin{tabular}[b]{@{}c@{}}Predicted\\part\end{tabular} & \begin{tabular}[b]{@{}c@{}}Rest\end{tabular} & \begin{tabular}[b]{@{}c@{}}Difference\end{tabular} \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+\multicolumn{5}{l}{\textit{A. Sons' ln earnings}} \\
+All spells (father displaced, unemployed, zero hours; mother unemployed, zero hours) & 0.182 & $0.528^{***}$ & $0.360^{***}$ & $0.168^{***}$ \\
+ &  & (0.058) & (0.029) & (0.062) \\
+Father's plant closures & 0.004 & $0.074$ & $0.392^{***}$ & $-0.317$ \\
+ &  & (0.561) & (0.026) & (0.565) \\
+Father laid off or fired & 0.027 & $0.742^{***}$ & $0.381^{***}$ & $0.361^{**}$ \\
+ &  & (0.147) & (0.027) & (0.150) \\
+Father's unemployment & 0.057 & $0.640^{***}$ & $0.375^{***}$ & $0.265^{***}$ \\
+ &  & (0.100) & (0.027) & (0.102) \\
+Mother's unemployment & 0.029 & $0.659^{***}$ & $0.382^{***}$ & $0.277^{*}$ \\
+ &  & (0.145) & (0.026) & (0.145) \\
+Father's closures and layoffs & 0.030 & $0.670^{***}$ & $0.382^{***}$ & $0.288^{*}$ \\
+ &  & (0.154) & (0.027) & (0.157) \\
+\addlinespace
+\multicolumn{5}{l}{\textit{B. Sons' ln hourly wage}} \\
+All spells (father displaced, unemployed, zero hours; mother unemployed, zero hours) & 0.182 & $0.428^{***}$ & $0.344^{***}$ & $0.084$ \\
+ &  & (0.050) & (0.024) & (0.055) \\
+Father's plant closures & 0.004 & $-0.094$ & $0.361^{***}$ & $-0.455$ \\
+ &  & (0.483) & (0.022) & (0.486) \\
+Father laid off or fired & 0.027 & $0.631^{***}$ & $0.352^{***}$ & $0.279^{**}$ \\
+ &  & (0.116) & (0.022) & (0.118) \\
+Father's unemployment & 0.057 & $0.559^{***}$ & $0.347^{***}$ & $0.212^{**}$ \\
+ &  & (0.089) & (0.022) & (0.091) \\
+Mother's unemployment & 0.029 & $0.538^{***}$ & $0.354^{***}$ & $0.185$ \\
+ &  & (0.115) & (0.022) & (0.117) \\
+Father's closures and layoffs & 0.030 & $0.553^{***}$ & $0.353^{***}$ & $0.199$ \\
+ &  & (0.123) & (0.022) & (0.125) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Ln parental income (net of the family-structure flags and age dummies) is split into the part predicted by the spell measures in the row and the rest; the son's outcome is regressed on both parts. $R^2$ = share of the variance of ln parental income explained by the spells. Spell shares over the son's ages 13--19. Pooled sons 25--55; PSID weights; 200 cluster-bootstrap draws of 1968 families. Source: \texttt{IGE/74.FrictionIGEPooled.py}, \texttt{IGE/89.SheaContrastBySpell.py}; table built by \texttt{IGE/90.PaperBRaceNeutralTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}

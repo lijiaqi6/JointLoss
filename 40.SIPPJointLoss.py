@@ -8,13 +8,13 @@ tau+12 around the husband's, (ii) the same-month ratio with a reason-for-separat
 CPS's, and (iii) the added-worker path of non-employed wives over the 36 months after his separation.
 
 DATA (downloaded here, sequential requests, retries; raw files are data only -> run this script with `python -I`)
-  Public-use SIPP core wave files, saved unchanged in IGE/data/ext/sipp/ (git-ignored):
+  Public-use SIPP core wave files, saved unchanged in data/ext/sipp/ (git-ignored):
     raw2004/sippl04puw{1..12}.csv.zip   2004 panel, NBER mirror (data.nber.org/sipp/2004), Oct 2003 - Dec 2007
     raw2008/sippl08puw{1..16}.csv.zip   2008 panel, NBER mirror (data.nber.org/sipp/2008), May 2008 - Nov 2013
     raw2014/pu2014w{1..4}.csv.gz        2014 panel, Census (www2.census.gov/programs-surveys/sipp/data/datasets/2014),
                                         reference years 2013-2016 (annual interviews, event-history calendar)
   Only the needed columns are read (chunked); the harmonised person-months are cached per wave in
-  IGE/data/ext/sipp/cache/ and the couple panel in IGE/data/sipp_couples_panel.pkl.
+  data/ext/sipp/cache/ and the couple panel in data/sipp_couples_panel.pkl.
   2004/2008 (4-month waves; 4 rotation groups interviewed in successive months; one record per person-month):
     identifiers  SSUID, EPPPNUM (person number, stable within the sample unit), SPANEL, SWAVE, SROTATON, SREFMON,
                  RHCALMN, RHCALYR; spouse EPNSPOUS; parents EPNMOM, EPNDAD; TFIPSST (state); EPPINTVW (self / proxy)
@@ -64,7 +64,7 @@ ESTIMATES (descriptive probabilities weighted by the wife's person weight of the
   4. Race: same-month LPM, event-study sums and the added-worker path by the husband's race (ERACE 1 / 2).
   5. Comparison with the CPS (EVIDENCE 3.24-3.34) and PSID (3.16-3.23) numbers.
 Nothing here is a randomised design: the excess joint separation is an association conditional on the fixed effects.
-Writes IGE/output/sipp_joint_loss.csv (every estimate), .md (tables), .png (figure).
+Writes output/sipp_joint_loss.csv (every estimate), .md (tables), .png (figure).
 """
 import sys
 import time

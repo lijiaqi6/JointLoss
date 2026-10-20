@@ -4,7 +4,7 @@ Descriptive, cross-sectional (N = 51 states incl. DC). Question: do children who
 income percentile do differently, by race, in states where non-employed women find jobs more slowly?
 
 Child outcomes (Chetty, Hendren, Jones, Porter 2020 QJE; Chetty, Friedman, Hendren, Jones, Porter 2018 Opportunity
-Atlas), downloaded 2026-10-17 into IGE/data/ext/opportunity_insights/ (git-ignored):
+Atlas), downloaded 2026-10-17 into data/ext/opportunity_insights/ (git-ignored):
   county_outcomes.zip (county_outcomes.csv; codebook Codebook-for-Table-5.pdf), https://opportunityinsights.org/data/
   kfr_[black|white]_pooled_p[25|75] = mean household income rank (2014-15, ages 31-37) of children born 1978-83
   whose parents were at the 25th / 75th percentile of the national parental income distribution (x 100 here).
@@ -21,7 +21,7 @@ Search friction for women (and men), by state, three periods:
       0 weeks in the previous calendar year (wwly1 == 0); looking share = unemployed / non-employed in March;
       ages 20-45, person supplemental weight. Monthly flows cannot be built from March cross-sections.
   (B) 1994-2000 and (C) 2005-2021, CPS basic monthly from the Census API (api.census.gov/data/YYYY/cps/basic/mon;
-      downloaded to IGE/data/ext/cps_basic/, ages 20-46; the Dropbox cps_flows_2005_2021 file covers ages 16-25 only,
+      downloaded to data/ext/cps_basic/, ages 20-46; the Dropbox cps_flows_2005_2021 file covers ages 16-25 only,
       so it cannot give rates for women 20-45). Monthly job finding of the non-employed = P(employed at t+1 |
       not employed at t) (U->E and N->E pooled), also U->E (unemployed at t) and N->E; persons matched across adjacent
       months by household id(s) + line number + state, months-in-sample 1-3 / 5-7 -> next, same sex and race, age

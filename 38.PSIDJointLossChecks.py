@@ -1,19 +1,19 @@
 r"""PSID checks on the joint job loss of spouses requested by the referee review of Paper A (2026-10-17).
 
-IGE/proposals/fable_review_paperA.md, Secs. 3.1-3.2 and plan items 3, 6, 11. Four blocks; samples and builders are those
+proposals/fable_review_paperA.md, Secs. 3.1-3.2 and plan items 3, 6, 11. Four blocks; samples and builders are those
 of 19.FatherDisplacement.py (stacked family event study), 25.JointJobLoss.py (wife's own job ends, window designs,
 couple-years) and 23.CorrelatedShocks.py (wife's reason-for-job-end items, couples), imported via importlib (no edits).
 Unweighted PSID SRC + SEO, Black and White (head's race). S.e. clustered by 1968 family (fam68); *** p<0.01, ** p<0.05,
 * p<0.1; p-values normal.
 
-Reads (read only): IGE/data/psid_person_year.pkl, psid_displacement.pkl, correlated_shocks_fam.pkl,
+Reads (read only): data/psid_person_year.pkl, psid_displacement.pkl, correlated_shocks_fam.pkl,
 correlated_shocks_units.pkl, husband_shocks_fam.pkl, and the raw PSID family files (Dropbox/PSID/Family; hours via
 9.family(), food items below). Writes
-  IGE/data/psid_joint_loss_food.pkl            cache of the food items (wave x interview number)
-  IGE/output/psid_joint_loss_checks.csv        every estimate
-  IGE/output/psid_joint_loss_checks.md         tables
-  IGE/output/psid_jl_gross_net_es.png, psid_jl_food_es.png, psid_jl_closures_es.png   event-study figures
-  IGE/paperA_joint_loss/fig_gross_net_awe.pdf/.png, fig_food_single_joint.pdf/.png   paper figures
+  data/psid_joint_loss_food.pkl            cache of the food items (wave x interview number)
+  output/psid_joint_loss_checks.csv        every estimate
+  output/psid_joint_loss_checks.md         tables
+  output/psid_jl_gross_net_es.png, psid_jl_food_es.png, psid_jl_closures_es.png   event-study figures
+  paperA_joint_loss/fig_gross_net_awe.pdf/.png, fig_food_single_joint.pdf/.png   paper figures
 
 1. GROSS VS NET ADDED-WORKER EFFECT. 19's stacked design (fathers first displaced in ev vs clean controls; father x stack
    and calendar year x stack FE; e = -3..+6, reference e = -2), event years 1984-2021 so that the wife's own window is

@@ -4,7 +4,7 @@ First submission 2026-10-19 ~09:05 from `~/joint` at commit 6adfd1a: Joint-test 
 (all earlier checks passed: Q 11,733.6 vs PC 11,726.0; CMA 3 generations; resume), so 11863424 / 11863425 never
 started (cancelled). Resubmitted without the test with --time 10:00:00 (Stanage: ~4 min per round of 16 evaluations). Run folders are under
 `/mnt/parscratch/users/cm1jil/joint_smm_results/runs/`. `--push` copies the aggregate files to
-`IGE/paperA_model/results/hpc_runs/<run>/`, so a `git pull` on the PC brings them in. The test job pushes nothing.
+`paperA_model/results/hpc_runs/<run>/`, so a `git pull` on the PC brings them in. The test job pushes nothing.
 
 ## 1. Joint-recovery-gn (folder `recovery_gn_*`): the identification verdict
 
@@ -56,20 +56,20 @@ Set `GN` to the Joint-gn-main run folder name, e.g. `GN=/mnt/parscratch/users/$U
 
 ```bash
 cd ~/joint && git pull --ff-only
-N=$(sbatch --parsable --job-name=Joint-noise --time=00:30:00 IGE/paperA_model/hpc_job_a.py noise --start $GN/best.json --reps 5 --weighting diag --push)
+N=$(sbatch --parsable --job-name=Joint-noise --time=00:30:00 paperA_model/hpc_job_a.py noise --start $GN/best.json --reps 5 --weighting diag --push)
 # after Joint-noise ends: NF = its folder's moment_noise.csv
 NF=/mnt/parscratch/users/$USER/joint_smm_results/noise_<stamp>_j$N/moment_noise.csv
 for s in 1 2 3; do
   L=main; [ $s -gt 1 ] && L=main_s$s
   J=Joint-smm-main; [ $s -gt 1 ] && J=Joint-smm-main-s$s
-  sbatch --job-name=$J --time=12:00:00 IGE/paperA_model/hpc_job_a.py run --label $L --start $GN/best.json \
+  sbatch --job-name=$J --time=12:00:00 paperA_model/hpc_job_a.py run --label $L --start $GN/best.json \
          --cma-stds-from $GN/jacobian.npz --sigma0 0.2 --maxfevals 3500 --tolfun 30 --cma-seed $s --noise-file $NF --push
 done
 squeue -u $USER -o "%.10i %.25j %.8T %.10M %R"
 ```
 
 Restricted independent-shock model (same targets and draws), LM first:
-`sbatch --job-name=Joint-gn-indep --time=05:00:00 IGE/paperA_model/hpc_job_a.py polish --label indep --fix pi_c0=0 pi_c1=0 pi_c2=0 m_H=1 --push`
+`sbatch --job-name=Joint-gn-indep --time=05:00:00 paperA_model/hpc_job_a.py polish --label indep --fix pi_c0=0 pi_c1=0 pi_c2=0 m_H=1 --push`
 
 All jobs: 32 cores, `--threads 2`, 64G, email at BEGIN/END/FAIL (script header). Never 64 cores without asking.
 

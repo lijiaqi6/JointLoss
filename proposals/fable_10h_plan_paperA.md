@@ -1,7 +1,7 @@
 # Paper A: ten hours while the HPC queue is busy (2026-10-20, 00:30-10:30)
 
 Read only, nothing run: `results/INTAKE.md`, `extensions_20261019.md`, `diagnostics_20261018.md`, `POSTESTIMATION.md`,
-`marriage_diag_20261019_092447_p18108/`, `bps_20261019_13*/bps_check.json`, `IGE/bps_reconciliation/HARNESS.md`
+`marriage_diag_20261019_092447_p18108/`, `bps_20261019_13*/bps_check.json`, `bps_reconciliation/HARNESS.md`
 (Sections 6-7) and `smoke_sim_dgp.py`, `IGE/60` (wealth block), `IGE/40` (SIPP loader), the three Fable notes of
 2026-10-18/19 and `wife_exit_evidence.md`, `separation_ui_evidence.md`, `her_loss_robustness.md`, the paper
 (`sec2`, `sec5`, `sec6`, `sec7`, `references.bib`), `EVIDENCE.md` Sections 3-6. Terminology: search friction; human
@@ -11,10 +11,10 @@ capital level / accumulation / depreciation.
 
 Joint-recovery-gn 11865966 and Joint-gn-main 11865967 are queued on a snapshot of 78a45a5 (= HEAD's parent merge; the
 working tree has no later change on the model path). Until the LM -> noise -> CMA-ES chain has started its CMA-ES
-stage, **no edit** to `IGE/paperA_model/{model,solve,simulate,panels,moments,params,estimate,analytic_start,
-borrowing_wedge,hpc_job_a,post_common}.py`, `inputs/*`, `tests/*`, `IGE/60-62`, `IGE/66`, `IGE/output/paperA_targets*.csv`;
+stage, **no edit** to `paperA_model/{model,solve,simulate,panels,moments,params,estimate,analytic_start,
+borrowing_wedge,hpc_job_a,post_common}.py`, `inputs/*`, `tests/*`, `IGE/60-62`, `IGE/66`, `output/paperA_targets*.csv`;
 no `bps_check.py --apply`; no run of `IGE/60`, `62`, `66`. Everything below is new scripts (`IGE/75-79`), new
-`results/` and `IGE/output/` aggregates, Stata runs on scratch, and paper text. Each package ends with its own commit
+`results/` and `output/` aggregates, Stata runs on scratch, and paper text. Each package ends with its own commit
 on main (explicit paths, no branches, no PSID / SIPP / CPS microdata). Risk to the queued jobs is therefore **none** in
 every package; the only shared resource is the PC's CPU and RAM (Section 1).
 
@@ -61,8 +61,8 @@ variance 0.0275 (D6), permanent moves as discrete steps of 0.46 log points at pr
 10% displacement loss at 2.5% a year (keep the smoke's hours and consumption rules); run as shipped and with the trim
 off; `verify_harness.py smoke`. Three to five Stata runs of 2-5 minutes each, sequential.
 
-**Deliverables.** `IGE/bps_reconciliation/code/smoke_sim_dgp_steps.py` (new, imports the smoke module),
-`IGE/bps_reconciliation/HARNESS.md` Section 8 (a table: spec x {s_u1, s_v1, s_u2, c_u1u2}, N trimmed by the jump rule),
+**Deliverables.** `bps_reconciliation/code/smoke_sim_dgp_steps.py` (new, imports the smoke module),
+`bps_reconciliation/HARNESS.md` Section 8 (a table: spec x {s_u1, s_v1, s_u2, c_u1u2}, N trimmed by the jump rule),
 `results/bps_trim_<stamp>/` (json), and one paragraph for `results/INTAKE.md` 2b with the decision rule: if the trim
 explains the deficit, the correction is not applied and the paper's Appendix D says why BPS's trim understates his
 transitory variance on a process with discrete steps; if not, 2b stands. Risk to HPC: none (reads results, writes
@@ -86,8 +86,8 @@ proxy: birth in t / t+1, his income change, her hours in t, and the repeat-exit 
 needs: what fraction of the 12+ hazard (0.68%) is births (child 0 window), low hours, his income rise, illness,
 and the residual; the spell length of the residual.
 
-**Deliverables.** `IGE/output/established_wife_exits.csv/.md` (paper layout), memo
-`IGE/proposals/established_exit_evidence.md`: the decomposition, the feature each part points to (birth-timed theta
+**Deliverables.** `output/established_wife_exits.csv/.md` (paper layout), memo
+`proposals/established_exit_evidence.md`: the decomposition, the feature each part points to (birth-timed theta
 jump: no state; persistent work-cost type: one state, x2 solve; health: footnote), its cost, and the recommendation,
 with footnote-ready sentences (numbers + script). EVIDENCE 3.93-3.95. Paper: sec7 'Estimation' footnote next to
 the exit-rate paragraph (line ~451) after the estimate; sec5 'The wife's own labor market' one sentence.
@@ -109,7 +109,7 @@ of V^S); (iv) AFDC/TANF and SNAP receipt by year since separation (the model's s
 same by whether her husband had been displaced in the two years before the separation (the model's post-displacement
 separations). Stars and p-values on every difference.
 
-**Deliverables.** `IGE/output/separated_mothers.csv/.md`, memo `IGE/proposals/separated_state_inputs.md` with the
+**Deliverables.** `output/separated_mothers.csv/.md`, memo `proposals/separated_state_inputs.md` with the
 two calibrated inputs ready for Diagnostic B (monthly child support by race x child count; annual remarriage hazard by
 race, treated as the end of the record) and the single-mother employment and receipt rates as untargeted validation
 rows for `fit_table.py`. EVIDENCE 3.96-3.98. Paper: sec7 'Marriage and separation' footnote (line ~302, "no remarriage
@@ -131,7 +131,7 @@ targeted, (b) liquid + IRA / annuities (from 1999), (c) net worth excluding home
 and mortgage shares by band; medians in 2000 $. Bootstrap s.e. (200, 1968-family clusters) only for the two targeted
 definitions' shares; the rest descriptive.
 
-**Deliverables.** `IGE/output/wealth_definitions.csv/.md`, a half-page in `IGE/proposals/wealth_shape_note.md` with a
+**Deliverables.** `output/wealth_definitions.csv/.md`, a half-page in `proposals/wealth_shape_note.md` with a
 recommendation (keep liquid and add a terminal-value / illiquid-saving footnote; or redefine the target as (b) or (c)
 after the chain, since `IGE/60` cannot change now). Paper: sec7 'Estimation' wealth-target footnote; `fit_table`
 reads the misfit with this note. EVIDENCE 3.99.
@@ -171,7 +171,7 @@ and the year of (a) his displacement and (b) a joint displacement, by race; the 
 schedule for each group (an accounting, not a receipt measure; TAXSIM is not needed for the region shares). AFDC/TANF
 receipt in the same windows.
 
-**Deliverables.** `IGE/output/safety_net_joint_loss.csv/.md/.png`; EVIDENCE 6.6-6.9. Paper: sec5 'The safety net'
+**Deliverables.** `output/safety_net_joint_loss.csv/.md/.png`; EVIDENCE 6.6-6.9. Paper: sec5 'The safety net'
 grows from one paragraph to the subsection the PI rule wants (one subsection, details in footnotes), with the monthly
 SNAP / UI path and the EITC-region shares; sec7 'Counterfactuals' (iii) cites the fact. Also a validation row list for
 `fit_table.py` (SNAP receipt in joint-loss months; UI coverage of neither spouse).
@@ -191,9 +191,9 @@ on the father's displacement sample so the two channels (income, presence) sit i
 p-values; 1968-family clusters. Also read Hilger's (2016) earnings effect from the paper (WebFetch the AEJ:Applied
 abstract / table if the PDF is not local) for the low slope.
 
-**Deliverables.** `IGE/output/parents_present_outcomes.csv/.md`; the high / low slope numbers (beta_05, beta_617,
+**Deliverables.** `output/parents_present_outcomes.csv/.md`; the high / low slope numbers (beta_05, beta_617,
 beta_P) written into `counterfactuals.py`'s docstring section 'Children's adult outcomes' (documentation, not code) and
-into `IGE/proposals/paperA_identification_plan.md` line 259; sec6 'What the model takes from this' gets the numbers and
+into `proposals/paperA_identification_plan.md` line 259; sec6 'What the model takes from this' gets the numbers and
 a footnote; EVIDENCE 5.11-5.12.
 
 ### WP8. Paper and model document in sync with the code (lead, 75 min, no CPU)
@@ -218,7 +218,7 @@ PDFs. Edits with the Edit tool only (no heredocs for LaTeX).
 (1) `results/INTAKE.md`: WP1's 2b decision rule; the exit-feature decision tree (new-job vs birth jump vs type, with
 WP2's shares); Diagnostic B inputs from WP3; the WP4 wealth note; the local-run comparison protocol (Section 1).
 (2) EVIDENCE.md: entries from WP2-WP7 (3.93-3.99, 5.11-5.12, 6.6-6.9) and the 'PI questions' table (Q6 position;
-new Q9 'does the EITC pay in joint-loss months?'). (3) `.gitignore`: `IGE/output/log*.txt`; the other untracked
+new Q9 'does the EITC pay in joint-loss months?'). (3) `.gitignore`: `output/log*.txt`; the other untracked
 by-products (`cps_couple_state_shares.csv`, `policy_schedules_memory_version.json`, `rauh_replication*`,
 `test_wrapper.*`, `paperB_age_profile/model_document.pdf`, `scripts/redraw_emp_event_by_edu.py`, the five modified
 files under `paper/`, `ReducedForm/`, `TargetMoments/` belong to the other sessions) are listed for the PI, not

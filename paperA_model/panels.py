@@ -1,6 +1,6 @@
 """Paper A model: measurement layer. Simulated monthly couple histories (simulate.SimResult) -> data-shaped panels.
 
-Every target of IGE/output/paperA_targets.csv is computed (moments.py) on the panel of its source, built here with the
+Every target of output/paperA_targets.csv is computed (moments.py) on the panel of its source, built here with the
 data scripts' sample rules (IGE/60.PaperATargets.py and the builders it calls: IGE/30, 37 (CPS), IGE/40 (SIPP),
 IGE/19, 23, 25, 38, 47 (PSID)), restricted to the target's calendar window. Model -> data mapping (one place):
 

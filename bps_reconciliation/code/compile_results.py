@@ -1,9 +1,9 @@
-r"""Compile IGE/bps_reconciliation results (2026-10-18): Step 0 replication vs published, Step 1 relaxations, Step 2.
+r"""Compile bps_reconciliation results (2026-10-18): Step 0 replication vs published, Step 1 relaxations, Step 2.
 
 Reads the run outputs in the local work folder (argv[1]; est_*.csv and reps_*.dta per specification, step2_results,
 attrition, attrition_duw, separation) and writes
-  IGE/bps_reconciliation/bps_reconciliation.csv   every number (table, spec, parameter, value, se, p, se_type, ...)
-  IGE/bps_reconciliation/tables/*.md              markdown tables (pasted into bps_reconciliation.md)
+  bps_reconciliation/bps_reconciliation.csv   every number (table, spec, parameter, value, se, p, se_type, ...)
+  bps_reconciliation/tables/*.md              markdown tables (pasted into bps_reconciliation.md)
 Standard errors: GMM (clustered by household) for the wage-process parameters, as in BPS Table 3; block bootstrap
 (households resampled, BPS's bootstrap.do; s.e. = interquartile range / 1.349 over successful replications, as in
 BPS) for everything else where a bootstrap was run; otherwise the GMM s.e. of the second step, which does not

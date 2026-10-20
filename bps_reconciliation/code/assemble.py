@@ -1,4 +1,4 @@
-"""Assemble IGE/bps_reconciliation/bps_reconciliation.md from the narrative and the tables of compile_results.py."""
+"""Assemble bps_reconciliation/bps_reconciliation.md from the narrative and the tables of compile_results.py."""
 import re
 from pathlib import Path
 

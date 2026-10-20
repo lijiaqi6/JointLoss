@@ -1,6 +1,6 @@
 # Wealth targets: a model problem or a definition problem? (WP4, 2026-10-20)
 
-Script `IGE/77.WealthDefinitions.py`; tables `IGE/output/wealth_definitions.md` (+ `.csv`, `_diffs.csv`, `log77.txt`).
+Script `IGE/77.WealthDefinitions.py`; tables `output/wealth_definitions.md` (+ `.csv`, `_diffs.csv`, `log77.txt`).
 Same couples, waves (1984, 1989, 1994, 1999-2019) and earnings denominator as the targets `psid_liq_*` of `IGE/60`
 (the script reproduces all six targets and their N exactly). Unweighted; s.e. from 200 block-bootstrap replications
 over 1968 families; *** p<0.01. Model numbers: `results/marriage_diag_20261019_092447_p18108` (analytic start, wedge

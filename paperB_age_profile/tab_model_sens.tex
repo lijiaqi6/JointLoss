@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\caption{Which moments identify the race parameters: sensitivity of the estimates (model E)}
+\label{tab:modelsens}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lccccccc p{5.2cm}}
+\toprule
+ & IGE & Returns & Levels, & $G$ & Stayer & Moves, & Zero & Largest loadings \\
+ & & & variances & shares & growth & displacement & hours & \\
+\midrule
+$\gamma_x(B) - \gamma_x(W)$ (H4) & 77 & 10 & 1 & 1 & 9 & 2 & 0 & IGE 30--34 W $-0.21$; IGE 35--39 W $-0.20$; IGE 30--34 B $+0.18$ \\
+$\gamma_x(W)$ & 78 & 9 & 1 & 1 & 8 & 3 & 0 & IGE 25--29 B $-0.42$; IGE 25--29 W $-0.30$; IGE 40--44 W $+0.27$ \\
+$\gamma_1(B) - \gamma_1(W)$ (H2) & 5 & 63 & 4 & 1 & 25 & 2 & 0 & return 25--29 B $-0.43$; return 25--29 W $+0.29$; return 45--49 B $+0.27$ \\
+$b_1(B) - b_1(W)$ (H3) & 11 & 74 & 4 & 0 & 10 & 1 & 0 & return 25--29 B $+0.60$; return 25--29 W $-0.40$; IGE 25--29 B $+0.23$ \\
+$\alpha_3$ (H1, model D) & 0 & 0 & 0 & 96 & 0 & 3 & 0 & $G$ share middle tercile B $+0.59$; $G$ share top tercile B $+0.56$; $G$ share middle tercile W $-0.45$ \\
+H4 off: change in the gap, 45--49 & 86 & 9 & 1 & 1 & 2 & 1 & 0 & IGE 35--39 W $-0.20$; IGE 40--44 W $-0.19$; IGE 30--34 W $-0.19$ \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Sensitivity in the sense of \citet{andrews2017measuring}: $\Lambda = (G'WG)^{-1}G'W$, the derivative of the estimate with respect to the data moments, from the numerical Jacobian $G$ at the estimate (20 simulated sons per PSID son) and the diagonal weights $W$. $S_{jk} = \Lambda_{jk}\hat s_k / \mathrm{se}_j$ is the shift of parameter $j$, in its standard errors, when moment $k$ rises by one data standard error. Columns 1--7: the share (\%) of $\sum_k S_{jk}^2$ in each block of moments; last column: the three largest $S_{jk}$ with their signs (race W / B, age band). Last row: the same for the counterfactual change in the W $-$ B IGE gap at 45--49 when Black sons get White sons' pay-off of parental income, from its gradient. Code: \texttt{model/sensitivity.py}; output \texttt{model/output/final\_x4/sensitivity.json}.\end{minipage}
+\end{table}

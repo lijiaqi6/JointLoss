@@ -1,0 +1,31 @@
+\begin{table}[!htbp]
+\centering
+\caption{Education and instability as mediators of the IGE (PSID, sons)}
+\label{tab:mediation}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccccccc}
+\toprule
+Panel / row & \begin{tabular}[b]{@{}c@{}}ln earnings\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln earnings\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln earnings\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln wage\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln wage\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln hours\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln hours\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln hours\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+\midrule
+\multicolumn{9}{l}{\textit{Black sons}} \\
+ln parental family income & $0.214^{***}$ & $0.141^{***}$ & $0.117^{***}$ & $0.164^{***}$ & $0.115^{***}$ & $0.050^{***}$ & $0.027$ & $0.013$ \\
+ & (0.039) & (0.036) & (0.029) & (0.029) & (0.026) & (0.018) & (0.019) & (0.015) \\
+Son's years of education & No & Yes & Yes & No & Yes & No & Yes & Yes \\
+Son's shares of unstable years & No & No & Yes & No & No & No & No & Yes \\
+Share of the IGE mediated &  & 0.34 & 0.45 &  & 0.30 &  & 0.46 & 0.75 \\
+Child-years & 14,667 & 14,667 & 14,667 & 14,667 & 14,667 & 14,667 & 14,667 & 14,667 \\
+\addlinespace
+\multicolumn{9}{l}{\textit{White sons}} \\
+ln parental family income & $0.447^{***}$ & $0.337^{***}$ & $0.303^{***}$ & $0.413^{***}$ & $0.308^{***}$ & $0.034^{***}$ & $0.029^{**}$ & $0.012$ \\
+ & (0.036) & (0.035) & (0.032) & (0.033) & (0.032) & (0.013) & (0.014) & (0.012) \\
+Son's years of education & No & Yes & Yes & No & Yes & No & Yes & Yes \\
+Son's shares of unstable years & No & No & Yes & No & No & No & No & Yes \\
+Share of the IGE mediated &  & 0.25 & 0.32 &  & 0.26 &  & 0.14 & 0.64 \\
+Child-years & 27,562 & 27,562 & 27,562 & 27,562 & 27,562 & 27,562 & 27,562 & 27,562 \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} One regression per column; Lee--Solon design (IGE at 40), sons' child-years at 25--55 with a valid wage. Share mediated $= 1 - \beta_{\text{with controls}}/\beta_{\text{without}}$ relative to the first column of the same outcome. Unstable years: shares of the son's years with unemployment, displacement, reduced hours and zero hours. Education and instability are themselves outcomes of family background, so the shares are an accounting of coefficient movements, not causal mediation. Unweighted; standard errors clustered by 1968 family. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/24.IGEDecomposition.py} (\texttt{output/ige\_decomposition.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

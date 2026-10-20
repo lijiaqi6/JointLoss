@@ -1,0 +1,145 @@
+[
+ {
+  "step": "1",
+  "what": "first lattice: race in wage level and job loss only",
+  "model": "A",
+  "run": "ige_full_20261018_125238",
+  "draws": "R = 5",
+  "Q": 324.26744833481865,
+  "comparison": null,
+  "Q_comparison": null,
+  "dQ": null
+ },
+ {
+  "step": "1",
+  "what": "first lattice: H2 + H3 (selected)",
+  "model": "E",
+  "run": "ige_full_20261018_194444_j11859353",
+  "draws": "R = 5",
+  "Q": 301.9025429609121,
+  "comparison": "ige_full_20261018_194443_j11859358",
+  "Q_comparison": 318.90433694206405,
+  "dQ": -17.001793981151934
+ },
+ {
+  "step": "2",
+  "what": "age slopes of job loss and of the on-the-job search friction",
+  "model": "A",
+  "run": "ige_full_20261018_194443_j11859359",
+  "draws": "R = 5",
+  "Q": 207.4298219794645,
+  "comparison": "ige_full_20261018_194443_j11859358",
+  "Q_comparison": 318.90433694206405,
+  "dQ": -111.47451496259956
+ },
+ {
+  "step": "2",
+  "what": "same, model D",
+  "model": "D",
+  "run": "ige_full_20261018_195922_j11859360",
+  "draws": "R = 5",
+  "Q": 188.31137891656832,
+  "comparison": "ige_full_20261018_125238",
+  "Q_comparison": 300.2707058078727,
+  "dQ": -111.95932689130436
+ },
+ {
+  "step": "3",
+  "what": "re-employment in the year of a displacement",
+  "model": "A",
+  "run": "ige_full_20261018_200455_j11859361",
+  "draws": "R = 5",
+  "Q": 171.63676013670803,
+  "comparison": "ige_full_20261018_194443_j11859359",
+  "Q_comparison": 207.4298219794645,
+  "dQ": -35.79306184275646
+ },
+ {
+  "step": "3",
+  "what": "same, model D",
+  "model": "D",
+  "run": "ige_full_20261018_200456_j11859362",
+  "draws": "R = 5",
+  "Q": 152.81345142258584,
+  "comparison": "ige_full_20261018_195922_j11859360",
+  "Q_comparison": 188.31137891656832,
+  "dQ": -35.49792749398247
+ },
+ {
+  "step": "3a",
+  "what": "match premium of $G$ jobs fixed at 0",
+  "model": "D",
+  "run": "ige_full_20261018_200456_j11859363",
+  "draws": "R = 5",
+  "Q": 155.59830226254402,
+  "comparison": "ige_full_20261018_200456_j11859362",
+  "Q_comparison": 152.81345142258584,
+  "dQ": 2.7848508399581817
+ },
+ {
+  "step": "3b",
+  "what": "depreciation out of work fixed at 0 (and $\\mu_G = 0$)",
+  "model": "A",
+  "run": "ige_full_20261018_212217_j11860451",
+  "draws": "R = 5",
+  "Q": 177.79146923475957,
+  "comparison": "ige_full_20261018_200455_j11859361",
+  "Q_comparison": 171.63676013670803,
+  "dQ": 6.154709098051541
+ },
+ {
+  "step": "4",
+  "what": "race-neutral pay-off of parental income in accumulation",
+  "model": "A",
+  "run": "ige_full_20261018_213123_j11860453",
+  "draws": "R = 5",
+  "Q": 178.0831516343386,
+  "comparison": "ige_full_20261018_212217_j11860451",
+  "Q_comparison": 177.79146923475957,
+  "dQ": 0.29168239957903097
+ },
+ {
+  "step": "4",
+  "what": "its racial difference (H4)",
+  "model": "A",
+  "run": "ige_full_20261018_213123_j11860454",
+  "draws": "R = 5",
+  "Q": 135.30240543944527,
+  "comparison": "ige_full_20261018_213123_j11860453",
+  "Q_comparison": 178.0831516343386,
+  "dQ": -42.78074619489334
+ },
+ {
+  "step": "4",
+  "what": "H4 given H2 + H3",
+  "model": "E",
+  "run": "ige_full_20261018_215612_j11860456",
+  "draws": "R = 5",
+  "Q": 124.40512128075525,
+  "comparison": "ige_full_20261018_214332_j11860455",
+  "Q_comparison": 158.88734331042272,
+  "dQ": -34.48222202966747
+ },
+ {
+  "step": "5",
+  "what": "final lattice, H4 alone",
+  "model": "A",
+  "run": "Lx4_A_j11861506",
+  "draws": "R = 20",
+  "Q": 138.3549688417429,
+  "comparison": "ige_full_20261018_224720_j11861515",
+  "Q_comparison": 182.00011251420048,
+  "dQ": -43.64514367245758
+ },
+ {
+  "step": "5",
+  "what": "final lattice, selected model (H2 + H3 + H4)",
+  "model": "E",
+  "run": "Lx4_E_j11861512",
+  "draws": "R = 20",
+  "Q": 127.6226224254604,
+  "comparison": "ige_full_20261018_224720_j11861516",
+  "Q_comparison": 160.63600395855718,
+  "dQ": -33.013381533096776
+ }
+]

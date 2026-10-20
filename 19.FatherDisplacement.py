@@ -2,11 +2,11 @@ r"""Fathers' job displacement in the PSID: the family's response and children's 
 
 Replaces the zero-hours "father figure's job loss" of 9.ChildExposure.py with the PSID's reason-for-job-end items
 (Stevens 1997; Stephens 2002; Page, Stevens and Lindo 2009). Reads the raw family files in Dropbox/PSID (read only)
-and IGE/data/psid_person_year.pkl, psid_child_exposure.pkl, psid_kids.pkl, cds_scores.pkl (read only); writes
-  IGE/data/psid_displacement.pkl    one row per male head x calendar year with a reported job end (flags below)
-  IGE/output/father_displacement.csv  every estimate (table, sample, outcome, regressor, coef, se, p, N)
-  IGE/output/father_displacement.md   tables
-  IGE/output/father_displacement_es.png  event-study figure
+and data/psid_person_year.pkl, psid_child_exposure.pkl, psid_kids.pkl, cds_scores.pkl (read only); writes
+  data/psid_displacement.pkl    one row per male head x calendar year with a reported job end (flags below)
+  output/father_displacement.csv  every estimate (table, sample, outcome, regressor, coef, se, p, N)
+  output/father_displacement.md   tables
+  output/father_displacement_es.png  event-study figure
 
 1. DISPLACEMENT (male heads; head's own report; codes are the same in every wave: 1 company folded / changed hands /
    moved out of town / employer died / went out of business; 2 strike, lockout; 3 laid off, fired; 4 quit,

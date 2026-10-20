@@ -1,0 +1,33 @@
+\begin{table}[!htbp]
+\centering
+\caption{The four hypotheses: drop in the SMM criterion when the race parameter is added}
+\label{tab:modelhyp}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{llcccc}
+\toprule
+ & Models & Drop in $Q$: mean (s.d.) & Minimum & $> 3.84$ at & Estimate in the \\
+ & & over ten seeds & & every seed & richer model (s.e.) \\
+\midrule
+\multicolumn{6}{l}{\textit{H1: access to good jobs ($\alpha_3$)}} \\
+\quad alone & A $\to$ B & $3.2$ (1.0) & $1.4$ & no & $-0.2739^{*}$ (0.1530) \\
+\quad given H2 & F $\to$ C & $2.5$ (0.8) & $1.4$ & no & $-0.2429$ (0.1534) \\
+\quad given H3 & G $\to$ H & $2.9$ (0.9) & $1.1$ & no & $-0.2739^{*}$ (0.1508) \\
+\quad given H2 and H3 & E $\to$ D & $1.4$ (0.6) & $0.5$ & no & $-0.1401$ (0.1795) \\
+\multicolumn{6}{l}{\textit{H2: pay-off of schooling in accumulation ($\gamma_1(B) - \gamma_1(W)$)}} \\
+\quad alone & A $\to$ F & $1.7$ (1.0) & $0.3$ & no & $-0.0020$ (0.0019) \\
+\quad given H1 & B $\to$ C & $1.0$ (0.7) & $-0.2$ & no & $-0.0014$ (0.0020) \\
+\quad given H3 & G $\to$ E & $9.9$ (1.3) & $8.1$ & yes & $-0.0085^{***}$ (0.0030) \\
+\quad given H1 and H3 & H $\to$ D & $8.5$ (1.0) & $7.2$ & yes & $-0.0075^{**}$ (0.0030) \\
+\multicolumn{6}{l}{\textit{H3: entry return to schooling ($b_1(B) - b_1(W)$)}} \\
+\quad alone & A $\to$ G & $0.3$ (0.4) & $-0.6$ & no & $0.0020$ (0.0090) \\
+\quad given H1 & B $\to$ H & $0.0$ (0.0) & $0.0$ & no & $0.0000$ (0.0089) \\
+\quad given H2 & F $\to$ E & $8.5$ (0.8) & $7.3$ & yes & $0.0369^{***}$ (0.0138) \\
+\quad given H1 and H2 & C $\to$ D & $7.5$ (0.8) & $6.6$ & yes & $0.0347^{**}$ (0.0137) \\
+\multicolumn{6}{l}{\textit{H4: pay-off of parental income in accumulation ($\gamma_x(B) - \gamma_x(W)$)}} \\
+\quad alone & A without H4 $\to$ A & $47.1$ (4.0) & $38.4$ & yes & $-0.0210^{***}$ (0.0056) \\
+\quad given H2 and H3 & E without H4 $\to$ E & $36.1$ (3.5) & $29.1$ & yes & $-0.0198^{***}$ (0.0055) \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Each row adds one race parameter to a model and reports the fall in the SMM criterion $Q$ (66 moments, diagonal weights) at the two models' estimates, computed on the same simulation draws at ten seeds (7--16), 20 simulated sons per PSID son; mean, standard deviation and minimum over the seeds. A parameter is kept if the fall exceeds 3.84 at every seed (with diagonal weights this is a rule of thumb on the scale of a one-restriction test, not an exact $\chi^2$ test). All models include the age profiles of job loss and of the on-the-job search friction, re-employment in the year of a displacement and the race-neutral pay-off of parental income in accumulation $\gamma_x(W)$; the H4 rows fix $\gamma_x(B) = \gamma_x(W)$ in the model without H4. Models H and G moved by 0.0 and 0.1 from their starting points (B's and A's solutions with $b_1(B) - b_1(W) = 0$) in 12,000 evaluations; along $b_1(B) - b_1(W)$ alone $Q$ rises on both sides of these points (by 6 to 10 at $\pm 0.01$), so they are minima in that direction (at E, $Q$ falls by 0.3 at $\alpha_3 = -0.1$, consistent with the 0.5 that D finds at the estimation draws), and a joint move of several parameters is tested by a polish re-estimation of every model from its own solution, which moved no $Q$ by more than 0.12 (D; C 0.06, all others 0.00), so the rows through G and H are not bounds. Polish runs: \texttt{model/hpc\_runs/P\_*}. Profiles: \texttt{model/profile\_q.py}. Last column: the parameter in the richer model, sandwich standard errors of the estimation (20 simulated sons per PSID son); $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Code: \texttt{model/lattice\_q.py}, \texttt{model/h4\_seeds.py}; output \texttt{model/output/final\_x4/}.\end{minipage}
+\end{table}

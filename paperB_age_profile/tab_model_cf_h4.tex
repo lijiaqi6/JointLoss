@@ -1,0 +1,30 @@
+\begin{table}[!htbp]
+\centering
+\caption{The pay-off of parental income in accumulation: by age and parental income (model E)}
+\label{tab:modelcfh4}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+ & Black IGE & H4 off: & W $-$ B gap & H4 off: & White IGE & No pay-off: \\
+ & baseline & change & baseline & change & baseline & change \\
+\midrule
+\multicolumn{7}{l}{\textit{A. Log-wage IGE by age}} \\
+\quad 25--29 & 0.140 & $0.087^{***}$ (0.024) & 0.083 & $-0.087^{***}$ (0.024) & 0.223 & $-0.067^{***}$ (0.025) \\
+\quad 30--34 & 0.154 & $0.120^{***}$ (0.032) & 0.168 & $-0.120^{***}$ (0.032) & 0.322 & $-0.104^{***}$ (0.039) \\
+\quad 35--39 & 0.172 & $0.141^{***}$ (0.038) & 0.214 & $-0.141^{***}$ (0.038) & 0.386 & $-0.127^{***}$ (0.048) \\
+\quad 40--44 & 0.169 & $0.156^{***}$ (0.042) & 0.259 & $-0.156^{***}$ (0.042) & 0.428 & $-0.143^{***}$ (0.053) \\
+\quad 45--49 & 0.176 & $0.166^{***}$ (0.045) & 0.281 & $-0.166^{***}$ (0.045) & 0.457 & $-0.155^{***}$ (0.058) \\
+\quad 50--55 & 0.173 & $0.173^{***}$ (0.047) & 0.309 & $-0.173^{***}$ (0.047) & 0.483 & $-0.164^{***}$ (0.061) \\
+\midrule \multicolumn{7}{l}{\textit{B. Mean log wage by parental-income tercile}} \\
+ & Black & H4 off: change & & & White & No pay-off: change \\
+\quad 25--34, bottom tercile & 2.335 & $-0.0880^{***}$ (0.0239) & & & 2.458 & $0.0654^{***}$ (0.0247) \\
+\quad 25--34, middle tercile & 2.456 & $0.0006^{***}$ (0.0002) & & & 2.668 & $-0.0080^{***}$ (0.0030) \\
+\quad 25--34, top tercile & 2.558 & $0.0533^{***}$ (0.0144) & & & 2.845 & $-0.0559^{***}$ (0.0210) \\
+\quad 45--49, bottom tercile & 2.642 & $-0.1404^{***}$ (0.0380) & & & 2.774 & $0.1074^{***}$ (0.0402) \\
+\quad 45--49, middle tercile & 2.772 & $0.0001$ (0.0002) & & & 3.096 & $-0.0142^{***}$ (0.0053) \\
+\quad 45--49, top tercile & 2.915 & $0.0881^{***}$ (0.0239) & & & 3.396 & $-0.1023^{***}$ (0.0383) \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Model E at its estimates, 20 simulated sons per PSID son, the PSID observation scheme. H4 off: Black sons get White sons' pay-off of parental income in accumulation, $\gamma_x(B) = \gamma_x(W)$. No pay-off: $\gamma_x(B) = \gamma_x(W) = 0$, the race-neutral channel switched off for both races. Parental income is centred at the pooled mean, so a pay-off lowers the wages of sons below the mean and raises those above it. Terciles of parental income over all sons. Delta-method standard errors; $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Code: \texttt{model/postestimation.py} (\texttt{IGE\_CFS}); output \texttt{model/output/postestimation\_Lx4\_E\_h4.json}.\end{minipage}
+\end{table}

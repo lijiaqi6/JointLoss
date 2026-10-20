@@ -1,7 +1,7 @@
 # The separated wife's state: PSID evidence for Diagnostic B (WP3, 2026-10-20)
 
-Script `IGE/76.SeparatedMothers.py`; tables `IGE/output/separated_mothers.md`, every number with s.e., p and N in
-`IGE/output/separated_mothers.csv`. Unweighted PSID SRC + SEO; s.e. clustered by 1968 family; *** p<0.01, ** p<0.05,
+Script `IGE/76.SeparatedMothers.py`; tables `output/separated_mothers.md`, every number with s.e., p and N in
+`output/separated_mothers.csv`. Unweighted PSID SRC + SEO; s.e. clustered by 1968 family; *** p<0.01, ** p<0.05,
 * p<0.1. No model file, target or existing script was touched.
 
 ## Why

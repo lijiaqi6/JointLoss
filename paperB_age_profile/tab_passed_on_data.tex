@@ -1,0 +1,32 @@
+\begin{table}[!htbp]
+\centering
+\caption{What is passed on in four data sets: shares of the earnings IGE}
+\label{tab:passed_on_data}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}PSID\\sons\\25--55\end{tabular} & \begin{tabular}[b]{@{}c@{}}NLSY79 CYA\\children\\26--35\end{tabular} & \begin{tabular}[b]{@{}c@{}}NLSY79 CYA\\sons\\26--35\end{tabular} & \begin{tabular}[b]{@{}c@{}}NLSY79\\sons\\25--59\end{tabular} & \begin{tabular}[b]{@{}c@{}}NLSY97\\youths\\25--44\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+IGE & $0.396^{***}$ & $0.295^{***}$ & $0.315^{***}$ & $0.407^{***}$ & $0.195^{***}$ \\
+ & (0.024) & (0.023) & (0.034) & (0.022) & (0.016) \\
+Parents' wage (\%) & $12.0^{**}$ & $6.4$ & $6.4$ & $1.1$ & $-0.5$ \\
+ & (5.9) & (5.5) & (6.5) & (1.2) & (1.4) \\
+Parents' hours (\%) & $1.2$ & $2.2$ & $2.9$ & $0.5$ & $0.5$ \\
+ & (1.4) & (2.7) & (3.3) & (0.9) & (1.6) \\
+Parents' spells (stability) (\%) & $4.9^{**}$ & $7.6^{***}$ & $7.6^{*}$ &  & $-1.0$ \\
+ & (2.2) & (2.7) & (3.9) &  & (0.9) \\
+Place (\%) & $0.2$ & $0.4$ & $0.2$ & $0.4$ & $-0.1$ \\
+ & (0.5) & (0.4) & (0.3) & (1.2) & (0.4) \\
+Parents' schooling (and other resources) (\%) & $12.9^{***}$ &  &  & $25.0^{***}$ & $22.2^{***}$ \\
+ & (3.7) &  &  & (3.3) & (4.6) \\
+Family structure (\%) & $5.4$ & $8.5^{*}$ & $13.5^{**}$ & $4.5^{*}$ & $10.1^{*}$ \\
+ & (4.5) & (4.5) & (6.1) & (2.5) & (5.7) \\
+Rest (\%) & $47.6^{***}$ & $74.8^{***}$ & $69.5^{***}$ & $68.6^{***}$ & $68.8^{***}$ \\
+ & (10.8) & (9.8) & (13.4) & (4.9) & (8.3) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} First row: the IGE of the child's ln earnings on ln parental income; other rows: each component's share of it (percent; exact Gelbach split). PSID: Table~\ref{tab:passed_on}, panel B (parents' schooling row = schooling only; transfers, assets, others' income, family size and labour income beyond the components are in the table but not here). NLSY79 Children and Young Adults: the mother is the respondent; components over the child's ages 13--17 from her weekly array and job roster (weeks unemployed, jobs ended by a closure, a layoff, a firing), her annual hours and wages and her spouse's; place = census-region unemployment (no state in the public file); outcome = mean earnings at 26--35. NLSY79 youths: the household at 14 (occupation wage of the adult man and woman from the March CPS 1977--80, whether each worked for pay, South / rural, parents' schooling and reading materials); no measure of spells. NLSY97: the 1997 parent interview (one year of wages and usual hours, employment breaks of six months or more in the youth's life without their reason, 1996 transfers, parents' schooling, census region). Weights of each data set; bootstrap draws of 1968 families (PSID), mothers (CYA), 1979 / 1997 households (NLSY79 / NLSY97). Source: \texttt{IGE/80.WhatIsPassedOnRest.py}, \texttt{IGE/83.CYAWhatIsPassedOn.py}, \texttt{IGE/86.NLSY79YouthWhatIsPassedOn.py}, \texttt{IGE/85.NLSY97WhatIsPassedOn.py}; table built by \texttt{IGE/90.PaperBRaceNeutralTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}

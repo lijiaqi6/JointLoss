@@ -1,0 +1,31 @@
+\begin{table}[!htbp]
+\centering
+\caption{The opening of the racial gap by entry conditions and by sector (PSID, sons)}
+\label{tab:openinggroups}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Own earnings\end{tabular} & \begin{tabular}[b]{@{}c@{}}Family income\end{tabular} \\
+ & (1) & (2) \\
+\midrule
+\multicolumn{3}{l}{\textit{A. By labor-market conditions at entry (sons entering from 1976 with a state at 17)}} \\
+Entered in a slack market & $0.362^{***}$ & $0.244^{***}$ \\
+ & (0.082) & (0.085) \\
+Entered in a tight market & $0.208^{**}$ & $0.181^{**}$ \\
+ & (0.086) & (0.086) \\
+Slack minus tight & $0.154$ & $0.063$ \\
+ & (0.119) & (0.121) \\
+\addlinespace
+\multicolumn{3}{l}{\textit{B. By the son's sector at 25--34}} \\
+All sons & $0.232^{***}$ & $0.157^{***}$ \\
+ & (0.052) & (0.055) \\
+Private sector at 25--34 & $0.213^{***}$ & $0.154^{**}$ \\
+ & (0.058) & (0.064) \\
+Government at 25--34 & $0.215^{*}$ & $0.104$ \\
+ & (0.130) & (0.124) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Opening of the White $-$ Black gap in the log IGE: mean gap at 35--49 minus mean gap at 25--34, child-year design of Table~\ref{tab:gaprobust}, bands 25--49, clusters 1968 family. Slack entry: the state unemployment rate at entry is above what state and entry-year fixed effects predict. Sector: the son's modal sector at 25--34 (government: federal, state or local; private: private company; self-employed excluded). Slack minus tight: the groups are different sons (some share families), so its standard error is approximate. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/49.PaperBPolicyShocks.py} (\texttt{output/paperB\_policy\_shocks.csv}).\end{minipage}
+\end{table}

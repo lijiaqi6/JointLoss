@@ -1,0 +1,7 @@
+job 11861496 mode full code snapshot f9eb2da7b59041fc01476be52dbb2fd38baef042 run ige_full_20261018_224217_j11861496 on node098.stanage.hpc.shef.ac.uk with 32 cores
+settings: IGE_FIX=muG,du,dgx IGE_MAXFEV=12000,12000,12000,12000,12000,12000,12000,12000 IGE_STEPS=age,rehire,xacc IGE_MODELS=A IGE_START=hpc_runs/ige_full_20261018_213123_j11860453/estimates.json:A,hpc_runs/ige_full_20261018_213123_j11860454/estimates.json:A IGE_R=20 
+/users/cm1jil/ige/.venv/lib/python3.12/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+python 3.12.13 {'numpy': '2.5.3', 'pandas': '3.0.5', 'scipy': '1.18.1', 'cma': '4.5.0'} PASS
+Q at the starting values 23123.55 (local 22856.15): FAIL
+status 1 (0 ok, 1 checks failed, 2 estimation failed, 3 post-estimation failed)

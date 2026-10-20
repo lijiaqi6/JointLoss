@@ -1,6 +1,6 @@
 r"""PSID: parents' family income in childhood and the child's adult earnings (2026-10-16).
 
-Reads the raw PSID files in Dropbox/PSID (read only) and writes IGE/data/ (not in git):
+Reads the raw PSID files in Dropbox/PSID (read only) and writes data/ (not in git):
   psid_person_year.pkl  every SRC + SEO person x wave in a family unit: interview number, sequence, relation, age,
                         sex, the family's total income, the head's race and age, and the person's own labor income
                         when head or wife (head / wife labor income; from the 1994 wave plus the labor part of

@@ -1,20 +1,20 @@
 r"""Paper A's own PSID consumption measure, 1999-2021, and consumption around single vs joint job loss (2026-10-18).
 
-Plan: IGE/proposals/fable_bps2016_nextsteps.md, Sec. 2.3 (ii) and Sec. 3 "cheaper and better": port Blundell, Pistaferri
+Plan: proposals/fable_bps2016_nextsteps.md, Sec. 2.3 (ii) and Sec. 3 "cheaper and better": port Blundell, Pistaferri
 and Saporta-Eksten's (BPS 2016, AER) nondurables-plus-services construction (psid_consumption.do / psid_interview.do of
 their replication package, read only) to Python for every PSID family file 1999-2021, and run 19's stacked event study
 on it with event time in interview waves. Period: PSID interview waves 1999-2021 (biennial; consumption is asked from
 1999; the 2023 wave is not used).
 
 Reads (read only): the raw PSID family files (Dropbox/PSID/Family, fam1999er-fam2021er), BPS's shipped psid_cons.dta and
-data4estimation.dta (checks only), IGE/data/psid_person_year.pkl, psid_displacement.pkl, correlated_shocks_fam.pkl
+data4estimation.dta (checks only), data/psid_person_year.pkl, psid_displacement.pkl, correlated_shocks_fam.pkl
 (through 25.JointJobLoss.py / 19.FatherDisplacement.py / 23.CorrelatedShocks.py, imported via importlib, no edits).
 Writes
-  IGE/data/psid_consumption_9921.pkl            household x wave consumption items (cache) + resolved crosswalk
-  IGE/output/psid_consumption_event.csv         every estimate
-  IGE/output/psid_consumption_event.md          tables (crosswalk, checks, event study)
-  IGE/output/psid_consumption_event.png         event-study figure (four panels)
-  IGE/paperA_joint_loss/fig_consumption_single_joint.pdf/.png   paper figure
+  data/psid_consumption_9921.pkl            household x wave consumption items (cache) + resolved crosswalk
+  output/psid_consumption_event.csv         every estimate
+  output/psid_consumption_event.md          tables (crosswalk, checks, event study)
+  output/psid_consumption_event.png         event-study figure (four panels)
+  paperA_joint_loss/fig_consumption_single_joint.pdf/.png   paper figure
 
 1. CONSUMPTION (BPS's categories; amounts annualised; missing items count as zero in the sums, as BPS).
    Nondurables = food at home incl. delivered (F18/F22 at home, F20/F24 delivered; the food-stamp branch reports

@@ -1,0 +1,20 @@
+15:51:49 steps ['age', 'rehire', 'xacc'], fixed at 0 ['du', 'muG']
+15:51:49 workers 30, popsize 30, maxfevals {'A': 4000, 'B': 4000, 'C': 4000, 'D': 4000, 'E': 4000, 'F': 4000, 'G': 4000, 'H': 4000}, output /mnt/parscratch/users/cm1jil/ige_smm_results/P_D_j11864839
+15:51:53 start candidates: hpc_runs/Lx4_D_j11861513/estimates.json:D Q 127.15 -> hpc_runs/Lx4_D_j11861513/estimates.json:D
+15:52:09 sensitivity at start: condition number 788.7
+15:53:37 model D iter 10 evals 300 best Q 127.15
+15:55:02 model D iter 20 evals 600 best Q 127.15
+15:56:26 model D iter 30 evals 900 best Q 127.15
+15:57:50 model D iter 40 evals 1200 best Q 127.15
+15:59:14 model D iter 50 evals 1500 best Q 127.15
+16:00:39 model D iter 60 evals 1800 best Q 127.15
+16:02:03 model D iter 70 evals 2100 best Q 127.15
+16:03:27 model D iter 80 evals 2400 best Q 127.15
+16:04:51 model D iter 90 evals 2700 best Q 127.15
+16:06:15 model D iter 100 evals 3000 best Q 127.15
+16:07:40 model D iter 110 evals 3300 best Q 127.15
+16:09:04 model D iter 120 evals 3600 best Q 127.15
+16:10:27 model D iter 130 evals 3900 best Q 127.05
+16:11:01 model D done: Q 127.03 evals 4020 stop {'maxfevals': 4000}
+16:11:20 model D: Q 127.03
+16:11:43 ALL DONE

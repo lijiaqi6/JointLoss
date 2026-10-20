@@ -1,0 +1,35 @@
+\section{How the Model Was Built}\label{app:modelsteps}
+
+The model of Section~\ref{sec:model} was not written down once. It was built in steps, each estimated by the
+simulated method of moments and compared with the step before it on the same moments and the same simulation draws
+(Table~\ref{tab:modelsteps}).
+
+\input{tab_model_steps}
+
+\paragraph{Step 1: three race hypotheses.} The first model had race in the wage level and in job loss, and three
+candidate race parameters: access to good jobs (H1), the pay-off of schooling in accumulation (H2) and the entry return
+to schooling (H3). Its lattice selected H2 and H3 together and rejected H1, but it reproduced only half of the opening:
+a White $-$ Black gap of 0.159 at 45--49 against the PSID's 0.330, a White IGE too flat after 35 and a Black IGE that rose
+with age where the data's is flat.
+
+\paragraph{Steps 2 and 3: job loss and search by age.} Its worst misfits were not in persistence but in careers:
+displacement and move rates per interview pair fall with age in the PSID and rose in the model, because biennial
+interviews after 1997 lengthen the interval at older ages. Age slopes in job loss and in the on-the-job search friction
+lowered $Q$ by 111 (model A) and 112 (model D). Without re-employment in the year of a displacement, every displacement
+produced a full year without hours and job finding out of work went to its bound; allowing it lowered $Q$ by a further 36.
+Two parameters were then fixed at zero: the match premium of good jobs, which the moments do not separate from access and
+accumulation ($+2.8$), and depreciation out of work, whose free estimate was negative ($+6.2$).
+
+\paragraph{Step 4: the pay-off of parental income.} The flat Black and rising White IGE asked for a channel through
+which parental income raises accumulation for White sons. A race-neutral pay-off alone changed nothing ($+0.3$); its
+racial difference (H4) lowered $Q$ by 42.8, and by 34.5 given H2 and H3.
+
+\paragraph{Step 5: the final lattice.} All eight combinations of H1--H3 were re-estimated with H4 in the model at
+twenty simulated sons per PSID son, each started from the best solution of the models nested in it, and H4 was tested
+at the two ends of the lattice (Section~\ref{sec:model}). A polish re-estimation of every model from its own solution
+moved no $Q$ by more than 0.12 in any of the ten runs (the eight models and the two without H4).
+
+\paragraph{Next steps.} Two steps are coded and pending estimation: a race-specific search friction out of work,
+aimed at the share of zero-hours years by race, and a job-loss rate specific to good jobs, aimed at the share in good jobs
+after 35, which the model loses through moves and displacement (Section~\ref{sec:model}, untargeted validation). An
+access probability that rises with age was profiled and rejected for that purpose.

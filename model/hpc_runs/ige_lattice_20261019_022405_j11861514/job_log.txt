@@ -1,0 +1,65 @@
+job 11861514 mode lattice code snapshot 711f4c390dc84af3b7a0c2ce408e014193792c9d run ige_lattice_20261019_022405_j11861514 on node018.stanage.hpc.shef.ac.uk with 32 cores
+settings: IGE_RUNS=/mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_A_j11861506 /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_B_j11861507 /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_F_j11861508 /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_G_j11861509 /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_C_j11861510 /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_H_j11861511 /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_E_j11861512 /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_D_j11861513 IGE_FIX=muG,du IGE_STEPS=age,rehire,xacc IGE_POLISH=0 
+/users/cm1jil/ige/.venv/lib/python3.12/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+python 3.12.13 {'numpy': '2.5.3', 'pandas': '3.0.5', 'scipy': '1.18.1', 'cma': '4.5.0'} PASS
+Q at the starting values 22856.15 (local 22856.15): PASS
+# Hypothesis lattice on common draws
+
+Runs: Lx4_A_j11861506, Lx4_B_j11861507, Lx4_F_j11861508, Lx4_G_j11861509, Lx4_C_j11861510, Lx4_H_j11861511, Lx4_E_j11861512, Lx4_D_j11861513. Seeds 7-16; Q on the 66 moments; standard errors: sandwich.
+
+## Models
+
+| Model | fixed at 0 | Q (estimation) | Q R=5 mean (sd) | Q R=20 mean (sd) | gap 30-34 | gap 45-49 | Q IGE block R=20 |
+|---|---|---|---|---|---|---|---|
+| A | a3, db1, dg1 | 138.4 | 145.1 (6.0) | 137.8 (2.7) | 0.169 | 0.274 | 6.7 |
+| B | db1, dg1 | 135.0 | 141.9 (5.0) | 134.7 (2.1) | 0.165 | 0.271 | 6.4 |
+| F | a3, db1 | 136.4 | 143.2 (5.0) | 136.1 (2.4) | 0.164 | 0.265 | 6.7 |
+| G | a3, dg1 | 138.2 | 144.4 (5.5) | 137.6 (2.4) | 0.169 | 0.275 | 6.5 |
+| C | db1 | 133.8 | 140.6 (4.4) | 133.7 (1.9) | 0.164 | 0.266 | 6.3 |
+| H | dg1 | 135.0 | 141.9 (5.0) | 134.7 (2.1) | 0.165 | 0.271 | 6.4 |
+| E | a3 | 127.6 | 132.9 (4.4) | 127.6 (2.3) | 0.164 | 0.282 | 4.7 |
+| D | - | 127.1 | 131.9 (3.3) | 126.2 (2.2) | 0.162 | 0.279 | 4.8 |
+
+## Hypotheses: drop in Q when the parameter is added (mean, sd and min over seeds)
+
+| Hypothesis | test | models | R=5 | R=20 | > 3.84 at every seed (R=20) | estimate (sandwich s.e.) |
+|---|---|---|---|---|---|---|
+| H1 access (a3) | alone | A -> B | 3.3 (2.1; min 0.2) | 3.2 (1.0; min 1.4) | no | -0.2739* (0.1404), p = 0.051 |
+| H1 access (a3) | given dg1 | F -> C | 2.6 (1.7; min 0.4) | 2.5 (0.8; min 1.4) | no | -0.2429 (0.1700), p = 0.153 |
+| H1 access (a3) | given db1 | G -> H | 2.5 (1.9; min 0.2) | 2.9 (0.9; min 1.1) | no | -0.2739** (0.1389), p = 0.049 |
+| H1 access (a3) | given db1 + dg1 | E -> D | 1.1 (1.4; min -0.7) | 1.4 (0.6; min 0.5) | no | -0.1401 (0.1840), p = 0.446 |
+| H2 pay-off of schooling in accumulation (dg1) | alone | A -> F | 2.0 (2.2; min -2.1) | 1.7 (1.0; min 0.3) | no | -0.0020 (0.0021), p = 0.339 |
+| H2 pay-off of schooling in accumulation (dg1) | given a3 | B -> C | 1.3 (2.0; min -2.3) | 1.0 (0.7; min -0.2) | no | -0.0014 (0.0021), p = 0.492 |
+| H2 pay-off of schooling in accumulation (dg1) | given db1 | G -> E | 11.5 (2.0; min 8.2) | 9.9 (1.3; min 8.1) | yes | -0.0085*** (0.0032), p = 0.009 |
+| H2 pay-off of schooling in accumulation (dg1) | given a3 + db1 | H -> D | 10.0 (2.6; min 7.4) | 8.5 (1.0; min 7.2) | yes | -0.0075** (0.0032), p = 0.019 |
+| H3 entry return to schooling (db1) | alone | A -> G | 0.7 (1.1; min -0.9) | 0.3 (0.4; min -0.6) | no | 0.0020 (0.0096), p = 0.835 |
+| H3 entry return to schooling (db1) | given a3 | B -> H | 0.0 (0.0; min 0.0) | 0.0 (0.0; min 0.0) | no | 0.0000 (0.0095), p = 1.000 |
+| H3 entry return to schooling (db1) | given dg1 | F -> E | 10.3 (1.8; min 7.7) | 8.5 (0.8; min 7.3) | yes | 0.0369** (0.0147), p = 0.012 |
+| H3 entry return to schooling (db1) | given a3 + dg1 | C -> D | 8.7 (2.4; min 6.3) | 7.5 (0.8; min 6.6) | yes | 0.0347** (0.0147), p = 0.018 |
+
+## Untargeted: same-employer growth at 25-34 on log parental income (mean over seeds)
+
+| Model | White raw | Black raw | White net of schooling | Black net of schooling |
+|---|---|---|---|---|
+| PSID | 0.0192 (0.0056) | 0.0068 (0.0084) | 0.0059 (0.0060) | 0.0054 (0.0090) |
+| A | 0.0180 | 0.0033 | 0.0095 | 0.0004 |
+| B | 0.0172 | 0.0027 | 0.0083 | -0.0003 |
+| F | 0.0188 | 0.0044 | 0.0097 | 0.0016 |
+| G | 0.0173 | 0.0026 | 0.0088 | -0.0004 |
+| C | 0.0179 | 0.0034 | 0.0087 | 0.0006 |
+| H | 0.0172 | 0.0027 | 0.0083 | -0.0003 |
+| E | 0.0189 | 0.0017 | 0.0085 | 0.0001 |
+| D | 0.0181 | 0.0012 | 0.0079 | -0.0005 |
+
+## Nesting checks (a more general model must not fit worse)
+
+38 pairs x seeds checked; pairs with a violation at some seed:
+- F vs A (R=5): mean margin 2.0, min -2.1, 1 of 10 seeds
+- G vs A (R=5): mean margin 0.7, min -0.9, 3 of 10 seeds
+- G vs A (R=20): mean margin 0.3, min -0.6, 3 of 10 seeds
+- C vs A (R=5): mean margin 4.6, min -1.2, 1 of 10 seeds
+- C vs B (R=5): mean margin 1.3, min -2.3, 2 of 10 seeds
+- C vs B (R=20): mean margin 1.0, min -0.2, 1 of 10 seeds
+- D vs E (R=5): mean margin 1.1, min -0.7, 2 of 10 seeds
+status 0 (0 ok, 1 checks failed, 2 estimation failed, 3 post-estimation failed)

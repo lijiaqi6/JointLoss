@@ -1,4 +1,4 @@
-"""WP10 (b) of IGE/proposals/fable_10h_plan_paperA.md (2026-10-20): separated wives' employment in the model, from one
+"""WP10 (b) of proposals/fable_10h_plan_paperA.md (2026-10-20): separated wives' employment in the model, from one
 stored simulation at --start (default: the analytic start), built as 'estimate.py evaluate --start' builds it
 (post_common.setup / simulate_only). The model has no child support and no remarriage, so the simulated rate is the
 child-support-free, never-remarried benchmark that WP3's PSID rate is compared with.
@@ -8,7 +8,7 @@ employed; hrs_w > 0 positive hours; k = youngest child (0 none, 1 aged 0-5, 2 ag
 hrs_w > 0 (as bps_check.monthly_panel). Wife's age 25 + (t from entry) / 12. Calendar years 1984-2008 (the simulation
 window; the PSID comparison window is set by WP3).
 Output: results/sep_state_<stamp>/sep_state.json and sep_state.csv (aggregates only).
-Run: .venv/Scripts/python.exe IGE/paperA_model/sep_state_sim.py [--start <best.json>] [--K 3] [--threads 14]
+Run: .venv/Scripts/python.exe paperA_model/sep_state_sim.py [--start <best.json>] [--K 3] [--threads 14]
 """
 from __future__ import annotations
 

@@ -1,6 +1,6 @@
 r"""State x year labor-market shocks for the first stage (2026-10-17).
 
-Writes IGE/data/state_shocks.pkl (one row per state FIPS x year) and IGE/output/state_shocks_checks.md.
+Writes data/state_shocks.pkl (one row per state FIPS x year) and output/state_shocks_checks.md.
 Self-contained (no import from common.py) so that it can be run with `python -I`, as the BLS download is untrusted
 data.
 
@@ -40,7 +40,7 @@ import os
 DROPBOX = Path(os.environ.get("DROPBOX", Path.home() / "Dropbox"))   # raw data, read only (Mac: export DROPBOX)
 
 HERE = Path(__file__).resolve().parent
-DATA, OUT = Path(os.environ.get("JOINTLOSS_DATA", HERE / "data")), HERE / "output"
+DATA, OUT = Path(os.environ.get("IGE_DATA", HERE / "data")), HERE / "output"
 MORG = Path(DROPBOX / "MORG")
 BLS = Path(DROPBOX / "BLS")
 UKCPR = HERE.parent / "ExternalData" / "ukcpr_national_welfare_data_1980_2024_jan26update.xlsx"

@@ -8,7 +8,7 @@ For each size (params.SIZES) a fresh subprocess (clean memory) on --threads thre
   * peak resident memory of the process (psutil, sampled every 50 ms) and the stored solution's size.
 Evaluation time = (problems x eras) x seconds per solve + simulation.
 
-Run: .venv/Scripts/python.exe IGE/paperA_model/bench.py [--sizes full a_hc5 ...] [--threads 2] [--K 3]
+Run: .venv/Scripts/python.exe paperA_model/bench.py [--sizes full a_hc5 ...] [--threads 2] [--K 3]
 Writes results/bench_<threads>t.json and prints the table.
 """
 from __future__ import annotations

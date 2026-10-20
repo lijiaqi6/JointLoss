@@ -124,6 +124,6 @@ variance, and BPS's trims remove a further 0.001-0.002. We therefore set the mod
 BPS's estimator on the simulated data, with its measurement-error correction exact, returns BPS's published
 0.0275 and 0.0125.
 
-Files: `IGE/paperA_model/bps_trim_test.py`, `IGE/bps_reconciliation/code/{bps_on_sim_me.do, ovr_me0.do,
+Files: `paperA_model/bps_trim_test.py`, `bps_reconciliation/code/{bps_on_sim_me.do, ovr_me0.do,
 smoke_sim_dgp_steps.py}`; numbers in `results/bps_trim_20261020_010756/{bps_trim.json, smoke_steps_results.json}`;
 panels in `%TEMP%/paperA_bps_wp1*` (not in the repo). No model-path file, input or target was touched; no `--apply`.

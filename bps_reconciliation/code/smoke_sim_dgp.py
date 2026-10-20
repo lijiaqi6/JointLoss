@@ -1,4 +1,4 @@
-﻿r"""Synthetic smoke test of the BPS harness (IGE/bps_reconciliation, 2026-10-18). Results: HARNESS.md.
+﻿r"""Synthetic smoke test of the BPS harness (bps_reconciliation, 2026-10-18). Results: HARNESS.md.
 
 A simple monthly couple panel with KNOWN wage-shock variances is generated in the schema of sim_panel_writer.py,
 written to BPS's layout by the writer (with and without measurement error), and run through bps_on_sim.do.

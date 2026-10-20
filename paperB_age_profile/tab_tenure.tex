@@ -1,0 +1,48 @@
+\begin{table}[!htbp]
+\centering
+\caption{Wage--tenure profiles by parental income (PSID, sons, person fixed effects)}
+\label{tab:tenure}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccc}
+\toprule
+Panel / regressor & \begin{tabular}[b]{@{}c@{}}ln wage\end{tabular} & \begin{tabular}[b]{@{}c@{}}Occupation\\score\end{tabular} & \begin{tabular}[b]{@{}c@{}}Within-\\occupation\\residual\end{tabular} \\
+ & (1) & (2) & (3) \\
+\midrule
+\multicolumn{4}{l}{\textit{Pooled (weighted)}} \\
+Tenure (per 10 years) & $0.242^{***}$ & $0.037^{***}$ & $0.206^{***}$ \\
+ & (0.019) & (0.009) & (0.021) \\
+Tenure squared & $-0.076^{***}$ & $-0.007^{**}$ & $-0.068^{***}$ \\
+ & (0.007) & (0.003) & (0.008) \\
+Tenure $\times$ ln parental income & $0.032^{**}$ & $-0.015^{**}$ & $0.047^{***}$ \\
+ & (0.014) & (0.008) & (0.016) \\
+Son-years & 30,561 & 30,561 & 30,561 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Black}} \\
+Tenure (per 10 years) & $0.268^{***}$ & $0.056^{***}$ & $0.212^{***}$ \\
+ & (0.030) & (0.015) & (0.032) \\
+Tenure squared & $-0.065^{***}$ & $-0.012^{**}$ & $-0.053^{***}$ \\
+ & (0.010) & (0.005) & (0.011) \\
+Tenure $\times$ ln parental income & $0.003$ & $-0.010$ & $0.013$ \\
+ & (0.019) & (0.009) & (0.019) \\
+Son-years & 10,217 & 10,217 & 10,217 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{White}} \\
+Tenure (per 10 years) & $0.233^{***}$ & $0.037^{***}$ & $0.196^{***}$ \\
+ & (0.019) & (0.010) & (0.021) \\
+Tenure squared & $-0.075^{***}$ & $-0.006$ & $-0.069^{***}$ \\
+ & (0.007) & (0.004) & (0.008) \\
+Tenure $\times$ ln parental income & $0.046^{***}$ & $-0.023^{***}$ & $0.068^{***}$ \\
+ & (0.016) & (0.009) & (0.019) \\
+Son-years & 20,357 & 20,357 & 20,357 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{White $-$ Black}} \\
+Tenure (per 10 years) & $-0.035$ & $-0.019$ & $-0.016$ \\
+ & (0.035) & (0.018) & (0.038) \\
+Tenure $\times$ ln parental income & $0.042^{*}$ & $-0.013$ & $0.055^{**}$ \\
+ & (0.025) & (0.012) & (0.027) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Within-son regressions (person fixed effects) of the outcome in the header on tenure with the present employer (per 10 years), its square and tenure interacted with centred log parental income, with a quartic in age and year fixed effects (waves 1984--2023). Within-son tenure slopes mix the return to seniority with the selection of good matches, so they are descriptive wage--tenure profiles. Standard errors clustered by 1968 family. Occupational wage score: mean log hourly wage of men aged 25--64 in the occupation relative to all men (CPS MORG, base 1992--2002), occupations harmonised to Dorn's occ1990dd scheme; log wage = score (between occupations) + residual (within occupation), so the score and residual columns add up to the log-wage column on the same sample. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/27.CareerWageGrowth.py} (\texttt{output/career\_wage\_growth.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

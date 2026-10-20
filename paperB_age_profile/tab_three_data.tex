@@ -1,0 +1,33 @@
+\begin{table}[!htbp]
+\centering
+\caption{The opening of the racial gap in four public data sets (sons, ages 25--44)}
+\label{tab:threedata}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}PSID\end{tabular} & \begin{tabular}[b]{@{}c@{}}NLSY79\end{tabular} & \begin{tabular}[b]{@{}c@{}}NLSY97\end{tabular} & \begin{tabular}[b]{@{}c@{}}NLSY79\\children\end{tabular} & \begin{tabular}[b]{@{}c@{}}Pooled\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{l}{\textit{Own earnings}} \\
+One year of parental income & $0.151^{***}$ & $0.088^{**}$ & $0.058$ & $-0.098$ & $0.086^{***}$ \\
+ & (0.042) & (0.045) & (0.040) & (0.094) & (0.024) \\
+One year, corrected by each data set's reliability ratio & $0.260^{***}$ & $0.160^{**}$ & $0.131$ &  & $0.191^{***}$ \\
+ & (0.073) & (0.081) & (0.086) &  & (0.046) \\
+Each data set's main parental measure & $0.211^{***}$ & $0.042$ & $0.058$ & $-0.103$ &  \\
+ & (0.048) & (0.042) & (0.040) & (0.106) &  \\
+Equality across data sets &  &  &  &  & one year: 4 data sets, $Q$ p=0.079; corrected: $Q$=1.53, p=0.466 \\
+\addlinespace
+\multicolumn{6}{l}{\textit{Family income}} \\
+One year of parental income & $0.088^{**}$ & $0.072$ & $0.079^{*}$ &  & $0.080^{***}$ \\
+ & (0.041) & (0.045) & (0.043) &  & (0.025) \\
+One year, corrected by each data set's reliability ratio & $0.149^{**}$ & $0.130$ & $0.179^{*}$ &  & $0.151^{***}$ \\
+ & (0.072) & (0.082) & (0.092) &  & (0.046) \\
+Each data set's main parental measure & $0.137^{***}$ & $0.064$ & $0.079^{*}$ &  &  \\
+ & (0.048) & (0.045) & (0.043) &  &  \\
+Equality across data sets &  &  &  &  & one year: 3 data sets, $Q$ p=0.965; corrected: $Q$=0.16, p=0.923 \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Opening of the White $-$ Black gap in the log IGE: mean gap at 35--39 and 40--44 minus mean gap at 25--29 and 30--34, child-year design, clustered by family (CYA: mother). One year of parental income: PSID the wave at child age 12--16 nearest 14, NLSY79 1978 income, NLSY97 1996 income, NLSY79 children: the mother's family income in the year nearest the child's age 14. Corrected: each race's IGE divided by that data set's reliability ratio of one year of family income (PSID White 0.585, Black 0.565; NLSY79 0.552, 0.556; NLSY97 0.430, 0.492), with the ratios' sampling error propagated. Main measures: PSID mean at 13--19, NLSY79 1978--80 mean, NLSY97 1996, NLSY79 children the mother's mean family income at the child's 13--19; main measures are not pooled because the four differ in reliability. NLSY79 children: wage and salary income, children of NLSY79 mothers, few observed at 35--44 (93 White and 120 Black sons at 40--44, born when their mothers were 23 or younger). Pooled: inverse-variance weighted. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/41.AgeProfileMeasurement.py} (\texttt{output/age\_profile\_measurement.csv}), \texttt{IGE/46.AgeProfileRound2.py} and \texttt{IGE/33.AgeProfileRobustness.py}.\end{minipage}
+\end{table}

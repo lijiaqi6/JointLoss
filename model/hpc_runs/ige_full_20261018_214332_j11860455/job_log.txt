@@ -1,0 +1,24 @@
+job 11860455 mode full code snapshot 745f0c0a8ba66dd1ad2b17b3e6fb9ee0af82a751 run ige_full_20261018_214332_j11860455 on node068.stanage.hpc.shef.ac.uk with 32 cores
+settings: IGE_FIX=muG,du,dgx IGE_MAXFEV=12000,12000,12000,12000,12000,12000,12000,12000 IGE_STEPS=age,rehire,xacc IGE_POLISH=3000 IGE_SET=gx=0.008 IGE_MODELS=E IGE_START=hpc_runs/ige_full_20261018_200456_j11859362/estimates.json:D 
+/users/cm1jil/ige/.venv/lib/python3.12/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+python 3.12.13 {'numpy': '2.5.3', 'pandas': '3.0.5', 'scipy': '1.18.1', 'cma': '4.5.0'} PASS
+Q at the starting values 22856.15 (local 22856.15): PASS
+/users/cm1jil/ige/.venv/lib/python3.12/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+# Post-estimation, model E
+
+Q at the estimate 158.9; at other simulation seeds 169.9, 167.8.
+
+| Experiment | gap 30-34 (level or change) | p | gap 45-49 | p | mean log wage 25-34 B | W |
+|---|---|---|---|---|---|---|
+| Baseline | 0.076*** (0.012) | 0.000 | 0.165*** (0.017) | 0.000 | 2.408 | 2.719 |
+| Equalising schooling | -0.013*** (0.003) | 0.000 | -0.023*** (0.004) | 0.000 | 0.009 | 0.000 |
+| Equal access by parental income (a1 = 0) | -0.005** (0.002) | 0.048 | -0.011** (0.006) | 0.047 | 0.001 | -0.002 |
+| Equal pay-off of schooling (dg1 = 0) | -0.035*** (0.010) | 0.001 | -0.047*** (0.014) | 0.001 | 0.032 | 0.000 |
+| Equal displacement risk (d0B = d0W) | 0.004* (0.002) | 0.071 | 0.004 (0.003) | 0.168 | 0.032 | 0.000 |
+| Depreciation out of work halved | 0.000 (0.000) | nan | 0.000 (0.000) | nan | 0.000 | 0.000 |
+| Recession at entry (+3 points, 3 years) | -0.004*** (0.001) | 0.001 | -0.002* (0.001) | 0.063 | -0.021 | -0.013 |
+
+Entry wage scar per point (recession / 3): Black -0.0070, White -0.0043; PSID (paper Section 7) -0.013** per point of state unemployment at entry.
+status 0 (0 ok, 1 checks failed, 2 estimation failed, 3 post-estimation failed)

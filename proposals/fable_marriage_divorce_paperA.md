@@ -1,10 +1,10 @@
 # Paper A: should marriage and divorce be modelled? (2026-10-18)
 
 Independent note for the PI's question: "Should we instead model marriage and divorce? Will that improve the fit,
-given we find joint loss causes break-up?" Read only: `IGE/paperA_joint_loss/sec1_introduction.tex`,
+given we find joint loss causes break-up?" Read only: `paperA_joint_loss/sec1_introduction.tex`,
 `sec2_literature.tex`, `sec5_household.tex`, `sec7_model.tex`, `model_document.tex` (Sections 11 and 17, D1-D18);
-`IGE/paperA_model/model.py`, `simulate.py`, `panels.py`, `analytic_start.py`; `results/diagnostics_20261018/`
-(`variants.csv`, `q_by_block_by_variant.csv`, `moments_by_variant.csv`); `IGE/output/paperA_targets.csv`,
+`paperA_model/model.py`, `simulate.py`, `panels.py`, `analytic_start.py`; `results/diagnostics_20261018/`
+(`variants.csv`, `q_by_block_by_variant.csv`, `moments_by_variant.csv`); `output/paperA_targets.csv`,
 `father_displacement.md`, `psid_joint_loss_checks.md`; my notes `fable_model_choice_paperA.md`,
 `fable_bps2016_nextsteps.md`, `fable_bacher2025_paperA.md`, `fable_estimation_review_paperA.md`; the companion
 paper's collective-household result (`paper/sec4_model.tex`, "Who decides in a marriage") and the Voena (2015)

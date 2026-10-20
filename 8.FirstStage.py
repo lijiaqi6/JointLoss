@@ -21,7 +21,7 @@ Data (raw files read only):
   race      race of the head of the woman's family unit (psid_person_year.pkl `hrace`) in the year before the birth
             (nearest wave); White and Black only.
   education highest 'COMPLETED EDUCATION' (years, 1-17) reported in any wave of the individual file.
-  shocks    IGE/data/state_shocks.pkl from 8a.StateShocks.py (LAUS unemployment rate; CPS-MORG Bartik shocks).
+  shocks    data/state_shocks.pkl from 8a.StateShocks.py (LAUS unemployment rate; CPS-MORG Bartik shocks).
 
 Writes output/first_stage.csv (every coefficient) and output/first_stage.md (tables + sample checks), and the
 analysis file data/first_stage_births.pkl.

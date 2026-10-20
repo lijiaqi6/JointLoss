@@ -1,12 +1,12 @@
 r"""Targets of the two pre-built Paper A model extensions (2026-10-19), aggregate rows only.
 
-Writes IGE/output/paperA_targets_ext.csv: the columns of IGE/output/paperA_targets.csv plus 'ext' (the extension of
-IGE/paperA_model/estimate.py whose targets the row belongs to). estimate.py merges these rows into the target vector
+Writes output/paperA_targets_ext.csv: the columns of output/paperA_targets.csv plus 'ext' (the extension of
+paperA_model/estimate.py whose targets the row belongs to). estimate.py merges these rows into the target vector
 ONLY when the extension is on (or its targets are requested with --ext-targets); rows with target = 0 are reported
 checks (in the fit tables, outside the objective). Nothing in IGE/60-65 is edited; 63's SIPP sample is rebuilt here
 with 63's own loaders (imported read only) and its scratch cache (outside the repository).
 
-ext = new_job (new-job separation hazard; evidence IGE/proposals/wife_exit_evidence.md, IGE/63)
+ext = new_job (new-job separation hazard; evidence proposals/wife_exit_evidence.md, IGE/63)
   sipp_wexit_ten_0_5, sipp_wexit_ten_6_11, sipp_wexit_ten_12p (targets): the persistent monthly exit of married wives
     (25-59) by the tenure of the job held at t: employed at t-1 and t, not employed at t+1 and t+2 (RMESR 6-8: no job
     in any week of the month), husband employed at t and t+1, all four months observed (63's sample exactly); tenure =
@@ -19,7 +19,7 @@ ext = new_job (new-job separation hazard; evidence IGE/proposals/wife_exit_evide
     non-employed month (63, table iv, all persistent exits; 100-replication cluster bootstrap s.e. from 63).
   psid_wexit_repeat2 (reported): share of PSID couples with an annual exit (hours > 0 in t, 0 in t+1, same couple,
     husband working both years, annual years 1968-1996) that have two or more (63, v-repeat; binomial s.e.).
-ext = her_sep (separation hazard after HER displacement; evidence IGE/proposals/separation_ui_evidence.md, IGE/64/65)
+ext = her_sep (separation hazard after HER displacement; evidence proposals/separation_ui_evidence.md, IGE/64/65)
   psid_es_bh_present_13 (target), psid_es_bh_present_46 (reported): 'still with the baseline husband', mean of the
     event-time coefficients e = +1..+3 (+4..+6) after her first displacement, 64's M3 design (wives of male heads,
     baseline with a child 0-17 and positive own hours; clean controls not displaced to ev + 6; person x stack and year

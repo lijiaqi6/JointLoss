@@ -6,7 +6,7 @@ simulation-noise runs at the truth (estimate.py noise), the simulation-noise sta
 with G the Jacobian columns of the run's free parameters, W the run's weighting matrix and Sigma_sim the covariance of
 the simulated moments across CRN seeds; pass = |estimate - truth| < 2 se_noise for every parameter and Q at the
 estimate below Q at the truth plus the noise band (the spread of Q across seeds).
-Run: python IGE/paperA_model/recovery_report.py <run dir> <jacobian dir> <noise dir>
+Run: python paperA_model/recovery_report.py <run dir> <jacobian dir> <noise dir>
 A polish run (estimate.py polish --pseudo) holds all three in its own folder (jacobian.npz at the estimate,
 moments_by_seed.npy from the s.e. re-simulations) and writes this report itself.
 Writes <run dir>/recovery_report.md and .csv (aggregate numbers only).

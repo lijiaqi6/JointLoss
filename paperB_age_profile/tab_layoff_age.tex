@@ -1,0 +1,47 @@
+\begin{table}[!htbp]
+\centering
+\caption{A childhood layoff costs the son more as he ages (PSID)}
+\label{tab:layoff_age}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}25--29\end{tabular} & \begin{tabular}[b]{@{}c@{}}30--34\end{tabular} & \begin{tabular}[b]{@{}c@{}}35--39\end{tabular} & \begin{tabular}[b]{@{}c@{}}40--44\end{tabular} & \begin{tabular}[b]{@{}c@{}}45--49\end{tabular} & \begin{tabular}[b]{@{}c@{}}50--55\end{tabular} & \begin{tabular}[b]{@{}c@{}}Change\\45--49 minus\\25--29\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) & (6) & (7) \\
+\midrule
+\multicolumn{8}{l}{\textit{A. Ln earnings, single-age dummies}} \\
+Father laid off or fired, all sons & $0.146$ & $-0.006$ & $-0.110$ & $-0.241$ & $-0.768^{***}$ & $-0.543$ & $-0.914^{***}$ \\
+ & (0.111) & (0.135) & (0.157) & (0.216) & (0.272) & (0.369) & (0.252) \\
+Father's plant closed, all sons & $0.127$ & $0.143$ & $0.415^{**}$ & $0.229$ & $0.127$ & $-0.018$ & $0.000$ \\
+ & (0.144) & (0.199) & (0.188) & (0.260) & (0.295) & (0.397) & (0.258) \\
+Father laid off or fired, White sons & $0.158$ & $-0.033$ & $-0.097$ & $-0.267$ & $-0.818^{***}$ & $-0.621$ & $-0.975^{***}$ \\
+ & (0.118) & (0.149) & (0.174) & (0.232) & (0.297) & (0.442) & (0.274) \\
+Father laid off or fired, Black sons & $-0.218$ & $-0.064$ & $-0.379$ & $-0.107$ & $-0.351$ & $-0.133$ & $-0.133$ \\
+ & (0.279) & (0.341) & (0.453) & (0.473) & (0.444) & (0.321) & (0.431) \\
+\addlinespace
+\multicolumn{8}{l}{\textit{B. Ln earnings, with five-year birth-cohort dummies}} \\
+Father laid off or fired, all sons & $0.127$ & $-0.013$ & $-0.116$ & $-0.245$ & $-0.739^{***}$ & $-0.543$ & $-0.866^{***}$ \\
+ & (0.108) & (0.140) & (0.159) & (0.218) & (0.260) & (0.351) & (0.242) \\
+Father's plant closed, all sons & $0.106$ & $0.121$ & $0.412^{**}$ & $0.220$ & $0.086$ & $-0.038$ & $-0.020$ \\
+ & (0.146) & (0.200) & (0.189) & (0.259) & (0.286) & (0.394) & (0.253) \\
+Father laid off or fired, White sons & $0.152$ & $-0.037$ & $-0.097$ & $-0.273$ & $-0.774^{***}$ & $-0.614$ & $-0.926^{***}$ \\
+ & (0.118) & (0.154) & (0.175) & (0.235) & (0.284) & (0.419) & (0.263) \\
+Father laid off or fired, Black sons & $-0.334$ & $-0.037$ & $-0.383$ & $-0.096$ & $-0.408$ & $-0.094$ & $-0.075$ \\
+ & (0.286) & (0.342) & (0.451) & (0.426) & (0.437) & (0.343) & (0.441) \\
+\addlinespace
+\multicolumn{8}{l}{\textit{C. Which outcome: father laid off or fired (columns 25--29, 45--49 and the change)}} \\
+All sons: ln annual earnings & $0.146$ &  &  &  & $-0.768^{***}$ &  & $-0.914^{***}$ \\
+ & (0.111) &  &  &  & (0.272) &  & (0.252) \\
+All sons: ln hourly wage & $0.046$ &  &  &  & $-0.557^{***}$ &  & $-0.603^{***}$ \\
+ & (0.089) &  &  &  & (0.213) &  & (0.203) \\
+All sons: ln annual hours (employed) & $0.100^{*}$ &  &  &  & $-0.211$ &  & $-0.311^{**}$ \\
+ & (0.059) &  &  &  & (0.143) &  & (0.139) \\
+All sons: employed & $0.050^{*}$ &  &  &  & $0.083$ &  & $0.033$ \\
+ & (0.026) &  &  &  & (0.078) &  & (0.080) \\
+All sons: his share of years unemployed & $0.008$ &  &  &  & $0.030$ &  & $0.022$ \\
+ & (0.075) &  &  &  & (0.086) &  & (0.103) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Coefficient of the father's share of the son's ages 13--19 with a layoff or firing (PSID 'laid off / fired') or a plant closure ('plant closed / moved') on the son's outcome in each age band, holding ln parental income and every component of Table~\ref{tab:passed_on}, panel A, fixed; single-age dummies; PSID weights. The share is over seven years, so one year with a layoff is one seventh of the coefficient. Father present; mean layoff share 0.044, 12 percent of sons have a layoff year. Standard errors from 200 cluster-bootstrap draws of 1968 families. Source: \texttt{IGE/88.LayoffCostByAge.py}; table built by \texttt{IGE/90.PaperBRaceNeutralTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}

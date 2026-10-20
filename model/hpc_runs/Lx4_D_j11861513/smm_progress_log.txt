@@ -1,0 +1,47 @@
+01:39:42 steps ['age', 'rehire', 'xacc'], fixed at 0 ['du', 'muG']
+01:39:42 workers 30, popsize 30, maxfevals {'A': 12000, 'B': 12000, 'C': 12000, 'D': 12000, 'E': 12000, 'F': 12000, 'G': 12000, 'H': 12000}, output /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_D_j11861513
+01:39:47 start candidates: /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_C_j11861510/estimates.json:C Q 133.78; /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_H_j11861511/estimates.json:H Q 134.98; /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_E_j11861512/estimates.json:E Q 127.62; hpc_runs/ige_full_20261018_215612_j11860456/estimates.json:E Q 133.08 -> /mnt/parscratch/users/cm1jil/ige_smm_results/Lx4_E_j11861512/estimates.json:E
+01:39:58 sensitivity at start: condition number 760.1
+01:41:07 model D iter 10 evals 300 best Q 127.62
+01:42:12 model D iter 20 evals 600 best Q 127.62
+01:43:14 model D iter 30 evals 900 best Q 127.62
+01:44:16 model D iter 40 evals 1200 best Q 127.62
+01:45:16 model D iter 50 evals 1500 best Q 127.62
+01:46:19 model D iter 60 evals 1800 best Q 127.62
+01:47:26 model D iter 70 evals 2100 best Q 127.62
+01:48:25 model D iter 80 evals 2400 best Q 127.62
+01:49:26 model D iter 90 evals 2700 best Q 127.62
+01:50:27 model D iter 100 evals 3000 best Q 127.62
+01:51:28 model D iter 110 evals 3300 best Q 127.62
+01:52:29 model D iter 120 evals 3600 best Q 127.62
+01:53:29 model D iter 130 evals 3900 best Q 127.62
+01:54:30 model D iter 140 evals 4200 best Q 127.62
+01:55:31 model D iter 150 evals 4500 best Q 127.62
+01:56:32 model D iter 160 evals 4800 best Q 127.62
+01:57:32 model D iter 170 evals 5100 best Q 127.62
+01:58:33 model D iter 180 evals 5400 best Q 127.59
+01:59:34 model D iter 190 evals 5700 best Q 127.53
+02:00:36 model D iter 200 evals 6000 best Q 127.44
+02:01:43 model D iter 210 evals 6300 best Q 127.38
+02:02:44 model D iter 220 evals 6600 best Q 127.38
+02:03:46 model D iter 230 evals 6900 best Q 127.36
+02:04:46 model D iter 240 evals 7200 best Q 127.31
+02:05:47 model D iter 250 evals 7500 best Q 127.30
+02:06:47 model D iter 260 evals 7800 best Q 127.26
+02:07:48 model D iter 270 evals 8100 best Q 127.25
+02:08:49 model D iter 280 evals 8400 best Q 127.22
+02:09:50 model D iter 290 evals 8700 best Q 127.22
+02:10:50 model D iter 300 evals 9000 best Q 127.22
+02:11:50 model D iter 310 evals 9300 best Q 127.20
+02:12:53 model D iter 320 evals 9600 best Q 127.19
+02:13:54 model D iter 330 evals 9900 best Q 127.16
+02:14:57 model D iter 340 evals 10200 best Q 127.16
+02:15:59 model D iter 350 evals 10500 best Q 127.16
+02:17:02 model D iter 360 evals 10800 best Q 127.15
+02:18:02 model D iter 370 evals 11100 best Q 127.15
+02:19:02 model D iter 380 evals 11400 best Q 127.15
+02:20:02 model D iter 390 evals 11700 best Q 127.15
+02:21:03 model D iter 400 evals 12000 best Q 127.15
+02:21:09 model D done: Q 127.15 evals 12030 stop {'maxfevals': 12000}
+02:21:25 model D: Q 127.15
+02:21:49 ALL DONE

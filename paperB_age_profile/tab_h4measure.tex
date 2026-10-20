@@ -1,0 +1,33 @@
+\begin{table}[!htbp]
+\centering
+\caption{The pay-off of parental income in long differences, by measure of parental income}
+\label{tab:h4measure}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Ten years (25--29 to 35--39)} & \multicolumn{2}{c}{Twenty years (to 45--49)} \\
+ & raw & net of schooling & raw & net of schooling \\
+\midrule
+\multicolumn{5}{l}{\textit{White sons}} \\
+\quad PSID, parental income 13--19 mean (the paper's) & $0.180^{***}$ (0.025) & $0.073^{***}$ (0.027) & $0.242^{***}$ (0.046) & $0.135^{***}$ (0.051) \\
+\quad PSID, 12--17 mean & $0.167^{***}$ (0.025) & $0.055^{**}$ (0.028) & $0.232^{***}$ (0.050) & $0.116^{**}$ (0.050) \\
+\quad PSID, one year at 16 & $0.062^{***}$ (0.022) & $0.005$ (0.019) & $0.028$ (0.047) & $-0.015$ (0.036) \\
+\quad NLSY79, 1979--81 mean & $0.081^{***}$ (0.020) & $-0.001$ (0.021) & $0.139^{***}$ (0.027) & $0.021$ (0.026) \\
+\quad PSID, sons born 1957--64, 13--19 mean & $0.088^{**}$ (0.042) & $-0.010$ (0.050) & $0.258^{***}$ (0.070) & $0.118$ (0.087) \\
+\quad NLSY97, one year (1996; schooling: degree dummies) & $0.053^{***}$ (0.019) & $0.000$ (0.023) &  &  \\
+\quad model E, 13--19 mean & $0.160$ [0.002] & $0.069$ [0.002] & $0.226$ [0.003] & $0.097$ [0.004] \\
+\quad model E, the same sons' one-year measure & $0.076$ [0.002] & $0.028$ [0.002] & $0.094$ [0.002] & $0.035$ [0.003] \\
+\multicolumn{5}{l}{\textit{Black sons}} \\
+\quad PSID, parental income 13--19 mean (the paper's) & $0.064^{**}$ (0.028) & $0.040$ (0.031) & $0.026$ (0.057) & $-0.002$ (0.057) \\
+\quad PSID, 12--17 mean & $0.064^{**}$ (0.031) & $0.041$ (0.033) & $0.007$ (0.059) & $-0.024$ (0.057) \\
+\quad PSID, one year at 16 & $0.056^{**}$ (0.027) & $0.038$ (0.029) & $0.051$ (0.046) & $0.034$ (0.048) \\
+\quad NLSY79, 1979--81 mean & $0.027$ (0.019) & $-0.007$ (0.019) & $0.081^{***}$ (0.024) & $0.028$ (0.024) \\
+\quad PSID, sons born 1957--64, 13--19 mean & $-0.004$ (0.070) & $-0.038$ (0.055) & $-0.164$ (0.104) & $-0.195^{**}$ (0.086) \\
+\quad NLSY97, one year (1996; schooling: degree dummies) & $0.050$ (0.031) & $0.024$ (0.030) &  &  \\
+\quad model E, 13--19 mean & $0.026$ [0.003] & $0.009$ [0.003] & $0.030$ [0.003] & $0.012$ [0.004] \\
+\quad model E, the same sons' one-year measure & $0.020$ [0.003] & $0.007$ [0.003] & $0.023$ [0.002] & $0.009$ [0.003] \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Change of a son's own mean log hourly wage between the bands on log parental income, sons with a wage in both bands, by race; columns 2 and 4 control for years of schooling. PSID: the model's sample of sons, parental income measured as the 13--19 mean (the paper's), the 12--17 mean or one year at 16; standard errors from 200 cluster-bootstrap draws of 1968 families. NLSY79: men, 1979--81 mean of the youth's household income, clusters 1979 household. Model E: the statistic on the simulated panel (twenty simulated sons per PSID son, ten seeds, seed s.d.\ in brackets), with each simulated son's parental income measured as his PSID son's 13--19 mean (which generated the model's wages) or his one-year measure. The PSID sample of sons born 1957--64 (the NLSY79's cohorts) has 385 (ten years) and 271 (twenty years) White sons. NLSY97: men born 1980--84, parental income the 1996 parent report, schooling as final-degree dummies, ten years only, clusters 1997 household (\texttt{IGE/69.LongDifferenceNLSY97.py}). $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Code: \texttt{IGE/68.LongDifferenceMeasurement.py}.\end{minipage}
+\end{table}

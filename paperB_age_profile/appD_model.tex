@@ -1,0 +1,53 @@
+\section{The Model: Estimates, Fit and Decompositions}\label{app:modelfit}
+
+This appendix collects the tables behind Section~\ref{sec:model}: the fit of every model of the lattice
+(Table~\ref{tab:modellattice}), the estimates of the selected model (Table~\ref{tab:modelest}), its fit to all 66
+targeted moments (Table~\ref{tab:modelfit}), the pay-off of parental income by age and parental tercile
+(Table~\ref{tab:modelcfh4}) and the sensitivity of the race parameters to the moments (Table~\ref{tab:modelsens}). All
+are generated from the estimation output by \texttt{model/tables.py}.
+
+\input{tab_model_lattice}
+\input{tab_model_estimates}
+\input{tab_model_fit}
+\input{tab_model_cf_h4}
+\input{tab_model_sens}
+
+\subsection{Diagnostics of two validation failures}\label{app:modeldiag}
+
+\paragraph{Wage levels after 35.} The model's wages at 35--49
+are 0.09--0.15 log points above the PSID for both races ($t$ between 3.4 and 6.5), with the level at 25--29 fitted, and
+the failure is growth within sons, not the selection of who has a wage. Among sons with a wage at both 25--29 and
+35--39, the PSID's wage grows by 0.332 (0.014) for White and 0.189 (0.018) for Black sons, against 0.439 and 0.303 in
+the model; the composition of the two bands moves the PSID's cross-section by 0.03 at most.\footnote{The change of the
+mean of son-level band means is split exactly into the change within sons observed in both bands and the two
+composition terms. PSID 25--29 to 35--39: White 0.328 = 0.332 $-$ 0.019 + 0.015, Black 0.166 = 0.189 $-$ 0.033 + 0.010
+(100 cluster-bootstrap draws); model E: 0.436 and 0.291, of which 0.439 and 0.303 within sons. Code:
+\texttt{model/core.py} (\texttt{levels}), \texttt{model/panel\_diag.py}; output
+\texttt{model/output/panel\_diag.md}.} Stayers' growth is targeted and fitted at 25--34 and 35--55 ($|t| \le 1.0$);
+the wage gain at a move is overstated (0.071 against 0.052 for White and 0.060 against $-0.006$ for Black sons), which
+at the PSID's rate of about 0.08 moves a year adds roughly 0.03 (White) and 0.09 (Black) over ten years; the rest of
+the excess comes from son-years the pair moments do not cover.
+
+\paragraph{The share in good jobs after 35.} In the PSID the share in $G$ jobs rises with age for White sons (0.144 at 25--29, 0.188 at 30--34, 0.217 at 50--55)
+and stays between 0.047 and 0.084 for Black sons; in the model it rises to 30--34 and then falls (White 0.118, 0.141,
+0.055; Black 0.050, 0.054, 0.019). Interview pairs show the routes.\footnote{Consecutive interviews one to two years apart from 1985 with a
+job type at both, by the son's age at the later one; the change of the $G$ share between the two interviews is split
+exactly into the contributions of stayers, movers and displaced sons. Displacement rates by the job type at the
+earlier interview. Code: \texttt{model/core.py} (\texttt{routes}), \texttt{model/panel\_diag.py}; output
+\texttt{model/output/panel\_diag.md}.} At 35--55 the PSID's share is stable between interviews (net
+$+0.004$ a pair for White and $+0.001$ for Black sons): moves and displacement carry no net flow, and the positive part
+is reclassification of jobs with the same employer, which the model cannot produce, but which flips back about two
+thirds as often as it persists (3.4\% against 5.0\% of three-interview stayer sequences, White), so much of it is coding
+noise. In the model the share falls between interviews ($-0.006$ and $-0.002$ a pair) through moves and displacement.
+After 35, White sons who move from an $O$ job enter a $G$ job at half the PSID's rate (0.055 against 0.121, s.e.\
+0.013), though they do so at the PSID's rate at 25--34 (0.131 against 0.117); and $G$ jobs are lost at half the rate of
+$O$ jobs in the PSID (White at 35--55: 0.041 against 0.083; Black 0.045 against 0.113), against 0.79 of it in the model,
+where the difference comes only from who holds $G$ jobs. Of the two candidate steps, a profile at the lattice's estimates of
+model E picks the second: an access probability that rises with age barely moves the share after 35 (White top
+tercile 0.131 to 0.137 at a slope of 0.4 a decade) and lowers it at 25--34, while a separate job-loss rate for $G$ jobs
+raises it toward the PSID (to 0.169 for White and 0.102 for Black sons from the top tercile at $-0.6$ on the logit
+scale, where $G$ jobs are lost at half the rate of $O$ jobs) and lowers the criterion on the moments extended by the
+four shares at 35--55 by 11.7 with every other parameter held at its estimate.\footnote{Code: \texttt{model/core.py}
+(switches \texttt{aage} and \texttt{gloss}, moment set \texttt{g35}), data moments
+\texttt{model/output/data\_moments\_g35.json}; the joint estimation is pending.} A job-loss rate specific to
+good jobs is the next step.

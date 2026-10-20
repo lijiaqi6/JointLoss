@@ -1,15 +1,15 @@
 r"""Wealth definitions for Paper A's wealth targets: is the age shape a model problem or a definition problem? [Paper A]
-(2026-10-20, WP4 of IGE/proposals/fable_10h_plan_paperA.md)
+(2026-10-20, WP4 of proposals/fable_10h_plan_paperA.md)
 
 QUESTION
-  The model's single asset (IGE/paperA_model/model.py) is annuitised at the wife's 60 into the terminal value (240
+  The model's single asset (paperA_model/model.py) is annuitised at the wife's 60 into the terminal value (240
   months, plus social security at 40% of the couple's mean wage), so it holds all retirement saving. The SMM targets
   psid_liq_le0_* / psid_liq_hi_* (IGE/60) use liquid wealth only. This script recomputes the two target statistics
   (share <= 0, share above one year of the couple's labor income) and the median under broader definitions, on the
   same couples, the same waves and the same earnings denominator as IGE/60.
 
 SAMPLE (identical to IGE/60's wealth block)
-  IGE/60's cached PSID men panel (IGE/data/paperA_targets_psid.pkl, read only; IGE/60 is not run): male heads,
+  IGE/60's cached PSID men panel (data/paperA_targets_psid.pkl, read only; IGE/60 is not run): male heads,
   Black or White (head's race), wife present (w_pid), wife aged 25-59 at the wealth interview; PSID wealth waves
   1984, 1989, 1994, 1999-2019 (the 2021 wave is not in estimation/psid_wealth.py, as for the target). Earnings
   denominator = head's + wife's labor income (2000 $) of the income year before the interview, missing = 0 (IGE/60).
@@ -32,7 +32,7 @@ STATISTICS
   1968 families, 200 replications (cluster draw counts as weights, as IGE/60); p from the normal approximation;
   *** p<0.01, ** p<0.05, * p<0.1. Descriptive (no causal claim).
 OUTPUTS (aggregates only; no person-level file is written)
-  IGE/output/wealth_definitions.csv, IGE/output/wealth_definitions_diffs.csv, IGE/output/wealth_definitions.md
+  output/wealth_definitions.csv, output/wealth_definitions_diffs.csv, output/wealth_definitions.md
 Run from the repo root: .venv/Scripts/python.exe -I IGE/77.WealthDefinitions.py [--reps 200]
 """
 import os
@@ -242,7 +242,7 @@ def main():
     R.to_csv(OUT / "wealth_definitions.csv", index=False)
     D.to_csv(OUT / "wealth_definitions_diffs.csv", index=False)
     write_md(R, D, wl, args.reps)
-    log("written IGE/output/wealth_definitions.csv, _diffs.csv, .md")
+    log("written output/wealth_definitions.csv, _diffs.csv, .md")
 
 
 def write_md(R, D, wl, reps):

@@ -8,11 +8,11 @@
     panels.py builds for the targets (units(), stack_rows(), the moments' sample window), the yearly coefficients
     e = -3, -1, 0, ..., 6 (reference e = -2) of bw_present on the event dummies with unit and cell effects
     (moments.twfe, IGE/60's estimator), by race and pooled, next to the PSID event study
-    (IGE/output/father_displacement.csv, 'Still with baseline wife': e.g. -0.027 / -0.037 / -0.050 pooled and -0.037 /
+    (output/father_displacement.csv, 'Still with baseline wife': e.g. -0.027 / -0.037 / -0.050 pooled and -0.037 /
     -0.053 / -0.074 Black in years 1 / 3 / 6). Only years 1-3 (their mean) are targets; years 4-6 are reported only.
 
 Run (from the repository root):
-  .venv/Scripts/python.exe IGE/paperA_model/diagnostics_marriage.py [--start <best.json | run dir>] [--threads 4]
+  .venv/Scripts/python.exe paperA_model/diagnostics_marriage.py [--start <best.json | run dir>] [--threads 4]
 Output: results/marriage_diag_<stamp>/marriage_diag.json, marriage_diag.md, es_still_with_wife.csv,
 q_by_block.csv, moments_sep_off.csv (aggregate numbers only).
 """
@@ -137,7 +137,7 @@ def main():
                   f"{r.model_sep_off:.4g} | {r.z_start:+.2f} | {r.z_sep_off:+.2f} |")
     md += ["", "## (B) Still with baseline wife after his displacement (event study, reference e = -2)", "",
            "Model: the targets' stacked panel (panels.units / stack_rows, events 1984-2021, outcome years to 2021), "
-           "yearly coefficients with unit and cell effects. PSID: IGE/output/father_displacement.csv (IGE/19). "
+           "yearly coefficients with unit and cell effects. PSID: output/father_displacement.csv (IGE/19). "
            "Years 1-3: their mean is the target (psid_es_bw_present_13_B/W, IGE/60's window); years 4-6 reported only.",
            "", "| e | Pooled model | Pooled PSID | Black model | Black PSID | White model | White PSID |",
            "|---:|---:|---:|---:|---:|---:|---:|"]

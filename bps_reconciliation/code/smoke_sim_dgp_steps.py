@@ -1,4 +1,4 @@
-r"""Smoke test of the BPS harness with the Paper A model's wage process (WP1 of IGE/proposals/fable_10h_plan_paperA.md,
+r"""Smoke test of the BPS harness with the Paper A model's wage process (WP1 of proposals/fable_10h_plan_paperA.md,
 2026-10-20). Imports smoke_sim_dgp.py and keeps its couples, hours, job-loss spells, consumption, assets and
 separation rules; only the hourly wage is replaced (earnings = hours x the new wage):
 

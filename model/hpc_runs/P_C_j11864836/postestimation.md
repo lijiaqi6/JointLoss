@@ -1,0 +1,17 @@
+# Post-estimation, model C
+
+Q at the estimate 133.7; at other simulation seeds 134.5, 133.7.
+
+| Experiment | gap 30-34 (level or change) | p | gap 45-49 | p | mean log wage 25-34 B | W |
+|---|---|---|---|---|---|---|
+| Baseline | 0.169*** (0.031) | 0.000 | 0.268*** (0.044) | 0.000 | 2.402 | 2.716 |
+| Equalising schooling | -0.008*** (0.002) | 0.000 | -0.021*** (0.003) | 0.000 | 0.008 | 0.000 |
+| Equal access by race (a3 = 0) | -0.001 (0.001) | 0.223 | -0.002 (0.002) | 0.175 | 0.001 | 0.000 |
+| Equal access by parental income (a1 = 0) | -0.001 (0.002) | 0.533 | -0.003 (0.005) | 0.562 | 0.000 | -0.000 |
+| Equal pay-off of schooling (dg1 = 0) | -0.005 (0.006) | 0.401 | -0.007 (0.008) | 0.403 | 0.004 | 0.000 |
+| Equal displacement risk (d0B = d0W) | 0.006*** (0.002) | 0.001 | 0.005** (0.003) | 0.046 | 0.034 | 0.000 |
+| Recession at entry (+3 points, 3 years) | -0.001 (0.001) | 0.352 | -0.002 (0.001) | 0.246 | -0.021 | -0.013 |
+| Equal pay-off of parental income in accumulation (dgx = 0) | -0.120*** (0.033) | 0.000 | -0.166*** (0.046) | 0.000 | -0.046 | 0.000 |
+| No pay-off of parental income in accumulation (gx = dgx = 0) | -0.103*** (0.031) | 0.001 | -0.154*** (0.044) | 0.001 | 0.006 | -0.021 |
+
+Entry wage scar per point (recession / 3): Black -0.0069, White -0.0044; PSID (paper Section 7) -0.013** per point of state unemployment at entry.

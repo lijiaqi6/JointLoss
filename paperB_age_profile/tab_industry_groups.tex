@@ -1,0 +1,49 @@
+\begin{table}[!htbp]
+\centering
+\caption{Industry wage levels and career slopes (CPS MORG men 25--64, 1992--2002)}
+\label{tab:industrygroups}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccccc}
+\toprule
+Industry group & \begin{tabular}[b]{@{}c@{}}Level $P$\\at 40\end{tabular} & \begin{tabular}[b]{@{}c@{}}Career slope $B$\\per 10 years\end{tabular} & \begin{tabular}[b]{@{}c@{}}Raw growth\\25--34 to\\45--55\end{tabular} & \begin{tabular}[b]{@{}c@{}}Return to\\experience\\5 to 25 years\end{tabular} & \begin{tabular}[b]{@{}c@{}}Employment\\share\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+Education & 0.082 & 0.077 & 0.432 & 0.437 & 0.055 \\
+Legal services & 0.538 & 0.069 & 0.340 & 0.358 & 0.006 \\
+Professional services (engineering, accounting, research, consulting) & 0.394 & 0.039 & 0.314 & 0.380 & 0.024 \\
+Manufacturing: chemicals, petroleum, rubber, plastics & 0.115 & 0.038 & 0.314 & 0.340 & 0.029 \\
+Other health services & 0.093 & 0.031 & 0.317 & 0.264 & 0.015 \\
+Hospitals & 0.071 & 0.029 & 0.314 & 0.485 & 0.022 \\
+Communications & 0.254 & 0.022 & 0.297 & 0.412 & 0.018 \\
+Manufacturing: motor vehicles, aircraft, other transport eq. & 0.156 & 0.022 & 0.279 & 0.331 & 0.033 \\
+Finance: banking, credit, securities & 0.395 & 0.021 & 0.322 & 0.387 & 0.022 \\
+Insurance & 0.320 & 0.020 & 0.315 & 0.393 & 0.014 \\
+Manufacturing: instruments, misc. manufacturing & 0.097 & 0.020 & 0.301 & 0.337 & 0.014 \\
+Manufacturing: textiles, apparel, leather & $-$0.235 & 0.015 & 0.260 & 0.275 & 0.011 \\
+Utilities and sanitary services & 0.152 & 0.011 & 0.267 & 0.383 & 0.023 \\
+Mining & 0.067 & 0.011 & 0.277 & 0.318 & 0.009 \\
+Public administration (incl. postal) & 0.142 & 0.009 & 0.250 & 0.330 & 0.075 \\
+Manufacturing: food, tobacco & $-$0.141 & 0.007 & 0.264 & 0.300 & 0.021 \\
+Manufacturing: electrical equipment & 0.186 & 0.003 & 0.230 & 0.298 & 0.021 \\
+Manufacturing: paper, printing, publishing & 0.034 & 0.002 & 0.229 & 0.333 & 0.026 \\
+Computer and data processing services & 0.460 & 0.001 & 0.233 & 0.327 & 0.017 \\
+Manufacturing: primary and fabricated metals & $-$0.061 & 0.001 & 0.222 & 0.269 & 0.029 \\
+Manufacturing: wood, furniture, stone, glass & $-$0.183 & 0.000 & 0.227 & 0.289 & 0.025 \\
+Manufacturing: machinery and computers & 0.105 & $-$0.002 & 0.235 & 0.294 & 0.033 \\
+Social services, religious, membership & $-$0.128 & $-$0.006 & 0.260 & 0.236 & 0.019 \\
+Wholesale trade & $-$0.008 & $-$0.008 & 0.230 & 0.289 & 0.053 \\
+Construction & $-$0.031 & $-$0.010 & 0.205 & 0.282 & 0.096 \\
+Transportation (excl. postal) & $-$0.052 & $-$0.019 & 0.195 & 0.278 & 0.058 \\
+Eating, drinking, hotels & $-$0.467 & $-$0.023 & 0.207 & 0.311 & 0.039 \\
+Retail trade (excl. eating, drinking) & $-$0.177 & $-$0.035 & 0.197 & 0.285 & 0.090 \\
+Real estate & $-$0.072 & $-$0.036 & 0.168 & 0.177 & 0.014 \\
+Automotive and repair services & $-$0.205 & $-$0.043 & 0.172 & 0.250 & 0.021 \\
+Other business services & $-$0.173 & $-$0.043 & 0.183 & 0.228 & 0.029 \\
+Personal services, entertainment & $-$0.195 & $-$0.046 & 0.180 & 0.237 & 0.020 \\
+Agriculture, forestry, fishing & $-$0.530 & $-$0.064 & 0.100 & 0.177 & 0.019 \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Industries harmonised to the ind1990ddx scheme (222 industries, 33 groups). Industry level $P_j$ and career slope $B_j$ from CPS MORG men aged 25--64, 1992--2002 (743,983 observations): relative log wage $= f(\text{age}) + P_j + B_j(\text{age}-40)/10$, both employment-weighted mean zero. Rows sorted by $B$. Raw growth: mean relative log wage at 45--55 minus 25--34. Return to experience: predicted wage growth from 5 to 25 years of potential experience with years of schooling held fixed. Industry averages; the composition of workers is not held fixed. Across men, the standard deviation of $P$ is 0.232 and of $B$ 0.037. Source: \texttt{IGE/32.IndustryCareers.py} (\texttt{output/industry\_careers.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

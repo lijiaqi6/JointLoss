@@ -7,11 +7,11 @@ plan items 1, 2, 7) lists the alternatives that could produce this without a joi
 them, reusing the couples panel, the definitions and the estimator of script 30 (imported read-only).
 
 DATA
-  The cached panel of 30 (IGE/data/cps_couples_panel.pkl) and, new here, PUSLFPRX (labor-force information given by
+  The cached panel of 30 (data/cps_couples_panel.pkl) and, new here, PUSLFPRX (labor-force information given by
   1 self, 2 proxy, 3 both) and HURESPLI (line number of the household respondent) for every married person aged 20-62,
   requested from the Census API with 30's own request function (fetch(): same predicate PEMARITL=1 & PRTAGE=20:62, same
   retries; the key is read from the environment and never printed or saved) and stored unchanged as
-  IGE/data/ext/cps_couples_proxy/cpl_YYYY_MM.csv.gz (git-ignored; the raw files of 30 are not touched). A couple's
+  data/ext/cps_couples_proxy/cpl_YYYY_MM.csv.gz (git-ignored; the raw files of 30 are not touched). A couple's
   reporting status is matched to the panel by the couple key of 30 (household id + both line numbers + month).
 CHECKS (every regression: LPM, state x year-month FE of the base month t, s.e. clustered by household [and by state])
   1. Proxy reporting: same-month excess (a) all, (b) both spouses self-report, (c) wife self-reports and the husband is
@@ -32,7 +32,7 @@ CHECKS (every regression: LPM, state x year-month FE of the base month t, s.e. c
      rotation spans 4 consecutive months, so at tau-3 (tau+3) the previous month of the wife (husband) falls outside the
      rotation; there that spouse's job loss is identified as a job loser with unemployment duration <= DUR_MAX weeks
      (risk set: employed or such a new job loser), marked with open symbols.
-Outputs: IGE/output/cps_joint_loss_checks.md / .csv; IGE/paperA_joint_loss/fig_cps_monthly_hazard.pdf / .png and
+Outputs: output/cps_joint_loss_checks.md / .csv; paperA_joint_loss/fig_cps_monthly_hazard.pdf / .png and
 fig_cps_monthly_hazard_awe.png.
 Associations, not causal effects. Run from IGE/ with `python -I 37.CPSJointLossChecks.py` (raw files are data only).
 """

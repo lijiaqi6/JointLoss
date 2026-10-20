@@ -1,0 +1,51 @@
+\begin{table}[!htbp]
+\centering
+\caption{Family-income and earnings IGEs by race, sex and age (PSID)}
+\label{tab:incomeearnings}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccc}
+\toprule
+Panel / row & \begin{tabular}[b]{@{}c@{}}ln family\\income\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln own\\earnings\end{tabular} & \begin{tabular}[b]{@{}c@{}}(1) $-$ (2)\\(test)\end{tabular} & \begin{tabular}[b]{@{}c@{}}ln spouse's\\earnings\end{tabular} \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+\multicolumn{5}{l}{\textit{Sons}} \\
+IGE at 40: Black & $0.268^{***}$ & $0.220^{***}$ & $0.048^{**}$ & $0.146^{***}$ \\
+ & (0.047) & (0.042) & (0.024) & (0.047) \\
+IGE at 40: White & $0.473^{***}$ & $0.464^{***}$ & $0.009$ & $0.257^{***}$ \\
+ & (0.038) & (0.038) & (0.025) & (0.052) \\
+IGE at 40: White $-$ Black & $0.204^{***}$ & $0.244^{***}$ & $-0.039$ & $0.111$ \\
+ & (0.061) & (0.057) & (0.035) & (0.070) \\
+IGE at 40: Pooled (weighted) & $0.498^{***}$ & $0.469^{***}$ & $0.030$ & $0.199^{***}$ \\
+ & (0.033) & (0.033) & (0.020) & (0.044) \\
+Change, bands $\geq$35 $-$ $<$35: Black & $-0.008$ & $-0.038$ & $0.030$ & $0.013$ \\
+ & (0.047) & (0.041) & (0.030) & (0.055) \\
+Change, bands $\geq$35 $-$ $<$35: White & $0.141^{***}$ & $0.185^{***}$ & $-0.044$ & $-0.176^{***}$ \\
+ & (0.037) & (0.036) & (0.028) & (0.052) \\
+Change, bands $\geq$35 $-$ $<$35: White $-$ Black & $0.150^{**}$ & $0.223^{***}$ & $-0.074^{*}$ & $-0.189^{**}$ \\
+ & (0.060) & (0.055) & (0.041) & (0.076) \\
+Change, bands $\geq$35 $-$ $<$35: Pooled (weighted) & $0.135^{***}$ & $0.142^{***}$ & $-0.007$ & $-0.139^{***}$ \\
+ & (0.030) & (0.032) & (0.023) & (0.043) \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Daughters}} \\
+IGE at 40: Black & $0.291^{***}$ & $0.277^{***}$ & $0.015$ & $0.171^{***}$ \\
+ & (0.037) & (0.034) & (0.025) & (0.045) \\
+IGE at 40: White & $0.453^{***}$ & $0.311^{***}$ & $0.142^{***}$ & $0.370^{***}$ \\
+ & (0.036) & (0.042) & (0.041) & (0.038) \\
+IGE at 40: White $-$ Black & $0.162^{***}$ & $0.035$ & $0.127^{***}$ & $0.199^{***}$ \\
+ & (0.052) & (0.054) & (0.048) & (0.058) \\
+IGE at 40: Pooled (weighted) & $0.514^{***}$ & $0.301^{***}$ & $0.213^{***}$ & $0.362^{***}$ \\
+ & (0.031) & (0.031) & (0.034) & (0.035) \\
+Change, bands $\geq$35 $-$ $<$35: Black & $-0.073^{**}$ & $-0.061^{*}$ & $-0.012$ & $0.009$ \\
+ & (0.036) & (0.035) & (0.031) & (0.056) \\
+Change, bands $\geq$35 $-$ $<$35: White & $0.150^{***}$ & $-0.065^{*}$ & $0.215^{***}$ & $0.091^{**}$ \\
+ & (0.030) & (0.035) & (0.039) & (0.038) \\
+Change, bands $\geq$35 $-$ $<$35: White $-$ Black & $0.223^{***}$ & $-0.004$ & $0.227^{***}$ & $0.081$ \\
+ & (0.046) & (0.049) & (0.050) & (0.068) \\
+Change, bands $\geq$35 $-$ $<$35: Pooled (weighted) & $0.115^{***}$ & $-0.050^{*}$ & $0.165^{***}$ & $0.067^{*}$ \\
+ & (0.028) & (0.027) & (0.032) & (0.036) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} One regression per cell: the child's outcome (column header) on log parental family income (mean at 13--19). IGE at 40: age-interacted design of \citet{lee2009trends} on child-years 25--65. Change: mean of the band coefficients at 35--55 minus the mean at 25--34, from the stacked band regressions. Own earnings: positive labor earnings; spouse's earnings: partnered years with positive spouse earnings. Column (3) tests (1) $-$ (2) on the same children. Standard errors clustered by 1968 family. Pooled: all races, weighted; Black and White: unweighted. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/34.IncomeVsEarningsIGE.py} (\texttt{output/income\_vs\_earnings\_ige.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

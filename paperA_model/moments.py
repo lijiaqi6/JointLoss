@@ -1,4 +1,4 @@
-"""Paper A model: the SMM target vector on simulated data, aligned with IGE/output/paperA_targets.csv (target == 1).
+"""Paper A model: the SMM target vector on simulated data, aligned with output/paperA_targets.csv (target == 1).
 
 compute(res) builds the data-shaped panels (panels.py) from one simulation and computes every target T1-T28 with the
 definitions of IGE/60.PaperATargets.py. IGE/60's estimators are imported read-only (wmean, fe_slope, fe_ols:

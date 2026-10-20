@@ -1,0 +1,4 @@
+(1) single-age dummies 6s
+(1) + 5-year birth-cohort dummies 14s
+(3) 23s
+done 24s

@@ -1,18 +1,18 @@
 r"""Both parents present in childhood and adult outcomes: the child block's beta_P (PSID, 2026-10-20).
 
-WP7 of IGE/proposals/fable_10h_plan_paperA.md. Paper A's child block maps family income by childhood age and the
+WP7 of proposals/fable_10h_plan_paperA.md. Paper A's child block maps family income by childhood age and the
 presence of both parents into adult outcomes (sec6 'What the model takes from this'); the identification plan
-(IGE/proposals/paperA_identification_plan.md, Section 1.6, 'Child-block slopes') sets beta_P = the PSID association of
+(proposals/paperA_identification_plan.md, Section 1.6, 'Child-block slopes') sets beta_P = the PSID association of
 the share of childhood with both parents present with adult log earnings, with Section 6's controls (high), 0 (low).
-This script estimates it. Nothing in IGE/19, IGE/20, IGE/22 or IGE/paperA_model is edited; 19's child functions are
+This script estimates it. Nothing in IGE/19, IGE/20, IGE/22 or paperA_model is edited; 19's child functions are
 imported (child_frame, design, measures, men_panel), its main() is not run. No sibling comparisons (no family FE).
 
-Reads (read only): IGE/data/psid_person_year.pkl (1), psid_child_exposure.pkl (9), psid_kids.pkl (1),
+Reads (read only): data/psid_person_year.pkl (1), psid_child_exposure.pkl (9), psid_kids.pkl (1),
 psid_displacement.pkl (19); the PSID individual file through 9.individual() (education); the family-file hours /
-AFDC / food stamps through 9.family(), cached by 76 in IGE/data/sepmoth_fam9.pkl (person-level, git-ignored; rebuilt
+AFDC / food stamps through 9.family(), cached by 76 in data/sepmoth_fam9.pkl (person-level, git-ignored; rebuilt
 if absent). Writes (aggregates only):
-  IGE/output/parents_present_outcomes.csv   every estimate (table, sample, spec, outcome, term, coef, se, p, n, ...)
-  IGE/output/parents_present_outcomes.md    tables
+  output/parents_present_outcomes.csv   every estimate (table, sample, spec, outcome, term, coef, se, p, n, ...)
+  output/parents_present_outcomes.md    tables
 
 CHILDREN. Children of psid_child_exposure.pkl (CAH children with a PSID id, and other SRC + SEO persons first seen as
 the head's child), born 1968-1995, Black / White (head's race in the first unit the child is seen in), with at least
@@ -205,7 +205,7 @@ def main():
           f"; corr with psid_kids log_earn {corr_pk:.3f} (N {len(chk):,})", flush=True)
 
     md = ["# Both parents present in childhood and adult outcomes (beta_P for the child block)", "",
-          "Built by `IGE/79.ParentsPresentOutcomes.py` (2026-10-20; WP7 of `IGE/proposals/fable_10h_plan_paperA.md`);"
+          "Built by `IGE/79.ParentsPresentOutcomes.py` (2026-10-20; WP7 of `proposals/fable_10h_plan_paperA.md`);"
           " definitions in its docstring. PSID children born 1968-1995 (SRC + SEO, unweighted), Black / White, "
           ">= 3 childhood interviews at 0-17. Both parents present = the head and wife of the child's family unit "
           "are the mother and the father at birth. Controls in every column: female, birth-year FE, parental "

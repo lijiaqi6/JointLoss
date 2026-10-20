@@ -1,4 +1,4 @@
-"""WP1 (IGE/proposals/fable_10h_plan_paperA.md, 2026-10-20): is the BPS deficit in the husband's transitory variance
+"""WP1 (proposals/fable_10h_plan_paperA.md, 2026-10-20): is the BPS deficit in the husband's transitory variance
 (BPS's estimator on the simulated panel: 0.006 at K = 1, 0.013 at K = 3, against the model input sig_nu_h^2 = 0.0275)
 an artefact of the harness (BPS's trims, the measurement-error layer and BPS's correction for it) or real?
 
@@ -17,7 +17,7 @@ Steps
     correction subtracts (variance_estimation.do), by spouse x age group (clipping of cov(e_y, e_h));
  4. bps_on_sim_me.do (= bps_on_sim.do + the OVRX hook; ovr_me0.do switches BPS's correction off) on the panels under
     the switch sets of SPECS, gmm9 only (BPS Table 3, all ages), up to --par Stata instances in parallel.
-Run: .venv/Scripts/python.exe IGE/paperA_model/bps_trim_test.py [--K 3] [--nu0] [--par 3]
+Run: .venv/Scripts/python.exe paperA_model/bps_trim_test.py [--K 3] [--nu0] [--par 3]
 """
 from __future__ import annotations
 

@@ -1,21 +1,21 @@
 r"""SMM target moments for Paper A's structural model, with block-bootstrap standard errors (2026-10-18). [Paper A]
 
-Implements Part II (Table "Targets, windows and sources") of IGE/paperA_joint_loss/model_document.tex: every TARGET
+Implements Part II (Table "Targets, windows and sources") of paperA_joint_loss/model_document.tex: every TARGET
 of that table, each with its value, bootstrap standard error, N, data window, source script and definition, plus the
 bootstrap variance-covariance matrix of the moments within each data source (SMM weighting matrix). Validation moments
 are not targets; the added-worker effect by age of IGE/50 is copied (with 50's analytical s.e.) as validation.
 
 DATA AND BUILDERS (imported read-only via importlib; no other script is edited)
-  CPS   30.CPSJointJobLoss.py couples panel (IGE/data/cps_couples_panel.pkl) and 37.CPSJointLossChecks.py's event
+  CPS   30.CPSJointJobLoss.py couples panel (data/cps_couples_panel.pkl) and 37.CPSJointLossChecks.py's event
         samples (tau-3 .. tau+3) and shift(); basic monthly 1994-2023.
   PSID  19.FatherDisplacement.py (men panel, stacks, displacement file psid_displacement.pkl), 23/25.JointJobLoss.py
         (wife's job-end reports, father x stack units, couple-years, sector match), 38's window designs (re-coded
         here), 47.PSIDConsumptionEvent.py (consumption 1999-2021 and its event panel), estimation/psid_wealth.py
         (liquid wealth, the ReducedForm/17 construction). Unweighted SRC + SEO, Black and White (head's race).
-  SIPP  40.SIPPJointLoss.py couples panel (IGE/data/sipp_couples_panel.pkl) and its helpers; panels 2004, 2008, 2014
+  SIPP  40.SIPPJointLoss.py couples panel (data/sipp_couples_panel.pkl) and its helpers; panels 2004, 2008, 2014
         (reference months 2003-2016). Monthly wage-job earnings are not in 40's cache: they are read here from the
         same raw core files (2004/08: TPMSUM1 + TPMSUM2 of jobs with an employer number; 2014: TJBk_MSUM of employer
-        jobs held in the month) and cached in IGE/data/ext/sipp/cache_earn/.
+        jobs held in the month) and cached in data/ext/sipp/cache_earn/.
 WINDOWS
   CPS couple-months 1994-2023; PSID income years 1984-2021 (stacked designs: husband's displacement events 1984-2021,
   outcome years to 2021; couple-years: intervals ending 1984-2021; 38's two-window decomposition events 1987-2021);
@@ -34,8 +34,8 @@ BOOTSTRAP
   regressions are unweighted as in the source scripts. S.e. = s.d. over replications; p-values (coefficients only)
   from the normal approximation with the bootstrap s.e.; *** p<0.01, ** p<0.05, * p<0.1.
 OUTPUTS
-  IGE/output/paperA_targets.csv (block, moment, value, se, n, window, source_script, definition, + id, p, stars,
-  data_source, target, n_events), IGE/output/paperA_targets.md, IGE/output/paperA_targets_vcov_<source>.csv
+  output/paperA_targets.csv (block, moment, value, se, n, window, source_script, definition, + id, p, stars,
+  data_source, target, n_events), output/paperA_targets.md, output/paperA_targets_vcov_<source>.csv
   (cps / psid / sipp: targets only; dws: the UI take-up inputs; ids as row and column labels).
 ADDED 2026-10-18 (lead; proposals/paperA_identification_plan.md Secs. 1.3-1.4, 5 items 1-2): T28 = share of husbands
   displaced twice or more among husbands observed 10+ years (PSID, by race), and the DWS UI receipt shares of displaced

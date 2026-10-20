@@ -1,0 +1,10 @@
+run A5_j11866021
+job 11866021
+code 99b9e64796b29b80694d75ae42be5be72c366673
+mode full
+status 0
+cores 32 workers 30 popsize 30 maxfevals 8000,8000,8000,8000,8000,8000,8000,8000
+settings IGE_FIX=muG,du IGE_MODELS=A IGE_R=20 IGE_RUN=A5 IGE_SIG0=0.15 IGE_START=hpc_runs/P_A_j11864832/estimates.json:A IGE_STEPS=age,rehire,xacc,ufric 
+elapsed_min 42
+maxrss 19493816K
+requested TimeLimit=01:15:00 mem=24G mem=24G 

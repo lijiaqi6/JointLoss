@@ -1,0 +1,3 @@
+learn_v 35s
+lwage_v 72s
+done 72s

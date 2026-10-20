@@ -1,0 +1,57 @@
+\begin{table}[!htbp]
+\centering
+\caption{What passes to what: each parental component and each of the son's outcomes (PSID)}
+\label{tab:four_by_four}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Son's ln\\hourly wage\end{tabular} & \begin{tabular}[b]{@{}c@{}}Son's ln hours\\(employed)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Son\\employed\end{tabular} & \begin{tabular}[b]{@{}c@{}}Son's share\\of years\\unemployed\end{tabular} & \begin{tabular}[b]{@{}c@{}}Son's share\\of years\\displaced\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{l}{\textit{A. Parental income}} \\
+Ln parental income & $0.210^{***}$ & $0.038^{**}$ & $0.026^{**}$ & $-0.064^{***}$ & $-0.033^{***}$ \\
+ & (0.031) & (0.018) & (0.011) & (0.012) & (0.007) \\
+\addlinespace
+\multicolumn{6}{l}{\textit{B. Wage}} \\
+Father's ln hourly wage & $0.083^{***}$ & $-0.014^{*}$ & $-0.002$ & $0.007$ & $0.009^{**}$ \\
+ & (0.016) & (0.008) & (0.005) & (0.005) & (0.004) \\
+Mother's ln hourly wage & $0.028^{**}$ & $-0.013^{**}$ & $-0.003$ & $0.006$ & $-0.003$ \\
+ & (0.012) & (0.006) & (0.003) & (0.004) & (0.003) \\
+\addlinespace
+\multicolumn{6}{l}{\textit{C. Hours}} \\
+Father's ln annual hours & $0.006$ & $0.018^{***}$ & $0.009^{**}$ & $-0.008^{*}$ & $-0.003$ \\
+ & (0.012) & (0.007) & (0.004) & (0.004) & (0.003) \\
+Mother's ln annual hours & $-0.039^{***}$ & $0.003$ & $-0.002$ & $0.000$ & $0.000$ \\
+ & (0.012) & (0.006) & (0.004) & (0.005) & (0.003) \\
+Mother's years without work & $-0.060^{**}$ & $-0.017$ & $-0.021^{***}$ & $0.024^{***}$ & $0.008$ \\
+ & (0.024) & (0.011) & (0.008) & (0.009) & (0.005) \\
+Mother works fewer than two years & $0.047^{**}$ & $0.008$ & $0.007$ & $-0.019^{**}$ & $-0.009$ \\
+ & (0.023) & (0.012) & (0.008) & (0.009) & (0.005) \\
+\addlinespace
+\multicolumn{6}{l}{\textit{D. Spells}} \\
+Father's plant closures & $0.021^{**}$ & $-0.005$ & $0.002$ & $0.001$ & $0.001$ \\
+ & (0.010) & (0.006) & (0.003) & (0.004) & (0.002) \\
+Father laid off or fired & $-0.013$ & $-0.005$ & $0.004$ & $0.006$ & $0.003$ \\
+ & (0.011) & (0.006) & (0.003) & (0.005) & (0.003) \\
+Father's unemployment & $-0.018$ & $-0.001$ & $-0.012^{**}$ & $0.011^{*}$ & $0.004$ \\
+ & (0.012) & (0.005) & (0.005) & (0.006) & (0.003) \\
+Father's zero-hours years & $0.003$ & $-0.001$ & $0.002$ & $0.005$ & $0.005$ \\
+ & (0.012) & (0.005) & (0.003) & (0.004) & (0.003) \\
+Father's transitory earnings variance & $-0.008$ & $0.006$ & $-0.001$ & $-0.002$ & $-0.001$ \\
+ & (0.011) & (0.005) & (0.002) & (0.003) & (0.002) \\
+Father present, not measured & $-0.016$ & $-0.010^{*}$ & $-0.007^{**}$ & $0.002$ & $-0.001$ \\
+ & (0.011) & (0.005) & (0.004) & (0.005) & (0.003) \\
+Mother's unemployment & $-0.020^{*}$ & $-0.010^{**}$ & $-0.009^{*}$ & $0.008^{*}$ & $0.004$ \\
+ & (0.011) & (0.005) & (0.005) & (0.005) & (0.003) \\
+\addlinespace
+\multicolumn{6}{l}{\textit{E. Place}} \\
+State unemployment, 12--18 & $-0.007$ & $0.002$ & $0.001$ & $0.006^{*}$ & $0.002$ \\
+ & (0.010) & (0.005) & (0.004) & (0.003) & (0.002) \\
+Men's labour-demand shock, 12--18 & $0.015$ & $0.008^{*}$ & $0.006^{**}$ & $-0.004$ & $-0.001$ \\
+ & (0.010) & (0.004) & (0.003) & (0.003) & (0.002) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Each column is one regression of the son's outcome (son-years 25--55) on ln parental income and every component of Table~\ref{tab:passed_on}, panel A, each standardised (one standard deviation), with the family-structure flags and single-age dummies; PSID weights; standard errors clustered by 1968 family. Columns (1)--(2): 42,225 son-years of 4,644 sons; (3)--(5): 46,540 of 4,770. Source: \texttt{IGE/75.WhatIsPassedOn.py}; table built by \texttt{IGE/90.PaperBRaceNeutralTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}

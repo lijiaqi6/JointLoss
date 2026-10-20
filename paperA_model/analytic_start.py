@@ -1,6 +1,6 @@
 """Paper A model: closed-form start values (identification plan Sections 1.2, 1.4, 1.5).
 
-Reads IGE/output/paperA_targets.csv (IGE/60.PaperATargets.py) and writes
+Reads output/paperA_targets.csv (IGE/60.PaperATargets.py) and writes
   inputs/start_analytic.json   theta (31 parameters) + the source / status of each start value
   inputs/wage_process.json     p_c, p_eps_w, p_eps_h, sigma_nu, rho_nu (closed forms before the BPS-harness correction)
 and prints the over-identification check of Section 1.4 (annual excess implied by the monthly closed forms vs T5).
@@ -8,7 +8,7 @@ and prints the over-identification check of Section 1.4 (annual excess implied b
 These are start values and consistency checks, not calibrations: all 31 parameters stay in the one SMM run.
 Where a target the closed form needs is not yet in the targets file, the fallback is named in 'status' ('FALLBACK').
 
-Run: .venv/Scripts/python.exe IGE/paperA_model/analytic_start.py [--ext cs_memory,hc_eta] [--out <json>]
+Run: .venv/Scripts/python.exe paperA_model/analytic_start.py [--ext cs_memory,hc_eta] [--out <json>]
 --ext: coded start values of the model extensions (2026-10-18): cs_memory splits the couples' excess job-loss risk
 between the permanent type (kappa - 1 from the PSID two-window permanent component, psid_perm / psid_cy_wbase_W) and the
 memory multiplier c_mem (the rest of the CPS short-horizon excess, divided by the mean probability that the displaced

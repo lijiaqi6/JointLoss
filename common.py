@@ -17,9 +17,9 @@ import pandas as pd
 import statsmodels.api as sm
 
 HERE = Path(__file__).resolve().parent
-# person-level caches (never in git): JOINTLOSS_DATA points at them when they live elsewhere, e.g. the PC's
-# "G:/My Drive/Selection vs risk/IGE/data" or the same folder seen through Google Drive on the Mac
-DATA = Path(os.environ.get("JOINTLOSS_DATA", HERE / "data"))
+# person-level caches (never in git): IGE_DATA points at them when they live elsewhere, e.g. the PC's
+# "G:/My Drive/JointLoss/data" or the same folder seen through Google Drive on the Mac
+DATA = Path(os.environ.get("IGE_DATA", HERE / "data"))
 OUT = HERE / "output"
 
 # CPI-U annual averages (BLS, 1982-84 = 100); amounts in 2000 dollars

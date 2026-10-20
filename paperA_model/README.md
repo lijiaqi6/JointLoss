@@ -1,8 +1,8 @@
 # Paper A structural model (joint job loss of spouses) — code, stages 0-6
 
 Self-contained folder (`model/`, `estimation/`, `scripts/` are not touched; `IGE/60.PaperATargets.py` and
-`IGE/bps_reconciliation/code/sim_panel_writer.py` are imported read-only). Spec: `IGE/paperA_joint_loss/sec7_model.tex`,
-`IGE/paperA_joint_loss/model_document.tex` (D1-D18), `IGE/proposals/paperA_identification_plan.md` (Sections 1-4).
+`bps_reconciliation/code/sim_panel_writer.py` are imported read-only). Spec: `paperA_joint_loss/sec7_model.tex`,
+`paperA_joint_loss/model_document.tex` (D1-D18), `proposals/paperA_identification_plan.md` (Sections 1-4).
 Terminology: human capital level / accumulation / depreciation; search friction (job-finding probability lambda).
 Nothing in this folder writes PSID individual records into `results/` or any tracked file: outputs are aggregate
 moments, parameters and diagnostics only. `inputs/psid_entry_couples*.csv` (PSID microdata) are git-ignored.
@@ -17,7 +17,7 @@ moments, parameters and diagnostics only. `inputs/psid_entry_couples*.csv` (PSID
 | `solve.py` | numba backward induction (420 months): separated wife, married couple; sequential expectation operators; offer node (`k_offer`); DC-EGM with Gumbel taste shocks, upper envelope, Hermite continuation values, Newton polish, guarded top extrapolation; stores C, W, Dlt (float32) |
 | `simulate.py` | monthly couple histories with CRN; the entitled wife's offer decision; the CPS 'looking' classification (`look`); offer outcomes (`acc`) |
 | `panels.py` | **measurement layer**: monthly records -> CPS couple-month samples (4-8-4 rotation over every entry month), SIPP panel windows, PSID annual rows, stacked event panels, units with coverage rules, couple-years, consumption event panel with BPS's measurement error, wealth waves. The complete model -> data mapping is in its docstring |
-| `moments.py` | **all 91 targets** (88 + T7, `target == 1` of `IGE/output/paperA_targets.csv`, same order), IGE/60's estimators (wmean, fe_slope, fe_ols) imported read-only, exact two-way FE solver `twfe` (checked against IGE/60's TWFE: identical to 4e-15); weighting (`diag` default, `block`, `vcov`); objective |
+| `moments.py` | **all 91 targets** (88 + T7, `target == 1` of `output/paperA_targets.csv`, same order), IGE/60's estimators (wmean, fe_slope, fe_ols) imported read-only, exact two-way FE solver `twfe` (checked against IGE/60's TWFE: identical to 4e-15); weighting (`diag` default, `block`, `vcov`); objective |
 | `estimate.py` | **SMM driver**: `evaluate`, `jacobian`, `polish` (Levenberg-Marquardt in logistic units with the CRN Jacobian; `--pseudo` recovery), `run` (CMA-ES, own SafePool, checkpoint every generation, `--resume`, `--pseudo` recovery, `--cma-stds-from`, `--tolfun`, distribution mean stored), `se` (sandwich), `noise` (CRN seeds, `--save-noise-input`); objective trim (`moments.OBJ_EXCLUDE`, `--drop`), `diag_noise` weights (default), `--set-fixed`, `--free-extra sigma_eps`, `--tie`, start-bound guard |
 | `recovery_report.py` | recovery vs truth in simulation-noise and data standard errors |
 | `hpc_job_a.py` | Slurm launcher for Stanage in the separate clone `~/joint` (idempotent one-time setup block, entry-file check with the scp command, code snapshot, `--test`, `--push` of aggregate results) |
@@ -54,7 +54,7 @@ moments, parameters and diagnostics only. `inputs/psid_entry_couples*.csv` (PSID
    sigma_eps = 0.05: 99th percentile 4.4e-5, maximum 5.1e-4 (target < 1e-3); V at t = 0 within a median 0.021 utility
    units of a 90-point solution (chords at 30 points: 0.448).** Cost: about +40-60% per solve (3.9 -> 6.1-6.7 s).
 
-## Estimation layer changes (2026-10-18 evening; Fable review `IGE/proposals/fable_estimation_review_paperA.md`, Section 6)
+## Estimation layer changes (2026-10-18 evening; Fable review `proposals/fable_estimation_review_paperA.md`, Section 6)
 
 1. **Objective trim** (`moments.OBJ_EXCLUDE`, one reason each; `--drop` adds ids, `--no-default-exclude` restores the
    full vector): `cps_wife_hazard_pooled`, `cps_h_hazard_pooled`, `cps_entry_pooled` (in the model each is exactly the
@@ -125,7 +125,7 @@ marginally at the interior point (just lapsed minus still entitled +0.000, n = 2
 
 ## Extensions 2026-10-19 (pre-built, OFF by default; step table and design in `results/extensions_20261019.md`)
 
-| Extension | Turn on | Parameter (start, bounds) | Targets (IGE/66 -> `IGE/output/paperA_targets_ext.csv`) | Start: Q on the same 89-moment set |
+| Extension | Turn on | Parameter (start, bounds) | Targets (IGE/66 -> `output/paperA_targets_ext.csv`) | Start: Q on the same 89-moment set |
 |---|---|---|---|---|
 | New-job exit hazard: wife state EN (job < ~1 year, graduation 1/12 a month, `--set-fixed nj_grad=`); exit = quit, or displacement with UI if `--set-fixed nj_ui=1` | `--new-job on` | `xi_nj` (0.02, [0, 0.2]) | SIPP persistent exit by tenure 0-5 / 6-11 / 12+ months (0.0206 / 0.0160 / 0.0068, bootstrap s.e.); reported: SIPP 12-month return 0.530, PSID repeat-exit share 0.324 | 13,232.5 -> 13,245.7 (solve +41%) |
 | Separation after HER displacement: + sigma_Jw while she is UI-entitled | `--her-sep on` (`--her-sep-tie on`: sigma_Jw = his sigma_J(r)) | `sigmaJw` (0.01, [0, 0.1]) | still with baseline husband, years 1-3 after her displacement, attrition-equalised (IGE/65 5b): -0.050 (0.012); reported: years 4-6 -0.094 | 13,232.5 -> 13,162.8 (no cost) |
@@ -223,20 +223,20 @@ afterwards overwrites the correction). BPS_RUN_PLACEHOLDER
 ## How to run (PC)
 
 ```
-.venv/Scripts/python.exe IGE/paperA_model/analytic_start.py              # start values + wage process from the inputs
-.venv/Scripts/python.exe IGE/paperA_model/tests/run_all.py               # staged checks (~20 min)
-.venv/Scripts/python.exe IGE/paperA_model/estimate.py evaluate           # Q at the start, by block (78 s)
-.venv/Scripts/python.exe IGE/paperA_model/estimate.py jacobian --workers 8 --threads 2      # ~21 min
-.venv/Scripts/python.exe IGE/paperA_model/estimate.py noise --reps 5 --workers 4 --weighting diag --save-noise-input
-.venv/Scripts/python.exe IGE/paperA_model/estimate.py polish --workers 7 --threads 2 --iters 15   # LM from the start
-.venv/Scripts/python.exe IGE/paperA_model/estimate.py run --pseudo --free-set closed --workers 8 --threads 2 --maxfevals 480
-.venv/Scripts/python.exe IGE/paperA_model/recovery_report.py <run dir> <jacobian dir> <noise dir>
-.venv/Scripts/python.exe IGE/paperA_model/bps_check.py [--apply] [--sigma-nu-zero]      # needs Stata
+.venv/Scripts/python.exe paperA_model/analytic_start.py              # start values + wage process from the inputs
+.venv/Scripts/python.exe paperA_model/tests/run_all.py               # staged checks (~20 min)
+.venv/Scripts/python.exe paperA_model/estimate.py evaluate           # Q at the start, by block (78 s)
+.venv/Scripts/python.exe paperA_model/estimate.py jacobian --workers 8 --threads 2      # ~21 min
+.venv/Scripts/python.exe paperA_model/estimate.py noise --reps 5 --workers 4 --weighting diag --save-noise-input
+.venv/Scripts/python.exe paperA_model/estimate.py polish --workers 7 --threads 2 --iters 15   # LM from the start
+.venv/Scripts/python.exe paperA_model/estimate.py run --pseudo --free-set closed --workers 8 --threads 2 --maxfevals 480
+.venv/Scripts/python.exe paperA_model/recovery_report.py <run dir> <jacobian dir> <noise dir>
+.venv/Scripts/python.exe paperA_model/bps_check.py [--apply] [--sigma-nu-zero]      # needs Stata
 ```
 **Local SMM (8 workers x 2 threads, resume-able):**
 ```
-.venv/Scripts/python.exe IGE/paperA_model/estimate.py run --workers 8 --threads 2 --maxfevals 8000
-.venv/Scripts/python.exe IGE/paperA_model/estimate.py run --resume IGE/paperA_model/results/runs/smm_<stamp> --workers 8 --threads 2
+.venv/Scripts/python.exe paperA_model/estimate.py run --workers 8 --threads 2 --maxfevals 8000
+.venv/Scripts/python.exe paperA_model/estimate.py run --resume paperA_model/results/runs/smm_<stamp> --workers 8 --threads 2
 ```
 `es.pkl`, `evals.csv`, `generations.csv` and `best.json` are written every generation. At ~4.7 minutes per
 generation, 500 generations take ~39 hours on the PC: the main runs belong on the HPC.
@@ -258,19 +258,19 @@ in `/mnt/parscratch/users/$USER/joint_smm_results`; nothing under `~/svr`. The P
 
 | Job | Command |
 |---|---|
-| 0 test (45 min) | `sbatch --job-name=Joint-test --time=00:45:00 IGE/paperA_model/hpc_job_a.py --test` |
-| 1 LM recovery, all free | `sbatch --job-name=Joint-recovery-gn --time=05:00:00 IGE/paperA_model/hpc_job_a.py polish --pseudo --label all --start-noise 0.5 --iters 15 --push` |
-| 2 LM on the data | `sbatch --job-name=Joint-gn-main --time=05:00:00 IGE/paperA_model/hpc_job_a.py polish --label main --iters 15 --push` |
-| 2b noise at the LM candidate | `sbatch --job-name=Joint-noise --time=00:30:00 IGE/paperA_model/hpc_job_a.py noise --start <gn>/best.json --reps 5 --weighting diag --push` (then `--noise-file <noise dir>/moment_noise.csv` in 3 and the final polish) |
-| 3 CMA-ES around the LM candidate | `sbatch --job-name=Joint-smm-main --time=12:00:00 IGE/paperA_model/hpc_job_a.py run --label main --start <gn>/best.json --cma-stds-from <gn>/jacobian.npz --sigma0 0.2 --maxfevals 3500 --tolfun 30 --cma-seed 1 --push` |
+| 0 test (45 min) | `sbatch --job-name=Joint-test --time=00:45:00 paperA_model/hpc_job_a.py --test` |
+| 1 LM recovery, all free | `sbatch --job-name=Joint-recovery-gn --time=05:00:00 paperA_model/hpc_job_a.py polish --pseudo --label all --start-noise 0.5 --iters 15 --push` |
+| 2 LM on the data | `sbatch --job-name=Joint-gn-main --time=05:00:00 paperA_model/hpc_job_a.py polish --label main --iters 15 --push` |
+| 2b noise at the LM candidate | `sbatch --job-name=Joint-noise --time=00:30:00 paperA_model/hpc_job_a.py noise --start <gn>/best.json --reps 5 --weighting diag --push` (then `--noise-file <noise dir>/moment_noise.csv` in 3 and the final polish) |
+| 3 CMA-ES around the LM candidate | `sbatch --job-name=Joint-smm-main --time=12:00:00 paperA_model/hpc_job_a.py run --label main --start <gn>/best.json --cma-stds-from <gn>/jacobian.npz --sigma0 0.2 --maxfevals 3500 --tolfun 30 --cma-seed 1 --push` |
 | 3b restart 2 | same with `--job-name=Joint-smm-main-s2 ... --label main_s2 ... --cma-seed 2` |
 | 3c restart 3 | same with `--job-name=Joint-smm-main-s3 ... --label main_s3 ... --cma-seed 3` |
-| independent shocks | `sbatch --job-name=Joint-gn-indep --time=05:00:00 IGE/paperA_model/hpc_job_a.py polish --label indep --fix pi_c0=0 pi_c1=0 pi_c2=0 m_H=1 --push` |
-| resume (CMA) | `sbatch --job-name=Joint-smm-main-r --time=12:00:00 IGE/paperA_model/hpc_job_a.py --push --resume /mnt/parscratch/users/$USER/joint_smm_results/runs/<run dir>` |
-| Jacobian | `sbatch --job-name=Joint-jacobian --time=01:00:00 IGE/paperA_model/hpc_job_a.py jacobian --start <best.json> --push` |
-| standard errors | `sbatch --job-name=Joint-se --time=01:30:00 IGE/paperA_model/hpc_job_a.py se --start <best.json> --push` |
-| block weights | `sbatch --job-name=Joint-smm-block --time=12:00:00 IGE/paperA_model/hpc_job_a.py run --label block --weighting block --start <gn>/best.json --sigma0 0.2 --maxfevals 3500 --push` |
-| push only | `sbatch --job-name=Joint-push --dependency=afterany:<job> --time=00:10:00 --cpus-per-task=1 --mem=2G IGE/paperA_model/hpc_job_a.py --push-only <run dir>` |
+| independent shocks | `sbatch --job-name=Joint-gn-indep --time=05:00:00 paperA_model/hpc_job_a.py polish --label indep --fix pi_c0=0 pi_c1=0 pi_c2=0 m_H=1 --push` |
+| resume (CMA) | `sbatch --job-name=Joint-smm-main-r --time=12:00:00 paperA_model/hpc_job_a.py --push --resume /mnt/parscratch/users/$USER/joint_smm_results/runs/<run dir>` |
+| Jacobian | `sbatch --job-name=Joint-jacobian --time=01:00:00 paperA_model/hpc_job_a.py jacobian --start <best.json> --push` |
+| standard errors | `sbatch --job-name=Joint-se --time=01:30:00 paperA_model/hpc_job_a.py se --start <best.json> --push` |
+| block weights | `sbatch --job-name=Joint-smm-block --time=12:00:00 paperA_model/hpc_job_a.py run --label block --weighting block --start <gn>/best.json --sigma0 0.2 --maxfevals 3500 --push` |
+| push only | `sbatch --job-name=Joint-push --dependency=afterany:<job> --time=00:10:00 --cpus-per-task=1 --mem=2G paperA_model/hpc_job_a.py --push-only <run dir>` |
 | queue | `squeue -u $USER -o "%.10i %.24j %.8T %.10M %.6D %R"` |
 
 `<gn>` is the `Joint-gn-main` run folder under `/mnt/parscratch/users/$USER/joint_smm_results/runs/`. `--time`
@@ -282,12 +282,12 @@ final Jacobian + s.e. ~ 80 rounds x ~2.3 min ~ 3.1 h -> 5 h; CMA-ES: one round p
 `inputs/expected_start_moments.csv`: the extended analytic start with the default extensions and persistent CPS flows,
 the trimmed 85-moment objective and diag_noise weights, inputs and targets of 2026-10-19 06:40) must be updated when
 the code, the inputs or the targets change. Results come back through `--push`
-(aggregate files of each run into `IGE/paperA_model/results/hpc_runs/<run>/`, committed on main and pushed from
+(aggregate files of each run into `paperA_model/results/hpc_runs/<run>/`, committed on main and pushed from
 `~/joint`; `git pull` on the PC) or by scp of the run folder. The changed files (`estimate.py`, `moments.py`,
 `params.py`, `model.py`, `solve.py`, `simulate.py`, `panels.py`, `analytic_start.py`, `borrowing_wedge.py`,
 `bench.py`, `hpc_job_a.py`, `recovery_report.py`, `tests/`, `inputs/start_analytic.json`, `inputs/wage_process.json`,
 `inputs/moment_noise.csv`, `inputs/expected_start_moments.csv`, `inputs/borrowing_wedge.json`, and
-`IGE/60.PaperATargets.py` with `IGE/output/paperA_targets*.csv`) must be committed before the first job.
+`IGE/60.PaperATargets.py` with `output/paperA_targets*.csv`) must be committed before the first job.
 
 ## Measurement layer: approximations to know (details in `panels.py`)
 
@@ -316,7 +316,7 @@ the code, the inputs or the targets change. Results come back through `--push`
    tables.
 4. **Wives' exits**: the target is now the persistence-filtered CPS exit (0.0101 a month; the one-month 0.026 is
    in the fit table only). The model gives 0.0014 at the start (z -69, Q 4,622 of 11,726) and is the largest miss,
-   followed by employment levels. Evidence on why wives exit: IGE/proposals/wife_exit_evidence.md (WP1, 2026-10-19).
+   followed by employment levels. Evidence on why wives exit: proposals/wife_exit_evidence.md (WP1, 2026-10-19).
    The model feature it points to is a PI decision after the first estimate. Intake: results/INTAKE.md.
 5. Recovery needs the HPC (above). The BPS correction should be applied (`bps_check.py --apply`) before the main run
    if the lead wants the corrected wage process in estimation.

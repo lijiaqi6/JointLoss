@@ -1,0 +1,176 @@
+\section{The Age Profile of Intergenerational Persistence}\label{sec:ageprofile}
+
+Figure~\ref{fig:headline} summarises the section. Panel A traces the log IGE of sons' own earnings at each age from 25
+to 50 by race, from one regression that interacts parental income with a quartic in the son's age
+\citep{lee2009trends}: the two curves cross in the late twenties---the White--Black gap is $-0.031$ (0.045) at 27 and
+$-0.002$ (0.044) at 28---and separate through the thirties, to 0.139$^{***}$ at 35, 0.232$^{***}$ at 40 and
+0.317$^{***}$ at 45; between 30 and 45 the gap rises by 0.271$^{***}$ (0.066). Panels B and C place the estimates of
+\citet{chetty2020race} on the rank profile: their 31--37 rank--rank slopes (0.28 for Black and 0.32 for White children)
+and expected ranks at the 25th parental percentile (32.6 and 45.2) are one point on profiles that are flat in age. The
+PSID expected ranks lie a few points below theirs for both races, because the sample and income concept differ, but the
+gap is the same (12.9 against 12.6).\footnote{Panel A: \texttt{output/ige\_by\_age.md}, Section 3; panels B and C:
+Section 4a (both sexes). Code: \texttt{IGE/26.IGEByAge.py}; figure: \texttt{IGE/31.PaperBFigure.py}.}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{paperB_age_profile.pdf}
+\caption{The age profile of intergenerational persistence, with \citet{chetty2020race} placed on it (PSID)}
+\label{fig:headline}
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Panel A: log IGE of sons' own earnings at each age, Black
+and White, from one Lee--Solon regression with parental income interacted with a quartic in the son's age (child-years
+at 25--55; ages above 50 not plotted), 95\% confidence bands. Panel B: rank--rank slope of household income by age band,
+sons and daughters, weighted. Panel C: expected household income rank of children whose parents are at the 25th
+percentile, by age band. Diamonds: \citet{chetty2020race} at 31--37. Shaded: the 31--37 window. Code:
+\texttt{IGE/26.IGEByAge.py} (estimates) and \texttt{IGE/31.PaperBFigure.py} (figure).\end{minipage}
+\end{figure}
+
+\subsection{Persistence rises steeply until the mid-thirties}
+
+Pooled across races and weighted, the IGE of sons' own earnings is 0.276$^{***}$ (0.024) at 25--29, 0.403$^{***}$ at
+30--34, 0.454$^{***}$ at 35--39 and 0.492$^{***}$ at 40--44, and that of their family income goes from 0.301$^{***}$
+(0.023) to 0.530$^{***}$ (Table~\ref{tab:ige_sons}). The rise is concentrated before the mid-thirties, and it is the
+intergenerational face of the life-cycle bias of \citet{haider2006life}: following the same sons from 25--29 to 35--39,
+their family income grows faster with parental income by 0.210$^{***}$ (0.031), whereas between 30--34 and 40--44 the
+growth gradient is 0.021 (0.036).\footnote{Appendix Table~\ref{tab:growth}. Code: \texttt{IGE/26.IGEByAge.py}.} The same
+rise appears in the NLSY79 (trend 0.092$^{***}$ per ten years) and the NLSY97 (0.063$^{***}$ on 25--44), and for
+daughters' family income (Appendix Tables~\ref{tab:ige_daughters} and \ref{tab:nlsyage}).
+
+\input{tab_ige_sons}
+
+\subsection{The racial comparison along the profile}
+
+The general rise hides two profiles. The elasticity of White sons' earnings climbs from 0.221 at 25--29 to 0.431 at
+35--39 and 0.491 at 40--44; that of Black sons is 0.262 at 25--29 and between 0.20 and 0.28 at every later age. The
+White--Black gap is $-0.041$ (0.045) at 25--29, 0.087$^{*}$ at 30--34, 0.173$^{***}$ at 35--39, 0.294$^{***}$ at
+40--44 and 0.299$^{***}$ at 45--49. Its opening, the mean gap from 35 minus the mean gap below 35, is 0.232$^{***}$
+(0.052) on bands 25--49, the definition used in the rest of the paper; the White elasticity rises by 0.183$^{***}$ and
+the Black one does not move ($-0.049$, s.e.\ 0.039). For family income the profile is the same and the opening smaller,
+0.157$^{***}$ (0.055).\footnote{On bands 25--55 (Table~\ref{tab:agetests}) the openings are 0.223$^{***}$ (0.055) and
+0.150$^{**}$ (0.060). Holding the children fixed in a panel observed in every band of 25--49, the trend of the
+family-income gap is 0.101$^{**}$ (0.046) per ten years.} At 50--55 the earnings gap is 0.218$^{**}$ (0.103): there is no
+evidence that it closes, and little power to tell.
+
+\input{tab_age_tests}
+
+\subsection{How precise is the racial divergence?}
+
+\paragraph{Four data sets.} The PSID estimates rest on 500 to 1,700 Black sons per band. Table~\ref{tab:threedata}
+compares four public data sets on ages 25--44. On each data set's own parental measure the earnings gap opens by
+0.211$^{***}$ in the PSID and by 0.042 and 0.058 in the NLSY79 and NLSY97; these differ (Cochran $p=0.015$) and are not
+pooled. Much of the difference is how parental income is measured: the PSID averages up to seven years, the NLSY97 has
+one year and the NLSY79 a three-year mean that is close to one year. On the same PSID children, replacing the 13--19
+mean by one year lowers the opening of the family-income gap from 0.162 to 0.093 (difference $-0.069^{**}$), and
+instrumenting the single year with parental income at later ages restores it (0.177$^{***}$).\footnote{\texttt{output/age\_profile\_robustness.md},
+Section 2. Code: \texttt{IGE/33.AgeProfileRobustness.py}.} With one year of parental income in every data set, the
+earnings gap opens by 0.151$^{***}$ in the PSID, 0.088$^{**}$ in the NLSY79 and 0.058 (0.040) in the NLSY97; dividing each
+race's elasticity by its own data set's reliability ratio gives 0.260$^{***}$, 0.160$^{**}$ and 0.131 (0.086), which
+cannot be distinguished ($p=0.47$) and pool to 0.191$^{***}$ (0.046). For family income the corrected openings pool to
+0.151$^{***}$ (0.046).
+
+The children of the NLSY79 mothers do not show the opening. Their earnings gap is zero at 25--29 and 30--34, as in the
+other data sets ($-0.019$ and 0.025 with the mother's 13--19 mean), and it is $-0.120$ (0.123) at 35--39 and $-0.080$
+(0.165) at 40--44, an opening of $-0.103$ (0.106). These later bands rest on 229 Black and 269 White sons at 35--39 and
+120 and 93 at 40--44, born by the early 1980s to mothers aged 23 or younger, and the multi-year parental measure does
+not raise the opening relative to one year on the same children (difference 0.005, s.e.\ 0.068).\footnote{Code:
+\texttt{IGE/46.AgeProfileRound2.py} (\texttt{output/age\_profile\_round2.md}, Section A8).} With one year of parental
+income in all four data sets, the opening pools to 0.086$^{***}$ (0.024), and equality across the four is rejected only
+at 10 percent ($p=0.079$). That is the precision of the racial result: about 0.09 log points with one year of parental
+income in four public data sets, about 0.19 corrected for its unreliability in the three where the ratio is known, and
+0.15--0.23 on the PSID's multi-year average.
+
+\input{tab_three_data}
+
+\paragraph{Sample, attrition, period, experience and metric.} Table~\ref{tab:gaprobust} collects the PSID checks on the
+opening, bands 25--49, earnings first. On the SRC sample alone, which has 217 Black sons, the opening is 0.279$^{***}$;
+with each race weighted, 0.227$^{***}$; with inverse-probability weights for staying in the panel, 0.201$^{***}$
+(Section~\ref{sec:data}).
+
+Age, period and cohort are collinear within a cohort, and the log gap could reflect rising inequality over calendar
+time \citep{bayer2018divergent}. Three pieces of evidence separate age from period. The opening of the earnings gap is
+between 0.17 and 0.28, and significant, in each of the cohorts born 1951--64, 1965--79 and 1980--89, which are observed
+in different decades.\footnote{\texttt{output/age\_profile\_robustness.md}, Section 1.} Income-year fixed effects in every
+band and race cell, a period-varying elasticity evaluated in 1995 and a fixed calendar window (income years 1990--2010,
+in which the bands hold different cohorts) give 0.243$^{***}$, 0.235$^{***}$ and 0.216$^{***}$. And within fixed cohorts
+the dispersion of White sons' log earnings rises with age---from 0.67 at 25--29 to 0.83 at 45--49 for sons born 1951--64,
+and from 0.75 to 0.96 for sons born 1965--79---while that of Black sons does not (0.93 to 0.79, and 0.84 to 0.84); the
+White--Black difference in the rise is 0.149$^{***}$ and 0.106$^{**}$.\footnote{Within-race standard deviation of log
+earnings net of race-specific single-age means, bootstrap standard errors over families;
+\texttt{output/age\_profile\_measurement.md}, Section B(iv). Code: \texttt{IGE/41.AgeProfileMeasurement.py}.} The
+family-income opening is less robust to the calendar: 0.174$^{***}$ with year effects, 0.168 ($p=0.106$) with a
+period-varying elasticity and 0.084 ($p=0.32$) in the fixed window.
+
+White sons of richer parents enter the labor market later: at 25--29, sons of top-tercile White parents have 4.8 years
+of potential experience and other sons 6.0--7.0. Measured on an experience clock, the gap is $-0.121$ (0.101) at 0--4
+years, 0.043 (0.044) at 5--9, 0.118$^{**}$ at 10--14, 0.220$^{***}$ at 15--19 and 0.272$^{***}$ at 20--24 (Appendix
+Table~\ref{tab:experience}), and it opens by 0.243$^{***}$ between the first and the second decade of the career; dropping
+the years at 25--26 leaves 0.212$^{***}$. The zero gap of the late twenties is not a difference in years of experience:
+the gap is zero for the first ten years of the career and opens in the second.
+
+Log elasticities drop years without earnings and are sensitive to the bottom of the distribution
+\citep{mitnik2015new, mitnik2020intergenerational}. The dollar-weighted elasticity, estimated on the earnings level with
+zeros kept, opens by 0.257$^{***}$. In the measurement literature's own terms \citep{haider2006life,
+nybom2016heterogeneous}, the coefficient of current on lifetime earnings rises with age from 0.69 at 25--29 to 1.22 at
+45--55 for White sons and from 0.85 to 0.99--1.02 for Black sons, a difference in the rise of 0.211$^{**}$ (0.086), and
+parental income adds nothing to current earnings once lifetime earnings are held fixed, in either race (Appendix
+Table~\ref{tab:lambda}).\footnote{Sons with at least three valid years in each of 25--34, 35--44 and 45--55 (267 Black
+and 676 White sons); a long panel is the definition of this object, not a test of the age profile. Within parental
+terciles the racial difference in the rise is 0.04--0.17 and not significant, which is consistent both with low power
+and with the position reading below.}
+
+\input{tab_gap_robust}
+
+\subsection{Logs, ranks and position in the distribution}
+
+\paragraph{Ranks.} The PSID reproduces \citet{chetty2020race} at 31--37: rank--rank slopes of 0.370 for Black and
+0.385 for White children, and a gap of 12.9$^{***}$ (1.3) percentiles at the 25th parental percentile. For sons' family income the rank
+evidence does not change with age: a gap in rank--rank slopes cannot be rejected in any band, and its opening is 0.037
+(0.077) in national ranks and 0.015 (0.057) when sons and parents are ranked within race; the gap in expected rank at
+the 25th parental percentile is 8--11 percentiles in every band (Appendix Table~\ref{tab:rankage}). In sons' own
+earnings the rank slopes do diverge after 40 (0.150$^{*}$ at 40--44, column (4) of the same table), and in hourly
+wages on the sample of the model by 0.187$^{***}$ (0.062, $p = 0.003$) at 45--49, against 0.052 (0.036) at 25--29
+(Table~\ref{tab:modeluntargeted}): ranks of family income do
+not register the racial divergence of sons' own pay. For sons and
+daughters together the within-race rank slope gap does open, by 0.093$^{**}$ (0.043; national ranks 0.080, s.e.\ 0.049),
+so ranks are not immune to the age profile; they register a smaller part of it.
+
+\paragraph{Why logs and ranks differ.} On the same children and weights the log gap widens by 0.216$^{***}$ (0.062)
+between the two halves of the career and the rank gap by 0.113$^{**}$ (0.049); the widening of the log gap is mostly
+the dispersion of children's log income relative to their parents' (the gap in the ratio of standard deviations widens
+by 0.262$^{***}$), which ranks normalise away.\footnote{Both sexes, family income, \texttt{output/ige\_by\_age.md},
+Section 5.4. Code: \texttt{IGE/26.IGEByAge.py}.} In Chetty et al.'s language, the log gap is the downward mobility of
+Black sons from well-off families: in the PSID 17.8 percent of Black and 5.9 percent of White children of top-quintile
+parents end in the bottom quintile.\footnote{Code: \texttt{IGE/7.RankMobility.py}.} That downward mobility is known
+\citep{hertz2005rags, bhattacharya2011nonparametric, mazumder2014black}; the new fact is its timing.
+
+\paragraph{Race or position?} Black families are concentrated at the bottom of the parental distribution---85 percent
+of Black and 46 percent of White sons have parents below the pooled median---where log incomes are dispersed and the
+IGE is flatter \citep{bratsberg2007nonlinearities}. Figure~\ref{fig:position} looks at the question nonparametrically.
+For own earnings (panel A), White sons' earnings at 40--49 rise more steeply with parental income than at 25--29 across
+the whole common range, including the bottom six vigintiles, which hold 54--316 Black and 20--125 White sons each; Black
+sons' 40--49 curve is no steeper than their 25--29 curve, and above the sixth vigintile it rests on 15--33 Black sons
+per point. The regressions are less sharp than the figure. Among sons of parents in the bottom tercile, below the median
+or with White sons re-weighted to the parental incomes of Black sons, the earnings opening is 0.13--0.23 and the
+family-income opening 0.02--0.09, with standard errors of 0.09--0.13 (panels C and D and Table~\ref{tab:gaprobust}). Both
+are smaller than in the full sample, and the data do not establish whether the difference between the two outcomes, or
+between these subsamples and the full sample, is position or race. The model of Section~\ref{sec:model} lets access to
+good jobs depend nonlinearly on parental income, so that position can do this work before race is asked to.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{paperB_position.pdf}
+\caption{Race or position in the parental distribution? (PSID, sons)}\label{fig:position}
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Panels A and B: mean log outcome (net of race-specific
+single-age means) by vigintile of the pooled parental-income distribution of Black and White sons, at 25--29 (dashed)
+and 40--49 (solid); vigintiles with at least 20 sons of the race. Panels C and D: White $-$ Black gap in the log IGE by
+age band, all sons, sons of parents below the pooled median, and White sons re-weighted to the Black distribution of
+parental income in each band (20 bins); 95\% confidence intervals clustered by 1968 family. Code:
+\texttt{IGE/41.AgeProfileMeasurement.py} and \texttt{IGE/44.PaperBReviewTables.py}.\end{minipage}
+\end{figure}
+
+\paragraph{Daughters.} Daughters' family income shows the same divergence (gap trend 0.162$^{***}$, s.e.\ 0.032),
+their own earnings do not (Appendix Table~\ref{tab:ige_daughters}). The daughters' divergence runs through their
+husbands (Section~\ref{sec:contains}), and it rests on the low-income oversample: on the SRC sample alone it is 0.014
+(0.106).\footnote{\texttt{output/age\_profile\_robustness.md}, Section 3. Code: \texttt{IGE/33.AgeProfileRobustness.py}.}
+
+The age profile raises the question the rest of the paper addresses: what grows with parental income over White sons'
+thirties and not over Black sons'?

@@ -21,11 +21,11 @@ folder, `<ind>` = `Joint-gn-indep`, `<rec>` = `Joint-recovery-gn`, `<cma>` = the
 
 | Step | Command | Output |
 |---|---|---|
-| fit, Q by block, parameters | `python IGE/paperA_model/fit_table.py results/hpc_runs/<gn> --indep results/hpc_runs/<ind> --params results/hpc_runs/<gn> --indep-params results/hpc_runs/<ind> --compile` | `results/fit_table_<stamp>/tab_model_fit.tex`, `tab_q_by_block.tex`, `tab_params_estimates.tex`, `fit_table.json`, `test_wrapper.pdf`; `--paper` copies the three tables into `IGE/paperA_joint_loss/` |
-| recovery | `python IGE/paperA_model/recovery_table.py results/hpc_runs/<rec> --compile` | `results/recovery_table_<stamp>/tab_recovery.tex` (truth, start, recovered, noise s.e., z, data s.e., z; order of `tab:model_params`) |
-| marriage diagnostics | `python IGE/paperA_model/diagnostics_marriage.py --start results/hpc_runs/<gn> --threads 4` (2 evaluations, ~5 min) | `results/marriage_diag_<stamp>/marriage_diag.md/.json`, `q_by_block.csv`, `moments_sep_off.csv`, `es_still_with_wife.csv` |
-| counterfactuals | `python IGE/paperA_model/counterfactuals.py --start results/hpc_runs/<gn> --indep results/hpc_runs/<ind> --size full --threads 8` (7 scenarios x 2 models x ~8 min at full size) | `results/counterfactuals_<stamp>/scores.csv` (long), `counterfactuals.md/.json` |
-| BPS check (7) | `python IGE/paperA_model/bps_check.py --start results/hpc_runs/<gn>/best.json --K 3 --threads 8` (**never `--apply`** while the HPC chain runs: it rewrites `inputs/wage_process.json`) | `results/bps_<stamp>/bps_check.json` (BPS Table 3 next to the published values; ~6 min at K = 1, ~17 min at K = 3 on the PC) |
+| fit, Q by block, parameters | `python paperA_model/fit_table.py results/hpc_runs/<gn> --indep results/hpc_runs/<ind> --params results/hpc_runs/<gn> --indep-params results/hpc_runs/<ind> --compile` | `results/fit_table_<stamp>/tab_model_fit.tex`, `tab_q_by_block.tex`, `tab_params_estimates.tex`, `fit_table.json`, `test_wrapper.pdf`; `--paper` copies the three tables into `paperA_joint_loss/` |
+| recovery | `python paperA_model/recovery_table.py results/hpc_runs/<rec> --compile` | `results/recovery_table_<stamp>/tab_recovery.tex` (truth, start, recovered, noise s.e., z, data s.e., z; order of `tab:model_params`) |
+| marriage diagnostics | `python paperA_model/diagnostics_marriage.py --start results/hpc_runs/<gn> --threads 4` (2 evaluations, ~5 min) | `results/marriage_diag_<stamp>/marriage_diag.md/.json`, `q_by_block.csv`, `moments_sep_off.csv`, `es_still_with_wife.csv` |
+| counterfactuals | `python paperA_model/counterfactuals.py --start results/hpc_runs/<gn> --indep results/hpc_runs/<ind> --size full --threads 8` (7 scenarios x 2 models x ~8 min at full size) | `results/counterfactuals_<stamp>/scores.csv` (long), `counterfactuals.md/.json` |
+| BPS check (7) | `python paperA_model/bps_check.py --start results/hpc_runs/<gn>/best.json --K 3 --threads 8` (**never `--apply`** while the HPC chain runs: it rewrites `inputs/wage_process.json`) | `results/bps_<stamp>/bps_check.json` (BPS Table 3 next to the published values; ~6 min at K = 1, ~17 min at K = 3 on the PC) |
 
 Use the CMA-ES folder in place of `<gn>` once it has finished (`best.json` or `mean.json`; a CMA folder has no
 `se.csv` until `estimate.py se --start <cma>/best.json` has run: give that `se.csv` as the second `--params` item).
@@ -57,7 +57,7 @@ the evaluation at `--start`, same CRN draws (noise floor of Q about 30); Q by bl
 search, exits, added-work, consumption and separation moments side by side. (B) the simulated 'still with baseline
 wife' coefficients by event year -3 ... +6 (reference -2), by race and pooled, from the targets' own stacked panel
 (`panels.units`, `stack_rows`, the moments' event window; `moments.twfe` with unit and cell effects), next to the PSID
-event study `IGE/output/father_displacement.csv` (IGE/19). Only the mean of years 1-3 is targeted.
+event study `output/father_displacement.csv` (IGE/19). Only the mean of years 1-3 is targeted.
 
 Pre-estimate reference at the analytic start (`results/marriage_diag_20261019_092447_p18108/`):
 - (A) Q 11,726.0 -> 8,650.6 with separation off (-3,075). Employment levels 3,537 -> 1,088 (wives' employment with no
@@ -106,7 +106,7 @@ Fixed 2026-10-19 (the WP3 smoke runs `results/bps_20261019_093701/`, `_093959/` 
 3. The r(3200) in BPS's `pi_s_estimation.do` was our shim, not the data: `_bpsfix` placeholders for the dummies the
    simulated panel lacks (no 'other race' couples, no wife born before 1941) survived into BPS's joint `xi` call,
    which renamed the wife's stubs, so the hard-coded Mata lists no longer conformed. The placeholders are now
-   registered in `xi`'s own drop list (`IGE/bps_reconciliation/HARNESS.md` Section 7). Round trip on BPS's PSID panel
+   registered in `xi`'s own drop list (`bps_reconciliation/HARNESS.md` Section 7). Round trip on BPS's PSID panel
    after the fix: identical to the reference runs to the last digit (full sample, Black and White heads), 73 of 74
    published cells as before.
 

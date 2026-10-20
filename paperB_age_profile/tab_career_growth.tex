@@ -1,0 +1,45 @@
+\begin{table}[!htbp]
+\centering
+\caption{Annual wage growth by parental income: within and across employers (PSID, sons)}
+\label{tab:careergrowth}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccccc}
+\toprule
+Panel / row & \begin{tabular}[b]{@{}c@{}}Annual\\ln wage\\growth\end{tabular} & \begin{tabular}[b]{@{}c@{}}Score growth,\\same\\employer\end{tabular} & \begin{tabular}[b]{@{}c@{}}Residual growth,\\same\\employer\end{tabular} & \begin{tabular}[b]{@{}c@{}}Score growth,\\new\\employer\end{tabular} & \begin{tabular}[b]{@{}c@{}}Residual growth,\\new\\employer\end{tabular} & \begin{tabular}[b]{@{}c@{}}Stayed\\with\\employer\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{l}{\textit{Pooled (weighted)}} \\
+ln parental income, sons 25--34 & $0.015^{***}$ & $0.001$ & $0.010^{**}$ & $0.002$ & $0.003$ & $0.022^{**}$ \\
+ & (0.005) & (0.002) & (0.004) & (0.001) & (0.003) & (0.009) \\
+\quad Mean of outcome / pairs, 25--34 & 0.054 & 0.009 & 0.039 & 0.002 & 0.004 & 11,578 pairs \\
+ln parental income, sons 35--55 & $0.004$ & $-0.002^{*}$ & $0.003$ & $0.000$ & $0.002$ & $0.020^{**}$ \\
+ & (0.003) & (0.001) & (0.003) & (0.001) & (0.002) & (0.008) \\
+\quad Mean of outcome / pairs, 35--55 & 0.020 & 0.002 & 0.017 & $-$0.001 & 0.002 & 14,185 pairs \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Black}} \\
+ln parental income, sons 25--34 & $-0.001$ & $0.004$ & $0.000$ & $0.003$ & $-0.008$ & $0.018$ \\
+ & (0.006) & (0.003) & (0.007) & (0.002) & (0.005) & (0.013) \\
+\quad Mean of outcome / pairs, 25--34 & 0.042 & 0.003 & 0.040 & 0.001 & $-$0.003 & 3,725 pairs \\
+ln parental income, sons 35--55 & $-0.002$ & $-0.001$ & $0.001$ & $-0.001$ & $-0.001$ & $-0.011$ \\
+ & (0.004) & (0.002) & (0.004) & (0.001) & (0.003) & (0.012) \\
+\quad Mean of outcome / pairs, 35--55 & 0.015 & 0.003 & 0.013 & 0.000 & $-$0.002 & 4,537 pairs \\
+\addlinespace
+\multicolumn{7}{l}{\textit{White}} \\
+ln parental income, sons 25--34 & $0.020^{***}$ & $0.000$ & $0.018^{***}$ & $0.001$ & $0.001$ & $0.020^{**}$ \\
+ & (0.005) & (0.002) & (0.005) & (0.001) & (0.003) & (0.010) \\
+\quad Mean of outcome / pairs, 25--34 & 0.054 & 0.010 & 0.038 & 0.002 & 0.005 & 7,862 pairs \\
+ln parental income, sons 35--55 & $0.007^{**}$ & $-0.001$ & $0.003$ & $0.001$ & $0.004^{**}$ & $0.025^{***}$ \\
+ & (0.003) & (0.001) & (0.004) & (0.001) & (0.002) & (0.009) \\
+\quad Mean of outcome / pairs, 35--55 & 0.021 & 0.002 & 0.018 & $-$0.001 & 0.002 & 9,649 pairs \\
+\addlinespace
+\multicolumn{7}{l}{\textit{White $-$ Black}} \\
+ln parental income, sons 25--34 & $0.021^{***}$ & $-0.003$ & $0.018^{**}$ & $-0.002$ & $0.009$ & $0.001$ \\
+ & (0.008) & (0.004) & (0.008) & (0.003) & (0.006) & (0.016) \\
+ln parental income, sons 35--55 & $0.009^{*}$ & $0.000$ & $0.002$ & $0.002$ & $0.005$ & $0.036^{**}$ \\
+ & (0.005) & (0.002) & (0.005) & (0.001) & (0.004) & (0.015) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Consecutive interviews 1--2 years apart (waves 1985--2023) with a valid wage, a mapped occupation and tenure with the present employer. Annualised log-wage growth = score growth + residual growth, each split by whether the son stayed with the same employer; columns (2)--(5) add up to column (1). Column (6): share of stayers (linear probability). Controls: quartic in age and year fixed effects. Mean row: mean of the outcome in columns (1)--(5) and the number of son-year pairs. Coding noise in occupations inflates score changes in both directions. Standard errors clustered by 1968 family. Occupational wage score: mean log hourly wage of men aged 25--64 in the occupation relative to all men (CPS MORG, base 1992--2002), occupations harmonised to Dorn's occ1990dd scheme; log wage = score (between occupations) + residual (within occupation), so the score and residual columns add up to the log-wage column on the same sample. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/27.CareerWageGrowth.py} (\texttt{output/career\_wage\_growth.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

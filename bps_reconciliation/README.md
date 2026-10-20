@@ -1,7 +1,7 @@
 # BPS (2016) reconciliation: what was run and how (2026-10-18)
 
 Replication and relaxation of Blundell, Pistaferri and Saporta-Eksten (2016, AER 106(2), "BPS") for Paper A
-(`IGE/paperA_joint_loss/`), following the protocol in `IGE/proposals/fable_bps2016_paperA.md` (Steps 0-2).
+(`paperA_joint_loss/`), following the protocol in `proposals/fable_bps2016_paperA.md` (Steps 0-2).
 Results: `bps_reconciliation.md` (tables) and `bps_reconciliation.csv` (every number). Stata logs: `logs/`.
 
 ## Inputs (all read only)
@@ -13,10 +13,10 @@ Results: `bps_reconciliation.md` (tables) and `bps_reconciliation.csv` (every nu
   `psid_interview.do` + `psid_individual.do` + `psid_consumption.do`; shipped in the package). Step 0 starts from this
   file. Running BPS's `psid_sample.do` and `prepare_bootstrap.do` on it reproduces their shipped
   `data4estimation.dta` exactly (all 106 variables, 10,479 rows; `code/check_shipped.do`, `logs/check_shipped.log`).
-- IGE displacement builders (not edited): `IGE/data/psid_displacement.pkl` (saved output of
+- IGE displacement builders (not edited): `data/psid_displacement.pkl` (saved output of
   `IGE/19.FatherDisplacement.py`: husband's closure / layoff / quit by head pid x calendar year), and the wife's
-  reason-for-job-end reports via `IGE/25.JointJobLoss.wife_events()` applied to `IGE/data/psid_person_year.pkl` and
-  `IGE/23.CorrelatedShocks.extras()["R"]` (cached `IGE/data/correlated_shocks_fam.pkl`). Imported with importlib.
+  reason-for-job-end reports via `IGE/25.JointJobLoss.wife_events()` applied to `data/psid_person_year.pkl` and
+  `IGE/23.CorrelatedShocks.extras()["R"]` (cached `data/correlated_shocks_fam.pkl`). Imported with importlib.
 - PSID 2023 individual file (`Dropbox/PSID/Individual/ind2023er`) only to identify the PSID subsample of BPS's rows
   (`code/check_unmatched.py`).
 

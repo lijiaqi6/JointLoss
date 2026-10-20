@@ -1,0 +1,54 @@
+\begin{table}[!htbp]
+\centering
+\caption{Untargeted validation of the selected model (E)}
+\label{tab:modeluntargeted}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Statistic & PSID & (s.e.) & Model & $t$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Mean log wage}} \\
+\quad White, 35--39 & $2.914$ & (0.019) & $3.022$ & $5.7$ \\
+\quad Black, 35--39 & $2.489$ & (0.019) & $2.596$ & $5.5$ \\
+\quad White, 45--49 & $3.032$ & (0.023) & $3.179$ & $6.5$ \\
+\quad Black, 45--49 & $2.614$ & (0.028) & $2.708$ & $3.4$ \\
+\quad White $-$ Black, 35--39 & $0.425$ & (0.027) & $0.426$ & $0.1$ \\
+\quad White $-$ Black, 45--49 & $0.418$ & (0.036) & $0.472$ & $1.5$ \\
+\multicolumn{5}{l}{\textit{Rank--rank slope (son's wage percentile on parental-income percentile)}} \\
+\quad White, 25--29 & $0.251$ & (0.020) & $0.251$ & $-0.0$ \\
+\quad White, 30--34 & $0.342$ & (0.022) & $0.331$ & $-0.5$ \\
+\quad White, 45--49 & $0.379$ & (0.036) & $0.391$ & $0.3$ \\
+\quad Black, 25--29 & $0.199$ & (0.028) & $0.187$ & $-0.4$ \\
+\quad Black, 30--34 & $0.212$ & (0.029) & $0.188$ & $-0.8$ \\
+\quad Black, 45--49 & $0.192$ & (0.053) & $0.178$ & $-0.3$ \\
+\quad White $-$ Black, 25--29 & $0.052$ & (0.036) & $0.064$ & $0.3$ \\
+\quad White $-$ Black, 45--49 & $0.187$ & (0.062) & $0.213$ & $0.4$ \\
+\multicolumn{5}{l}{\textit{Share whose modal job at 35--55 is a $G$ job}} \\
+\quad White, bottom parental tercile & $0.088$ & (0.018) & $0.030$ & $-3.2$ \\
+\quad White, top parental tercile & $0.227$ & (0.015) & $0.131$ & $-6.6$ \\
+\quad Black, bottom parental tercile & $0.044$ & (0.009) & $0.020$ & $-2.7$ \\
+\quad Black, top parental tercile & $0.122$ & (0.033) & $0.073$ & $-1.5$ \\
+\multicolumn{5}{l}{\textit{Log-wage IGE below the median of parental income}} \\
+\quad White, 25--29 & $0.107$ & (0.053) & $0.258$ & $2.8$ \\
+\quad White, 45--49 & $0.295$ & (0.153) & $0.419$ & $0.8$ \\
+\quad Black, 25--29 & $0.130$ & (0.028) & $0.140$ & $0.4$ \\
+\quad Black, 45--49 & $0.112$ & (0.052) & $0.162$ & $0.9$ \\
+\multicolumn{5}{l}{\textit{Parental-income gradient of log wages without / with a $G$-job dummy}} \\
+\quad White, 25--34, without & $0.258$ & (0.018) & $0.270$ & $0.7$ \\
+\quad White, 25--34, with & $0.243$ & (0.018) & $0.257$ & $0.8$ \\
+\quad White, 35--55, without & $0.421$ & (0.031) & $0.426$ & $0.2$ \\
+\quad White, 35--55, with & $0.387$ & (0.031) & $0.406$ & $0.6$ \\
+\quad Black, 25--34, without & $0.157$ & (0.020) & $0.155$ & $-0.1$ \\
+\quad Black, 25--34, with & $0.146$ & (0.019) & $0.148$ & $0.1$ \\
+\quad Black, 35--55, without & $0.158$ & (0.028) & $0.173$ & $0.5$ \\
+\quad Black, 35--55, with & $0.141$ & (0.027) & $0.167$ & $0.9$ \\
+\multicolumn{5}{l}{\textit{Same-employer growth at 25--34 on log parental income}} \\
+\quad White & $0.019$ & (0.006) & $0.019$ & $-0.1$ \\
+\quad Black & $0.007$ & (0.008) & $0.002$ & $-0.6$ \\
+\quad White, net of schooling & $0.006$ & (0.006) & $0.009$ & $0.4$ \\
+\quad Black, net of schooling & $0.005$ & (0.009) & $0.000$ & $-0.6$ \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} None of these statistics is a target. PSID: the sons' panel of the targets, 300 cluster-bootstrap draws of 1968 families. Model: model E at its estimates, mean over ten simulation seeds, 20 simulated sons per PSID son, the same code (\texttt{model/core.py}, \texttt{validation} and \texttt{untargeted}) on the simulated panel with the PSID observation scheme. $t$ = (model $-$ PSID) / PSID s.e. Ranks: percentile of the son's log wage among Black and White sons in the band and of parental income among the same sons. Output: \texttt{model/output/validation\_psid.json}, \texttt{final\_x4/validation\_E.json}; code \texttt{model/validation\_run.py}.\end{minipage}
+\end{table}

@@ -1,0 +1,54 @@
+\begin{table}[!htbp]
+\centering
+\caption{Labor-market conditions at entry: access to good jobs and wages (PSID, sons)}
+\label{tab:entry}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Good job\\at 25--34\end{tabular} & \begin{tabular}[b]{@{}c@{}}Log wage\\25--34\end{tabular} & \begin{tabular}[b]{@{}c@{}}Log wage\\35--55\end{tabular} \\
+ & (1) & (2) & (3) \\
+\midrule
+\multicolumn{4}{l}{\textit{A. State unemployment rate at entry (state and entry-year FE)}} \\
+Black: unemployment rate (pp) & $0.001$ & $-0.005$ & $-0.035^{*}$ \\
+ & (0.005) & (0.012) & (0.020) \\
+White: unemployment rate (pp) & $0.002$ & $0.003$ & $0.007$ \\
+ & (0.008) & (0.010) & (0.016) \\
+White $-$ Black: unemployment rate (pp) & $0.002$ & $0.007$ & $0.042^{*}$ \\
+ & (0.010) & (0.016) & (0.025) \\
+Black: rate $\times$ log parental income & $-0.001$ & $-0.001$ & $-0.002$ \\
+ & (0.005) & (0.011) & (0.017) \\
+White: rate $\times$ log parental income & $0.009^{**}$ & $0.005$ & $0.010$ \\
+ & (0.004) & (0.013) & (0.022) \\
+Sons (Black / White) & 1,372 / 2,116 & 1,434 / 2,160 & 849 / 1,433 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{B. Mean state unemployment rate over the first ten years}} \\
+Black: unemployment rate (pp) & $0.004$ & $-0.025$ & $-0.009$ \\
+ & (0.010) & (0.018) & (0.029) \\
+White: unemployment rate (pp) & $0.005$ & $0.002$ & $0.020$ \\
+ & (0.011) & (0.017) & (0.017) \\
+White $-$ Black: unemployment rate (pp) & $0.001$ & $0.027$ & $0.030$ \\
+ & (0.015) & (0.025) & (0.033) \\
+Black: rate $\times$ log parental income & $0.002$ & $0.011$ & $0.022$ \\
+ & (0.006) & (0.015) & (0.027) \\
+White: rate $\times$ log parental income & $0.013$ & $0.001$ & $-0.008$ \\
+ & (0.008) & (0.014) & (0.027) \\
+Sons (Black / White) & 1,425 / 2,169 & 1,491 / 2,214 & 895 / 1,480 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{C. National unemployment rate at entry (linear cohort trend)}} \\
+Black: unemployment rate (pp) & $0.001$ & $-0.001$ & $0.018$ \\
+ & (0.004) & (0.013) & (0.014) \\
+White: unemployment rate (pp) & $0.002$ & $-0.010^{*}$ & $-0.008$ \\
+ & (0.005) & (0.006) & (0.012) \\
+White $-$ Black: unemployment rate (pp) & $0.001$ & $-0.009$ & $-0.026$ \\
+ & (0.007) & (0.014) & (0.018) \\
+Black: rate $\times$ log parental income & $-0.004$ & $0.008$ & $0.036^{**}$ \\
+ & (0.008) & (0.012) & (0.017) \\
+White: rate $\times$ log parental income & $0.003$ & $-0.001$ & $0.014$ \\
+ & (0.008) & (0.012) & (0.018) \\
+Sons (Black / White) & 1,722 / 2,585 & 1,803 / 2,637 & 1,147 / 1,887 \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Son-level regressions; entry year = birth year + 18 + years of schooling beyond 12. The state rate is measured in the state of the son's parental family when he was 17 (BLS LAUS, entry years from 1976); the national rate is the BLS annual average. Regressors: the rate, the rate $\times$ centred log parental income, log parental income, years of schooling, quartic in the parent's age; panels A--B add state-at-17 and entry-year fixed effects (standard errors clustered by state), panel C a linear birth-cohort trend (clustered by entry year). Good job: the son's modal job at 25--34 is a well-paid cell with high later growth (Table~\ref{tab:access}). White $-$ Black: difference of the separate regressions. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/49.PaperBPolicyShocks.py} (\texttt{output/paperB\_policy\_shocks.csv}).\end{minipage}
+\end{table}

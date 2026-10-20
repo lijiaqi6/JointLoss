@@ -1,5 +1,5 @@
 r"""The safety net around a joint loss: SNAP, UI, TANF and where the EITC puts the couple (2026-10-20) [Paper A; WP6 of
-IGE/proposals/fable_10h_plan_paperA.md]
+proposals/fable_10h_plan_paperA.md]
 
 Why. Counterfactual (iii) of Paper A ranks an EITC-type earnings subsidy against an equal-cost transfer on the claim
 that the subsidy 'pays least when both spouses have lost their jobs'. Section 5's safety-net subsection had one PSID
@@ -13,11 +13,11 @@ DATA (all read only; nothing of the source scripts is edited)
         ER27 / amount T27AMT / coverage RCUTYP27, state UI receipt ER05 / amount T05AMT, TANF ER20 / T20AMT; 2014
         (event-history calendar, monthly) SNAP RFSYN / TFS_AMT / RFSCOV, UI EUC1-3MNYN / TUC1-3AMT, TANF RTANFYN /
         TTANF_AMT. Amounts deflated to 2000 dollars with the CPI-U of IGE/common.py.
-  PSID  60.PaperATargets.py's cached objects (IGE/data/paperA_targets_psid.pkl, read only; 60 is not run): 25's
+  PSID  60.PaperATargets.py's cached objects (data/paperA_targets_psid.pkl, read only; 60 is not run): 25's
         couple-years CY (consecutive interviews of the same couple, both spouses with positive hours in the earlier
         year, intervals ending 1984-2021; h / w = husband / wife displaced in the interval) and the men's panel m
         (labor incomes of both spouses in 2000 $, number of children, food-stamp and AFDC/TANF receipt in the income
-        year). EITC schedule: 61's era-mean schedules IGE/paperA_model/inputs/schedules_era{1,2,3}.json (read only;
+        year). EITC schedule: 61's era-mean schedules paperA_model/inputs/schedules_era{1,2,3}.json (read only;
         married-joint phase-out start; 2000 dollars; children 0 / 1 / 2 / 3+).
 DESIGNS
   SIPP event study (months around his job loss). Event: husband's involuntary separation (40's INV: layoff, closure,
@@ -40,9 +40,9 @@ DESIGNS
   where the schedule puts the couple (no AGI or investment-income tests, no take-up), not a receipt measure.
   Associations, not causal effects. *** p<0.01, ** p<0.05, * p<0.1 (normal approximation).
 OUTPUTS (aggregate only)
-  IGE/output/safety_net_joint_loss.csv  every estimate: dataset, table, sample, cell, outcome, coef, se, p, stars, n
-  IGE/output/safety_net_joint_loss.md   tables
-  IGE/output/safety_net_joint_loss.png  monthly SNAP / UI paths around his loss alone vs a joint loss (SIPP)
+  output/safety_net_joint_loss.csv  every estimate: dataset, table, sample, cell, outcome, coef, se, p, stars, n
+  output/safety_net_joint_loss.md   tables
+  output/safety_net_joint_loss.png  monthly SNAP / UI paths around his loss alone vs a joint loss (SIPP)
 Run from the repository root: .venv/Scripts/python.exe -I IGE/78.SafetyNetJointLoss.py [--only sipp,psid]
   [--scratch DIR] (the scratch of IGE/75; the extracts are built there if missing)
 """

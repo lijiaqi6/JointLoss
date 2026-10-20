@@ -6,10 +6,10 @@ Reference: Bacher, Grubener and Nord (2025), "Joint search over the life cycle",
 proposals/fable_bacher2025_paperA.md, Section 4.1-4.2.
 
 DATA
-  The raw CPS basic monthly files of 30.CPSJointJobLoss.py (IGE/data/ext/cps_couples/, Census API 1994-2023, persons
+  The raw CPS basic monthly files of 30.CPSJointJobLoss.py (data/ext/cps_couples/, Census API 1994-2023, persons
   with PEMARITL = 1 and PRTAGE 20-62); no new download. Script 30's couples panel keeps couples with both spouses 20-60;
   here the same builder (30's read_month / build_panel, imported read-only) is run with the upper age bound at 62, the
-  bound of the raw files, and cached as IGE/data/cps_couples_panel_2062.pkl (git-ignored). Everything else (couple
+  bound of the raw files, and cached as data/cps_couples_panel_2062.pkl (git-ignored). Everything else (couple
   definition, person links, link-rate rule, status codes) is 30's. Status s: 1 employed (PEMLR 1-2), 2 job loser
   (PEMLR 3-4 with PRUNTYPE 1-3), 3 other unemployed, 4 not in the labor force (PEMLR 5-7), 0 status missing, -1 not
   linked. E = 1, U = 2-3, N = 4.
@@ -43,7 +43,7 @@ PART (2): Paper A's joint job loss by age
   BGN's window; pooled H x age-group regressions with Wald tests; the joint EU-EU rate and its ratio to independence;
   shares of couple-months in EE / EN / NE / EU / UU / UN / NN by age (all couple-months, weighted).
 Every regression: *** p<0.01, ** p<0.05, * p<0.1; s.e. clustered by household. Associations, not causal effects.
-Writes IGE/output/cps_awe_by_age.md, .csv (every estimate), .png.
+Writes output/cps_awe_by_age.md, .csv (every estimate), .png.
 Run from IGE/: ../.venv/Scripts/python.exe -I 50.CPSAddedWorkerByAge.py [--panel60 = use 30's 20-60 cache]
 """
 import importlib.util

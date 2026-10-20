@@ -9,16 +9,16 @@ lifecycle model (search friction, husbands' employment risk, a safety-net floor,
 This note records what has and has not been done. Every paper below was checked on the source page linked next to it in this
 session (publisher, NBER, IZA, RePEc/IDEAS, SSRN, author or institutional page), unless it is marked **UNVERIFIED**. Where I
 read the PDF itself (via `pdftotext`), the entry says "(PDF read)". Papers already summarized in `IGE/literature_notes.md` (GGS
-2015, FMR 2021, BFHO 2024, CHJP 2020, DFW 2014, Palomino et al. 2018) and in `IGE/proposals/safety_net_ige.md` §1 are only
+2015, FMR 2021, BFHO 2024, CHJP 2020, DFW 2014, Palomino et al. 2018) and in `proposals/safety_net_ige.md` §1 are only
 cross-referenced here, with the URLs verified there.
 
 Our own results used for comparison:
-- **First stage** (`IGE/output/first_stage.md`). A 1 pp tighter men's-industry Bartik lowers married mothers' employment at b+2
+- **First stage** (`output/first_stage.md`). A 1 pp tighter men's-industry Bartik lowers married mothers' employment at b+2
   by 0.0247 relative to unmarried mothers (bartik_m × married = −0.0247**, s.e. 0.0112, p=0.027). In other words, married
   mothers work more after a birth when men's industries are slack. The state unemployment rate itself has the opposite sign
   (−0.0147** at b+1, p=0.014), and neither the unemployment rate nor the Bartiks interact with Black (ur × black +0.0012,
   p=0.786).
-- **Childhood exposures and adult earnings** (`IGE/output/psid_child_exposure.md`, Section 3). A father figure's job loss at
+- **Childhood exposures and adult earnings** (`output/psid_child_exposure.md`, Section 3). A father figure's job loss at
   0–17 is associated with lower log lifetime earnings: −0.214*** for Black children (s.e. 0.081, p=0.009) and −0.099 for White
   children (s.e. 0.065, p=0.131). Job loss is measured as zero hours. The mother being employed at b+1 shows no association:
   Black +0.044 (p=0.440), White +0.042 (p=0.291). All of these are associations, not effects.

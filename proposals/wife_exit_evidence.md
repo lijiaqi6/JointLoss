@@ -1,7 +1,7 @@
 # Why do wives leave employment at 1% a month? Evidence for the Paper A model decision (WP1, 2026-10-19)
 
-Script `IGE/63.WifeExitWhy.py`; every estimate in `IGE/output/wife_exit_why.csv` and the tables in
-`IGE/output/wife_exit_why.md`. Sample everywhere: married wives aged 25-59 whose husband is employed. CPS 1994-2023
+Script `IGE/63.WifeExitWhy.py`; every estimate in `output/wife_exit_why.csv` and the tables in
+`output/wife_exit_why.md`. Sample everywhere: married wives aged 25-59 whose husband is employed. CPS 1994-2023
 and SIPP 2003-2016 use the persistent monthly exit (employed at t-1 and t, not employed at t+1 and t+2; CPS as in
 `cps_wife_exit_p`, so job losers do not count as exits). The PSID 1968-1996 annual exit is hours > 0 in year t and
 0 in t+1. Regressions are LPMs in percentage points, with s.e. clustered by household (CPS, SIPP) or 1968 family

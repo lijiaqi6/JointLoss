@@ -1,0 +1,35 @@
+\begin{table}[!htbp]
+\centering
+\caption{A childhood shock re-scored by the son's age: the father's displacement (PSID, sons)}
+\label{tab:fatherdispage}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Displaced, son at 25--34\end{tabular} & \begin{tabular}[b]{@{}c@{}}Displaced, son at 35--44\end{tabular} & \begin{tabular}[b]{@{}c@{}}Change, 35--44 minus 25--34\end{tabular} \\
+ & (1) & (2) & (3) \\
+\midrule
+\multicolumn{4}{l}{\textit{Son's log earnings}} \\
+All sons & $-0.079^{***}$ & $-0.053$ & $0.026$ \\
+ & (0.029) & (0.043) & (0.037) \\
+Black sons & $-0.106^{*}$ & $-0.124$ & $-0.019$ \\
+ & (0.061) & (0.080) & (0.080) \\
+White sons & $-0.070^{**}$ & $-0.023$ & $0.047$ \\
+ & (0.034) & (0.051) & (0.042) \\
+White $-$ Black &  &  & $0.066$ \\
+ &  &  & (0.090) \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Son's log family income}} \\
+All sons & $-0.065^{**}$ & $-0.090^{**}$ & $-0.025$ \\
+ & (0.029) & (0.043) & (0.037) \\
+Black sons & $-0.032$ & $-0.084$ & $-0.052$ \\
+ & (0.058) & (0.083) & (0.088) \\
+White sons & $-0.076^{**}$ & $-0.087^{*}$ & $-0.011$ \\
+ & (0.035) & (0.051) & (0.040) \\
+White $-$ Black &  &  & $0.040$ \\
+ &  &  & (0.097) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Sons whose father figure was first displaced (plant closure or move, layoff or firing) at the son's 0--17, against sons never exposed (pseudo event at the treated's median exposure age), with a father figure working before the (pseudo) event. One stacked regression per row in which every regressor (displaced, log pre-event family income, parental schooling, birth-year fixed effects) is interacted with the son's age band; outcome: log of the son's mean earnings or family income over the band ($\geq 2$ years). Clusters 1968 family. A selection-on-observables comparison. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/49.PaperBPolicyShocks.py} (\texttt{output/paperB\_policy\_shocks.csv}).\end{minipage}
+\end{table}

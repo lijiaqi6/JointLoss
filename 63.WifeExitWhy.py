@@ -1,5 +1,5 @@
 r"""Why do married wives leave employment at ~1% a month, persistently? (2026-10-19) [Paper A; WP1 of
-IGE/proposals/fable_3h_plan_paperA.md]
+proposals/fable_3h_plan_paperA.md]
 
 The CPS persistence-filtered monthly exit of wives (IGE/60 moment cps_wife_exit_p: employed at t-1 and t, unemployed
 for a reason other than job loss or out of the labor force at t+1, not employed at t+2; husband employed at t, t+1)
@@ -8,16 +8,16 @@ data sets so that the feature to add can be chosen from evidence: (a) what happe
 reason, (c) how long the non-employment spell lasts, and (d) whether the same wives exit repeatedly.
 
 DATA (all read only; loaders of the source scripts imported via importlib, nothing of theirs is edited)
-  CPS   30.CPSJointJobLoss.py couples panel IGE/data/cps_couples_panel.pkl (basic monthly 1994-2023; status at
+  CPS   30.CPSJointJobLoss.py couples panel data/cps_couples_panel.pkl (basic monthly 1994-2023; status at
         t-2..t+3 and t+12; youngest own child at t; PEIO1COW class of worker; no hours in this extract).
-  SIPP  40.SIPPJointLoss.py couples panel IGE/data/sipp_couples_panel.pkl (panels 2004, 2008, 2014; reference months
+  SIPP  40.SIPPJointLoss.py couples panel data/sipp_couples_panel.pkl (panels 2004, 2008, 2014; reference months
         2003-2016) + the wife's job slots re-read here from the same raw core files (detailed reason the job ended:
         2004/08 ERSEND1-2, 2014 EJBk_RSEND; usual hours: 2004/08 EJBHRS, 2014 TJBk_MWKHRS; job start date: 2004/08
         TSJDATE, 2014 TJBk_STRTYR / EJBk_STRTMON / EJBk_BMONTH). The person-level job-slot extract is cached in a
         scratch folder OUTSIDE the repository (--scratch; default: the system temp folder /ige63_scratch).
-  PSID  60.PaperATargets.py's cached men's panel (IGE/data/paperA_targets_psid.pkl, built by 19.men_panel: male
+  PSID  60.PaperATargets.py's cached men's panel (data/paperA_targets_psid.pkl, built by 19.men_panel: male
         heads x calendar year with wife's annual hours, his hours and labor income, youngest child in the family
-        unit), IGE/data/psid_person_year.pkl (children's birth years -> births by calendar year), and the employment
+        unit), data/psid_person_year.pkl (children's birth years -> births by calendar year), and the employment
         status at the interview (codes 1-8, 6 = keeping house) through 21.WifeSearch.ind_status().
 COMMON SAMPLE
   Married wives aged 25-59 whose husband is employed in the base and the exit period.
@@ -47,8 +47,8 @@ ESTIMATES
   (vii) steady-state arithmetic: employment share e, persistent exit x and entry n with n (1 - e) = x e.
   Associations, not causal effects. *** p<0.01, ** p<0.05, * p<0.1 (normal approximation).
 OUTPUTS (aggregate only)
-  IGE/output/wife_exit_why.csv  every estimate: dataset, table, sample, cell, outcome, coef, se, p, stars, n
-  IGE/output/wife_exit_why.md   tables (one outcome per column, covariates as rows, samples as row panels)
+  output/wife_exit_why.csv  every estimate: dataset, table, sample, cell, outcome, coef, se, p, stars, n
+  output/wife_exit_why.md   tables (one outcome per column, covariates as rows, samples as row panels)
 Run from the repository root: .venv/Scripts/python.exe -I IGE/63.WifeExitWhy.py [--only cps,sipp,psid]
   [--scratch DIR] [--workers 6]. Each part saves its aggregate rows in the scratch folder; the outputs are written
   from all parts found there.

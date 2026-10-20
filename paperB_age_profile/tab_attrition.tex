@@ -1,0 +1,37 @@
+\begin{table}[!htbp]
+\centering
+\caption{Who stays in the panel? Probability of being observed in a later age band (PSID)}
+\label{tab:attrition}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}30--34\end{tabular} & \begin{tabular}[b]{@{}c@{}}35--39\end{tabular} & \begin{tabular}[b]{@{}c@{}}40--44\end{tabular} & \begin{tabular}[b]{@{}c@{}}45--49\end{tabular} \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+\multicolumn{5}{l}{\textit{Sons}} \\
+Share observed, White & 0.903 & 0.799 & 0.696 & 0.584 \\
+Share observed, Black & 0.809 & 0.640 & 0.521 & 0.403 \\
+White: log parental income & $0.026^{**}$ & $0.068^{***}$ & $0.113^{***}$ & $0.139^{***}$ \\
+ & (0.012) & (0.019) & (0.025) & (0.028) \\
+Black: log parental income & $0.005$ & $-0.015$ & $-0.009$ & $0.005$ \\
+ & (0.016) & (0.022) & (0.026) & (0.031) \\
+White $-$ Black: log parental income & $0.021$ & $0.083^{***}$ & $0.122^{***}$ & $0.134^{***}$ \\
+ & (0.020) & (0.029) & (0.036) & (0.041) \\
+Children at risk & 3,767 & 3,385 & 2,912 & 2,453 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Daughters}} \\
+Share observed, White & 0.923 & 0.835 & 0.737 & 0.612 \\
+Share observed, Black & 0.886 & 0.791 & 0.703 & 0.581 \\
+White: log parental income & $0.021^{**}$ & $0.031^{**}$ & $0.067^{***}$ & $0.122^{***}$ \\
+ & (0.010) & (0.016) & (0.022) & (0.027) \\
+Black: log parental income & $-0.009$ & $-0.016$ & $-0.031$ & $-0.012$ \\
+ & (0.013) & (0.018) & (0.021) & (0.027) \\
+White $-$ Black: log parental income & $0.030^{*}$ & $0.047^{**}$ & $0.098^{***}$ & $0.134^{***}$ \\
+ & (0.016) & (0.024) & (0.030) & (0.038) \\
+Children at risk & 4,330 & 3,851 & 3,315 & 2,764 \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Children with family income observed at 25--29 and born early enough to reach the band. Linear probability of being observed as a household head or spouse with valid family income in the band, on log parental income interacted with race, log family income at 25--29 interacted with race, a quartic in the parent's age and five-year birth-cohort dummies; standard errors clustered by 1968 family. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/41.AgeProfileMeasurement.py} (\texttt{output/age\_profile\_measurement.csv}).\end{minipage}
+\end{table}

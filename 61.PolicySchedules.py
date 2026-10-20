@@ -1,7 +1,7 @@
 """IGE/61.PolicySchedules.py -- era-mean policy schedules for the Paper A structural model (verified version, 2026-10-18).
 
-Writes IGE/paperA_model/inputs/schedules_era{1,2,3}.json (format read by paperA_model/params.load_schedule and
-paperA_model/model.py) and the check table IGE/output/policy_schedules.md (every parameter by year, the era means, the
+Writes paperA_model/inputs/schedules_era{1,2,3}.json (format read by paperA_model/params.load_schedule and
+paperA_model/model.py) and the check table output/policy_schedules.md (every parameter by year, the era means, the
 sources, and the comparison with the minimal version that was transcribed from memory).
 Eras (model document D8): 1 = 1984-1996, 2 = 1997-2008, 3 = 2009-2023 (2022-23 with the last). Every parameter is the
 mean over the era's calendar years of the statutory value deflated to 2000 dollars with the CPI-U of IGE/common.py
@@ -77,15 +77,15 @@ SOURCES (all checked 2026-10-18; URLs repeated next to each table below)
     ln(Y - T) on ln Y in 2000 dollars per year -> (chi, mu); era value = mean of the yearly (chi, mu).
   * c_min: AFDC/TANF maximum monthly benefit for a family of three by state and year, UKCPR National Welfare Data
     (compiled from the Green Book and the Urban Institute Welfare Rules Database), mean over states weighted by the CPS
-    couples' state distribution of the year (IGE/output/cps_couple_state_shares.csv written by IGE/62; 1994 shares
+    couples' state distribution of the year (output/cps_couple_state_shares.csv written by IGE/62; 1994 shares
     for 1984-93); unweighted median and UKCPR-population-weighted mean reported as checks.
-  * UI cap: IGE/data/ui_generosity.csv (IGE/12b) column max_wba_2000 x 52/12, mean over states weighted as c_min.
+  * UI cap: data/ui_generosity.csv (IGE/12b) column max_wba_2000 x 52/12, mean over states weighted as c_min.
     UI replacement 0.5 and expiry 1/6 a month are statutory / design constants; take-up q_UI (one value for both
     spouses, lead 2026-10-18) = mean of the DWS shares of displaced husbands and wives with UI (IGE/60 targets
     dws_ui_h, dws_ui_w; fallback 0.523 from IGE/39).
 
 Run: .venv/Scripts/python.exe IGE/61.PolicySchedules.py   [--no-taxsim  uses the cached TAXSIM output]
-     (one TAXSIM request of 8,000 records, ~1 minute; cache IGE/data/taxsim_paperA.csv)
+     (one TAXSIM request of 8,000 records, ~1 minute; cache data/taxsim_paperA.csv)
 """
 import os
 import argparse
@@ -107,7 +107,7 @@ CPI = {**CPI_COMMON, 2023: 304.702, 2024: 313.689}
 OUT_DIR = HERE / "paperA_model" / "inputs"
 ERAS = {1: range(1984, 1997), 2: range(1997, 2009), 3: range(2009, 2024)}
 UKCPR = HERE.parent / "ExternalData" / "ukcpr_national_welfare_data_1980_2024_jan26update.xlsx"
-TAXSIM_CACHE = Path(os.environ.get("JOINTLOSS_DATA", HERE / "data")) / "taxsim_paperA.csv"
+TAXSIM_CACHE = Path(os.environ.get("IGE_DATA", HERE / "data")) / "taxsim_paperA.csv"
 YEARS = range(1984, 2024)
 
 
@@ -387,7 +387,7 @@ def main():
     wsrc = "CPS couples' state distribution (IGE/62; 1994 shares for 1984-93)"
     u = pd.read_excel(UKCPR, sheet_name="Data")
     if W is None:                                             # fallback: UKCPR population weights
-        wsrc = "FALLBACK: UKCPR state population (IGE/output/cps_couple_state_shares.csv missing: run IGE/62)"
+        wsrc = "FALLBACK: UKCPR state population (output/cps_couple_state_shares.csv missing: run IGE/62)"
         W = {int(y): g.set_index("state_fips")["Population"] / g["Population"].sum() for y, g in u.groupby("year")}
     # ---------------- q_UI
     q_ui, q_src = 0.523, "FALLBACK: DWS displaced husbands 0.523 (IGE/39)"
@@ -399,7 +399,7 @@ def main():
             q_src = (f"mean of DWS UI receipt of displaced husbands {tt.loc['dws_ui_h', 'value']:.3f} and wives "
                      f"{tt.loc['dws_ui_w', 'value']:.3f} (IGE/60)")
     # ---------------- UI cap and AFDC/TANF (state means)
-    ui = pd.read_csv(Path(os.environ.get("JOINTLOSS_DATA", HERE / "data")) / "ui_generosity.csv")
+    ui = pd.read_csv(Path(os.environ.get("IGE_DATA", HERE / "data")) / "ui_generosity.csv")
     ui_w = weighted_by_state(ui, "max_wba_2000", W, YEARS) * 52.0 / 12.0
     ui_u = ui.groupby("year")["max_wba_2000"].mean().reindex(list(YEARS)) * 52.0 / 12.0
     af = u.rename(columns={"AFDC/TANF Benefit for 3-person family": "afdc3"})[["state_fips", "year", "afdc3",

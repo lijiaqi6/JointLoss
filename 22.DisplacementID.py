@@ -1,11 +1,11 @@
 r"""Identification checks for the father's displacement -> children link (2026-10-17).
 
 Builds on 19.FatherDisplacement.py (its functions are imported, its main() is not run; nothing there is changed).
-Reads (read only) IGE/data/psid_displacement.pkl, psid_person_year.pkl, psid_child_exposure.pkl, psid_kids.pkl,
+Reads (read only) data/psid_displacement.pkl, psid_person_year.pkl, psid_child_exposure.pkl, psid_kids.pkl,
 cds_scores.pkl, the raw PSID family files and individual file (Dropbox/PSID, via 1.PSID.py / 9.ChildExposure.py
-readers), and IGE/data/ui_generosity.csv if it exists. Writes
-  IGE/output/displacement_id.csv   every estimate (table, design, sample, outcome, term, coef, se, p, n, clusters)
-  IGE/output/displacement_id.md    tables
+readers), and data/ui_generosity.csv if it exists. Writes
+  output/displacement_id.csv   every estimate (table, design, sample, outcome, term, coef, se, p, n, clusters)
+  output/displacement_id.md    tables
 
 Displacement = the head's (father figure's) report that his job ended because the company folded / moved / went out of
 business (closure, code 1) or he was laid off / fired (code 3; 2021-23 also code 5 = Covid layoff); see 19's docstring.
@@ -42,7 +42,7 @@ Children, father figures, the (pseudo) event design, the controls (log pre-event
    study reference window); split at the median among the treated in each sample. Receipt after the loss: head's
    unemployment compensation > 0 (d or d+1) and family food stamps (d or d+1).
 5. SAFETY-NET BUFFERING: exposure x UI generosity (state of the father's family in the interview of d or d-1, else
-   d+1; IGE/data/ui_generosity.csv, z-scored), if the file exists.
+   d+1; data/ui_generosity.csv, z-scored), if the file exists.
 
 Raw family-file variables added here (labels matched in each wave's .do file):
   occupation of head  1968-80 'OCCUPATION OF HEAD yy' (_A retrospective 1970 Census codes); 1981-2001 'MAIN OCC 3 DIG
@@ -865,14 +865,14 @@ def main():
                        fd.md_table([LABY[y] for y in ys], [(t, r) for k, t, r in panels if k == (mv, kind, cdsmode)],
                                    [("Fixed effects", ["birth year (+ CDS wave) (+ state)"] * len(ys))]), ""]
         md.insert(md.index("## 5. Safety-net buffering: exposure x UI generosity") + 2,
-                  f"UI generosity from `IGE/data/ui_generosity.csv` (measures: {', '.join(meas)}), z-scored over the "
+                  f"UI generosity from `data/ui_generosity.csv` (measures: {', '.join(meas)}), z-scored over the "
                   "state-year panel, in the state of the father's family at the (pseudo) event year d (interview in d "
                   "or d-1, else d+1) and year d; events from 1976 on. The interaction compares the "
                   "displaced-control gap across states and years with more or less generous UI; UI generosity is not "
                   "randomly assigned (it co-moves with state wages and politics), so the state-FE rows use only "
                   "within-state changes.\n")
     else:
-        md += ["**Pending.** `IGE/data/ui_generosity.csv` did not exist when this script ran (another agent is building "
+        md += ["**Pending.** `data/ui_generosity.csv` did not exist when this script ran (another agent is building "
                "it with `12b.UIGenerosity.py`). The code in Section 5 of this script merges it by the state of the "
                "father's family at the (pseudo) event year (variables already built: `fips`, `d`) and runs exposure x "
                "UI generosity (z) with and without state FE; rerun the script once the file exists.", ""]

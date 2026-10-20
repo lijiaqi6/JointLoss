@@ -1,0 +1,97 @@
+\section{What Is Passed On}\label{sec:passedon}
+
+A father's earnings bundle his hourly wage, the hours he works and the years he spends out of work, in a place whose
+labor market he shares with other families. Each points to a different policy: schooling and training if the wage is
+passed on, tax and transfer incentives or childcare if hours are, unemployment insurance if spells are, place-based
+policy if the place is. This section splits the IGE of sons' earnings into these components. The parents' hourly wage
+carries a fifth of it, their spells a sixteenth---an eighth at 45--49---hours and place little, and half of the IGE is
+parental income at equal values of everything the data measure (Table~\ref{tab:passed_on}).
+
+\subsection{The split}
+
+The split is exact. Write the IGE in an age band as the coefficient $\beta$ of the son's log earnings on log parental
+income $\bar y^p$, and the same regression with the parental components $m_k$ added as $\tilde\beta$ and $\gamma_k$.
+Then $\beta = \tilde\beta + \sum_k \gamma_k \delta_k$, where $\delta_k$ is the gradient of component $k$ in parental
+income \citep{gelbach2016covariates}: a component's contribution is the part of the IGE carried by parental-income
+differences that are differences in that component. The components are means over the son's ages 13--19: the father's
+and the mother's log hourly wage; their log annual hours and the mother's years without work; the father's shares of
+years with a plant closure, a layoff or firing, unemployment and zero hours, the variance of his transitory earnings,
+and the mother's share of years unemployed; and the state's unemployment rate and a Bartik shock to men's labor demand
+at 12--18. Where a parent is absent or a measure is missing, the measure is set to its mean among the observed and a flag
+enters a family-structure row, so that no component is a copy of a flag.\footnote{PSID sons at 25--55 with parental
+income over at least three years of their ages 13--19 (4,770 sons, 46,540 son-years), PSID weights, single-age dummies
+in every band, standard errors from 200 cluster-bootstrap draws of 1968 families. The father's closures and layoffs are
+the PSID's reasons a job ended (plant closed or moved; laid off or fired) in the interview year or the one before. Code:
+\texttt{IGE/75.WhatIsPassedOn.py} (\texttt{output/what\_is\_passed\_on.md}).} The split is accounting: the components are
+correlated choices and outcomes, and Section~\ref{sec:stability} separates the spells the family did not choose.
+
+\input{tab_passed_on}
+
+\paragraph{The parents' wage.} Over 25--55 the parents' wage carries 0.075$^{***}$ of the IGE of 0.396$^{***}$, a share
+of 19.0\%$^{***}$ ($p<0.001$), almost all of it the father's. Its contribution is 0.035 ($p = 0.108$) at 25--29 and
+0.097$^{***}$ at 35--39: the wage is passed on, but it shows in the son's earnings only from his mid-thirties.
+
+\paragraph{Hours.} The parents' hours carry 2.8\%$^{**}$ ($p = 0.034$) of the IGE, all of it in the late twenties
+(0.013$^{**}$ at 25--29, 0.004 at 45--49).
+
+\paragraph{Spells.} The parents' spells carry 6.1\%$^{***}$ ($p = 0.004$), and they are the one component whose
+contribution rises significantly with the son's age: from 0.017$^{**}$ at 25--29 to 0.060$^{***}$ at 45--49, an opening of
+0.043$^{**}$ ($p = 0.026$), which is 13.5\%$^{***}$ of the IGE at 45--49. At that age the share is carried by the father's
+layoffs (0.025$^{**}$), the mother's unemployment (0.025$^{*}$) and the father's earnings volatility (0.012$^{**}$); the
+father's plant closures carry nothing ($-0.001$). Section~\ref{sec:stability} is about this component.
+
+\paragraph{Place.} The state's unemployment rate and labor-demand shocks during the son's teens carry 0.4\% ($p = 0.435$).
+Measured by the job finding of men of the family's own race, place carries a tenth of the pooled IGE, entirely between
+races (Section~\ref{sec:policy}).
+
+\paragraph{What passes to what.} Table~\ref{tab:four_by_four} shows the partial relations behind the split. Like passes
+like. A standard deviation of the father's wage raises the son's wage by 0.083$^{***}$ and the mother's by
+0.028$^{**}$; the father's hours raise the son's hours by 0.018$^{***}$ and his employment by 0.009$^{**}$; the mother's
+years without work lower the son's employment by 0.021$^{***}$ and raise his share of years unemployed by 0.024$^{***}$.
+The father's plant closures, at equal parental income, raise the son's wage (0.021$^{**}$, $p = 0.043$): a closure costs
+the family income but, unlike a layoff, says nothing about the father, and the income loss is already in parental
+income \citep{gibbons1991layoffs}.
+
+\input{tab_four_by_four}
+
+\subsection{What is in the rest}
+
+The four components leave 62.9\%$^{***}$ of the IGE as parental income at equal components. Adding the parents' other
+resources---their schooling, the family's income from assets, transfers and other members, home ownership, years on
+AFDC or TANF and the number of children---brings the rest down to 47.6\%$^{***}$ (panel B).\footnote{PSID family files
+1968--2011: head-and-wife taxable and transfer income, AFDC/TANF receipt of the head or wife, own/rent, children in the
+family unit; parents' years of schooling. Shares are of family income in the same file. Code:
+\texttt{IGE/80.WhatIsPassedOnRest.py}.} Two resources carry precise shares. The parents' schooling carries
+12.9\%$^{***}$ ($p<0.001$), all of it the father's (0.054$^{***}$; the mother's $-0.003$), and like the wage its
+contribution grows with the son's age, from 0.014 at 25--29 to 0.075$^{***}$ at 45--49. Years on AFDC or TANF carry
+0.026$^{**}$ ($p = 0.015$), 6.6\% of the IGE. Asset income, home ownership, other members' income and family size carry
+nothing. With the father's schooling in, the wage component falls from 19.0\% to 12.0\%$^{**}$: part of what the wage
+row measured is the schooling behind it. Half of the IGE remains parental income at equal measured wage, hours, spells,
+place, schooling, transfers, assets and family size: money, or what it buys, which these data do not measure
+\citep{cardak2013intergenerational, pfeffer2018generations}.
+
+\subsection{Four data sets}
+
+The split replicates where the data measure the components over several years and fails where they are measured once
+(Table~\ref{tab:passed_on_data}). In the NLSY79 Children and Young Adults, where the mother is the respondent and her
+weekly work history covers every week of the child's teens, the parents' spells carry 7.6\%$^{***}$ ($p = 0.005$) of the
+IGE of the children's earnings at 26--35, against 6.0\%$^{**}$ in the PSID at 25--29; there they are the mother's weeks
+unemployed and her jobs ending in a firing.\footnote{3,675 children of 2,090 mothers; components over the child's ages
+13--17; outcome = mean earnings at 26--35. Code: \texttt{IGE/83.CYAWhatIsPassedOn.py}.} In the NLSY79 youths, whose
+parents are described once, for the household at 14, the parents' schooling carries 25.0\%$^{***}$ and an occupation-based
+wage 1.1\% ($p = 0.35$). In the NLSY97, whose parent interview reports one year of wages and usual hours and the
+parents' employment breaks without their reason, wage, hours and breaks carry $-0.5$\%, 0.5\% and $-1.0$\%, while the
+parents' schooling and the 1996 transfers carry 22.2\%$^{***}$.\footnote{Code: \texttt{IGE/86.NLSY79YouthWhatIsPassedOn.py}
+and \texttt{IGE/85.NLSY97WhatIsPassedOn.py}.} A component measured in one year does not carry the IGE at equal parental
+income, as one year of parental income understates it \citep{solon1992intergenerational, mazumder2005fortunate}; the
+parents' schooling, measured once but fixed, carries a fifth to a quarter in both NLS cohorts.
+
+\subsection{By race}
+
+The components differ by race in two places. The spells component opens with age for White sons and not for Black sons
+(0.066$^{**}$ against $-0.042$; difference 0.107$^{**}$, $p = 0.018$, on common bootstrap draws), because Black fathers'
+layoffs are not concentrated in low-income families (Section~\ref{sec:stability}); and the father's schooling carries
+0.065$^{***}$ of the White and 0.002 of the Black IGE. For Black sons family structure carries 60.2\%$^{***}$ of the IGE
+and the rest nothing ($-0.008$, $p = 0.92$): the absence of a parent, not parental income at equal parents, is what
+the Black IGE transmits.\footnote{Code: \texttt{IGE/75.WhatIsPassedOn.py}, \texttt{IGE/80.WhatIsPassedOnRest.py},
+\texttt{IGE/81.StabilityOpeningByRace.py}.}

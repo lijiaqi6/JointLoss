@@ -1,7 +1,7 @@
 # Paper A and Bacher, Grübener and Nord (2025), "Joint search over the life cycle": what to take, what is new, what to change in the model document (2026-10-18)
 
 Read, nothing edited or run except this file: Bacher, Grübener and Nord, *Journal of Monetary Economics* 150 (2025)
-103696 (whole paper, `IGE/Literature/1-s2.0-S0304393224001491-main.pdf`); the README of their replication repository
+103696 (whole paper, `Literature/1-s2.0-S0304393224001491-main.pdf`); the README of their replication repository
 (github.com/philippgruebener/JSLC_ReplicationFiles: Fortran solver `Main.f90`/`Globals.f90` with OpenMP, Stata CPS and
 SIPP code, R SIPP download, Matlab post-processing; GPL-3.0); Paper A (`main.tex`, `sec1`-`sec8`, `appC_robust.tex`,
 `appD_bps.tex`); the model document (`model_document.tex`, Open Decisions D1-D15); my three earlier memos

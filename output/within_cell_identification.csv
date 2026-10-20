@@ -1,0 +1,567 @@
+table,group,spec,term,coef,se,p
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(1) baseline (same rows),25-29,0.05665271075770306,0.004777328634890002,1.940584126448342e-32
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(2) + early-cell FE,25-29,0.0319168449690892,0.005712410119527309,2.3065131441648673e-08
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(3) + current-cell FE,25-29,0.03115035983528786,0.005266260228763874,3.3171076308670494e-09
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),25-29,0.05823759197709714,0.004731019681310823,8.028774941435036e-35
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(5) born 1955-69 only,25-29,0.05216047205402324,0.007150365100080727,2.991065556576643e-13
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(1) baseline (same rows),30-34,0.09860567989728444,0.005696429471846948,3.948297953285159e-67
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(2) + early-cell FE,30-34,0.056180792492341425,0.006627538124619471,2.313291721932938e-17
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(3) + current-cell FE,30-34,0.05839891920712848,0.006533500968750393,3.9491438089996667e-19
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),30-34,0.09456908103749129,0.0059396055366176415,4.4747766809192903e-57
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(5) born 1955-69 only,30-34,0.09358301568467382,0.008485120777668885,2.7670268611183973e-28
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(1) baseline (same rows),35-39,0.1183679064743379,0.006849509326639171,6.51503813726373e-67
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(2) + early-cell FE,35-39,0.05936999599309267,0.007615060542121941,6.370236561608934e-15
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(3) + current-cell FE,35-39,0.06692557526835607,0.007575405914605058,1.0046961654026998e-18
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),35-39,0.10708097545554152,0.008303922041283246,4.788392643211639e-38
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(5) born 1955-69 only,35-39,0.11055457606963126,0.009754694841603547,8.958027876366776e-30
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(1) baseline (same rows),40-44,0.12927454881041892,0.008341714253772664,3.614412122682784e-54
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(2) + early-cell FE,40-44,0.07621577856318097,0.009423473716769524,6.071989925911253e-16
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(3) + current-cell FE,40-44,0.07107765965914142,0.009243234597076747,1.4748559175329042e-14
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),40-44,0.11588440365841635,0.011484519495393699,6.086630391054357e-24
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(5) born 1955-69 only,40-44,0.13915218014288477,0.012462490240070258,6.002994981216633e-29
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(1) baseline (same rows),45-49,0.13016921765982659,0.009716186430822088,6.282893945854903e-41
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(2) + early-cell FE,45-49,0.07931053394066326,0.012929579450517282,8.567594496703986e-10
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(3) + current-cell FE,45-49,0.07268241687553006,0.011185963450029614,8.158717077896992e-11
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),45-49,0.10255403950762619,0.01940118225159343,1.250413668056537e-07
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(5) born 1955-69 only,45-49,0.14228928853501474,0.012297958432075842,5.837693156025572e-31
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(1) baseline (same rows),50-55,0.13052232152026294,0.011972765805037677,1.1324627510436243e-27
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(2) + early-cell FE,50-55,0.07028714202856726,0.015681314707840073,7.386965670452689e-06
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(3) + current-cell FE,50-55,0.0646641094376497,0.01350533210323061,1.684156549394806e-06
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),50-55,0.1281566555446716,0.03059098224457518,2.7974157283733872e-05
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(5) born 1955-69 only,50-55,0.13491544054990887,0.014525966676597923,1.5739137375687578e-20
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(1) baseline (same rows),change,0.049454303288717846,0.006490527027441218,2.54741497474952e-14
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(2) + early-cell FE,change,0.027247043900660725,0.008306635699672762,0.0010375045580859326
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(3) + current-cell FE,change,0.024062800788961152,0.007114666031515501,0.0007192332442551929
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),change,0.037015682034269706,0.013530528576958542,0.00622447411165822
+"PSID return to schooling, ln hourly wage",Pooled Black + White (weighted),(5) born 1955-69 only,change,0.05885612745501139,0.008525970492073742,5.085875359131651e-12
+"PSID return to schooling, ln hourly wage",Black,(1) baseline (same rows),25-29,0.07589534436979761,0.007182557032241697,4.255607058023672e-26
+"PSID return to schooling, ln hourly wage",Black,(2) + early-cell FE,25-29,0.05068861861490055,0.007974044900075486,2.0613276217228153e-10
+"PSID return to schooling, ln hourly wage",Black,(3) + current-cell FE,25-29,0.05668668818861988,0.007219669486564687,4.104311243920673e-15
+"PSID return to schooling, ln hourly wage",Black,(4) + schooling x calendar trend (return in 1995),25-29,0.07837807546804196,0.007107553256459133,2.817901171961841e-28
+"PSID return to schooling, ln hourly wage",Black,(5) born 1955-69 only,25-29,0.06352525847208179,0.011468076605639916,3.0366160904927596e-08
+"PSID return to schooling, ln hourly wage",Black,(1) baseline (same rows),30-34,0.10034525502177469,0.008089934245730495,2.494767415967796e-35
+"PSID return to schooling, ln hourly wage",Black,(2) + early-cell FE,30-34,0.06328650398937533,0.008497778427443122,9.518501501887597e-14
+"PSID return to schooling, ln hourly wage",Black,(3) + current-cell FE,30-34,0.06100749583333709,0.008052208405549249,3.550224755592103e-14
+"PSID return to schooling, ln hourly wage",Black,(4) + schooling x calendar trend (return in 1995),30-34,0.09832119996860911,0.00833875719590072,4.350250481944922e-32
+"PSID return to schooling, ln hourly wage",Black,(5) born 1955-69 only,30-34,0.09297978704349227,0.013442977678323349,4.625906233568088e-12
+"PSID return to schooling, ln hourly wage",Black,(1) baseline (same rows),35-39,0.10529302035247912,0.00992760386530904,2.7920124321386864e-26
+"PSID return to schooling, ln hourly wage",Black,(2) + early-cell FE,35-39,0.06429047226872937,0.010898408851740666,3.6555703764874206e-09
+"PSID return to schooling, ln hourly wage",Black,(3) + current-cell FE,35-39,0.059491207420269636,0.010930410920041317,5.247197984285354e-08
+"PSID return to schooling, ln hourly wage",Black,(4) + schooling x calendar trend (return in 1995),35-39,0.101572114113059,0.011577313042100867,1.733886963873191e-18
+"PSID return to schooling, ln hourly wage",Black,(5) born 1955-69 only,35-39,0.09684232876870433,0.01643260649942014,3.785514000841102e-09
+"PSID return to schooling, ln hourly wage",Black,(1) baseline (same rows),40-44,0.09659557378572885,0.01236687201745566,5.681118595903941e-15
+"PSID return to schooling, ln hourly wage",Black,(2) + early-cell FE,40-44,0.04714623655301674,0.01532661347188881,0.0020972561850171566
+"PSID return to schooling, ln hourly wage",Black,(3) + current-cell FE,40-44,0.03985869964822781,0.01238580004159158,0.0012904439838548087
+"PSID return to schooling, ln hourly wage",Black,(4) + schooling x calendar trend (return in 1995),40-44,0.08035951525802609,0.01728592441928837,3.338052983889359e-06
+"PSID return to schooling, ln hourly wage",Black,(5) born 1955-69 only,40-44,0.07370526783093823,0.01811370329655868,4.720853415936136e-05
+"PSID return to schooling, ln hourly wage",Black,(1) baseline (same rows),45-49,0.11390467010869543,0.0129056986043624,1.0856311188816887e-18
+"PSID return to schooling, ln hourly wage",Black,(2) + early-cell FE,45-49,0.07311677119492788,0.01856907990991604,8.231610986274079e-05
+"PSID return to schooling, ln hourly wage",Black,(3) + current-cell FE,45-49,0.050014054932717045,0.01561292568532296,0.0013582701660177234
+"PSID return to schooling, ln hourly wage",Black,(4) + schooling x calendar trend (return in 1995),45-49,0.1062554599458224,0.022857440486661485,3.341699276880497e-06
+"PSID return to schooling, ln hourly wage",Black,(5) born 1955-69 only,45-49,0.13733448014401184,0.018456400696749715,9.990944723548565e-14
+"PSID return to schooling, ln hourly wage",Black,(1) baseline (same rows),50-55,0.11919156334841302,0.016312488285641434,2.7364492781004654e-13
+"PSID return to schooling, ln hourly wage",Black,(2) + early-cell FE,50-55,0.0534489191004468,0.02332505794822336,0.02193562937915568
+"PSID return to schooling, ln hourly wage",Black,(3) + current-cell FE,50-55,0.05214765960340628,0.019170687083096046,0.006524700631169521
+"PSID return to schooling, ln hourly wage",Black,(4) + schooling x calendar trend (return in 1995),50-55,0.07556776707981072,0.045469930968267416,0.09652714274618297
+"PSID return to schooling, ln hourly wage",Black,(5) born 1955-69 only,50-55,0.1292353701748853,0.01927016720111282,1.9934828404859775e-11
+"PSID return to schooling, ln hourly wage",Black,(1) baseline (same rows),change,0.020625907203042956,0.008917148017682284,0.020719286229868353
+"PSID return to schooling, ln hourly wage",Black,(2) + early-cell FE,change,0.0025130384771422584,0.012235359561445282,0.8372662847564207
+"PSID return to schooling, ln hourly wage",Black,(3) + current-cell FE,change,-0.008469186609823293,0.010400710493841368,0.41547927422847386
+"PSID return to schooling, ln hourly wage",Black,(4) + schooling x calendar trend (return in 1995),change,0.0025890763808540246,0.01786390394354072,0.8847634534660404
+"PSID return to schooling, ln hourly wage",Black,(5) born 1955-69 only,change,0.031026838971847895,0.013070241069015309,0.017603528086694412
+"PSID return to schooling, ln hourly wage",White,(1) baseline (same rows),25-29,0.04838476425254612,0.005036884692808797,7.535683588603318e-22
+"PSID return to schooling, ln hourly wage",White,(2) + early-cell FE,25-29,0.027585579477469487,0.006042764635057047,4.993529365266713e-06
+"PSID return to schooling, ln hourly wage",White,(3) + current-cell FE,25-29,0.026709298007517646,0.00559682641897116,1.8220453315484262e-06
+"PSID return to schooling, ln hourly wage",White,(4) + schooling x calendar trend (return in 1995),25-29,0.05059554355116211,0.004919864866658133,8.326212031141723e-25
+"PSID return to schooling, ln hourly wage",White,(5) born 1955-69 only,25-29,0.04708665646779231,0.00742414011952389,2.2625456117494897e-10
+"PSID return to schooling, ln hourly wage",White,(1) baseline (same rows),30-34,0.09068145038571734,0.005989129884204149,8.687479315328723e-52
+"PSID return to schooling, ln hourly wage",White,(2) + early-cell FE,30-34,0.051930677091178074,0.00708292904163462,2.2706795050152928e-13
+"PSID return to schooling, ln hourly wage",White,(3) + current-cell FE,30-34,0.053352488943443285,0.006708519706288751,1.8212906421514966e-15
+"PSID return to schooling, ln hourly wage",White,(4) + schooling x calendar trend (return in 1995),30-34,0.08916310968658081,0.006101819065049488,2.336228083196551e-48
+"PSID return to schooling, ln hourly wage",White,(5) born 1955-69 only,30-34,0.08725239615855294,0.008511895412359418,1.1755957504789476e-24
+"PSID return to schooling, ln hourly wage",White,(1) baseline (same rows),35-39,0.11073578442346718,0.007156240933958793,5.196198153453903e-54
+"PSID return to schooling, ln hourly wage",White,(2) + early-cell FE,35-39,0.05538377645743048,0.008044798455925393,5.80231932421001e-12
+"PSID return to schooling, ln hourly wage",White,(3) + current-cell FE,35-39,0.06700863292144987,0.00805102756812295,8.577069775201421e-17
+"PSID return to schooling, ln hourly wage",White,(4) + schooling x calendar trend (return in 1995),35-39,0.10170251172241707,0.008440981023812693,1.9712814567290715e-33
+"PSID return to schooling, ln hourly wage",White,(5) born 1955-69 only,35-39,0.10260999512666302,0.010137537504847057,4.4226606059650024e-24
+"PSID return to schooling, ln hourly wage",White,(1) baseline (same rows),40-44,0.12456434700385632,0.008442337660083982,2.8687011955360644e-49
+"PSID return to schooling, ln hourly wage",White,(2) + early-cell FE,40-44,0.07801827746162043,0.00957730270510623,3.756509250749983e-16
+"PSID return to schooling, ln hourly wage",White,(3) + current-cell FE,40-44,0.07394469723192752,0.009335186140820028,2.354683506327041e-15
+"PSID return to schooling, ln hourly wage",White,(4) + schooling x calendar trend (return in 1995),40-44,0.11050207449894689,0.011689005991622672,3.2767128634437507e-21
+"PSID return to schooling, ln hourly wage",White,(5) born 1955-69 only,40-44,0.13598326612725486,0.012428616749961695,7.327073545723294e-28
+"PSID return to schooling, ln hourly wage",White,(1) baseline (same rows),45-49,0.1233254061507445,0.01016900804072755,7.5450894057667965e-34
+"PSID return to schooling, ln hourly wage",White,(2) + early-cell FE,45-49,0.08125254522587144,0.013790472511319145,3.817030853374646e-09
+"PSID return to schooling, ln hourly wage",White,(3) + current-cell FE,45-49,0.06850241346714174,0.011852814396214405,7.495780140503594e-09
+"PSID return to schooling, ln hourly wage",White,(4) + schooling x calendar trend (return in 1995),45-49,0.09477693417164594,0.02032585529124364,3.118212998691471e-06
+"PSID return to schooling, ln hourly wage",White,(5) born 1955-69 only,45-49,0.13707690716701015,0.013261343744329699,4.814249879887011e-25
+"PSID return to schooling, ln hourly wage",White,(1) baseline (same rows),50-55,0.12643850941073692,0.012649119439718609,1.5894217263175168e-23
+"PSID return to schooling, ln hourly wage",White,(2) + early-cell FE,50-55,0.07183897141464968,0.017225430429002382,3.0390775765227974e-05
+"PSID return to schooling, ln hourly wage",White,(3) + current-cell FE,50-55,0.06256951570125022,0.01481273665608265,2.3996692937627256e-05
+"PSID return to schooling, ln hourly wage",White,(4) + schooling x calendar trend (return in 1995),50-55,0.12402135592109431,0.031713706315649945,9.204626828032319e-05
+"PSID return to schooling, ln hourly wage",White,(5) born 1955-69 only,50-55,0.13392220493629114,0.015531609749378974,6.547481693878572e-18
+"PSID return to schooling, ln hourly wage",White,(1) baseline (same rows),change,0.05173290442806951,0.006742136156473389,1.6792355913084254e-14
+"PSID return to schooling, ln hourly wage",White,(2) + early-cell FE,change,0.03186526435556923,0.008903118494793147,0.0003447627945813115
+"PSID return to schooling, ln hourly wage",White,(3) + current-cell FE,change,0.027975421354961873,0.007623964398831118,0.00024311463005953623
+"PSID return to schooling, ln hourly wage",White,(4) + schooling x calendar trend (return in 1995),change,0.037871392459654596,0.01388247947592784,0.00637197687469485
+"PSID return to schooling, ln hourly wage",White,(5) born 1955-69 only,change,0.06022856702613217,0.009141723428717993,4.448416816532833e-11
+"PSID return to schooling, ln hourly wage",Black - White,(1) baseline (same rows),25-29,0.027510580117251493,0.008774591966224406,0.0017170500046261698
+"PSID return to schooling, ln hourly wage",Black - White,(2) + early-cell FE,25-29,0.023103039137431065,0.010005308249792986,0.02093924237364061
+"PSID return to schooling, ln hourly wage",Black - White,(3) + current-cell FE,25-29,0.029977390181102237,0.009128176995671892,0.0010232674592708236
+"PSID return to schooling, ln hourly wage",Black - White,(4) + schooling x calendar trend (return in 1995),25-29,0.02778253191687985,0.008639302920636988,0.001300677303611392
+"PSID return to schooling, ln hourly wage",Black - White,(5) born 1955-69 only,25-29,0.016438602004289482,0.01366142882524188,0.22886577924343843
+"PSID return to schooling, ln hourly wage",Black - White,(1) baseline (same rows),30-34,0.009663804636057344,0.01004544076629808,0.3360450725579083
+"PSID return to schooling, ln hourly wage",Black - White,(2) + early-cell FE,30-34,0.011355826898197252,0.010982140936674295,0.30112368360005015
+"PSID return to schooling, ln hourly wage",Black - White,(3) + current-cell FE,30-34,0.007655006889893803,0.010401095322894651,0.461742357110666
+"PSID return to schooling, ln hourly wage",Black - White,(4) + schooling x calendar trend (return in 1995),30-34,0.009158090282028297,0.010311881511321928,0.3744813131997512
+"PSID return to schooling, ln hourly wage",Black - White,(5) born 1955-69 only,30-34,0.005727390884939329,0.015911191418961846,0.718877120805226
+"PSID return to schooling, ln hourly wage",Black - White,(1) baseline (same rows),35-39,-0.005442764070988065,0.012275295168480352,0.6574824337245364
+"PSID return to schooling, ln hourly wage",Black - White,(2) + early-cell FE,35-39,0.008906695811298895,0.013586293821208411,0.512104188616332
+"PSID return to schooling, ln hourly wage",Black - White,(3) + current-cell FE,35-39,-0.007517425501180237,0.013585409488359082,0.5800268354448026
+"PSID return to schooling, ln hourly wage",Black - White,(4) + schooling x calendar trend (return in 1995),35-39,-0.00013039760935806832,0.014330072650355376,0.9927396876480853
+"PSID return to schooling, ln hourly wage",Black - White,(5) born 1955-69 only,35-39,-0.005767666357958695,0.01930803519333248,0.7651548779098809
+"PSID return to schooling, ln hourly wage",Black - White,(1) baseline (same rows),40-44,-0.027968773218127477,0.014991796141072012,0.06209661802252404
+"PSID return to schooling, ln hourly wage",Black - White,(2) + early-cell FE,40-44,-0.030872040908603696,0.018087030944040336,0.08784796123782207
+"PSID return to schooling, ln hourly wage",Black - White,(3) + current-cell FE,40-44,-0.03408599758369971,0.015571638992740248,0.02859833449493444
+"PSID return to schooling, ln hourly wage",Black - White,(4) + schooling x calendar trend (return in 1995),40-44,-0.030142559240920797,0.020867597166547337,0.14860760520410257
+"PSID return to schooling, ln hourly wage",Black - White,(5) born 1955-69 only,40-44,-0.06227799829631664,0.021967629854701878,0.0045827202827435475
+"PSID return to schooling, ln hourly wage",Black - White,(1) baseline (same rows),45-49,-0.009420736042049072,0.016446685970652006,0.5667770591741657
+"PSID return to schooling, ln hourly wage",Black - White,(2) + early-cell FE,45-49,-0.008135774030943566,0.02313679772319724,0.7251098683860059
+"PSID return to schooling, ln hourly wage",Black - White,(3) + current-cell FE,45-49,-0.018488358534424695,0.019603920411709268,0.34563233350889344
+"PSID return to schooling, ln hourly wage",Black - White,(4) + schooling x calendar trend (return in 1995),45-49,0.011478525774176462,0.030615982462889657,0.7077204106311701
+"PSID return to schooling, ln hourly wage",Black - White,(5) born 1955-69 only,45-49,0.00025757297700168547,0.022726679576749783,0.990957363508624
+"PSID return to schooling, ln hourly wage",Black - White,(1) baseline (same rows),50-55,-0.0072469460623239,0.020642129169963455,0.725531698885006
+"PSID return to schooling, ln hourly wage",Black - White,(2) + early-cell FE,50-55,-0.018390052314202876,0.028996099423066874,0.5259339683733848
+"PSID return to schooling, ln hourly wage",Black - White,(3) + current-cell FE,50-55,-0.010421856097843935,0.024226687980003377,0.6670641250264218
+"PSID return to schooling, ln hourly wage",Black - White,(4) + schooling x calendar trend (return in 1995),50-55,-0.04845358884128359,0.05543711564046509,0.3821030297474113
+"PSID return to schooling, ln hourly wage",Black - White,(5) born 1955-69 only,50-55,-0.004686834761405856,0.024750156471542727,0.8498060770705143
+"PSID return to schooling, ln hourly wage",Black - White,(1) baseline (same rows),change,-0.031106997225026547,0.011165119844350051,0.005334852226022588
+"PSID return to schooling, ln hourly wage",Black - White,(2) + early-cell FE,change,-0.02935222587842697,0.015116394502417745,0.052167638094667464
+"PSID return to schooling, ln hourly wage",Black - White,(3) + current-cell FE,change,-0.036444607964785165,0.012903226190228139,0.004736079781255657
+"PSID return to schooling, ln hourly wage",Black - White,(4) + schooling x calendar trend (return in 1995),change,-0.03528231607880057,0.022620158519159033,0.11881349684436612
+"PSID return to schooling, ln hourly wage",Black - White,(5) born 1955-69 only,change,-0.02920172805428428,0.01594999400781536,0.06712591615302828
+"PSID return to schooling, ln hourly wage",Black - White,(2) + early-cell FE,change minus baseline,0.0017547713465995776,0.012639235107533375,0.8895803394572481
+"PSID return to schooling, ln hourly wage",Black - White,(3) + current-cell FE,change minus baseline,-0.0053376107397586185,0.010537166995890176,0.6124700125941449
+"PSID return to schooling, ln hourly wage",Black - White,(4) + schooling x calendar trend (return in 1995),change minus baseline,-0.0041753188537740245,0.019008703711538906,0.82614140886946
+"PSID return to schooling, ln hourly wage",Black - White,(5) born 1955-69 only,change minus baseline,0.0019052691707422652,0.010419570994064879,0.8549119039980153
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(1) baseline (same rows),25-29,0.06003691319028803,0.006444529669918238,1.208665279124515e-20
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(2) + early-cell FE,25-29,0.035735776444880685,0.0076430578905126905,2.9311503775309307e-06
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(3) + current-cell FE,25-29,0.032201962623785566,0.006765243557266412,1.936775795752424e-06
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),25-29,0.061415508257618205,0.006469854642369003,2.2542047441112154e-21
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(5) born 1955-69 only,25-29,0.05793544705824,0.009138178497514672,2.2986385557678017e-10
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(1) baseline (same rows),30-34,0.11604753604176177,0.00708565024066835,2.7541930004393465e-60
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(2) + early-cell FE,30-34,0.07164288143121667,0.008484566983643284,3.0690745828029335e-17
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(3) + current-cell FE,30-34,0.07349874667187298,0.007677813206521942,1.0397330021730012e-21
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),30-34,0.11331946646191682,0.007347578507690711,1.1519409569792227e-53
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(5) born 1955-69 only,30-34,0.11172415730718184,0.010264633558409121,1.3682868941393105e-27
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(1) baseline (same rows),35-39,0.13002917083556825,0.007858661515157439,1.7118756325225585e-61
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(2) + early-cell FE,35-39,0.06879395891556328,0.009256926564043725,1.0727576346192877e-13
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(3) + current-cell FE,35-39,0.07413733817709287,0.008653574051230815,1.0598500461986328e-17
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),35-39,0.12033371156915607,0.009223445985199627,6.653224457182623e-39
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(5) born 1955-69 only,35-39,0.12380993418089994,0.01078487452596356,1.663563921703175e-30
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(1) baseline (same rows),40-44,0.1460604069100368,0.009220455349118086,1.6245175761045997e-56
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(2) + early-cell FE,40-44,0.09158242248601241,0.011321887491088738,6.017076760722874e-16
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(3) + current-cell FE,40-44,0.08545443118779875,0.010528614291269965,4.802212734754485e-16
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),40-44,0.13111811870971302,0.012549125024757718,1.4903788300408062e-25
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(5) born 1955-69 only,40-44,0.15785123773924425,0.01409140932905023,3.9886398897189236e-29
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(1) baseline (same rows),45-49,0.14311950312537647,0.011322499056089312,1.2661015931560597e-36
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(2) + early-cell FE,45-49,0.08770358437098826,0.014427039228822358,1.2085008207299785e-09
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(3) + current-cell FE,45-49,0.08159386459064868,0.013718538501212619,2.7192270396778355e-09
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),45-49,0.10238575018221971,0.020692607881715164,7.500361607768034e-07
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(5) born 1955-69 only,45-49,0.16081254963467223,0.014719513044733755,8.74180094235151e-28
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(1) baseline (same rows),50-55,0.13201513674114695,0.014593199283899145,1.4783185475690182e-19
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(2) + early-cell FE,50-55,0.06628620400475657,0.01818395852483745,0.0002670674913259642
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(3) + current-cell FE,50-55,0.058051966774856745,0.015934719800500607,0.00026936170275198684
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),50-55,0.13472681836228162,0.034005236016229075,7.434218486466335e-05
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(5) born 1955-69 only,50-55,0.13481945164012094,0.018481067168334128,2.986510791316371e-13
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(1) baseline (same rows),change,0.04976382978700722,0.0076028261472162306,5.932112858120809e-11
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(2) + early-cell FE,change,0.02490221350628144,0.0095292788494279,0.008969047593186407
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(3) + current-cell FE,change,0.021959045534769996,0.008509694570074212,0.009866478733588738
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(4) + schooling x calendar trend (return in 1995),change,0.034773612346075095,0.014962048827474171,0.020119008168571227
+"PSID return to schooling, ln annual earnings",Pooled Black + White (weighted),(5) born 1955-69 only,change,0.059493491116023416,0.00969723620787458,8.510689841530788e-10
+"PSID return to schooling, ln annual earnings",Black,(1) baseline (same rows),25-29,0.12066250520001631,0.01024850872376916,5.33552915337398e-32
+"PSID return to schooling, ln annual earnings",Black,(2) + early-cell FE,25-29,0.08683868461835162,0.012096714515378908,7.037737683852944e-13
+"PSID return to schooling, ln annual earnings",Black,(3) + current-cell FE,25-29,0.08765041227161419,0.010170211604364397,6.792758899652657e-18
+"PSID return to schooling, ln annual earnings",Black,(4) + schooling x calendar trend (return in 1995),25-29,0.12449312509927811,0.010002188122567273,1.4595042583694542e-35
+"PSID return to schooling, ln annual earnings",Black,(5) born 1955-69 only,25-29,0.104197521463577,0.01689707898347697,6.977411303054264e-10
+"PSID return to schooling, ln annual earnings",Black,(1) baseline (same rows),30-34,0.14813091765800668,0.010303182683756648,7.194698213409424e-47
+"PSID return to schooling, ln annual earnings",Black,(2) + early-cell FE,30-34,0.10634511900082291,0.011415587072545664,1.2105760345986853e-20
+"PSID return to schooling, ln annual earnings",Black,(3) + current-cell FE,30-34,0.09051908706896938,0.010538867381896038,8.767483263428925e-18
+"PSID return to schooling, ln annual earnings",Black,(4) + schooling x calendar trend (return in 1995),30-34,0.1453110573313552,0.010495443988466947,1.3608534782668459e-43
+"PSID return to schooling, ln annual earnings",Black,(5) born 1955-69 only,30-34,0.1420281722066975,0.016309771850340788,3.088355680009542e-18
+"PSID return to schooling, ln annual earnings",Black,(1) baseline (same rows),35-39,0.14157432526792563,0.012534408459160633,1.3913359348256428e-29
+"PSID return to schooling, ln annual earnings",Black,(2) + early-cell FE,35-39,0.08959357028367061,0.015214755671915376,3.894870398809153e-09
+"PSID return to schooling, ln annual earnings",Black,(3) + current-cell FE,35-39,0.07850406344272305,0.013956341602468492,1.855355483714124e-08
+"PSID return to schooling, ln annual earnings",Black,(4) + schooling x calendar trend (return in 1995),35-39,0.13784196907324464,0.014809713120027162,1.308295873395247e-20
+"PSID return to schooling, ln annual earnings",Black,(5) born 1955-69 only,35-39,0.1279948297345432,0.020440543150414346,3.805305748916876e-10
+"PSID return to schooling, ln annual earnings",Black,(1) baseline (same rows),40-44,0.11856629507519886,0.014958546943337363,2.25727522292581e-15
+"PSID return to schooling, ln annual earnings",Black,(2) + early-cell FE,40-44,0.07095760996773659,0.01958854016329422,0.0002918775818318736
+"PSID return to schooling, ln annual earnings",Black,(3) + current-cell FE,40-44,0.042933712267125355,0.016469684124921488,0.00913839795336428
+"PSID return to schooling, ln annual earnings",Black,(4) + schooling x calendar trend (return in 1995),40-44,0.10702977488663912,0.020611974874141004,2.073755713764176e-07
+"PSID return to schooling, ln annual earnings",Black,(5) born 1955-69 only,40-44,0.10282853727787256,0.02266834499973338,5.727218861651114e-06
+"PSID return to schooling, ln annual earnings",Black,(1) baseline (same rows),45-49,0.14024468448951666,0.016073787572689745,2.6605072920087974e-18
+"PSID return to schooling, ln annual earnings",Black,(2) + early-cell FE,45-49,0.07295277660014372,0.02438429981346996,0.002773442837890997
+"PSID return to schooling, ln annual earnings",Black,(3) + current-cell FE,45-49,0.04740586960633664,0.017552609693775492,0.0069175511799039625
+"PSID return to schooling, ln annual earnings",Black,(4) + schooling x calendar trend (return in 1995),45-49,0.12686868895231504,0.02800717902543831,5.9021896516456405e-06
+"PSID return to schooling, ln annual earnings",Black,(5) born 1955-69 only,45-49,0.16914249584900204,0.02246585094123018,5.118087703081055e-14
+"PSID return to schooling, ln annual earnings",Black,(1) baseline (same rows),50-55,0.13363069125846508,0.020569337484438843,8.215728274740826e-11
+"PSID return to schooling, ln annual earnings",Black,(2) + early-cell FE,50-55,0.05135072601660795,0.027942319768094418,0.06610068821994398
+"PSID return to schooling, ln annual earnings",Black,(3) + current-cell FE,50-55,0.050620091024029534,0.025489298475098114,0.04704053719595337
+"PSID return to schooling, ln annual earnings",Black,(4) + schooling x calendar trend (return in 1995),50-55,0.08080602535289927,0.05721927920217048,0.15788614568899406
+"PSID return to schooling, ln annual earnings",Black,(5) born 1955-69 only,50-55,0.14564728783049152,0.023942623743491834,1.1782200784353927e-09
+"PSID return to schooling, ln annual earnings",Black,(1) baseline (same rows),change,-0.0008927124062349523,0.011533064701943537,0.938301671408521
+"PSID return to schooling, ln annual earnings",Black,(2) + early-cell FE,change,-0.025378231092547554,0.015329150234500965,0.09781223695396966
+"PSID return to schooling, ln annual earnings",Black,(3) + current-cell FE,change,-0.03421881558523814,0.013216187991965162,0.00962105852820157
+"PSID return to schooling, ln annual earnings",Black,(4) + schooling x calendar trend (return in 1995),change,-0.021765476649042124,0.022765043213609684,0.3390257350566891
+"PSID return to schooling, ln annual earnings",Black,(5) born 1955-69 only,change,0.013290440837840076,0.016186197143434587,0.41159091589687835
+"PSID return to schooling, ln annual earnings",White,(1) baseline (same rows),25-29,0.04366042615356491,0.0065215826020323065,2.1602682597228977e-11
+"PSID return to schooling, ln annual earnings",White,(2) + early-cell FE,25-29,0.025569068817156045,0.00798826017936008,0.0013703199766000543
+"PSID return to schooling, ln annual earnings",White,(3) + current-cell FE,25-29,0.021742431632446824,0.007033991668746503,0.0019944892958031484
+"PSID return to schooling, ln annual earnings",White,(4) + schooling x calendar trend (return in 1995),25-29,0.04502780335372336,0.006502902157860806,4.382517524990241e-12
+"PSID return to schooling, ln annual earnings",White,(5) born 1955-69 only,25-29,0.047210798299587416,0.009259505551762675,3.4211946154532124e-07
+"PSID return to schooling, ln annual earnings",White,(1) baseline (same rows),30-34,0.10082660994803544,0.00747180004347507,1.6898330750939136e-41
+"PSID return to schooling, ln annual earnings",White,(2) + early-cell FE,30-34,0.060188664924826954,0.009099584311712023,3.729579870508755e-11
+"PSID return to schooling, ln annual earnings",White,(3) + current-cell FE,30-34,0.06422275683074334,0.007925854673676864,5.364492080949058e-16
+"PSID return to schooling, ln annual earnings",White,(4) + schooling x calendar trend (return in 1995),30-34,0.10009335078407844,0.007628521549425105,2.4982673037945704e-39
+"PSID return to schooling, ln annual earnings",White,(5) born 1955-69 only,30-34,0.10047849981371268,0.010389237679195995,3.9887358120721554e-22
+"PSID return to schooling, ln annual earnings",White,(1) baseline (same rows),35-39,0.12088665240944532,0.008117609554458444,3.7202905940904537e-50
+"PSID return to schooling, ln annual earnings",White,(2) + early-cell FE,35-39,0.06368527528720447,0.009473685186388803,1.7883652552136515e-11
+"PSID return to schooling, ln annual earnings",White,(3) + current-cell FE,35-39,0.07494613447626364,0.008917922227432741,4.315572937831037e-17
+"PSID return to schooling, ln annual earnings",White,(4) + schooling x calendar trend (return in 1995),35-39,0.11283039279253071,0.009418016391610972,4.5084509904796456e-33
+"PSID return to schooling, ln annual earnings",White,(5) born 1955-69 only,35-39,0.11475068660152762,0.011005282406232336,1.8693847823323038e-25
+"PSID return to schooling, ln annual earnings",White,(1) baseline (same rows),40-44,0.13752064436539885,0.009355748724016318,6.5367675684413515e-49
+"PSID return to schooling, ln annual earnings",White,(2) + early-cell FE,40-44,0.09198595568238924,0.011380964654660599,6.348395388094799e-16
+"PSID return to schooling, ln annual earnings",White,(3) + current-cell FE,40-44,0.08794388833738499,0.010892420447125168,6.810942430259502e-16
+"PSID return to schooling, ln annual earnings",White,(4) + schooling x calendar trend (return in 1995),40-44,0.12219607698389368,0.01283084449812857,1.672504930899708e-21
+"PSID return to schooling, ln annual earnings",White,(5) born 1955-69 only,40-44,0.15185918094948647,0.013754289854753757,2.427005522808196e-28
+"PSID return to schooling, ln annual earnings",White,(1) baseline (same rows),45-49,0.12972630532199503,0.011545937361258507,2.724291232342572e-29
+"PSID return to schooling, ln annual earnings",White,(2) + early-cell FE,45-49,0.08584912438941514,0.015070498532504669,1.2229048831726165e-08
+"PSID return to schooling, ln annual earnings",White,(3) + current-cell FE,45-49,0.07648961680689427,0.014412485424908014,1.1133581514971709e-07
+"PSID return to schooling, ln annual earnings",White,(4) + schooling x calendar trend (return in 1995),45-49,0.0902672029463513,0.021394849404992748,2.4526961713016757e-05
+"PSID return to schooling, ln annual earnings",White,(5) born 1955-69 only,45-49,0.15013922330905954,0.015284797424870494,8.98302107914596e-23
+"PSID return to schooling, ln annual earnings",White,(1) baseline (same rows),50-55,0.12756234123093568,0.01492113210165096,1.2404546617430742e-17
+"PSID return to schooling, ln annual earnings",White,(2) + early-cell FE,50-55,0.0705338842033143,0.019535516505488276,0.00030555290795697144
+"PSID return to schooling, ln annual earnings",White,(3) + current-cell FE,50-55,0.06086696305602511,0.017192891058198143,0.00039976310141116313
+"PSID return to schooling, ln annual earnings",White,(4) + schooling x calendar trend (return in 1995),50-55,0.12810947820998564,0.034677028984942806,0.00022044007093349074
+"PSID return to schooling, ln annual earnings",White,(5) born 1955-69 only,50-55,0.13548570224668463,0.019073090247742758,1.2163608655360008e-12
+"PSID return to schooling, ln annual earnings",White,(1) baseline (same rows),change,0.05668046778114355,0.007843456499184344,4.957264918307337e-13
+"PSID return to schooling, ln annual earnings",White,(2) + early-cell FE,change,0.03513469301958929,0.010107076258945939,0.0005084838343248644
+"PSID return to schooling, ln annual earnings",White,(3) + current-cell FE,change,0.03207905643754692,0.009025708390504246,0.00037914935971491526
+"PSID return to schooling, ln annual earnings",White,(4) + schooling x calendar trend (return in 1995),change,0.04079021066428942,0.01520732015238588,0.007312337971289337
+"PSID return to schooling, ln annual earnings",White,(5) born 1955-69 only,change,0.06421404922003952,0.01044664589233351,7.903280586772368e-10
+"PSID return to schooling, ln annual earnings",Black - White,(1) baseline (same rows),25-29,0.0770020790464514,0.012162068508345355,2.4305559568147684e-10
+"PSID return to schooling, ln annual earnings",Black - White,(2) + early-cell FE,25-29,0.061269615801195575,0.01451257224147991,2.4232663247995287e-05
+"PSID return to schooling, ln annual earnings",Black - White,(3) + current-cell FE,25-29,0.06590798063916736,0.012384199138642738,1.0266571364665556e-07
+"PSID return to schooling, ln annual earnings",Black - White,(4) + schooling x calendar trend (return in 1995),25-29,0.07946532174555475,0.011936169091686877,2.784806017938566e-11
+"PSID return to schooling, ln annual earnings",Black - White,(5) born 1955-69 only,25-29,0.05698672316398958,0.019267841634105852,0.003100360875336148
+"PSID return to schooling, ln annual earnings",Black - White,(1) baseline (same rows),30-34,0.04730430770997124,0.012720211709911732,0.00020014751679380422
+"PSID return to schooling, ln annual earnings",Black - White,(2) + early-cell FE,30-34,0.04615645407599596,0.01457782013934922,0.0015443873830652596
+"PSID return to schooling, ln annual earnings",Black - White,(3) + current-cell FE,30-34,0.026296330238226043,0.013177314258179088,0.045980109255136015
+"PSID return to schooling, ln annual earnings",Black - White,(4) + schooling x calendar trend (return in 1995),30-34,0.04521770654727675,0.012967774023080176,0.0004886011590933514
+"PSID return to schooling, ln annual earnings",Black - White,(5) born 1955-69 only,30-34,0.04154967239298482,0.019337655425748865,0.03166289726147689
+"PSID return to schooling, ln annual earnings",Black - White,(1) baseline (same rows),35-39,0.020687672858480305,0.014972997246767228,0.16707445000950139
+"PSID return to schooling, ln annual earnings",Black - White,(2) + early-cell FE,35-39,0.025908294996466144,0.01795775800481715,0.1490949945051657
+"PSID return to schooling, ln annual earnings",Black - White,(3) + current-cell FE,35-39,0.0035579289664594144,0.016533975115038704,0.8296199952794643
+"PSID return to schooling, ln annual earnings",Black - White,(4) + schooling x calendar trend (return in 1995),35-39,0.025011576280713932,0.017554038839743605,0.15420544020092564
+"PSID return to schooling, ln annual earnings",Black - White,(5) born 1955-69 only,35-39,0.013244143133015585,0.0232149099745159,0.568337541645439
+"PSID return to schooling, ln annual earnings",Black - White,(1) baseline (same rows),40-44,-0.018954349290199984,0.017661124234752745,0.2831704498353268
+"PSID return to schooling, ln annual earnings",Black - White,(2) + early-cell FE,40-44,-0.021028345714652646,0.02266501145757922,0.3535170906256959
+"PSID return to schooling, ln annual earnings",Black - White,(3) + current-cell FE,40-44,-0.04501017607025964,0.019817221845720472,0.023130898842435476
+"PSID return to schooling, ln annual earnings",Black - White,(4) + schooling x calendar trend (return in 1995),40-44,-0.015166302097254558,0.02427970505998352,0.5322012195354452
+"PSID return to schooling, ln annual earnings",Black - White,(5) born 1955-69 only,40-44,-0.049030643671613916,0.02651479501024889,0.06443174381237891
+"PSID return to schooling, ln annual earnings",Black - White,(1) baseline (same rows),45-49,0.01051837916752163,0.019803616584908038,0.5953257471749868
+"PSID return to schooling, ln annual earnings",Black - White,(2) + early-cell FE,45-49,-0.012896347789271415,0.028670294940471755,0.6528433614405442
+"PSID return to schooling, ln annual earnings",Black - White,(3) + current-cell FE,45-49,-0.029083747200557633,0.022713106852421804,0.20037531981461254
+"PSID return to schooling, ln annual earnings",Black - White,(4) + schooling x calendar trend (return in 1995),45-49,0.036601486005963746,0.03526827889132497,0.2993623031453563
+"PSID return to schooling, ln annual earnings",Black - White,(5) born 1955-69 only,45-49,0.019003272539942495,0.02717240311111442,0.4843275227667505
+"PSID return to schooling, ln annual earnings",Black - White,(1) baseline (same rows),50-55,0.0060683500275293956,0.02541137201615961,0.8112571794935952
+"PSID return to schooling, ln annual earnings",Black - White,(2) + early-cell FE,50-55,-0.01918315818670635,0.03409412910104385,0.573671310983332
+"PSID return to schooling, ln annual earnings",Black - White,(3) + current-cell FE,50-55,-0.010246872031995577,0.030745728804042177,0.7389245174612813
+"PSID return to schooling, ln annual earnings",Black - White,(4) + schooling x calendar trend (return in 1995),50-55,-0.04730345285708637,0.06690696713824729,0.4795643685464731
+"PSID return to schooling, ln annual earnings",Black - White,(5) born 1955-69 only,50-55,0.010161585583806892,0.03061097847702616,0.7399203224811828
+"PSID return to schooling, ln annual earnings",Black - White,(1) baseline (same rows),change,-0.05757318018737848,0.01393603181045846,3.608017047515335e-05
+"PSID return to schooling, ln annual earnings",Black - White,(2) + early-cell FE,change,-0.06051292411213683,0.018363185743507468,0.0009830297692309646
+"PSID return to schooling, ln annual earnings",Black - White,(3) + current-cell FE,change,-0.06629787202278506,0.016005772266702904,3.441062132719349e-05
+"PSID return to schooling, ln annual earnings",Black - White,(4) + schooling x calendar trend (return in 1995),change,-0.06255568731333155,0.027367766371296395,0.022269283297424832
+"PSID return to schooling, ln annual earnings",Black - White,(5) born 1955-69 only,change,-0.050923608382199434,0.01926461492908536,0.008208398125564459
+"PSID return to schooling, ln annual earnings",Black - White,(2) + early-cell FE,change minus baseline,-0.002939743924758348,0.01602083104223329,0.8544095665373728
+"PSID return to schooling, ln annual earnings",Black - White,(3) + current-cell FE,change minus baseline,-0.008724691835406577,0.013086758330636371,0.5049759808602117
+"PSID return to schooling, ln annual earnings",Black - White,(4) + schooling x calendar trend (return in 1995),change minus baseline,-0.0049825071259530715,0.022417858228427137,0.8241144764164497
+"PSID return to schooling, ln annual earnings",Black - White,(5) born 1955-69 only,change minus baseline,0.006649571805179048,0.013138301633980167,0.6127716320572982
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(1) baseline (same rows),25-29,0.04891266013698263,0.0037616973417095886,1.1791909579199068e-38
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(2) + early-cell FE,25-29,0.029623172087440253,0.004322684829849403,7.233897347819248e-12
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(3) + current-cell FE,25-29,0.03229958476184622,0.003651937470874542,9.193368621645273e-19
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(1) baseline (same rows),30-34,0.07607245386871055,0.0043042588634597785,6.678856683766138e-70
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(2) + early-cell FE,30-34,0.04748564698785135,0.005151027485232565,3.0079471983337156e-20
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(3) + current-cell FE,30-34,0.05256869799785591,0.004572986264082511,1.3899705007579472e-30
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(1) baseline (same rows),35-39,0.1006004048602307,0.004920585832331203,6.682842928437046e-93
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(2) + early-cell FE,35-39,0.06584626052819686,0.005677789342773195,4.259554421166333e-31
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(3) + current-cell FE,35-39,0.06967114679994534,0.005475992818610074,4.405199005652539e-37
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(1) baseline (same rows),40-44,0.1234223538728853,0.005259535389638438,8.991513263214666e-122
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(2) + early-cell FE,40-44,0.09007458581063163,0.006464849543673599,3.9936852514091725e-44
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(3) + current-cell FE,40-44,0.09620714436713822,0.006487950282547964,9.572476982609938e-50
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(1) baseline (same rows),45-49,0.12789991217852786,0.006148583907067393,4.19278454389181e-96
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(2) + early-cell FE,45-49,0.08685827519423979,0.007008444927491841,2.8384681526138387e-35
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(3) + current-cell FE,45-49,0.09836731626139844,0.006859756673073035,1.234682656658495e-46
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(1) baseline (same rows),50-55,0.12857375296534332,0.0068468735280778755,1.133154839291226e-78
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(2) + early-cell FE,50-55,0.09018752013946596,0.008175600766171097,2.69928921683287e-28
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(3) + current-cell FE,50-55,0.09768989435253866,0.007536739568526421,2.0139997747005925e-38
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(1) baseline (same rows),change,0.05763154896640021,0.004031456027575019,2.3353196764949035e-46
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(2) + early-cell FE,change,0.044687250880487764,0.00507373053979463,1.2788479997585925e-18
+"NLSY79 return to schooling, ln hourly rate of pay",Pooled Black + White (weighted),(3) + current-cell FE,change,0.04804973406540411,0.004969090957235944,4.054733030654201e-22
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(1) baseline (same rows),25-29,0.06847259505977736,0.005945645761878919,1.0903943510803031e-30
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(2) + early-cell FE,25-29,0.03981788536635687,0.006935199761934937,9.388665017030682e-09
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(3) + current-cell FE,25-29,0.03727111679642555,0.005607965416908628,3.009543236146246e-11
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(1) baseline (same rows),30-34,0.08567106967464597,0.007634337763552094,3.186888520598931e-29
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(2) + early-cell FE,30-34,0.042609272169670476,0.0082873102962738,2.7254204890353983e-07
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(3) + current-cell FE,30-34,0.04511648198022716,0.006522215726845658,4.6015376661635386e-12
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(1) baseline (same rows),35-39,0.10487713019691114,0.00831052070885221,1.642325991136607e-36
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(2) + early-cell FE,35-39,0.05872673189315718,0.01002189874284757,4.633109150557082e-09
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(3) + current-cell FE,35-39,0.057306919908668874,0.009125041571482318,3.3817736940395194e-10
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(1) baseline (same rows),40-44,0.11505208218221041,0.010410752225583157,2.1612418996531833e-28
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(2) + early-cell FE,40-44,0.06103562132905483,0.012435999376821183,9.201979735534794e-07
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(3) + current-cell FE,40-44,0.0651374110530769,0.01243436027271922,1.6188593500012618e-07
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(1) baseline (same rows),45-49,0.12724165837915685,0.009852725972426882,3.735328759954627e-38
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(2) + early-cell FE,45-49,0.07062335784632978,0.012881219552119133,4.189758131402885e-08
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(3) + current-cell FE,45-49,0.07810504865517384,0.011364435377948564,6.297100510396586e-12
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(1) baseline (same rows),50-55,0.13554815553681088,0.01064694396586897,3.967987584585702e-37
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(2) + early-cell FE,50-55,0.0832394322523655,0.014413637403378168,7.693164546143955e-09
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(3) + current-cell FE,50-55,0.07997945854970112,0.012718298448958783,3.204768579349575e-10
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(1) baseline (same rows),change,0.043607924206560664,0.006323018589438959,5.322667119069276e-12
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(2) + early-cell FE,change,0.027192707062213155,0.00853462616209707,0.0014417352114207882
+"NLSY79 return to schooling, ln hourly rate of pay",Black,(3) + current-cell FE,change,0.02893841015332882,0.007469204527058205,0.00010690393386498276
+"NLSY79 return to schooling, ln hourly rate of pay",White,(1) baseline (same rows),25-29,0.046421028358845096,0.00389672968949618,1.0148936260827774e-32
+"NLSY79 return to schooling, ln hourly rate of pay",White,(2) + early-cell FE,25-29,0.03214185657930102,0.004724436046149945,1.022342556217082e-11
+"NLSY79 return to schooling, ln hourly rate of pay",White,(3) + current-cell FE,25-29,0.03329324966322776,0.003917109772459017,1.905032307629471e-17
+"NLSY79 return to schooling, ln hourly rate of pay",White,(1) baseline (same rows),30-34,0.0723289068968749,0.004520194090568942,1.2516788992814087e-57
+"NLSY79 return to schooling, ln hourly rate of pay",White,(2) + early-cell FE,30-34,0.04782027179749093,0.005638018619656628,2.218293184893483e-17
+"NLSY79 return to schooling, ln hourly rate of pay",White,(3) + current-cell FE,30-34,0.05388554549733726,0.005095533572629285,3.8895108439823765e-26
+"NLSY79 return to schooling, ln hourly rate of pay",White,(1) baseline (same rows),35-39,0.09692533022212757,0.005027113482046291,7.829514424832721e-83
+"NLSY79 return to schooling, ln hourly rate of pay",White,(2) + early-cell FE,35-39,0.0690026498700523,0.00623178137925372,1.701928751794637e-28
+"NLSY79 return to schooling, ln hourly rate of pay",White,(3) + current-cell FE,35-39,0.07089359678368368,0.005885009388984763,2.0243188621095403e-33
+"NLSY79 return to schooling, ln hourly rate of pay",White,(1) baseline (same rows),40-44,0.11964525506952498,0.005455735470181905,1.338998817695581e-106
+"NLSY79 return to schooling, ln hourly rate of pay",White,(2) + early-cell FE,40-44,0.09298820865203261,0.007119576039619161,5.505880507358337e-39
+"NLSY79 return to schooling, ln hourly rate of pay",White,(3) + current-cell FE,40-44,0.09663488750722006,0.006882348082866752,8.749864350682876e-45
+"NLSY79 return to schooling, ln hourly rate of pay",White,(1) baseline (same rows),45-49,0.12175962229680663,0.00624603145732759,1.2364305931825606e-84
+"NLSY79 return to schooling, ln hourly rate of pay",White,(2) + early-cell FE,45-49,0.08544281154875659,0.007632149272075453,4.308283584623848e-29
+"NLSY79 return to schooling, ln hourly rate of pay",White,(3) + current-cell FE,45-49,0.09525328909947461,0.00722223933231525,1.0167702538432627e-39
+"NLSY79 return to schooling, ln hourly rate of pay",White,(1) baseline (same rows),50-55,0.12221204648258108,0.0072182824492859465,2.6625969901282993e-64
+"NLSY79 return to schooling, ln hourly rate of pay",White,(2) + early-cell FE,50-55,0.08788611793122904,0.009302955708389588,3.482889043905573e-21
+"NLSY79 return to schooling, ln hourly rate of pay",White,(3) + current-cell FE,50-55,0.09479564892762937,0.008213327473292148,8.131530796062843e-31
+"NLSY79 return to schooling, ln hourly rate of pay",White,(1) baseline (same rows),change,0.05576059588990005,0.0042222168654247666,8.050853486261636e-40
+"NLSY79 return to schooling, ln hourly rate of pay",White,(2) + early-cell FE,change,0.04384888281212165,0.005689761918119535,1.291848963445373e-14
+"NLSY79 return to schooling, ln hourly rate of pay",White,(3) + current-cell FE,change,0.04580495799921941,0.0052964568793786825,5.2305999866310176e-18
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(1) baseline (same rows),25-29,0.022051566700932265,0.007108811841563239,0.001922150018518625
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(2) + early-cell FE,25-29,0.0076760287870558525,0.008391501158440206,0.36032895236064655
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(3) + current-cell FE,25-29,0.003977867133197789,0.006840542747965039,0.5608945033122178
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(1) baseline (same rows),30-34,0.01334216277777106,0.008872162515667305,0.1326269262933164
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(2) + early-cell FE,30-34,-0.005210999627820456,0.010023311124689314,0.6031416081304426
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(3) + current-cell FE,30-34,-0.008769063517110098,0.008276699848206712,0.2893776272794256
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(1) baseline (same rows),35-39,0.007951799974783569,0.009712704279119848,0.41295706892306894
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(2) + early-cell FE,35-39,-0.010275917976895116,0.011801421675828006,0.3838985359604341
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(3) + current-cell FE,35-39,-0.013586676875014803,0.010858163711683449,0.2108298612926346
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(1) baseline (same rows),40-44,-0.004593172887314562,0.011753672252665786,0.6959552780790347
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(2) + early-cell FE,40-44,-0.03195258732297778,0.014329774718543768,0.02576046544834227
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(3) + current-cell FE,40-44,-0.031497476454143164,0.01421196786252761,0.026673409134477397
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(1) baseline (same rows),45-49,0.0054820360823502196,0.011665724068983504,0.638407334569072
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(2) + early-cell FE,45-49,-0.014819453702426807,0.014972492099217756,0.32228230010677184
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(3) + current-cell FE,45-49,-0.017148240444300772,0.013465182227983784,0.20283195856014813
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(1) baseline (same rows),50-55,0.0133361090542298,0.012863165136544862,0.2998443162162828
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(2) + early-cell FE,50-55,-0.0046466856788635325,0.017155113759702106,0.786496398768808
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(3) + current-cell FE,50-55,-0.014816190377928251,0.015139810554307572,0.3277655216206957
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(1) baseline (same rows),change,-0.012152671683339406,0.007603136151685565,0.10995928356409818
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(2) + early-cell FE,change,-0.016656175749908506,0.01025735026269626,0.10441245608500598
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(3) + current-cell FE,change,-0.016866547845890593,0.009156498880147615,0.06547072641340483
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(2) + early-cell FE,change minus baseline,-0.004503504066569099,0.008136115572398954,0.5799072736904194
+"NLSY79 return to schooling, ln hourly rate of pay",Black - White,(3) + current-cell FE,change minus baseline,-0.004713876162551187,0.007012091922385247,0.5014247937904939
+PSID same-employer growth,Pooled Black + White (weighted),(1) baseline,"educ, 25-34",0.008487049873311395,0.0015800277940957615,7.810339996259926e-08
+PSID same-employer growth,Pooled Black + White (weighted),"(2) + cell FE, first interview","educ, 25-34",0.006444138068135116,0.002150460199729285,0.0027297993521269146
+PSID same-employer growth,Pooled Black + White (weighted),(3) + early-cell FE,"educ, 25-34",0.008037440494727896,0.0021880205555094815,0.00023935902330019364
+PSID same-employer growth,Pooled Black + White (weighted),(4) (2) + ln parental income,"educ, 25-34",0.006472322436510851,0.0022254007966106197,0.003633006953071434
+PSID same-employer growth,Pooled Black + White (weighted),(4) (2) + ln parental income,"lyp, 25-34",-0.00034721198131363283,0.006281050498101349,0.9559159650104893
+PSID same-employer growth,Pooled Black + White (weighted),(1) baseline,"educ, 35-55",0.0035642061215713275,0.0009166343782902135,0.00010092309980347554
+PSID same-employer growth,Pooled Black + White (weighted),"(2) + cell FE, first interview","educ, 35-55",0.0014162182698916892,0.0013598479651642911,0.2976651758036821
+PSID same-employer growth,Pooled Black + White (weighted),(3) + early-cell FE,"educ, 35-55",0.0021859772090379592,0.001335223563555735,0.10159663574524878
+PSID same-employer growth,Pooled Black + White (weighted),(4) (2) + ln parental income,"educ, 35-55",0.0015946149705671957,0.001378045333528413,0.24720817284105345
+PSID same-employer growth,Pooled Black + White (weighted),(4) (2) + ln parental income,"lyp, 35-55",-0.002536920456965668,0.0035409629191126488,0.47371395365555036
+PSID same-employer growth,Black,(1) baseline,"educ, 25-34",0.0028098531226503055,0.002908490804610527,0.3340009988047504
+PSID same-employer growth,Black,"(2) + cell FE, first interview","educ, 25-34",0.0033074647716516883,0.004146178722055272,0.4250364834251745
+PSID same-employer growth,Black,(3) + early-cell FE,"educ, 25-34",0.0010651876907390686,0.004199111375180304,0.7997506767126088
+PSID same-employer growth,Black,(4) (2) + ln parental income,"educ, 25-34",0.003143944517220565,0.004179497765268987,0.451912624055538
+PSID same-employer growth,Black,(4) (2) + ln parental income,"lyp, 25-34",0.0034761379429553425,0.009976307509395448,0.7275102669267499
+PSID same-employer growth,Black,(1) baseline,"educ, 35-55",0.0025561043956006603,0.001655664462746628,0.12262367789705132
+PSID same-employer growth,Black,"(2) + cell FE, first interview","educ, 35-55",0.0026484202478639844,0.0026494091033042303,0.3174911660480889
+PSID same-employer growth,Black,(3) + early-cell FE,"educ, 35-55",0.0007203835233762779,0.0024839815270890136,0.7718073428490912
+PSID same-employer growth,Black,(4) (2) + ln parental income,"educ, 35-55",0.0029075732909076253,0.0026621754812609887,0.2747542434400816
+PSID same-employer growth,Black,(4) (2) + ln parental income,"lyp, 35-55",-0.008323444353487029,0.005009118737744403,0.0965812815643397
+PSID same-employer growth,White,(1) baseline,"educ, 25-34",0.00977914128062788,0.0015644483855761923,4.082096174064197e-10
+PSID same-employer growth,White,"(2) + cell FE, first interview","educ, 25-34",0.0074816853787597355,0.0022081455506640564,0.0007034752808565124
+PSID same-employer growth,White,(3) + early-cell FE,"educ, 25-34",0.008817769801103709,0.002312910139412787,0.0001376164066178045
+PSID same-employer growth,White,(4) (2) + ln parental income,"educ, 25-34",0.007059934892954763,0.0022435508446411326,0.001650856700186984
+PSID same-employer growth,White,(4) (2) + ln parental income,"lyp, 25-34",0.005402396798843082,0.006572950457424089,0.4111261218506558
+PSID same-employer growth,White,(1) baseline,"educ, 35-55",0.0033479386501776903,0.0010259261460140111,0.0011011005619015835
+PSID same-employer growth,White,"(2) + cell FE, first interview","educ, 35-55",0.0008226761662337315,0.0015116213503609947,0.5862802610084666
+PSID same-employer growth,White,(3) + early-cell FE,"educ, 35-55",0.0017162835674960353,0.0014201670769221852,0.2268518409716359
+PSID same-employer growth,White,(4) (2) + ln parental income,"educ, 35-55",0.0009996586960604459,0.0015409878692212442,0.5165239703475702
+PSID same-employer growth,White,(4) (2) + ln parental income,"lyp, 35-55",-0.002680723093721582,0.0047783653094168165,0.5747889551329486
+PSID same-employer growth,Black - White,(1) baseline,"educ, 25-34",-0.006969288157977574,0.0032966878763529576,0.034512936003615484
+PSID same-employer growth,Black - White,"(2) + cell FE, first interview","educ, 25-34",-0.004174220607108047,0.004683420735985002,0.37278110854874236
+PSID same-employer growth,Black - White,(3) + early-cell FE,"educ, 25-34",-0.00775258211036464,0.004782046459541355,0.10497796332744891
+PSID same-employer growth,Black - White,(4) (2) + ln parental income,"educ, 25-34",-0.003915990375734198,0.004731468952746029,0.4078699287918153
+PSID same-employer growth,Black - White,(4) (2) + ln parental income,"lyp, 25-34",-0.0019262588558877397,0.011963714348804713,0.8720867616423108
+PSID same-employer growth,Black - White,(1) baseline,"educ, 35-55",-0.00079183425457703,0.001947561089365244,0.6843184250894419
+PSID same-employer growth,Black - White,"(2) + cell FE, first interview","educ, 35-55",0.001825744081630253,0.0030468898832217905,0.5490290923266932
+PSID same-employer growth,Black - White,(3) + early-cell FE,"educ, 35-55",-0.0009959000441197574,0.0028619798358041136,0.7278582736063042
+PSID same-employer growth,Black - White,(4) (2) + ln parental income,"educ, 35-55",0.0019079145948471795,0.003072125554910046,0.5345729324274191
+PSID same-employer growth,Black - White,(4) (2) + ln parental income,"lyp, 35-55",-0.005642721259765447,0.006927542964334548,0.41533893913067577
+NLSY79 same-employer growth,Pooled Black + White (weighted),(1) baseline,"educ, 25-34",0.004490051524994628,0.0009618483583181621,3.039253492194964e-06
+NLSY79 same-employer growth,Pooled Black + White (weighted),"(2) + cell FE, first interview","educ, 25-34",0.004023859807331848,0.0014200708560231565,0.004603227675916535
+NLSY79 same-employer growth,Pooled Black + White (weighted),(3) + early-cell FE,"educ, 25-34",0.0024890444481800444,0.0013216164323207537,0.05965519164836338
+NLSY79 same-employer growth,Pooled Black + White (weighted),(4) (2) + ln parental income,"educ, 25-34",0.003793576651006099,0.0014093863801456093,0.007109924497935798
+NLSY79 same-employer growth,Pooled Black + White (weighted),(4) (2) + ln parental income,"lyp, 25-34",0.003834690613642172,0.004300095259541498,0.3725168900192741
+NLSY79 same-employer growth,Pooled Black + White (weighted),(1) baseline,"educ, 35-55",0.0023186045648372275,0.0005149387240097497,6.710171412776286e-06
+NLSY79 same-employer growth,Pooled Black + White (weighted),"(2) + cell FE, first interview","educ, 35-55",0.0018504504430257723,0.0007680392051387794,0.015982378914548245
+NLSY79 same-employer growth,Pooled Black + White (weighted),(3) + early-cell FE,"educ, 35-55",0.0026928976077591343,0.0007944112595333154,0.0006994288667468161
+NLSY79 same-employer growth,Pooled Black + White (weighted),(4) (2) + ln parental income,"educ, 35-55",0.0018992927976306628,0.0007892907539988782,0.016113770002578888
+NLSY79 same-employer growth,Pooled Black + White (weighted),(4) (2) + ln parental income,"lyp, 35-55",-0.0008297780540109293,0.0023929592297739126,0.7287730393301924
+NLSY79 same-employer growth,Black,(1) baseline,"educ, 25-34",0.0027418943425349344,0.0020152173256053852,0.1736417556504155
+NLSY79 same-employer growth,Black,"(2) + cell FE, first interview","educ, 25-34",-0.0012575141802499967,0.0024145201914320263,0.6024968510983206
+NLSY79 same-employer growth,Black,(3) + early-cell FE,"educ, 25-34",-0.001599146672247073,0.002718846603690655,0.5564175337567613
+NLSY79 same-employer growth,Black,(4) (2) + ln parental income,"educ, 25-34",-0.0009340809340701779,0.002449099743535366,0.7029081901900337
+NLSY79 same-employer growth,Black,(4) (2) + ln parental income,"lyp, 25-34",-0.004308054671163498,0.005525059296756996,0.4355497968335872
+NLSY79 same-employer growth,Black,(1) baseline,"educ, 35-55",0.0020693542296170327,0.001149504739517319,0.07182689464487603
+NLSY79 same-employer growth,Black,"(2) + cell FE, first interview","educ, 35-55",0.0022300086333766848,0.0017666081824015308,0.20683696276489372
+NLSY79 same-employer growth,Black,(3) + early-cell FE,"educ, 35-55",0.0025947959668074106,0.001778878367531202,0.1446560407716918
+NLSY79 same-employer growth,Black,(4) (2) + ln parental income,"educ, 35-55",0.002622080856145296,0.0018010509512554986,0.14543089258026864
+NLSY79 same-employer growth,Black,(4) (2) + ln parental income,"lyp, 35-55",-0.004503245133572142,0.0036988350612077677,0.22342293432192328
+NLSY79 same-employer growth,White,(1) baseline,"educ, 25-34",0.004359468386060515,0.0010174415195029936,1.8295624408226455e-05
+NLSY79 same-employer growth,White,"(2) + cell FE, first interview","educ, 25-34",0.0036483882506039497,0.0014824278036103598,0.013851561231715746
+NLSY79 same-employer growth,White,(3) + early-cell FE,"educ, 25-34",0.0019105919913540523,0.0014114744734738047,0.17585947133030255
+NLSY79 same-employer growth,White,(4) (2) + ln parental income,"educ, 25-34",0.0034188803172782315,0.0014843902101295988,0.021266350745298476
+NLSY79 same-employer growth,White,(4) (2) + ln parental income,"lyp, 25-34",0.004057201019434722,0.005318777374359893,0.44557846020984704
+NLSY79 same-employer growth,White,(1) baseline,"educ, 35-55",0.002471853843648085,0.0005574067226830444,9.226030222291844e-06
+NLSY79 same-employer growth,White,"(2) + cell FE, first interview","educ, 35-55",0.002020158663438265,0.0008218730496430576,0.013971567937664962
+NLSY79 same-employer growth,White,(3) + early-cell FE,"educ, 35-55",0.0029195453434586165,0.0008913393138544096,0.0010549043961472783
+NLSY79 same-employer growth,White,(4) (2) + ln parental income,"educ, 35-55",0.0020130302134703376,0.0008378071704232641,0.01627289000737049
+NLSY79 same-employer growth,White,(4) (2) + ln parental income,"lyp, 35-55",0.00013069653524326702,0.0028921422027184587,0.963955691573135
+NLSY79 same-employer growth,Black - White,(1) baseline,"educ, 25-34",-0.0016175740435255808,0.0022574959833914837,0.47366129387093336
+NLSY79 same-employer growth,Black - White,"(2) + cell FE, first interview","educ, 25-34",-0.0049059024308539464,0.0028332843040806874,0.08335818085873178
+NLSY79 same-employer growth,Black - White,(3) + early-cell FE,"educ, 25-34",-0.0035097386636011255,0.0030633946927662403,0.25191830886136324
+NLSY79 same-employer growth,Black - White,(4) (2) + ln parental income,"educ, 25-34",-0.00435296125134841,0.002863826784167225,0.12851584292732024
+NLSY79 same-employer growth,Black - White,(4) (2) + ln parental income,"lyp, 25-34",-0.00836525569059822,0.007669137695379033,0.27537465307723563
+NLSY79 same-employer growth,Black - White,(1) baseline,"educ, 35-55",-0.0004024996140310523,0.0012775223679705307,0.7527140677271181
+NLSY79 same-employer growth,Black - White,"(2) + cell FE, first interview","educ, 35-55",0.00020984996993841975,0.0019484300808234355,0.9142320205300972
+NLSY79 same-employer growth,Black - White,(3) + early-cell FE,"educ, 35-55",-0.00032474937665120593,0.001989696966598915,0.870348766019246
+NLSY79 same-employer growth,Black - White,(4) (2) + ln parental income,"educ, 35-55",0.0006090506426749583,0.0019863799696510664,0.7591376810806134
+NLSY79 same-employer growth,Black - White,(4) (2) + ln parental income,"lyp, 35-55",-0.004633941668815409,0.004695302687874877,0.3236762682495694
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(1) AFQT alone,"afqt, 25-29",0.14558382189220903,0.009022210309412027,1.4211410342188134e-58
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"afqt, 25-29",0.11297832445781722,0.011426212800357492,4.709814975932879e-23
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(1) AFQT alone,"afqt, 30-34",0.2028017520253398,0.010578250016048481,6.393879410518726e-82
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"afqt, 30-34",0.1339694869914183,0.013434567478616611,2.0212020513628937e-23
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(1) AFQT alone,"afqt, 35-39",0.24556027059428231,0.01209553169892646,1.241259509220248e-91
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"afqt, 35-39",0.13860205662931363,0.014531033902409913,1.451257515239131e-21
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(1) AFQT alone,"afqt, 40-44",0.29164303775624645,0.012814316830843357,1.1646562188348418e-114
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"afqt, 40-44",0.15867070322899934,0.015086164141611184,7.16527239042536e-26
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(1) AFQT alone,"afqt, 45-49",0.3053376353393148,0.014519223863483163,3.49482640089194e-98
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"afqt, 45-49",0.1655938930020966,0.016501929703892724,1.071547445446189e-23
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(1) AFQT alone,"afqt, 50-55",0.31188850922901956,0.015669594221267725,3.752814701273363e-88
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"afqt, 50-55",0.17566895746404043,0.017836349270322842,6.927747470045006e-23
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(1) AFQT alone,"afqt, change",0.1144145762709414,0.009305078244510804,9.525594279365104e-35
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"afqt, change",0.03615999685649472,0.010844200759896179,0.0008545263347403937
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(2) schooling alone,"educ, 25-29",0.04991865337820621,0.0038422721816549804,1.3589828840007147e-38
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"educ, 25-29",0.02053255751174438,0.0047070605181573025,1.2883387285527074e-05
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(2) schooling alone,"educ, 30-34",0.07791668191505491,0.004384405013596449,1.1787558264004416e-70
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"educ, 30-34",0.04300158803587806,0.005478919052303032,4.208638606434157e-15
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(2) schooling alone,"educ, 35-39",0.10230216782667867,0.004983644532511129,1.2210347360119659e-93
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"educ, 35-39",0.06604100889219484,0.006077699604884678,1.671606678487164e-27
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(2) schooling alone,"educ, 40-44",0.12467251302325644,0.005331282188257386,6.060983842510355e-121
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"educ, 40-44",0.08375576824191278,0.0064827106592230815,3.477359454343936e-38
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(2) schooling alone,"educ, 45-49",0.13068208251228625,0.006133526620888684,9.94681106694753e-101
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"educ, 45-49",0.08802784721615353,0.0072346130610143194,4.625054443318838e-34
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(2) schooling alone,"educ, 50-55",0.13060711222575766,0.006809397494229516,5.39416102957597e-82
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"educ, 50-55",0.08670388641621685,0.00809545767916337,9.117491972661209e-27
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(2) schooling alone,"educ, change",0.05814830125036419,0.004047666401792522,8.472020678737628e-47
+NLSY79 AFQT and schooling by age,Pooled Black + White (weighted),(3) AFQT + schooling,"educ, change",0.04936505491780828,0.0050263645477707656,9.122853288639014e-23
+NLSY79 AFQT and schooling by age,Black,(1) AFQT alone,"afqt, 25-29",0.18822581152246778,0.017319877185685024,1.64437716580021e-27
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"afqt, 25-29",0.12089259071087552,0.019700987198736447,8.442720829800577e-10
+NLSY79 AFQT and schooling by age,Black,(1) AFQT alone,"afqt, 30-34",0.22247753137038198,0.021411938263364665,2.743446943015927e-25
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"afqt, 30-34",0.13008704282378858,0.02482919384502778,1.6120626071302607e-07
+NLSY79 AFQT and schooling by age,Black,(1) AFQT alone,"afqt, 35-39",0.27233415462576716,0.023787341331677057,2.386960295438907e-30
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"afqt, 35-39",0.1624937066925275,0.026525822503830686,9.019014088742902e-10
+NLSY79 AFQT and schooling by age,Black,(1) AFQT alone,"afqt, 40-44",0.3018589511616869,0.026940534961017167,3.8693077863268094e-29
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"afqt, 40-44",0.18405150677974547,0.0317288434604709,6.6013777785169775e-09
+NLSY79 AFQT and schooling by age,Black,(1) AFQT alone,"afqt, 45-49",0.2988603441459227,0.029895697355529535,1.5745243596120166e-23
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"afqt, 45-49",0.16082117754285719,0.03383913111905392,2.0089600575539354e-06
+NLSY79 AFQT and schooling by age,Black,(1) AFQT alone,"afqt, 50-55",0.3401469433874051,0.029714177506461957,2.4259919051386215e-30
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"afqt, 50-55",0.2060071222354054,0.034022218468939526,1.4035128985801498e-09
+NLSY79 AFQT and schooling by age,Black,(1) AFQT alone,"afqt, change",0.09794842688377063,0.01880667920798156,1.9070973232642834e-07
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"afqt, change",0.05285356154530184,0.02171466984210695,0.014932890310376055
+NLSY79 AFQT and schooling by age,Black,(2) schooling alone,"educ, 25-29",0.06926174700302702,0.006039332663729496,1.9004625837792167e-30
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"educ, 25-29",0.043454753761238314,0.006726330798267011,1.0443004217612556e-10
+NLSY79 AFQT and schooling by age,Black,(2) schooling alone,"educ, 30-34",0.08637499930069839,0.007732098981386448,5.656363970907071e-29
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"educ, 30-34",0.0580421482546285,0.00891113132690175,7.344735862554956e-11
+NLSY79 AFQT and schooling by age,Black,(2) schooling alone,"educ, 35-39",0.10466709504577665,0.008258888374998018,8.317699394840277e-37
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"educ, 35-39",0.06913315574810057,0.00919935257659037,5.690993479926086e-14
+NLSY79 AFQT and schooling by age,Black,(2) schooling alone,"educ, 40-44",0.11551220381222096,0.010453850966737387,2.1988145249626886e-28
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"educ, 40-44",0.07552932508478527,0.012323799496978637,8.857944670516656e-10
+NLSY79 AFQT and schooling by age,Black,(2) schooling alone,"educ, 45-49",0.12699867839688872,0.009845894602487741,4.5809349794237654e-38
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"educ, 45-49",0.09250273761172423,0.011396528137005825,4.788448691252471e-16
+NLSY79 AFQT and schooling by age,Black,(2) schooling alone,"educ, 50-55",0.13109562841723804,0.010515270470353518,1.1276478455852163e-35
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"educ, 50-55",0.08775468587191426,0.011982796819098035,2.4178507899459004e-13
+NLSY79 AFQT and schooling by age,Black,(2) schooling alone,"educ, change",0.041750028266168374,0.006330298980156393,4.2448384603130223e-11
+NLSY79 AFQT and schooling by age,Black,(3) AFQT + schooling,"educ, change",0.030481525071197682,0.0074792619191234675,4.592104080273288e-05
+NLSY79 AFQT and schooling by age,White,(1) AFQT alone,"afqt, 25-29",0.14019559133047352,0.010290386482726458,2.88576139356084e-42
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"afqt, 25-29",0.10256631907007804,0.013569054531408468,4.066781819087245e-14
+NLSY79 AFQT and schooling by age,White,(1) AFQT alone,"afqt, 30-34",0.1994623101070534,0.012083802457911772,3.289816537498135e-61
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"afqt, 30-34",0.12511304393501632,0.015666781021983957,1.395225895979617e-15
+NLSY79 AFQT and schooling by age,White,(1) AFQT alone,"afqt, 35-39",0.24113812826320213,0.013297228591788186,1.7034835234808255e-73
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"afqt, 35-39",0.12093021127282338,0.0170474214009486,1.3052219627071927e-12
+NLSY79 AFQT and schooling by age,White,(1) AFQT alone,"afqt, 40-44",0.28195955452347177,0.014795620230380228,5.752052333818049e-81
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"afqt, 40-44",0.1302102735169477,0.018092290951660667,6.155037778097164e-13
+NLSY79 AFQT and schooling by age,White,(1) AFQT alone,"afqt, 45-49",0.2975536226235095,0.015961252952627455,1.4597770788219642e-77
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"afqt, 45-49",0.14114145951771206,0.01897486959177719,1.0196129310538688e-13
+NLSY79 AFQT and schooling by age,White,(1) AFQT alone,"afqt, 50-55",0.30034000523071924,0.018152835890676615,1.737523735884242e-61
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"afqt, 50-55",0.14864504985416715,0.021795160122850345,9.09806959802143e-12
+NLSY79 AFQT and schooling by age,White,(1) AFQT alone,"afqt, change",0.11041887694146219,0.010443996785539962,3.998091413444336e-26
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"afqt, change",0.021392067037865406,0.012689741687655546,0.09183887533287557
+NLSY79 AFQT and schooling by age,White,(2) schooling alone,"educ, 25-29",0.047521435844470175,0.003986682579409896,9.305823642916189e-33
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"educ, 25-29",0.02192663178641333,0.005099443490515134,1.709455602484468e-05
+NLSY79 AFQT and schooling by age,White,(2) schooling alone,"educ, 30-34",0.07449586798636501,0.004611511971488334,1.0586929737460224e-58
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"educ, 30-34",0.043099249209205936,0.005850862399505678,1.7541947166173154e-13
+NLSY79 AFQT and schooling by age,White,(2) schooling alone,"educ, 35-39",0.0990172668568583,0.005077001962311112,1.0332975862524822e-84
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"educ, 35-39",0.0685003535000993,0.0065621277405021605,1.6498380063637473e-25
+NLSY79 AFQT and schooling by age,White,(2) schooling alone,"educ, 40-44",0.12102330401112273,0.005537206192319819,6.759138127321101e-106
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"educ, 40-44",0.0888151006353084,0.007047891845684487,2.067603241946309e-36
+NLSY79 AFQT and schooling by age,White,(2) schooling alone,"educ, 45-49",0.12535600803008853,0.006225926329283214,3.6789580143485033e-90
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"educ, 45-49",0.09048608097253918,0.007670126423358357,4.0347463772052674e-32
+NLSY79 AFQT and schooling by age,White,(2) schooling alone,"educ, 50-55",0.12490773655297999,0.007212337592627509,3.4042192698683405e-67
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"educ, 50-55",0.08940017038457881,0.008996282092301442,2.860345895963495e-23
+NLSY79 AFQT and schooling by age,White,(2) schooling alone,"educ, change",0.056567426947344776,0.004266405701066683,4.012564098587543e-40
+NLSY79 AFQT and schooling by age,White,(3) AFQT + schooling,"educ, change",0.051787485875321795,0.0054720128174828115,2.961985899915415e-21
+NLSY79 AFQT and schooling by age,Black - White,(1) AFQT alone,"afqt, 25-29",0.048030220191994266,0.020146220481546705,0.017121836237686393
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"afqt, 25-29",0.018326271640797476,0.02392170849837265,0.44362051483316234
+NLSY79 AFQT and schooling by age,Black - White,(1) AFQT alone,"afqt, 30-34",0.023015221263328584,0.024586365775282334,0.3492232889723883
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"afqt, 30-34",0.0049739988887722575,0.029358761802650367,0.8654652895119175
+NLSY79 AFQT and schooling by age,Black - White,(1) AFQT alone,"afqt, 35-39",0.03119602636256502,0.02725167693651128,0.2523177628102664
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"afqt, 35-39",0.04156349541970411,0.03153147373540049,0.18745043224979163
+NLSY79 AFQT and schooling by age,Black - White,(1) AFQT alone,"afqt, 40-44",0.019899396638215106,0.030736017991721452,0.517354179553732
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"afqt, 40-44",0.05384123326279777,0.036524656045178704,0.1404529159307726
+NLSY79 AFQT and schooling by age,Black - White,(1) AFQT alone,"afqt, 45-49",0.0013067215224132345,0.033889737623522175,0.9692427645409856
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"afqt, 45-49",0.01967971802514512,0.038796036793949384,0.611971670149893
+NLSY79 AFQT and schooling by age,Black - White,(1) AFQT alone,"afqt, 50-55",0.039806938156685845,0.034820364670108885,0.25295201857313065
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"afqt, 50-55",0.05736207238123825,0.040404707081340606,0.1556985721595074
+NLSY79 AFQT and schooling by age,Black - White,(1) AFQT alone,"afqt, change",-0.012470450057691623,0.02151204898860857,0.5621196002890901
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"afqt, change",0.03146149450743645,0.025150674552606576,0.2109634820417754
+NLSY79 AFQT and schooling by age,Black - White,(2) schooling alone,"educ, 25-29",0.021740311158556846,0.007236516911619867,0.0026623582765372663
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"educ, 25-29",0.021528121974824985,0.008440844147398558,0.010757770169640767
+NLSY79 AFQT and schooling by age,Black - White,(2) schooling alone,"educ, 30-34",0.01187913131433338,0.009002854953909761,0.18700704959063708
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"educ, 30-34",0.014942899045422564,0.010660246354716157,0.16099275219160325
+NLSY79 AFQT and schooling by age,Black - White,(2) schooling alone,"educ, 35-39",0.005649828188918349,0.009694595716995541,0.5600405979775986
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"educ, 35-39",0.000632802248001274,0.011299982668618916,0.9553415802584999
+NLSY79 AFQT and schooling by age,Black - White,(2) schooling alone,"educ, 40-44",-0.005511100198901761,0.011829778208023225,0.6413108901975242
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"educ, 40-44",-0.013285775550523127,0.014196788845023962,0.3493609169211166
+NLSY79 AFQT and schooling by age,Black - White,(2) schooling alone,"educ, 45-49",0.0016426703668001863,0.011649197362091484,0.8878608863953878
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"educ, 45-49",0.002016656639185044,0.013737237456194222,0.8832881505244564
+NLSY79 AFQT and schooling by age,Black - White,(2) schooling alone,"educ, 50-55",0.006187891864258055,0.012751028453215713,0.6274736924631175
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"educ, 50-55",-0.0016454845126645523,0.014984008512145526,0.9125552680754305
+NLSY79 AFQT and schooling by age,Black - White,(2) schooling alone,"educ, change",-0.014817398681176406,0.007633800022548623,0.05225521342042462
+NLSY79 AFQT and schooling by age,Black - White,(3) AFQT + schooling,"educ, change",-0.021305960804124113,0.009267269453811445,0.02150182475497344

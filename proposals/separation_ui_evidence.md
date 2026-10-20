@@ -1,8 +1,8 @@
 # Separation hazard: UI generosity (M2b) and her displacement (M3), PSID evidence (WP4, 2026-10-19)
 
 Script `IGE/64.SeparationUIAndHerLoss.py` (imports `IGE/19` read only; nothing in `IGE/60-62` or `paperA_model/` was
-touched or run). Tables in `IGE/output/separation_ui_her_loss.md` / `.csv`; the path by event year for WP3.2 is in
-`IGE/output/bw_present_by_year.csv`. Options M2a / M2b / M3 as in `fable_marriage_divorce_paperA.md`, Section 5.
+touched or run). Tables in `output/separation_ui_her_loss.md` / `.csv`; the path by event year for WP3.2 is in
+`output/bw_present_by_year.csv`. Options M2a / M2b / M3 as in `fable_marriage_divorce_paperA.md`, Section 5.
 
 ## Design
 

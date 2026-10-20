@@ -1,23 +1,23 @@
 r"""Established wives' exits: what moves a wife off a job she has held a year or more? (2026-10-20) [Paper A; WP2 of
-IGE/proposals/fable_10h_plan_paperA.md]
+proposals/fable_10h_plan_paperA.md]
 
 Why. The largest misfit of the Paper A model is the wife's persistent exit (model 0.14% vs data ~1.0% a month). The
-extension table (IGE/paperA_model/results/extensions_20261019.md) shows that the model already over-predicts exits at
+extension table (paperA_model/results/extensions_20261019.md) shows that the model already over-predicts exits at
 job tenure 0-5 months and misses those at tenure 12+ (target sipp_wexit_ten_12p = 0.68% a month vs 0.27%), so a
 new-job hazard alone cannot close the gap: the gap is established wives. IGE/63 pooled all tenures. This script
 decomposes the exits of wives who have held their job for 12 months or more, so that the PI can choose the model
 feature after the first estimate in one reading.
 
 DATA (all read only; loaders of the source scripts imported via importlib, nothing of theirs is edited)
-  SIPP  40.SIPPJointLoss.py couples panel (IGE/data/sipp_couples_panel.pkl; panels 2004, 2008, 2014; reference months
+  SIPP  40.SIPPJointLoss.py couples panel (data/sipp_couples_panel.pkl; panels 2004, 2008, 2014; reference months
         2003-2016) + the wife's job slots from 63.WifeExitWhy.sipp_slots (tenure from the employer-specific start date,
         usual hours, detailed reason the job ended: exactly 63's and 66's definitions, so the 12+ hazard equals the
         target) + person-month extras re-read here from the same raw core files: monthly earnings (2004/08 TPEARN,
         2014 TPEARN), work-limiting health condition (EDISABL), and the program variables used by IGE/78 (food stamps /
         SNAP, UI, TANF receipt and amounts). The person-level extracts are cached in a scratch folder OUTSIDE the
         repository (--scratch; default: the system temp folder /ige75_scratch).
-  PSID  60.PaperATargets.py's cached men's panel (IGE/data/paperA_targets_psid.pkl, 'm': male heads x calendar year
-        with wife's annual hours, his hours and labor income, youngest child) + IGE/data/psid_person_year.pkl
+  PSID  60.PaperATargets.py's cached men's panel (data/paperA_targets_psid.pkl, 'm': male heads x calendar year
+        with wife's annual hours, his hours and labor income, youngest child) + data/psid_person_year.pkl
         (children's birth years -> births by calendar year), as in 63.
 SAMPLE (63's)
   SIPP: married wives 25-59, employed at t-1 and t, husband employed at t and t+1, all four months observed; persistent
@@ -48,8 +48,8 @@ ESTIMATES
         repeat-exit share and the coefficient on an earlier exit of the same wife (any exit in the window).
   Associations, not causal effects. *** p<0.01, ** p<0.05, * p<0.1 (normal approximation).
 OUTPUTS (aggregate only)
-  IGE/output/established_wife_exits.csv  every estimate: dataset, table, sample, cell, outcome, coef, se, p, stars, n
-  IGE/output/established_wife_exits.md   tables (one outcome per column, covariates as rows, samples as row panels)
+  output/established_wife_exits.csv  every estimate: dataset, table, sample, cell, outcome, coef, se, p, stars, n
+  output/established_wife_exits.md   tables (one outcome per column, covariates as rows, samples as row panels)
 Run from the repository root: .venv/Scripts/python.exe -I IGE/75.EstablishedWifeExits.py [--only sipp,psid]
   [--scratch DIR] [--workers 2]
 """

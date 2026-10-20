@@ -1,18 +1,18 @@
 r"""Separation hazard: does it depend on UI generosity (M2b) and on HER displacement (M3)? PSID, 2026-10-19.
 
-WP4 of IGE/proposals/fable_3h_plan_paperA.md, the two reduced-form checks asked for by the marriage note
-(IGE/proposals/fable_marriage_divorce_paperA.md, Section 5: M2b = sigma_J by UI entitlement; M3 = response to her
+WP4 of proposals/fable_3h_plan_paperA.md, the two reduced-form checks asked for by the marriage note
+(proposals/fable_marriage_divorce_paperA.md, Section 5: M2b = sigma_J by UI entitlement; M3 = response to her
 displacement). Imports 19.FatherDisplacement.py (stacks, men_panel, reports, demean) and 9.ChildExposure.py (family
 hours) read only; nothing in 19 / 60-62 is edited or rerun.
 
-Reads (read only): IGE/data/psid_person_year.pkl, psid_displacement.pkl (19), correlated_shocks_wife_disp.pkl (23: the
+Reads (read only): data/psid_person_year.pkl, psid_displacement.pkl (19), correlated_shocks_wife_disp.pkl (23: the
 wife's reason-for-job-end reports, 1984-2023 waves), husband_shocks_fam.pkl (18: state FIPS of the family, 1976-2023
 waves), ui_generosity.csv (12b: DOL state UI law parameters, ETA 5159 average benefits, BEA wages), the raw PSID family
 files through 19.reports (female heads' own job-end reports). Writes
-  IGE/data/sep_ui_femhead_reports.pkl     cache: female heads' job-end reports (person level; git-ignored folder)
-  IGE/output/separation_ui_her_loss.csv   every estimate (aggregates only)
-  IGE/output/separation_ui_her_loss.md    tables
-  IGE/output/bw_present_by_year.csv       'still with baseline wife' by event year, -3..+6 (for WP3.2)
+  data/sep_ui_femhead_reports.pkl     cache: female heads' job-end reports (person level; git-ignored folder)
+  output/separation_ui_her_loss.csv   every estimate (aggregates only)
+  output/separation_ui_her_loss.md    tables
+  output/bw_present_by_year.csv       'still with baseline wife' by event year, -3..+6 (for WP3.2)
 
 DESIGN (19's stacked event study; Cengiz et al. 2019). Units = person x event year ev; treated = first displacement
 (closure or layoff / firing) in ev; clean controls = no displacement up to ev + 6; baseline = the last observed of

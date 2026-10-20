@@ -1,0 +1,29 @@
+\begin{table}[!htbp]
+\centering
+\caption{The hypothesis lattice: fit of every combination of race parameters}
+\label{tab:modellattice}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lccccccccc}
+\toprule
+Model & H1 & H2 & H3 & H4 & $Q$ & $Q$ over ten & W $-$ B IGE gap & W $-$ B IGE gap & $Q$ of the \\
+ & & & & & & seeds: mean (s.d.) & 30--34 & 45--49 & 12 IGE moments \\
+\midrule
+\multicolumn{10}{l}{\textit{Without H4}} \\
+A without H4 &  &  &  &  & 182.0 & 184.9 (2.5) & 0.079 & 0.142 & 36.9 \\
+E without H4 &  & $\checkmark$ & $\checkmark$ &  & 160.6 & 163.7 (3.5) & 0.079 & 0.154 & 32.7 \\
+\midrule \multicolumn{10}{l}{\textit{With H4}} \\
+A &  &  &  & $\checkmark$ & 138.4 & 137.8 (2.7) & 0.174 & 0.275 & 7.3 \\
+B & $\checkmark$ &  &  & $\checkmark$ & 135.0 & 134.7 (2.1) & 0.169 & 0.271 & 6.8 \\
+F &  & $\checkmark$ &  & $\checkmark$ & 136.4 & 136.1 (2.4) & 0.169 & 0.265 & 7.3 \\
+G &  &  & $\checkmark$ & $\checkmark$ & 138.2 & 137.6 (2.4) & 0.174 & 0.276 & 7.0 \\
+C & $\checkmark$ & $\checkmark$ &  & $\checkmark$ & 133.8 & 133.7 (1.9) & 0.168 & 0.266 & 6.8 \\
+H & $\checkmark$ &  & $\checkmark$ & $\checkmark$ & 135.0 & 134.7 (2.1) & 0.169 & 0.271 & 6.8 \\
+E &  & $\checkmark$ & $\checkmark$ & $\checkmark$ & 127.6 & 127.6 (2.3) & 0.169 & 0.282 & 4.9 \\
+D & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & 127.1 & 126.2 (2.2) & 0.167 & 0.280 & 5.0 \\
+\midrule
+PSID & & & & & & & 0.153 & 0.330 & \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Each model is estimated by SMM on the 66 moments with 20 simulated sons per PSID son (12,000 CMA-ES evaluations, each started from the best solution of the models nested in it). $Q$: the criterion at the estimation draws, and its mean (standard deviation) over ten simulation seeds. IGE gaps and the $Q$ of the IGE moments at the estimation draws. IGE gaps: White $-$ Black coefficient of the son's log wage on log parental income, simulated with the PSID observation scheme. H1 access ($\alpha_3$), H2 pay-off of schooling in accumulation, H3 entry return to schooling, H4 pay-off of parental income in accumulation. Model H's solution is model B's (see the note to Table~\ref{tab:modelhyp}). Code: \texttt{model/hpc\_ige\_chain.sh}, \texttt{model/lattice\_q.py}.\end{minipage}
+\end{table}

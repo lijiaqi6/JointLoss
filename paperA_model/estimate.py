@@ -1,6 +1,6 @@
 """Paper A model: SMM estimation (identification plan Sections 2.4 and 4.2, stages 3-6).
 
-Commands (python IGE/paperA_model/estimate.py <command> [options]):
+Commands (python paperA_model/estimate.py <command> [options]):
   evaluate   Q at --start, by block, with the simulated and data moments (results/evaluate_<stamp>/; moments.csv marks
              the moments outside the objective, in_objective = 0)
   jacobian   CRN central-difference Jacobian at --start: S[i, j] = change of moment i in weighted units (sqrt of the
@@ -36,7 +36,7 @@ Objective: moments.OBJ_EXCLUDE (pooled CPS duplicates, SIPP 'no separation' rows
 (kept in the fit tables); --no-default-exclude restores the full vector.
 Weighting (--weighting): 'diag_noise' (default) = 1 / (se^2 + var_sim), var_sim = the simulation variance of each moment
 at the run's K (--noise-file, default inputs/moment_noise.csv, scaled by K_noise / K); 'diag' = 1 / se^2 of the
-bootstrap standard errors in IGE/output/paperA_targets.csv (the within-source bootstrap covariances are used only in
+bootstrap standard errors in output/paperA_targets.csv (the within-source bootstrap covariances are used only in
 Omega of the sandwich); 'block' = equal total weight per block (robustness run); 'vcov' = inverse of the block-diagonal
 bootstrap covariance (diagnostics).
 Parameters: the 31 of params.PARAMS plus the optional params.EXTRA_PARAMS (sigma_eps), carried in every theta vector
@@ -46,17 +46,17 @@ free; not used by default). A start within 1% of the bound range of a free param
 Extensions of 2026-10-19 (off by default): --new-job on (wife state 'new job', parameter xi_nj), --her-sep on
 (separation hazard while she is UI-entitled after her displacement, sigmaJw; --her-sep-tie on: = his sigma_J(r)); their
 parameters (params.LATE_PARAMS) follow the extras in every theta vector; their targets (IGE/66,
-IGE/output/paperA_targets_ext.csv) enter when the flag is on or with --ext-targets new_job her_sep.
+output/paperA_targets_ext.csv) enter when the flag is on or with --ext-targets new_job her_sep.
 Size: --size (params.SIZES; default params.DEFAULT_SIZE = k_s2_era1_a20: 7 human capital levels, workplace match s = 1,
 2 merged, the 1997-2008 schedule in estimation, 20 asset points). With s = 1, 2 merged, pi_c2 does not enter the model
 and is held fixed (not free). Inputs (inputs/*.json, the entry couples) are re-read when each process starts.
 Outputs contain aggregate moments only (never PSID individual records).
 
 Local runs (8 workers x 2 threads):
-  .venv/Scripts/python.exe IGE/paperA_model/estimate.py polish --workers 7 --threads 2 --iters 15
-  .venv/Scripts/python.exe IGE/paperA_model/estimate.py run --workers 8 --threads 2 --maxfevals 3500 \
+  .venv/Scripts/python.exe paperA_model/estimate.py polish --workers 7 --threads 2 --iters 15
+  .venv/Scripts/python.exe paperA_model/estimate.py run --workers 8 --threads 2 --maxfevals 3500 \
         --start <polish dir>/best.json --cma-stds-from <polish dir>/jacobian.npz --sigma0 0.2 --tolfun 30
-  .venv/Scripts/python.exe IGE/paperA_model/estimate.py run --resume IGE/paperA_model/results/runs/<run dir>
+  .venv/Scripts/python.exe paperA_model/estimate.py run --resume paperA_model/results/runs/<run dir>
 """
 from __future__ import annotations
 
@@ -100,7 +100,7 @@ EXT_DEFAULTS = {"cps_persist": True, "cps_classif": False, "cs_memory": False, "
 # Extensions pre-built 2026-10-19 (README 'Extensions 2026-10-19'), off by default: new_job = a wife labor state
 # 'employed on a job started less than ~a year ago' with an extra exit hazard xi_nj; her_sep = separation hazard
 # sigma_Jw while she is UI-entitled after her own displacement (her_sep_tie on: sigma_Jw = his sigma_J(r)). Their
-# targets (IGE/output/paperA_targets_ext.csv, IGE/66) enter only when the extension is on or --ext-targets names it.
+# targets (output/paperA_targets_ext.csv, IGE/66) enter only when the extension is on or --ext-targets names it.
 EXT_TARGETS = ("new_job", "her_sep")
 # CPS entry / exit definitions in the objective: cps_persist on (default since 2026-10-19) = the persistent flows
 # (cps_entry_p_*, cps_wife_exit_p; one-month reversals filtered identically in data and model); off = the one-month
@@ -199,7 +199,7 @@ def borrowing_wedge():
     """Monthly borrowing wedge (borrowing rate - saving rate) from inputs/borrowing_wedge.json (borrowing_wedge.py)."""
     p = HERE / "inputs" / "borrowing_wedge.json"
     if not p.exists():
-        raise FileNotFoundError(f"{p} missing: run IGE/paperA_model/borrowing_wedge.py")
+        raise FileNotFoundError(f"{p} missing: run paperA_model/borrowing_wedge.py")
     return float(json.loads(p.read_text())["wedge_monthly"])
 
 

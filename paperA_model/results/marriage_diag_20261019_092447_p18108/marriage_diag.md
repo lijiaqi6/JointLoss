@@ -77,7 +77,7 @@ Q: 11,726.0 at the start, 8,650.6 with separation off (change -3,075.4; noise fl
 
 ## (B) Still with baseline wife after his displacement (event study, reference e = -2)
 
-Model: the targets' stacked panel (panels.units / stack_rows, events 1984-2021, outcome years to 2021), yearly coefficients with unit and cell effects. PSID: IGE/output/father_displacement.csv (IGE/19). Years 1-3: their mean is the target (psid_es_bw_present_13_B/W, IGE/60's window); years 4-6 reported only.
+Model: the targets' stacked panel (panels.units / stack_rows, events 1984-2021, outcome years to 2021), yearly coefficients with unit and cell effects. PSID: output/father_displacement.csv (IGE/19). Years 1-3: their mean is the target (psid_es_bw_present_13_B/W, IGE/60's window); years 4-6 reported only.
 
 | e | Pooled model | Pooled PSID | Black model | Black PSID | White model | White PSID |
 |---:|---:|---:|---:|---:|---:|---:|

@@ -4,7 +4,7 @@
   B. the (p_H, m_H) ridge p(1-p)(m-1)^2 = (kappa-1)(1+p(m-1))^2 with kappa - 1 = 2.5965 (CPS leads/lags) at p_H in
      {0.03, 0.05, 0.10, 0.15, 0.20, 0.25}, and m_H in {4, 8, 12.6, 18} at p_H = 0.10; in both, delta_w and delta_h are
      rescaled by E m(start) / E m(new) so that the base hazards (E m) delta stay at the start's values; pi_c unchanged.
-Run from the repo root: .venv/Scripts/python.exe IGE/paperA_model/results/diagnostics_20261018/profile_sigma_ridge.py
+Run from the repo root: .venv/Scripts/python.exe paperA_model/results/diagnostics_20261018/profile_sigma_ridge.py
 Writes moments_by_variant.csv, q_by_block_by_variant.csv, variants.csv here (aggregate numbers only)."""
 import sys
 from pathlib import Path

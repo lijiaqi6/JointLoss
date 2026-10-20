@@ -1,0 +1,6 @@
+run ige_test_20261018_124905
+job 11855695
+code 22291910875116948e63fa4cc53d2a1496dfc8e1
+mode test
+status 0
+cores 32 workers 30 popsize 30 maxfevals 15000,8000,8000,8000

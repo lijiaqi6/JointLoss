@@ -251,7 +251,7 @@ Same units as section 2 (wife employed at baseline, observed before and after), 
 
 ## 3. Demand-side test: is the wife's response weaker when her own market is also hit?
 
-Stacked difference-in-differences of 19 with event-time bins (e = -3, -1, 0, +1..+3, +4..+6; reference e = -2), wife present at baseline, outcomes for the baseline wife while she is in the family unit. For a moderator M measured in the event year: bin x M for all units and displaced x bin x M; M is centred at the displaced families' mean and, if continuous, divided by its s.d. among them. Rows: 'Displaced' = response at e = +1..+3 at the average M; 'Displaced x M' = change in that response per s.d. of M (for (a): wife in his sector vs not); 'pre' rows = mean of the e = -3 and e = -1 coefficients (a pre-trend check). A demand-side constraint predicts a smaller response when her sector shrinks or local unemployment rises: Displaced x M > 0 for (b), (b'), (c) and < 0 for (c'), and < 0 for (a) if the same sector is hit. 'Wife unemployed, looking' = status 3 at the next interview (wives not asked 1968-75, 1977, 1978). IGE/output/wife_search.csv (21.WifeSearch.py) was found and is summarised in section 3f.
+Stacked difference-in-differences of 19 with event-time bins (e = -3, -1, 0, +1..+3, +4..+6; reference e = -2), wife present at baseline, outcomes for the baseline wife while she is in the family unit. For a moderator M measured in the event year: bin x M for all units and displaced x bin x M; M is centred at the displaced families' mean and, if continuous, divided by its s.d. among them. Rows: 'Displaced' = response at e = +1..+3 at the average M; 'Displaced x M' = change in that response per s.d. of M (for (a): wife in his sector vs not); 'pre' rows = mean of the e = -3 and e = -1 coefficients (a pre-trend check). A demand-side constraint predicts a smaller response when her sector shrinks or local unemployment rises: Displaced x M > 0 for (b), (b'), (c) and < 0 for (c'), and < 0 for (a) if the same sector is hit. 'Wife unemployed, looking' = status 3 at the next interview (wives not asked 1968-75, 1977, 1978). output/wife_search.csv (21.WifeSearch.py) was found and is summarised in section 3f.
 
 ### 3a. (a) Wife worked in the husband's sector
 
@@ -589,7 +589,7 @@ Stacked difference-in-differences of 19 with event-time bins (e = -3, -1, 0, +1.
 | Displaced: mean of M / s.d. | 0.182 / 1.449 | 0.182 / 1.449 | 0.182 / 1.449 |
 | Fixed effects | father x stack, calendar year x stack | father x stack, calendar year x stack | father x stack, calendar year x stack |
 
-### 3f. Wife's search (read from IGE/output/wife_search.csv, 21.WifeSearch.py; not re-estimated)
+### 3f. Wife's search (read from output/wife_search.csv, 21.WifeSearch.py; not re-estimated)
 
 Same stacked design; status outcomes at the spring interview (reference = interview a year before), calendar-year unemployment as in 19. Copied from that file for comparison.
 

@@ -1,0 +1,7 @@
+run ige_full_20261018_215612_j11860456
+job 11860456
+code de7210b4062317e8f69a5f551bbfe98ab229be08
+mode full
+status 0
+cores 32 workers 30 popsize 30 maxfevals 12000,12000,12000,12000,12000,12000,12000,12000
+settings IGE_FIX=muG,du IGE_MODELS=E IGE_POLISH=3000 IGE_SET=gx=0.008,dgx=-0.008 IGE_START=hpc_runs/ige_full_20261018_200456_j11859362/estimates.json:D IGE_STEPS=age,rehire,xacc 

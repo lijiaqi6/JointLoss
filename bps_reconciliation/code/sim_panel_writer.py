@@ -1,6 +1,6 @@
 r"""Simulated monthly couple panel -> PSID-shaped biennial household-year panel in the layout of BPS's psid_cons.dta
-(IGE/bps_reconciliation, 2026-10-18). The output is the input of bps_on_sim.do (BPS (2016)'s own estimator).
-Documentation: IGE/bps_reconciliation/HARNESS.md.
+(bps_reconciliation, 2026-10-18). The output is the input of bps_on_sim.do (BPS (2016)'s own estimator).
+Documentation: bps_reconciliation/HARNESS.md.
 
 Main entry points
     to_bps_panel(monthly, ...)          -> DataFrame, one row per head x PSID wave, BPS variable names

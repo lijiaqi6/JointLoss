@@ -1,18 +1,18 @@
 r"""The separated wife's state in the PSID: child support, remarriage, work and program receipt (2026-10-20).
 
-WP3 of IGE/proposals/fable_10h_plan_paperA.md. The model's separated state V^S has no child support and no remarriage
+WP3 of proposals/fable_10h_plan_paperA.md. The model's separated state V^S has no child support and no remarriage
 and is the terminal state of 67% of Black and 41% of White entry couples; the marriage note's Diagnostic B
-(IGE/proposals/fable_marriage_divorce_paperA.md, Section 5) asks for two calibrated inputs with zero parameters:
+(proposals/fable_marriage_divorce_paperA.md, Section 5) asks for two calibrated inputs with zero parameters:
 monthly child support by race x child count, and an annual remarriage hazard by race (treated as the end of the
 record). This script supplies both, and the separated mothers' employment, hours and AFDC/TANF / food stamp receipt
-as untargeted validation rows. Nothing in IGE/paperA_model, IGE/60-62 or IGE/66 is touched.
+as untargeted validation rows. Nothing in paperA_model, IGE/60-62 or IGE/66 is touched.
 
-Reads (read only): IGE/data/psid_person_year.pkl (1.PSID.py), psid_displacement.pkl (19), the raw PSID family files
+Reads (read only): data/psid_person_year.pkl (1.PSID.py), psid_displacement.pkl (19), the raw PSID family files
 (Dropbox/PSID/Family, child-support items below; hours / AFDC / food stamps through 9.ChildExposure.family()), the
-marriage history Dropbox/PSID/Others/mh85_23. Caches (person level, git-ignored IGE/data/): sepmoth_cs_items.pkl,
+marriage history Dropbox/PSID/Others/mh85_23. Caches (person level, git-ignored data/): sepmoth_cs_items.pkl,
 sepmoth_fam9.pkl. Writes (aggregates only):
-  IGE/output/separated_mothers.csv   every number (table, sample, outcome, stat, value, se, p, n, clusters)
-  IGE/output/separated_mothers.md    tables
+  output/separated_mothers.csv   every number (table, sample, outcome, stat, value, se, p, n, clusters)
+  output/separated_mothers.md    tables
 
 SAMPLE. Women of the SRC + SEO samples whose marriage history (MH85_23; MH4 = 2) has a marriage that ended in
 separation or divorce (MH12 = 5 / 4) with separation year s = MH16 (else the divorce year MH14), s in 1984-2020;
@@ -350,7 +350,7 @@ def main():
     mm["emp"] = (mm["hrs"] > 0).astype(float).where(mm["hrs"].notna())
 
     md = ["# The separated wife's state in the PSID: child support, remarriage, work, program receipt", "",
-          "Built by `IGE/76.SeparatedMothers.py` (2026-10-20; WP3 of `IGE/proposals/fable_10h_plan_paperA.md`); "
+          "Built by `IGE/76.SeparatedMothers.py` (2026-10-20; WP3 of `proposals/fable_10h_plan_paperA.md`); "
           "definitions in its docstring. Mothers whose marriage ended (marital history: separation, else divorce "
           f"year s) in {S_LO}-{S_HI}, observed as that husband's wife at an interview in s-3..s+1 with a child "
           "0-17 in the family unit, aged 25-59 at s, Black / White (head's race). Event time k = income year - s "

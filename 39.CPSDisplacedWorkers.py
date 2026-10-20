@@ -7,7 +7,7 @@ Supplement (DWS)? Referee plan item 4 (proposals/fable_review_paperA.md).
 DATA (IPUMS CPS extract through the IPUMS API; key read from the environment variable IPUMS_API_KEY, never printed)
   21 supplements: January 1984, 1986, 1988, 1990, 1992; February 1994, 1996, 1998, 2000; January 2002-2024 (biennial).
   (IPUMS also lists January 2026 and February 2002, which carry no DW variables.) Case selection MARST = 1 (married,
-  spouse present). Raw files (csv.gz + codebooks, unchanged) in IGE/data/ext/cps_dws/ (git-ignored). Variables: VARS.
+  spouse present). Raw files (csv.gz + codebooks, unchanged) in data/ext/cps_dws/ (git-ignored). Variables: VARS.
   DW variables used
     DWSTAT     displaced worker status (IPUMS): 1984-1992 = lost a job in the last FIVE years for any reason
                (plant closed/moved, insufficient work, position/shift abolished, seasonal job ended, self-operated
@@ -56,7 +56,7 @@ ESTIMATES
      employment of each spouse, neither spouse employed.
   8. Comparison with the PSID (25) and the CPS monthly panel (30).
 Associations, not causal effects.
-Writes IGE/output/cps_dws_joint_loss.csv (every estimate), .md (tables), .png (figure).
+Writes output/cps_dws_joint_loss.csv (every estimate), .md (tables), .png (figure).
 """
 import json
 import os
@@ -698,7 +698,7 @@ def main():
     L.append("# Joint displacement of spouses: CPS Displaced Worker Supplement 1984-2024\n")
     L.append("Script `IGE/39.CPSDisplacedWorkers.py` (2026-10-17). Data: IPUMS CPS extract of the 21 biennial "
              "Displaced Worker Supplements (January 1984-1992, February 1994-2000, January 2002-2024), persons married "
-             "with spouse present; raw files in `IGE/data/ext/cps_dws/`. Stars: \\*\\*\\* p<0.01, \\*\\* p<0.05, "
+             "with spouse present; raw files in `data/ext/cps_dws/`. Stars: \\*\\*\\* p<0.01, \\*\\* p<0.05, "
              "\\* p<0.1; cells are estimate (s.e.; p). Associations, not causal effects.\n")
     L.append("**Measure.** *Displaced* = lost a wage job in the last three calendar years because the plant or company "
              "closed or moved, there was insufficient work, or the position or shift was abolished (the BLS "
@@ -848,7 +848,7 @@ def main():
         ("Race", "B +0.088***, W +0.077***", "H x Black +0.0055 (p=0.309)",
          f"H x Black {cell(diffs['Black - White non-Hispanic']['disp'][0], 'hxg')}"),
     ]))
-    L.append("\nPSID and CPS-monthly numbers from `IGE/EVIDENCE.md` rows 3.16, 3.20, 3.21, 3.24, 3.27, 3.28.\n")
+    L.append("\nPSID and CPS-monthly numbers from `EVIDENCE.md` rows 3.16, 3.20, 3.21, 3.24, 3.27, 3.28.\n")
     (OUT / "cps_dws_joint_loss.md").write_text("\n".join(L), encoding="utf-8")
     print("wrote", OUT / "cps_dws_joint_loss.md", flush=True)
 

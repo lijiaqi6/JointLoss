@@ -1,0 +1,30 @@
+\begin{table}[!htbp]
+\centering
+\caption{Within the same son: the earnings profile and the father's childhood layoffs (PSID)}
+\label{tab:layoff_fe}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}White\end{tabular} & \begin{tabular}[b]{@{}c@{}}White,\\with timing\end{tabular} & \begin{tabular}[b]{@{}c@{}}Black\end{tabular} & \begin{tabular}[b]{@{}c@{}}Black,\\with timing\end{tabular} & \begin{tabular}[b]{@{}c@{}}All\end{tabular} & \begin{tabular}[b]{@{}c@{}}All,\\with timing\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+Layoff share, ages 13--19, $\times$ age & $-0.229^{**}$ & $-0.338^{**}$ & $-0.306^{**}$ & $-0.068$ & $-0.236^{**}$ & $-0.322^{***}$ \\
+ & (0.113) & (0.135) & (0.126) & (0.186) & (0.103) & (0.124) \\
+Closure share, ages 13--19, $\times$ age & $-0.007$ & $0.042$ & $0.009$ & $0.395^{*}$ & $-0.010$ & $0.045$ \\
+ & (0.128) & (0.119) & (0.191) & (0.219) & (0.119) & (0.116) \\
+Layoff share, ages 6--12, $\times$ age &  & $-0.097$ &  & $-0.021$ &  & $-0.081$ \\
+ &  & (0.117) &  & (0.226) &  & (0.109) \\
+Layoff share, ages 20--26, $\times$ age &  & $0.061$ &  & $0.073$ &  & $0.037$ \\
+ &  & (0.105) &  & (0.226) &  & (0.102) \\
+Closure share, ages 6--12, $\times$ age &  & $0.101$ &  & $-0.307$ &  & $0.054$ \\
+ &  & (0.132) &  & (0.216) &  & (0.125) \\
+Closure share, ages 20--26, $\times$ age &  & $-0.017$ &  & $-0.369^{*}$ &  & $-0.045$ \\
+ &  & (0.177) &  & (0.223) &  & (0.167) \\
+Ln parental income $\times$ age & $0.060$ & $0.054$ & $-0.011$ & $-0.069$ & $0.033$ & $0.051$ \\
+ & (0.041) & (0.057) & (0.048) & (0.099) & (0.033) & (0.054) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Son-years 25--55, ln annual earnings (valid years) with son fixed effects; single-age dummies; every component of Table~\ref{tab:passed_on}, panel A, ln parental income, the family-structure flags and five-year cohort dummies, each interacted with (age $-$ 40)/10. A coefficient is the change per ten years of age in the same son's ln earnings per unit share (one layoff year = one seventh). 'With timing' adds the father's layoff and closure shares at the son's ages 6--12 and 20--26 (his own head-years in the PSID) $\times$ age. PSID weights; standard errors clustered by 1968 family. Source: \texttt{IGE/88.LayoffCostByAge.py}; table built by \texttt{IGE/90.PaperBRaceNeutralTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}

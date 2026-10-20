@@ -29,7 +29,7 @@ Scoring (by race and workplace match, and overall; aggregate numbers only):
     needs the hook below).
 
 Run (from the repository root; counterfactuals are meant for the full size, the smoke test uses the default size):
-  .venv/Scripts/python.exe IGE/paperA_model/counterfactuals.py --start <best.json | run dir> [--indep <best.json>]
+  .venv/Scripts/python.exe paperA_model/counterfactuals.py --start <best.json | run dir> [--indep <best.json>]
         [--size full] [--scenarios base i_common_off ...] [--threads 4]
 Output: results/counterfactuals_<stamp>/scores.csv (long: model, scenario, group, measure, value),
 counterfactuals.json, counterfactuals.md (main table: scenario x measure, overall and by race).

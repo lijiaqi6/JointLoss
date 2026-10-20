@@ -1,0 +1,58 @@
+\section{What Opens: Wages, Not Hours, Shocks or Marriage}\label{sec:contains}
+
+Family income at a given age is the product of a household's composition, its members' hours and their wages, and it
+is hit by transitory shocks. Each could produce a racial gap in persistence that opens with age. This section tests
+them in turn. The analyses that need the father's own wage and hours use father-present sons
+(Section~\ref{sec:data}); everything here is accounting, not a causal decomposition.
+
+\paragraph{Wages, not hours.} Log earnings are the sum of the log hourly wage and log annual hours, so the elasticity of
+sons' earnings with respect to fathers' earnings splits exactly into a part carried by the son's wage and a part
+carried by his hours. In the age-interacted design at 40 the earnings elasticity is 0.220 for Black and 0.389 for
+White sons, and the son's wage carries 0.210 and 0.378 of it, his hours 0.010 and 0.012 (Appendix
+Table~\ref{tab:pricequantity}). The wage is also where the gap opens (Table~\ref{tab:wageage}). At 25--34 the elasticity
+of sons' earnings with respect to fathers' earnings is 0.259 for Black and 0.258 for White sons (White $-$ Black
+$-0.002$, s.e.\ 0.050), and at 35--44 it is 0.260 and 0.384 (0.123$^{*}$, s.e.\ 0.070). The gradient of the son's log
+wage in parental income rises from 0.255 at 25--34 to 0.403 at 35--44 for White sons and stays at 0.161--0.163 for
+Black sons, so the White $-$ Black gap in it grows from 0.094$^{***}$ to 0.240$^{***}$. The hours gradient is larger for
+Black sons at 25--34 (White $-$ Black $-0.058^{***}$), so hours raise the Black elasticity and partly hide the wage gap
+at young ages.\footnote{The PSID wage is annual earnings over annual hours, so the split could inherit division bias if
+hours were measured with more error for Black sons; the NLSY79 hourly rate of pay gives the same direction
+(Section~\ref{sec:careers}). Code: \texttt{IGE/24.IGEDecomposition.py}, Sections 1 and 1c.}
+
+\input{tab_wage_age}
+
+\paragraph{Not shocks or instability.} Thirty-seven percent of Black sons' years at 25--55, against 19 percent of White
+sons', involve displacement or unemployment. Instability nonetheless does not produce the divergence. Its gradient in
+parental income is the same for the two races at every age (equality across bands, $p=0.524$;
+Appendix Table~\ref{tab:mechtests}); the earnings gap computed over clean years opens with age exactly as over all years
+(0.196$^{***}$ against 0.193$^{***}$); and purging shock years from both generations moves the gap by 0.002 (0.042),
+removing reduced-hours years as well by 0.018 (0.044).\footnote{Appendix Tables~\ref{tab:instability} and
+\ref{tab:purging}; the hours share of the father's earnings variance, which a noisier father-side measure would
+inflate, accounts for about 0.02 of the gap (Table~\ref{tab:decomposition}). Code: \texttt{IGE/24.IGEDecomposition.py}.}
+
+\paragraph{Not marriage, for sons; husbands, for daughters.} For sons the family-income and earnings elasticities are
+nearly the same in both races (gaps at 40 of 0.204$^{***}$ and 0.244$^{***}$), and own earnings carry the whole
+family-income gap and its rise (0.221$^{***}$); being partnered rises equally with parental income for Black and White
+sons after 35, and controlling for it leaves the gap unchanged (Appendix Table~\ref{tab:mechtests}). Later marriage of White
+sons of richer parents holds down their family income at 25--29, which is one reason the family-income gap starts at
+zero. For daughters the divergence is in family income and not in their own earnings (gaps at 40 of 0.162$^{***}$ and
+0.035), and the channel is the husband: the elasticity of the husband's earnings is 0.370$^{***}$ for White and
+0.171$^{***}$ for Black daughters, and the spouse term accounts for three quarters of the daughters' family-income gap
+at 40 and for 0.175$^{***}$ of its rise with age (Appendix Table~\ref{tab:incomechannels}).\footnote{Exact log split of family
+income into own earnings, the spouse and other income; standard errors clustered by 1968 family. Assortative mating is
+strong: the elasticity of a daughter's husband's earnings, 0.362$^{***}$, exceeds that of her own, 0.301$^{***}$
+\citep[as in][]{chadwick2002intergenerational}. The daughters' divergence rests on the SEO sample
+(Section~\ref{sec:ageprofile}). Code: \texttt{IGE/34.IncomeVsEarningsIGE.py}.} The racial divergence that sons show in
+their own wages, daughters show in their husbands'.
+
+
+\paragraph{Parental income concept.} With parents' combined labor income instead of total family income as the
+parental measure, the sons' earnings result holds (an opening of 0.134$^{***}$) while the family-income result weakens
+to 0.051 (0.045).\footnote{\texttt{output/age\_profile\_robustness.md}, Section 3; half of the drop is the smaller
+sample with parental labor income. Code: \texttt{IGE/33.AgeProfileRobustness.py}.} Transfers and other non-labor
+income in the parental measure matter for the Black family-income profile; a model must take a stand on whether they
+buy the resources that shape careers, and in Section~\ref{sec:model} parental income enters through schooling, access
+and an early-career transfer only where the data require it.
+
+The divergence is a divergence in the transmission of wages. The next question is where in the career this wage
+growth takes place.

@@ -4,14 +4,14 @@ Question (PI): where wives' employment does not rise after the husband's displac
 without finding it (a constraint: the search friction binds) or not looking (a preference: norms, childcare, choice)?
 By race and by the age of the youngest child.
 
-Reads (read only): IGE/data/psid_person_year.pkl, IGE/data/psid_displacement.pkl (events from
+Reads (read only): data/psid_person_year.pkl, data/psid_displacement.pkl (events from
 19.FatherDisplacement.py), the raw PSID family files and the 2023 individual file in Dropbox/PSID, and
 NLSY79/data/women79.pkl + family79.pkl (through NLSY79/common.py). Imports (does not edit) 19.FatherDisplacement.py
 for the men's panel, the stacked design (stacks) and the fixed-effect demeaning. Writes
-  IGE/output/wife_search.csv     every estimate (dataset, table, design, sample, subsample, outcome, term, coef, se,
+  output/wife_search.csv     every estimate (dataset, table, design, sample, subsample, outcome, term, coef, se,
                                  p, n, treated, controls, clusters, pre_mean)
-  IGE/output/wife_search.md      tables
-  IGE/output/wife_search_es.png  event-study figure
+  output/wife_search.md      tables
+  output/wife_search_es.png  event-study figure
 
 1. PSID. Events, sample and design exactly as in 19 (main definition: plant closed / moved or laid off / fired; first
    displacement of a male head with a child 0-17 and positive hours at baseline; clean controls not displaced up to
@@ -83,6 +83,8 @@ import pandas as pd
 from scipy import stats
 
 from common import DATA, OUT, HERE, stars
+import os
+NLSY79_DIR = Path(os.environ.get("NLSY79_DIR", r"G:\My Drive\Selection vs risk\NLSY79"))   # Selection-vs-risk/NLSY79 (helpers + extracts), read only
 
 warnings.simplefilter("ignore", FutureWarning)
 warnings.simplefilter("ignore", RuntimeWarning)
@@ -97,7 +99,7 @@ def _load(name, path):
 
 m19 = _load("fd19", HERE / "19.FatherDisplacement.py")
 psid1, psid9 = m19.psid1, m19.psid9
-NC = _load("nlsy_common", HERE.parent / "NLSY79" / "common.py")
+NC = _load("nlsy_common", NLSY79_DIR / "common.py")
 
 # ---------------------------------------------------------------- PSID variables
 ST = {1979: "ER30293", 1980: "ER30323", 1981: "ER30353", 1982: "ER30382", 1983: "ER30411", 1984: "ER30441",

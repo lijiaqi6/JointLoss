@@ -1,10 +1,10 @@
 # Paper A model: analytic pre-estimation, identification map, targets and build plan (2026-10-18)
 
-Companion to the signed-off model document (`IGE/paperA_joint_loss/model_document.tex`, decisions D1-D18) and to the
-model section now written into the paper (`IGE/paperA_joint_loss/sec7_model.tex`). Read, nothing run: the model
-document, Paper A (sec1-sec8, appB-appD), the four memos in this folder, the BPS harness (`IGE/bps_reconciliation/HARNESS.md`),
+Companion to the signed-off model document (`paperA_joint_loss/model_document.tex`, decisions D1-D18) and to the
+model section now written into the paper (`paperA_joint_loss/sec7_model.tex`). Read, nothing run: the model
+document, Paper A (sec1-sec8, appB-appD), the four memos in this folder, the BPS harness (`bps_reconciliation/HARNESS.md`),
 `estimation/smm.py` (CMA-ES engine, `SafePool`, `cmd_jacobian`, `cmd_profile`, recovery), `scripts/hpc_job.py`,
-`IGE/12b.UIGenerosity.py` (writes `IGE/data/ui_generosity.csv`), and the output files of IGE/19, 25, 30, 37, 38, 39, 40, 50.
+`IGE/12b.UIGenerosity.py` (writes `data/ui_generosity.csv`), and the output files of IGE/19, 25, 30, 37, 38, 39, 40, 50.
 Numbers quoted are Paper A's data moments; where a number is an illustration of a formula and not yet computed on the
 target's window it is marked "illustrative". Terminology: search friction (never offer rate), human capital level /
 accumulation / depreciation.
@@ -102,7 +102,7 @@ Two reasons the mapping is approximate, and the coded correction:
 
    **Coded correction (once, before the SMM, D6/D7):** simulate the model at the analytic start values with
    (p^c, p^eps, sigma_nu, rho_nu) at the closed forms above; write the BPS-shaped panel with the measurement-error
-   mixture (`IGE/bps_reconciliation/code/sim_panel_writer.py`); run BPS's estimator (`bps_on_sim.do`); read back
+   mixture (`bps_reconciliation/code/sim_panel_writer.py`); run BPS's estimator (`bps_on_sim.do`); read back
    the six Table 3 numbers (hat Var_perm,j, hat Cov_perm, hat Var_trans,j, hat Cov_trans). Then set
 
        sigma_nu,j^2 (new) = max{ 0.5 sigma_nu,j^2(BPS),  2 sigma_nu,j^2(BPS) - hat Var_trans,j },
@@ -123,8 +123,8 @@ reduction above. A separated wife keeps her own component (marginal unchanged).
 
 All in 2000 dollars; for each era the parameter is the mean over the era's calendar years of the deflated statutory
 value (CPI-U-RS), so that a stationary schedule per era is a coded average, not a chosen year. New script
-`IGE/61.PolicySchedules.py` writes `IGE/paperA_model/inputs/schedules_<era>.json` and a check table
-(`IGE/output/policy_schedules.md`: each parameter by year and the era mean). `IGE/12a.PolicyCalendar.py` (a state x year
+`IGE/61.PolicySchedules.py` writes `paperA_model/inputs/schedules_<era>.json` and a check table
+(`output/policy_schedules.md`: each parameter by year and the era mean). `IGE/12a.PolicyCalendar.py` (a state x year
 calendar of leave and related policies, 1980-2024) is read first for anything reusable (download cache, deflators);
 nothing in it is changed.
 
@@ -133,10 +133,10 @@ nothing in it is changed.
 | Tax (chi_e, mu_e) | OLS of ln(Y^a - T(Y^a)) on ln Y^a over a grid of Y^a from $5,000 to $300,000 (2000 dollars), married filing jointly, two children, wage income only, federal income tax + employee payroll tax (no EITC, no credits other than the child tax credit from 1998), for each year of the era, then the era mean of the fitted (chi, mu). T from NBER TAXSIM (taxsim35, `taxsim` Python package or the web API; CENSUS/IPUMS keys not needed). | NBER TAXSIM | approximate (BPS's log-linear form; annualised current monthly income in place of annual income; one family size) |
 | EITC (eps_in, E_bar, eps_out, Y_out) by n in {0,1,2,3+} | statutory parameters by year, married filers (phase-out start with the marriage-penalty relief from 2002), deflated, era mean | IRS Rev. Proc. tables; Tax Policy Center "EITC parameters 1975-present" | exact within an era up to the era averaging (era 1 spans the 1993 expansion: the era mean understates the 1994-96 credit and overstates 1984-93; reported) |
 | SNAP A_e(n_hh), D_e(n_hh), gross-income test 130% of poverty, asset limit | USDA FNS maximum allotments and standard deduction by fiscal year and household size (48 states); HHS poverty guidelines by year and size; asset limit $2,000 (nominal) deflated; era means | USDA FNS COLA tables; HHS | exact up to era averaging; the 20% earned-income deduction and 30% benefit reduction are statutory constants |
-| UI cap b_bar_e | mean over states (weighted by the CPS couples' state distribution, 1994-2023) of max_wba_2000 x 52/12, era mean | `IGE/data/ui_generosity.csv` (`IGE/12b.UIGenerosity.py`), column `max_wba_2000` | exact as a national mean; approximate in that the model has no state |
+| UI cap b_bar_e | mean over states (weighted by the CPS couples' state distribution, 1994-2023) of max_wba_2000 x 52/12, era mean | `data/ui_generosity.csv` (`IGE/12b.UIGenerosity.py`), column `max_wba_2000` | exact as a national mean; approximate in that the model has no state |
 | UI replacement rho_UI | 0.5 | statute (about half of the weekly wage up to the cap) | exact |
 | UI expiry | 1/6 a month | D-geometric (Bacher et al.); 26 weeks | approximate by design (the model document's footnote) |
-| UI take-up q_UI | share of displaced husbands who received UI: 0.523 (DWS, displaced husbands with a known year, mean when the wife is not displaced; `IGE/output/cps_dws_joint_loss.md`, Section 7) | `IGE/39.CPSDisplacedWorkers.py` (add the wife's share; if the two differ by more than 10 points, q_UI by spouse: PI decision) | approximate (receipt by the survey date, any time since the displacement) |
+| UI take-up q_UI | share of displaced husbands who received UI: 0.523 (DWS, displaced husbands with a known year, mean when the wife is not displaced; `output/cps_dws_joint_loss.md`, Section 7) | `IGE/39.CPSDisplacedWorkers.py` (add the wife's share; if the two differ by more than 10 points, q_UI by spouse: PI decision) | approximate (receipt by the survey date, any time since the displacement) |
 | c_min | AFDC/TANF maximum, family of three, era mean | as in 1.1 | exact |
 
 ### 1.4 Displacement risk: the algebra, what it pins exactly, and why the parameters stay in the SMM
@@ -205,7 +205,7 @@ as an over-identification check: P(both displaced in the same year) ~ 12 pi_c(0)
 0.0041 against P(h in year) ~ 0.048, so P(w | h) - P(w | not h) ~ 0.087 - 0.027 ~ 0.06, against the PSID's 0.063
 (0.102 - 0.039), of which the common shock contributes about 0.024 and the type 0.036 (PSID decomposition: 0.033
 contemporaneous, 0.020 permanent). The closed forms are therefore consistent with the annual facts to first order, and
-they are the SMM start values (`inputs/start_analytic.json`, written by `IGE/paperA_model/analytic_start.py` from the
+they are the SMM start values (`inputs/start_analytic.json`, written by `paperA_model/analytic_start.py` from the
 IGE/60 targets file, so that the mapping is coded).
 
 **Why the nine displacement parameters stay inside the SMM (exact vs approximate):**
@@ -346,7 +346,7 @@ decided by a named Jacobian / recovery criterion below, applied once, before the
 
 ### 2.4 Numerical Jacobian and local identification protocol
 
-Adapt `estimation/smm.py: cmd_jacobian` (read-only import of its logic into `IGE/paperA_model/jacobian.py`; the
+Adapt `estimation/smm.py: cmd_jacobian` (read-only import of its logic into `paperA_model/jacobian.py`; the
 engine's parameter list is the lifecycle model's, so the function is re-implemented over Paper A's names):
 
 - At the analytic start values theta_0, move each parameter up and down by h = 5% of its bound range (two-sided),
@@ -429,9 +429,9 @@ variance (E(dc_t dc_{t-2}) = -0.0332) added to simulated consumption before the 
 
 ### 4.1 Code location and rules
 
-New self-contained folder `IGE/paperA_model/` (nothing in `model/` or `estimation/` is touched; both are used by
+New self-contained folder `paperA_model/` (nothing in `model/` or `estimation/` is touched; both are used by
 running HPC jobs). Read-only imports allowed: `estimation.smm.SafePool` (crash-tolerant worker pool) and the logistic
-transform idea (three lines, copied), `IGE/bps_reconciliation/code/sim_panel_writer.py` (BPS shape), the moment
+transform idea (three lines, copied), `bps_reconciliation/code/sim_panel_writer.py` (BPS shape), the moment
 functions of `IGE/60.PaperATargets.py`. Proposed files:
 
 | File | Role |
@@ -445,7 +445,7 @@ functions of `IGE/60.PaperATargets.py`. Proposed files:
 | `estimate.py` | CLI: `evaluate`, `jacobian`, `profile`, `run` (CMA-ES, resume, pseudo-data recovery), `se` (sandwich (G'WG)^-1 G'W Omega W G (G'WG)^-1 with G the central-difference Jacobian at the estimate and Omega the bootstrap covariance of the targets plus the simulation covariance across re-simulation seeds: the `estimation/standard_errors.py` pattern re-implemented) |
 | `checks.py` | staged checks (1)-(7) of the model document, timing and peak-memory report |
 | `counterfactuals.py`, `children.py`, `validate.py`, `bps_test.py` | stage 7 |
-| `hpc_job_a.py` | Slurm launcher modelled on `scripts/hpc_job.py` (code snapshot by git archive, `--commit`, email, resume, push of results into `IGE/paperA_model/results/hpc_runs/`), job names `Joint-<what>`; written new, `scripts/hpc_job.py` untouched |
+| `hpc_job_a.py` | Slurm launcher modelled on `scripts/hpc_job.py` (code snapshot by git archive, `--commit`, email, resume, push of results into `paperA_model/results/hpc_runs/`), job names `Joint-<what>`; written new, `scripts/hpc_job.py` untouched |
 | `inputs/`, `results/` | fixed inputs with their derivation; run outputs (final estimates committed, run folders off Google Drive) |
 
 Rules carried into the code: all 31 parameters free in one run (`--fix` only for the restricted independent-shock
@@ -512,17 +512,17 @@ inputs):
 
     # 20-minute test (every step: inputs, reproducibility of Q at theta_0 against the PC value, 2 generations, resume)
     sbatch --job-name=Joint-test --time=00:30:00 --cpus-per-task=16 --mem=32G --mail-type=BEGIN,END,FAIL \
-           --mail-user=jiaqi.li@sheffield.ac.uk IGE/paperA_model/hpc_job_a.py --test
+           --mail-user=jiaqi.li@sheffield.ac.uk paperA_model/hpc_job_a.py --test
 
     # main model (31 parameters), analytic start, 8,000 evaluations (500 generations)
     sbatch --job-name=Joint-smm-main --time=48:00:00 --cpus-per-task=32 --mem=64G --mail-type=BEGIN,END,FAIL \
-           --mail-user=jiaqi.li@sheffield.ac.uk IGE/paperA_model/hpc_job_a.py run \
-           --start IGE/paperA_model/inputs/start_analytic.json --workers 16 --threads 2 --maxfevals 8000
+           --mail-user=jiaqi.li@sheffield.ac.uk paperA_model/hpc_job_a.py run \
+           --start paperA_model/inputs/start_analytic.json --workers 16 --threads 2 --maxfevals 8000
 
     # independent-shock model on the same targets and draws
     sbatch --job-name=Joint-smm-indep --time=48:00:00 --cpus-per-task=32 --mem=64G --mail-type=BEGIN,END,FAIL \
-           --mail-user=jiaqi.li@sheffield.ac.uk IGE/paperA_model/hpc_job_a.py run \
-           --start IGE/paperA_model/inputs/start_analytic.json --fix pi_c0=0 pi_c1=0 pi_c2=0 m_H=1 \
+           --mail-user=jiaqi.li@sheffield.ac.uk paperA_model/hpc_job_a.py run \
+           --start paperA_model/inputs/start_analytic.json --fix pi_c0=0 pi_c1=0 pi_c2=0 m_H=1 \
            --workers 16 --threads 2 --maxfevals 8000
 
     # resume (state saved every generation), standard errors, block-weighting robustness
@@ -532,7 +532,7 @@ inputs):
 
   squeue format with full names: `squeue -u $USER -o "%.10i %.20j %.8T %.10M %.6D %R"`.
   `--time` is sized from the measured evaluation time: generations x (popsize / workers) x seconds per evaluation
-  x 1.3, capped at 48 h with resume. Results come back through `--push` into `IGE/paperA_model/results/hpc_runs/`.
+  x 1.3, capped at 48 h with resume. Results come back through `--push` into `paperA_model/results/hpc_runs/`.
   Pass: Q at the HPC start equals the PC value (reproducibility step of `--test`); the main run's best Q stable over
   the last 50 generations (change < 1%); every block's contribution reported; the independent-shock model's Q and
   the difference by block.

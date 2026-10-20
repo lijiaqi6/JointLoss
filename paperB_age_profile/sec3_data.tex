@@ -1,0 +1,91 @@
+\section{Data and Measurement}\label{sec:data}
+
+\subsection{Samples}
+
+The main data are the PSID. Its core sample combines the Survey Research Center (SRC) sample, a national
+probability sample of 1968 households, and the Survey of Economic Opportunity (SEO) sample, an oversample of low-income
+households drawn in 1968 mostly in cities and in the South. The SEO is not a random sample of Black families: it is a
+sample of low-income ones, and it provides most of the Black children (217 of the Black sons in the analysis come from
+the SRC). Children are linked to the household in which they grew up and followed as adults, as heads or spouses of
+their own households, from 25 to 55. Race is the race of the parental household head. Parental income is the mean of
+the parental household's family income over the income years in which the child is 13--19, with at least three years
+\citep[as in][]{lee2009trends, palomino2018one}; for ranks it is the mean at 12--17. The children's outcomes are their
+own labor earnings and the family income of their own household. The benchmark sample has 1,995 Black and 2,758 White
+sons (17,710 and 31,182 child-years at 25--65) and 2,367 Black and 2,852 White daughters.\footnote{Yearly amounts below
+\$100 or above \$150,000 in 1967 dollars are dropped in both generations \citep{palomino2018one}. Code:
+\texttt{IGE/6.IGEMain.py} (\texttt{output/ige\_main.md}).} Within-race estimates are unweighted, which keeps the SEO
+families; pooled estimates across races use the core longitudinal weights, without which the SEO would dominate the
+pooled coefficient.\footnote{On the SRC sample alone the pooled IGE of sons' family income at 40 in 1980--2010 is
+0.483, close to the 0.47 of \citet{palomino2018one}. Code: \texttt{IGE/5.CheckPMR.py}.} The main robustness check for
+the racial comparison is the SRC sample alone, and each race weighted by its own sampling weights
+(Table~\ref{tab:gaprobust}).
+
+The children's adult years are split into six five-year bands, 25--29 to 50--55, and the 31--37 window of
+\citet{chetty2020race} is added. Among sons, the bands contain 1,662 Black and 2,506 White sons at 25--29, 1,125 and
+1,884 at 35--39, and 420 and 780 at 50--55. Older bands are observed only for earlier birth cohorts, but the
+difference is smaller than it looks: the mean birth year is 1967 at 25--29 and 1962.5 at 45--49, and sons born 1951--64
+make up between half and two thirds of every band.\footnote{\texttt{output/age\_profile\_robustness.md}, Section 0.
+Code: \texttt{IGE/33.AgeProfileRobustness.py}.} Two features of the PSID matter for the oldest cohorts. Sons born
+1951--56, a quarter to two fifths of each band, have parental income observed only at 17--19, because the survey starts
+in 1968; the oldest bands therefore carry the noisiest parental measure, which attenuates the IGE where it is highest
+and works against the age profile. And the panel loses members over time.
+
+\paragraph{Attrition.} \citet{fitzgerald1998analysis} show that PSID attrition is selective on income. Among sons
+observed at 25--29 and old enough to reach a later band, 58 percent of White and 40 percent of Black sons are observed
+at 45--49 (Appendix Table~\ref{tab:attrition}). For White sons, staying rises with parental income, by 0.139$^{***}$ per log
+point at 45--49 holding their own income at 25--29 fixed; for Black sons it does not (0.005). Selective attrition of
+this kind could in principle create an opening gap, since the White sons who remain are those from richer families. It
+does not: weighting each later band by the inverse of the predicted probability of staying changes the opening of
+the gap by $-0.012$ (0.019) for earnings and $-0.014$ (0.016) for family income (Table~\ref{tab:gaprobust}). The
+weights correct selection on parental income and on income at 25--29, not on unobserved wage growth. The NLSY79, whose
+retention is far higher, gives the bound that a low-attrition panel provides: an opening of 0.088$^{**}$ (0.045) with
+one year of parental income (Table~\ref{tab:threedata}).
+
+The NLSY79 provides a second sample: respondents born 1960--64 who lived with a parent in 1979, with parental income
+measured as the mean family income of the 1978--80 income years and adult outcomes followed to 55. The NLSY97 provides
+a third: youths born 1980--84, with parental income reported by a parent for 1996, followed to their early forties. The
+children of the NLSY79 women (NLSY79 Children and Young Adults) provide a fourth, with a multi-year parental measure:
+the mother's family income averaged over the years in which the child was 13--19, and the child's wage and salary
+income at each young-adult interview. It is a selected sample: children observed at 35--44 were born by the early
+1980s to mothers who were then 23 or younger, and fewer than 300 sons of each race are observed at those
+ages.\footnote{Code: \texttt{IGE/2.NLSY79.py}, \texttt{IGE/26.IGEByAge.py}, \texttt{IGE/29.NLSY97AgeProfile.py},
+\texttt{IGE/10.CYAOutcomes.py} and \texttt{IGE/46.AgeProfileRound2.py}. The NLSY97 parental measure is a single year
+for most youths; later years are reported by the youth and cover a selected, older subsample.}
+
+The analysis of what the IGE contains (Section~\ref{sec:contains}) needs the father's own wage and hours and is
+therefore restricted to sons whose father is the male head of their family at 16: 2,148 of 4,109 Black sons (52
+percent) and 3,962 of 4,552 White sons (87 percent). On father-present sons the family-income IGE is 0.363 for Black
+and 0.541 for White sons, against 0.268 and 0.473 on all sons.\footnote{Code: \texttt{IGE/24.IGEDecomposition.py}
+(\texttt{output/ige\_decomposition.md}, Section 0).} The father's measures are means over his valid years when the son
+is 12--18. Labor-market instability is measured by flags for displacement (plant closure, layoff or firing),
+unemployment, reduced hours (below 1,500 while attached full time) and zero hours.
+
+\subsection{Measures of persistence}
+
+\paragraph{Log IGE by age band.} Within each age band $b$, I estimate
+\begin{equation}\label{eq:ige}
+y_{it} = \beta_{b}\, \bar y^{p}_{i} + f(A_i) + \delta_{a(i,t)} + \varepsilon_{it},
+\end{equation}
+where $y_{it}$ is the log outcome of child $i$ in year $t$ at an age in band $b$, $\bar y^{p}_{i}$ is log parental
+income, $f(A_i)$ a quartic in the parent's age and $\delta_a$ single-year age dummies. All bands and both races are
+estimated jointly in one stacked, fully interacted regression with standard errors clustered by 1968 family, so that
+the change of $\beta_b$ across bands, and of the racial gap in it, can be tested. The summary statistic of the racial
+divergence is the \emph{opening} of the gap: the mean White--Black gap over the bands from 35 minus the mean gap over
+the bands below 35, on bands 25--49 unless stated (25--44 when the NLSY97 and the NLSY79 children are compared). All
+racial differences in the paper are White minus Black. I also report the age-interacted design of \citet{lee2009trends}, which interacts parental income
+with a quartic in the child's age and evaluates the IGE at every age.
+
+\paragraph{Ranks and expected income.} Following \citet{chetty2014where} and \citet{chetty2020race}, the child's
+band-mean family income is ranked within birth year and band, and parental income within the child's birth year,
+among all children in the file; I also rank both generations within race. The dollar-weighted elasticity of
+\citet{mitnik2020intergenerational} is estimated by Poisson pseudo-maximum likelihood on the income level, which keeps
+years of zero earnings.
+
+\paragraph{Reliability.} A single year of parental income measures permanent income with error. In the child
+generation, the reliability ratio of one year of family income is 0.565 for Black and 0.585 for White parents in the
+PSID (0.631 and 0.650 for the 12--17 mean), 0.556 and 0.552 in the NLSY79, and 0.492 and 0.430 in the
+NLSY97.\footnote{Code: \texttt{IGE/4.Estimates.py}, following the logic of \citet{bolt2024intergenerational}; standard
+errors 0.010--0.020.} Attenuation is common to all of the children's age bands, since parental income is measured
+identically for every band: it scales the whole profile. The comparison across data sets is therefore made on the one
+parental measure they share, one year, and then corrected race by race by each data set's own ratio, with the ratios'
+sampling error carried into the standard errors.

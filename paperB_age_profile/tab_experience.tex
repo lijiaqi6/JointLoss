@@ -1,0 +1,27 @@
+\begin{table}[!htbp]
+\centering
+\caption{The racial gap in the log IGE by potential experience (PSID, sons)}
+\label{tab:experience}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}0--4\end{tabular} & \begin{tabular}[b]{@{}c@{}}5--9\end{tabular} & \begin{tabular}[b]{@{}c@{}}10--14\end{tabular} & \begin{tabular}[b]{@{}c@{}}15--19\end{tabular} & \begin{tabular}[b]{@{}c@{}}20--24\end{tabular} & \begin{tabular}[b]{@{}c@{}}Opening\\($\geq$10 minus $<$10)\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{l}{\textit{Controls: single-year experience dummies}} \\
+White $-$ Black gap, own earnings & $-0.121$ & $0.043$ & $0.118^{**}$ & $0.220^{***}$ & $0.272^{***}$ & $0.243^{***}$ \\
+ & (0.101) & (0.044) & (0.051) & (0.059) & (0.066) & (0.067) \\
+White $-$ Black gap, family income & $-0.100$ & $0.065$ & $0.168^{***}$ & $0.246^{***}$ & $0.216^{***}$ & $0.227^{***}$ \\
+ & (0.093) & (0.044) & (0.052) & (0.060) & (0.071) & (0.065) \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Controls: single-year age dummies}} \\
+White $-$ Black gap, own earnings & $-0.123$ & $0.003$ & $0.059$ & $0.154^{***}$ & $0.196^{***}$ & $0.197^{***}$ \\
+ & (0.099) & (0.043) & (0.046) & (0.055) & (0.063) & (0.064) \\
+White $-$ Black gap, family income & $-0.099$ & $0.009$ & $0.094^{**}$ & $0.178^{***}$ & $0.143^{**}$ & $0.183^{***}$ \\
+ & (0.092) & (0.043) & (0.047) & (0.056) & (0.067) & (0.062) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Child-years at ages 20--55 as head or spouse, bands of potential experience (age $-$ completed years of schooling $-$ 6). Each cell: White $-$ Black difference of the band-specific log IGEs (stacked, clustered by 1968 family); controls: quartic in the parent's age and single-year age or experience dummies. At 25--29, sons of top-tercile White parents have 4.8 years of potential experience, other sons 6.0--7.0. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/46.AgeProfileRound2.py} (\texttt{output/age\_profile\_round2.md}).\end{minipage}
+\end{table}

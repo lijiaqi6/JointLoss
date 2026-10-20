@@ -1,4 +1,4 @@
-"""Which PSID sample do BPS rows without a head in IGE/data/psid_person_year.pkl come from? (2026-10-18)
+"""Which PSID sample do BPS rows without a head in data/psid_person_year.pkl come from? (2026-10-18)
 Reads the 2023 individual file (Dropbox, read only): 1968 id, and per wave 1999-2009 the interview number, sequence and
 relation of each person; finds the head (relation 10, sequence 1) of each (wave, interview number) and tabulates the
 1968 family id range (SRC 1-2930, immigrant 1997 3001-3511, SEO 5001-6872) of BPS rows that build_flags.py could

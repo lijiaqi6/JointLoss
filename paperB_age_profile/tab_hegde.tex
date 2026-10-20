@@ -1,0 +1,45 @@
+\begin{table}[!htbp]
+\centering
+\caption{Do Black sons from higher-income families progress less after 35? (PSID, sons)}
+\label{tab:hegde}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lcccccc}
+\toprule
+Panel / regressor & \begin{tabular}[b]{@{}c@{}}ln wage\end{tabular} & \begin{tabular}[b]{@{}c@{}}Occupation\\score\end{tabular} & \begin{tabular}[b]{@{}c@{}}Within-\\occupation\\residual\end{tabular} & \begin{tabular}[b]{@{}c@{}}Entered\\supervisory or\\managerial\end{tabular} & \begin{tabular}[b]{@{}c@{}}Moved to a\\higher-paying\\occupation\end{tabular} & \begin{tabular}[b]{@{}c@{}}Position change,\\same\\employer\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{l}{\textit{A. Unconditional}} \\
+ln parental income (centred) & $0.279^{***}$ & $0.162^{***}$ & $0.109^{***}$ & $0.024^{***}$ & $-0.023^{***}$ & $0.007$ \\
+ & (0.019) & (0.011) & (0.016) & (0.006) & (0.007) & (0.010) \\
+\quad $\times$ age 35--55 & $0.137^{***}$ & $0.013$ & $0.136^{***}$ & $-0.001$ & $0.003$ & $0.032^{**}$ \\
+ & (0.026) & (0.012) & (0.023) & (0.008) & (0.010) & (0.015) \\
+Black & $-0.166^{***}$ & $-0.121^{***}$ & $-0.039^{**}$ & $-0.031^{***}$ & $0.024^{***}$ & $-0.014$ \\
+ & (0.020) & (0.012) & (0.017) & (0.006) & (0.008) & (0.010) \\
+Black $\times$ age 35--55 & $-0.064^{***}$ & $-0.026^{**}$ & $-0.035^{*}$ & $-0.001$ & $-0.006$ & $0.037^{**}$ \\
+ & (0.023) & (0.012) & (0.021) & (0.008) & (0.010) & (0.017) \\
+ln parental income $\times$ Black & $-0.100^{***}$ & $-0.085^{***}$ & $-0.013$ & $-0.011$ & $0.014$ & $0.033^{**}$ \\
+ & (0.027) & (0.016) & (0.023) & (0.008) & (0.012) & (0.014) \\
+ln parental income $\times$ Black $\times$ age 35--55 & $-0.157^{***}$ & $-0.029^{*}$ & $-0.134^{***}$ & $-0.008$ & $-0.007$ & $-0.007$ \\
+ & (0.035) & (0.016) & (0.031) & (0.011) & (0.015) & (0.025) \\
+Son-years & 42,238 & 39,704 & 39,704 & 28,754 & 35,251 & 18,660 \\
+\addlinespace
+\multicolumn{7}{l}{\textit{B. Conditional on education and the wage and occupation score at 28--32}} \\
+ln parental income (centred) & $0.006$ & $0.011^{***}$ & $-0.010$ & $0.011^{*}$ & $-0.004$ & $-0.018^{*}$ \\
+ & (0.008) & (0.004) & (0.008) & (0.007) & (0.008) & (0.010) \\
+\quad $\times$ age 35--55 & $0.138^{***}$ & $-0.002$ & $0.145^{***}$ & $-0.001$ & $0.005$ & $0.030^{*}$ \\
+ & (0.021) & (0.010) & (0.021) & (0.009) & (0.010) & (0.016) \\
+Black & $-0.015^{*}$ & $-0.026^{***}$ & $0.011$ & $-0.020^{***}$ & $0.015^{*}$ & $-0.009$ \\
+ & (0.008) & (0.004) & (0.009) & (0.006) & (0.008) & (0.010) \\
+Black $\times$ age 35--55 & $-0.049^{**}$ & $-0.035^{***}$ & $-0.007$ & $-0.003$ & $-0.007$ & $0.040^{**}$ \\
+ & (0.020) & (0.011) & (0.020) & (0.008) & (0.011) & (0.019) \\
+ln parental income $\times$ Black & $0.023^{**}$ & $-0.006$ & $0.032^{***}$ & $-0.003$ & $0.007$ & $0.039^{***}$ \\
+ & (0.010) & (0.005) & (0.011) & (0.008) & (0.012) & (0.014) \\
+ln parental income $\times$ Black $\times$ age 35--55 & $-0.117^{***}$ & $-0.005$ & $-0.120^{***}$ & $-0.011$ & $-0.012$ & $-0.002$ \\
+ & (0.030) & (0.014) & (0.030) & (0.011) & (0.016) & (0.026) \\
+Son-years & 38,565 & 36,904 & 36,904 & 27,010 & 33,203 & 17,231 \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Black and White sons pooled (unweighted), son-years at 25--55; one regression per column with the full set of interactions of centred log parental income, a Black indicator and an indicator for ages 35--55; controls: quartic in age, year fixed effects. The triple interaction is the difference between Black and White sons in the after-35 change of the parental-income gradient. Standard errors clustered by 1968 family. Occupational wage score: mean log hourly wage of men aged 25--64 in the occupation relative to all men (CPS MORG, base 1992--2002), occupations harmonised to Dorn's occ1990dd scheme; log wage = score (between occupations) + residual (within occupation), so the score and residual columns add up to the log-wage column on the same sample. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/27.CareerWageGrowth.py} (\texttt{output/career\_wage\_growth.csv}); table built by \texttt{IGE/28.PaperBTables.py}.\end{minipage}
+\end{table}

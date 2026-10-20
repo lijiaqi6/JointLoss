@@ -5,15 +5,15 @@ market is also weak (a demand-side constraint), as opposed to a preference not t
 Answered by race (head's race; SRC + SEO; unweighted), with the PSID reason-for-job-end displacements of
 19.FatherDisplacement.py.
 
-Reads (read only): IGE/data/psid_person_year.pkl, psid_displacement.pkl (19), husband_shocks_fam.pkl (18; head and wife
+Reads (read only): data/psid_person_year.pkl, psid_displacement.pkl (19), husband_shocks_fam.pkl (18; head and wife
 industry codes / 16 sectors, state, 1976-2023 waves), husband_sector_shocks.pkl (18; CPS MORG sector shocks by sex),
 state_shocks.pkl (8a; LAUS state unemployment rate, women's Bartik), the raw PSID family files (Dropbox/PSID/Family) and
-IGE/output/wife_search.csv if it exists (21.WifeSearch.py, another agent; not required). Imports functions of 1, 9, 18
+output/wife_search.csv if it exists (21.WifeSearch.py, another agent; not required). Imports functions of 1, 9, 18
 and 19 via importlib (no edits). Writes
-  IGE/data/correlated_shocks_fam.pkl   cache of the extra family-file items below (wave x interview number)
-  IGE/data/correlated_shocks_wife_disp.pkl   wife x calendar year job ends (main / strict / quit)
-  IGE/output/correlated_shocks.csv     every estimate
-  IGE/output/correlated_shocks.md      tables
+  data/correlated_shocks_fam.pkl   cache of the extra family-file items below (wave x interview number)
+  data/correlated_shocks_wife_disp.pkl   wife x calendar year job ends (main / strict / quit)
+  output/correlated_shocks.csv     every estimate
+  output/correlated_shocks.md      tables
 
 VARIABLES (found by label in each wave's .do file; the list actually used is printed into the .md, section 0)
   Industry   1976-2023: 18.HusbandIndustryShocks.py (husband_shocks_fam.pkl: h_ind, w_ind -> 16 sectors of 8a).
@@ -785,8 +785,8 @@ def main():
            "unemployment rises: Displaced x M > 0 for (b), (b'), (c) and < 0 for (c'), and < 0 for (a) if the same "
            "sector is hit. 'Wife unemployed, looking' = status 3 at the next interview (wives not asked 1968-75, "
            "1977, 1978)."
-           + (" IGE/output/wife_search.csv (21.WifeSearch.py) was found and is summarised in section 3f." if
-              ws_file.exists() else " IGE/output/wife_search.csv (21.WifeSearch.py) did not exist when this ran."),
+           + (" output/wife_search.csv (21.WifeSearch.py) was found and is summarised in section 3f." if
+              ws_file.exists() else " output/wife_search.csv (21.WifeSearch.py) did not exist when this ran."),
            ""]
     MOD_RES = {}
     for mname, mlab, cont, ctrl in MODS:
@@ -851,7 +851,7 @@ def main():
                         cells.append(cell(r["coef"].iloc[0], r["se"].iloc[0], r["p"].iloc[0]) +
                                      f" [{int(r['treated'].iloc[0])}]" if len(r) else "")
                     panels.append((f"{race}, {slab}", [("Displaced, mean +1..+3 [displaced fathers]", cells)]))
-            md += ["### 3f. Wife's search (read from IGE/output/wife_search.csv, 21.WifeSearch.py; not re-estimated)",
+            md += ["### 3f. Wife's search (read from output/wife_search.csv, 21.WifeSearch.py; not re-estimated)",
                    "", "Same stacked design; status outcomes at the spring interview (reference = interview a year "
                    "before), calendar-year unemployment as in 19. Copied from that file for comparison.", "",
                    md_table([lab for _, lab in WSY], panels), ""]
