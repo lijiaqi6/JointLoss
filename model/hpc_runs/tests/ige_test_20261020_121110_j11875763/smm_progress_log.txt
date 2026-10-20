@@ -1,0 +1,13 @@
+12:11:18 steps none, fixed at 0 none
+12:11:18 workers 30, popsize 30, maxfevals {'A': 60, 'B': 60, 'C': 60, 'D': 60, 'E': 60, 'F': 60, 'G': 60, 'H': 60}, output /mnt/parscratch/users/cm1jil/ige_smm_results/ige_test_20261020_121110_j11875763
+12:11:20 start candidates: theta_start Q 23385.35 -> theta_start
+12:11:28 sensitivity at start: condition number 882.1
+12:11:45 model A done: Q 5848.73 evals 90 stop {'maxfevals': 60}
+12:11:54 model A: Q 5848.73
+12:12:09 model B done: Q 2049.03 evals 90 stop {'maxfevals': 60}
+12:12:18 model B: Q 2049.03
+12:12:34 model C done: Q 1082.74 evals 90 stop {'maxfevals': 60}
+12:12:43 model C: Q 1082.74
+12:12:58 model D done: Q 640.58 evals 90 stop {'maxfevals': 60}
+12:13:08 model D: Q 640.58
+12:13:20 ALL DONE
