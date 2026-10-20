@@ -1,0 +1,74 @@
+
+A layoff selects fathers, and a trait that the father passes on and that pays off more with the son's age---Section~\ref{sec:ageprofile}
+shows that skill does---would produce the same profile; son fixed effects do not remove a trait whose return grows.
+The designs below narrow the reading without assigning the layoff. Together they say that the cost follows a father's
+layoffs during his son's childhood when they come from his own unstable employment, not from shocks to his plant or
+industry, and that it is not the income the layoff costs. Whether the instability does the damage or marks a father
+whose sons fare worse later, no design with public US data can say.
+
+\paragraph{Shocks the father did not choose.} Plant closures carry no cost (Section~\ref{sec:stability}), and neither
+does a national decline of the father's industry during the son's teens, which raises the father's unemployment. With
+sector and birth-year fixed effects, the share of the son's 12--18 in which national employment of the father's sector
+fell raises the father's unemployment share by 0.080$^{**}$ ($p = 0.014$) and his layoff share by 0.030$^{*}$ ($p =
+0.086$; $F = 2.9$), and the son's earnings profile does not bend: the within-son reduced form is 0.143$^{**}$, of the
+wrong sign for a cost, and the placebo windows at 5--11 and 19--25 are zero (panel A of Table~\ref{tab:layoff_exog}).
+The positive sign is the coarseness of fifteen sectors: with the father's detailed industry interacted with age it falls
+to 0.067 (s.e.\ 0.076), while sons do not avoid their fathers' declining sectors ($-0.054$, s.e.\ 0.052) and the national
+labor market at their entry does not carry it.\footnote{Code: \texttt{112.IndustryShockGain.py}.} The
+first stage on layoffs is too weak to test the layoff cost itself: the cost the layoff path would imply,
+$0.030 \times -0.24$, is a tenth of the reduced form's standard error. What the design shows is that demand-driven
+unemployment of the father, like a plant closure, is not passed on.\footnote{Father's sector: his 3-digit industry in the
+earliest wave at the son's 10--13 (85 percent) or his first teen wave, in 15 sectors; national employment from the BLS
+Current Employment Statistics, 1939--2025; 3,145 sons, 632 sector $\times$ birth-year clusters. Code:
+\texttt{93.LayoffIndustryShocks.py}.}
+
+\paragraph{What kind of layoff.} The cost sits in the layoffs that look like unstable employment, not in the costly
+income shocks. Splitting the teen layoff share into parts that add up to it, the within-son cost is $-0.473^{***}$ for
+layoffs with a small fall in family income and $-0.096$ for those with a large fall ($p = 0.079$ for equality);
+$-0.338^{***}$ for layoffs followed by fewer than 500 hours of unemployment and 0.225 for longer spells ($p = 0.064$);
+and $-0.268^{**}$ for sons whose father was laid off in two or more teen years against 0.295 for one ($p = 0.145$)
+(panel D of Table~\ref{tab:layoff_selection}). Parental income at the son's 20--26, the money after the teens that the
+13--19 measure leaves out, does not move it ($-0.232^{**}$ against $-0.236^{**}$). If the cost were the income a layoff
+takes, the large losses and the long spells would carry it.
+
+\paragraph{What kind of father.} The costly layoff marks a father whose employment stays unstable. When his son is
+20--24, a unit of teen layoff share goes with more years unemployed (0.289$^{***}$) and more new layoffs (0.132$^{***}$),
+at equal parental income and the father's own teen-window wage and hours, and with somewhat lower earnings
+($-0.193^{*}$); his employment does not change. The small-loss layoffs, which carry the son's cost, are the ones
+followed by new layoffs (0.220$^{***}$, against 0.057 after a large loss) (panel A of Table~\ref{tab:layoff_mechanism}).
+
+\paragraph{Before and after the layoff.} The fathers were not already on a falling path. In an event study around a
+father's first layoff in his son's teens, with father and calendar-year fixed effects, his earnings in the six years
+before are not significantly different from the year before (jointly $p = 0.20$), though they are about 0.1 higher three
+to six years before; they then fall by 0.198$^{***}$ in the layoff year and remain 0.138$^{**}$ lower six years later, the
+persistent loss of the displacement literature \citep{stevens1997persistent}. His employment shows no pre-trend ($p =
+0.36$) (panel A of Table~\ref{tab:layoff_referee}). The same fathers' layoffs after the son is 26 carry nothing for the
+son (0.063, s.e.\ 0.128); the fathers still observed then are a subsample on which the teen layoff's cost is itself
+imprecise ($-0.124$, s.e.\ 0.122), so this placebo is weak.\footnote{2,238 sons whose father is a head in at least three
+waves at their 27--35. Code: \texttt{108.LayoffRefereeChecks.py}.}
+
+\paragraph{Layoffs in bad times.} Layoffs that fall when the father's sector or his state is in decline, and so say
+less about him \citep{gibbons1991layoffs}, still cost the son, about half as much. Classing each teen layoff year as bad
+times when national employment of the father's sector fell or his state's unemployment rate was at least a point above
+its mean (53 percent of layoff years, against 44 percent of all window years), the change between 25--29 and 45--49 is
+$-0.675^{**}$ ($p = 0.035$) for bad-times layoffs and $-1.400^{***}$ for the others; within the same son $-0.166$ ($p =
+0.27$) and $-0.408^{***}$; the two do not differ significantly ($p = 0.26$; panel B of
+Table~\ref{tab:layoff_mechanism}).\footnote{With the sector's decline alone: $-0.664^{*}$ against $-1.143^{***}$, $p =
+0.66$ for equality within son. Code: \texttt{104.FatherPathRecession.py}.} The cost is therefore not selection alone, but
+the layoffs that are the father's own carry more of it.
+
+\paragraph{Which parental income passes on.} Income tied to layoffs passes on more strongly than other parental
+income, and income lost to plant closures does not; this restates the layoff result in the terms of
+\citet{shea2000does}. Splitting log parental income into the part predicted by the father's layoffs and the rest, the
+predicted part passes on with an elasticity of 0.742$^{***}$ against 0.381$^{***}$ (difference 0.361$^{**}$, $p =
+0.016$); the part predicted by plant closures, 0.074 (s.e.\ 0.561). With one predictor the first coefficient is the
+layoff's association with the son's earnings divided by its gradient in parental income, so it is not a separate
+finding; what it adds is the comparison with Shea, who instruments parental income with sources beyond the parents'
+control and finds that money as such matters little. The closure row agrees with him; the layoff row says that what
+passes on strongly is what comes with a layoff, not the income it costs.\footnote{Appendix Table~\ref{tab:shea_spell}
+has the split for the father's and mother's unemployment and for the son's wage and family income. Code:
+\texttt{74.FrictionIGEPooled.py}, \texttt{89.SheaContrastBySpell.py}.}
+
+\input{tab_layoff_exog}
+\input{tab_layoff_mechanism}
+\input{tab_layoff_referee}

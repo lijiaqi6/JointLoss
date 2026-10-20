@@ -1,0 +1,82 @@
+\begin{table}[!htbp]
+\centering
+\caption{Pre-trends, a later-layoff placebo, bounds, ranks, the daughters' selection and multiple testing (PSID)}
+\label{tab:layoff_referee}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Estimate\end{tabular} \\
+ & (1) \\
+\midrule
+\multicolumn{2}{l}{\textit{A. The father around his first layoff in a son's teens (event study; reference: one year before)}} \\
+Father's ln earnings, event time -6 & $0.106^{*}$ \\
+ & (0.059) \\
+Father's ln earnings, event time -4 & $0.085$ \\
+ & (0.056) \\
+Father's ln earnings, event time -3 & $0.113^{**}$ \\
+ & (0.050) \\
+Father's ln earnings, event time -2 & $-0.005$ \\
+ & (0.058) \\
+Father's ln earnings, event time 0 & $-0.198^{***}$ \\
+ & (0.059) \\
+Father's ln earnings, event time 1 & $-0.249^{***}$ \\
+ & (0.062) \\
+Father's ln earnings, event time 3 & $-0.159^{***}$ \\
+ & (0.052) \\
+Father's ln earnings, event time 6 & $-0.138^{**}$ \\
+ & (0.060) \\
+\quad pre-event coefficients jointly zero: $p$ & 0.203 \\
+Father employed, event time +1 & $-0.073^{**}$ \\
+ & (0.031) \\
+\quad pre-event coefficients jointly zero: $p$ & 0.363 \\
+\addlinespace
+\multicolumn{2}{l}{\textit{B. Placebo, bounds and ranks}} \\
+Layoff share at the son's 27--35 $\times$ age & $0.063$ \\
+ & (0.128) \\
+\quad teen layoff share $\times$ age, same sons & $-0.124$ \\
+ & (0.122) \\
+Largest closure cost in the 95\% interval, as a share of the layoff change & 59\% \\
+Minimum detectable layoff change / within-son slope & 0.683 / 0.288 \\
+Rank change (percentiles), 45--49 minus 25--29 & $-22.163^{***}$ \\
+ & (7.483) \\
+\addlinespace
+\multicolumn{2}{l}{\textit{C. The daughters: the mother, who is observed, schooling}} \\
+Mother employed in the father's layoff waves (child FE) & $0.011$ \\
+ & (0.010) \\
+Daughters' slope $\times$ (mother worked more after the layoff) & $0.024$ \\
+ & (0.113) \\
+Daughters observed with a wage at 45--49, on the layoff share & $0.058$ \\
+ & (0.083) \\
+Daughters' within-person wage slope, inverse-probability weighted & $0.176^{**}$ \\
+ & (0.076) \\
+Sons' within-person wage slope, inverse-probability weighted & $-0.134$ \\
+ & (0.095) \\
+Years of schooling, daughters minus sons & $0.893^{*}$ \\
+ & (0.491) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Continued on the next table; notes below its last part.}\end{minipage}
+\end{table}
+\begin{table}[!htbp]
+\centering
+\addtocounter{table}{-1}
+\caption{Pre-trends, a later-layoff placebo, bounds, ranks, the daughters' selection and multiple testing (PSID) (continued)}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Estimate\end{tabular} \\
+ & (1) \\
+\midrule
+\multicolumn{2}{l}{\textit{D. Multiple testing: $p$ $\to$ adjusted $p$}} \\
+Layoff change (family of 6, Holm) & 0.0002 $\to$ 0.0011 \\
+Within-son slope (family of 6, Holm) & 0.0219 $\to$ 0.0437 \\
+Daughters $-$ sons, wage change (family of 4, Holm) & 0.0014 $\to$ 0.0043 \\
+Daughters $-$ sons, wage within person (Holm) & 0.0489 $\to$ 0.0609 \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Panel A: father-years at 25--64 of the fathers of father-present sons; father and calendar-year fixed effects and single-age dummies; event time binned at $-6$ and $+6$; treated = the 212 fathers with a layoff in a son's teen window. Panel B: within-son design of Table~\ref{tab:layoff_selection}; minimum detectable effects for 80\% power at 5\%; ranks are weighted percentiles within single year of age $\times$ calendar year. Panel C: the reduced specification of Table~\ref{tab:layoff_exog} panel B; inverse-probability weights from a logit of being observed with a wage in the band. Panel D: families fixed before adjusting (six tests of the layoff cost; four of the sons--daughters difference). Clustered by 1968 family. Source: \texttt{108.LayoffRefereeChecks.py}, \texttt{109.DaughtersRefereeChecks.py}, \texttt{110.MultipleTesting.py}; table built by \texttt{100.PaperBFableTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}

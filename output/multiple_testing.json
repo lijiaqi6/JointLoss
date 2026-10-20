@@ -1,0 +1,154 @@
+{
+ "A. The layoff cost|layoff band change (91)": {
+  "p": 0.00017922212512203216,
+  "adj": 0.001075332750732193
+ },
+ "A. The layoff cost|layoff within-son slope (88)": {
+  "p": 0.02187335804832462,
+  "adj": 0.04374671609664924
+ },
+ "A. The layoff cost|layoff minus closure change (91)": {
+  "p": 0.0050007954451537365,
+  "adj": 0.01500238633546121
+ },
+ "A. The layoff cost|band change, one job-end net (103)": {
+  "p": 0.0026111807766148365,
+  "adj": 0.013055903883074182
+ },
+ "A. The layoff cost|within-son slope, one job-end net (103)": {
+  "p": 0.022237054421057414,
+  "adj": 0.04374671609664924
+ },
+ "A. The layoff cost|rank change (108)": {
+  "p": 0.00305941430015186,
+  "adj": 0.013055903883074182
+ },
+ "B. Sons vs daughters|daughters - sons, wage change": {
+  "p": 0.0014461614301551982,
+  "adj": 0.004338484290465594
+ },
+ "B. Sons vs daughters|daughters - sons, earnings change": {
+  "p": 0.0006147322866571548,
+  "adj": 0.0024589291466286193
+ },
+ "B. Sons vs daughters|daughters - sons, wage within person": {
+  "p": 0.04893133796553717,
+  "adj": 0.06087672439834463
+ },
+ "B. Sons vs daughters|daughters - sons, earnings within person": {
+  "p": 0.030438362199172314,
+  "adj": 0.06087672439834463
+ },
+ "C. Every Section 6 design test|layoff band change (91)": {
+  "p": 0.00017922212512203216,
+  "adj": 0.00148321655015624
+ },
+ "C. Every Section 6 design test|layoff within-son slope (88)": {
+  "p": 0.02187335804832462,
+  "adj": 0.03572918697036862
+ },
+ "C. Every Section 6 design test|layoff minus closure change (91)": {
+  "p": 0.0050007954451537365,
+  "adj": 0.011668522705358718
+ },
+ "C. Every Section 6 design test|band change, one job-end net (103)": {
+  "p": 0.0026111807766148365,
+  "adj": 0.008123673527246158
+ },
+ "C. Every Section 6 design test|within-son slope, one job-end net (103)": {
+  "p": 0.022237054421057414,
+  "adj": 0.03572918697036862
+ },
+ "C. Every Section 6 design test|rank change (108)": {
+  "p": 0.00305941430015186,
+  "adj": 0.008566360040425209
+ },
+ "C. Every Section 6 design test|daughters - sons, wage change": {
+  "p": 0.0014461614301551982,
+  "adj": 0.005092247283288765
+ },
+ "C. Every Section 6 design test|daughters - sons, earnings change": {
+  "p": 0.0006147322866571548,
+  "adj": 0.0034425008052800673
+ },
+ "C. Every Section 6 design test|daughters - sons, wage within person": {
+  "p": 0.04893133796553717,
+  "adj": 0.0595685853493496
+ },
+ "C. Every Section 6 design test|daughters - sons, earnings within person": {
+  "p": 0.030438362199172314,
+  "adj": 0.04261370707884124
+ },
+ "C. Every Section 6 design test|timing: teen x age (A2)": {
+  "p": 0.021372694632913865,
+  "adj": 0.03572918697036862
+ },
+ "C. Every Section 6 design test|timing: 6-12 x age (A2)": {
+  "p": 0.08149551493303508,
+  "adj": 0.0950781007552076
+ },
+ "C. Every Section 6 design test|small income loss x age": {
+  "p": 0.001043847787343855,
+  "adj": 0.004871289674271323
+ },
+ "C. Every Section 6 design test|short unemployment x age": {
+  "p": 0.004644399151812665,
+  "adj": 0.011668522705358718
+ },
+ "C. Every Section 6 design test|repeated layoffs x age": {
+  "p": 0.011700880920696358,
+  "adj": 0.024912174222212813
+ },
+ "C. Every Section 6 design test|bad-times layoffs, change": {
+  "p": 0.03488384458410732,
+  "adj": 0.04651179277880976
+ },
+ "C. Every Section 6 design test|other layoffs, change": {
+  "p": 0.0002118880785937486,
+  "adj": 0.00148321655015624
+ },
+ "C. Every Section 6 design test|father unemployed at son's 20-24": {
+  "p": 2.045234839184e-06,
+  "adj": 5.7266575497152e-05
+ },
+ "C. Every Section 6 design test|father laid off again at son's 20-24": {
+  "p": 0.00015029515240590799,
+  "adj": 0.00148321655015624
+ },
+ "C. Every Section 6 design test|industry decline, reduced form within son": {
+  "p": 0.024244805444178705,
+  "adj": 0.03572918697036862
+ },
+ "C. Every Section 6 design test|born < 1963, within son (103 a)": {
+  "p": 0.08855555675471137,
+  "adj": 0.09918222356527673
+ },
+ "C. Every Section 6 design test|born 1963-75, within son (103 a)": {
+  "p": 0.13811909579283396,
+  "adj": 0.14874364162305195
+ },
+ "C. Every Section 6 design test|born 1976+, within son (103 a)": {
+  "p": 0.012456087111106406,
+  "adj": 0.024912174222212813
+ },
+ "C. Every Section 6 design test|daughters' partner's earnings, change": {
+  "p": 0.0014549277952253614,
+  "adj": 0.005092247283288765
+ },
+ "C. Every Section 6 design test|wage within occupation, change": {
+  "p": 0.03740769491231922,
+  "adj": 0.04760979352476991
+ },
+ "C. Every Section 6 design test|occupation score, change": {
+  "p": 0.02390593809420287,
+  "adj": 0.03572918697036862
+ },
+ "C. Every Section 6 design test|UI replacement rate x layoff x age": {
+  "p": 0.8401627110804407,
+  "adj": 0.8401627110804407
+ },
+ "C. Every Section 6 design test|UI weeks x layoff x age": {
+  "p": 0.6281449254281299,
+  "adj": 0.6514095522958385
+ }
+}
