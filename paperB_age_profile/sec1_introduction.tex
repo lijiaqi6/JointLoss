@@ -1,106 +1,78 @@
 \section{Introduction}\label{sec:intro}
 
-How much of a child's economic position is inherited is usually summarised by one number, the intergenerational
-elasticity of income (IGE) or its rank analogue, measured when the children are in their early thirties. This paper
-shows that the number depends heavily on the age at which children are observed, and that it depends on age
-differently for Black and White Americans. In the Panel Study of Income Dynamics (PSID), the elasticity of sons' own
-earnings with respect to their parents' income is 0.28 at ages 25--29 and 0.49 at 40--44, and the rise is concentrated
-among White sons. The White--Black gap in the elasticity is zero at 25--29 ($-0.04$), 0.10 in the 31--37 window used by
-the benchmark administrative estimates of \citet{chetty2020race}, and 0.29 at 40--49 (Figure~\ref{fig:headline}). Measured
-by potential experience rather than age, the gap is zero throughout the first ten years of the career and opens
-after.\footnote{Child-year regressions within five-year age bands, Table~\ref{tab:ige_sons}; 31--37: 0.099$^{**}$
-(0.048); 40--44 and 45--49: 0.294$^{***}$ (0.067) and 0.299$^{***}$ (0.088). By potential experience: $-0.121$ at 0--4
-years, 0.043 at 5--9, 0.220$^{***}$ at 15--19 and 0.272$^{***}$ at 20--24 (Appendix Table~\ref{tab:experience}). Code:
-\texttt{26.IGEByAge.py} and \texttt{46.AgeProfileRound2.py}.} A window that ends at 37 sees a third of the racial
-gap in persistence that is present in midlife; a window in the late twenties sees none of it.
+The intergenerational elasticity of earnings (IGE) is one number for many things a parent passes on, and it changes
+with the age at which children are observed. In the Panel Study of Income Dynamics (PSID) the elasticity of sons'
+earnings with respect to their parents' income is 0.28 at 25--29 and 0.49 at 40--44, as shown in
+Figure~\ref{fig:headline}. A father's earnings bundle his hourly wage, the hours he works, the years he spends out of
+work and the labor market he shares with other families, and each of these points to a different policy: schooling and
+training if the wage is passed on, tax and transfer incentives if hours are, unemployment insurance if spells out of
+work are, policy aimed at groups or places if the shared labor market is. This paper splits the IGE into these
+components, by the son's age, and asks which of them carry its rise with age.
 
-The racial half of this fact is estimated on 500 to 1,700 Black sons per age band in the PSID, and I state it at its
-precision. With one year of parental income, the one measure four public data sets share, the gap opens by 0.09 log
-points between the late twenties and the early forties (0.086$^{***}$, s.e.\ 0.024); corrected by each data set's own
-reliability ratio of one year of parental income, by 0.19 (0.191$^{***}$, s.e.\ 0.046; Table~\ref{tab:threedata}). The
-PSID estimate survives the standard objections: selective attrition, period effects, the dollar-weighted elasticity of
-\citet{mitnik2020intergenerational}, and an experience clock in place of age all leave its opening between 0.20 and 0.26
-(Table~\ref{tab:gaprobust}). In the fourth data set, the children of the NLSY79 mothers, the gap is zero at 25--34 as in
-the others and does not open, but it is measured at 35--44 on fewer than 300 sons of each race, born to young mothers. The object of
-the paper is sons' earnings and wages. Their family income, the object of \citet{chetty2020race}, shows the same profile
-with a smaller and more fragile opening: it is not significant in a fixed calendar window (0.084, s.e.\ 0.084), and among sons
-of parents below the median it is 0.023 (s.e.\ 0.086).
+The parents' hourly wage carries a fifth of the IGE, their spells out of work a sixteenth, their hours and their place
+almost nothing, and half of the IGE remains parental income at equal values of everything the data measure. Over
+25--55 the parents' wage carries 19.0\%$^{***}$ of the IGE of 0.396$^{***}$, their hours 2.8\%$^{**}$, their spells
+6.1\%$^{***}$ and the state's labor market 0.4\%. Among the parents' other resources, the father's schooling carries
+12.9\%$^{***}$ and years on AFDC or TANF 6.6\%$^{**}$, while assets, transfer income and family size carry nothing; the rest
+is 47.6\%$^{***}$. The split replicates where the data measure the parents over several years: in the NLSY79 Children and
+Young Adults, whose mothers report every week of their work history, the parents' spells carry 7.6\%$^{***}$. It fails
+where they are measured once: in the NLSY97 one year of the parents' wages, hours and employment breaks carries nothing.
 
-The log gap is the age timing of a known fact. Black sons of well-off parents are far more likely than White sons to
-fall down the distribution \citep{hertz2005rags, bhattacharya2011nonparametric, mazumder2014black, chetty2020race}, and
-racial differences have shaped American mobility over the century \citep{jacome2025mobility}. This paper shows when the
-difference appears: it is absent in the late twenties and builds through the thirties as White sons' earnings spread out
-with parental income. Ranks of family income normalise that spread away, and sons' rank--rank slopes of family income are
-similar by race at every age, as \citet{chetty2020race} find at 31--37.
+The IGE rises with age because what sons of richer parents bring to the labor market pays more as they age. In the
+NLSY79 the earnings IGE rises from 0.340$^{***}$ at 25--29 to 0.506$^{***}$ at 50--54, and the son's AFQT, measured
+before he enters the labor market, carries 62 percent of the rise; the parents' schooling carries most of the rest. In
+the PSID the rise is within occupations and runs through schooling, whose return rises with age. Because the returns
+to both schooling and measured skill rise with age, the pattern is that of skill complementing the human capital
+accumulated on the job, not of employers learning about it \citep{altonji2001employer, lange2007speed}.
 
-What opens is the transmission of hourly wages, not hours, shocks or marriage (Section~\ref{sec:contains}), and it is
-built at 25--34. The job a son holds then accounts for half of the racial divergence (0.49), and access to the
-well-paid jobs whose wages keep growing is unequal by parental income---20 percent of sons from the top third of
-parental incomes start in one, 5 percent from the bottom third---and by race at equal parental income (4.2 percentage
-points). The economic channel is the return to schooling. It rises with age much faster for White than for Black sons
-(a difference of 0.058$^{***}$ in the rise of the earnings return), and the difference is the same within the job a son
-started in, net of the calendar rise of the college premium, and in the NLSY79 holding measured ability fixed. Education
-accounts for 0.44 of the racial divergence in earnings persistence.\footnote{Section~\ref{sec:careers},
-Tables~\ref{tab:earlyjob}, \ref{tab:access}, \ref{tab:schooling} and \ref{tab:withincell}. Within the early job cell
-the difference in the rise is 0.061$^{***}$ (0.018); with schooling $\times$ calendar trend 0.063$^{**}$ (0.027); in
-the NLSY79 with the AFQT 0.021$^{**}$ (0.009). Code: \texttt{35.EarlyIndustryLatePayoff.py},
-\texttt{42.SchoolingAndJobGrowth.py}, \texttt{45.WithinCellIdentification.py}.} Both the schooling and the AFQT
-returns rise with age, which is the complementarity of schooling with human capital accumulated on the job rather than
-employers learning about ability \citep{altonji2001employer, lange2007speed}. Fathers' jobs add a separate channel: sons
-of richer White parents converge on their fathers' occupations after 35, and convergence on the father's exact job is
-the inheritance of a family business (0.065$^{***}$ for sons of self-employed fathers, zero for others).
+The one component of what parents do whose share rises with age is their spells, and the reason is that a father's
+layoff in his son's teens costs the son more as the son gets older. At equal parental income and equal values of every
+other component, a layoff is unrelated to the son's earnings at 25--29 and lowers them by 0.110$^{***}$ log points per
+layoff year at 45--49, as shown in Table~\ref{tab:layoff_age}. The cost is in the son's wage, it grows within the same son
+($-0.236^{**}$ per ten years of age per unit share), and only layoffs in his teens carry it, not those when he is 6--12
+or 20--26. A plant closure, which displaces workers whatever their quality \citep{gibbons1991layoffs}, carries no cost at
+any age. The same contrast shows in which parental income is passed on. Parental income predicted by the father's
+layoffs passes on with an elasticity of 0.742$^{***}$, against 0.381$^{***}$ for the rest (difference 0.361$^{**}$);
+income predicted by plant closures passes on with an elasticity of 0.074. Like \citet{shea2000does}, who finds that
+income from sources beyond the parents' control matters little, the closures show that the lost money is not what is
+passed on; the layoffs show that what comes with them is.
 
-The facts bear on how policies and shocks affect racial disparities (Section~\ref{sec:policy}). Long-run
-evaluations of childhood policies---Food Stamps, school finance, the EITC, Moving to Opportunity---measure adult
-earnings in the late twenties or early thirties \citep{hoynes2016long, jackson2016effects, bastian2018long,
-chetty2016effects}, before the racial gap in persistence has opened, so their racial comparisons are scored too early.
-Two shocks to the start of the career do not produce the gap: recessions at labor-market entry leave average access to
-good jobs unchanged and the racial gap opens among sons who entered tight markets too, although they leave a longer
-wage scar on Black sons; and public employment, where Black sons start more often, carries none of the
-divergence.\footnote{Section~\ref{sec:policy}, Tables~\ref{tab:entry} and \ref{tab:openinggroups}. Shocks to the household a
-son grows up in---his parents' job losses and the family safety net---are the subject of a companion paper; a shock to
-the son's own career is this paper's.} These facts leave four explanations: at equal background, Black sons may have less
-access to the jobs in which human capital accumulates fast, a lower pay-off of schooling in accumulation, a different
-return to schooling at entry, or a lower pay-off of parental income in accumulation. Section~\ref{sec:model} nests all
-four in one life-cycle model of careers---jobs that differ in accumulation, reached through offers and search
-frictions, job loss that falls with age and parental income, and accumulation that depends on schooling and
-background---and estimates every combination of the first three, with and without the fourth, on the same 66 moments. The data select one model. Parental
-income raises the growth of human capital for White sons (0.019$^{***}$ a year per log point, $p = 0.009$) and not for
-Black sons (difference $-0.019^{***}$, $p < 0.001$), a channel seen with a multi-year measure of parental income and
-absorbed by schooling with a one-year measure, in the PSID as in the NLSY79 and NLSY97 (Section~\ref{sec:model}); for
-Black sons schooling buys a higher wage at entry and slower
-growth; and a racial difference in offers of good jobs is rejected: the lower Black share in good jobs at equal
-parental income is reproduced without one. The model reproduces the rising White elasticity
-and the flat Black one, and switching off the racial difference in the pay-off of parental income closes three fifths
-of the gap at 45--49 and two fifths of its opening since 25--29. Equalising schooling, access across parental income or entry conditions closes less than a tenth:
-the gap at 45 is built by what background and schooling buy in growth, not by where careers start. The paper also makes a falsifiable prediction for administrative data: for the cohorts born 1978--83, the racial
-gap in the log elasticity of individual earnings at 43--47 should be 0.25--0.30, against about 0.10 at 31--37.
+The son's own spells run the other way. His years unemployed, displaced or without work carry 30.9\%$^{***}$ of the
+earnings IGE at 25--29 and 8.7\%$^{***}$ at 45--49: the IGE of a young man is in large part about whether he works, that of
+a man in mid-career about what he is paid. Net of his spells, the IGE at 25--29 is 0.47 of its value at 45--49 rather
+than 0.62: the life-cycle bias \citep{haider2006life, nybom2016heterogeneous} is larger in what sons are paid than in
+what they earn.
 
-\paragraph{Contributions and literature.} The paper contributes to four literatures. First, the measurement of
-intergenerational persistence: short snapshots of parental income understate persistence
-\citep{solon1992intergenerational, mazumder2005fortunate, mazumder2016estimating}, current income early in the career
-understates the dispersion of lifetime income \citep{haider2006life, grawe2006lifecycle}, heterogeneous profiles leave a
-life-cycle bias that no single correction removes \citep{nybom2016heterogeneous, nybom2017biases}, ranks stabilise early
-\citep{chetty2014where, chetty2014still}, and the elasticity can be redefined on expected income
-\citep{mitnik2015new, mitnik2020intergenerational}. I show that the life-cycle bias differs by race. Second, race and
-mobility \citep{hertz2005rags, bhattacharya2011nonparametric, mazumder2014black, chetty2020race, bayer2018divergent,
-jacome2025mobility}: I date the racial difference in log persistence to the first decade of the career and reconcile it
-with stable rank gaps. Third, careers and the Black--White wage gap: wages grow through job mobility and on-the-job
-accumulation \citep{topel1992job, altonji2013modeling, bagger2014tenure}; the racial gap widens with experience
-\citep{oettinger1996statistical, lang2012racial}; premarket skills, schooling and employer learning shape it
-\citep{neal1996role, altonji2001employer, pinkston2006test, lange2007speed, arcidiacono2010beyond, lang2011education};
-search frictions can differ by race \citep{bowlus2002discrimination}; promotion is slower for equally eligible Black
-workers \citep{hegde2026racial}; education premiums rise over the life cycle \citep{bhuller2017life}; and lifetime
-inequality is largely set at entry \citep{huggett2011sources}; a calibrated life-cycle model with learning by doing
-attributes the widening of the racial gap to premarket differences in the ability to accumulate human capital, holding
-accumulation race-neutral given the AFQT \citep{rauh2023black}. I connect these to family background and show that the
-rise of the return to schooling with age is steeper for White men within the same job. Fourth, family networks and the
-inheritance of jobs \citep{corak2011intergenerational, kramarz2014strong, staiger2022, laband1992self,
-fagereng2021wealthy}: following the father pays at entry, not in growth, and late convergence on the father's exact job
-is business inheritance. Structural models of intergenerational transmission concentrate family background before
-entry \citep{lee2019intergenerational, caucutt2020early, abbott2019education, bolt2024intergenerational}; the evidence
-here requires that background, and race, also shape what happens after entry.
+The components point to policy in three ways. Generous unemployment insurance in the son's teens goes with a smaller
+spells component, 9.3\%$^{**}$ of the IGE against 13.3\%$^{***}$ where insurance is less generous, a difference in the
+predicted direction that is not significant ($p = 0.50$). The search friction of the family's group, measured by the job
+finding of men of its race in its state, carries 8.2\%$^{***}$ of the IGE, all of it between races. And the components
+that grow with age---the parents' wage, the father's schooling, the teen layoff---cannot be seen by evaluations of
+childhood policies that score earnings around 30 \citep{hoynes2016long, jackson2016effects, bastian2018long,
+chetty2016effects}.
 
-Section~\ref{sec:data} describes the data, Section~\ref{sec:ageprofile} the age profile and its precision,
-Section~\ref{sec:contains} what opens, Section~\ref{sec:careers} where it is built, Section~\ref{sec:fathers} fathers'
-jobs, Section~\ref{sec:policy} shocks and policies, and Section~\ref{sec:model} the model and the policy experiments.
+The rise of the IGE with age is White, and the components say why. The White--Black gap in the IGE is $-0.04$ at 25--29
+and 0.30 at 45--49; the elasticity of Black sons is flat in age. The father's schooling carries 0.065$^{***}$ of the White
+and 0.002 of the Black IGE. A layoff bends the earnings profile of Black sons as much as that of White sons, but Black
+fathers' layoffs are not concentrated in low-income families, so the rising cost raises the White IGE and not the Black
+one: the racial difference in what is passed on through spells is in who is laid off, not in what a layoff does. For
+Black sons family structure carries three fifths of the IGE and parental income at equal parents carries nothing.
+
+\paragraph{Contributions and literature.} The paper contributes to three literatures. First, it splits the IGE on the
+parents' side. Earlier accounts split it on the child's side, into the child's schooling, skills and attachment to work
+\citep{blanden2007accounting, gregg2019intergenerational, rothstein2019inequality}, model the joint transmission of
+wages and hours \citep{altonji2000intergenerational}, or ask whether parents' money matters
+\citep{shea2000does, cardak2013intergenerational, black2005why}. Here the parents' wage, hours, spells and place are
+components of one exact decomposition \citep{gelbach2016covariates}, measured by the son's age and replicated in four data
+sets. Second, it adds the age of the son to the evidence on parental job loss, which estimates the effect of one shock
+at one age \citep{oreopoulos2008intergenerational, hilger2016parental, kalil2011parental}: the cost of a layoff in the
+son's teens appears after 40, and a plant closure carries none. Third, it connects the life-cycle bias of the IGE
+\citep{haider2006life, grawe2006lifecycle, nybom2016heterogeneous, nybom2017biases, chetty2014where} to what is passed
+on: the bias is the rising pay-off of skill and schooling, the delayed cost of a teen layoff and the fading weight of the
+son's own spells. On race it dates the divergence of log persistence, known from the downward mobility of Black sons
+of well-off parents \citep{hertz2005rags, bhattacharya2011nonparametric, mazumder2014black, chetty2020race}, to the
+thirties, and locates it in the components.
+
+Section~\ref{sec:data} describes the data, Section~\ref{sec:ageprofile} the age profile, Section~\ref{sec:passedon} what
+is passed on, Section~\ref{sec:skill} why persistence rises with age, Section~\ref{sec:stability} spells in childhood,
+Section~\ref{sec:policy} policy, and Section~\ref{sec:conclusion} concludes.
