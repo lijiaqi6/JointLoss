@@ -1,0 +1,81 @@
+\section{Policy}\label{sec:policy}
+
+Each component of the IGE points to a different policy, and the data allow two direct tests. Generous unemployment
+insurance in the son's teens goes with a smaller stability component, in every sign the data can check, but the
+difference is not significant. The search friction faced by the family's group---the job finding of men of its race in
+its state---carries a tenth of the IGE, entirely between races. A third implication needs no new design: the
+components that grow with the son's age are invisible to evaluations that score children's outcomes around 30.
+
+\subsection{Unemployment insurance in childhood}
+
+If what a layoff passes on is in part the income and the turmoil that follow it, insurance that replaces more of the
+lost earnings should weaken the stability component. Table~\ref{tab:ui_stability} measures the generosity of the
+state's unemployment insurance as its maximum weekly benefit over its average weekly wage, averaged over the son's ages
+12--18 in the state where he lived at 17, and splits sons at the median of generosity relative to their birth cohort.
+The IGE is the same in both halves (0.374$^{***}$ and 0.373$^{***}$). The stability component is smaller where
+insurance was more generous: 0.035$^{**}$ of the IGE (9.3\%$^{**}$) against 0.050$^{***}$ (13.3\%$^{***}$), and 0.071
+against 0.101$^{**}$ at 45--49. The difference, $-4.1$ points of the IGE (s.e.\ 6.0, $p = 0.496$), is the predicted
+direction and is not significant.\footnote{Sons born 1958 and later (3,495), whose teens fall in years covered by the
+Department of Labor's statutory schedules. Code: \texttt{12b.UIGenerosity.py} (generosity) and
+\texttt{82.UIStabilityChannel.py} (\texttt{output/ui\_stability\_channel.md}).}
+
+\input{tab_ui_stability}
+
+The interactions in panel B point the same way. With state fixed effects, a standard deviation of generosity raises the
+son's earnings by 0.034$^{**}$ ($p = 0.045$) per standard deviation of the father's closure share, and by 0.057$^{**}$
+($p = 0.024$) at 40--55; the layoff interaction is positive and imprecise (0.021, $p = 0.19$); and generosity lowers the
+son's share of years unemployed by 0.010$^{**}$ ($p = 0.037$) per standard deviation of the mother's unemployment. The
+placebo---generosity interacted with the father's wage, which insurance should not offset---is zero ($-0.004$). Every
+sign is that of insurance offsetting the spells component; each estimate alone is weak because generosity varies little
+within a state and cohort (a standard deviation of 0.041, against 0.089 in all).\footnote{With the log of the maximum
+total benefit instead of the replacement ratio the signs are the same and the estimates weaker (layoff $\times$ UI
+0.024, $p = 0.12$). For Black sons the placebo on employment is 0.034$^{**}$ ($p = 0.017$).} A state's schedule is
+an imprecise measure of what a given family received; the father's own replacement rate at each layoff would measure it.
+
+\subsection{Group search friction}
+
+A family shares its labor market with other families of its race and place. Table~\ref{tab:group_race} measures the
+search friction of the group as the monthly job finding of non-employed men of the son's race in his state during his
+teens, from the CPS: 0.193 for White and 0.140 for Black men (difference $-0.054^{***}$). Added to the split of
+Section~\ref{sec:passedon}, this measure carries 8.2\%$^{***}$ ($p = 0.004$) of the pooled IGE, against 1.9 percent for
+the state's unemployment rate and labor-demand shocks on the same sons. Within race it carries nothing: 0.0 percent of
+the White IGE and $-9.1$ percent (s.e.\ 14.5) of the Black.\footnote{Sons born 1976 and later (1,752), whose teens fall
+in the CPS monthly files of 1994--2021; the job finding of women of the son's race enters the same component. Annual
+re-employment of men of the son's race in the March CPS of 1977--92 carries nothing (0.006, $p = 0.37$). Code:
+\texttt{17.AtlasFrictions.py} (measure) and \texttt{84.GroupFrictionByRace.py}
+(\texttt{output/group\_friction\_by\_race.md}).} The group component is a contrast between races: Black families have
+lower parental income and face lower job finding. Within a race, the friction of the family's place is not passed on.
+In these data the group's job finding cannot be told apart from anything else that differs by race, so it says where
+policy aimed at groups would act---job-search assistance, anti-discrimination enforcement---not that it would work.
+
+\input{tab_group_race}
+
+\subsection{Transfers}
+
+Years on AFDC or TANF carry 6.6\%$^{**}$ ($p = 0.015$) of the IGE at equal parental income and equal components, and the
+share of parental income that came from transfers carries nothing ($-0.001$; Section~\ref{sec:passedon}). Receipt marks
+the families whose sons do worse at equal income; the transfer dollars, at equal income, do not show. The split cannot
+say whether receipt marks what brought the family onto welfare or what welfare did; it says that the transfer channel
+is about which families receive, not about the amount.
+
+\subsection{The age of scoring}
+
+The components that grow with the son's age cannot be seen by evaluations that score outcomes around 30. Long-run
+evaluations of childhood policies measure adult earnings in the late twenties or early thirties---Food Stamps
+\citep{hoynes2016long}, school finance \citep{jackson2016effects}, the EITC \citep{bastian2018long}, Moving to
+Opportunity \citep{chetty2016effects} and the 31--37 window of \citet{chetty2020race}---and welfare calculations project
+lifetime earnings from those ages \citep{hendren2020unified}. Between 25--29 and 45--49 the parents' wage component
+rises from 0.035 to 0.097$^{***}$ (at 35--39), the father's schooling from 0.014 to 0.075$^{***}$, the spells component
+from 0.017$^{**}$ to 0.060$^{***}$, and a teen layoff's cost from nothing to 0.110$^{***}$ a year. A policy that acts on
+any of these---schooling, the stability of parents' employment, insurance in the son's teens---would be scored at 30
+before most of its effect has appeared. The son's own spells run the other way: a policy that raises young men's
+employment shows its effect on the IGE early, and its share falls with age.
+
+\subsection{By race}
+
+Two conditions at the start of the son's career have been proposed for the racial gap in persistence: the labor
+market he enters and public employment, where Black sons start more often. Neither creates the racial opening of the
+IGE, which is 0.208$^{**}$ among sons who entered tight markets and 0.213$^{***}$ among sons who started in the private
+sector (Appendix~\ref{app:entry}). Generous insurance offsets the father's closures most clearly for White sons at
+40--55 (0.062$^{**}$, $p = 0.019$) and the mother's unemployment most clearly for Black sons ($-0.020^{**}$ on the son's
+years unemployed, $p = 0.011$).

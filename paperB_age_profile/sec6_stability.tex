@@ -1,0 +1,117 @@
+\section{Spells in Childhood: Why Stability Is Passed On More With Age}\label{sec:stability}
+
+The parents' spells are the one component of Section~\ref{sec:passedon} whose share rises with the son's age, and the
+reason is that a father's layoff in his son's teens costs the son more the older the son gets. At equal parental income
+and equal values of every other component, a layoff is unrelated to the son's earnings at 25--29 and lowers them by
+0.110$^{***}$ log points a layoff year at 45--49; a plant closure does neither. The cost is in the son's wage, it grows
+within the same son, and only layoffs during his teens carry it. The same contrast shows in which parental income is
+passed on: income tied to layoffs and unemployment passes on twice as strongly as other income, income lost to plant
+closures no more strongly. The son's own spells run the other way: they carry three tenths of the IGE at 25--29 and a
+tenth at 45--49. Everything in this section is descriptive; a layoff is not assigned at random, and the closure is the
+comparison that comes closest to a shock the family did not choose.
+
+\subsection{A layoff in the teens costs the son more as he ages}
+
+Table~\ref{tab:layoff_age} reports the partial coefficient behind the spells component: the coefficient of the
+father's share of the son's ages 13--19 with a layoff or firing on the son's log earnings in each age band, holding log
+parental income and every component of Table~\ref{tab:passed_on} fixed. It is 0.146 ($p = 0.19$) at 25--29, falls in
+every band, and reaches $-0.768^{***}$ ($p = 0.005$) at 45--49; the change between the two bands is $-0.914^{***}$
+($p<0.001$). The share is over seven years, so one layoff year lowers the son's earnings at 45--49 by 0.110 log points.
+Five-year birth-cohort dummies leave the profile unchanged ($-0.739^{***}$ at 45--49, change $-0.866^{***}$), so it is
+not that later-born sons are observed only young. The father's plant closures show no profile: 0.127 at 25--29, 0.127
+at 45--49, a change of 0.000 (s.e.\ 0.258).\footnote{Father present; the mean layoff share is 0.044 and 12 percent of
+sons have a layoff year. Layoff = the PSID's reason a job ended `laid off or fired', closure = `plant closed or moved',
+in the interview year or the one before. Code: \texttt{88.LayoffCostByAge.py} (\texttt{output/layoff\_cost\_by\_age.md}).}
+
+\input{tab_layoff_age}
+
+The cost is in the wage. In panel C the coefficient on the son's log hourly wage changes by $-0.603^{***}$ ($p = 0.003$)
+between 25--29 and 45--49, two thirds of the change in earnings, and that on his annual hours when employed by
+$-0.311^{**}$ ($p = 0.025$); his employment ($0.033$) and his share of years unemployed ($0.022$) do not change. A son
+whose father was laid off in his teens works as much as other sons at 45--49 and is paid less per hour.
+
+\paragraph{Within the same son.} The profile across bands compares different sons at different ages. Table~\ref{tab:layoff_fe}
+follows the same son: with son fixed effects, the father's layoff share interacted with the son's age measures how his
+earnings profile bends. A unit share lowers the growth of the same son's log earnings by 0.236$^{**}$ ($p = 0.022$) per
+ten years of age, 0.034 a decade for one layoff year, with every component, parental income, the family-structure flags
+and cohort dummies also interacted with age. Closures do not bend it ($-0.010$, s.e.\ 0.119). Because each son is
+compared with himself, a fixed difference between sons whose fathers were and were not laid off---in ability, in
+schooling, in where they live---cannot produce the result; what grows with age is the cost.
+
+\paragraph{Timing.} Only layoffs during the son's teens carry the cost. Adding the father's layoff shares at the son's
+ages 6--12 and 20--26 leaves the teen coefficient at $-0.322^{***}$ ($p = 0.009$), while those at 6--12 ($-0.081$,
+s.e.\ 0.109) and at 20--26 (0.037, s.e.\ 0.102) carry nothing (columns 2, 4 and 6). The timing is informative about
+selection. If a layoff only revealed a trait of the father that he passes on to his son, a layoff when the son is
+eight or twenty-three would reveal the same trait as one when he is fifteen, and all three would predict the son's
+profile alike. They do not: what matters is that the layoff fell in the years in which the son finished school and
+made his first labor-market choices.
+
+\input{tab_layoff_fe}
+
+The closure is the contrast that disciplines this reading. A plant closure displaces workers whatever their quality,
+so at equal parental income it says little about the father, and the income it costs is already in parental income
+\citep{gibbons1991layoffs}; a layoff selects workers. That closures carry no profile, and at equal parental income even
+raise the son's wage (Table~\ref{tab:four_by_four}), is the pattern expected if the layoff coefficient carries what
+layoffs bring with them beyond lost income: the father's subsequent instability, the family's response or what the
+layoff reveals about the father's job. The design cannot separate these, and it does not say what a randomly assigned
+layoff would do.\footnote{A father figure's displacement of any kind at the son's ages 0--17, compared with sons never
+exposed whose families had the same income before the event, is associated with earnings lower by 0.079$^{***}$ at
+25--34 and 0.053 (s.e.\ 0.043) at 35--44 (Appendix Table~\ref{tab:fatherdispage}). That design pools closures with layoffs,
+spreads exposure over childhood and stops at 44, before the layoff cost appears; its flat profile is consistent with the
+results here. Code: \texttt{49.PaperBPolicyShocks.py}.}
+
+\subsection{Which parental income is passed on}
+
+The same contrast shows when parental income itself is split by its source. Table~\ref{tab:shea_spell} splits log
+parental income into the part predicted by the parents' spells and the rest, and regresses the son's log earnings on
+both parts. The spells predict 18.2 percent of the variance of parental income, and that part passes on more strongly
+than the rest: 0.528$^{***}$ against 0.360$^{***}$, a difference of 0.168$^{***}$ ($p = 0.007$). The excess comes from
+the selected spells. Parental income predicted by the father's layoffs passes on with an elasticity of 0.742$^{***}$
+against 0.381$^{***}$ for the rest (difference 0.361$^{**}$, $p = 0.016$), and that predicted by the father's and the
+mother's unemployment by 0.265$^{***}$ ($p = 0.009$) and 0.277$^{*}$ ($p = 0.056$) more than the rest. Income predicted
+by plant closures passes on with an elasticity of 0.074 ($p = 0.90$), against 0.392$^{***}$ for the rest; the difference,
+$-0.317$, is imprecise (s.e.\ 0.565) because closures predict 0.4 percent of the variance of parental income.
+
+\input{tab_shea_spell}
+
+\citet{shea2000does} instruments parental income with sources that are plausibly beyond the parents' control---union
+membership, industry and job loss---and finds that the income they predict has little effect on sons' earnings: money as
+such matters little. The closure row agrees with him. The layoff and unemployment rows show the opposite of a small effect,
+and they are the same spells that cost the son more as he ages: what passes on strongly is not the income a layoff
+costs but what comes with a layoff.\footnote{The same holds for the son's hourly wage (layoffs 0.279$^{**}$, closures
+$-0.455$, s.e.\ 0.486) and his family income (layoffs 0.385$^{**}$, closures $-0.037$). Code:
+\texttt{74.FrictionIGEPooled.py}, \texttt{89.SheaContrastBySpell.py} (\texttt{output/shea\_contrast\_by\_spell.md}).}
+
+\subsection{The son's own spells}
+
+The son's own spells carry a large share of the IGE when he is young and a small one later. Adding to the split his
+shares of the band's years unemployed, displaced and with zero hours, his spells carry 0.085$^{***}$ of the earnings IGE
+at 25--29, a share of 30.9\%$^{***}$, and 0.039$^{***}$ at 45--49, a share of 8.7\%$^{***}$: the share falls by 22.2
+points ($p<0.001$; Table~\ref{tab:son_friction}). In the hourly wage it falls from 15.9\%$^{***}$ to 4.9\%$^{***}$. Part
+of it is shared with the parents' spells---a son whose parents had spells has more of his own---and that part also
+falls, from 0.016$^{***}$ to 0.004. In the NLSY79 the son's weeks not worked carry 23.0 percent of the IGE at 25--29 and
+12.9 percent at 45--49 (a fall of 10.1 points, $p = 0.003$).\footnote{The son's spells are part of his own outcome: a year
+unemployed lowers that year's earnings. The shares are therefore an accounting of where the IGE sits, not a channel.
+Code: \texttt{74.FrictionIGEPooled.py} (\texttt{output/friction\_ige\_pooled.md}).}
+
+\input{tab_son_friction}
+
+The IGE of a young man is in large part about whether he works; that of a man in mid-career is about what he is paid
+when he does. Measured at 25--29, the earnings IGE is 0.62 of its value at 45--49; net of the son's spells it is
+0.47 of it (a change of $-0.151^{***}$, $p<0.001$). The life-cycle bias of an IGE measured in the late twenties is
+therefore larger than it looks, because at that age the son's spells add to the IGE what his pay does not yet carry. The two age profiles of this section meet in the wage: the son's own spells matter early, the father's
+layoffs in the son's teens late, and both are in the hourly wage.
+
+\subsection{By race}
+
+The rise of the spells component with age is White. On common bootstrap draws, its contribution to the earnings IGE
+rises between 25--29 and 45--49 by 0.066$^{**}$ ($p = 0.010$) for White sons and changes by $-0.042$ ($p = 0.25$) for
+Black sons, a difference of 0.107$^{**}$ ($p = 0.018$); with birth-cohort dummies 0.120$^{***}$ ($p = 0.006$). The
+difference is in the father's layoffs (0.040$^{**}$, $p = 0.028$) and the mother's unemployment (0.065$^{**}$,
+$p = 0.049$). It is not that a layoff costs Black sons less. Within the same son a layoff bends the Black earnings
+profile by $-0.306^{**}$ ($p = 0.015$) per ten years, as much as the White one ($-0.229^{**}$; Table~\ref{tab:layoff_fe}).
+It is that Black fathers' layoffs are not concentrated in low-income families: the gradient of the layoff share in log
+parental income is $-0.046^{***}$ for White fathers at 45--49 and $-0.010^{*}$ for Black fathers, so a cost that rises
+with age raises the White IGE and leaves the Black IGE unchanged.\footnote{Code: \texttt{81.StabilityOpeningByRace.py}
+(\texttt{output/stability\_opening\_by\_race.md}).} The racial difference in what is passed on through spells is in who
+is laid off, not in what a layoff does.

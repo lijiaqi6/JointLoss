@@ -1,0 +1,68 @@
+\section{The IGE Rises With Age}\label{sec:ageprofile}
+
+The IGE of sons' earnings rises by three quarters between the late twenties and the forties. In the PSID it is
+0.276$^{***}$ at 25--29 and 0.492$^{***}$ at 40--44, and it stays near that level to 55 (0.498$^{***}$ at 50--55) (Table~\ref{tab:ige_sons}). The
+same sons followed from 25 to 49 show the same rise, and so do two other cohorts in the NLSY79 and the NLSY97. Ranks of
+family income rise only into the early thirties, so the 31--37 window of \citet{chetty2020race} lies on the plateau of the
+rank profile and before the end of the log profile's rise. The rise is White: the IGE of Black sons is flat in age.
+
+\subsection{The profile}
+
+Pooled across races and weighted, the IGE of sons' own earnings is 0.276$^{***}$ (0.024) at 25--29, 0.403$^{***}$ at
+30--34, 0.454$^{***}$ at 35--39, 0.492$^{***}$ at 40--44 and 0.484$^{***}$ at 45--49; that of their family income goes
+from 0.301$^{***}$ (0.023) to 0.530$^{***}$ at 40--44. Equality across bands is rejected ($\chi^2(5) = 45.3$,
+$p<0.001$), the trend is 0.078$^{***}$ (0.022) per ten years of age, and the mean IGE from 35 exceeds the mean below 35
+by 0.142$^{***}$ ($p<0.001$).\footnote{Sons with parental income over at least three years of their ages 13--19, child-year
+regressions within each band with single-age dummies, PSID weights, standard errors clustered by 1968 family. Code:
+\texttt{26.IGEByAge.py} (\texttt{output/ige\_by\_age.md}, Sections 1a and 2).}
+
+\input{tab_ige_sons}
+
+The rise is not a change in who is observed. In the panel of sons observed in every band of 25--49 the earnings IGE is
+0.272$^{***}$ at 25--29, 0.386$^{***}$ at 30--34, 0.432$^{***}$ at 35--39, 0.473$^{***}$ at 40--44 and 0.478$^{***}$ at
+45--49, a trend of 0.100$^{***}$ (0.027) per ten years. It is the intergenerational face of the life-cycle bias of
+\citet{haider2006life}: following the same sons from 25--29 to 35--39, their family income grows faster with parental
+income by 0.210$^{***}$ (0.031), whereas between 30--34 and 40--44 the growth gradient is 0.021 (0.036), so the rise is
+concentrated before the mid-thirties.\footnote{Appendix Table~\ref{tab:growth}; \texttt{output/ige\_by\_age.md},
+Sections 1b and 5.1.} It replicates in the NLSY79, where the earnings IGE of sons born 1957--64 rises from 0.340$^{***}$ at
+25--29 to 0.506$^{***}$ at 50--54 (an opening of 0.166$^{***}$, $p<0.001$), and in the NLSY97 (a trend of 0.063$^{***}$ over
+25--44). Daughters' family income shows the same rise (Appendix Tables~\ref{tab:ige_daughters} and \ref{tab:nlsyage}).
+
+\subsection{Ranks}
+
+Ranks rise less and earlier. The rank--rank slope of sons' family income is 0.328$^{***}$ (0.020) at 25--29 and
+0.427$^{***}$ at 30--34, and then flat: 0.436$^{***}$ at 35--39, 0.423$^{***}$ at 40--44 and 0.380$^{***}$ at 45--49
+(Appendix Table~\ref{tab:rankage}). The PSID slope in the 31--37 window, 0.442$^{***}$, lies on the plateau. Logs and
+ranks differ because the log IGE also registers the dispersion of sons' log income relative to their parents', which
+grows with age and which ranks normalise away.\footnote{Within the same children and weights, the widening of the
+log profile is mostly the ratio of the standard deviations of children's and parents' log income;
+\texttt{output/ige\_by\_age.md}, Section 5.4.} An IGE measured at 31--37 therefore captures the whole rise in ranks and
+stops before the log IGE reaches its level of the forties.
+
+\subsection{By race}
+
+The rise is concentrated among White sons (Figure~\ref{fig:headline}). The earnings IGE of White sons climbs from
+0.221$^{***}$ at 25--29 to 0.431$^{***}$ at 35--39 and 0.511$^{***}$ at 45--49; that of Black sons is 0.262$^{***}$ at
+25--29 and between 0.20 and 0.28 at every later age. The White--Black gap is $-0.041$ (0.045) at 25--29 and
+0.299$^{***}$ at 45--49, and its opening, the mean gap from 35 minus the mean gap below 35, is 0.232$^{***}$ (0.052) on
+bands 25--49.\footnote{Table~\ref{tab:ige_sons} and Appendix Table~\ref{tab:agetests}. Code: \texttt{26.IGEByAge.py};
+figure: \texttt{31.PaperBFigure.py}.} \citet{chetty2020race} measure rank--rank slopes of 0.28 for Black and 0.32 for
+White children at 31--37 and expected ranks at the 25th parental percentile of 32.6 and 45.2; in the PSID these are
+points on rank profiles that are flat in age for both races. The racial opening in logs is robust to cohorts, period
+effects, attrition weights, an experience clock and a dollar-weighted elasticity, and with one year of parental income it
+is about 0.09 log points in four public data sets, 0.19 corrected for the unreliability of that year (Appendix~\ref{app:race}).
+Sections~\ref{sec:passedon}--\ref{sec:stability} ask which components of what parents pass on carry the rise, and for
+whom.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{paperB_age_profile.pdf}
+\caption{The age profile of intergenerational persistence, with \citet{chetty2020race} placed on it (PSID)}
+\label{fig:headline}
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Panel A: log IGE of sons' own earnings at each age, Black
+and White, from one Lee--Solon regression with parental income interacted with a quartic in the son's age (child-years
+at 25--55; ages above 50 not plotted), 95\% confidence bands. Panel B: rank--rank slope of household income by age band,
+sons and daughters, weighted. Panel C: expected household income rank of children whose parents are at the 25th
+percentile, by age band. Diamonds: \citet{chetty2020race} at 31--37. Shaded: the 31--37 window. Code:
+\texttt{26.IGEByAge.py} (estimates) and \texttt{31.PaperBFigure.py} (figure).\end{minipage}
+\end{figure}

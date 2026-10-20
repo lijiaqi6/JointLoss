@@ -15,10 +15,10 @@ sons (17,710 and 31,182 child-years at 25--65) and 2,367 Black and 2,852 White d
 \$100 or above \$150,000 in 1967 dollars are dropped in both generations \citep{palomino2018one}. Code:
 \texttt{6.IGEMain.py} (\texttt{output/ige\_main.md}).} Within-race estimates are unweighted, which keeps the SEO
 families; pooled estimates across races use the core longitudinal weights, without which the SEO would dominate the
-pooled coefficient.\footnote{On the SRC sample alone the pooled IGE of sons' family income at 40 in 1980--2010 is
-0.483, close to the 0.47 of \citet{palomino2018one}. Code: \texttt{5.CheckPMR.py}.} The main robustness check for
-the racial comparison is the SRC sample alone, and each race weighted by its own sampling weights
-(Table~\ref{tab:gaprobust}).
+pooled coefficient; every result is reported pooled first.\footnote{On the SRC sample alone the pooled IGE of sons'
+family income at 40 in 1980--2010 is 0.483, close to the 0.47 of \citet{palomino2018one}. Code: \texttt{5.CheckPMR.py}.}
+The main robustness check for the racial comparison is the SRC sample alone, and each race weighted by its own sampling
+weights (Appendix Table~\ref{tab:gaprobust}).
 
 The children's adult years are split into six five-year bands, 25--29 to 50--55, and the 31--37 window of
 \citet{chetty2020race} is added. Among sons, the bands contain 1,662 Black and 2,506 White sons at 25--29, 1,125 and
@@ -36,10 +36,10 @@ at 45--49 (Appendix Table~\ref{tab:attrition}). For White sons, staying rises wi
 point at 45--49 holding their own income at 25--29 fixed; for Black sons it does not (0.005). Selective attrition of
 this kind could in principle create an opening gap, since the White sons who remain are those from richer families. It
 does not: weighting each later band by the inverse of the predicted probability of staying changes the opening of
-the gap by $-0.012$ (0.019) for earnings and $-0.014$ (0.016) for family income (Table~\ref{tab:gaprobust}). The
+the gap by $-0.012$ (0.019) for earnings and $-0.014$ (0.016) for family income (Appendix Table~\ref{tab:gaprobust}). The
 weights correct selection on parental income and on income at 25--29, not on unobserved wage growth. The NLSY79, whose
 retention is far higher, gives the bound that a low-attrition panel provides: an opening of 0.088$^{**}$ (0.045) with
-one year of parental income (Table~\ref{tab:threedata}).
+one year of parental income (Appendix Table~\ref{tab:threedata}).
 
 The NLSY79 provides a second sample: respondents born 1960--64 who lived with a parent in 1979, with parental income
 measured as the mean family income of the 1978--80 income years and adult outcomes followed to 55. The NLSY97 provides
@@ -52,13 +52,36 @@ ages.\footnote{Code: \texttt{2.NLSY79.py}, \texttt{26.IGEByAge.py}, \texttt{29.N
 \texttt{10.CYAOutcomes.py} and \texttt{46.AgeProfileRound2.py}. The NLSY97 parental measure is a single year
 for most youths; later years are reported by the youth and cover a selected, older subsample.}
 
-The analysis of what the IGE contains (Section~\ref{sec:contains}) needs the father's own wage and hours and is
-therefore restricted to sons whose father is the male head of their family at 16: 2,148 of 4,109 Black sons (52
-percent) and 3,962 of 4,552 White sons (87 percent). On father-present sons the family-income IGE is 0.363 for Black
-and 0.541 for White sons, against 0.268 and 0.473 on all sons.\footnote{Code: \texttt{24.IGEDecomposition.py}
-(\texttt{output/ige\_decomposition.md}, Section 0).} The father's measures are means over his valid years when the son
-is 12--18. Labor-market instability is measured by flags for displacement (plant closure, layoff or firing),
-unemployment, reduced hours (below 1,500 while attached full time) and zero hours.
+\subsection{What the parents did: the components}
+
+The split of Section~\ref{sec:passedon} needs, for each son, what his parents earned per hour, how much they worked,
+how often they were out of work and why, and the labor market they lived in, all over his teens. The PSID records each
+of these every year. The components are means over the son's ages 13--19 of the father's and the mother's log hourly
+wage (annual labor earnings over annual hours), their log annual hours and the mother's years without work; the
+father's shares of years with a plant closure, with a layoff or firing, unemployed and with zero hours, from the
+PSID's question on why the last job ended and its employment status; the variance of his transitory earnings; the
+mother's share of years unemployed; and the unemployment rate and a Bartik shock to men's labor demand in the state
+where the family lived. A plant closure (`plant closed or moved') and a layoff (`laid off or fired') are kept apart,
+because a closure displaces workers whatever their quality and a layoff selects them \citep{gibbons1991layoffs}. Where
+a parent is absent or a measure is missing, the measure takes its mean among the observed and a flag enters a
+family-structure component. The sample is the 4,770 sons with parental income over at least three of their ages 13--19,
+observed in 46,540 son-years at 25--55.\footnote{Code: \texttt{75.WhatIsPassedOn.py}; the parents' other resources
+(schooling, asset, transfer and other members' income, AFDC/TANF years, home ownership, family size) come from the
+family files of 1968--2011, \texttt{80.WhatIsPassedOnRest.py}.}
+
+The three NLS data sets measure the parents less often, which is what makes them a test of measurement. In the NLSY79
+Children and Young Adults the mother is the respondent, and her weekly work history, the reasons her jobs ended and her
+spouse's weeks without work cover every week of the child's teens. The NLSY79 youths describe the household at 14 once:
+the occupation and work of the adult man and woman, region, the parents' schooling and reading materials at home; the
+son's AFQT, taken in 1980, measures his skill before he enters the labor market. The NLSY97 parent interview reports
+one year of wages and usual hours, the parents' employment breaks without their reason, and the family's transfers in
+1996.\footnote{Code: \texttt{83.CYAWhatIsPassedOn.py}, \texttt{86.NLSY79YouthWhatIsPassedOn.py},
+\texttt{87.NLSY79YouthAFQT.py} and \texttt{85.NLSY97WhatIsPassedOn.py}.} Two measures of the family's surroundings
+come from outside the panels: the monthly job finding of non-employed men and women of the son's race in his state,
+from the CPS basic monthly files of 1994--2021, and the generosity of the state's unemployment insurance, its maximum
+weekly benefit over its average weekly wage, from the Department of Labor's statutory schedules; both are averaged over
+the son's ages 12--18 in the state where he lived at 17.\footnote{Code: \texttt{17.AtlasFrictions.py} and
+\texttt{12b.UIGenerosity.py}.}
 
 \subsection{Measures of persistence}
 
@@ -69,10 +92,10 @@ y_{it} = \beta_{b}\, \bar y^{p}_{i} + f(A_i) + \delta_{a(i,t)} + \varepsilon_{it
 where $y_{it}$ is the log outcome of child $i$ in year $t$ at an age in band $b$, $\bar y^{p}_{i}$ is log parental
 income, $f(A_i)$ a quartic in the parent's age and $\delta_a$ single-year age dummies. All bands and both races are
 estimated jointly in one stacked, fully interacted regression with standard errors clustered by 1968 family, so that
-the change of $\beta_b$ across bands, and of the racial gap in it, can be tested. The summary statistic of the racial
-divergence is the \emph{opening} of the gap: the mean White--Black gap over the bands from 35 minus the mean gap over
-the bands below 35, on bands 25--49 unless stated (25--44 when the NLSY97 and the NLSY79 children are compared). All
-racial differences in the paper are White minus Black. I also report the age-interacted design of \citet{lee2009trends}, which interacts parental income
+the change of $\beta_b$ across bands, and of the racial gap in it, can be tested. The \emph{opening} of the IGE, or of
+a component's contribution to it, is its value at 45--49 minus its value at 25--29 (50--54 in the NLSY79 youths, 35--39
+in the NLSY97). The opening of the racial gap is the mean White--Black gap over the bands from 35 minus the mean gap
+over the bands below 35, on bands 25--49 unless stated. All racial differences in the paper are White minus Black. I also report the age-interacted design of \citet{lee2009trends}, which interacts parental income
 with a quartic in the child's age and evaluates the IGE at every age.
 
 \paragraph{Ranks and expected income.} Following \citet{chetty2014where} and \citet{chetty2020race}, the child's
