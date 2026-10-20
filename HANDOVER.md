@@ -14,7 +14,7 @@ environment variables are in `README.md`.
 - Stata 19 (`C:\Program Files\StataNow19\StataMP-64.exe`): the BPS harness (`bps_check.py`, `bps_trim_test.py`,
   `bps_reconciliation/`) runs as before. No Fortran compiler.
 - Git-ignored person-level inputs are in place: `paperA_model/inputs/psid_entry_couples.csv`, `_25_30.csv`.
-- Data caches through `IGE_DATA` (Windows user variable, `G:\My Drive\Selection vs risk\IGE\data`).
+- Data caches through `IGE_DATA` (Windows user variable, `G:\My Drive\IGE_data` since 2026-10-20).
 - Exchange with GitHub only: commit on main (no branches), push after every commit, `git fetch` +
   `git merge origin/main` when a push is rejected (HPC jobs push results), never rebase.
 

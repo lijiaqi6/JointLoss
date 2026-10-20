@@ -35,7 +35,7 @@ Selection-vs-risk). Each has its own clone of this repository and exchanges work
 ## Paths outside git (environment variables; defaults suit the PC)
 
 - `IGE_DATA`: person-level caches the data scripts read and write (default `./data`, git-ignored). Shared by both
-  papers; on the PC currently `G:\My Drive\Selection vs risk\IGE\data` (6.7 GB).
+  papers; on the PC `G:\My Drive\IGE_data` since 2026-10-20 (6.7 GB).
 - `DROPBOX`: raw data and replication packages, read only (default `~/Dropbox`).
 - `NLSY79_DIR`: Selection-vs-risk's `NLSY79/` folder (helpers and NLSY79 extracts), read only.
 - `STATA_EXE`: Stata for the BPS harness (default the PC's StataNow19).
