@@ -24,6 +24,9 @@ Steps (bps_reconciliation/HARNESS.md):
         p_c (new)          = p_c x Cov_perm(BPS) / hat Cov_perm
     printed always; written into inputs/wage_process.json (with the before / after values and the BPS numbers) only
     with --apply (one pass: the plan says once).
+ --apply-from <bps_trim.json> [--trim-spec F_none_shipped]: the same rule on the Table 3 numbers of one spec of
+    bps_trim_test.py (2026-10-20, INTAKE 2b: the clean spec, no measurement error in the data and BPS's correction off,
+    because the harness's error layer cannot draw the husband's wage error at its target); no simulation, no Stata.
  --sigma-nu-zero: check (7) proper: the same run with the transitory shocks switched off (sigma_nu = 0); the BPS
     transitory variance then comes only from displacement, within-year human capital moves and the measurement error.
 Outputs: results/bps_<stamp>/bps_check.json (aggregate numbers only; the simulated panel stays in the work folder).
@@ -128,6 +131,28 @@ def correction(wp, est):
     return new
 
 
+def apply_from(path, spec, inputs):
+    """The correction on one spec of a bps_trim_test.py run, written into inputs/wage_process.json."""
+    tr = json.loads(Path(path).read_text())
+    est = tr["bps"][spec]
+    wp = json.loads((inputs / "wage_process.json").read_text())
+    if "bps_correction" in wp:
+        raise SystemExit("inputs/wage_process.json already carries a bps_correction (the plan applies it once)")
+    base = {k: wp[k] for k in ("p_c", "p_eps_w", "p_eps_h", "sig_nu_w", "sig_nu_h", "rho_nu")}
+    new = correction(base, est)
+    wp.update(new)
+    wp["bps_correction"] = dict(date=datetime.now().isoformat(), before=base, source=str(Path(path).as_posix()),
+                                spec=spec, start=tr.get("start"), K=tr.get("K"),
+                                bps_on_sim={k: float(v) for k, v in est.items() if k.startswith("T3_")},
+                                bps_published=BPS_T3, rule="plan Section 1.2: sigma^2 = max(0.5 s2, 2 s2 - hat); p_eps, "
+                                "p_c rescaled by target / recovered permanent (co)variance")
+    wp["status"] = (f"closed forms + one-time BPS-harness correction on bps_trim_test spec {spec} "
+                    f"(bps_check.py --apply-from)")
+    (inputs / "wage_process.json").write_text(json.dumps(wp, indent=1))
+    print(json.dumps(dict(before=base, after=new), indent=1))
+    print("inputs/wage_process.json updated")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--start", default=None, help="best.json / mean.json or a run folder (default: analytic start)")
@@ -140,9 +165,14 @@ def main():
     ap.add_argument("--sigma-nu-zero", dest="nu0", action="store_true")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--no-stata", dest="no_stata", action="store_true", help="write the panel only")
+    ap.add_argument("--apply-from", dest="apply_from", default=None, help="bps_trim.json of bps_trim_test.py")
+    ap.add_argument("--trim-spec", dest="trim_spec", default="F_none_shipped")
     a = ap.parse_args()
     t_all = time.time()
     from params import INPUTS
+    if a.apply_from:
+        apply_from(a.apply_from, a.trim_spec, INPUTS)
+        return
     import post_common as pc
     import sim_panel_writer as spw
     # the estimated model exactly as 'estimate.py evaluate --start <start>' builds it (post_common.setup ->
