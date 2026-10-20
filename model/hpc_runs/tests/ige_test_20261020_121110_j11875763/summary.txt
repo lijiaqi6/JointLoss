@@ -1,0 +1,10 @@
+run ige_test_20261020_121110_j11875763
+job 11875763
+code 16a076d4efd90d2706b0a8047764c07a1c9bff75
+mode test
+status 0
+cores 32 workers 30 popsize 30 maxfevals 15000,8000,8000,8000
+settings 
+elapsed_min 3
+maxrss 7821684K
+requested TimeLimit=00:40:00 mem=10G mem=10G 
