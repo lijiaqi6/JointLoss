@@ -9,7 +9,7 @@ import _common
 MODULES = ["test_0_egm_bruteforce", "test_1_flat_consumption", "test_2_buffer", "test_3_wife_work",
            "test_4_search_friction", "test_5_ui_lapse", "test_6_independence", "test_7_closed_forms",
            "test_8_sigma_eps", "test_9_grid_accuracy", "test_10_measurement", "test_11_objective_polish",
-           "test_12_ext_flags_off"]
+           "test_12_ext_flags_off", "test_13_block_decorr"]
 
 
 def main():

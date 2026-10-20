@@ -64,7 +64,10 @@ moments, parameters and diagnostics only. `inputs/psid_entry_couples*.csv` (PSID
 2. **Weights** `--weighting diag_noise` (default): 1 / (se^2 + var_sim), var_sim from `inputs/moment_noise.csv` (5 CRN
    seeds at the analytic start, K = 3; written by `estimate.py noise --weighting diag --save-noise-input`), scaled by
    K_noise / K. `run.json` / `evaluate.json` record the weighting, the noise file, the exclusions and the weight shares
-   by block (`results/diagnostics_20261018.md`).
+   by block, in z units (w se^2) since 2026-10-20: the earlier shares summed raw 1/se^2 across units and overstated the
+   CPS hazards (`results/reestimate_plan_20261020.md`). `--weighting block` (robustness) = these weights x N / (B n_b),
+   equal weight per block in z^2 units (fixed 2026-10-20; the earlier version equalised raw sums). The Jacobian
+   `report.md` adds each block's share of each parameter's information.
 3. **`estimate.py polish`**: Levenberg-Marquardt in z units (`lm_iterate`): CRN central-difference Jacobian
    (`jacobian_at`, chain rule to z), trial steps for mu x {1e-3 ... 1e3} in one parallel round, accept if Q falls,
    otherwise mu x 1e4 (two retries); writes `best.json`, `iterations.csv`, `evals.csv`, `jacobian.npz` every
@@ -269,7 +272,7 @@ in `/mnt/parscratch/users/$USER/joint_smm_results`; nothing under `~/svr`. The P
 | resume (CMA) | `sbatch --job-name=Joint-smm-main-r --time=12:00:00 paperA_model/hpc_job_a.py --push --resume /mnt/parscratch/users/$USER/joint_smm_results/runs/<run dir>` |
 | Jacobian | `sbatch --job-name=Joint-jacobian --time=01:00:00 paperA_model/hpc_job_a.py jacobian --start <best.json> --push` |
 | standard errors | `sbatch --job-name=Joint-se --time=01:30:00 paperA_model/hpc_job_a.py se --start <best.json> --push` |
-| block weights | `sbatch --job-name=Joint-smm-block --time=12:00:00 paperA_model/hpc_job_a.py run --label block --weighting block --start <gn>/best.json --sigma0 0.2 --maxfevals 3500 --push` |
+| block weights (robustness; scale-free since 2026-10-20) | `sbatch --job-name=Joint-smm-block --time=12:00:00 paperA_model/hpc_job_a.py run --label block --weighting block --start <gn>/best.json --sigma0 0.2 --maxfevals 3500 --push` |
 | push only | `sbatch --job-name=Joint-push --dependency=afterany:<job> --time=00:10:00 --cpus-per-task=1 --mem=2G paperA_model/hpc_job_a.py --push-only <run dir>` |
 | queue | `squeue -u $USER -o "%.10i %.24j %.8T %.10M %.6D %R"` |
 

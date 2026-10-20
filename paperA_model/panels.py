@@ -156,8 +156,11 @@ class Records:
         # displacement (treated / clean-control status of the stacked designs), never as an outcome
         self.DHsep = np.zeros_like(self.DH)
         if theta is not None:
-            tau = np.asarray(res.info["tau"])
-            m_ = np.where(tau == 1, theta["m_H"], 1.0)
+            # the same marginal hazard under the decorrelation counterfactuals (res.info['decorr'])
+            tau_h = np.asarray(res.info.get("tau_h", res.info["tau"]))
+            m_ = np.where(tau_h == 1, theta["m_H"], 1.0)
+            if res.info.get("decorr") == "mean":
+                m_ = np.full(len(tau_h), 1.0 + theta["p_H"] * (theta["m_H"] - 1.0))
             dh = np.where(self.race == 0, theta["delta_h_B"], theta["delta_h_W"])
             sx = np.minimum(self.s, 1) if merge_s12 else self.s
             pic = np.array([theta["pi_c0"], theta["pi_c1"], theta["pi_c1" if merge_s12 else "pi_c2"]])[sx]

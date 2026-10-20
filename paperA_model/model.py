@@ -182,6 +182,25 @@ class Model:
             self.pic = th["pi_c1"]
         else:
             self.pic = th[f"pi_c{s}"]
+        # marginal-preserving decorrelation (counterfactual (i), 2026-10-20; override 'decorr', off in estimation): each
+        # spouse keeps the marginal monthly hazard pi_c(s) + (1 - pi_c(s)) m delta_j(r) and pi_c is set to 0, so the
+        # spouses' displacements are independent. 'mean': m = E[m_tau] = 1 + p_H (m_H - 1) for everyone (also removes
+        # the dispersion of risk across couples); 'indep': own types, tau = tau_w + 2 tau_h (simulate draws tau_h from
+        # its own CRN slot), each spouse's hazard distribution unchanged
+        dc = ov.get("decorr")
+        self.dw_S = None                                # separated wife's hazard when it differs from dw (decorr only)
+        if dc:
+            if dc == "mean":
+                mw = mh = 1.0 + th["p_H"] * (th["m_H"] - 1.0)
+            elif dc == "indep":
+                mw = th["m_H"] if tau & 1 else 1.0
+                mh = th["m_H"] if tau & 2 else 1.0
+            else:
+                raise ValueError(f"decorr={dc!r}: 'mean' or 'indep'")
+            self.dw_S = min(mw * th[f"delta_w_{R}"], 0.999)     # m delta_w(r): no common shock after a separation
+            self.dw =min(self.pic + (1 - self.pic) * mw * th[f"delta_w_{R}"], 0.999)
+            self.dh = min(self.pic + (1 - self.pic) * mh * th[f"delta_h_{R}"], 0.999)
+            self.pic = 0.0
         self.lw_ = th[f"lam_w_{R}"]
         self.lh_ = th[f"lam_h_{R}"]
         self.qui = sch["ui"]["q_ui"]
@@ -387,6 +406,7 @@ class Model:
 
         # separated wife: configs (lw, hours), own hazard dw only (no common shock), no husband
         cfgS, outS = [], []
+        dwS = dw if self.dw_S is None else self.dw_S
         stS = -np.ones((NLW, 3), np.int64)
         stSn = np.zeros(NLW, np.int64)
         for lw in range(NLW):
@@ -394,7 +414,7 @@ class Model:
                 ww, wnd, wd = wife_events(lw, hw_)
                 lst = []
                 if ww:
-                    lst += [((1 - dw) * p_, si) for p_, si in wnd] + [(dw * p_, si) for p_, si in wd]
+                    lst += [((1 - dwS) * p_, si) for p_, si in wnd] + [(dwS * p_, si) for p_, si in wd]
                 else:
                     lst += list(wnd)
                 stS[lw, stSn[lw]] = len(cfgS)

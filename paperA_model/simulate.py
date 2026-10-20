@@ -114,11 +114,12 @@ def sim_kernel(seed, uid, row, t_beg, t_end, m_off, st_a, st_lw, st_lh, st_hw, s
                cfgS_hw, incS0, snapBS, disuS, scS, xflS, earn, ui, eitc_t, eitcS_t, uiS, asset_limit, beta, g, rm, sig,
                kappaS, pnu, pic, dw, dh, lamw, lamh, q, ex, sigE, sigN, sep_share, Aw_idx, Aw_p, Aw_n, Ah_idx, Ah_p,
                Ah_n, Iw, Ih, Is, pc, Pk, E_, UP_, UF_, N_, sigw, recF, recI, Dlt, DltS, ui_acc, herm, rwedge, cmem, jL,
-               EN_, xinj, gnj, njui, sjw):
+               EN_, xinj, gnj, njui, sjw, dwS):
     """Simulate couples i from month t_beg[i] to t_end[i] (inclusive) with this era's stored solution; records go to
     row row[i] of the record arrays. Extensions (2026-10-19; inactive with EN_ = -1, sjw = 0): EN_ = the new-job
     state (exit hazard xinj after the displacement draws, CRN slot 42; established with gnj, slot 43; njui: the exit is a
-    displacement with UI take-up); sjw = separation hazard added while she is UI-entitled next month."""
+    displacement with UI take-up); sjw = separation hazard added while she is UI-entitled next month. dwS = the
+    separated wife's hazard (= dw except under the decorrelation counterfactual, Model.dw_S)."""
     NC = uid.shape[0]
     E_in = EN_ if EN_ >= 0 else E_                        # state a wife enters when she takes a job
     NA = agrid.shape[0]
@@ -335,7 +336,7 @@ def sim_kernel(seed, uid, row, t_beg, t_end, m_off, st_a, st_lw, st_lh, st_hw, s
                     dw_t = min(dw * (1.0 + cmem), 0.999)
                 if lw != E_ and lw != N_ and lw != EN_:       # memory: she is non-employed and UI-entitled
                     dh_t = min(dh * (1.0 + cmem), 0.999)
-                if works_w and u01(seed, u_, t, 22) < dw_t:
+                if works_w and u01(seed, u_, t, 22) < (dw_t if mar == 1 else dwS):
                     dsp_w = True
                 if works_h and u01(seed, u_, t, 23) < dh_t:
                     dsp_h = True
@@ -544,12 +545,23 @@ def simulate(theta: dict, cfg: Config, entry: pd.DataFrame | None = None, K: int
     # couple type from a CRN uniform (slot 40)
     ut = _u01_vec(np.array([seed]), uid, np.zeros(n, np.int64), np.full(n, 40, np.int64))
     tau = (ut < theta["p_H"]).astype(int)
+    tau_h = tau.copy()                                                   # the husband's type (the couple's, in estimation)
+    dc = (overrides or {}).get("decorr")
+    if dc == "mean":                                                     # one hazard for all: the tau = 1 problems are empty
+        tau[:] = 0
+        tau_h[:] = 0
+    elif dc == "indep":                                                  # own types: the wife keeps slot 40, husband slot 44
+        uh = _u01_vec(np.array([seed]), uid, np.zeros(n, np.int64), np.full(n, 44, np.int64))
+        tau_h = (uh < theta["p_H"]).astype(int)
+        tau = tau + 2 * tau_h
     s_eff = ent["s"].to_numpy().copy()
     if cfg.merge_s12:
         s_eff = np.minimum(s_eff, 1)
     nm = (cfg.sim_end_year - M0 + 1) * 12
     res = SimResult(n, nm)
     res.info["tau"] = tau
+    res.info["tau_h"] = tau_h
+    res.info["decorr"] = dc
     res.info["entry"] = ent
     res.info["entry_source"] = src
     res.info["uid"] = uid
@@ -566,6 +578,8 @@ def simulate(theta: dict, cfg: Config, entry: pd.DataFrame | None = None, K: int
     tim.setdefault("sim", 0.0)
     herm = getattr(cfg, "w_interp", "hermite") == "hermite"
     probs = problems if problems is not None else cfg.problems()
+    if dc == "indep" and problems is None:
+        probs = [(r, s, t) for (r, s, t0_) in probs if t0_ == 0 for t in range(4)]
     for (r, s, tp) in probs:
         sel = np.nonzero((ent["race"].to_numpy() == r) & (s_eff == s) & (tau == tp) & ok)[0]
         if len(sel) == 0:
@@ -613,7 +627,7 @@ def simulate(theta: dict, cfg: Config, entry: pd.DataFrame | None = None, K: int
                        mdl.Aw_idx, mdl.Aw_p, mdl.Aw_n, mdl.Ah_idx, mdl.Ah_p, mdl.Ah_n, mdl.Iw, mdl.Ih, mdl.Is,
                        mdl.p_c, mdl.Pk, mdl.E_, mdl.UP_, mdl.UF_, mdl.N_, 0.0, res.F, res.I, sol.Dlt, sol.DltS,
                        bool(mdl.ui_accept), herm, mdl.r_wedge, mdl.c_mem, mdl.jL, mdl.EN_, mdl.xi_nj, mdl.g_nj,
-                       bool(mdl.nj_ui), mdl.sig_Jw)
+                       bool(mdl.nj_ui), mdl.sig_Jw, mdl.dw if mdl.dw_S is None else mdl.dw_S)
             # separated wife's earnings (the kernel leaves a placeholder): her wage x hours of the chosen config
             _fill_sep_earnings(res, sel, tb, te, moff, mdl)
             # couples whose era window was empty keep their state; st_t moved only where te >= tb
