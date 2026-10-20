@@ -10,7 +10,7 @@ tab_layoff_fe.tex, tab_shea_spell.tex, tab_son_friction.tex, tab_ui_stability.te
 tab_passed_on_race.tex. Layout and helpers of 28.PaperBTables.py (coefficient with stars, s.e. below; p-values from
 the bootstrap s.e., normal approximation, as in the source scripts).
 
-Run:  python IGE/90.PaperBRaceNeutralTables.py
+Run:  python 90.PaperBRaceNeutralTables.py
 """
 import importlib.util
 import json
@@ -46,8 +46,8 @@ def cell(t, dec=3, pct=False):
 
 
 def src(*scripts):
-    return ("Source: " + ", ".join(rf"\texttt{{IGE/{x}}}" for x in scripts)
-            + r"; table built by \texttt{IGE/90.PaperBRaceNeutralTables.py}. " + STARS)
+    return ("Source: " + ", ".join(rf"\texttt{{{x}}}" for x in scripts)
+            + r"; table built by \texttt{90.PaperBRaceNeutralTables.py}. " + STARS)
 
 
 # ================================================================ 1. what is passed on (PSID)
@@ -323,7 +323,7 @@ def t_ui():
           "tab:ui_stability", heads, [("A. Split by UI generosity relative to the son's cohort", rows),
                                       ("B. Interactions (first column; per standard deviation of each)", rows2)],
           "UI generosity = the state's maximum weekly benefit over its average weekly wage, mean over the son's ages "
-          "12--18 in his state at 17 (DOL Significant Provisions; IGE/12b). Panel A: sons above and below the median of "
+          "12--18 in his state at 17 (DOL Significant Provisions; \\texttt{12b.UIGenerosity.py}). Panel A: sons above and below the median of "
           "generosity net of five-year cohort means, Table~\\ref{tab:passed_on} panel A split in each half, common "
           "bootstrap draws. Panel B: the son's outcome on all components (one s.d.), ln parental income, UI and UI "
           "$\\times$ each element, with state fixed effects, five-year cohort and single-age dummies; standard errors "
@@ -352,7 +352,7 @@ def t_group():
                                     ("B. Share of the earnings IGE carried by the place component", rows)],
           "Job finding = monthly probability that a non-employed man (woman) aged 20--45 of the son's race in his state "
           "at 17 is employed the next month, CPS basic monthly 1994--2021 matched across months, pooled over the son's "
-          "ages 12--18 (IGE/17). Panel A, first row: White / Black means. Panel B: the place component's share of the "
+          "ages 12--18 (\\texttt{17.AtlasFrictions.py}). Panel A, first row: White / Black means. Panel B: the place component's share of the "
           "IGE in Table~\\ref{tab:passed_on} panel A's split, on the sons with the measure (born 1976 and later, 1,752). "
           + src("84.GroupFrictionByRace.py"))
 

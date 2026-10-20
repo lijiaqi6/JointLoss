@@ -13,7 +13,7 @@ All PSID occupation codes are mapped to David Dorn's consistent occ1990dd scheme
 the mean log hourly wage of men aged 25--64 in the occupation relative to all men, from 2.9 million CPS Outgoing
 Rotation Group records of 1979--2019. Each son's log wage is the sum of the score of his occupation and his wage
 relative to it, so the parental-income gradient of the log wage splits exactly into a between- and a
-within-occupation part.\footnote{Code: \texttt{IGE/27.CareerWageGrowth.py} (\texttt{output/career\_wage\_growth.md},
+within-occupation part.\footnote{Code: \texttt{27.CareerWageGrowth.py} (\texttt{output/career\_wage\_growth.md},
 Section 0). The score accounts for about a quarter of the variance of sons' log wages.} Pooled, the gradient rises
 from 0.259$^{***}$ at 25--34 to 0.410$^{***}$ at 35--55; the between-occupation part barely moves (0.158 to 0.176) and
 the within-occupation part more than doubles (0.102 to 0.235) (Figure~\ref{fig:career}, Table~\ref{tab:careerdecomp}).
@@ -29,7 +29,7 @@ advantage hardly grows afterwards; what grows is the wage within the occupation.
 \caption{Wage persistence by the son's age: between and within occupations (PSID)}\label{fig:career}
 \begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Coefficient of the son's log wage, of his occupation's wage
 score and of his within-occupation residual on log parental income, by age band, with 95\% confidence intervals. The
-score and the residual add up to the log wage. Code: \texttt{IGE/27.CareerWageGrowth.py}.\end{minipage}
+score and the residual add up to the log wage. Code: \texttt{27.CareerWageGrowth.py}.\end{minipage}
 \end{figure}
 
 \input{tab_career_decomp}
@@ -43,7 +43,7 @@ log wage on parental income, separately in each age band. The early job may then
 the drop in the parental-income coefficient it produces at 35--55 relative to 25--34 is the part of the rise of
 persistence predicted by where the son started (Table~\ref{tab:earlyjob}).\footnote{93 percent of sons observed at
 35--55 have an early job, and they look like all sons at 25--34. Randomly reassigning cells across sons gives shares of
-about 0.03. Code: \texttt{IGE/35.EarlyIndustryLatePayoff.py} (\texttt{output/early\_industry\_late\_payoff.md}).}
+about 0.03. Code: \texttt{35.EarlyIndustryLatePayoff.py} (\texttt{output/early\_industry\_late\_payoff.md}).}
 
 The son's occupation-by-industry cell at 25--34 accounts for 0.405$^{***}$ of the pooled rise of persistence after 35
 and 0.493$^{***}$ ($p=0.004$) of the racial divergence, mostly through occupation (his occupation group alone: 0.377$^{***}$
@@ -84,7 +84,7 @@ racial difference, 0.018$^{*}$ ($p=0.062$), is less precisely estimated than its
 measurement: over two intervals it is 0.019$^{***}$ and among strict stayers whose tenure covers both income years
 0.013$^{**}$.\footnote{Controlling for the wage at the interview before the pair raises it to 0.036$^{***}$, so it is not
 catch-up after a low start; over whole employer spells it is 0.019$^{***}$. \texttt{output/same\_employer\_growth\_checks.md},
-Section B. Code: \texttt{IGE/36.SameEmployerGrowthChecks.py}.} About half of it is sorting into steep jobs: within the
+Section B. Code: \texttt{36.SameEmployerGrowthChecks.py}.} About half of it is sorting into steep jobs: within the
 cell of the first interview of the pair it is 0.011$^{*}$ ($p=0.095$), within the cell of the later interview 0.006
 ($p=0.34$), and within cells the racial difference is 0.006--0.007, not significant. Controlling for the son's years of
 education lowers it to 0.008 ($p=0.17$). In the NLSY79, where the employer is observed directly in the job roster, the
@@ -113,7 +113,7 @@ large part of the divergence: adding years of schooling to the regression of the
 removes 0.057$^{***}$ of the pooled rise of wage persistence after 35 (a share of 0.44$^{***}$), and 0.069$^{***}$ of the
 0.186$^{***}$ change in the racial gap (0.37$^{***}$); for earnings 0.090$^{***}$ of 0.203$^{***}$ (0.44$^{***}$), and in
 the NLSY79 0.038$^{***}$ of 0.054$^{**}$ (0.72$^{**}$). Education is an outcome of the same background, so these are
-shares of accounting, not causal mediation.\footnote{Code: \texttt{IGE/42.SchoolingAndJobGrowth.py}
+shares of accounting, not causal mediation.\footnote{Code: \texttt{42.SchoolingAndJobGrowth.py}
 (\texttt{output/schooling\_job\_growth.md}).}
 
 \input{tab_schooling}
@@ -132,7 +132,7 @@ time; allowing the return to trend with the calendar leaves the racial differenc
 for earnings and 0.035 ($p=0.12$) for wages, and within the cohorts born 1955--69 it is 0.051$^{***}$ and 0.029$^{*}$. In
 the NLSY79, a single cohort, the difference is 0.017$^{*}$ within the current cell and 0.021$^{**}$ (0.009) when the AFQT
 is held fixed. The Black sons' higher return at 25--29 also survives the job (0.061$^{***}$ in earnings within the early
-cell) in the PSID, but not in the NLSY79 (0.008).\footnote{Code: \texttt{IGE/45.WithinCellIdentification.py}
+cell) in the PSID, but not in the NLSY79 (0.008).\footnote{Code: \texttt{45.WithinCellIdentification.py}
 (\texttt{output/within\_cell\_identification.md}); NLSY79 AFQT results in Appendix Table~\ref{tab:afqtgrowth}.}
 
 The age pattern of the returns says which mechanism this is. Under employer learning the coefficient on schooling, which
@@ -152,7 +152,7 @@ experience, their product and region fixed effects by AFQT decile, men aged 23--
 reproduces their pattern: no difference in deciles 1--5, and negative Black $\times$ experience in deciles 9 and 10
 ($-1.03^{**}$ and $-1.93^{***}$ dollars a year, $p = 0.034$ and $p < 0.001$), cells that hold 4 and 3 Black men. With
 the supplemental sample no decile differs and the slope pooled within deciles is 0.028 dollars a year (s.e.\ 0.071,
-$p = 0.70$). Code: \texttt{IGE/70.RauhReplication.py}; output \texttt{output/rauh\_replication.md}.}
+$p = 0.70$). Code: \texttt{70.RauhReplication.py}; output \texttt{output/rauh\_replication.md}.}
 The same-employer evidence points the same way but is weaker: a year of schooling raises same-employer wage growth at
 25--34 by 0.010$^{***}$ for White and 0.003 for Black sons (difference 0.007$^{**}$, $p=0.030$), and within the cell of
 the first interview the difference is 0.004 ($p=0.37$); in the NLSY79 it is 0.002 ($p=0.47$) and 0.005$^{*}$ within the

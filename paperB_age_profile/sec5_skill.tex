@@ -14,7 +14,7 @@ The NLSY79 follows sons born 1957--64 to their late fifties, and their earnings 
 the 1979 interview records about the parents---the occupation and work of the adult man and woman at 14, region, the
 parents' schooling and reading materials at home---assigns 0.120$^{***}$ ($p<0.001$) of the opening to the parents'
 schooling and reading, and nothing to the parents' occupation wage (1.1\%, $p = 0.35$).\footnote{2,952 sons; 1979
-weights; 200 cluster-bootstrap draws of 1979 households. Code: \texttt{IGE/86.NLSY79YouthWhatIsPassedOn.py}.} The father's
+weights; 200 cluster-bootstrap draws of 1979 households. Code: \texttt{86.NLSY79YouthWhatIsPassedOn.py}.} The father's
 schooling carries the rising part: 0.016 at 25--29, 0.044$^{***}$ at 35--39 and 0.076$^{***}$ at 50--54, the same shape as
 in the PSID (0.014 to 0.075$^{***}$ at 45--49; Section~\ref{sec:passedon}).
 
@@ -24,7 +24,7 @@ carries 28.0\%$^{***}$ of the IGE over 25--59, and its contribution rises from 0
 schooling share runs through the son's AFQT (0.027$^{***}$ of 0.039$^{***}$), and two fifths of its rise with age
 (0.025$^{***}$ of 0.060$^{***}$). The parents' schooling and reading beyond the AFQT still open by 0.059$^{***}$
 ($p = 0.004$), and the rest no longer opens (0.003, against 0.048 without the AFQT).\footnote{AFQT-3 (2006 revision),
-standardised within birth year over the civilian sample with 1979 weights. Code: \texttt{IGE/87.NLSY79YouthAFQT.py}
+standardised within birth year over the civilian sample with 1979 weights. Code: \texttt{87.NLSY79YouthAFQT.py}
 (\texttt{output/nlsy79\_youth\_afqt.md}).} The AFQT is measured after some of the son's own schooling, so it is his
 skill when he enters the labor market, not an endowment.
 
@@ -45,7 +45,7 @@ relative to it: the parental-income gradient of the log wage rises from 0.259$^{
 35--55, and the occupation part barely moves (0.158 to 0.176) while the within-occupation part more than doubles (0.102
 to 0.235) (Figure~\ref{fig:career}, Table~\ref{tab:careerdecomp}).\footnote{All PSID occupation codes mapped to the
 occ1990dd scheme; the score is the mean log hourly wage of men aged 25--64 in the occupation relative to all men, from
-2.9 million CPS Outgoing Rotation Group records of 1979--2019. Code: \texttt{IGE/27.CareerWageGrowth.py}.} Background
+2.9 million CPS Outgoing Rotation Group records of 1979--2019. Code: \texttt{27.CareerWageGrowth.py}.} Background
 buys a better-paid occupation at the start, and that advantage hardly grows; what grows is the wage within it.
 
 \begin{figure}[!htbp]
@@ -54,7 +54,7 @@ buys a better-paid occupation at the start, and that advantage hardly grows; wha
 \caption{Wage persistence by the son's age: between and within occupations (PSID)}\label{fig:career}
 \begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Coefficient of the son's log wage, of his occupation's wage
 score and of his within-occupation residual on log parental income, by age band, with 95\% confidence intervals. The
-score and the residual add up to the log wage. Code: \texttt{IGE/27.CareerWageGrowth.py}.\end{minipage}
+score and the residual add up to the log wage. Code: \texttt{27.CareerWageGrowth.py}.\end{minipage}
 \end{figure}
 
 \input{tab_career_decomp}
@@ -63,7 +63,7 @@ The job a son holds at 25--34 predicts it. With fixed effects for his modal occu
 whatever he does later, the parental-income coefficient at 35--55 falls by 0.405$^{***}$ of its rise after 35; his
 detailed occupation alone accounts for 0.591$^{***}$ (Table~\ref{tab:earlyjob}).\footnote{93 percent of sons observed
 at 35--55 have an early job; randomly reassigning cells gives shares of about 0.03. Code:
-\texttt{IGE/35.EarlyIndustryLatePayoff.py}.} Access to the jobs whose wages keep growing is unequal by background: 20.2
+\texttt{35.EarlyIndustryLatePayoff.py}.} Access to the jobs whose wages keep growing is unequal by background: 20.2
 percent of sons from the top third of parental incomes start in one, 4.7 percent from the bottom third
 (Table~\ref{tab:access}). The early job also reflects the son's own skill, so these shares say how far where a son stands
 at 25--34 predicts how far he pulls away, not what the job itself does.
@@ -74,7 +74,7 @@ at 25--34 predicts how far he pulls away, not what the job itself does.
 Schooling carries much of it. Adding the son's years of schooling to the regression of his log wage on parental income
 by band removes 0.057$^{***}$ of the rise of wage persistence after 35, a share of 0.44$^{***}$; for earnings 0.090$^{***}$
 of 0.203$^{***}$ (0.44$^{***}$), and in the NLSY79 0.038$^{***}$ of 0.054$^{**}$ (0.72$^{**}$).\footnote{Code:
-\texttt{IGE/42.SchoolingAndJobGrowth.py}.} The return to a year of schooling rises with age, and half of its rise is the
+\texttt{42.SchoolingAndJobGrowth.py}.} The return to a year of schooling rises with age, and half of its rise is the
 sorting of the educated into jobs whose wages grow: holding the early job fixed halves the rise of the earnings return,
 from 0.050$^{***}$ to 0.025$^{***}$ (Table~\ref{tab:withincell}).
 
@@ -88,11 +88,11 @@ return, 0.061$^{***}$ within the son's cell at 25--34, 0.063$^{**}$ net of a cal
 NLSY79 0.021$^{**}$ at equal AFQT (Tables~\ref{tab:schooling} and \ref{tab:withincell})---while the AFQT return rises
 equally ($-0.031$, s.e.\ 0.025) and, as \citet{rauh2023black} find, wages grow with experience at the same rate at equal
 AFQT.\footnote{Black $\times$ experience 0.003 in logs (s.e.\ 0.003) in their within-decile regression with the NLSY79
-supplemental Black sample; code \texttt{IGE/70.RauhReplication.py}.} At equal parental income White sons are 4.2
+supplemental Black sample; code \texttt{70.RauhReplication.py}.} At equal parental income White sons are 4.2
 percentage points more likely to start in the jobs whose wages keep growing (0.042$^{***}$), and with the same employer a
 White son's wage grows faster with parental income (0.021$^{***}$ a year per log point at 25--34) while a Black son's
-does not (0.003) (Table~\ref{tab:growthladder}).\footnote{Code: \texttt{IGE/35.EarlyIndustryLatePayoff.py},
-\texttt{IGE/36.SameEmployerGrowthChecks.py}, \texttt{IGE/45.WithinCellIdentification.py}.}
+does not (0.003) (Table~\ref{tab:growthladder}).\footnote{Code: \texttt{35.EarlyIndustryLatePayoff.py},
+\texttt{36.SameEmployerGrowthChecks.py}, \texttt{45.WithinCellIdentification.py}.}
 
 \input{tab_schooling}
 \input{tab_within_cell}
