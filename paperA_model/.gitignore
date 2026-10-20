@@ -1,0 +1,3 @@
+__pycache__/
+# PSID-derived microdata (restricted; never commit)
+inputs/psid_entry_couples*.csv

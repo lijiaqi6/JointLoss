@@ -1,0 +1,622 @@
+\section{A Two-Earner Model of Undiversified Family Insurance}\label{sec:model}
+
+\providecommand{\E}{\mathbb{E}}
+
+The evidence identifies the pieces: a joint job loss that is a same-month coincidence carried by shared workplaces, a
+smaller permanent part shared by couples who hold risky jobs, a wife who searches at once and finds work slowly, a
+marriage that is strained, consumption insured against one job loss and perhaps not against two, and a safety net
+whose programs pay in different states. A model is needed to put them together, to measure what the correlation costs
+the household in the months of the shock, and to evaluate policies the data cannot vary. This section sets out the
+model to be estimated; the estimates, the fit and the counterfactuals follow in the next version of the paper.
+
+The period is a month: the joint loss is a coincidence within the month (Figure~\ref{fig:cps_hazard}), the wife's
+response builds up over about six months (Section~\ref{sec:household}), unemployment insurance lasts 26 weeks, and
+most of the earnings risk of US workers is month-to-month and masked in annual data \citep{ganong2026earnings}. In an
+annual period the common and the permanent components of the risk collapse into one same-year correlation. The
+closest model is the monthly life-cycle model of joint search of \citet{bacher2025joint}, whose labor-market
+block---employment and non-employment with and without unemployment insurance that expires at a constant hazard, a
+human capital level for each spouse that accumulates at work and depreciates out of it, savings, and extreme-value
+taste shocks solved with the endogenous grid method---is followed here. The model departs from theirs in three ways.
+The spouses' displacement risk has a common and a permanent couple component, where their separation shocks are
+independent across spouses, which bounds the ratio of the wife's job-loss probability in her husband's loss month to
+other months at about 1.25 against about 10 in the CPS.\footnote{With independent hazards that depend only on the
+human capital level, the ratio is $1 + \mathrm{cov}(\delta_w, \delta_h)/(\E\delta_w\,\E\delta_h)$; with their hazards
+between 1.0\% and 5.0\% a month and a mean near 2\%, perfectly correlated levels give at most about 1.25.} The search
+friction is exogenous and race-specific, where their job-finding rates are set by firms. And the government is a set
+of schedules---a progressive tax, the Earned Income Tax Credit, food stamps and a consumption floor besides
+unemployment insurance---the couple has children whose ages set the cost of the wife's work, the marriage can end, and
+couples differ by race. All endogenous parameters are estimated jointly by the simulated method of moments, where
+theirs are calibrated.
+
+\subsection{Environment and timing}
+
+\paragraph{Households and time.} The economy is populated by married couples. A couple enters the model in January of
+the first calendar year in which the corresponding PSID couple is observed and is followed until the wife is 60: with
+the wife aged 25 at the earliest, $t = 0, \dots, 419$ indexes months, and $t$ is a multiple of 12 in every January, so
+model years are calendar years. Money is in 2000 dollars a month. The couple is a unitary household that maximises one
+utility function in which the spouses share consumption and each spouse's work enters as a disutility; the joint-loss
+moments carry no information on a Pareto weight. After a separation the wife is the only decision maker of her
+household and the husband leaves the model.
+
+\paragraph{Heterogeneity.} Couples differ in four permanent characteristics, all known to the couple. Race
+$r \in \{B, W\}$ enters only through the environment---the displacement hazards, the search friction, the separation
+hazard, the initial conditions and the inputs---never through preferences, because the joint loss is the same in both
+races while the environment differs (Section~\ref{sec:jointloss}); common preferences make the racial differences in
+the wife's response a test of the environment. The workplace match $s \in \{0, 1, 2\}$ sets the common component of
+displacement risk: $s = 2$ if the spouses share a detailed industry, a detailed occupation and a class of worker (the
+closest the public data come to a shared employer), $s = 1$ if they share a detailed industry but not that cell, and
+$s = 0$ otherwise.\footnote{CPS: the wife's same-month excess is 0.337 (s.e.\ 0.015) in the shared-employer cell
+(6.3\% of couples, 35\% of the raw excess), 0.211 (s.e.\ 0.009) in the same detailed industry (17.7\%, 53\%) and 0.026
+(s.e.\ 0.001) outside the shared-employer cell; if 10--12\% of dual-earner couples work at the same establishment
+\citep{hyatt2019coworking}, a shared employer carries a third to a half of the excess. The PSID couple's $s$ at entry
+is coded with the CPS definition (\texttt{IGE/60.PaperATargets.py}; CPS: \texttt{IGE/37.CPSJointLossChecks.py}).} A
+couple risk type $\tau \in \{L, H\}$ scales both spouses' own hazards and stands for the assortative part of the risk:
+wives of men who will be displaced four to six years later are already more often displaced
+(Table~\ref{tab:joint_job_loss}), and the CPS elevation in the months around his loss is flat, as a permanent type
+predicts. Marital status changes once at most. Education does not index the solution: it enters through each spouse's
+initial human capital level and initial wealth.
+
+\paragraph{Choices and timing.} Each month the household chooses consumption and saving subject to a borrowing limit,
+the wife's hours $\ell_w \in \{0, P, F\}$ when she has a job (zero means she leaves it), the husband's hours
+$\ell_h \in \{P, F\}$ when he has a job, and whether to take up food stamps when eligible. There is no search-effort
+choice: a non-employed spouse finds a job with a probability that measures the search friction, and a wife who finds
+one decides whether to work.\footnote{``Looking for work'' is therefore a measurement of the model, not a choice: a
+non-employed wife is classified as looking when she would accept a job in her current state with probability above one
+half; the CPS jump in looking the month after his loss (8.8 points) validates the mapping. The PSID's annual
+interview-week status cannot discipline a search choice: a year after the job loss looking is unchanged ($-0.001$,
+s.e.\ 0.008; \texttt{IGE/19.FatherDisplacement.py}).} The husband works whenever he has a job.\footnote{Married men
+employed the month before are still employed in 99.5\% of cases a month later when they have no involuntary separation
+(SIPP; \texttt{IGE/40.SIPPJointLoss.py}); their exits outside displacement are left out.} Within the month: in January
+the transitory wage shocks are drawn and observed, and held for the year; taste shocks are drawn for every feasible
+alternative $d = (\ell_w, \ell_h, S)$; the household chooses $d$, then consumption and saving; income is received and
+spent. At the end of the month the labor-market shocks arrive in this order: the common displacement shock and the own
+hazards for spouses who worked, job finding for spouses who were non-employed (an entitled wife then decides whether to
+accept the job), and the quit of a wife who chose
+$\ell_w = 0$ while holding a job (without entitlement to unemployment insurance). Human capital then moves, the
+entitlement states update, the youngest child's age bucket moves, and the separation shock is drawn. A displacement at
+the end of month $t$ is a job loss in month $t$ in the data's sense (employed in $t$, not employed in $t+1$), so a
+common shock produces both spouses' job losses in the same CPS month; a displaced spouse cannot find a job in the
+month of the displacement, as in \citet{bacher2025joint}.
+
+\subsection{Preferences}
+
+The married household's flow utility is
+\begin{equation}\label{eq:uM}
+  U^M = u\!\left(\frac{c}{s_M\, e(k)}\right) - \phi_w(\ell_w, k) - \phi_h(\ell_h) - \kappa_S\, S,
+  \qquad u(x) = \frac{x^{1-\gamma} - 1}{1-\gamma},
+\end{equation}
+and the separated wife's is $U^S = u(c/e(k)) - \phi_w(\ell_w, k) - \kappa_S S$. Spending $c$ is divided by the
+couple's equivalence scale $s_M$ and the children's scale $e(k)$ (McClements); risk aversion is $\gamma = 1.5$; the
+monthly discount factor is $\beta = 0.96^{1/12}$, and the precautionary motive is disciplined by the estimated borrowing
+limit rather than by $\beta$. The wife's disutility of work is
+\[
+  \phi_w(\ell, k) = \mathbf{1}\{\ell = F\}\,\phi_F + \mathbf{1}\{\ell = P\}\,\phi_P + \mathbf{1}\{\ell > 0\}\,\theta(k),
+  \qquad \theta(0) = 0,\; \theta(1) = \theta_{05},\; \theta(2) = \theta_{617},
+\]
+where $k \in \{0, 1, 2\}$ means no child under 18, a youngest child aged 0--5 and a youngest child aged 6--17; the
+dependence on the child's age is what the added-work evidence requires.\footnote{After the husband's displacement,
+wives with a youngest child under six work 112 more hours a year (s.e.\ 31) and are 4.1 points more likely to be
+employed (s.e.\ 0.018); with a youngest child of school age their hours do not rise ($-26$, s.e.\ 36) and their
+employment falls by 3.8 points (s.e.\ 0.018) (Section~\ref{sec:household}; \texttt{IGE/19}, \texttt{IGE/38}).} The
+husband's disutility is $\phi_h(F) = \phi_h$ and $\phi_h(P) = 0$; his hours choice exists so that the estimator of
+\citet{blundell2016consumption}, identified from the intensive margin of both spouses, does not return zero by
+construction on simulated data (Section~\ref{sec:validation}). Each employed spouse costs the household a fixed cost
+of work $F$ a month, in the budget constraint: it produces the complementarity of consumption and the wife's
+participation that \citet{blundell2016consumption} attribute to fixed costs (their Table 8), and it means that a joint
+loss lowers spending through income and through the end of two work-related expenditure flows.\footnote{Spousal
+leisure complementarity, their other nonseparability, is not modelled and is reported as a known difference.} Taking
+up food stamps costs $\kappa_S$ in utility, so that take-up among eligible households is incomplete and rises after a
+job loss.\footnote{Food stamp receipt rises by 4.2 points (Black) and 3.3 points (White) in years 1--3 after the
+father's displacement, while AFDC/TANF receipt barely moves (Section~\ref{sec:household}; \texttt{IGE/19}).} Each
+discrete alternative carries an i.i.d.\ type-I extreme value taste shock with scale $\sigma_\varepsilon$.
+
+\subsection{Wages and human capital}
+
+Spouse $j \in \{w, h\}$ has a human capital level $h_j \in \{1, \dots, 7\}$ and an hourly wage
+\begin{equation}\label{eq:wage}
+  \ln w_{jt} = \mu_j(r) + \psi_j\,(h_{jt} - 4) + \nu_{jt},
+\end{equation}
+where $\mu_j(r)$ is a race-specific level, $\psi_j$ the log-wage step between adjacent levels and $\nu_{jt}$ a
+transitory shock. Monthly earnings are $y_j = w_j H(\ell_j)$ with $H(F) = 173$ and $H(P) = 87$ hours. There is no
+separate age profile: wage growth over the life cycle comes from human capital accumulation at work, and the bounded
+grid flattens it at older ages. The level changes at the end of the month in three steps, truncated to the grid. (i)
+\emph{Accumulation and depreciation}: a spouse who worked and was not displaced rises one level with probability
+\[
+  \pi^{up}_j(\ell_j, h_j) = \pi^{up}_j\,(h_j/4)^{-\eta_{up}}\,\big(\mathbf{1}\{\ell_j = F\} + \kappa_{up}\,\mathbf{1}\{\ell_j = P\}\big),
+\]
+so that accumulation slows as the level rises, the one-parameter form of \citet{bacher2025joint} normalised at the
+middle level;\footnote{The PSID two-year log wage growth of continuously employed wives falls from 0.080 at 25--34 to
+0.046 at 35--44 and 0.027 at 45--54 (husbands 0.067, 0.029, 0.013; \texttt{IGE/60.PaperATargets.py}). With a constant
+accumulation probability the bounded grid alone flattens this too little. At the start values, with $\pi^{up}_j$
+rescaled each time to hold the growth at 25--34, $\eta_{up} = 0.5$ lowers the wage-growth block of the objective from
+158 to 150, and $\eta_{up} = 1, 1.5, 2, 2.5$ to 145, 136, 123 and 109; at 0.5 the growth at 45--54 is still 0.045 for
+wives and 0.037 for husbands, and at 2.5 the husbands' is 0.032 against 0.013. Matching the mean levels by age in
+closed form would need $\eta_{up}$ between 6 (wives) and 16 (husbands), outside its bounds $[0, 3]$: the age profile
+of accumulation needs more than level dependence, and the remaining gap is reported as a misfit. $\eta_{up}$ is
+estimated from a start of 0.5 (\texttt{IGE/paperA\_model/analytic\_start.py --ext hc\_eta};
+\texttt{IGE/paperA\_model/results/diagnostics\_20261018.md}, step 4).} a spouse who did not work falls one level with
+probability $\pi^{dn}_j$. (ii) \emph{Displacement loss}: a displaced spouse falls by $d_j$ levels in expectation
+($\lfloor d_j \rfloor$ levels, one more with probability $d_j - \lfloor d_j \rfloor$).\footnote{The husband's labor
+income is 17\% (Black) and 24\% (White) lower in years 1--3 after his displacement and still about \$6,000--7,000 a
+year lower six years later, while his hours recover within four to five years (Section~\ref{sec:household}). Whether a
+loss at displacement is needed on top of depreciation is decided by the earnings on re-employment by the length of
+non-employment after an involuntary separation (SIPP): depreciation alone makes the loss grow with the spell from
+close to zero, while $d_j$ adds a loss after even a short spell; if the loss after 1--3 months is close to zero, $d_j$
+is cut.} (iii) \emph{Persistent innovations}: with probability $p^c$ a shared innovation moves both spouses' levels
+one step in the same direction (up or down with equal probability), and independently with probability
+$p^\varepsilon_j$ an idiosyncratic innovation moves spouse $j$'s level. The innovations are the permanent wage shocks of
+\citet{blundell2016consumption} on the human capital grid: without truncation the annual variance of spouse $j$'s
+permanent component is $12\,\psi_j^2\,(p^c + p^\varepsilon_j)$ and the covariance across spouses
+$12\,\psi_w\psi_h\,p^c$, and $(p^c, p^\varepsilon_w, p^\varepsilon_h)$ are set from their Table 3 (permanent variances
+0.0382 for wives and 0.0303 for husbands, covariance 0.0027).\footnote{Joint displacement years raise the covariance of
+the spouses' earnings residuals in their panel ($+0.193$, $p=0.019$), not of their wage residuals: the joint loss is an
+employment shock and is modelled as one, separately from the shared wage shocks (Appendix~\ref{app:bps}).}
+
+\paragraph{Wage shocks.} On top of the human capital level, each spouse's wage has a permanent and a transitory
+shock, correlated across spouses as in \citet{blundell2016consumption}, and the transitory shock is drawn once a year and
+held for the twelve months of the year. The choice of frequency follows from what each source measures.
+\citet{blundell2016consumption} estimate the transitory shock as a serially uncorrelated component of the annual hourly
+wage, annual earnings divided by annual hours, from two-year differences of biennial data; they describe it as shocks
+such as short illnesses, assume that it is fully smoothed, and estimate variances of 0.0275 for husbands and 0.0125 for
+wives with a correlation of 0.31 between spouses, part of which is measurement error from dividing earnings by hours,
+which they net out with the shares of a PSID validation study \citep{bound1994evidence}. \citet{bacher2025joint} have no
+transitory wage shock: wages are a fixed share of a human capital level that moves up or down one step each month with
+some probability, and monthly earnings risk comes from job loss and human capital. High-frequency administrative data
+show that monthly earnings within ongoing jobs are volatile but that wages are largely stable from month to month, the
+volatility coming from hours set by firms \citep{ganong2026earnings}. Reproducing the annual variance of
+\citet{blundell2016consumption} with a shock drawn afresh every month would require a monthly standard deviation of about
+0.57, a typical monthly swing in the hourly wage of more than half, which the monthly data rule out. The transitory shock
+is therefore an annual shock; part of its variance in \citet{blundell2016consumption} is treated as measurement error,
+added only when simulated couples are turned into PSID-style data for the comparison with their estimates; and the
+month-to-month risk in the model comes from displacement and job finding. Each spouse's shock takes two values,
+$\pm\sigma_{\nu,j}$, and the pair has probabilities $(1+\rho_\nu)/4$ for equal signs and $(1-\rho_\nu)/4$ for opposite
+signs, so that the variances are $\sigma_{\nu,j}^2$ and the correlation $\rho_\nu$. The variances start at the
+estimates of \citet{blundell2016consumption}, an upper bound, and are reduced once, before estimation, by the part that
+their estimator attributes to transitory variance when it is run on the simulated panel with the measurement-error
+layer; they are then held fixed.
+
+\subsection{Displacement risk in three parts}
+
+A job ends involuntarily only through a displacement, a permanent job loss.\footnote{Temporary layoffs with recall are
+outside the model; they account for about a third of the CPS same-month excess, and the CPS targets use non-temporary
+job losses (excess 2.6 points on a base of 0.23\%; Appendix~\ref{app:robust}).} At the end of the month the
+displacement shocks are drawn in two stages. With probability $\pi_c(s)$ a common shock hits the couple and every
+employed spouse is displaced. Otherwise each employed spouse is displaced independently with probability
+$\delta_j(r)\, m_\tau$, where $m_L = 1$ and $m_H > 1$ is the risk multiplier of high-risk couples, whose share is
+$p_H$. When both spouses work,
+\begin{equation}\label{eq:both}
+  \Pr(\text{both displaced}) = \pi_c(s) + \big(1 - \pi_c(s)\big)\, m_\tau^2\, \delta_w(r)\,\delta_h(r),
+\end{equation}
+and only spouse $j$ is displaced with probability $(1 - \pi_c(s))\, m_\tau \delta_j(r)\,(1 - m_\tau \delta_{-j}(r))$.
+The three parts leave different traces at the monthly frequency: the common shock produces excess joint loss only in
+the month it hits, the couple type a flat elevation of the wife's hazard in every month around the husband's loss and
+in the PSID placebo window, and the own hazards the base rates. The monthly elevation pins the couple type along a
+ridge rather than at a point: a rare and very risky type and a common and mildly risky one give the same CPS leads and
+lags, but the rare type gives the smaller PSID same-year excess, because its displacements are concentrated in few
+couples. The estimation starts on this ridge at $p_H = 0.02$ ($m_H = 15.95$), where the annual excess is close to the
+data, and estimates both.\footnote{Along the ridge (own hazards rescaled to hold the base rates), the PSID excess
+$\Pr(\text{she displaced} \mid \text{he is}) - \Pr(\cdot \mid \text{he is not})$ falls from 0.118 at $p_H = 0.10$ to
+0.071 at $p_H = 0.02$ (data 0.063, s.e.\ 0.005), while the CPS leads and lags stay at 0.0034--0.0061 (data
+0.0056--0.0067); off the ridge, a smaller $m_H$ at $p_H = 0.10$ fits the annual excess only by losing the leads and lags
+(at $m_H = 4$ they fall to 0.0015). The joint-loss and base-hazard blocks of the objective are 401 at $p_H = 0.10$ and
+185 at 0.02, so the annual moments separate $p_H$ along the ridge. The alternative tested and rejected is a short memory
+of the common shock: each spouse's hazard multiplied by $1 + c_{mem}$ while the other spouse is non-employed and
+entitled after a displacement, one more parameter. At its start ($c_{mem} = 5.82$, $m_H = 4.33$) the joint-loss blocks
+are 177 against 62 on the ridge, and the excess one month before and after his loss is 0.013--0.014 against 0.006 in
+the data. It stays in the code as an option (\texttt{estimate.py --cs-memory on}). Code:
+\texttt{IGE/paperA\_model/results/diagnostics\_20261018/profile\_sigma\_ridge.py}; numbers in
+\texttt{IGE/paperA\_model/results/diagnostics\_20261018.md}, B and steps 2a and 2.} The model has no aggregate state;
+the larger excess in recessions (6.7 against 3.6 points) is used in a comparative static.
+
+\subsection{Search friction and unemployment insurance}
+
+A spouse who is non-employed at the start of a month finds a job by its end with probability $\lambda_j(r)$, which
+measures the search friction; it depends on race and spouse only, not on age, the human capital level or the length
+of the spell.\footnote{In \citet{bacher2025joint}, where job finding is set by firms, the rate for non-employed spouses
+falls from about 0.16 a month at 26 to about 0.01 at 64 (their Figure 10), mostly through the age distribution of
+assets and human capital. Job finding by age is a validation (Section~\ref{sec:validation}); one age slope in
+$\lambda_j$ is added only if it fails.} A job allows either hours level. A wife without entitlement to unemployment
+insurance who finds one chooses at the start of the next month whether and how much to work, and declining it returns
+her to non-employment. A wife who is entitled decides at the end of the month whether to accept, as in
+\citet{bacher2025joint}: declining keeps her entitlement, which then lapses at its monthly hazard. The husband always
+takes a job he finds. A wife can also leave a job she holds; her monthly exit from employment outside a job loss is a
+target, so that margin is disciplined by data.
+
+A displaced spouse becomes entitled to unemployment insurance with probability $q_{UI}$, which stands for take-up and
+monetary eligibility together; a spouse who leaves a job is not entitled. An entitled spouse who is still non-employed
+loses entitlement at the end of each month with probability $1/6$, so that the expected duration is the 26 weeks of
+regular benefits; this geometric expiry is that of \citet{bacher2025joint} and replaces a duration clock, which the
+moments that see benefit duration cannot distinguish from it. While entitled, spouse $j$ receives
+\[
+  b_j = \min\big\{\rho_{UI}\; \bar w_j(h_j)\, H(\ell_j^{lost}),\; \bar b_{e}\big\},
+  \qquad \bar w_j(h) = \exp\{\mu_j(r) + \psi_j(h - 4)\},
+\]
+with replacement rate $\rho_{UI} = 0.5$, a cap $\bar b_e$ equal to the mean of the states' maximum weekly benefits in
+policy era $e$, and $\ell_j^{lost}$ the hours of the lost job, which the wife's entitlement state records and which is
+full time for the husband. The wife's labor state therefore takes four values (employed; non-employed and entitled
+after a part-time job; after a full-time job; not entitled) and the husband's three.
+
+\subsection{The government and the budget constraint}
+
+The government is represented by its schedules, because the paper's policy question is what each schedule pays in
+the state in which no one earns.\footnote{The tax-and-transfer function of \citet{blundell2016consumption} is
+log-linear in positive family earnings and contains the federal income tax, the EITC and food stamps, but no
+unemployment insurance; the state in which no one earns is outside its domain.} All schedules are set by policy era
+$e \in \{1984\text{--}96,\, 1997\text{--}2008,\, 2009\text{--}21\}$, each solved with its own stationary schedule,
+couples re-optimising at the boundaries. On positive annualised income $Y^a = 12\,(y_w + y_h + b_w + b_h)$ the
+household keeps $(1 - \chi_e)\,(Y^a)^{1 - \mu_e}$, the functional form of \citet{blundell2016consumption}, with
+$(\chi_e, \mu_e)$ fitted by era to the federal income and payroll taxes of married couples filing jointly, without the
+EITC and food stamps, which enter separately; the monthly tax is $T_e = [Y^a - (1-\chi_e)(Y^a)^{1-\mu_e}]/12$. The
+Earned Income Tax Credit is paid monthly on annualised family earnings $Y = 12\,(y_w + y_h)$,
+\begin{equation}\label{eq:eitc}
+  \mathcal E = \tfrac{1}{12}\,\mathrm{EITC}_e(Y; n), \qquad
+  \mathrm{EITC}_e(Y; n) = \max\Big\{0,\; \min\{\epsilon^{in}_{e,n} Y,\, \bar E_{e,n}\} - \epsilon^{out}_{e,n}\max\{0,\, Y - Y^{out}_{e,n}\}\Big\},
+\end{equation}
+with the phase-in rate, maximum credit, phase-out rate and threshold for married filers with $n$ children; it is zero
+when no one earns. A household of size $n_{hh}$ is eligible for food stamps when gross income
+$Y^g = y_w + y_h + b_w + b_h$ is at most 130\% of the poverty line and assets are below the era's limit; its benefit is
+the maximum allotment minus 30\% of net income after the 20\% earned-income deduction, the standard deduction and the
+dependent-care deduction,
+\[
+  B_S = \max\big\{0,\; A_e(n_{hh}) - 0.3\,\max\{0,\; Y^g - 0.2\,(y_w + y_h) - D_e(n_{hh}) - c_{cc}\}\big\},
+\]
+and take-up $S \in \{0, 1\}$ is chosen. The wife's work costs childcare $c_{cc} = p_{cc}(k)\,H(\ell_w)$ at an hourly
+price that depends on the youngest child's age; a subsidy lowers $p_{cc}$. The number of children $n$ is not a state:
+it is the PSID mean for couples with the same youngest-child bucket, wife's age group and race. A transfer $Tr \ge 0$
+guarantees equivalised spending of at least $c_{min}$ (the AFDC/TANF maximum for a family of three in the era),
+standing for the transfers that are not modelled. Cash on hand of a married couple is
+\begin{equation}\label{eq:budget}
+  \begin{aligned}
+  X^M = {} & \big(1 + r_m + \omega\,\mathbf{1}\{a < 0\}\big)\,a + y_w + y_h + b_w + b_h - T_e + \mathcal E \\
+           & + S\, B_S - c_{cc} - F\,\big(\mathbf{1}\{\ell_w > 0\} + \mathbf{1}\{\ell_h > 0\}\big) + Tr,
+  \end{aligned}
+\end{equation}
+and the household chooses $c$ and next month's assets $a' = X^M - c \ge -\underline{a}$. Saving earns
+$r_m = 1.03^{1/12} - 1$; debt costs the real interest rate on credit cards, 11.4\% a year, so that the wedge $\omega$ is
+8.4 points a year, a coded input and not a parameter.\footnote{Federal Reserve G.19, interest rate on credit card plans
+of commercial banks, all accounts, 13.7\% nominal on average over the 108 quarters of 1995--2021, less 12-month CPI-U
+inflation (2.3\%), less the real saving rate of 3\%; the rate on accounts assessed interest gives 12.2\% real. The
+liquid wealth of the targets nets unsecured debt against liquid assets, and couples with negative liquid wealth are
+mostly debtors (\texttt{ReducedForm/62.PoorMarriedCouples.py}), so the credit-card rate is the marginal rate on that
+debt (\texttt{IGE/paperA\_model/borrowing\_wedge.py}, \texttt{inputs/borrowing\_wedge.json}). At the start values and
+on common draws the wedge lowers the objective from 68{,}086 to 64{,}657 and the share of wives aged 25--34 in couples
+with liquid wealth at or below zero from 0.80 to 0.48 (data 0.57); it lowers the objective at every borrowing limit
+tried (63.5--65.6 thousand against 66.5--69.8 thousand without it), and with the wedge the wealth block falls from 3{,}079
+to 2{,}672, 2{,}419 and 2{,}317 as $\underline a$ rises from 15 to 25.6, 40 and 55 thousand dollars. The shape at 45--59
+stays wrong with or without the wedge: too few couples at or below zero (0.085 against 0.381) and too many above one
+year of earnings (0.388 against 0.177). It is reported as an open misfit
+(\texttt{IGE/paperA\_model/results/diagnostics\_20261018.md}, step 3). Part of it is the definition of the target: the
+model's single asset also funds the retirement terminal value, while liquid wealth leaves retirement saving out.
+Measured as net worth without home equity and vehicles, on the same couples and waves, the share above one year of
+earnings at 45--59 is 0.399 (model 0.388) and the shares at or below zero at 25--34 and 35--44 are 0.476 and 0.354
+(model 0.476 and 0.340); what remains is the share at or below zero at 45--59, 0.264 against 0.085, couples who save
+nothing (definition minus liquid at 45--59: $-0.117^{***}$ and $+0.222^{***}$, both $p<10^{-15}$;
+\texttt{IGE/77.WealthDefinitions.py}).} The separated wife's cash on hand is the same
+expression without the husband's terms, with the single-filer EITC and food-stamp schedules.
+
+\subsection{Marriage and separation}
+
+The marriage ends at the end of a month with probability
+\begin{equation}\label{eq:sep}
+  \sigma(r, e_h') = \sigma_0(r) + \sigma_J(r)\, \mathbf{1}\{e_h' = 0\},
+\end{equation}
+which is higher while the husband is out of work after a displacement ($e_h' = 0$ is his status at the start of the
+next month; he is non-employed only after a displacement). The hazard responds only to his displacement, whereas in
+the PSID her displacement is followed by break-up as often as his (Section~\ref{sec:household}); a hazard that also
+responds to her displacement is a candidate extension after the first estimate. At a separation assets are divided equally and the wife
+continues alone with the children, with her own labor state, human capital, entitlement, transitory shock and child
+state; there is no remarriage within the horizon and no child support.\footnote{In the PSID, separated mothers with
+children who remain single receive on average \$132 (Black) and \$327 (White) a month in child support (2000 dollars;
+38\% and 64\% receive any; difference $-196^{***}$, $p<0.001$), and remarry at annual rates of 2.6\% and 6.1\%
+($-3.5$ points$^{***}$, $p<0.001$). Both would make the separated state less bleak, more so for White wives; they are
+inputs without parameters, to be added after the first estimate. Separated mothers work more than married mothers
+(within mother $+3.5^{**}$, $p=0.016$, and $+11.8^{***}$ points), an untargeted check on the separated state
+(\texttt{IGE/76.SeparatedMothers.py}).} The separation is exogenous: the model
+reproduces the separation response of Section~\ref{sec:household} and its difference by race, and the household
+anticipates the hazard, which adds a precautionary motive.\footnote{The share of displaced fathers still living with
+the wife they had before the job loss falls by 4.5 points (Black) and 1.9 points (White) over years 1--3
+(\texttt{IGE/19}). Tying the hazard to his non-employment adds no state variable; a twelve-month flag after his
+displacement and a hazard that also responds to her displacement were considered and not adopted for the first
+estimate. The second is coded as an option that is off in the first estimate (a term $\sigma_{Jw}$ while she is
+entitled after her own displacement, \texttt{--her-sep}): at the start values it moves the simulated response to her
+displacement from $-0.001$ to $-0.019$ against $-0.050$ in the data (\texttt{IGE/64}, \texttt{IGE/65}) and lowers the
+objective on the extended set of 89 moments from 13{,}232.5 to 13{,}162.8; it is judged at the first estimate
+(\texttt{IGE/paperA\_model/results/extensions\_20261019.md}).} The hazard is a
+reduced form for the marital surplus, and the marriage is kept exogenous because the data pin the mean response and
+little that would discipline a decision: the response is the same after plant closures as after layoffs, which is
+what a fall in household income and surplus predicts rather than news about the husband \citep{charles2004job}, and
+it does not differ significantly by race, by the child's age or by the wife's employment.\footnote{Still living with
+the baseline wife, years 1--3 after his displacement: closures minus layoffs 0.000 ($p = 0.99$, Black) and 0.006
+($p = 0.75$, White); by the youngest child's age $-0.030$ and $-0.030$; wife employed at baseline $-0.036^{***}$
+against not employed $-0.019$ (difference 0.017, s.e.\ about 0.017); the race difference in the targeted mean is 0.5
+standard errors. The outcome is one by construction before the displacement, so it has no placebo test
+(\texttt{IGE/19.FatherDisplacement.py}, \texttt{IGE/38.PSIDJointLossChecks.py}). The data's gap keeps widening after
+he is re-employed: $-0.027$, $-0.037$ and $-0.050$ in years 1, 3 and 6 (Black $-0.037$, $-0.053$, $-0.074$; White
+$-0.017$, $-0.022$, $-0.030$).} Its time path is an untargeted test of the form: the hazard is raised only while he is
+out of work, whereas the PSID gap keeps widening long after he is back at work. At the start values the simulated
+gap is $-0.029$, $-0.029$ and $-0.039$ in years 1, 3 and 6 against $-0.027$, $-0.037$ and $-0.050$ in the PSID; if the
+estimate leaves the same flattening, the alternative is a hazard that depends on his human capital level after he is
+re-employed, which adds one parameter and no state. The husband's welfare after a
+separation is not counted.
+
+\subsection{Children}
+
+The children block is outside the estimation: the parents' model is estimated without it, so its results for
+consumption and the ranking of policies stand on their own. For each child in a simulated household it maps family
+income by childhood age and the presence of both parents into an adult outcome,
+\begin{equation}\label{eq:child}
+  \ln Y^{adult}_i = \alpha + \beta_{05} \ln \bar y_{i,0\text{--}5} + \beta_{617} \ln \bar y_{i,6\text{--}17} + \beta_P\, P_i + \eta_i,
+\end{equation}
+where $\bar y_{i,g}$ is mean family income (earnings, unemployment insurance, EITC and food stamps) over the months in
+which the child is in age group $g$ and $P_i$ the share of those months with both parents present. The slopes are
+not estimated. Two scenarios bracket them: a high scenario in which a father's displacement during childhood, as
+simulated, lowers adult earnings by about 9\%, the estimate in Canadian administrative data
+\citep{oreopoulos2008intergenerational} and the PSID association of \citet{page2009parental}, and a low scenario at the
+smaller effects in US tax data \citep{hilger2016parental}; the PSID associations of Section~\ref{sec:children} are an
+upper bound only. The presence term is kept because the separation of the couple is one of the channels by which the
+joint loss reaches the children; $\beta_P$ is the PSID association in the high scenario and zero in the low one.
+
+\subsection{The household's problem}
+
+The married couple's state at the start of month $t$ is
+\[
+  \Omega_t = \big(t,\; a,\; e_w, u_w,\; h_w,\; e_h, u_h,\; h_h,\; k,\; \nu;\; s, \tau, r\big),
+\]
+with assets $a$ (30 grid points, dense near the borrowing limit), employment $e_j \in \{0, 1\}$ and entitlement $u_j$
+(the wife's recording the hours of the lost job), the two human capital levels, the youngest-child bucket $k$, this
+year's transitory shocks $\nu = (\nu_w, \nu_h)$ (four points), and the permanent characteristics: 211,680 points a
+month for each of the twelve problems $(r, s, \tau)$, which are solved and simulated one at a time. The separated
+wife's state is $\Omega^S_t = (t, a, e_w, u_w, h_w, k, \nu_w; \tau, r)$. Let $\mathcal D(\Omega, \nu)$ be the feasible
+alternatives. The value at the start of the month, after $\nu$ is observed and before the taste shocks, is
+\begin{equation}\label{eq:VM}
+  V^M_t(\Omega, \nu) = \sigma_\varepsilon \ln \sum_{d \in \mathcal D(\Omega,\nu)} \exp\!\big(v^M_t(d; \Omega, \nu)/\sigma_\varepsilon\big) + \sigma_\varepsilon\gamma_E ,
+\end{equation}
+with $\gamma_E$ Euler's constant; the choice-specific value is
+\begin{equation}\label{eq:vM}
+  v^M_t(d; \Omega, \nu) = \max_{a' \ge -\underline a} \Big\{ u\!\Big(\frac{X^M(d; \Omega, \nu) - a'}{s_M\, e(k)}\Big)
+     - \phi_w(\ell_w, k) - \phi_h(\ell_h) - \kappa_S S + \beta\, W^M_{t+1}(a'; d, \Omega, \nu) \Big\},
+\end{equation}
+and the continuation value integrates over next month's state and the separation,
+\begin{align}\label{eq:WM}
+  W^M_{t+1}(a'; d, \Omega, \nu) = \sum_{\Omega'} P(\Omega' \mid \Omega, d, a')
+   \Big[ &\big(1 - \sigma(r, e_h')\big)\, \E_{\nu' \mid \nu} V^M_{t+1}(\Omega', \nu') \nonumber \\
+         &+ \sigma(r, e_h')\, \E_{\nu_w' \mid \nu_w} V^S_{t+1}\big(\Omega'^S, \nu_w'\big) \Big],
+\end{align}
+where $\Omega'^S$ keeps the wife's components of $\Omega'$ with assets $a'/2$. The expectation over the shocks is
+degenerate within the year and is the four-point sum over a new draw when $t+1$ is a January. The transition $P$
+factors into the events of the month---displacement (the common shock, then the own hazards, depending on $s$, $\tau$,
+$r$ and on who worked), job finding, the wife's quit, the three human capital steps, the entitlement states and the
+child bucket---and, conditional on the month's displacement and job-finding events, the remaining transitions are
+independent, so the expectation is taken one dimension at a time. The separated wife's problem has the same form with
+$d = (\ell_w, S)$, cash on hand $X^S$, the scale $e(k)$, her own hazard $\delta_w(r)\,m_\tau$ (the common shock no
+longer applies), job finding $\lambda_w(r)$ and a continuation value over her own state only.
+
+The bucket $k$ follows a monthly Markov chain estimated on PSID couples: a birth moves $k = 0$ to $k = 1$ with
+probability $b_0(\text{age}_w, r)$ and $k = 2$ back to $k = 1$ with probability $b_2(\text{age}_w, r)$; the youngest
+child ages from $k = 1$ to $k = 2$ with probability $1/72$ and leaves childhood from $k = 2$ with probability $1/144$.
+At the wife's age 60 the couple retires: the terminal value is the discounted utility of 240 months of spending equal
+to the annuity value of $a$ plus Social Security benefits of 40\% of each spouse's earnings at its final level. Each
+simulated couple is a copy of a PSID couple, entering in January of the year of its first observation from 1984 on with
+its calendar year, the wife's age, race, workplace match, liquid wealth, each spouse's employment, the youngest
+child's bucket and each spouse's human capital level, set from the log hourly wage at entry; the couple type is drawn
+with probability $p_H$ independently of the observables. Each PSID couple is copied several times, and all draws are
+common random numbers across evaluations and counterfactuals. The model is solved by backward induction over 420
+months for each problem and policy era; within a month the discrete alternatives are handled with the extreme-value
+shocks and consumption with the endogenous grid method for discrete-continuous models \citep{carroll2006method,
+iskhakov2017endogenous}, as in \citet{bacher2025joint}. Between asset nodes the continuation value is a
+monotone cubic Hermite interpolant of the node values and their exact derivatives. The food-stamp asset test puts a
+notch in next month's value at the asset limit $L$ (1{,}884 dollars in the 1997--2008 schedule): a couple that saves
+beyond it loses the food-stamp alternative. The solver therefore carries grid nodes at $L$ and just above it, treats
+the corner $a' = L$ as a candidate in every state, and runs a two-branch endogenous grid where the grid folds at the
+notch.\footnote{Without this treatment the interpolated continuation value smeared the drop and the first-order
+conditions missed the bunching at $a' = L$: the gap between the endogenous-grid solution and a brute-force maximisation
+over $a'$ with the same continuation values reached 0.16 utility units (99th percentile $3.4 \times 10^{-3}$) at low
+cash on hand. With it the 99th percentile and the maximum of the gap are $1.7 \times 10^{-4}$ and $2.6 \times
+10^{-3}$ at the start values, $7.0 \times 10^{-4}$ and $2.4 \times 10^{-3}$ with $\kappa_S = 0$, and $3.7 \times
+10^{-5}$ and $1.2 \times 10^{-4}$ with $\kappa_S = 2.64$, against criteria of $10^{-3}$ and $5 \times 10^{-3}$; in 79\% of
+states the endogenous grid is monotone, or monotone on both sides of $L$. All twelve staged checks pass (\texttt{IGE/paperA\_model/tests/run\_all.py};
+\texttt{IGE/paperA\_model/results/diagnostics\_20261018.md}, follow-up 1).} The simulator writes monthly histories, and each data set is
+reproduced by writing the histories in that data set's shape---PSID household-years in the waves in which the couple is
+observed, CPS couple-months in the four-eight-four rotation, SIPP monthly paths, the household-year panel of
+\citet{blundell2016consumption}---and running the data scripts' definitions on it.
+
+\subsection{Estimation}\label{sec:estimation}
+
+All endogenous parameters are estimated jointly in one simulated-method-of-moments run; nothing is tuned by hand, and
+every calibrated input is a coded mapping from data or an external source: the preferences shared with the lifecycle
+model of women's careers that shares this code ($\beta$, $\gamma$, the equivalence scales, the hours levels,
+$\kappa_{up} = 0.5$, and the taste-shock scale $\sigma_\varepsilon = 0.05$, which is a fixed scale and not
+estimated\footnote{A larger taste shock does not move the wife's exit rate by the order of magnitude the data need. At
+the start values (one-month CPS flows, before the extensions) $\sigma_\varepsilon = 0.05$, 0.10, 0.20 and 0.30 give a
+monthly exit rate of 0.26\%, 0.35\%, 0.29\% and 0.20\% against 2.6\%, while the employment of wives with no child under
+18 rises from 0.95 to 0.97, 0.99 and 0.99 (data 0.81), the entry rate of White wives from 0.043 to 0.113 (data 0.075),
+and the added-worker response in employment falls from 0.006 to $-0.003$ (data 0.042): the option value of holding a
+job grows with $\sigma_\varepsilon$, so wives keep their jobs. The objective is 50{,}920, 44{,}860, 50{,}652 and
+57{,}938 (\texttt{IGE/paperA\_model/results/diagnostics\_20261018/profile\_sigma\_ridge.py}; the code can free it,
+\texttt{estimate.py --free-extra sigma\_eps}).}); the borrowing wedge (G.19); the wage levels and steps (PSID log hourly wages by race; seven levels
+spanning the 1st--99th percentiles of the residual at 40--49); the wage-shock probabilities and transitory variances
+(Table 3 of \citealp{blundell2016consumption}); the workplace-match shares and the child process (PSID couples); the
+schedules by era (the unemployment-insurance cap from the states' maximum weekly benefits,
+\texttt{IGE/12b.UIGenerosity.py}; take-up $q_{UI}$ from the Displaced Worker Supplement; EITC, food-stamp and tax
+parameters from the IRS, the USDA and TAXSIM); the childcare price (PSID childcare spending per hour of the mother's
+work by child age); and the consumption floor. Table~\ref{tab:model_params} lists the thirty-two estimated parameters
+with the moments that identify them. Estimation runs at a reduced size: seven human capital levels, the shared-employer
+and same-industry groups merged into one group that shares $\pi_c(1)$, the 1997--2008 schedule in every year, and 20
+asset points, so that an evaluation solves eight problems instead of thirty-six; the counterfactuals run at the full
+size. With the two groups merged $\pi_c(2)$ does not enter, and thirty-one parameters are free. The cut list, in
+order, is a common $\delta_w$ across races, $\phi_h$ calibrated to the husbands' part-time share, a common $\pi^{dn}$
+for both spouses, $d_j$ if the re-employment earnings by spell length are fit by depreciation alone, and the wife's
+lost-hours record in the entitlement state.
+
+\paragraph{Targets.} The targets are the moments of \texttt{IGE/60.PaperATargets.py}; the first evaluations of the
+coded model changed the definition of the CPS flows and the set of moments in the objective. At the start values the model's wives left employment at 0.26\% a month against 2.6\% in the
+CPS, and a larger taste shock did not close the gap. Much of the CPS flow consists of one-month reversals, a wife
+recorded out of work for a single month between months of work, which the model's monthly statuses do not produce. The
+entry and exit rates of wives are therefore computed with one filter in the data and in the simulated CPS panel: a
+transition counts only if the old status held in months $t-1$ and $t$ and the new status holds in $t+1$ and $t+2$, all
+four months in one rotation spell, with the husband employed in $t$ and $t+1$. The filter cuts the data's exit rate
+from 0.0261 to 0.0101 and the entry rates from 0.0751 to 0.0320 (White) and from 0.0942 to 0.0404 (Black); the model's
+flows are almost all persistent already.\footnote{At the extended start the model's one-month and persistent rates are
+0.0023 and 0.0014 (exit), 0.047 and 0.036 (White entry), 0.099 and 0.089 (Black entry); the objective falls from 90{,}296
+to 12{,}761 with the persistent flows (\texttt{IGE/60.PaperATargets.py}; \texttt{IGE/paperA\_model/panels.py};
+\texttt{IGE/paperA\_model/results/diagnostics\_20261018.md}, follow-up 2). The correction for response errors of
+\citet{poterba1986reporting} was coded first and dropped (\texttt{estimate.py --cps-persist off --cps-classif on}):
+applying their error rates for women aged 25--59 to the simulated monthly statuses brings the exit rate to 0.0240
+against 0.0261, but the entry rates to 0.208 and 0.364 against 0.075 and 0.094. At the data's employment rate of
+0.81 the spurious entries of misrecorded employed wives alone give a measured entry rate of at least 0.083, above the
+White target, so the true entry rate that their errors imply is negative. Their errors are for 1981 and serially
+uncorrelated, which they note overstates the adjustment, and the CPS targets start in 1994, after the redesign with
+dependent interviewing.} Even so, the persistent exit rate is the largest misfit at the start (0.0014 against 0.0101;
+4{,}623 of an objective of 11{,}734): wives in the model leave jobs about seven times less often than in the
+data.\footnote{The objective at the start is 11{,}733.7 from a clean compilation on the PC and 11{,}733.6 on the
+cluster (job 11863423); compiled binaries differ in the fourth significant digit (cached and fresh builds by up to
+$9\times10^{-5}$ in a moment), so the reproducibility check compares the objective at a relative $10^{-3}$
+(\texttt{IGE/paperA\_model/hpc\_job\_a.py}).} The missing exits are those of wives who have held their job for a
+year or more: by job tenure in the SIPP the model's monthly exit is 0.035, 0.010 and 0.0027 at 0--5, 6--11 and 12 or
+more months against 0.021, 0.016 and 0.0068 in the data, so a hazard specific to the first year of a job, which raises
+the first cell further, is not the remedy.\footnote{Data: \texttt{IGE/66.PaperATargetsExt.py} from the SIPP
+2004--2014 panels (household bootstrap standard errors 0.0007, 0.0007 and 0.0001). An extra exit hazard in the first
+year of a job is coded as an option that is off in the first estimate (\texttt{--new-job}); at the start values it
+raises the first cell to 0.042 and the objective on the extended set of 89 moments from 13{,}232.5 to 13{,}245.7
+(\texttt{IGE/paperA\_model/results/extensions\_20261019.md}). Why established wives leave is studied in
+\texttt{IGE/proposals/wife\_exit\_evidence.md}.}
+
+Of the 97 targets, 85 enter the objective. The other twelve stay in the fit table, one reason each: the four pooled CPS
+rates (in the model each is exactly the race-share average of its Black and White rates), the three one-month CPS flows
+(replaced by the persistent ones), the three SIPP employment rates of husbands without a separation (in the model
+husbands never quit), and the husband's employment rate by race. The model's husbands have positive hours in 99.9\%
+(Black) and 100\% (White) of couple-years against 88.2\% and 94.3\% in the PSID: they leave work only by displacement and
+find a job in about four months, so a year without work almost never occurs, and no parameter reaches the
+target.\footnote{As a target it would add 1{,}036 to the objective ($z$ of 22--23) and pull $\lambda_h(r)$ down against
+the SIPP re-employment path; reported only, the objective at the start falls by 1{,}036 to 11{,}734
+(\texttt{moments.OBJ\_EXCLUDE}; \texttt{IGE/paperA\_model/results/diagnostics\_20261018.md}, step 5 and follow-up 3).}
+The weights are $1/(\mathrm{se}_m^2 + \mathrm{var}^{sim}_m)$, the bootstrap variance of each data moment plus the
+simulation variance of the model moment across five sets of common random numbers, so that a moment the simulation
+reproduces noisily does not dominate.\footnote{Under inverse bootstrap variances alone the CPS hazards held 96\% of the
+weight at the start (91\% with the trim and the simulation variance); the simulation variances are those of the start
+before the extensions and are recomputed at the Levenberg--Marquardt candidate before the global search
+(\texttt{IGE/paperA\_model/moments.py}, \texttt{weights}; \texttt{inputs/moment\_noise.csv}).}
+
+\paragraph{Procedure.} Every step uses the same common random numbers, three copies of each PSID couple. The start
+values are closed forms from the targets and inputs (\texttt{analytic\_start.py}); a Jacobian of the moments at the
+start checks that every parameter moves a named block. A Levenberg--Marquardt search in logistic units, with a
+central-difference Jacobian at each iteration, takes the start to a candidate; the simulation variances are recomputed
+there; and CMA-ES searches around the candidate with initial step sizes from the Jacobian's column norms, from three
+seeds, as the check against local minima. The route is first run on pseudo-data generated at known parameters, and the
+independent-shock model is estimated by the same route.\footnote{CMA-ES alone was tried first: a pseudo-data recovery
+of 19 parameters from 496 evaluations lowered the objective from 2{,}907 to 482 (zero at the truth) and was still
+falling, with 3 of 19 parameters within two simulation standard errors of the truth. The jobs on the university
+cluster are \texttt{Joint-test}, \texttt{Joint-recovery-gn}, \texttt{Joint-gn-main}, \texttt{Joint-noise} and
+\texttt{Joint-smm-main} with two restarts (\texttt{IGE/paperA\_model/estimate.py}, commands \texttt{polish},
+\texttt{noise}, \texttt{run}; \texttt{hpc\_job\_a.py}).} Standard errors are of the sandwich form, with the bootstrap
+covariance of the targets and the simulation covariance of the moments.
+
+\begin{table}[htbp]\centering\footnotesize
+\caption{Estimated parameters and identifying moments}\label{tab:model_params}
+\begin{tabular}{p{4.0cm}p{2.6cm}p{8.2cm}}
+\toprule
+Parameter & Symbol & Identifying moments (window) \\
+\midrule
+\multicolumn{3}{l}{\textit{Displacement risk (9)}} \\
+Wife's own hazard, by race & $\delta_w(B), \delta_w(W)$ & her monthly non-temporary job-loss rate when he keeps his job (CPS 1994--2023); her annual displacement rate (PSID 1984--2021) \\
+Husband's own hazard, by race & $\delta_h(B), \delta_h(W)$ & his monthly job-loss rate (CPS); his annual displacement rate, 8.0\% / 4.8\% (PSID) \\
+Common shock, by workplace match & $\pi_c(0), \pi_c(1), \pi_c(2)$ & same-month excess by match (CPS); same-year joint displacement by sector (PSID) \\
+Couple type & $p_H$, $m_H$ & her excess in months $\pm 1$ to $\pm 3$ around his loss (CPS); permanent component and placebo window (PSID) \\
+\multicolumn{3}{l}{\textit{Search friction (4)}} \\
+Wife's job finding, by race & $\lambda_w(B), \lambda_w(W)$ & persistent monthly employment entry of non-employed wives (CPS); her employment path 0--6 months after his separation (SIPP 2003--16) \\
+Husband's job finding, by race & $\lambda_h(B), \lambda_h(W)$ & his employment 3, 6, 12 months after an involuntary separation (SIPP); his hours in years 0--1 after displacement (PSID) \\
+\multicolumn{3}{l}{\textit{Human capital (7)}} \\
+Accumulation & $\pi^{up}_w, \pi^{up}_h$ & two-year log wage growth of the continuously employed at 25--34 (PSID) \\
+Accumulation by level & $\eta_{up}$ & the fall of that growth at 35--44 and 45--54 (PSID) \\
+Depreciation & $\pi^{dn}_w, \pi^{dn}_h$ & earnings on re-employment by length of non-employment, 1--3, 4--12, 13--24 months (SIPP); her wage at re-entry after 12+ months out; his loss in year 6 relative to years 1--3 (PSID) \\
+Displacement loss & $d_w, d_h$ & labor income loss in years 1--3 after own displacement (PSID); loss on re-employment after 1--3 months (SIPP) \\
+\multicolumn{3}{l}{\textit{Work, safety net, marriage, credit (12)}} \\
+Wife's work costs & $\phi_F, \phi_P$ & employment of wives with no child under 18; part-time share (PSID); her persistent monthly exit from employment outside job loss (CPS) \\
+Child costs & $\theta_{05}, \theta_{617}$ & her employment by youngest child's age; her added hours and employment after his displacement by child age (PSID) \\
+Husband's full-time cost & $\phi_h$ & part-time share of employed husbands (PSID) \\
+Fixed cost of work & $F$ & consumption change after her own displacement; joint minus single (PSID 1999--2021) \\
+Food-stamp stigma & $\kappa_S$ & receipt of couples; its rise after his displacement, 4.2 / 3.3 points (PSID) \\
+Separation, by race & $\sigma_0(B), \sigma_0(W)$ & annual separation rate of couples (PSID) \\
+Separation response, by race & $\sigma_J(B), \sigma_J(W)$ & still with wife, $-4.5$ / $-1.9$ points in years 1--3 (PSID) \\
+Borrowing limit & $\underline a$ & share of couples with liquid wealth $\le 0$ by wife's age; consumption change after his displacement (PSID 1999--2021) \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.95\textwidth}\footnotesize Thirty-two parameters; thirty-one are free at the estimation size, at which
+the groups $s = 1$ and $s = 2$ are merged and share $\pi_c(1)$, so that $\pi_c(2)$ does not enter. Every moment is computed on simulated households of
+the same window as its data counterpart: PSID couple-years 1984--2021, consumption 1999--2021 only, CPS couple-months
+1994--2023, SIPP 2003--2016. Standard errors of the moments are bootstrap standard errors by 1968 family (PSID) or
+household (CPS, SIPP); the weights are the inverse of the bootstrap variance plus the simulation variance of each
+moment, with equal block weights as a robustness run; 85 of the 97 targets enter the objective. Targets:
+\texttt{IGE/60.PaperATargets.py}; consumption: \texttt{IGE/47.PSIDConsumptionEvent.py}.\end{minipage}
+\end{table}
+
+\paragraph{Identification.} The monthly frequency separates the three parts of displacement risk. With the husband
+employed, the wife's monthly job-loss probability is $m_\tau\,\delta_w(r)$ exactly, and her excess in the months
+around his loss is $\delta_w(r)\,\mathrm{var}(m_\tau)/\E(m_\tau)$ to first order: the base rate and the flat excess
+give $\delta_w$ and the dispersion of the couple type, the PSID placebo window a second reading of the latter, and the
+same-month spike in each workplace group, given these, $\pi_c(s)$, with the PSID same-year moments by sector
+over-identifying it. Because the couple type raises both own hazards for years, it is also what makes the risk matter
+for saving. The wife's job finding is identified by the entry rate of non-employed wives and by the speed with which
+employment builds up after the husband's loss, the work costs by the levels of employment by child age and the
+part-time share; the response to his loss separates the two, since a high work cost lowers the eventual response and a
+high search friction delays it. Her persistent exits from employment outside job loss were to pin, through the same
+work costs, the margin on which she leaves a job; at the start values the work costs alone miss that rate sevenfold,
+and the evidence on why wives leave employment decides what the model needs for it. Accumulation is identified by the
+wage growth of the continuously employed, its level at 25--34 by $\pi^{up}_j$ and its fall with age by
+$\eta_{up}$; the earnings on re-employment by the
+length of non-employment separate depreciation (the slope of the loss in the spell) from the displacement loss (its
+level after a short spell). The stigma is identified by food-stamp receipt and its rise after displacement, the
+separation parameters by the baseline rate and the response, the borrowing limit by the share of couples with no liquid
+wealth and the consumption fall after his displacement, and the fixed cost by the consumption change at the wife's own
+displacement, which is smaller than her income loss because the cost of work ends. At the start values every
+parameter moves a named block of moments; the weakest directions are $m_H$ with $\eta_{up}$, $\pi^{dn}_h$ with $d_h$,
+$\lambda_h(B)$ against $\lambda_h(W)$, and $F$, and the Jacobian is read again at the Levenberg--Marquardt
+candidate.\footnote{Range-scaled condition number 529 at the extended start, 31 free parameters
+(\texttt{IGE/paperA\_model/results/diagnostics\_20261018.md}, C). Ties across races remain an option of the code
+(\texttt{--tie}) and are not applied: the racial differences are reported.} A restricted model with
+independent shocks, $\pi_c(\cdot) = 0$ and $m_H = 1$, is estimated on the same targets with the same draws and
+reported next to the main model in the fit and counterfactual tables; the difference is what the correlation buys.
+
+\subsection{Validation}\label{sec:validation}
+
+The following are computed on the simulated households through the same definitions and windows and are not used in
+estimation: the CPS jump in looking the month after his loss (8.8 points) and the employment path of these wives
+over twelve months; the SIPP paths from month 12 to month 36; the Displaced Worker Supplement same-year ratio (4.7\%
+against 1.1\%); the family income loss after his displacement; the fall in job finding of wives already unemployed
+when he loses his job, which the model, in which the common shock does not lower her job finding, is expected to miss;
+the excess by child age and by race, equal in the data; assets relative to human wealth against Figure 3 of
+\citet{blundell2016consumption}; the level of the PSID age profile of married men's earnings; the monthly transition
+matrices of wives and husbands; and job finding by age against the CPS, the SIPP and \citet{bacher2025joint}. Two
+validations test channels the model does not parameterise. The added-worker effect of \citet{bacher2025joint}---the
+entry of a non-participating spouse in the month the employed spouse loses the job, 5.55 points overall and 7.12,
+6.83, 4.57 and 1.40 points from the youngest to the oldest age group---is reproduced on this paper's CPS panel
+(\texttt{IGE/50.CPSAddedWorkerByAge.py}) and compared with the simulated effect by the wife's age; since no parameter
+depends on age, an age gradient in the model can come only from human capital, assets, the children and the horizon.
+And the estimator of \citet{blundell2016consumption} is run, unchanged, on a PSID-shaped biennial panel of about 50,000
+simulated couples with calendar years labelled 1998--2008 and measurement error added as a two-component mixture
+calibrated to the composition of the rows their trims remove (\texttt{IGE/bps\_reconciliation/}): it must return their
+wage variances and covariances within their standard errors, their insurance split within about ten points, their
+outside-insurance and extensive-margin coefficients within their standard errors, and the derivatives of these with
+respect to their restrictions that Appendix~\ref{app:bps} reports. Because their estimator returned a wife's hours
+response to her husband's permanent wage of $-0.76$ to $-0.86$ for a true response of $-0.3$ in a synthetic test, the
+test compares the model's own simulated response with what their estimator reports on the model's data, not only the
+estimates with theirs. Spousal leisure complementarity and the exact Frisch magnitudes are not expected to match.
+
+\subsection{Counterfactuals}
+
+Each experiment re-solves the model with the same draws, is reported for the main and the independent-shock models,
+and is scored on consumption in the month of the husband's loss and over the following twelve months, the share of
+couple-months with no earner and with no earner and no credit, a consumption-equivalent welfare change at entry, and
+the children's adult outcomes under the high and low slopes, each by workplace match and race. (i) \emph{Common shock
+off}, $\pi_c(\cdot) = 0$: how much consumption smoothing and how much of the children's outcomes the correlation costs.
+(ii) \emph{Unemployment insurance for both spouses and longer in recessions}: both spouses entitled at a joint loss,
+and the expiry hazard from $1/6$ to $1/12$ (52 weeks), at the estimated $\pi_c$ and with $\pi_c$ doubled, the
+recession excess; the added-worker effect under the longer duration is reported next to Table 12 of
+\citet{bacher2025joint}, in which it falls from 5.16 to 3.68 points. (iii) \emph{An earnings subsidy against an
+unconditional transfer of equal cost}: an EITC-type expansion against a monthly transfer to couples with children,
+scored on consumption in joint-loss months, on months with no earner and no credit, and on children; the subsidy pays
+only when someone works, so it insures least in the state in which both spouses have lost their jobs. (iv) \emph{A
+childcare subsidy} when the youngest child is under six. (v) \emph{Black couples with White displacement hazards},
+then with the White separation response, one at a time. The welfare numbers cover the married household and, after a
+separation, the wife's household; the husband is not followed after a separation, a limitation stated with every
+welfare number.

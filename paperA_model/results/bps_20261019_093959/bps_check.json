@@ -1,0 +1,47 @@
+{
+ "spec": "paperA_base",
+ "rows": 115698,
+ "couples": 26442,
+ "gross_rate": 0.01,
+ "gross_sd": 0.7,
+ "sigma_nu_zero": false,
+ "bps_published": {
+  "s_v1": 0.0303,
+  "s_v2": 0.0382,
+  "c_v1v2": 0.0027,
+  "s_u1": 0.0275,
+  "s_u2": 0.0125,
+  "c_u1u2": 0.0058
+ },
+ "bps_on_sim": {
+  "T3_s_u1": NaN,
+  "T3_s_v1": NaN,
+  "T3_s_u2": NaN,
+  "T3_s_v2": NaN,
+  "T3_c_u1u2": NaN,
+  "T3_c_v1v2": NaN,
+  "N_sample": 78602.0,
+  "n_hd": 6706.0,
+  "n_wd": 4008.0,
+  "n_jd": 793.0,
+  "M_h2v1": NaN,
+  "ch_tot": NaN,
+  "stata_minutes": 3.5573274453481036
+ },
+ "wage_process_before": {
+  "p_c": 0.0009947341381433366,
+  "p_eps_w": 0.009046461146481827,
+  "p_eps_h": 0.004067533721235149,
+  "sig_nu_w": 0.11180339887498948,
+  "sig_nu_h": 0.16583123951776998,
+  "rho_nu": 0.31
+ },
+ "wage_process_after": {
+  "p_c": 0.0009947341381433366,
+  "p_eps_w": NaN,
+  "p_eps_h": NaN,
+  "sig_nu_w": 0.07905694150420949,
+  "sig_nu_h": 0.11726039399558574,
+  "rho_nu": 0.31
+ }
+}

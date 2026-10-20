@@ -1,0 +1,53 @@
+repo /users/cm1jil/joint  commit 78a45a5
+python 3.12.13 at /users/cm1jil/joint/.venv/bin/python
+inputs present (entry couples: 12,360 rows)
+code snapshot 78a45a5 in /scratch/job.11865967/paperA_code_11865967; job 11865967: 32 cores -> 16 workers x 2 threads; results in /mnt/parscratch/users/cm1jil/joint_smm_results
+running: /users/cm1jil/joint/.venv/bin/python -u /scratch/job.11865967/paperA_code_11865967/IGE/paperA_model/estimate.py polish --workers 16 --threads 2 --label main --iters 15
+polish: 31 free parameters, LM multipliers [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0] -> /mnt/parscratch/users/cm1jil/joint_smm_results/runs/polish_main_20261020_040752_j11865967
+weight shares by block: {"Base hazards": 0.918782, "Her exits": 0.069428, "Separation": 0.003995, "Joint loss, monthly": 0.003324, "Her search": 0.002797, "Wage growth": 0.000669, "Employment levels": 0.000378, "Wealth": 0.000345, "Safety net": 0.000176, "Joint loss, annual": 8.3e-05, "His search": 1.1e-05, "Consumption": 9e-06, "Added work": 4e-06, "Her earnings": 0.0, "His earnings": 0.0}
+warm-up evaluation (compiles before the workers start): Q 11,733.6  missing 0  316s 
+iter 0  Q 11,733.59
+iter 1  Q 11,733.59 -> 3,504.03  mu 1  cond(G'WG) 1.15e+05  evals 71  24 min
+iter 2  Q 3,504.03 -> 1,696.53  mu 0.1  cond(G'WG) 2.55e+05  evals 141  45 min
+iter 3  Q 1,696.53 -> 1,524.31  mu 0.0001  cond(G'WG) 5.15e+07  evals 211  72 min
+iter 4  Q 1,524.31 -> 1,511.45  mu 0.1  cond(G'WG) 2.36e+09  evals 281  98 min
+iter 5  Q 1,511.45 -> 1,493.44  mu 1  cond(G'WG) 2.17e+09  evals 351  124 min
+iter 6  Q 1,493.44 -> 1,452.31  mu 1  cond(G'WG) 2.35e+09  evals 421  150 min
+iter 7  Q 1,452.31 -> 1,367.49  mu 0.001  cond(G'WG) 2.12e+09  evals 491  176 min
+iter 8  Q 1,367.49 -> 1,360.56  mu 0.001  cond(G'WG) 2.43e+09  evals 561  203 min
+iter 9  Q 1,360.56 -> 1,359.67  mu 1  cond(G'WG) 1.56e+10  evals 631  230 min
+iter 10  Q 1,359.67 -> 1,359.60  mu 1  cond(G'WG) 1.55e+10  evals 701  258 min
+polish stopped: Q fell by 0.959 over two iterations (iteration 10); best Q 1,359.60
+        param   estimate        se  se_sim_noise
+0   delta_w_B   0.002984  0.000119      0.000044
+1   delta_w_W   0.002044  0.000073      0.000048
+2   delta_h_B   0.004864  0.000257      0.000150
+3   delta_h_W   0.002790  0.000095      0.000058
+4       pi_c0   0.000042  0.000012      0.000008
+5       pi_c1   0.000350  0.000062      0.000049
+6         p_H   0.021407  0.005640      0.003450
+7         m_H  14.934719  2.720950      1.501552
+8     lam_w_B   0.088064  0.014810      0.005701
+9     lam_w_W   0.157545  0.015498      0.003692
+10    lam_h_B   0.120125  0.013080      0.003951
+11    lam_h_W   0.301004  0.016549      0.006809
+12    pi_up_w   0.007308  0.000270      0.000101
+13    pi_up_h   0.005126  0.000212      0.000069
+14    pi_dn_w   0.000139  0.000717      0.000132
+15    pi_dn_h   0.020358  0.006789      0.001582
+16        d_w   0.092534  0.037621      0.021608
+17        d_h   0.000339  0.044890      0.012159
+18      phi_F   0.368111  0.012746      0.001497
+19      phi_P   0.111889  0.010529      0.002305
+20   theta_05   0.021633  0.010883      0.004241
+21  theta_617   0.007991  0.005452      0.002036
+22      phi_h   0.178051  0.004157      0.001399
+23          F   0.569393  0.024448      0.008512
+24    kappa_S   0.105616  0.029560      0.003343
+25   sigma0_B   0.002750  0.000192      0.000097
+26   sigma0_W   0.001103  0.000052      0.000022
+27   sigmaJ_B   0.001247  0.002631      0.001294
+28   sigmaJ_W   0.000708  0.003016      0.001452
+29      a_bar  59.992596  3.431359      0.763185
+30     eta_up   0.501092  0.093831      0.023053
+-> /mnt/parscratch/users/cm1jil/joint_smm_results/runs/polish_main_20261020_040752_j11865967

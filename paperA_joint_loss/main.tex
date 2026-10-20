@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{left=1.1in,right=1.1in,top=1.1in,bottom=1.1in}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\graphicspath{{./}{../output/}}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage[semicolon]{natbib}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+
+\onehalfspacing
+\setlength{\parindent}{22pt}
+\setlength{\parskip}{5pt}
+
+\definecolor{darkred}{rgb}{0.64, 0, 0}
+\hypersetup{colorlinks=true, citecolor=darkred, filecolor=darkred, linkcolor=darkred, urlcolor=darkred}
+
+\begin{document}
+
+\title{The Insurer Is Hit Too: Joint Job Loss of Spouses\ and the Limits of Family Insurance
+\thanks{\footnotesize Preliminary draft.}}
+\author{Jiaqi Li \ University of Sheffield}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+\noindent When a husband loses his job, his wife is ten times as likely to lose hers in the same month. In thirty years
+of the Current Population Survey, among 1.3 million married couples in which both spouses work, the wife's monthly
+job-loss probability is 5.45\% in the month her husband loses his job against 0.54\% otherwise; the excess survives state
+$\times$ month $\times$ industry fixed effects, is present in all 51 states, is larger in recessions, and is the same in Black and White couples. It is carried by the workplace: a shared employer accounts for a third to a half of the excess, and couples in the same industry for more than half of it. With each spouse's own reason for the
+job ending, the Displaced Worker Supplement and the PSID confirm the fact, the SIPP replicates it month by month, and the PSID
+splits it into a permanent part, couples who share risk, and a larger
+contemporaneous part. The joint loss is small in the household's average income loss but large in the month of the
+shock: wives who were not working search at once and find jobs slowly, so average added-worker estimates, which net
+the wives who add work against the wives who lose their own jobs, understate what wives do and overstate what families
+can absorb. Job loss also strains the marriage this insurance relies on: a wife's own job loss ends marriages as
+often as her husband's, and a joint loss most often. The fact ranks the safety net: an earnings subsidy such as the Earned Income Tax Credit pays nothing in the
+months in which both spouses are out of work, while food stamps, which rise after displacement, pay in every state. I set out a
+two-earner model with correlated displacement risk, estimated on these moments, to measure what undiversified family
+insurance does to consumption, to children and to the ranking of work-conditioned and unconditional transfers.
+\end{abstract}
+
+\clearpage
+
+\input{sec1_introduction}
+\input{sec2_literature}
+\input{sec3_data}
+\input{sec4_jointloss}
+\input{sec5_household}
+\input{sec6_children}
+\input{sec7_model}
+\input{sec8_conclusion}
+
+\bibliographystyle{chicago}
+\bibliography{references}
+
+\clearpage
+\appendix
+\input{appB_other}
+\input{appC_robust}
+\input{appD_bps}
+\input{appA_designs}
+
+\end{document}

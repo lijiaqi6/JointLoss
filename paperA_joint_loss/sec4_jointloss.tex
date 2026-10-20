@@ -1,0 +1,128 @@
+\section{Joint Job Loss within Couples}\label{sec:jointloss}
+
+\subsection{The monthly hazard}
+
+Among couples in which both spouses work, a wife loses her job in the same month as her husband in 5.45\% of the
+months in which he loses his, against 0.54\% when he keeps his: ten times as often, and 9.4 times what independent
+risks would imply. With state $\times$ month fixed effects the excess is 4.0 percentage points (0.040$^{***}$, s.e.\
+0.002), and with state $\times$ month $\times$ wife's industry fixed effects, which compare wives in the same industry,
+state and month, it is still 3.7 points (0.037$^{***}$): the joint loss is not the local business cycle. It is 3.4
+points (0.034$^{***}$) without the pandemic years 2020--21, it is positive in all 51 states (significant in 46), and it is
+larger in recessions (6.7 against 3.6 points; difference 0.031$^{***}$).
+
+Figure~\ref{fig:cps_hazard} shows the timing. Relative to the month in which the husband loses his job, the wife's
+excess risk of losing hers is 0.6, 0.6 and 0.7 percentage points in the three months before, 4.0 points in the same
+month and 0.8, 0.6 and 0.8 points in the three months after (all $p<0.001$). The shock hits both spouses in the same month, on top of a
+small shared risk around it.
+
+\begin{figure}[htbp]\centering
+\IfFileExists{fig_cps_monthly_hazard.pdf}{\includegraphics[width=0.85\textwidth]{fig_cps_monthly_hazard.pdf}}%
+{\includegraphics[width=\textwidth]{cps_joint_job_loss.png}}
+\caption{The wife's monthly job-loss hazard around her husband's job loss (CPS)}\label{fig:cps_hazard}
+\begin{minipage}{0.95\textwidth}\footnotesize Excess probability that the wife loses her job in month $\tau$ relative to
+the month in which her husband loses his ($\tau=0$), among couples in which both spouses work; linear probability
+models with state $\times$ month fixed effects, 95\% confidence intervals clustered by household. CPS basic monthly
+files 1994--2023. At $\tau=\pm3$ the month lies outside the four-month rotation, and a job loss is counted as
+unemployment for a job-loss reason lasting four weeks or less (open symbols); the same rule gives 0.041 at $\tau=0$,
+against 0.040 from the monthly flows. Code: \texttt{IGE/30.CPSJointJobLoss.py}, \texttt{IGE/37.CPSJointLossChecks.py}.\end{minipage}
+\end{figure}
+
+Shared workplaces carry the excess. When the spouses work in the same major industry it rises by 14.8 points
+(0.148$^{***}$), and in the same detailed industry 23.0\% of wives lose their job in the month their husband does. The
+excess is the same in both races (Black 0.044$^{***}$ on a base of 0.60\%, White 0.038$^{***}$ on 0.54\%; difference
+0.006, $p=0.309$), and it does not depend on whether the couple has young children.
+
+\subsection{Reporting, recall layoffs and the season}
+
+Three features of the CPS could produce a joint job loss that is not one: one household member usually reports for
+both spouses, a third of the husbands' job losses are temporary layoffs, and some jobs end with the season or the
+school year. None of them accounts for the fact (Appendix~\ref{app:robust}, Table~\ref{tab:cps_checks}). The excess is
+3.8 points whether the wife or the husband reports the other's job loss. Temporary layoffs account for about a third of
+it: without them the excess is 2.7 points, on a base of 0.23\% for permanent job losses. A joint permanent job
+loss---both spouses still unemployed two months later, outside temporary layoffs, the summer and the pandemic---is 13
+times as likely in the month the husband loses his job as in other months (1.6 points on a base of 0.17\%). Couples who
+share a detailed industry, occupation and class of worker, the closest the CPS comes to a common employer, account for
+about a third of the excess, so a shared employer plausibly carries a third to a half of it.
+
+\subsection{Displacements with each spouse's own reason}
+
+The PSID measures the same fact with each spouse's own report of why a job ended, over the years around the husband's
+displacement (Table~\ref{tab:joint_job_loss}). In the main sample, in which both a window around the event and a
+placebo window before it are observed, the husband's displacement raises the probability that his wife is displaced in
+the three years around it by 5.2 percentage points (0.052$^{***}$), from a base of 5.8\%, and in the placebo window four
+to two years before it by 2.1 points (0.021$^{*}$, $p=0.093$); with couple fixed effects the difference is 3.1 points
+(0.031$^{*}$, $p=0.077$). Wives of men who will be displaced four to six years later are already more often displaced in
+the placebo window (0.033$^{**}$, $p=0.012$). Part of the excess is therefore a permanent trait of couples who share
+risk and part is contemporaneous: stacking both windows, the permanent couple component is 2.0 points (0.020$^{**}$,
+$p=0.012$) and the contemporaneous component 3.3 points (0.033$^{**}$, $p=0.036$). In the sample in which only the window around the event is
+required the excess is 8.3 points (0.083$^{***}$), and the event study with couple and calendar-year fixed effects puts
+the excess in the year of the husband's job loss (3.6 points) and the year after (2.4 points). The CPS, which measures
+timing to the month, shows that the contemporaneous part dominates: the leads are 0.6--0.7 points against a
+4.0-point spike.\footnote{Couple and calendar-year fixed effects, reference years $-4$ and $-3$; the estimate is already
+elevated in year $-2$ (1.8 points, $p=0.07$), consistent with the spouses' reports dating the same events a year apart,
+with shocks reaching the workplace first, or with the permanent component. The excess rises across periods, from 0.027
+(not significant) in 1984--89 to 0.073$^{***}$ in 1990--99 and 0.095$^{***}$ in 2000--21 (difference 0.069$^{**}$). The rise
+is not dating, since more than 97\% of both spouses' reports carry an end year in every period, and not sorting, since
+the share of displaced couples in the same sector falls from 0.20 to 0.13; the 1984--89 estimate rests on 175 displaced
+husbands. Code: \texttt{IGE/38.PSIDJointLossChecks.py}. Code:
+\texttt{IGE/25.JointJobLoss.py}.}
+
+\input{tab_joint_job_loss}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{joint_job_loss_es.png}
+\caption{The wife's own job loss around her husband's displacement (PSID)}\label{fig:joint_job_loss}
+\begin{minipage}{0.95\textwidth}\footnotesize Event study of the wife's displacement and of her employer's closure,
+by year relative to the husband's displacement (reference years $-4$ and $-3$), with 95\% confidence intervals; wives
+working at baseline, couple and calendar-year fixed effects. Code: \texttt{IGE/25.JointJobLoss.py}.\end{minipage}
+\end{figure}
+
+The channels are the same as in the CPS. When the husband's job loss is a plant closure, the wife's risk of
+displacement rises by 6.8 points and the probability that her own employer closes by 5.4 points. Where the spouses work
+in the same one of 16 sectors (15\% of couples), the husband's displacement raises her risk by a further 20 points, and
+in the same three-digit industry (8\% of couples), the closest the public PSID comes to a common employer, by 28 points.
+The change in the state unemployment rate does not moderate it. Controlling for both spouses' hours and earnings before
+the job loss leaves an excess of 4.8 points.
+
+\subsection{Two more data sets: the Displaced Worker Supplement and the SIPP}
+
+The CPS Displaced Worker Supplement (1984--2024) records each adult's displacements with the reason and the year in
+417,269 couples. A wife was displaced in the same calendar year as her husband in 4.7\% of couples in which he was
+displaced and in 1.1\% of the others (an excess of 3.3 points, 0.033$^{***}$), joint plant closings within the same year
+are almost ten times as frequent as independent closings would imply, and 68\% of same-year joint closings are in the
+same detailed industry. The Survey of Income and Program Participation (SIPP; 2004, 2008 and 2014 panels; 50,692
+couples) follows both spouses month by month for up to five years with each job's reason for ending. A wife has an
+involuntary separation in the month of her husband's 7.7 times as often as otherwise (an excess of 2.7 points,
+0.027$^{***}$), 13 times with a definition close to the CPS one; the excess holds for couples in which both spouses
+report for themselves (0.019$^{***}$) and rises by 22 points when the spouses share a detailed industry. In both data
+sets the tetrachoric or relative measures match the PSID and the CPS. The excess is the same for Black and White
+couples in the CPS and the Displaced Worker Supplement; in the SIPP the same-month excess is smaller for Black couples,
+on six joint events, while the twelve-month excess is similar (Appendix~\ref{app:robust}).
+
+\paragraph{By age.} The joint job loss is not a feature of young couples. Outside temporary layoffs, the wife's excess
+risk of losing her job in the month her husband loses his is 2.8 percentage points when she is 26--35, 2.4 at 36--45, 2.4
+at 46--55 and 2.7 at 56--62 (oldest minus youngest $-0.05$, $p=0.94$); including temporary layoffs it rises with age, from
+3.6 to 5.0 points. In the same panel the added worker effect of \citet{bacher2025joint}---the response of a
+non-participating spouse to the working spouse's job loss---is 5.6 points (their estimate: 5.55) and declines with age,
+from 6.4 points at 26--35 and 7.2 at 36--45 to 1.2 at 56--62, as in their data.\footnote{Couples of a working and a
+non-participating spouse, primary earner's transition from employment to unemployment against continued employment,
+classification-error adjustment of \citet{bacher2025joint}, 1994--2020; oldest minus youngest $-5.13^{***}$ (s.e.\ 1.03).
+Joint job loss: state $\times$ month fixed effects; the same-month joint rate is 6.1 times its value under independence
+at 20--25 and 10.7 times at 56--62. Code: \texttt{IGE/50.CPSAddedWorkerByAge.py} (\texttt{output/cps\_awe\_by\_age.md}).}
+Older couples, whose non-working spouse barely enters the labor force, remain exposed to the loss of both earners.
+
+\subsection{Magnitudes for the model}
+
+Table~\ref{tab:joint_job_loss_magnitudes} expresses the result as joint probabilities. Among working couples, the wife
+is displaced in 10.2\% of the years in which her husband is and in 3.9\% of the years in which he is not, a tetrachoric
+correlation of job loss within the couple of 0.24, which rises to 0.50 when the spouses share a sector. These are the
+moments the model targets: a common component of the spouses' displacement risk, larger for couples who share a sector,
+on top of a permanent component of couples who share risk.
+
+The joint loss is small in the household's average income loss. A wife's displacement costs her about \$4,600 a year in
+labor income; averaged over all displaced families, the joint losses lower wives' earnings by about \$260 a year, about
+a fifth of the amount by which family income falls beyond the husband's own earnings and about 2\% of the family's
+income loss. It does not explain why wives insure little on average. Its importance lies in the state and the
+subgroup in which it occurs: in the month of the shock, when the household's income falls most, and among couples who
+share a workplace, where one job loss in five takes both earners. That is where insurance is valued most, and it is
+absent from models of family insurance.

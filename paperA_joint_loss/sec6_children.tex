@@ -1,0 +1,72 @@
+\section{The Children}\label{sec:children}
+
+The joint job loss and the household's response determine what reaches the children: a family income that stays lower
+for years, a higher risk that the parents separate, and, in the month of the shock, a household with no earner. This
+section reports what the PSID can say about the children's adult outcomes. The answer is a set of associations that
+bound, rather than identify, the effect of a father's job loss; the model uses them as bounds, together with
+administrative estimates.
+
+\paragraph{Associations.} I compare children whose father figure was displaced at a given age with children whose
+father figure was not, controlling for parental income before the displacement, the child's sex and birth year
+(Table~\ref{tab:displacement_children}). A displacement before age six is associated with a household income rank 3.9
+percentiles lower and 0.28 fewer years of schooling; a displacement at 12--17 with adult earnings about 14\% lower, a
+rank 2.5 percentiles lower and 0.29 fewer years of schooling. For White children most of these associations are
+statistically significant; for Black children they are significant mainly for displacements at 12--17, and the
+estimates are imprecise. Adding family income after the displacement reduces the associations by about a third,
+while adding the change in the mother's hours changes nothing; both are outcomes of the job loss, so this split is
+descriptive.\footnote{\texttt{IGE/output/father\_displacement.md}; code \texttt{IGE/20.PaperDisplacement.py}.}
+
+\input{tab_displacement_children}
+
+\paragraph{How much is the job loss.} Displaced families differ before the job loss: their family income is 24 log
+points lower, the parents have 0.6 fewer years of schooling, and the father's earnings were already growing more slowly
+(all $p<0.01$). Controlling for the father's earnings path, occupation and industry barely changes the associations, but
+four checks narrow what can be attributed to the job loss. With plant closures alone the associations vanish for Black
+children (adult earnings $+0.085$, s.e.\ 0.078) and survive for White children's schooling ($-0.40$ years, s.e.\ 0.11)
+and earnings rank ($-3.3$ percentiles, s.e.\ 1.6). A displacement after the child has left childhood (at 18--25) is not
+associated with schooling ($-0.08$, s.e.\ 0.09), while one at 12--17 is ($-0.27$, s.e.\ 0.08; difference $p=0.060$).
+The behavior problems of younger children are elevated before the displacement, so that association reflects the
+families rather than the job loss. Quits also predict less schooling (Table~\ref{tab:displacement_definitions}), which
+signals selection. The main definition reproduces the association of about $-9\%$ in adult earnings found by
+\citet{page2009parental} in the PSID.\footnote{Comparisons of siblings are not used: siblings share and compete for the
+family's resources and influence each other, and a job loss also affects later-born siblings through the family's
+lasting income loss, so they are not a clean control. Code: \texttt{IGE/22.DisplacementID.py}.}
+
+\input{tab_displacement_definitions}
+
+\paragraph{What the model takes from this.} The PSID associations are an upper bound on the total effect of a father's
+job loss on his children. They are robust only for White children's schooling and for job losses during childhood.
+Administrative data find smaller effects: about $-9\%$ in adult earnings in Canada
+\citep{oreopoulos2008intergenerational}, and much less in US tax data. There, a father's layoff during adolescence
+cuts family income sharply, lowers college enrollment by less than half a percentage point, and leaves early-career
+earnings almost unchanged \citep{hilger2016parental}. The model's child block maps family income at ages 0--5 and
+6--17, and the share of childhood spent with both parents, into adult log earnings. The income slopes are set so that
+a father's displacement at the mean displacement age lowers his child's adult earnings by 9\% (the high slope) or by
+0.35\% (the low slope, from the US estimates of the working-paper version of \citet{hilger2016parental}, college quality measured by alumni earnings). Counterfactuals are reported under both. The presence slope comes from
+the PSID. Holding family income at both childhood ages fixed, a childhood spent entirely with both parents is not
+associated with higher adult earnings ($+0.011$, s.e.\ 0.045, $p=0.80$). It is associated with 0.30 more years of
+schooling ($p<0.001$). Holding fixed only the family's income in the three years before and after the father's
+displacement, the association with adult earnings is $0.19^{***}$. The model uses 0.19 as the high presence slope
+and zero as the low one.\footnote{PSID children born 1968--1995 (SRC and SEO, unweighted) with at least three
+childhood interviews. ``Both parents present'' means the head and the wife of the child's family unit are the child's
+mother and father at birth. The share of childhood with both parents averages 0.38 for Black and 0.70 for White
+children. Adult earnings are the mean over the years as head or wife at 25--55 (at least three years; zeros kept).
+All regressions control for sex, birth year, parental education and, in pooled rows, race. Standard errors are
+clustered by 1968 family; siblings are not compared. Without income controls, a childhood with both parents is
+associated with adult earnings 29.5 log points higher ($0.295^{***}$, s.e.\ 0.041; $N=5{,}091$), with an earnings
+rank 9.5 percentiles higher ($9.46^{***}$) and with 0.72 more years of schooling ($0.724^{***}$). Net of log family
+income at 0--5 and 6--17, the earnings coefficient is $0.011$ (s.e.\ 0.045, $p=0.80$; $N=4{,}701$): Black $-0.031$
+($p=0.65$), White $0.069$ ($p=0.24$). The schooling coefficient is $0.299^{***}$ (s.e.\ 0.081; $N=6{,}213$): Black
+$0.213^{*}$ ($p=0.054$), White $0.476^{***}$. The income slopes in that regression are $0.148^{***}$ (ages 0--5) and
+$0.320^{***}$ (6--17) for log earnings; they are associations, which is why the model takes its income slopes from
+administrative estimates instead. Splitting the shares by age, the share with both parents at 6--17 is positive for earnings
+($0.102^{**}$, $p=0.038$) and schooling ($0.342^{***}$). The share at 0--5 is negative for earnings ($-0.126^{**}$,
+$p=0.032$) and not significant for schooling ($-0.080$, $p=0.41$). The two age shares are strongly collinear, and
+their sum is close to the undivided coefficient. In the father's
+displacement sample of Section~\ref{sec:children} (pooled, $N=3{,}520$), the regression of adult log earnings on the
+displacement, the share with both parents, and log family income before and after the (pseudo) event gives
+displacement $-0.040$ ($p=0.25$), presence $0.187^{***}$ (s.e.\ 0.054), income before $0.179^{***}$ and income after
+$0.209^{***}$. Black and White estimates are $0.178^{**}$ ($p=0.037$) and $0.175^{**}$ ($p=0.013$). Without the
+income after the event, the presence coefficient is $0.242^{***}$ and the displacement coefficient $-0.084^{**}$
+($p=0.016$). Code: \texttt{IGE/79.ParentsPresentOutcomes.py}.} The parents' side of the model is estimated without
+the child block, so its results for consumption and for the ranking of policies stand on their own.

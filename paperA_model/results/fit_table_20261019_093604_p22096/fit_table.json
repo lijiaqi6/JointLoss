@@ -1,0 +1,143 @@
+{
+ "main": {
+  "source": "IGE\\paperA_model\\results\\evaluate_20261019_064228_p27000\\moments.csv",
+  "kind": "evaluate",
+  "Q": 11725.953966894298,
+  "weighting": "diag_noise"
+ },
+ "indep": {
+  "source": "IGE\\paperA_model\\results\\runs\\recovery_closed_20261018_151959\\best.json",
+  "kind": "run",
+  "Q": 481.82251923736646,
+  "run": "closed",
+  "weighting": "diag",
+  "noise_file_used": "inputs/moment_noise.csv"
+ },
+ "Q_main_tables": 11725.9539668943,
+ "Q_indep_tables": 462.82195778719193,
+ "n_moments": 97,
+ "n_in_objective": 85,
+ "max_abs_z": 228.68765756827227,
+ "q_by_block": [
+  {
+   "block": "Joint loss, monthly",
+   "n": 10,
+   "n_obj": 10,
+   "Q": 39.231660712160355,
+   "Q_indep": 13.27474067395844,
+   "share": 0.0033457116429863607
+  },
+  {
+   "block": "Joint loss, annual",
+   "n": 5,
+   "n_obj": 5,
+   "Q": 23.5601141505992,
+   "Q_indep": 10.958701254462458,
+   "share": 0.0020092279244073533
+  },
+  {
+   "block": "Base hazards",
+   "n": 12,
+   "n_obj": 10,
+   "Q": 122.8849999140231,
+   "Q_indep": 104.83073748340905,
+   "share": 0.010479744356916494
+  },
+  {
+   "block": "Her search",
+   "n": 9,
+   "n_obj": 5,
+   "Q": 246.23913628661018,
+   "Q_indep": 79.23533081626883,
+   "share": 0.020999497096936697
+  },
+  {
+   "block": "Her exits",
+   "n": 2,
+   "n_obj": 1,
+   "Q": 4622.237884510833,
+   "Q_indep": 2.3808479714690245,
+   "share": 0.3941886432064056
+  },
+  {
+   "block": "His search",
+   "n": 8,
+   "n_obj": 5,
+   "Q": 60.95775973074155,
+   "Q_indep": 13.268946282011997,
+   "share": 0.005198533091878293
+  },
+  {
+   "block": "His earnings",
+   "n": 4,
+   "n_obj": 4,
+   "Q": 22.881023864172295,
+   "Q_indep": 1.667080654788351,
+   "share": 0.001951314488251611
+  },
+  {
+   "block": "Her earnings",
+   "n": 1,
+   "n_obj": 1,
+   "Q": 4.309840175870584,
+   "Q_indep": 7.064697537328557,
+   "share": 0.00036754708299542094
+  },
+  {
+   "block": "Wage growth",
+   "n": 13,
+   "n_obj": 13,
+   "Q": 149.44567506291295,
+   "Q_indep": 49.901416727545524,
+   "share": 0.012744862847393106
+  },
+  {
+   "block": "Added work",
+   "n": 7,
+   "n_obj": 7,
+   "Q": 11.592679251536456,
+   "Q_indep": 0.28639011232974937,
+   "share": 0.0009886342112774692
+  },
+  {
+   "block": "Employment levels",
+   "n": 7,
+   "n_obj": 5,
+   "Q": 3537.3008051134643,
+   "Q_indep": 7.004704029615663,
+   "share": 0.3016642240878883
+  },
+  {
+   "block": "Safety net",
+   "n": 4,
+   "n_obj": 4,
+   "Q": 163.14370367680434,
+   "Q_indep": 0.0,
+   "share": 0.013913043163686759
+  },
+  {
+   "block": "Separation",
+   "n": 4,
+   "n_obj": 4,
+   "Q": 2.962865549913084,
+   "Q_indep": 144.11370222802367,
+   "share": 0.00025267586400885557
+  },
+  {
+   "block": "Wealth",
+   "n": 6,
+   "n_obj": 6,
+   "Q": 2701.5667874027945,
+   "Q_indep": 24.902701462995132,
+   "share": 0.23039206831530173
+  },
+  {
+   "block": "Consumption",
+   "n": 5,
+   "n_obj": 5,
+   "Q": 17.639031491862138,
+   "Q_indep": 3.9319605529854718,
+   "share": 0.0015042726196659256
+  }
+ ]
+}

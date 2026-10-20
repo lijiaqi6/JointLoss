@@ -1,0 +1,100 @@
+\section{Robustness of the Joint Job Loss}\label{app:robust}
+
+This appendix documents the checks summarised in Section~\ref{sec:jointloss}: the CPS monthly checks on reporting,
+temporary layoffs, the season, persistence, class of worker, a common employer and attrition; the replication in the
+Displaced Worker Supplement; and the replication and the added-worker path in the SIPP.
+
+\subsection{The CPS monthly checks}
+
+Three features of the CPS could produce a joint job loss that is not one: one household member usually reports for
+both spouses, half of the husbands' job losses are temporary layoffs, and some jobs end with the season or the school
+year. None of them accounts for the fact; Table~\ref{tab:cps_checks} reports the estimates.\footnote{Linear probability models with state $\times$ month fixed effects,
+standard errors clustered by household; the respondent identifiers (PUSLFPRX, HURESPLI) are matched for 99.6\% of
+couple-months. Code: \texttt{IGE/37.CPSJointLossChecks.py} (\texttt{output/cps\_joint\_loss\_checks.md}).}
+
+\emph{Who reports.} The excess is 3.8 points when the wife reports for herself and the husband's job loss is reported by
+proxy, and 3.8 points in the reverse case; the difference is 0.0003 ($p=0.936$), and it is the same when the same person
+reports in both months. Couples in which a third household member reports for both spouses (4\% of couples) show a
+larger excess (0.093$^{***}$); excluding them leaves 3.8 points. Couples in which both spouses report for themselves
+cannot be formed, because the CPS takes one respondent per household and month.
+
+\emph{Temporary layoffs, the season and persistence.} Excluding the husband's temporary layoffs, the excess is 2.7
+points (0.027$^{***}$); excluding the wife's as well, 2.6 points, on a base of 0.23\%, so the wife's risk is 14 times the
+base. A temporary layoff of the husband followed by a permanent job loss of the wife adds only 0.4 points. Temporary
+layoffs therefore account for about a third of the headline excess. Excluding June to September leaves 3.7 points, and
+excluding the pandemic years 3.5 points. When both spouses are still unemployed two months later, the excess is 2.5
+points (0.025$^{***}$) on a base of 0.20\%. The strictest version---both spouses still unemployed two months later, the
+husband's loss not a temporary layoff, outside June to September and outside 2020--21---gives 1.6 points
+(0.016$^{***}$) on a base of 0.17\%: a joint permanent job loss is about 13 times as likely in the month the husband loses
+his job as in other months. The excess is positive in all ten major industries. In education and health it is large
+overall (0.091$^{***}$) but 2.0 points for the husband's permanent losses, consistent with school-year layoffs; couples
+who both work for government or are both self-employed show the largest excess (0.153$^{***}$ and 0.159$^{***}$), the
+latter likely family businesses, and couples who both work in the private sector show 3.0 points for the husband's
+permanent losses.
+
+\emph{A common employer.} The public CPS has no employer identifier. The tightest proxy, couples in the same detailed
+industry, the same detailed occupation and the same class of worker (6.3\% of couples), shows a joint-loss probability
+of 35.7\% (excess 0.337$^{***}$) and accounts for 35\% of the excess; all other couples show 2.6 points. If 10--12\% of
+dual-earner couples work at the same establishment \citep{hyatt2019coworking}, the excess requires a joint-loss
+probability of 21--41\% among them, depending on the excess elsewhere. A shared employer plausibly carries a third to a
+half of the excess. Couples observed in all four months of the rotation show 3.8 points, so attrition after a job loss
+does not create the excess.
+
+\input{tab_cps_checks}
+
+\subsection{The Displaced Worker Supplement}
+
+The CPS Displaced Worker Supplement, fielded every two years from 1984 to 2024, asks every adult whether he or she lost
+a job in the last three years because the plant closed or moved, there was insufficient work or the position was
+abolished, and in which year. It combines the reason-based measure of the PSID with the sample size of the CPS: 417,269
+couples in which both spouses answer the supplement, 24,038 displaced husbands and 1,968 couples in which both were
+displaced.\footnote{IPUMS CPS, 21 supplements; couples aged 20--64 naming each other as spouse; the 1984--1992 five-year
+window and reasons are harmonised to the later three-year definition. Linear probability models with state $\times$
+survey-year fixed effects and controls for both spouses' age, education and race; standard errors clustered by
+household (state clustering gives the same significance). Code: \texttt{IGE/39.CPSDisplacedWorkers.py}
+(\texttt{output/cps\_dws\_joint\_loss.md}).} A wife was displaced in the three-year window in 8.2\% of couples in which
+the husband was displaced and in 3.3\% of the others (an excess of 4.4 points, 0.044$^{***}$, s.e.\ 0.002), and in the same
+calendar year in 4.7\% against 1.1\% (0.033$^{***}$, s.e.\ 0.001), while a displacement of the husband in another year of
+the window adds only 0.5 points. Both spouses lost their jobs to plant closings 4.7 times as often as independent
+closings would imply (0.046$^{***}$), and 9.8 times within the same year. Joint displacements share the lost job's
+detailed industry in 29\% of cases, 41\% within the same year and 68\% for same-year joint closings, against 1.3\% for
+randomly paired spouses; the excess rises by 40 points when the spouses worked in the same detailed industry
+(0.399$^{***}$). The tetrachoric correlation of the spouses' displacements is 0.26 within the same year (0.35 for plant
+closings), close to the PSID's 0.24. The excess is the same for Black and White couples ($-0.001$, $p=0.894$), in
+1984--1998 and 2000--2024 (difference 0.004, $p=0.252$) and in recession and expansion windows (0.004, $p=0.305$). After
+a joint displacement neither spouse works at the survey more often: 8.8 points more (0.088$^{***}$) on a base of 9.3\%.
+
+\subsection{The SIPP}
+
+The public-use SIPP core files of the 2004 (waves 1--12, 2003--2007), 2008 (waves 1--16, 2008--2013) and 2014
+(waves 1--4, 2013--2016) panels give 1,595,445 couple-months of 50,692 married couples aged 20--60 who name each other
+as spouse. An involuntary separation is an employer job that ends for layoff or slack work, closure, discharge or the end
+of a temporary job, from the reason-for-leaving item. The public employer numbers are person-specific, so a shared
+employer cannot be identified.\footnote{Linear probability models among couples in which both spouses were employed the
+month before, with state $\times$ panel $\times$ rotation $\times$ month fixed effects; standard errors clustered by
+household. Code: \texttt{IGE/40.SIPPJointLoss.py} (\texttt{output/sipp\_joint\_loss.md}).}
+
+The wife's involuntary separation rate is 3.28\% in the month in which her husband separates and 0.43\% otherwise
+(ratio 7.7; excess 0.027$^{***}$, s.e.\ 0.003, on 4,479 husbands' separations and 143 joint events); requiring that she has
+no job the next month, as in the CPS, gives a ratio of 13.1 (excess 0.028$^{***}$). Over twelve months the ratio is 2.4,
+against 2.6 in the PSID's couple-years. The excess holds outside the interview seam (0.027$^{***}$), for couples in which
+both spouses report for themselves (0.019$^{***}$), without imputed records (0.028$^{***}$), in each panel (2004
+0.036$^{***}$, 2008 0.022$^{***}$, 2014 0.028$^{***}$) and outside the 2008--09 recession (0.030$^{***}$). It rises by 22
+points when the spouses share a detailed industry (0.220$^{***}$), where 23.9\% of wives separate in their husband's
+month, and by 11 points in the same major industry. The timing matches the CPS: the excess is 2.6 points in the month of
+the husband's separation, 0.4 points in the month before, and spread thinly over the months around it.
+
+The SIPP differs from the CPS and the Displaced Worker Supplement in one respect: for Black husbands the same-month
+excess is 0.007 ($p=0.123$) against 0.027$^{***}$ for White husbands (difference $-0.017^{***}$), on six joint events among
+435 Black husbands' separations; over the month of the separation and the following twelve the excess is similar
+(Black 0.050$^{***}$, White 0.063$^{***}$). With so few events this difference is fragile.
+
+The SIPP also traces the wife's response month by month for three years. Among wives with no job the month before, the
+probability of looking for work rises at once (0.053$^{***}$) and fades over three years (0.013, $p=0.246$ at 36 months),
+while employment builds up slowly: 0.019$^{***}$ in the month of the husband's separation, 0.037$^{***}$ a month later and
+0.054$^{***}$ after six months, and still 0.044$^{***}$ after 24 months. These wives were more often employed and looking
+six months earlier, so some had recently lost or left jobs; among wives with no job in any of the six previous months,
+employment rises from 0.015$^{***}$ to 0.045$^{***}$ after six months. Wives who were working see their employment fall by
+3.4 points a month after the husband's separation, about half of it their own job loss, so the net change in all wives'
+employment is about zero for a year ($-0.007^{**}$ after one month, 0.006, $p=0.297$, after twelve); leaving out the wives
+who lost their own job it is 0.011$^{*}$ after twelve months and 0.020$^{**}$ after 24.

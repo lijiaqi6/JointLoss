@@ -1,0 +1,92 @@
+id,block,moment,value,se,n,window,data_source,data_value
+cps_jl_nt,"Joint loss, monthly","Wife's same-month job-loss excess when he loses his, non-temporary losses (LPM, state x month FE)",0.023909795151466316,0.0015932138458492,2893414,CPS 1994-2023,cps,0.0258458081539007
+cps_jl_nt_s2,"Joint loss, monthly","Same, shared-employer cell (same detailed industry x detailed occupation x class of worker; s=2)",0.08896559762652118,0.0196289165787984,178156,CPS 1994-2023,cps,0.1920440342238464
+cps_jl_nt_s1,"Joint loss, monthly","Same, same detailed industry, outside the shared-employer cell (s=1)",0.08490137769708701,0.0093197123881509,334979,CPS 1994-2023,cps,0.0687622847533657
+cps_jl_nt_s0,"Joint loss, monthly","Same, different detailed industry or industry unknown (s=0)",0.013870237596318391,0.0013420331562616,2380279,CPS 1994-2023,cps,0.0140267918616751
+cps_jl_nt_m3,"Joint loss, monthly","Wife's excess job-loss hazard in month -3 relative to his loss month, non-temporary losses",0.006748820824711283,0.002073920684169,833287,CPS 1994-2023,cps,0.006707483932312
+cps_jl_nt_m2,"Joint loss, monthly","Wife's excess job-loss hazard in month -2 relative to his loss month, non-temporary losses",0.005303760708536047,0.00193738477135,828458,CPS 1994-2023,cps,0.005105514196241
+cps_jl_nt_m1,"Joint loss, monthly","Wife's excess job-loss hazard in month -1 relative to his loss month, non-temporary losses",0.006572062177752009,0.001212864742848,1787209,CPS 1994-2023,cps,0.0064080614829174
+cps_jl_nt_p1,"Joint loss, monthly","Wife's excess job-loss hazard in month +1 relative to his loss month, non-temporary losses",0.005385228844715342,0.0010806280633032,1784240,CPS 1994-2023,cps,0.0055572477876502
+cps_jl_nt_p2,"Joint loss, monthly","Wife's excess job-loss hazard in month +2 relative to his loss month, non-temporary losses",0.006451410900059156,0.0016573322293682,825393,CPS 1994-2023,cps,0.0056487332511992
+cps_jl_nt_p3,"Joint loss, monthly","Wife's excess job-loss hazard in month +3 relative to his loss month, non-temporary losses",0.006875909990935322,0.001594831989861,825664,CPS 1994-2023,cps,0.0060741600897653
+psid_perm,"Joint loss, annual",Permanent couple component,0.0222871783611116,0.0086008792196407,43168,PSID 1987-2021,psid,0.0200830302675258
+psid_contemp,"Joint loss, annual",Contemporaneous component,0.06382307307074297,0.0146182093179127,43168,PSID 1987-2021,psid,0.0327021684595524
+psid_cy_diff_all,"Joint loss, annual","P(she displaced | he is) - P( | he is not), same interval, all couple-years",0.11800422389216073,0.0049060813255786,60061,PSID 1984-2021,psid,0.0626917285133923
+psid_cy_diff_same,"Joint loss, annual","P(she displaced | he is) - P( | he is not), same interval, same sector (16 sectors)",0.181231514651306,0.0222574336108726,10091,PSID 1984-2021,psid,0.1840478402828138
+psid_cy_diff_diff,"Joint loss, annual","P(she displaced | he is) - P( | he is not), same interval, different sector",0.10797345624990176,0.0054401677482605,43084,PSID 1984-2021,psid,0.0412348633034147
+cps_wife_hazard_pooled,Base hazards,"Wife's monthly non-temporary job-loss rate, he employed, pooled",0.002199380197500575,3.458111820092328e-05,2883286,CPS 1994-2023,cps,0.0022787852761111
+cps_wife_hazard_black,Base hazards,"Wife's monthly non-temporary job-loss rate, he employed, Black",0.0029150901133015183,0.0001382768934181,174208,CPS 1994-2023,cps,0.0033683845068774
+cps_wife_hazard_white,Base hazards,"Wife's monthly non-temporary job-loss rate, he employed, White",0.0018948478752168693,3.622411840926173e-05,2528044,CPS 1994-2023,cps,0.0021685061260277
+psid_cy_wbase_B,Base hazards,"Wife's displacement rate per interval when he is not displaced, Black",0.0419477730830505,0.0022069144065471,13617,PSID 1984-2021,psid,0.0499375780274656
+psid_cy_wbase_W,Base hazards,"Wife's displacement rate per interval when he is not displaced, White",0.029419239353826433,0.0010852974661508,43244,PSID 1984-2021,psid,0.0357968735547127
+psid_h_disp_rate_B,Base hazards,"Husband's annual displacement rate, working married male heads, Black",0.05659979404722026,0.0023269988751132,18020,PSID 1984-2021,psid,0.0646503884572697
+psid_h_disp_rate_W,Base hazards,"Husband's annual displacement rate, working married male heads, White",0.040295880204600086,0.0012833972657797,52494,PSID 1984-2021,psid,0.0440050291461881
+psid_disp2plus_B,Base hazards,"Share of husbands displaced two or more times among husbands observed 10+ years, Black (T28)",0.15912366676275583,0.0137054999398933,634,PSID 1984-2021,psid,0.1514195583596214
+psid_disp2plus_W,Base hazards,"Share of husbands displaced two or more times among husbands observed 10+ years, White (T28)",0.12319367917662959,0.0078073825173432,2242,PSID 1984-2021,psid,0.1333630686886708
+cps_entry_pooled,Her search,"Monthly employment entry of non-employed wives, husband employed, pooled",0.05094145939062799,0.0003019273187072,1065884,CPS 1994-2023,cps,0.0749752524934161
+cps_entry_black,Her search,"Monthly employment entry of non-employed wives, husband employed, Black",0.08334948633456096,0.0016268683571819,52605,CPS 1994-2023,cps,0.0941796431993448
+cps_entry_white,Her search,"Monthly employment entry of non-employed wives, husband employed, White",0.043288535137128256,0.000325166186961,925926,CPS 1994-2023,cps,0.0750921845921827
+sipp_wife_emp_s0,Her search,"Employment of wives with no job the month before, relative to wives whose husband stays employed, month 0 after his involuntary separation",0.04686638741588996,0.0044201479886298,392530,SIPP 2003-2016,sipp,0.0189168508632676
+sipp_wife_emp_s1,Her search,"Employment of wives with no job the month before, relative to wives whose husband stays employed, month 1 after his involuntary separation",0.08336405228989352,0.0066477635167011,376130,SIPP 2003-2016,sipp,0.0367277856462627
+sipp_wife_emp_s6,Her search,"Employment of wives with no job the month before, relative to wives whose husband stays employed, month 6 after his involuntary separation",0.15601080262492237,0.0101164243796974,306460,SIPP 2003-2016,sipp,0.0543293609006622
+cps_wife_exit,Her exits,"Wives' monthly exit from employment without a job-loss reason, husband employed",0.002557851965180735,0.0001041332472172,2892230,CPS 1994-2023,cps,0.026148445481958
+psid_es_hh_13_B,His search,"His annual hours, years 1-3 after displacement, Black",-130.5406504756129,46.01214632342607,60074,PSID 1984-2021,psid,-104.67354205417767
+psid_es_hh_13_W,His search,"His annual hours, years 1-3 after displacement, White",-99.12255011354551,33.64108379162728,170087,PSID 1984-2021,psid,-128.42101966963423
+sipp_his_emp_s3_sep,His search,His employment 3 months after an involuntary separation,0.5632478632478632,0.0143023615159625,1958,SIPP 2003-2016,sipp,0.5862733259739698
+sipp_his_emp_s3_nosep,His search,His employment 3 months no separation (comparison),0.9886653768342565,0.00041849399587,341802,SIPP 2003-2016,sipp,0.9828270308064072
+sipp_his_emp_s6_sep,His search,His employment 6 months after an involuntary separation,0.7879359095193214,0.0125001866333564,1754,SIPP 2003-2016,sipp,0.7076799829875876
+sipp_his_emp_s6_nosep,His search,His employment 6 months no separation (comparison),0.9839481379362982,0.0007273972804993,304706,SIPP 2003-2016,sipp,0.971820737305666
+sipp_his_emp_s12_sep,His search,His employment 12 months after an involuntary separation,0.9053905390539054,0.0132508213621987,1432,SIPP 2003-2016,sipp,0.7909607525788758
+sipp_his_emp_s12_nosep,His search,His employment 12 months no separation (comparison),0.9816326184814717,0.0011492332180322,242451,SIPP 2003-2016,sipp,0.9601525824125016
+psid_es_hlab_13_B,His earnings,"His labor income, years 1-3 after displacement (2000 $), Black",-4808.616328132034,1065.4535675071304,60074,PSID 1984-2021,psid,-3725.966317327962
+psid_es_hlab_6_B,His earnings,"His labor income, year 6 after displacement (2000 $), Black",-6167.547323744606,1751.757928959727,60074,PSID 1984-2021,psid,-924.8387442826236
+psid_es_hlab_13_W,His earnings,"His labor income, years 1-3 after displacement (2000 $), White",-6140.257050174869,1752.3361687124132,170089,PSID 1984-2021,psid,-12054.383752326705
+psid_es_hlab_6_W,His earnings,"His labor income, year 6 after displacement (2000 $), White",-6454.6120723912845,1973.1993651294567,170089,PSID 1984-2021,psid,-12126.853588955162
+psid_wife_own_disp_lab13,Her earnings,"Her labor income after her own displacement, years 1-3 (2000 $)",-6069.452697356906,751.4803958299673,198436,PSID 1984-2021,psid,-4608.452949868988
+psid_wg_w_25,Wage growth,"Two-year log wage growth, continuously employed wives, ages 25-34",0.06760765612125397,0.0028799424446188,11717,PSID 1984-2021,psid,0.0801395449405963
+psid_wg_w_35,Wage growth,"Two-year log wage growth, continuously employed wives, ages 35-44",0.05840679258108139,0.0028184474537549,11904,PSID 1984-2021,psid,0.0463016326835748
+psid_wg_w_45,Wage growth,"Two-year log wage growth, continuously employed wives, ages 45-54",0.04567774012684822,0.0034618655415094,7876,PSID 1984-2021,psid,0.027160317004083
+psid_wg_h_25,Wage growth,"Two-year log wage growth, continuously employed husbands, ages 25-34",0.05406748503446579,0.0029317986043921,14904,PSID 1984-2021,psid,0.0673979402269813
+psid_wg_h_35,Wage growth,"Two-year log wage growth, continuously employed husbands, ages 35-44",0.046183936297893524,0.0026272585911792,18011,PSID 1984-2021,psid,0.029467279127977
+psid_wg_h_45,Wage growth,"Two-year log wage growth, continuously employed husbands, ages 45-54",0.038398999720811844,0.0034860135459602,11195,PSID 1984-2021,psid,0.0132500029127757
+psid_reentry_wage,Wage growth,"Her log wage at re-entry after 12+ months out, relative to continuously employed wives",-0.5226371092833494,0.0219733569594254,20390,PSID 1985-1996,psid,-0.555468128649764
+sipp_reemp_h_1_3,Wage growth,"Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 1-3 months without a job, husbands",-0.076921432793541,0.0234406274659709,963,SIPP 2003-2016,sipp,-0.0577610369002286
+sipp_reemp_h_4_12,Wage growth,"Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 4-12 months without a job, husbands",-0.12083393425500286,0.0289307064961551,753,SIPP 2003-2016,sipp,-0.1616815005111272
+sipp_reemp_h_13_24,Wage growth,"Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 13-24 months without a job, husbands",-0.27835481888524694,0.0654693872002737,135,SIPP 2003-2016,sipp,-0.2756861210230555
+sipp_reemp_w_1_3,Wage growth,"Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 1-3 months without a job, wives",-0.06797683145570783,0.0295134793183089,614,SIPP 2003-2016,sipp,-0.0603994911760858
+sipp_reemp_w_4_12,Wage growth,"Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 4-12 months without a job, wives",-0.09910541529692839,0.0371681069338162,569,SIPP 2003-2016,sipp,-0.1123316498615508
+sipp_reemp_w_13_24,Wage growth,"Log earnings in the first full month of re-employment minus the last full month before an involuntary separation, 13-24 months without a job, wives",-0.15180797046193592,0.0824426565287348,124,SIPP 2003-2016,sipp,-0.1994967612237986
+psid_es_w_hrs_13_y05,Added work,"Wife's annual hours, years 1-3 after his displacement, youngest 0-5",43.63402582667271,43.57099236243365,107907,PSID 1984-2021,psid,87.93397755976301
+psid_es_w_emp_13_y05,Added work,"Wife employed, years 1-3 after his displacement, youngest 0-5",0.006672179184700623,0.0223580182694707,107907,PSID 1984-2021,psid,0.0416343577714344
+psid_es_w_hrs_13_y617,Added work,"Wife's annual hours, years 1-3 after his displacement, youngest 6-17",18.04608830510077,43.077727440870206,106283,PSID 1984-2021,psid,-40.09125123082478
+psid_es_w_emp_13_y617,Added work,"Wife employed, years 1-3 after his displacement, youngest 6-17",0.007317183463184953,0.0228369065586659,106283,PSID 1984-2021,psid,-0.0391945348254955
+psid_gross_all,Added work,"Gross response of the wife's hours (wife kept her job), years 1-3, all",58.852907995392265,30.350166407208395,198435,PSID 1984-2021,psid,47.33555351142491
+psid_offset_all,Added work,"Offset of the wife's hours response from joint losses, years 1-3",-28.53447332473009,13.767177482407702,198435,PSID 1984-2021,psid,-35.98336859757332
+psid_gross_05,Added work,"Gross response of the wife's hours (wife kept her job), years 1-3, youngest 0-5",80.36483591935186,41.908508648350846,100068,PSID 1984-2021,psid,93.71003031319916
+psid_wemp_none,Employment levels,"Wives' employment, no child under 18",0.9474613532470252,0.0054067186216119,30943,PSID 1984-2021,psid,0.8088097469540768
+psid_wemp_05,Employment levels,"Wives' employment, youngest 0-5",0.9515544757554155,0.0057037864498773,19775,PSID 1984-2021,psid,0.7539823008849558
+psid_wemp_617,Employment levels,"Wives' employment, youngest 6-17",0.942512446624028,0.0043367363563598,27152,PSID 1984-2021,psid,0.8233279316440778
+psid_pt_w,Employment levels,Part-time share of employed wives,0.21728600921073526,0.0045981724176428,62292,PSID 1984-2021,psid,0.3373787966352019
+psid_pt_h,Employment levels,Part-time share of employed husbands,0.0975380449770602,0.0021760764471814,72113,PSID 1984-2021,psid,0.1056397598213914
+psid_es_fs_13_B,Safety net,"SNAP (food stamp) receipt after his displacement, years 1-3, Black",0.0,0.0220495404582319,59978,PSID 1984-2021,psid,0.0109090541001216
+psid_es_fs_13_W,Safety net,"SNAP (food stamp) receipt after his displacement, years 1-3, White",0.0,0.0128898825788469,170054,PSID 1984-2021,psid,0.0188552022078138
+psid_snap_B,Safety net,"SNAP receipt of couples, Black",0.0,0.0069262968626092,21178,PSID 1984-2021,psid,0.1503446973274152
+psid_snap_W,Safety net,"SNAP receipt of couples, White",0.0,0.0026767436390983,56640,PSID 1984-2021,psid,0.0379237288135593
+psid_es_bw_present_13_B,Separation,"Still with wife, years 1-3 after his displacement, Black",-0.019189702323185183,0.020808159325258,57291,PSID 1984-2021,psid,-0.0403108228965011
+psid_es_bw_present_13_W,Separation,"Still with wife, years 1-3 after his displacement, White",-0.01576351887688793,0.0120492510428263,166759,PSID 1984-2021,psid,-0.026667081854664
+psid_sep_rate_B,Separation,"Annual separation rate of couples, Black",0.03257817171663652,0.0013828800135034,18221,PSID 1984-2021,psid,0.0316418131908895
+psid_sep_rate_W,Separation,"Annual separation rate of couples, White",0.015749501230095102,0.0005357560365994,50871,PSID 1984-2021,psid,0.0151666866931015
+psid_liq_le0_25,Wealth,"Share of couples with liquid wealth <= 0, wife 25-34",0.7732368183866607,0.0073444089899919,14261,PSID 1984-2019 (wealth waves),psid,0.5680527312250193
+psid_liq_hi_25,Wealth,"Share of couples with liquid wealth above one year of earnings, wife 25-34",0.02244817485353763,0.0023172756497245,14261,PSID 1984-2019 (wealth waves),psid,0.0343594418343734
+psid_liq_le0_35,Wealth,"Share of couples with liquid wealth <= 0, wife 35-44",0.6405289962214555,0.0082103071417951,13814,PSID 1984-2019 (wealth waves),psid,0.4616331258143912
+psid_liq_hi_35,Wealth,"Share of couples with liquid wealth above one year of earnings, wife 35-44",0.0886807951371776,0.0035441331209334,13814,PSID 1984-2019 (wealth waves),psid,0.0774576516577385
+psid_liq_le0_45,Wealth,"Share of couples with liquid wealth <= 0, wife 45-59",0.23553330512856674,0.0084549820012861,15295,PSID 1984-2019 (wealth waves),psid,0.3810395554102648
+psid_liq_hi_45,Wealth,"Share of couples with liquid wealth above one year of earnings, wife 45-59",0.3603041413998966,0.0059684476647415,15295,PSID 1984-2019 (wealth waves),psid,0.1771820856489048
+psid_cons_single_all,Consumption,"Change in log total consumption, first three interviews after his single displacement, married couples, pooled",-0.053743951486361054,0.0167667435638506,83825,PSID 1999-2021,psid,-0.012771672723661
+psid_cons_wife_alone,Consumption,Same after her own displacement (he not displaced),-0.0520892957093668,0.0198000498523748,83825,PSID 1999-2021,psid,-0.0307328036894067
+psid_cons_joint_minus_single,Consumption,Joint minus single displacement,-0.04627747610345546,0.06476231039356,83825,PSID 1999-2021,psid,-0.0585289781969228
+psid_cons_single_black,Consumption,"Change in log total consumption, first three interviews after his single displacement, married couples, black",-0.050699248322719485,0.0247267537990527,18494,PSID 1999-2021,psid,-0.0053304937088729
+psid_cons_single_white,Consumption,"Change in log total consumption, first three interviews after his single displacement, married couples, white",-0.055406886219427486,0.0226088694869627,65331,PSID 1999-2021,psid,-0.0053420767949503
+cps_h_hazard_B,Base hazards,"Husband's monthly non-temporary job-loss rate, both employed, Black",0.004943988592620084,0.0002038136277314,175325,CPS 1994-2023,cps,0.0063038457879309
+cps_h_hazard_W,Base hazards,"Husband's monthly non-temporary job-loss rate, both employed, White",0.0034042879579891066,4.148376163835612e-05,2536255,CPS 1994-2023,cps,0.0034041629852736
+cps_h_hazard_pooled,Base hazards,"Husband's monthly non-temporary job-loss rate, both employed, pooled",0.0038643721687657917,4.193899493846278e-05,2893414,CPS 1994-2023,cps,0.003690355896648

@@ -1,0 +1,99 @@
+{
+ "era": 3,
+ "years": [
+  2009,
+  2023
+ ],
+ "units": "2000 dollars; monthly unless 'annual'",
+ "tax": {
+  "chi": -1.8041344716456835,
+  "mu": 0.10766883984112588,
+  "r2": 0.9989795276813553,
+  "year": "2009-2023 mean",
+  "status": "TAXSIM 35 era mean",
+  "chi_with2021": -2.1966403318568046,
+  "mu_with2021": 0.11402489586406143,
+  "chi_ex2021": -1.8041344716456835,
+  "mu_ex2021": 0.10766883984112588
+ },
+ "eitc_annual": {
+  "0": {
+   "in": 0.08159999999999999,
+   "max": 395.994602898682,
+   "out": 0.08159999999999999,
+   "ps_single": 5927.540451190124,
+   "ps_mfj": 9820.676444419814
+  },
+  "1": {
+   "in": 0.33999999999999997,
+   "max": 2369.215214787766,
+   "out": 0.15980000000000003,
+   "ps_single": 12779.556149067344,
+   "ps_mfj": 16672.80799366741
+  },
+  "2": {
+   "in": 0.40000000000000013,
+   "max": 3914.198074611397,
+   "out": 0.21059999999999995,
+   "ps_single": 12779.556149067344,
+   "ps_mfj": 16672.80799366741
+  },
+  "3": {
+   "in": 0.45000000000000007,
+   "max": 4403.752870434349,
+   "out": 0.21059999999999995,
+   "ps_single": 12779.556149067344,
+   "ps_mfj": 16672.80799366741
+  }
+ },
+ "snap": {
+  "A": [
+   144.859483624935,
+   265.9918634995064,
+   381.05904581553824,
+   483.92785629249397,
+   574.7022756411939,
+   689.6722134257849,
+   762.2648687806969,
+   871.2106318970042
+  ],
+  "D": [
+   110.67342382022198,
+   110.67342382022198,
+   110.67342382022198,
+   117.4767053277205,
+   137.50347277716108,
+   157.6091447930332,
+   157.6091447930332,
+   157.6091447930332
+  ],
+  "gross_limit": [
+   896.418864620568,
+   1210.0029273470934,
+   1523.4952278385135,
+   1837.1972738612346,
+   2150.730050004731,
+   2464.4606292732906,
+   2778.216487066413,
+   3091.8476366452437
+  ],
+  "asset_limit": 1540.738224762638,
+  "earned_deduction": 0.2,
+  "benefit_reduction": 0.3
+ },
+ "ui": {
+  "cap_month": 1347.5305327133995,
+  "rho": 0.5,
+  "expiry": 0.16666666666666666,
+  "q_ui": 0.49322482969864034
+ },
+ "status": {
+  "eitc": "verified: CRS RL31768 Table 8 (1984-2007), IRS Rev. Procs 2007-66 ... 2022-38 and Pub. 596 (2008-2023); rates and maxima cross-checked with CRS R44825 Table B-1 and UKCPR",
+  "snap": "verified: FNS tables FY2006-FY2024, CDSS ACLs / FR / Green Book / UKCPR before; standard deduction FY1988-90, FY2003, FY2005 reconstructed by statute (see 61 docstring); sizes 5-8 by TFP factors in years without an official table",
+  "tax": "verified: NBER TAXSIM 35 yearly fits (federal income tax with CTC, without EITC / rebates / Making Work Pay, + employee payroll tax), era mean of yearly (chi, mu)",
+  "c_min": "verified: UKCPR AFDC/TANF 3-person maximum by state (Green Book / Urban WRD), CPS couples' state distribution (IGE/62; 1994 shares for 1984-93)",
+  "ui_cap": "IGE/12b max_wba_2000 x 52/12, CPS couples' state distribution (IGE/62; 1994 shares for 1984-93)",
+  "q_ui": "mean of DWS UI receipt of displaced husbands 0.504 and wives 0.482 (IGE/60)"
+ },
+ "c_min_family3": 329.1459442528523
+}

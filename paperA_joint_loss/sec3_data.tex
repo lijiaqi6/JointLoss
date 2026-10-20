@@ -1,0 +1,52 @@
+\section{Data and Measurement}\label{sec:data}
+
+\paragraph{CPS monthly couples.} The CPS basic monthly files for 1994--2023 identify both spouses of a married couple
+and follow them for four consecutive months, and again for four months a year later. I link married couples with both
+spouses present and aged 20--60 from month to month within the rotation and across the twelve-month break, which gives
+6.7 million couple-months of 1.3 million couples. A spouse loses a job in month $t$ if he or she was employed in $t-1$
+and is unemployed in $t$ after a layoff, a job loss or the end of a temporary job; quits and exits from the labor force
+are not counted as job losses and are reported separately. The monthly design measures timing to the month and allows
+state $\times$ month and state $\times$ month $\times$ industry fixed effects. Its limits are the four-month window, the
+absence of an employer identifier and proxy reporting: one household member usually answers for both spouses, so
+reporting errors could be correlated, and part of the job losses are temporary layoffs. Section~\ref{sec:jointloss}
+shows that neither drives the result.\footnote{Linear probability models; standard errors clustered by household (clustering by state
+gives the same significance). Variables, link rates and the months in which household identifiers break are documented
+in \texttt{IGE/output/cps\_joint\_job\_loss.md}. Code: \texttt{IGE/30.CPSJointJobLoss.py}.}
+
+\paragraph{CPS Displaced Worker Supplement.} The biennial supplement (1984--2024) records, for each adult, whether a job
+was lost in the last three years because the plant closed or moved, there was insufficient work or the position was
+abolished, the year of the loss and the industry of the lost job. Both spouses answer it, so it measures joint
+displacements with each spouse's own reason in a sample of 417,269 couples.
+
+\paragraph{SIPP.} The 2004, 2008 and 2014 panels of the Survey of Income and Program Participation follow both
+spouses of 50,692 married couples month by month for up to five years, with the reason each job ended. They measure the
+joint separation to the month over a longer window than the CPS and trace the wife's response for three years.
+
+\paragraph{PSID displacements.} The PSID asks household heads, and from 1984 their wives, why their last job ended. I
+code a displacement when the job ended because the company closed or moved, or because the person was laid off or
+fired, and date it to the calendar year in which the job ended. Closures alone serve as the strictest definition and
+quits as a placebo. Among working male heads aged 20--60, the annual displacement rate is 8.0\% for Black and 4.8\%
+for White men.\footnote{The questions differ across waves: before 1984 they refer to the previous job of heads who
+started their current job in the last year and to the last job of unemployed heads; from 1984 to 2001 they cover
+previous employers and positions with end years; from 2003 they cover each employer in the employment history. Three
+quarters of the reports carry the end year; the rest are dated to the year before the interview. Code:
+\texttt{IGE/19.FatherDisplacement.py}.} The PSID follows couples for decades, so it measures the household's response
+over years and the children's adult outcomes, with the SRC and SEO samples providing Black and White families.\footnote{The
+National Longitudinal Surveys of Youth (NLSY79, NLSY97) are not used for the joint job loss. They record the
+respondent's own jobs in great detail, including weekly employment, an employer roster and the reason each job ended,
+but only a few annual items on the spouse (whether the spouse worked last week, weeks worked and earnings last year),
+with no spouse employer roster and no reason or date for the spouse's job losses. They therefore cannot measure whether
+both spouses lost their jobs, when and for which reason, which the PSID, the CPS, the Displaced Worker Supplement and
+the SIPP measure for both spouses.}
+
+\paragraph{Event studies.} For the household I estimate a stacked event study of the father's first displacement: for
+each displaced father with a child aged 0--17 at home, the controls are fathers not displaced at any time up to six
+years after the event year; event time runs from $-3$ to $+6$, relative to year $-2$. For the joint job loss the unit is
+a father $\times$ event year with his wife employed at baseline, and the outcome is the wife's own displacement in the
+three years around the event, with couple and calendar-year fixed effects in the event-study version and a placebo
+window before the event.
+
+\paragraph{Intergenerational persistence.} The children's adult outcomes are linked to their parents' income: in the PSID the IGE of sons' family income at 40 is 0.27 for Black
+and 0.47 for White sons, and at the 25th percentile of parental income Black children reach a household income rank
+12.9 percentiles below White children, against 12.6 in \citet{chetty2020race}.\footnote{Code:
+\texttt{IGE/6.IGEMain.py} and \texttt{IGE/7.RankMobility.py}; details in Appendix~\ref{app:other}.}

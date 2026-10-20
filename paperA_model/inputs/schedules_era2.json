@@ -1,0 +1,95 @@
+{
+ "era": 2,
+ "years": [
+  1997,
+  2008
+ ],
+ "units": "2000 dollars; monthly unless 'annual'",
+ "tax": {
+  "chi": -1.1108400528242677,
+  "mu": 0.08576131765588918,
+  "r2": 0.9980254182636589,
+  "year": "1997-2008 mean",
+  "status": "TAXSIM 35 era mean"
+ },
+ "eitc_annual": {
+  "0": {
+   "in": 0.0765,
+   "max": 355.3786917185043,
+   "out": 0.0765,
+   "ps_single": 5816.6919032884025,
+   "ps_mfj": 6678.1284552490515
+  },
+  "1": {
+   "in": 0.34,
+   "max": 2368.87758049447,
+   "out": 0.15979999999999997,
+   "ps_single": 12790.428872611263,
+   "ps_mfj": 13651.865424571914
+  },
+  "2": {
+   "in": 0.4000000000000001,
+   "max": 3913.899433679957,
+   "out": 0.21059999999999998,
+   "ps_single": 12790.428872611263,
+   "ps_mfj": 13651.865424571914
+  },
+  "3": {
+   "in": 0.4000000000000001,
+   "max": 3913.899433679957,
+   "out": 0.21059999999999998,
+   "ps_single": 12790.428872611263,
+   "ps_mfj": 13651.865424571914
+  }
+ },
+ "snap": {
+  "A": [
+   130.01916780208444,
+   238.78587218104772,
+   342.12831703303976,
+   434.73782307306266,
+   516.2810149864829,
+   619.6268981038561,
+   684.9112032733461,
+   782.850272480319
+  ],
+  "D": [
+   126.42061617648824,
+   126.42061617648824,
+   126.42061617648824,
+   127.42481584071739,
+   136.28478914694065,
+   146.5277886438976,
+   146.5277886438976,
+   146.5277886438976
+  ],
+  "gross_limit": [
+   897.0723346240724,
+   1206.5692513667948,
+   1516.1259745536554,
+   1825.637318054091,
+   2134.9761021265763,
+   2444.542731519042,
+   2753.801312519965,
+   3063.2982292626875
+  ],
+  "asset_limit": 1884.387883813486,
+  "earned_deduction": 0.2,
+  "benefit_reduction": 0.3
+ },
+ "ui": {
+  "cap_month": 1359.5496547938733,
+  "rho": 0.5,
+  "expiry": 0.16666666666666666,
+  "q_ui": 0.49322482969864034
+ },
+ "status": {
+  "eitc": "verified: CRS RL31768 Table 8 (1984-2007), IRS Rev. Procs 2007-66 ... 2022-38 and Pub. 596 (2008-2023); rates and maxima cross-checked with CRS R44825 Table B-1 and UKCPR",
+  "snap": "verified: FNS tables FY2006-FY2024, CDSS ACLs / FR / Green Book / UKCPR before; standard deduction FY1988-90, FY2003, FY2005 reconstructed by statute (see 61 docstring); sizes 5-8 by TFP factors in years without an official table",
+  "tax": "verified: NBER TAXSIM 35 yearly fits (federal income tax with CTC, without EITC / rebates / Making Work Pay, + employee payroll tax), era mean of yearly (chi, mu)",
+  "c_min": "verified: UKCPR AFDC/TANF 3-person maximum by state (Green Book / Urban WRD), CPS couples' state distribution (IGE/62; 1994 shares for 1984-93)",
+  "ui_cap": "IGE/12b max_wba_2000 x 52/12, CPS couples' state distribution (IGE/62; 1994 shares for 1984-93)",
+  "q_ui": "mean of DWS UI receipt of displaced husbands 0.504 and wives 0.482 (IGE/60)"
+ },
+ "c_min_family3": 389.44030592793393
+}

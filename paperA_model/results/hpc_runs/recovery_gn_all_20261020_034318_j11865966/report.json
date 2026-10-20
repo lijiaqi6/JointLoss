@@ -1,0 +1,439 @@
+{
+ "table": [
+  {
+   "param": "delta_w_B",
+   "theta": 0.0025953921820398287,
+   "norm_range": 32.30123834872004,
+   "norm_value": 2.79541118641124,
+   "norm_z": 25.44580902808235,
+   "top_block": "Base hazards",
+   "top_share": 0.8918336889343192
+  },
+  {
+   "param": "delta_w_W",
+   "theta": 0.0016652421904435849,
+   "norm_range": 87.78320162222116,
+   "norm_value": 4.874301132162001,
+   "norm_z": 45.77617884545342,
+   "top_block": "Base hazards",
+   "top_share": 0.9061597962742701
+  },
+  {
+   "param": "delta_h_B",
+   "theta": 0.004826417263507061,
+   "norm_range": 23.472896424939552,
+   "norm_value": 3.7775922817553,
+   "norm_z": 31.64338130676711,
+   "top_block": "Base hazards",
+   "top_share": 0.9241353952598556
+  },
+  {
+   "param": "delta_h_W",
+   "theta": 0.0025978101640264867,
+   "norm_range": 76.60068559660205,
+   "norm_value": 6.635346435953655,
+   "norm_z": 60.39450278529075,
+   "top_block": "Base hazards",
+   "top_share": 0.9518538573818266
+  },
+  {
+   "param": "pi_c0",
+   "theta": 3.512056072004048e-05,
+   "norm_range": 37.339404603582,
+   "norm_value": 0.6556904133151302,
+   "norm_z": 6.441763058279391,
+   "top_block": "Joint loss, monthly",
+   "top_share": 0.9139300765139147
+  },
+  {
+   "param": "pi_c1",
+   "theta": 0.0002782995495892641,
+   "norm_range": 68.90903622111622,
+   "norm_value": 0.9588676871483465,
+   "norm_z": 9.455250648758922,
+   "top_block": "Joint loss, monthly",
+   "top_share": 0.8778936725215386
+  },
+  {
+   "param": "p_H",
+   "theta": 0.020331294866038338,
+   "norm_range": 51.851897310309774,
+   "norm_value": 2.1514616603662207,
+   "norm_z": 10.702090865602978,
+   "top_block": "Base hazards",
+   "top_share": 0.5385418264523407
+  },
+  {
+   "param": "m_H",
+   "theta": 15.634942555516671,
+   "norm_range": 5.424153687140342,
+   "norm_value": 2.924356252094248,
+   "norm_z": 13.559209769691918,
+   "top_block": "Her search",
+   "top_share": 0.345197012605881
+  },
+  {
+   "param": "lam_w_B",
+   "theta": 0.15716470134992305,
+   "norm_range": 10.560954174573695,
+   "norm_value": 1.864954167210222,
+   "norm_z": 14.57536136663053,
+   "top_block": "Her search",
+   "top_share": 0.8741239319777914
+  },
+  {
+   "param": "lam_w_W",
+   "theta": 0.12239754642631713,
+   "norm_range": 20.211325714430007,
+   "norm_value": 2.7795693005273754,
+   "norm_z": 22.301251779276576,
+   "top_block": "Her search",
+   "top_share": 0.7864301750971617
+  },
+  {
+   "param": "lam_h_B",
+   "theta": 0.25702553048956156,
+   "norm_range": 5.441376539688691,
+   "norm_value": 1.5714299906819558,
+   "norm_z": 10.91099447774179,
+   "top_block": "His search",
+   "top_share": 0.8046376793255416
+  },
+  {
+   "param": "lam_h_W",
+   "theta": 0.2628344913619293,
+   "norm_range": 9.11931262097505,
+   "norm_value": 2.6931122407914607,
+   "norm_z": 18.546871742179146,
+   "top_block": "His search",
+   "top_share": 0.8167672199127969
+  },
+  {
+   "param": "pi_up_w",
+   "theta": 0.007038826446716814,
+   "norm_range": 69.22476893558336,
+   "norm_value": 8.189262762212516,
+   "norm_z": 67.71501730464067,
+   "top_block": "Her search",
+   "top_share": 0.3047220410140801
+  },
+  {
+   "param": "pi_up_h",
+   "theta": 0.005574586253712639,
+   "norm_range": 59.175706615558035,
+   "norm_value": 5.54420303618188,
+   "norm_z": 46.16489998742502,
+   "top_block": "Employment levels",
+   "top_share": 0.4684556952176315
+  },
+  {
+   "param": "pi_dn_w",
+   "theta": 0.01824319283171305,
+   "norm_range": 11.05255744004357,
+   "norm_value": 1.008169683311498,
+   "norm_z": 9.162085136128042,
+   "top_block": "Her exits",
+   "top_share": 0.44841239567803526
+  },
+  {
+   "param": "pi_dn_h",
+   "theta": 0.033413489500543764,
+   "norm_range": 4.878402692579611,
+   "norm_value": 0.8150222857396662,
+   "norm_z": 6.788585928033085,
+   "top_block": "Wage growth",
+   "top_share": 0.5842609133150204
+  },
+  {
+   "param": "d_w",
+   "theta": 0.09665677953027652,
+   "norm_range": 9.55393181669938,
+   "norm_value": 0.4617261406270032,
+   "norm_z": 4.3941165973802825,
+   "top_block": "Wealth",
+   "top_share": 0.3406120415250878
+  },
+  {
+   "param": "d_h",
+   "theta": 0.04926286176144074,
+   "norm_range": 10.888845182194558,
+   "norm_value": 0.2682078374760903,
+   "norm_z": 2.6160149466563043,
+   "top_block": "Wage growth",
+   "top_share": 0.34044624338105767
+  },
+  {
+   "param": "phi_F",
+   "theta": 0.30360364889246017,
+   "norm_range": 91.11563791339563,
+   "norm_value": 18.442026761114068,
+   "norm_z": 226.6255071158374,
+   "top_block": "Employment levels",
+   "top_share": 0.9005036376540306
+  },
+  {
+   "param": "phi_P",
+   "theta": 0.14973242308303314,
+   "norm_range": 112.00094386717511,
+   "norm_value": 11.180115141879272,
+   "norm_z": 274.9978653074918,
+   "top_block": "Employment levels",
+   "top_share": 0.7101066615153053
+  },
+  {
+   "param": "theta_05",
+   "theta": -0.007298033428472406,
+   "norm_range": 21.088906557413168,
+   "norm_value": 0.10260503001728813,
+   "norm_z": 46.51722792793387,
+   "top_block": "Her search",
+   "top_share": 0.5890465119520364
+  },
+  {
+   "param": "theta_617",
+   "theta": 0.03976087917541504,
+   "norm_range": 27.472784087740454,
+   "norm_value": 0.7282280324832754,
+   "norm_z": 63.285024835622686,
+   "top_block": "Her search",
+   "top_share": 0.6619459013593474
+  },
+  {
+   "param": "phi_h",
+   "theta": 0.12630502300222124,
+   "norm_range": 87.41702342952875,
+   "norm_value": 7.360806103368229,
+   "norm_z": 212.59802718217483,
+   "top_block": "Employment levels",
+   "top_share": 0.9908502650545535
+  },
+  {
+   "param": "F",
+   "theta": 0.10410258279521895,
+   "norm_range": 5.442017391461179,
+   "norm_value": 0.9442134434460147,
+   "norm_z": 7.80388346491519,
+   "top_block": "Employment levels",
+   "top_share": 0.35283513485051765
+  },
+  {
+   "param": "kappa_S",
+   "theta": 0.10825690288094003,
+   "norm_range": 6.469095567037236,
+   "norm_value": 0.7003242505282697,
+   "norm_z": 6.245093161536637,
+   "top_block": "Safety net",
+   "top_share": 0.8904101564927732
+  },
+  {
+   "param": "sigma0_B",
+   "theta": 0.0026800301883343008,
+   "norm_range": 18.476072305439587,
+   "norm_value": 2.4758215770212715,
+   "norm_z": 21.440577486539485,
+   "top_block": "Separation",
+   "top_share": 0.7035540401699956
+  },
+  {
+   "param": "sigma0_W",
+   "theta": 0.0012715300363736015,
+   "norm_range": 65.0549752618484,
+   "norm_value": 4.135967753049092,
+   "norm_z": 38.73017391675365,
+   "top_block": "Her search",
+   "top_share": 0.47038346402173614
+  },
+  {
+   "param": "sigmaJ_B",
+   "theta": 0.008001431846655301,
+   "norm_range": 3.9748664598430516,
+   "norm_value": 0.3180462307799021,
+   "norm_z": 2.9259797838319206,
+   "top_block": "Separation",
+   "top_share": 0.43568376437165945
+  },
+  {
+   "param": "sigmaJ_W",
+   "theta": 0.005250614447151715,
+   "norm_range": 5.494705669763199,
+   "norm_value": 0.2885058097250509,
+   "norm_z": 2.7335748199875534,
+   "top_block": "Separation",
+   "top_share": 0.4790333045256758
+  },
+  {
+   "param": "a_bar",
+   "theta": 25.900066410207444,
+   "norm_range": 5.221477532838692,
+   "norm_value": 2.2539435809988047,
+   "norm_z": 12.809887737866408,
+   "top_block": "Wealth",
+   "top_share": 0.9919270771126977
+  },
+  {
+   "param": "eta_up",
+   "theta": 0.3791212555363722,
+   "norm_range": 7.933823971967499,
+   "norm_value": 1.0026271018189619,
+   "norm_z": 8.75921353260162,
+   "top_block": "Her search",
+   "top_share": 0.4783138054776664
+  }
+ ],
+ "singular_values": [
+  20.75713061631145,
+  10.973242273850504,
+  7.746464634908141,
+  6.630662483619968,
+  5.33685916834753,
+  4.5065278110279605,
+  3.8032206720142465,
+  3.6320161034135543,
+  3.0597081601639236,
+  2.7196493666001373,
+  2.540231539194325,
+  2.2944580811110162,
+  2.167372723948158,
+  1.6845321157893198,
+  1.467801751178641,
+  1.2719666523955677,
+  0.961405480312033,
+  0.8279746280120822,
+  0.8135436279430325,
+  0.7156084573540827,
+  0.6883302248883407,
+  0.6158305490809869,
+  0.49755717986332004,
+  0.41955847313795197,
+  0.3315155962515813,
+  0.24665900827219578,
+  0.18829065572617817,
+  0.17487185320098403,
+  0.16194027841383699,
+  0.10229783712785213,
+  0.03352695233079325
+ ],
+ "condition": 619.1177298643635,
+ "condition_range": 86.8998354314343,
+ "weak": [
+  {
+   "sv": 0.03352695233079325,
+   "loadings": {
+    "theta_05": -0.995,
+    "eta_up": -0.079,
+    "d_w": -0.047,
+    "F": 0.03
+   }
+  },
+  {
+   "sv": 0.10229783712785213,
+   "loadings": {
+    "d_h": -0.97,
+    "pi_dn_h": 0.205,
+    "eta_up": -0.068,
+    "F": -0.064
+   }
+  },
+  {
+   "sv": 0.16194027841383699,
+   "loadings": {
+    "sigmaJ_W": 0.907,
+    "sigmaJ_B": -0.332,
+    "eta_up": -0.225,
+    "F": -0.05
+   }
+  },
+  {
+   "sv": 0.17487185320098403,
+   "loadings": {
+    "sigmaJ_B": 0.726,
+    "d_w": 0.449,
+    "sigmaJ_W": 0.371,
+    "eta_up": 0.285
+   }
+  },
+  {
+   "sv": 0.18829065572617817,
+   "loadings": {
+    "d_w": 0.534,
+    "theta_617": -0.518,
+    "sigmaJ_B": -0.506,
+    "eta_up": 0.371
+   }
+  }
+ ],
+ "weak_range": [
+  {
+   "sv": 1.5814975433609086,
+   "loadings": {
+    "eta_up": 0.833,
+    "m_H": -0.26,
+    "d_w": 0.219,
+    "sigmaJ_B": 0.219
+   }
+  },
+  {
+   "sv": 1.722285908223477,
+   "loadings": {
+    "m_H": -0.753,
+    "eta_up": -0.344,
+    "F": 0.314,
+    "sigmaJ_B": 0.305
+   }
+  },
+  {
+   "sv": 1.9170560454885293,
+   "loadings": {
+    "lam_h_B": -0.562,
+    "pi_dn_h": 0.546,
+    "m_H": -0.353,
+    "F": -0.349
+   }
+  },
+  {
+   "sv": 2.1822843467237116,
+   "loadings": {
+    "F": 0.602,
+    "sigmaJ_B": -0.589,
+    "lam_h_B": -0.348,
+    "a_bar": 0.296
+   }
+  },
+  {
+   "sv": 2.3673679874217637,
+   "loadings": {
+    "pi_dn_h": -0.572,
+    "F": -0.428,
+    "sigmaJ_B": -0.42,
+    "m_H": -0.331
+   }
+  }
+ ],
+ "pairs": [],
+ "weak_norm": [
+  "delta_w_B",
+  "pi_c0",
+  "pi_c1",
+  "p_H",
+  "m_H",
+  "lam_w_B",
+  "lam_w_W",
+  "lam_h_B",
+  "lam_h_W",
+  "pi_dn_w",
+  "pi_dn_h",
+  "d_w",
+  "d_h",
+  "theta_05",
+  "theta_617",
+  "F",
+  "kappa_S",
+  "sigma0_B",
+  "sigmaJ_B",
+  "sigmaJ_W",
+  "a_bar",
+  "eta_up"
+ ],
+ "md": "# Jacobian\n\nS = change of each moment in weighted units (sqrt of the objective weight) per 10% move of a parameter (value scaling: 10% of |theta|; range scaling: 10% of the bound range, the plan's protocol; z: per unit of the logistic coordinate). Moments in the objective with finite rows: 85 of 97.\n\n| parameter | theta | norm (10% of value) | norm (10% of range) | norm (per z) | top block | share |\n|---|---:|---:|---:|---:|---|---:|\n| delta_w_B | 0.002595 | 2.80 | 32.30 | 25.45 | Base hazards | 0.89 |\n| delta_w_W | 0.001665 | 4.87 | 87.78 | 45.78 | Base hazards | 0.91 |\n| delta_h_B | 0.004826 | 3.78 | 23.47 | 31.64 | Base hazards | 0.92 |\n| delta_h_W | 0.002598 | 6.64 | 76.60 | 60.39 | Base hazards | 0.95 |\n| pi_c0 | 3.512e-05 | 0.66 | 37.34 | 6.44 | Joint loss, monthly | 0.91 |\n| pi_c1 | 0.0002783 | 0.96 | 68.91 | 9.46 | Joint loss, monthly | 0.88 |\n| p_H | 0.02033 | 2.15 | 51.85 | 10.70 | Base hazards | 0.54 |\n| m_H | 15.63 | 2.92 | 5.42 | 13.56 | Her search | 0.35 |\n| lam_w_B | 0.1572 | 1.86 | 10.56 | 14.58 | Her search | 0.87 |\n| lam_w_W | 0.1224 | 2.78 | 20.21 | 22.30 | Her search | 0.79 |\n| lam_h_B | 0.257 | 1.57 | 5.44 | 10.91 | His search | 0.80 |\n| lam_h_W | 0.2628 | 2.69 | 9.12 | 18.55 | His search | 0.82 |\n| pi_up_w | 0.007039 | 8.19 | 69.22 | 67.72 | Her search | 0.30 |\n| pi_up_h | 0.005575 | 5.54 | 59.18 | 46.16 | Employment levels | 0.47 |\n| pi_dn_w | 0.01824 | 1.01 | 11.05 | 9.16 | Her exits | 0.45 |\n| pi_dn_h | 0.03341 | 0.82 | 4.88 | 6.79 | Wage growth | 0.58 |\n| d_w | 0.09666 | 0.46 | 9.55 | 4.39 | Wealth | 0.34 |\n| d_h | 0.04926 | 0.27 | 10.89 | 2.62 | Wage growth | 0.34 |\n| phi_F | 0.3036 | 18.44 | 91.12 | 226.63 | Employment levels | 0.90 |\n| phi_P | 0.1497 | 11.18 | 112.00 | 275.00 | Employment levels | 0.71 |\n| theta_05 | -0.007298 | 0.10 | 21.09 | 46.52 | Her search | 0.59 |\n| theta_617 | 0.03976 | 0.73 | 27.47 | 63.29 | Her search | 0.66 |\n| phi_h | 0.1263 | 7.36 | 87.42 | 212.60 | Employment levels | 0.99 |\n| F | 0.1041 | 0.94 | 5.44 | 7.80 | Employment levels | 0.35 |\n| kappa_S | 0.1083 | 0.70 | 6.47 | 6.25 | Safety net | 0.89 |\n| sigma0_B | 0.00268 | 2.48 | 18.48 | 21.44 | Separation | 0.70 |\n| sigma0_W | 0.001272 | 4.14 | 65.05 | 38.73 | Her search | 0.47 |\n| sigmaJ_B | 0.008001 | 0.32 | 3.97 | 2.93 | Separation | 0.44 |\n| sigmaJ_W | 0.005251 | 0.29 | 5.49 | 2.73 | Separation | 0.48 |\n| a_bar | 25.9 | 2.25 | 5.22 | 12.81 | Wealth | 0.99 |\n| eta_up | 0.3791 | 1.00 | 7.93 | 8.76 | Her search | 0.48 |\n\nSingular values (value scaling): 20.8, 11, 7.75, 6.63, 5.34, 4.51, 3.8, 3.63, 3.06, 2.72, 2.54, 2.29, 2.17, 1.68, 1.47, 1.27, 0.961, 0.828, 0.814, 0.716, 0.688, 0.616, 0.498, 0.42, 0.332, 0.247, 0.188, 0.175, 0.162, 0.102, 0.0335\nCondition number (value scaling): 619; (range scaling): 86.9\n\nWeakest directions, value scaling (smallest singular values, largest loadings):\n- sv 0.0335: {'theta_05': -0.995, 'eta_up': -0.079, 'd_w': -0.047, 'F': 0.03}\n- sv 0.102: {'d_h': -0.97, 'pi_dn_h': 0.205, 'eta_up': -0.068, 'F': -0.064}\n- sv 0.162: {'sigmaJ_W': 0.907, 'sigmaJ_B': -0.332, 'eta_up': -0.225, 'F': -0.05}\n- sv 0.175: {'sigmaJ_B': 0.726, 'd_w': 0.449, 'sigmaJ_W': 0.371, 'eta_up': 0.285}\n- sv 0.188: {'d_w': 0.534, 'theta_617': -0.518, 'sigmaJ_B': -0.506, 'eta_up': 0.371}\n\nWeakest directions, range scaling:\n- sv 1.58: {'eta_up': 0.833, 'm_H': -0.26, 'd_w': 0.219, 'sigmaJ_B': 0.219}\n- sv 1.72: {'m_H': -0.753, 'eta_up': -0.344, 'F': 0.314, 'sigmaJ_B': 0.305}\n- sv 1.92: {'lam_h_B': -0.562, 'pi_dn_h': 0.546, 'm_H': -0.353, 'F': -0.349}\n- sv 2.18: {'F': 0.602, 'sigmaJ_B': -0.589, 'lam_h_B': -0.348, 'a_bar': 0.296}\n- sv 2.37: {'pi_dn_h': -0.572, 'F': -0.428, 'sigmaJ_B': -0.42, 'm_H': -0.331}\n\nNear-collinear pairs (|corr| of columns > 0.9):\n- none\n\nParameters with norm < 3 (value scaling): ['delta_w_B', 'pi_c0', 'pi_c1', 'p_H', 'm_H', 'lam_w_B', 'lam_w_W', 'lam_h_B', 'lam_h_W', 'pi_dn_w', 'pi_dn_h', 'd_w', 'd_h', 'theta_05', 'theta_617', 'F', 'kappa_S', 'sigma0_B', 'sigmaJ_B', 'sigmaJ_W', 'a_bar', 'eta_up']",
+ "Q": 0.6691354270626674
+}

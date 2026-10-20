@@ -1,0 +1,759 @@
+dataset,table,sample,cell,outcome,coef,se,p,stars,n,note
+CPS,vii,"wives 25-59, husband employed",all,employment share (%),71.6831301473366,,,,5590356,
+CPS,vii,"wives 25-59, husband employed",all,persistent monthly entry (%),3.1537917206137687,,,,266449,
+CPS,vii,"wives 25-59, husband employed",race: Black,persistent monthly entry (%),3.9659435993742505,,,,12465,
+CPS,vii,"wives 25-59, husband employed",race: White,persistent monthly entry (%),3.1660722864001802,,,,232433,
+CPS,vii,"wives 25-59, husband employed",all,persistent monthly exit (%),0.9657550107760149,,,,794275,
+CPS,i,persistent exits,destination at t+1: out of the labor force,share of exits (%),93.2559585571289,,,,6912,
+CPS,i,persistent exits,destination at t+1: unemployed: job leaver,share of exits (%),4.571123123168945,,,,342,
+CPS,i,persistent exits,destination at t+1: unemployed: re-entrant,share of exits (%),2.1412718296051025,,,,173,
+CPS,i,persistent exits,destination at t+1: unemployed: new entrant,share of exits (%),0.03164798766374588,,,,2,
+CPS,i,"wives 25-59, husband employed (persistent exit)",all,exit hazard (%),0.9657550107760149,,,,794275,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 6-12,exit hazard (%),1.0353090432981749,0.0280745636903833,1.0753868966193576e-297,***,169980,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 6-12,share of wife-months (%),21.436270907971444,,,,169980,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 6-12,share of exits (%),22.98011905501738,,,,169980,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: none <18,exit hazard (%),0.7724298447943929,0.017352391795308644,0.0,***,334978,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: none <18,share of wife-months (%),41.863417079584856,,,,334978,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: none <18,share of exits (%),33.483184033767756,,,,334978,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 3-5,exit hazard (%),1.3027326665938876,0.046095781517141825,1.0301074566715683e-175,***,79298,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 3-5,share of wife-months (%),10.231915593496826,,,,79298,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 3-5,share of exits (%),13.80210357362688,,,,79298,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 13-17,exit hazard (%),0.8140028143840621,0.030402185574300578,6.406621074261226e-158,***,114616,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 13-17,share of wife-months (%),14.191476578016893,,,,114616,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 13-17,share of exits (%),11.961524140049688,,,,114616,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 1-2,exit hazard (%),1.2648581439375222,0.05016527026644719,2.8257627044347417e-140,***,65495,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 1-2,share of wife-months (%),8.443630893517184,,,,65495,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 1-2,share of exits (%),11.058700375249362,,,,65495,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 0,exit hazard (%),1.6916114134052782,0.08574427243323249,1.226024145684962e-86,***,29908,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 0,share of wife-months (%),3.8332889474127927,,,,29908,
+CPS,i,"wives 25-59, husband employed (persistent exit)",youngest child: 0,share of exits (%),6.714368822288931,,,,29908,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 40-44,exit hazard (%),0.8751552017874695,0.027894254437261064,4.575363419231953e-216,***,145934,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 40-44,share of wife-months (%),18.229169026052343,,,,145934,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 40-44,share of exits (%),16.519046672710196,,,,145934,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 30-34,exit hazard (%),1.2009115434147744,0.03725219977969461,5.294812964083715e-228,***,112449,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 30-34,share of wife-months (%),14.524298806205255,,,,112449,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 30-34,share of exits (%),18.06089318901053,,,,112449,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 25-29,exit hazard (%),1.34563936360458,0.04939751202583313,2.1223246695278557e-163,***,71548,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 25-29,share of wife-months (%),9.537545196017799,,,,71548,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 25-29,share of exits (%),13.289184218269503,,,,71548,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 45-49,exit hazard (%),0.7588948636195811,0.026277933504179295,2.157136001855645e-183,***,142900,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 45-49,share of wife-months (%),17.75981627766341,,,,142900,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 45-49,share of exits (%),13.955747784436888,,,,142900,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 50-54,exit hazard (%),0.7821414545400021,0.029262459447451445,2.196275949333076e-157,***,119473,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 50-54,share of wife-months (%),14.646324435240876,,,,119473,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 50-54,share of exits (%),11.8617013317272,,,,119473,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 55-59,exit hazard (%),1.0028419882969435,0.04408773351308925,1.5538851259714918e-114,***,67598,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 55-59,share of wife-months (%),8.324505083011069,,,,67598,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 55-59,share of exits (%),8.644183189199108,,,,67598,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 35-39,exit hazard (%),1.0050546387759047,0.03112177708211964,8.422115948182273e-229,***,134373,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 35-39,share of wife-months (%),16.978341175809245,,,,134373,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's age: 35-39,share of exits (%),17.66924361464657,,,,134373,
+CPS,i,"wives 25-59, husband employed (persistent exit)",race (husband): Black,exit hazard (%),0.8170278275815843,0.046543250108064343,5.527521443526825e-69,***,46138,
+CPS,i,"wives 25-59, husband employed (persistent exit)",race (husband): Black,share of wife-months (%),7.339466104163721,,,,46138,
+CPS,i,"wives 25-59, husband employed (persistent exit)",race (husband): Black,share of exits (%),6.2091813967137925,,,,46138,
+CPS,i,"wives 25-59, husband employed (persistent exit)",race (husband): White,exit hazard (%),0.969539584678937,0.013413398481417413,0.0,***,699496,
+CPS,i,"wives 25-59, husband employed (persistent exit)",race (husband): White,share of wife-months (%),85.97683080243117,,,,699496,
+CPS,i,"wives 25-59, husband employed (persistent exit)",race (husband): White,share of exits (%),86.31375441813094,,,,699496,
+CPS,i,"wives 25-59, husband employed (persistent exit)",race (husband): Other,exit hazard (%),1.0803909302662829,0.05468428133252025,6.9996326361840915e-87,***,48641,
+CPS,i,"wives 25-59, husband employed (persistent exit)",race (husband): Other,share of wife-months (%),6.683703093405108,,,,48641,
+CPS,i,"wives 25-59, husband employed (persistent exit)",race (husband): Other,share of exits (%),7.477064185155265,,,,48641,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: BA+,exit hazard (%),0.7343123011004346,0.017105703677446713,0.0,***,327384,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: BA+,share of wife-months (%),42.65599570447114,,,,327384,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: BA+,share of exits (%),32.43350747547411,,,,327384,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: high school,exit hazard (%),1.1187098195127698,0.026738090652598526,0.0,***,201952,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: high school,share of wife-months (%),24.630784412573494,,,,201952,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: high school,share of exits (%),28.53177056001704,,,,201952,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: some college,exit hazard (%),0.9620758149864141,0.023372721660360918,0.0,***,231364,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: some college,share of wife-months (%),28.131696909854853,,,,231364,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: some college,share of exits (%),28.024524780618997,,,,231364,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: < high school,exit hazard (%),2.3208773943520544,0.09175604387155648,3.7186432351328277e-141,***,33575,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: < high school,share of wife-months (%),4.581522973100515,,,,33575,
+CPS,i,"wives 25-59, husband employed (persistent exit)",wife's education: < high school,share of exits (%),11.010197183889861,,,,33575,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: self-employed,exit hazard (%),1.7663304417708838,0.053333059648360985,1.5903982354747321e-240,***,82625,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: self-employed,share of wife-months (%),9.823858154294925,,,,82625,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: self-employed,share of exits (%),17.967475726196053,,,,82625,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: private,exit hazard (%),0.9397257328070894,0.014928305604610255,0.0,***,543494,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: private,share of wife-months (%),69.60314033852796,,,,543494,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: private,share of exits (%),67.72717856026507,,,,543494,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: government,exit hazard (%),0.6391751798071307,0.022539561032551787,6.683692618957831e-177,***,166967,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: government,share of wife-months (%),20.431050368973867,,,,166967,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: government,share of exits (%),13.522083911057397,,,,166967,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: unknown,exit hazard (%),5.3288689338498605,0.7536451528286012,1.540507014359696e-12,***,1189,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: unknown,share of wife-months (%),0.1419511382032549,,,,1189,
+CPS,i,"wives 25-59, husband employed (persistent exit)",class of worker: unknown,share of exits (%),0.7832618024814909,,,,1189,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 1994-2000,exit hazard (%),1.05112538373506,0.02585670189861213,0.0,***,195081,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 1994-2000,share of wife-months (%),22.857859556101737,,,,195081,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 1994-2000,share of exits (%),24.878438246945784,,,,195081,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2001-07,exit hazard (%),1.0467001340740607,0.025215905841546198,0.0,***,215143,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2001-07,share of wife-months (%),24.315328413505313,,,,215143,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2001-07,share of exits (%),26.353326906396532,,,,215143,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2008-13,exit hazard (%),0.8761502621814978,0.025583745471919467,4.940268394480858e-257,***,172708,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2008-13,share of wife-months (%),21.057100318851383,,,,172708,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2008-13,share of exits (%),19.103378972188025,,,,172708,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2014-19,exit hazard (%),0.9230600364370222,0.028324925942817936,6.015357451877791e-233,***,145906,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2014-19,share of wife-months (%),20.214663367828646,,,,145906,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2014-19,share of exits (%),19.32099517648546,,,,145906,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2020-21,exit hazard (%),0.9236431692416025,0.05890951652005156,2.104944306543868e-55,***,34257,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2020-21,share of wife-months (%),5.818103892133434,,,,34257,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2020-21,share of exits (%),5.564404903878227,,,,34257,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2022-23,exit hazard (%),0.8045717403921324,0.057075978474171625,3.9905635240743357e-45,***,31180,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2022-23,share of wife-months (%),5.736944451579489,,,,31180,
+CPS,i,"wives 25-59, husband employed (persistent exit)",period: 2022-23,share of exits (%),4.779455794105969,,,,31180,
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",youngest child: 0,persistent exit (pp),0.9456681467109815,0.08910223163658457,2.5847381626497836e-26,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",youngest child: 1-2,persistent exit (pp),0.507447085923874,0.05708670870062577,6.162894796838352e-19,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",youngest child: 13-17,persistent exit (pp),0.13164832113035108,0.03805626883428684,0.0005415670342150161,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",youngest child: 3-5,persistent exit (pp),0.5620840909305382,0.05389460792443152,1.8218817614370246e-25,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",youngest child: 6-12,persistent exit (pp),0.34866811085266763,0.03741160301140654,1.1657586651863285e-20,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",wife's age: 25-29,persistent exit (pp),0.41099853343650194,0.05967146468412836,5.670572541184827e-12,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",wife's age: 30-34,persistent exit (pp),0.1856696701567685,0.04985066840681494,0.0001956893979729813,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",wife's age: 40-44,persistent exit (pp),-0.02924711512714047,0.04355080396286382,0.5018618438239153,,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",wife's age: 45-49,persistent exit (pp),-0.03242728344528109,0.04525992269284833,0.4737024586260329,,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",wife's age: 50-54,persistent exit (pp),0.0756651662674831,0.04840844741652882,0.11803917059072015,,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",wife's age: 55-59,persistent exit (pp),0.3339014064940048,0.059982498692620734,2.596874660853072e-08,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",race (husband): Black,persistent exit (pp),-0.15371789444156841,0.050317870060085985,0.002251082286998906,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",race (husband): Other,persistent exit (pp),0.02131960415285693,0.06063741753425067,0.7251445966109398,,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",wife's education: < high school,persistent exit (pp),0.9021786237151265,0.0988387623374425,6.991733733379013e-20,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",wife's education: BA+,persistent exit (pp),-0.44128682785253975,0.039237302082856536,2.4065154639361708e-29,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",wife's education: some college,persistent exit (pp),-0.18887105303449547,0.03768261227743486,5.382412046631389e-07,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",class of worker: government,persistent exit (pp),-0.1647124312741487,0.02841906945189967,6.7979313955310975e-09,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",class of worker: self-employed,persistent exit (pp),0.8462263542597593,0.056681447587784206,2.1181037057989553e-50,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",class of worker: unknown,persistent exit (pp),4.257916001236667,0.768157106944551,2.9728607736308832e-08,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",husband's education: < high school,persistent exit (pp),0.4101594243711898,0.07555634058367645,5.682193780458721e-08,***,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",husband's education: BA+,persistent exit (pp),0.0831697612943512,0.03639180361232349,0.022289491357550387,**,794275,clusters=559130; mean=0.966
+CPS,ii,"wives 25-59, husband employed (state x year-month FE)",husband's education: some college,persistent exit (pp),-0.003048174441174119,0.035236790749947476,0.9310646238230402,,794275,clusters=559130; mean=0.966
+CPS,iv,exiters,all,employed at t+12 (11 months after the exit month) (%),47.44597623211794,1.094347596168518,0.0,***,2659,
+CPS,iv,stayers (no exit at t+1),all,employed at t+12 (11 months after the exit month) (%),93.65016671916571,0.051312439143657684,0.0,***,294536,
+CPS,iv,exiters,youngest child: 0,employed at t+12 (11 months after the exit month) (%),41.82344955320848,4.146786212921143,6.3875742663377594e-24,***,185,
+CPS,iv,exiters,youngest child: 1-2,employed at t+12 (11 months after the exit month) (%),38.13714296561071,3.3180642127990723,1.4174925261663393e-30,***,277,
+CPS,iv,exiters,youngest child: 3-5,employed at t+12 (11 months after the exit month) (%),50.08558560275529,2.880720853805542,1.0446200055903022e-67,***,381,
+CPS,iv,exiters,youngest child: 6-12,employed at t+12 (11 months after the exit month) (%),52.52756213238056,2.2385916709899902,9.389180534548924e-122,***,631,
+CPS,iv,exiters,youngest child: 13-17,employed at t+12 (11 months after the exit month) (%),52.95556873397411,2.975093126296997,7.113103520699284e-71,***,355,
+CPS,iv,exiters,youngest child: none <18,employed at t+12 (11 months after the exit month) (%),44.103138609405676,1.9531220197677612,6.68642327640932e-113,***,830,
+CPS,iv,exiters with a t+12 link (period FE),youngest child: 0,employed at t+12 (pp),-3.692750275698099,5.190580537093578,0.4768159565159341,,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),youngest child: 1-2,employed at t+12 (pp),-7.289852864756736,4.47412344491582,0.1032417924299458,,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),youngest child: 13-17,employed at t+12 (pp),7.495348509196162,3.718317115081857,0.04382188195732836,**,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),youngest child: 3-5,employed at t+12 (pp),3.7955405806444733,4.104301777746397,0.35508487098769226,,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),youngest child: 6-12,employed at t+12 (pp),6.288901860987764,3.4475173758378395,0.06812444270801488,*,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),wife's age: 25-29,employed at t+12 (pp),-3.078066485014281,4.328157703550746,0.476977383242532,,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),wife's age: 30-34,employed at t+12 (pp),-6.391511270871288,3.698766263023733,0.08398613197037282,*,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),wife's age: 40-44,employed at t+12 (pp),-1.1694802748227218,3.7470662531955106,0.7549602883003028,,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),wife's age: 45-49,employed at t+12 (pp),-6.31669338765416,3.9746411788289677,0.11200425207683301,,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),wife's age: 50-54,employed at t+12 (pp),-1.8820696195660565,4.551342917114782,0.6792259465131958,,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),wife's age: 55-59,employed at t+12 (pp),-12.388423778906677,5.116997421846753,0.015476437645533338,**,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),race (husband): Black,employed at t+12 (pp),4.140402147795412,5.076801031428239,0.41475563304629626,,2659,clusters=2659; mean=47.446
+CPS,iv,exiters with a t+12 link (period FE),race (husband): Other,employed at t+12 (pp),-8.772725716902091,4.257435176807186,0.03934447345425166,**,2659,clusters=2659; mean=47.446
+SIPP,vii,"wives 25-59, husband employed",all,"persistent monthly exit, all reasons (%)",0.9050459837462524,,,,837420,
+SIPP,vii,"wives 25-59, husband employed",all,"persistent monthly exit, no involuntary separation (%)",0.6774168541610947,,,,837420,
+SIPP,vii,"wives 25-59, husband employed",all,employment share (%),71.19378179701883,,,,1353202,
+SIPP,vii,"wives 25-59, husband employed",all,persistent monthly entry (%),2.45243922670924,,,,329491,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",all,exit hazard (%),0.9050459837462524,,,,837420,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 6-12,exit hazard (%),0.8943159107149857,0.026499549492228616,1.1305788708552119e-249,***,180283,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 6-12,share of wife-months (%),21.301557049827956,,,,180283,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 6-12,share of exits (%),21.049009370561713,,,,180283,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 3-5,exit hazard (%),1.1783135352217964,0.043915010163678096,1.3800758044941838e-158,***,87443,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 3-5,share of wife-months (%),10.65713726490555,,,,87443,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 3-5,share of exits (%),13.874929353286356,,,,87443,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 13-17,exit hazard (%),0.7300086856579097,0.02922987054303201,1.1501078279703664e-137,***,119919,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 13-17,share of wife-months (%),13.57384591941036,,,,119919,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 13-17,share of exits (%),10.948643048981175,,,,119919,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: none <18,exit hazard (%),0.7878955621048881,0.017842854193646885,0.0,***,347739,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: none <18,share of wife-months (%),41.43161068985844,,,,347739,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: none <18,share of exits (%),36.068644886168826,,,,347739,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 0,exit hazard (%),1.37163546732594,0.08010296266164854,9.929380596699593e-66,***,31098,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 0,share of wife-months (%),3.999718223547287,,,,31098,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 0,share of exits (%),6.061742136038818,,,,31098,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 1-2,exit hazard (%),1.2016055418216856,0.04947275489636119,2.610614419053256e-130,***,70938,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 1-2,share of wife-months (%),9.036130852450409,,,,70938,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",youngest child: 1-2,share of exits (%),11.997031204963108,,,,70938,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",child aged 0 in t+1..t+9: no,exit hazard (%),0.8470136734373119,0.012348796602657915,0.0,***,786186,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",child aged 0 in t+1..t+9: no,share of wife-months (%),93.43143176428916,,,,786186,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",child aged 0 in t+1..t+9: no,share of exits (%),87.4405297127598,,,,786186,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",child aged 0 in t+1..t+9: yes,exit hazard (%),1.7304986008441805,0.06966974588392283,3.4344877805840547e-136,***,51234,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",child aged 0 in t+1..t+9: yes,share of wife-months (%),6.568568235710844,,,,51234,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",child aged 0 in t+1..t+9: yes,share of exits (%),12.559470287240208,,,,51234,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 45-49,exit hazard (%),0.7539626466196221,0.026637255466575024,3.014911280178731e-176,***,149095,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 45-49,share of wife-months (%),17.38843621489957,,,,149095,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 45-49,share of exits (%),14.48570749399389,,,,149095,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 30-34,exit hazard (%),1.2036702467449625,0.03821220482806591,8.78888526068318e-218,***,117469,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 30-34,share of wife-months (%),14.497721484008993,,,,117469,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 30-34,share of exits (%),19.281314219708676,,,,117469,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 50-54,exit hazard (%),0.6473131819314972,0.026291757967559892,7.642576805347214e-134,***,132478,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 50-54,share of wife-months (%),15.31839791329445,,,,132478,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 50-54,share of exits (%),10.956129382844185,,,,132478,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 55-59,exit hazard (%),0.8003203883922881,0.03755990702970423,9.602967143536399e-101,***,77438,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 55-59,share of wife-months (%),9.174489406621237,,,,77438,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 55-59,share of exits (%),8.1128816182523,,,,77438,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 25-29,exit hazard (%),1.422904732726099,0.05147381848575185,3.3621867579352457e-168,***,78306,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 25-29,share of wife-months (%),10.240233144639022,,,,78306,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 25-29,share of exits (%),16.09959766399092,,,,78306,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 35-39,exit hazard (%),0.906225316113267,0.030779854182879852,1.5864168719831248e-190,***,134499,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 35-39,share of wife-months (%),15.948664669858553,,,,134499,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 35-39,share of exits (%),15.96944679230715,,,,134499,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 40-44,exit hazard (%),0.7837055116691949,0.027483308570206838,7.485495641673731e-179,***,148135,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 40-44,share of wife-months (%),17.432057166678167,,,,148135,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's age: 40-44,share of exits (%),15.094922828902877,,,,148135,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",race (husband): White,exit hazard (%),0.8966198832486793,0.013224831417123053,0.0,***,714268,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",race (husband): White,share of wife-months (%),84.49532742402633,,,,714268,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",race (husband): White,share of exits (%),83.70866449944965,,,,714268,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",race (husband): Other,exit hazard (%),1.0030085544541865,0.05093738060329188,2.574954813728753e-86,***,58101,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",race (husband): Other,share of wife-months (%),7.301189955858302,,,,58101,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",race (husband): Other,share of exits (%),8.091473930537934,,,,58101,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",race (husband): Black,exit hazard (%),0.9046464928221674,0.0466913816874281,1.2541075956243676e-83,***,65051,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",race (husband): Black,share of wife-months (%),8.203482620115372,,,,65051,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",race (husband): Black,share of exits (%),8.199861570012414,,,,65051,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: some college,exit hazard (%),0.9309010137067867,0.021209863244000503,0.0,***,289482,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: some college,share of wife-months (%),33.21462804405133,,,,289482,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: some college,share of exits (%),34.1634916583091,,,,289482,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: high school,exit hazard (%),1.1019893049686378,0.029658727106942794,3.5533040142719147e-302,***,173877,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: high school,share of wife-months (%),19.537460619556725,,,,173877,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: high school,share of exits (%),23.788926790082115,,,,173877,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: < high school,exit hazard (%),1.8921951802340413,0.08397633662303428,1.9946707872705323e-112,***,36233,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: < high school,share of wife-months (%),4.399500184954816,,,,36233,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: < high school,share of exits (%),9.198110587654154,,,,36233,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: BA+,exit hazard (%),0.6938479389362172,0.017201568849697146,0.0,***,337828,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: BA+,share of wife-months (%),42.84841115143713,,,,337828,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",wife's education: BA+,share of exits (%),32.84947096395464,,,,337828,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): 35+,exit hazard (%),0.5730290129450181,0.012299139701056101,0.0,***,540436,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): 35+,share of wife-months (%),64.86948879073195,,,,540436,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): 35+,share of exits (%),41.07205578454119,,,,540436,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): 20-34,exit hazard (%),1.2230723936983956,0.03878119509031461,2.63825055027822e-218,***,114908,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): 20-34,share of wife-months (%),13.661947455941148,,,,114908,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): 20-34,share of exits (%),18.462653917709112,,,,114908,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): unknown,exit hazard (%),1.3883014018539461,0.03765280727168637,1.3415844775945648e-297,***,136516,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): unknown,share of wife-months (%),16.003812414165083,,,,136516,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): unknown,share of exits (%),24.549156184999166,,,,136516,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): < 20,exit hazard (%),2.6359540190388544,0.08956646630175162,2.2603319844255526e-190,***,45560,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): < 20,share of wife-months (%),5.464751339161829,,,,45560,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",usual hours (all jobs): < 20,share of exits (%),15.916134112750525,,,,45560,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 36+,exit hazard (%),0.5397331785778496,0.0123482431516541,0.0,***,489595,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 36+,share of wife-months (%),56.390592890582546,,,,489595,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 36+,share of exits (%),33.62909121671425,,,,489595,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 12-35,exit hazard (%),1.104702535937928,0.03311386603122185,5.092414212163729e-244,***,144897,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 12-35,share of wife-months (%),17.83836286829,,,,144897,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 12-35,share of exits (%),21.77357289185643,,,,144897,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 6-11,exit hazard (%),1.5950602667840745,0.06492604130125465,2.8230262299112784e-133,***,56136,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 6-11,share of wife-months (%),7.2515994525968335,,,,56136,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 6-11,share of exits (%),12.780276765156408,,,,56136,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 0-5,exit hazard (%),2.0575898753080737,0.06969290169125773,1.430795779349459e-191,***,62609,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 0-5,share of wife-months (%),8.060462896701418,,,,62609,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): 0-5,share of exits (%),18.32517589647599,,,,62609,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): unknown,exit hazard (%),1.1674917173191077,0.04450384661987796,1.102717793848946e-151,***,84183,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): unknown,share of wife-months (%),10.458981891829202,,,,84183,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",job tenure (months): unknown,share of exits (%),13.491883229796926,,,,84183,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",husband's job change t-2..t+1: no,exit hazard (%),0.8804697228242067,0.012383411768175196,0.0,***,813157,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",husband's job change t-2..t+1: no,share of wife-months (%),96.97917618268137,,,,813157,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",husband's job change t-2..t+1: no,share of exits (%),94.34573480989597,,,,813157,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",husband's job change t-2..t+1: yes,exit hazard (%),1.694031267895065,0.10073248389419075,1.8280268043109637e-63,***,24263,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",husband's job change t-2..t+1: yes,share of wife-months (%),3.0208238173186315,,,,24263,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",husband's job change t-2..t+1: yes,share of exits (%),5.654265190104029,,,,24263,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",previous persistent exit in panel: no,exit hazard (%),0.81733682667967,0.012108359317438191,0.0,***,791136,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",previous persistent exit in panel: no,share of wife-months (%),93.70563917278369,,,,791136,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",previous persistent exit in panel: no,share of exits (%),84.62450653219676,,,,791136,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",previous persistent exit in panel: yes,exit hazard (%),2.2107929610553025,0.08096547331567244,3.661501780584233e-164,***,46284,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",previous persistent exit in panel: yes,share of wife-months (%),6.294360827216311,,,,46284,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",previous persistent exit in panel: yes,share of exits (%),15.37549346780323,,,,46284,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",panel: 2004,exit hazard (%),0.9921588313906047,0.021456414175422184,0.0,***,306290,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",panel: 2004,share of wife-months (%),32.17564638474846,,,,306290,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",panel: 2004,share of exits (%),35.2726295565549,,,,306290,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",panel: 2008,exit hazard (%),0.9348756479984786,0.017039640860656777,0.0,***,375766,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",panel: 2008,share of wife-months (%),38.84643647442418,,,,375766,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",panel: 2008,share of exits (%),40.12678706239208,,,,375766,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",panel: 2014,exit hazard (%),0.7683319363028988,0.026093520444669695,1.4454134607279249e-190,***,155364,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",panel: 2014,share of wife-months (%),28.97791714082735,,,,155364,
+SIPP,i,"wives 25-59, husband employed (persistent exit)",panel: 2014,share of exits (%),24.600583381053017,,,,155364,
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 0,persistent exit (pp),-0.5128676241552427,0.12202223837794088,2.6332278874745214e-05,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 1-2,persistent exit (pp),0.10525275912210927,0.05808345569331379,0.06997146702557243,*,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 13-17,persistent exit (pp),-0.033841635187332554,0.03835387530943666,0.37758625029515935,,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 3-5,persistent exit (pp),0.15409158497096886,0.05559192717303032,0.00557414818581541,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 6-12,persistent exit (pp),0.007295920666951968,0.03813034833252173,0.8482579955230838,,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",child aged 0 in t+1..t+9: yes,persistent exit (pp),1.0367728457148169,0.10582028291061364,1.1542141320450844e-22,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 25-29,persistent exit (pp),0.3307819135389794,0.0625763756091896,1.249850547304345e-07,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 30-34,persistent exit (pp),0.21027085857472316,0.0516464744565461,4.674151611188311e-05,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 40-44,persistent exit (pp),-0.029241594579965207,0.04384881697198218,0.5048532227877176,,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 45-49,persistent exit (pp),0.014054981018024923,0.0460483953374099,0.7601971158813783,,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 50-54,persistent exit (pp),-0.06357328591482844,0.04812094135151025,0.1864631020820543,,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 55-59,persistent exit (pp),0.0716479639813191,0.05766265780552146,0.214038637627326,,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",race (husband): Black,persistent exit (pp),0.11308291235128029,0.04753482957916006,0.017362100632509165,**,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",race (husband): Other,persistent exit (pp),0.13374754184053433,0.05386988363191473,0.013035836365835557,**,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's education: < high school,persistent exit (pp),0.6475684451899434,0.09756865152801024,3.200136296047511e-11,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's education: BA+,persistent exit (pp),-0.4498299284097158,0.03696656646722848,4.570678407269741e-34,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's education: some college,persistent exit (pp),-0.22345139593184815,0.03856757710997512,6.882662362008844e-09,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",usual hours (all jobs): 20-34,persistent exit (pp),0.5293135615027214,0.042391379109461766,8.862810331863628e-36,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",usual hours (all jobs): < 20,persistent exit (pp),1.8533442250594696,0.10179976536957724,4.6438439221272905e-74,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",usual hours (all jobs): unknown,persistent exit (pp),1.0906868851524318,0.07147734021073204,1.4299507315809907e-52,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",job tenure (months): 0-5,persistent exit (pp),1.330164546151153,0.0697080870254735,3.568642285964532e-81,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",job tenure (months): 12-35,persistent exit (pp),0.4151712227242999,0.03526529214037445,5.390528706226207e-32,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",job tenure (months): 6-11,persistent exit (pp),0.9128120978906211,0.06589094280132807,1.213685346675691e-43,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",job tenure (months): unknown,persistent exit (pp),-0.2081063946470461,0.08420941088994542,0.013462427214053172,**,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",husband's job change t-2..t+1: yes,persistent exit (pp),0.6978506123170122,0.09759559719573166,8.650567185270626e-13,***,837349,clusters=34645; mean=0.905
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 0,"persistent exit, no involuntary separation (pp)",-0.41879659311652684,0.11224448072783702,0.00019063735853836212,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 1-2,"persistent exit, no involuntary separation (pp)",0.07339644239198943,0.04995505247580716,0.1417650932543463,,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 13-17,"persistent exit, no involuntary separation (pp)",-0.01276922741561546,0.0328357999832668,0.6973639822831423,,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 3-5,"persistent exit, no involuntary separation (pp)",0.12003211648813404,0.04693366946322198,0.010543235787352067,**,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",youngest child: 6-12,"persistent exit, no involuntary separation (pp)",0.010171501192022389,0.032487553919791565,0.7542129192054655,,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",child aged 0 in t+1..t+9: yes,"persistent exit, no involuntary separation (pp)",0.9748228741008104,0.09527684172485888,1.4331575892605844e-24,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 25-29,"persistent exit, no involuntary separation (pp)",0.32228625022834684,0.053990685574715404,2.382830843766926e-09,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 30-34,"persistent exit, no involuntary separation (pp)",0.17927705970652422,0.044076544489235564,4.754003136357757e-05,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 40-44,"persistent exit, no involuntary separation (pp)",-0.005466127911960034,0.036579600769788424,0.8812135175899493,,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 45-49,"persistent exit, no involuntary separation (pp)",0.005675815684362637,0.03889170864700108,0.8839695717094648,,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 50-54,"persistent exit, no involuntary separation (pp)",-0.06228410774223727,0.03999364652410268,0.11938739651652835,,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's age: 55-59,"persistent exit, no involuntary separation (pp)",0.06746867363192101,0.04785540529922244,0.15858564254702068,,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",race (husband): Black,"persistent exit, no involuntary separation (pp)",0.09389170636511684,0.04076627778423753,0.021269227119258525,**,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",race (husband): Other,"persistent exit, no involuntary separation (pp)",0.11479812734069994,0.04769932815798855,0.01609724464181478,**,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's education: < high school,"persistent exit, no involuntary separation (pp)",0.4476932437815716,0.0791135436557727,1.5237308474244594e-08,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's education: BA+,"persistent exit, no involuntary separation (pp)",-0.28257738347371364,0.030994061656880446,7.712868695056871e-20,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",wife's education: some college,"persistent exit, no involuntary separation (pp)",-0.13194875335773684,0.03228024553081015,4.358575542084113e-05,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",usual hours (all jobs): 20-34,"persistent exit, no involuntary separation (pp)",0.39847932956127907,0.0346557903432719,1.34689644391603e-30,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",usual hours (all jobs): < 20,"persistent exit, no involuntary separation (pp)",1.3881083774059457,0.08409838757113829,3.334699131558182e-61,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",usual hours (all jobs): unknown,"persistent exit, no involuntary separation (pp)",0.9700970237097482,0.06463743359950463,6.48016327843922e-51,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",job tenure (months): 0-5,"persistent exit, no involuntary separation (pp)",0.7668212023520116,0.054558128141396205,7.165729332253062e-45,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",job tenure (months): 12-35,"persistent exit, no involuntary separation (pp)",0.2815640502981594,0.030255989692885437,1.3266258064959343e-20,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",job tenure (months): 6-11,"persistent exit, no involuntary separation (pp)",0.5937018132953111,0.05550056347219236,1.0487603303671552e-26,***,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",job tenure (months): unknown,"persistent exit, no involuntary separation (pp)",-0.06340152540118855,0.07778893756321571,0.41504625210650115,,837349,clusters=34645; mean=0.677
+SIPP,ii,"wives 25-59, husband employed (panel x rotation x month FE)",husband's job change t-2..t+1: yes,"persistent exit, no involuntary separation (pp)",0.568180285128872,0.0867059096929637,5.640794739784551e-11,***,837349,clusters=34645; mean=0.677
+SIPP,vi,"persistence, no tenure / hours controls",previous persistent exit in panel: yes,persistent exit (pp),1.394677706412213,0.09022296143781497,6.650762201983558e-54,***,837349,clusters=34645; mean=0.905
+SIPP,vi,"persistence, with tenure and hours controls",previous persistent exit in panel: yes,persistent exit (pp),0.9060053350480152,0.08884460592390192,2.0314814530282473e-24,***,837349,clusters=34645; mean=0.905
+SIPP,vi,"persistence, with tenure and hours controls",job tenure (months): 0-5,persistent exit (pp),1.1665937705436298,0.06830641561637539,2.133482890452209e-65,***,837349,clusters=34645; mean=0.905
+SIPP,vi,"persistence, with tenure and hours controls",job tenure (months): 12-35,persistent exit (pp),0.34814038369771466,0.035425985356578114,8.592438354616261e-23,***,837349,clusters=34645; mean=0.905
+SIPP,vi,"persistence, with tenure and hours controls",job tenure (months): 6-11,persistent exit (pp),0.7838999500500612,0.065788307891166,9.828619831539586e-33,***,837349,clusters=34645; mean=0.905
+SIPP,vi,"persistence, with tenure and hours controls",job tenure (months): unknown,persistent exit (pp),-0.23967551406984897,0.08340381800144958,0.004057255032626243,***,837349,clusters=34645; mean=0.905
+SIPP,iii-group,persistent exits: all,unsatisfactory arrangements / other quit,share of exits (%),17.62185879589723,0.5164511270864394,3.594268019134152e-255,***,1327,
+SIPP,iii-group,persistent exits: all,no job end recorded,share of exits (%),34.457190948804254,0.6441690238264156,0.0,***,2807,
+SIPP,iii-group,persistent exits: all,childcare / family,share of exits (%),11.492659097694226,0.4323119951063538,1.0344890613169094e-155,***,865,
+SIPP,iii-group,persistent exits: all,involuntary,share of exits (%),25.145715028104217,0.5880817536767555,0.0,***,1970,
+SIPP,iii-group,persistent exits: all,quit to another job,share of exits (%),4.246300730597645,0.2733257394843376,1.989562640508056e-54,***,268,
+SIPP,iii-group,persistent exits: all,own illness / injury,share of exits (%),3.836013142223857,0.2603416484338696,3.8685064468729855e-49,***,298,
+SIPP,iii-group,persistent exits: all,school,share of exits (%),1.6939350861747582,0.17491856862802704,3.5217595230708884e-22,***,127,
+SIPP,iii-group,persistent exits: all,retirement,share of exits (%),1.5063271705038106,0.16510536976727241,7.278397668127581e-20,***,119,
+SIPP,iii-detail,persistent exits: all,quit for another reason / other personal,share of exits (%),13.435900294544947,0.4622742167759289,1.0009070119253272e-185,***,1004,
+SIPP,iii-detail,persistent exits: all,no job end recorded in t-1..t+2,share of exits (%),34.457190948804254,0.6441690238264156,0.0,***,2807,
+SIPP,iii-detail,persistent exits: all,childcare problems,share of exits (%),2.6089790371290134,0.21606883539022612,1.4358492387376473e-33,***,199,
+SIPP,iii-detail,persistent exits: all,layoff / slack work / position abolished,share of exits (%),11.999330978336694,0.44047258209558215,2.0701575540645144e-163,***,1016,
+SIPP,iii-detail,persistent exits: all,other family / personal obligations,share of exits (%),8.883680060565213,0.3856487402934605,2.0473015718659704e-117,***,666,
+SIPP,iii-detail,persistent exits: all,quit to take another job,share of exits (%),4.246300730597645,0.2733257394843376,1.989562640508056e-54,***,268,
+SIPP,iii-detail,persistent exits: all,own illness / injury,share of exits (%),3.836013142223857,0.2603416484338696,3.8685064468729855e-49,***,298,
+SIPP,iii-detail,persistent exits: all,unsatisfactory work arrangements,share of exits (%),4.185958501352282,0.271462232206607,1.2002984829824237e-53,***,323,
+SIPP,iii-detail,persistent exits: all,temporary job ended,share of exits (%),6.564583884184888,0.33570417324636104,3.76442641183781e-85,***,477,
+SIPP,iii-detail,persistent exits: all,discharged / fired,share of exits (%),3.3289851917947666,0.24316521422779813,1.1615760862461747e-42,***,267,
+SIPP,iii-detail,persistent exits: all,school / training,share of exits (%),1.6939350861747582,0.17491856862802704,3.5217595230708884e-22,***,127,
+SIPP,iii-detail,persistent exits: all,plant closed / employer bankrupt or sold,share of exits (%),1.7308442491505733,0.17678075492477732,1.2318365327789772e-22,***,133,
+SIPP,iii-detail,persistent exits: all,retirement / old age,share of exits (%),1.5063271705038106,0.16510536976727241,7.278397668127581e-20,***,119,
+SIPP,iii-detail,persistent exits: all,other involuntary (2014),share of exits (%),1.521970724637292,0.1659473038724325,4.6687275793523124e-20,***,77,
+SIPP,iii-group,persistent exits: race: Black,own illness / injury,share of exits (%),5.222673951020112,1.0999954267413163,2.055343789763524e-06,***,37,
+SIPP,iii-group,persistent exits: race: Black,involuntary,share of exits (%),26.20862517399655,2.1742882431741686,1.8501441867209663e-33,***,170,
+SIPP,iii-group,persistent exits: race: Black,quit to another job,share of exits (%),4.927226724681876,1.0700930693775723,4.1348923208095925e-06,***,23,
+SIPP,iii-group,persistent exits: race: Black,no job end recorded,share of exits (%),35.50691501420191,2.365948259449625,6.559531656476129e-51,***,240,
+SIPP,iii-group,persistent exits: race: Black,retirement,share of exits (%),1.729906397328408,0.6446354489031085,0.007284679232184709,***,13,
+SIPP,iii-group,persistent exits: race: Black,unsatisfactory arrangements / other quit,share of exits (%),16.069018073061343,1.8157164088243378,8.75504604792391e-19,***,90,
+SIPP,iii-group,persistent exits: race: Black,childcare / family,share of exits (%),9.180033521948252,1.4275949365126228,1.2725272578895204e-10,***,50,
+SIPP,iii-group,persistent exits: race: Black,school,share of exits (%),1.1556011437615477,0.5284114388503377,0.028747314508379834,**,9,
+SIPP,iii-detail,persistent exits: race: Black,own illness / injury,share of exits (%),5.222673951020112,1.0999954267413163,2.055343789763524e-06,***,37,
+SIPP,iii-detail,persistent exits: race: Black,discharged / fired,share of exits (%),4.403542064249831,1.014411518319969,1.418473936991032e-05,***,28,
+SIPP,iii-detail,persistent exits: race: Black,quit to take another job,share of exits (%),4.927226724681876,1.0700930693775723,4.1348923208095925e-06,***,23,
+SIPP,iii-detail,persistent exits: race: Black,no job end recorded in t-1..t+2,share of exits (%),35.50691501420191,2.365948259449625,6.559531656476129e-51,***,240,
+SIPP,iii-detail,persistent exits: race: Black,layoff / slack work / position abolished,share of exits (%),13.78824877465874,1.7046294432517988,6.030124284552977e-16,***,90,
+SIPP,iii-detail,persistent exits: race: Black,retirement / old age,share of exits (%),1.729906397328408,0.6446354489031085,0.007284679232184709,***,13,
+SIPP,iii-detail,persistent exits: race: Black,quit for another reason / other personal,share of exits (%),15.11737778753734,1.7710867077047623,1.3936862144280335e-17,***,83,
+SIPP,iii-detail,persistent exits: race: Black,other family / personal obligations,share of exits (%),6.750174891926775,1.2404341733105726,5.274959992279332e-08,***,38,
+SIPP,iii-detail,persistent exits: race: Black,temporary job ended,share of exits (%),4.825266205490532,1.0595310077390956,5.259709245696751e-06,***,32,
+SIPP,iii-detail,persistent exits: race: Black,school / training,share of exits (%),1.1556011437615477,0.5284114388503377,0.028747314508379834,**,9,
+SIPP,iii-detail,persistent exits: race: Black,unsatisfactory work arrangements,share of exits (%),0.9516402855240031,0.48001217170258886,0.04741954443562081,**,7,
+SIPP,iii-detail,persistent exits: race: Black,plant closed / employer bankrupt or sold,share of exits (%),1.4686468660920997,0.5947550135846126,0.013536602237827908,**,10,
+SIPP,iii-detail,persistent exits: race: Black,childcare problems,share of exits (%),2.429858630021477,0.7612742977314764,0.0014137419955950793,***,12,
+SIPP,iii-detail,persistent exits: race: Black,other involuntary (2014),share of exits (%),1.7229212635053412,0.6433555199443373,0.007405800078041069,***,10,
+SIPP,iii-group,persistent exits: race: White,unsatisfactory arrangements / other quit,share of exits (%),17.679626967825943,0.5612936413026796,9.251962158060146e-218,***,1133,
+SIPP,iii-group,persistent exits: race: White,no job end recorded,share of exits (%),34.08621912592862,0.6973927632494746,0.0,***,2322,
+SIPP,iii-group,persistent exits: race: White,childcare / family,share of exits (%),11.796672569259739,0.4745939043158941,2.20773835176742e-136,***,744,
+SIPP,iii-group,persistent exits: race: White,involuntary,share of exits (%),25.1808487364107,0.6386184766398788,0.0,***,1638,
+SIPP,iii-group,persistent exits: race: White,quit to another job,share of exits (%),4.340662435668179,0.29980688337461575,1.6641062120230056e-47,***,233,
+SIPP,iii-group,persistent exits: race: White,own illness / injury,share of exits (%),3.6342121560066367,0.27533821035583145,8.880841892026973e-40,***,238,
+SIPP,iii-group,persistent exits: race: White,retirement,share of exits (%),1.5957105085595997,0.1843673342265287,4.9264847612626566e-18,***,103,
+SIPP,iii-group,persistent exits: race: White,school,share of exits (%),1.686047500340578,0.18942722176068988,5.546224602155528e-19,***,108,
+SIPP,iii-detail,persistent exits: race: White,quit for another reason / other personal,share of exits (%),13.190209662971508,0.497863298146173,1.1474925079596998e-154,***,842,
+SIPP,iii-detail,persistent exits: race: White,no job end recorded in t-1..t+2,share of exits (%),34.08621912592862,0.6973927632494746,0.0,***,2322,
+SIPP,iii-detail,persistent exits: race: White,childcare problems,share of exits (%),2.6393002941638315,0.23585014902974244,4.5345043435336326e-29,***,168,
+SIPP,iii-detail,persistent exits: race: White,layoff / slack work / position abolished,share of exits (%),11.777068411734115,0.47425208635739224,3.9543375422685555e-136,***,830,
+SIPP,iii-detail,persistent exits: race: White,other family / personal obligations,share of exits (%),9.157372275095907,0.4243558443562643,2.800872019959599e-103,***,576,
+SIPP,iii-detail,persistent exits: race: White,quit to take another job,share of exits (%),4.340662435668179,0.29980688337461575,1.6641062120230056e-47,***,233,
+SIPP,iii-detail,persistent exits: race: White,unsatisfactory work arrangements,share of exits (%),4.489417304854435,0.3046636523571976,3.8051188925629015e-49,***,291,
+SIPP,iii-detail,persistent exits: race: White,temporary job ended,share of exits (%),6.834748040323585,0.3712685353179349,1.108957232300021e-75,***,413,
+SIPP,iii-detail,persistent exits: race: White,discharged / fired,share of exits (%),3.3754201667298047,0.2657098402762786,5.661067165079727e-37,***,225,
+SIPP,iii-detail,persistent exits: race: White,own illness / injury,share of exits (%),3.6342121560066367,0.27533821035583145,8.880841892026973e-40,***,238,
+SIPP,iii-detail,persistent exits: race: White,plant closed / employer bankrupt or sold,share of exits (%),1.7295803875600475,0.1918146130173389,1.934206064573848e-19,***,111,
+SIPP,iii-detail,persistent exits: race: White,retirement / old age,share of exits (%),1.5957105085595997,0.1843673342265287,4.9264847612626566e-18,***,103,
+SIPP,iii-detail,persistent exits: race: White,school / training,share of exits (%),1.686047500340578,0.18942722176068988,5.546224602155528e-19,***,108,
+SIPP,iii-detail,persistent exits: race: White,other involuntary (2014),share of exits (%),1.4640317300631507,0.17671464706350085,1.183852579940035e-16,***,59,
+SIPP,iii-group,persistent exits: youngest child 0-2,unsatisfactory arrangements / other quit,share of exits (%),17.102651053016128,1.2192556991904342,1.0637864712870018e-44,***,196,
+SIPP,iii-group,persistent exits: youngest child 0-2,childcare / family,share of exits (%),22.646720732164706,1.3552979548406665,1.1125885364130156e-62,***,313,
+SIPP,iii-group,persistent exits: youngest child 0-2,no job end recorded,share of exits (%),31.98746993589695,1.510348493207987,1.4958687121771464e-99,***,484,
+SIPP,iii-group,persistent exits: youngest child 0-2,involuntary,share of exits (%),20.53378705919882,1.3080325191193876,1.555365258509773e-55,***,282,
+SIPP,iii-group,persistent exits: youngest child 0-2,quit to another job,share of exits (%),4.677783970421451,0.6837697782006826,7.855003498481492e-12,***,47,
+SIPP,iii-group,persistent exits: youngest child 0-2,school,share of exits (%),1.030106986537668,0.32695310987672227,0.0016292093580463664,***,16,
+SIPP,iii-group,persistent exits: youngest child 0-2,own illness / injury,share of exits (%),1.7540167444203614,0.4250764305415037,3.685563538975178e-05,***,18,
+SIPP,iii-group,persistent exits: youngest child 0-2,retirement,share of exits (%),0.2674635183439284,0.16724127303039094,0.1097611966229588,,3,
+SIPP,iii-detail,persistent exits: youngest child 0-2,quit for another reason / other personal,share of exits (%),14.364609683721847,1.1357070233116204,1.1451851616949611e-36,***,165,
+SIPP,iii-detail,persistent exits: youngest child 0-2,childcare problems,share of exits (%),7.414850691157519,0.8484272847337395,2.3409447127577015e-18,***,101,
+SIPP,iii-detail,persistent exits: youngest child 0-2,no job end recorded in t-1..t+2,share of exits (%),31.98746993589695,1.510348493207987,1.4958687121771464e-99,***,484,
+SIPP,iii-detail,persistent exits: youngest child 0-2,other family / personal obligations,share of exits (%),15.23187004100719,1.16355165942026,3.7147068876762106e-39,***,212,
+SIPP,iii-detail,persistent exits: youngest child 0-2,discharged / fired,share of exits (%),2.330904534591683,0.48857763398156295,1.8349872941704472e-06,***,32,
+SIPP,iii-detail,persistent exits: youngest child 0-2,quit to take another job,share of exits (%),4.677783970421451,0.6837697782006826,7.855003498481492e-12,***,47,
+SIPP,iii-detail,persistent exits: youngest child 0-2,layoff / slack work / position abolished,share of exits (%),8.97467215976772,0.9255143955846444,3.1062842130423852e-22,***,133,
+SIPP,iii-detail,persistent exits: youngest child 0-2,temporary job ended,share of exits (%),7.443547888946843,0.849935753379585,1.9913844537608594e-18,***,90,
+SIPP,iii-detail,persistent exits: youngest child 0-2,unsatisfactory work arrangements,share of exits (%),2.7380413692942804,0.5284261049088171,2.201052241054465e-07,***,31,
+SIPP,iii-detail,persistent exits: youngest child 0-2,school / training,share of exits (%),1.030106986537668,0.32695310987672227,0.0016292093580463664,***,16,
+SIPP,iii-detail,persistent exits: youngest child 0-2,own illness / injury,share of exits (%),1.7540167444203614,0.4250764305415037,3.685563538975178e-05,***,18,
+SIPP,iii-detail,persistent exits: youngest child 0-2,retirement / old age,share of exits (%),0.2674635183439284,0.16724127303039094,0.1097611966229588,,3,
+SIPP,iii-detail,persistent exits: youngest child 0-2,plant closed / employer bankrupt or sold,share of exits (%),0.9949932525137907,0.32138929169624675,0.001962079900410139,***,13,
+SIPP,iii-detail,persistent exits: youngest child 0-2,other involuntary (2014),share of exits (%),0.7896692233787769,0.286611631107797,0.005865823415096848,***,14,
+SIPP,iii-group,persistent exits: youngest child 3-5,unsatisfactory arrangements / other quit,share of exits (%),17.470454266634135,1.4230291670457538,1.2045805448646545e-34,***,180,
+SIPP,iii-group,persistent exits: youngest child 3-5,involuntary,share of exits (%),24.5703109389352,1.613368080815299,2.2633176909334586e-52,***,263,
+SIPP,iii-group,persistent exits: youngest child 3-5,childcare / family,share of exits (%),15.129217110075697,1.3429019588128037,1.9301013712075873e-29,***,153,
+SIPP,iii-group,persistent exits: youngest child 3-5,no job end recorded,share of exits (%),32.7388613509671,1.75861538592541,2.3716337034650387e-77,***,361,
+SIPP,iii-group,persistent exits: youngest child 3-5,own illness / injury,share of exits (%),3.4277849610052304,0.6818515882149336,4.977668203686765e-07,***,34,
+SIPP,iii-group,persistent exits: youngest child 3-5,school,share of exits (%),2.400183144862244,0.5735927689161912,2.8582909461303052e-05,***,25,
+SIPP,iii-group,persistent exits: youngest child 3-5,quit to another job,share of exits (%),4.199914497708882,0.7517269986189951,2.3099785354012457e-08,***,34,
+SIPP,iii-group,persistent exits: youngest child 3-5,retirement,share of exits (%),0.06327372981151388,0.0942391266567325,0.5019550660384258,,1,
+SIPP,iii-detail,persistent exits: youngest child 3-5,quit for another reason / other personal,share of exits (%),12.973489586304781,1.2592476935727888,6.860237895117969e-25,***,136,
+SIPP,iii-detail,persistent exits: youngest child 3-5,layoff / slack work / position abolished,share of exits (%),9.198699540991166,1.083094191119423,2.0140138765061785e-17,***,112,
+SIPP,iii-detail,persistent exits: youngest child 3-5,discharged / fired,share of exits (%),3.9837422297017206,0.7329510610827795,5.473222994479572e-08,***,47,
+SIPP,iii-detail,persistent exits: youngest child 3-5,other family / personal obligations,share of exits (%),10.461849171672807,1.1470048737250729,7.442368712500443e-20,***,101,
+SIPP,iii-detail,persistent exits: youngest child 3-5,no job end recorded in t-1..t+2,share of exits (%),32.7388613509671,1.75861538592541,2.3716337034650387e-77,***,361,
+SIPP,iii-detail,persistent exits: youngest child 3-5,childcare problems,share of exits (%),4.667367938402887,0.7905216831961217,3.544441343180461e-09,***,52,
+SIPP,iii-detail,persistent exits: youngest child 3-5,temporary job ended,share of exits (%),8.15849168614708,1.0258442226802904,1.8211630611223314e-15,***,77,
+SIPP,iii-detail,persistent exits: youngest child 3-5,own illness / injury,share of exits (%),3.4277849610052304,0.6818515882149336,4.977668203686765e-07,***,34,
+SIPP,iii-detail,persistent exits: youngest child 3-5,school / training,share of exits (%),2.400183144862244,0.5735927689161912,2.8582909461303052e-05,***,25,
+SIPP,iii-detail,persistent exits: youngest child 3-5,quit to take another job,share of exits (%),4.199914497708882,0.7517269986189951,2.3099785354012457e-08,***,34,
+SIPP,iii-detail,persistent exits: youngest child 3-5,unsatisfactory work arrangements,share of exits (%),4.496964680329355,0.776649918826485,7.02992549441182e-09,***,44,
+SIPP,iii-detail,persistent exits: youngest child 3-5,plant closed / employer bankrupt or sold,share of exits (%),2.131460670621703,0.5412740302299811,8.221196664273121e-05,***,19,
+SIPP,iii-detail,persistent exits: youngest child 3-5,retirement / old age,share of exits (%),0.06327372981151388,0.0942391266567325,0.5019550660384258,,1,
+SIPP,iii-detail,persistent exits: youngest child 3-5,other involuntary (2014),share of exits (%),1.0979168114735356,0.3905210179896473,0.004932405705582937,***,8,
+SIPP,iii-group,persistent exits: youngest child 6-17,no job end recorded,share of exits (%),36.92692506223396,1.1325046302528734,3.3256864477235674e-233,***,961,
+SIPP,iii-group,persistent exits: youngest child 6-17,unsatisfactory arrangements / other quit,share of exits (%),18.43665432448556,0.9099865726970061,2.878583146946368e-91,***,453,
+SIPP,iii-group,persistent exits: youngest child 6-17,quit to another job,share of exits (%),4.136576723155595,0.46729745991862925,8.586648069132309e-19,***,89,
+SIPP,iii-group,persistent exits: youngest child 6-17,involuntary,share of exits (%),26.198923884709107,1.031856930441979,3.2461116756977905e-142,***,693,
+SIPP,iii-group,persistent exits: youngest child 6-17,school,share of exits (%),1.4783040558442435,0.2832006432375052,1.7893439497447507e-07,***,39,
+SIPP,iii-group,persistent exits: youngest child 6-17,own illness / injury,share of exits (%),3.5521484249706137,0.4343484167304884,2.883343860393953e-16,***,102,
+SIPP,iii-group,persistent exits: youngest child 6-17,childcare / family,share of exits (%),8.730039503046775,0.6623971380530433,1.152057955475946e-39,***,215,
+SIPP,iii-group,persistent exits: youngest child 6-17,retirement,share of exits (%),0.5404280215541503,0.17204364466785377,0.0016824197849782865,***,15,
+SIPP,iii-detail,persistent exits: youngest child 6-17,no job end recorded in t-1..t+2,share of exits (%),36.92692506223396,1.1325046302528734,3.3256864477235674e-233,***,961,
+SIPP,iii-detail,persistent exits: youngest child 6-17,quit for another reason / other personal,share of exits (%),13.777907513124758,0.8088115108095801,4.536222687944256e-65,***,335,
+SIPP,iii-detail,persistent exits: youngest child 6-17,quit to take another job,share of exits (%),4.136576723155595,0.46729745991862925,8.586648069132309e-19,***,89,
+SIPP,iii-detail,persistent exits: youngest child 6-17,layoff / slack work / position abolished,share of exits (%),12.994898325394782,0.7890512533528362,6.125792964200869e-61,***,369,
+SIPP,iii-detail,persistent exits: youngest child 6-17,unsatisfactory work arrangements,share of exits (%),4.6587468113608,0.4945627401560496,4.513852153607733e-21,***,118,
+SIPP,iii-detail,persistent exits: youngest child 6-17,temporary job ended,share of exits (%),6.526787681323608,0.5796151629310818,2.054636179144063e-29,***,164,
+SIPP,iii-detail,persistent exits: youngest child 6-17,school / training,share of exits (%),1.4783040558442435,0.2832006432375052,1.7893439497447507e-07,***,39,
+SIPP,iii-detail,persistent exits: youngest child 6-17,own illness / injury,share of exits (%),3.5521484249706137,0.4343484167304884,2.883343860393953e-16,***,102,
+SIPP,iii-detail,persistent exits: youngest child 6-17,other family / personal obligations,share of exits (%),7.541814495910853,0.6196650724038867,4.447479046658917e-34,***,187,
+SIPP,iii-detail,persistent exits: youngest child 6-17,discharged / fired,share of exits (%),3.5911677400046242,0.43663914555713607,1.9589789081395644e-16,***,91,
+SIPP,iii-detail,persistent exits: youngest child 6-17,childcare problems,share of exits (%),1.1882250071359224,0.2542729175114374,2.9678819415472934e-06,***,28,
+SIPP,iii-detail,persistent exits: youngest child 6-17,plant closed / employer bankrupt or sold,share of exits (%),1.742099047223266,0.3070199342742408,1.3932094183018982e-08,***,44,
+SIPP,iii-detail,persistent exits: youngest child 6-17,retirement / old age,share of exits (%),0.5404280215541503,0.17204364466785377,0.0016824197849782865,***,15,
+SIPP,iii-detail,persistent exits: youngest child 6-17,other involuntary (2014),share of exits (%),1.343971090762824,0.2702111030366521,6.565918092909428e-07,***,25,
+SIPP,iii-group,persistent exits: no child <18,unsatisfactory arrangements / other quit,share of exits (%),17.21722585030278,0.8511321152083646,5.48186483204099e-91,***,498,
+SIPP,iii-group,persistent exits: no child <18,no job end recorded,share of exits (%),34.16375436419291,1.06920437049747,4.98713959947064e-224,***,1001,
+SIPP,iii-group,persistent exits: no child <18,involuntary,share of exits (%),26.74181718844766,0.9978584288937262,3.3005058853327072e-158,***,732,
+SIPP,iii-group,persistent exits: no child <18,childcare / family,share of exits (%),6.959959980264031,0.5736985034824709,7.171104460369623e-34,***,184,
+SIPP,iii-group,persistent exits: no child <18,own illness / injury,share of exits (%),5.287285928911187,0.504505541611067,1.0659204884832928e-25,***,144,
+SIPP,iii-group,persistent exits: no child <18,retirement,share of exits (%),3.53859447384006,0.4165216612365627,1.9694133246826595e-17,***,100,
+SIPP,iii-group,persistent exits: no child <18,quit to another job,share of exits (%),4.145450208394981,0.4494047092012494,2.853814056482146e-20,***,98,
+SIPP,iii-group,persistent exits: no child <18,school,share of exits (%),1.945912005646401,0.3114152331309063,4.141243676597683e-10,***,47,
+SIPP,iii-detail,persistent exits: no child <18,quit for another reason / other personal,share of exits (%),12.845391152266938,0.754334980027272,5.025585554582547e-65,***,368,
+SIPP,iii-detail,persistent exits: no child <18,no job end recorded in t-1..t+2,share of exits (%),34.16375436419291,1.06920437049747,4.98713959947064e-224,***,1001,
+SIPP,iii-detail,persistent exits: no child <18,layoff / slack work / position abolished,share of exits (%),13.707861299873162,0.7753822745444318,6.103618290042841e-70,***,402,
+SIPP,iii-detail,persistent exits: no child <18,other family / personal obligations,share of exits (%),6.288601668504336,0.5472914380493847,1.4741482651180262e-30,***,166,
+SIPP,iii-detail,persistent exits: no child <18,own illness / injury,share of exits (%),5.287285928911187,0.504505541611067,1.0659204884832928e-25,***,144,
+SIPP,iii-detail,persistent exits: no child <18,unsatisfactory work arrangements,share of exits (%),4.371834698035841,0.46096736479672396,2.4461531152375177e-21,***,130,
+SIPP,iii-detail,persistent exits: no child <18,plant closed / employer bankrupt or sold,share of exits (%),1.9351744845063148,0.3105718550323606,4.6345514376504613e-10,***,57,
+SIPP,iii-detail,persistent exits: no child <18,retirement / old age,share of exits (%),3.53859447384006,0.4165216612365627,1.9694133246826595e-17,***,100,
+SIPP,iii-detail,persistent exits: no child <18,childcare problems,share of exits (%),0.6713583117596953,0.18410256310086737,0.0002656774832564189,***,18,
+SIPP,iii-detail,persistent exits: no child <18,quit to take another job,share of exits (%),4.145450208394981,0.4494047092012494,2.853814056482146e-20,***,98,
+SIPP,iii-detail,persistent exits: no child <18,school / training,share of exits (%),1.945912005646401,0.3114152331309063,4.141243676597683e-10,***,47,
+SIPP,iii-detail,persistent exits: no child <18,temporary job ended,share of exits (%),5.5448899023646145,0.5159464094706354,6.120268605147001e-27,***,146,
+SIPP,iii-detail,persistent exits: no child <18,discharged / fired,share of exits (%),3.344238846973387,0.40532922453040043,1.5750512190420613e-16,***,97,
+SIPP,iii-detail,persistent exits: no child <18,other involuntary (2014),share of exits (%),2.209652654730188,0.3314022106240283,2.6004554239104446e-11,***,30,
+SIPP,iii-group,persistent exits: child aged 0 in t+1..t+9,unsatisfactory arrangements / other quit,share of exits (%),20.13551540706174,1.58491726248633,5.5854787571639635e-37,***,164,
+SIPP,iii-group,persistent exits: child aged 0 in t+1..t+9,childcare / family,share of exits (%),30.973146189501303,1.8274692346418504,1.9690592432589616e-64,***,286,
+SIPP,iii-group,persistent exits: child aged 0 in t+1..t+9,no job end recorded,share of exits (%),28.670339550250475,1.7873099381298398,6.602166705662707e-58,***,280,
+SIPP,iii-group,persistent exits: child aged 0 in t+1..t+9,involuntary,share of exits (%),14.19246077880229,1.3792403332460201,7.813061893592369e-25,***,134,
+SIPP,iii-group,persistent exits: child aged 0 in t+1..t+9,own illness / injury,share of exits (%),1.7467443894017196,0.5177695749495652,0.0007419367937204933,***,20,
+SIPP,iii-group,persistent exits: child aged 0 in t+1..t+9,quit to another job,share of exits (%),3.375426331687882,0.7137670343953139,2.2559409685273676e-06,***,20,
+SIPP,iii-group,persistent exits: child aged 0 in t+1..t+9,school,share of exits (%),0.7346395981536612,0.3375082572086962,0.029506193743029877,**,7,
+SIPP,iii-group,persistent exits: child aged 0 in t+1..t+9,retirement,share of exits (%),0.17172775514092783,0.16364223312576254,0.29398957218911514,,2,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,quit for another reason / other personal,share of exits (%),17.980768891505832,1.5177853269989696,2.2379505433371258e-32,***,148,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,other family / personal obligations,share of exits (%),23.65912783922636,1.6796790202415226,4.663110239877328e-45,***,215,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,no job end recorded in t-1..t+2,share of exits (%),28.670339550250475,1.7873099381298398,6.602166705662707e-58,***,280,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,discharged / fired,share of exits (%),2.191419692478429,0.5786282475015632,0.00015231337534214742,***,17,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,childcare problems,share of exits (%),7.314018350274949,1.0290427647468159,1.180831706034069e-12,***,71,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,own illness / injury,share of exits (%),1.7467443894017196,0.5177695749495652,0.0007419367937204933,***,20,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,layoff / slack work / position abolished,share of exits (%),6.451977148976408,0.9709840377456851,3.036664126126887e-11,***,72,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,temporary job ended,share of exits (%),4.216919482735738,0.7943107281249626,1.1028633786297141e-07,***,34,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,quit to take another job,share of exits (%),3.375426331687882,0.7137670343953139,2.2559409685273676e-06,***,20,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,plant closed / employer bankrupt or sold,share of exits (%),0.8463471877941801,0.36205705167197255,0.01940763166655184,**,7,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,unsatisfactory work arrangements,share of exits (%),2.1547465155559045,0.5738737351390868,0.00017352169222543834,***,16,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,school / training,share of exits (%),0.7346395981536612,0.3375082572086962,0.029506193743029877,**,7,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,retirement / old age,share of exits (%),0.17172775514092783,0.16364223312576254,0.29398957218911514,,2,
+SIPP,iii-detail,persistent exits: child aged 0 in t+1..t+9,other involuntary (2014),share of exits (%),0.48579726681753366,0.27480108377252566,0.07709196488650731,*,4,
+SIPP,iii-group,persistent exits: wife 55-59,no job end recorded,share of exits (%),43.14399099382817,2.2951406382737707,7.845840382389911e-79,***,274,
+SIPP,iii-group,persistent exits: wife 55-59,unsatisfactory arrangements / other quit,share of exits (%),12.068103586547583,1.5095715184913743,1.3021686348075494e-15,***,83,
+SIPP,iii-group,persistent exits: wife 55-59,retirement,share of exits (%),11.100205064398217,1.4557166167014672,2.4355939226857576e-14,***,71,
+SIPP,iii-group,persistent exits: wife 55-59,own illness / injury,share of exits (%),4.0847341269281685,0.9172478938456087,8.45802007148969e-06,***,30,
+SIPP,iii-group,persistent exits: wife 55-59,school,share of exits (%),0.29656347870265065,0.2519850969777815,0.23923190835685315,,2,
+SIPP,iii-group,persistent exits: wife 55-59,involuntary,share of exits (%),25.215040163139175,2.0123240763864327,5.0964467732086884e-36,***,151,
+SIPP,iii-group,persistent exits: wife 55-59,childcare / family,share of exits (%),2.09486532883413,0.6636540482351616,0.0015964079717289365,***,14,
+SIPP,iii-group,persistent exits: wife 55-59,quit to another job,share of exits (%),1.9964972576219133,0.6482105824112552,0.002069913057758529,***,10,
+SIPP,iii-detail,persistent exits: wife 55-59,no job end recorded in t-1..t+2,share of exits (%),43.14399099382817,2.2951406382737707,7.845840382389911e-79,***,274,
+SIPP,iii-detail,persistent exits: wife 55-59,quit for another reason / other personal,share of exits (%),8.680668083982845,1.3047247384893763,2.8667832588181766e-11,***,61,
+SIPP,iii-detail,persistent exits: wife 55-59,retirement / old age,share of exits (%),11.100205064398217,1.4557166167014672,2.4355939226857576e-14,***,71,
+SIPP,iii-detail,persistent exits: wife 55-59,unsatisfactory work arrangements,share of exits (%),3.387435502564736,0.8383266673887863,5.3289472036097815e-05,***,22,
+SIPP,iii-detail,persistent exits: wife 55-59,own illness / injury,share of exits (%),4.0847341269281685,0.9172478938456087,8.45802007148969e-06,***,30,
+SIPP,iii-detail,persistent exits: wife 55-59,school / training,share of exits (%),0.29656347870265065,0.2519850969777815,0.23923190835685315,,2,
+SIPP,iii-detail,persistent exits: wife 55-59,layoff / slack work / position abolished,share of exits (%),12.405711435786007,1.52760014581597,4.62181847978516e-16,***,80,
+SIPP,iii-detail,persistent exits: wife 55-59,other family / personal obligations,share of exits (%),2.09486532883413,0.6636540482351616,0.0015964079717289365,***,14,
+SIPP,iii-detail,persistent exits: wife 55-59,temporary job ended,share of exits (%),5.72200979335152,1.0763175334874313,1.0590774785004048e-07,***,32,
+SIPP,iii-detail,persistent exits: wife 55-59,plant closed / employer bankrupt or sold,share of exits (%),2.406181074509549,0.7101273973388337,0.0007030692856394213,***,16,
+SIPP,iii-detail,persistent exits: wife 55-59,discharged / fired,share of exits (%),1.9426637209718849,0.6395872822220215,0.0023865170410892907,***,13,
+SIPP,iii-detail,persistent exits: wife 55-59,quit to take another job,share of exits (%),1.9964972576219133,0.6482105824112552,0.002069913057758529,***,10,
+SIPP,iii-detail,persistent exits: wife 55-59,other involuntary (2014),share of exits (%),2.73847413852022,0.7562855804248859,0.0002935204424671413,***,10,
+SIPP,iv,persistent exits: all,return within 3 months,KM probability (%),18.40873270439576,0.6011234867387105,5.888038137464378e-206,***,7781,at risk at month 3: 6476
+SIPP,iv,persistent exits: all,return within 6 months,KM probability (%),37.007286153694416,0.6732490153998582,0.0,***,7781,at risk at month 6: 4086
+SIPP,iv,persistent exits: all,return within 12 months,KM probability (%),52.98430086806628,0.777378906970113,0.0,***,7781,at risk at month 12: 2171
+SIPP,iv,persistent exits: all,return within 24 months,KM probability (%),66.20375160630564,0.7962249931714268,0.0,***,7781,at risk at month 24: 835
+SIPP,iv,persistent exits: child aged 0 in t+1..t+9,return within 3 months,KM probability (%),13.232984265387937,1.5233210855261297,3.7236406333722035e-18,***,913,at risk at month 3: 804
+SIPP,iv,persistent exits: child aged 0 in t+1..t+9,return within 6 months,KM probability (%),26.006438974231937,2.1453183743409774,8.035617328990402e-34,***,913,at risk at month 6: 608
+SIPP,iv,persistent exits: child aged 0 in t+1..t+9,return within 12 months,KM probability (%),39.576269370458625,2.2114421272429037,1.263925987651653e-71,***,913,at risk at month 12: 365
+SIPP,iv,persistent exits: child aged 0 in t+1..t+9,return within 24 months,KM probability (%),59.04878429077001,2.637238701720214,4.883756618079438e-111,***,913,at risk at month 24: 151
+SIPP,iv,persistent exits: no child aged 0 in t+1..t+9,return within 3 months,KM probability (%),19.161409501025204,0.659925653579713,2.3315462714717864e-185,***,6868,at risk at month 3: 5672
+SIPP,iv,persistent exits: no child aged 0 in t+1..t+9,return within 6 months,KM probability (%),38.670855078140406,0.8546221972515219,0.0,***,6868,at risk at month 6: 3478
+SIPP,iv,persistent exits: no child aged 0 in t+1..t+9,return within 12 months,KM probability (%),55.073989936632685,0.8588812930979243,0.0,***,6868,at risk at month 12: 1806
+SIPP,iv,persistent exits: no child aged 0 in t+1..t+9,return within 24 months,KM probability (%),67.25487139831374,0.9463798423161468,0.0,***,6868,at risk at month 24: 684
+SIPP,iv,persistent exits: race: Black,return within 3 months,KM probability (%),16.9987729092557,1.7992743565867368,3.4678316168362576e-21,***,632,at risk at month 3: 522
+SIPP,iv,persistent exits: race: Black,return within 6 months,KM probability (%),39.21508281808488,2.517911381666595,1.085844015127165e-54,***,632,at risk at month 6: 309
+SIPP,iv,persistent exits: race: Black,return within 12 months,KM probability (%),58.43149284984379,2.9598835970635986,9.558620950242644e-87,***,632,at risk at month 12: 149
+SIPP,iv,persistent exits: race: Black,return within 24 months,KM probability (%),72.96836190883123,2.904554848207412,2.8565161659434677e-139,***,632,at risk at month 24: 49
+SIPP,iv,persistent exits: race: White,return within 3 months,KM probability (%),18.89613843648027,0.6284186625271988,1.2197573277070009e-198,***,6519,at risk at month 3: 5420
+SIPP,iv,persistent exits: race: White,return within 6 months,KM probability (%),37.02581086144087,0.8820796133237564,0.0,***,6519,at risk at month 6: 3451
+SIPP,iv,persistent exits: race: White,return within 12 months,KM probability (%),52.6721429966813,0.931200847844957,0.0,***,6519,at risk at month 12: 1844
+SIPP,iv,persistent exits: race: White,return within 24 months,KM probability (%),66.06272927347612,1.012928947349313,0.0,***,6519,at risk at month 24: 712
+SIPP,iv,persistent exits: tenure 0-11 months,return within 3 months,KM probability (%),23.047945246092617,0.9739084997590199,8.191698307043297e-124,***,2412,at risk at month 3: 1936
+SIPP,iv,persistent exits: tenure 0-11 months,return within 6 months,KM probability (%),41.20396854793147,1.3626032427383594,7.245520966021297e-201,***,2412,at risk at month 6: 1200
+SIPP,iv,persistent exits: tenure 0-11 months,return within 12 months,KM probability (%),56.92615552730915,1.40772265306857,0.0,***,2412,at risk at month 12: 595
+SIPP,iv,persistent exits: tenure 0-11 months,return within 24 months,KM probability (%),69.2748266096984,1.4533777362068463,0.0,***,2412,at risk at month 24: 225
+SIPP,iv,persistent exits: tenure 12+ months,return within 3 months,KM probability (%),17.26068588318016,0.7068186865280972,1.0424535162465518e-131,***,4359,at risk at month 3: 3658
+SIPP,iv,persistent exits: tenure 12+ months,return within 6 months,KM probability (%),36.751646198398255,0.9299345095572132,0.0,***,4359,at risk at month 6: 2288
+SIPP,iv,persistent exits: tenure 12+ months,return within 12 months,KM probability (%),52.68309443429908,1.0347182906217116,0.0,***,4359,at risk at month 12: 1255
+SIPP,iv,persistent exits: tenure 12+ months,return within 24 months,KM probability (%),66.14030241858848,1.132095943953961,0.0,***,4359,at risk at month 24: 474
+SIPP,iv,persistent exits: previous exit in panel,return within 3 months,KM probability (%),19.541312583839066,1.5255240864310384,1.4492934879806402e-37,***,1074,at risk at month 3: 866
+SIPP,iv,persistent exits: previous exit in panel,return within 6 months,KM probability (%),39.15687398333447,1.930052854987897,1.642040316973086e-91,***,1074,at risk at month 6: 529
+SIPP,iv,persistent exits: previous exit in panel,return within 12 months,KM probability (%),57.49713812836066,2.0861021804749504,3.178411807495856e-167,***,1074,at risk at month 12: 215
+SIPP,iv,persistent exits: previous exit in panel,return within 24 months,KM probability (%),73.14316072424177,2.6519656465880606,1.894642645784669e-167,***,1074,at risk at month 24: 45
+SIPP,iv,persistent exits: reason: unsatisfactory arrangements / other quit,return within 3 months,KM probability (%),23.366761208489283,1.2578497823659638,4.9562468444525675e-77,***,1327,at risk at month 3: 1022
+SIPP,iv,persistent exits: reason: unsatisfactory arrangements / other quit,return within 6 months,KM probability (%),38.172386077302264,1.7425436761260362,2.2708429234040366e-106,***,1327,at risk at month 6: 658
+SIPP,iv,persistent exits: reason: unsatisfactory arrangements / other quit,return within 12 months,KM probability (%),52.79979260542809,1.7923198260331084,9.679965755518536e-191,***,1327,at risk at month 12: 356
+SIPP,iv,persistent exits: reason: unsatisfactory arrangements / other quit,return within 24 months,KM probability (%),64.12365575297535,2.008123806140882,9.568236803608338e-224,***,1327,at risk at month 24: 142
+SIPP,iv,persistent exits: reason: no job end recorded,return within 3 months,KM probability (%),11.577586544003537,0.7711477144523612,5.994814505891978e-51,***,2807,at risk at month 3: 2553
+SIPP,iv,persistent exits: reason: no job end recorded,return within 6 months,KM probability (%),36.6158270484083,1.1748262512717538,2.9833401446169756e-213,***,2807,at risk at month 6: 1483
+SIPP,iv,persistent exits: reason: no job end recorded,return within 12 months,KM probability (%),53.544326099745064,1.1237356554963465,0.0,***,2807,at risk at month 12: 773
+SIPP,iv,persistent exits: reason: no job end recorded,return within 24 months,KM probability (%),64.76611624255736,1.3419885759718875,0.0,***,2807,at risk at month 24: 292
+SIPP,iv,persistent exits: reason: childcare / family,return within 3 months,KM probability (%),13.704164986845147,1.3651868923296815,1.0343423673889921e-23,***,865,at risk at month 3: 717
+SIPP,iv,persistent exits: reason: childcare / family,return within 6 months,KM probability (%),25.976884197068127,1.9670257264608562,8.082949831277441e-40,***,865,at risk at month 6: 520
+SIPP,iv,persistent exits: reason: childcare / family,return within 12 months,KM probability (%),38.884132668057234,2.2702718369644215,9.251068190927143e-66,***,865,at risk at month 12: 322
+SIPP,iv,persistent exits: reason: childcare / family,return within 24 months,KM probability (%),58.83884221768854,2.9488614890845937,1.4095907471969076e-88,***,865,at risk at month 24: 141
+SIPP,iv,persistent exits: reason: involuntary,return within 3 months,KM probability (%),24.07222838818074,1.173748702367198,1.7951215593469816e-93,***,1970,at risk at month 3: 1562
+SIPP,iv,persistent exits: reason: involuntary,return within 6 months,KM probability (%),42.78211655953691,1.5272092606436778,1.1200907648147107e-172,***,1970,at risk at month 6: 1004
+SIPP,iv,persistent exits: reason: involuntary,return within 12 months,KM probability (%),60.1380771524874,1.526258025021367,0.0,***,1970,at risk at month 12: 501
+SIPP,iv,persistent exits: reason: involuntary,return within 24 months,KM probability (%),73.98617911035397,1.4845469563800098,0.0,***,1970,at risk at month 24: 188
+SIPP,iv,persistent exits: reason: quit to another job,return within 3 months,KM probability (%),44.55811682927783,4.5306854429875,7.977278729444513e-23,***,268,at risk at month 3: 163
+SIPP,iv,persistent exits: reason: quit to another job,return within 6 months,KM probability (%),58.85353427937163,4.784680976533639,9.011635532274308e-35,***,268,at risk at month 6: 77
+SIPP,iv,persistent exits: reason: quit to another job,return within 12 months,KM probability (%),70.4646630057128,5.040351132410255,2.0616927093209082e-44,***,268,at risk at month 12: 25
+SIPP,iv,persistent exits: reason: quit to another job,return within 24 months,KM probability (%),88.15804749653725,5.946417576318725,1.0037304917857004e-49,***,268,at risk at month 24: 5
+SIPP,iv,persistent exits: reason: own illness / injury,return within 3 months,KM probability (%),13.253860942315088,2.2668321508420934,5.009245336867471e-09,***,298,at risk at month 3: 258
+SIPP,iv,persistent exits: reason: own illness / injury,return within 6 months,KM probability (%),20.048172989363643,2.6262528708397186,2.2801168850720095e-14,***,298,at risk at month 6: 190
+SIPP,iv,persistent exits: reason: own illness / injury,return within 12 months,KM probability (%),36.753684193067315,3.702844191371447,3.2151984419996154e-23,***,298,at risk at month 12: 114
+SIPP,iv,persistent exits: reason: own illness / injury,return within 24 months,KM probability (%),47.112080420831305,4.55418745858395,4.419168868031007e-25,***,298,at risk at month 24: 41
+SIPP,iv,persistent exits: reason: school,return within 3 months,KM probability (%),13.021073466165145,3.4166938532379105,0.00013839705001818185,***,127,at risk at month 3: 106
+SIPP,iv,persistent exits: reason: school,return within 6 months,KM probability (%),23.64046224643861,4.321291273139213,4.4827670206356744e-08,***,127,at risk at month 6: 84
+SIPP,iv,persistent exits: reason: school,return within 12 months,KM probability (%),49.1215803003767,6.01625741775781,3.2194970765375026e-16,***,127,at risk at month 12: 39
+SIPP,iv,persistent exits: reason: school,return within 24 months,KM probability (%),65.77341163675199,8.026920466875557,2.524691819317405e-16,***,127,at risk at month 24: 11
+SIPP,iv,persistent exits: reason: retirement,return within 3 months,KM probability (%),12.220996203602109,3.2866021144974993,0.00020046571736895386,***,119,at risk at month 3: 95
+SIPP,iv,persistent exits: reason: retirement,return within 6 months,KM probability (%),28.00636350517769,5.230811163975723,8.597626123585222e-08,***,119,at risk at month 6: 70
+SIPP,iv,persistent exits: reason: retirement,return within 12 months,KM probability (%),36.905940080508636,6.467498637929328,1.1541099036838852e-08,***,119,at risk at month 12: 41
+SIPP,iv,persistent exits: reason: retirement,return within 24 months,KM probability (%),48.54383642411519,7.275433433427696,2.5183409750168205e-11,***,119,at risk at month 24: 15
+SIPP,iv,persistent exits observed 12 months after (panel FE),reason: involuntary,returned within 12 months (pp),17.096774593983557,3.036135760813023,1.790671054743987e-08,***,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),reason: no job end recorded,returned within 12 months (pp),12.948798354940743,3.0094720949142326,1.6874373132500874e-05,***,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),reason: own illness / injury,returned within 12 months (pp),-8.308872584964554,5.175366410290909,0.10839138432056346,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),reason: quit to another job,returned within 12 months (pp),32.77829637407439,5.232524669057121,3.744156659013101e-10,***,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),reason: retirement,returned within 12 months (pp),-4.231570960383949,8.107983127273505,0.6017387073990883,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),reason: school,returned within 12 months (pp),3.951925274860872,6.997667533653182,0.5722445458416728,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),reason: unsatisfactory arrangements / other quit,returned within 12 months (pp),11.142906773000103,3.2751186763468443,0.000668234458156999,***,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),child aged 0 in t+1..t+9: yes,returned within 12 months (pp),-12.535665105003401,2.80186588955501,7.675472739302916e-06,***,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),race (husband): Black,returned within 12 months (pp),6.9361286874211086,3.248631636555852,0.032753464074040076,**,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),race (husband): Other,returned within 12 months (pp),-0.9079372582732905,3.190712992910136,0.7759841492549571,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),wife's age: 25-29,returned within 12 months (pp),-2.6687919365935597,3.0714841407067976,0.38490550423432845,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),wife's age: 30-34,returned within 12 months (pp),1.4350685794546267,2.8130564010447534,0.6099494023372509,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),wife's age: 40-44,returned within 12 months (pp),0.9670086129672566,2.9351392213910277,0.7418086295265546,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),wife's age: 45-49,returned within 12 months (pp),-2.9255953560920296,3.0691529765100194,0.3404757504711349,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),wife's age: 50-54,returned within 12 months (pp),0.3672290684103338,3.2575728030103566,0.9102439138079986,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),wife's age: 55-59,returned within 12 months (pp),-6.5241161576999485,3.8955022360388822,0.09397705553637811,*,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),job tenure (months): 0-5,returned within 12 months (pp),3.5188419287462276,2.3610456862004083,0.13612583309597456,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),job tenure (months): 12-35,returned within 12 months (pp),-1.9980477798639678,2.337539408991172,0.3926810431570833,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),job tenure (months): 6-11,returned within 12 months (pp),0.592828498563281,2.9131026040288885,0.8387409944668398,,4593,clusters=4067; mean=54.553
+SIPP,iv,persistent exits observed 12 months after (panel FE),job tenure (months): unknown,returned within 12 months (pp),-7.7571425681846575,2.9146102841941812,0.007780069100378703,***,4593,clusters=4067; mean=54.553
+PSID,vii,"wives 25-59, husband working both years (annual years 1968-1996)",all,"annual exit: hours > 0 in t, 0 in t+1 (%)",8.28556647697879,,,,48325,
+PSID,i,"wives 25-59, husband working (annual exit)",all,annual exit (%),8.28556647697879,,,,48325,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t+1: no,annual exit (%),7.711173468260457,0.12539560682467762,0.0,***,45259,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t+1: no,share of wife-months (%),93.6554578375582,,,,45259,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t+1: no,share of exits (%),87.16283716283718,,,,45259,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t+1: yes,annual exit (%),16.764514024787996,0.6746269225785491,2.5825296577015945e-136,***,3066,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t+1: yes,share of wife-months (%),6.3445421624418,,,,3066,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t+1: yes,share of exits (%),12.837162837162834,,,,3066,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t: no,annual exit (%),7.645064717795193,0.12466910127218994,0.0,***,45428,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t: no,share of wife-months (%),94.00517330574237,,,,45428,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t: no,share of exits (%),86.73826173826174,,,,45428,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t: yes,annual exit (%),18.32930617880566,0.7188394245993731,2.0497465056203185e-143,***,2897,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t: yes,share of wife-months (%),5.994826694257631,,,,2897,
+PSID,i,"wives 25-59, husband working (annual exit)",birth in t: yes,share of exits (%),13.261738261738259,,,,2897,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 1-2,annual exit (%),15.080659778865325,0.48179466295157497,4.5208844654873214e-215,***,5517,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 1-2,share of wife-months (%),11.416451112260734,,,,5517,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 1-2,share of exits (%),20.779220779220775,,,,5517,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 3-5,annual exit (%),9.767509869864014,0.35898565851062225,5.133460469766168e-163,***,6839,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 3-5,share of wife-months (%),14.152095188825658,,,,6839,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 3-5,share of exits (%),16.68331668331668,,,,6839,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 6-12,annual exit (%),7.864629170333627,0.24077682588262225,5.143485423673165e-234,***,12499,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 6-12,share of wife-months (%),25.86445938954992,,,,12499,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 6-12,share of exits (%),24.550449550449553,,,,12499,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 13-17,annual exit (%),6.123381568926123,0.29590820993317596,3.962311661623358e-95,***,6565,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 13-17,share of wife-months (%),13.585100879461976,,,,6565,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 13-17,share of exits (%),10.03996003996004,,,,6565,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): none <18,annual exit (%),5.840696872845773,0.18564716816773713,2.9430659117173254e-217,***,15957,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): none <18,share of wife-months (%),33.020175892395244,,,,15957,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): none <18,share of exits (%),23.276723276723278,,,,15957,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 0,annual exit (%),19.72573839662447,1.292410940206474,1.3542951055933196e-52,***,948,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 0,share of wife-months (%),1.9617175375064668,,,,948,
+PSID,i,"wives 25-59, husband working (annual exit)",youngest child (interview of t+1): 0,share of exits (%),4.670329670329671,,,,948,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 1750+,annual exit (%),2.026997886746884,0.09254598347008876,2.4535884799280474e-106,***,23187,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 1750+,share of wife-months (%),47.98137609932747,,,,23187,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 1750+,share of exits (%),11.73826173826174,,,,23187,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 1000-1749,annual exit (%),6.468355410953598,0.21648605295012968,3.704792525708049e-196,***,12909,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 1000-1749,share of wife-months (%),26.7128815312985,,,,12909,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 1000-1749,share of exits (%),20.85414585414585,,,,12909,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 1-499,annual exit (%),28.148029477731495,0.5692217130310608,0.0,***,6242,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 1-499,share of wife-months (%),12.916709777547853,,,,6242,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 1-499,share of exits (%),43.88111888111888,,,,6242,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 500-999,annual exit (%),15.734090529480541,0.4705894097231029,4.272370849151774e-245,***,5987,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 500-999,share of wife-months (%),12.389032591826176,,,,5987,
+PSID,i,"wives 25-59, husband working (annual exit)",her hours in t: 500-999,share of exits (%),23.526473526473524,,,,5987,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: within +-25%,annual exit (%),7.889151658480384,0.14843354162830116,0.0,***,32982,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: within +-25%,share of wife-months (%),68.25038799793067,,,,32982,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: within +-25%,share of exits (%),64.98501498501498,,,,32982,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: zero / missing,annual exit (%),7.926023778071334,0.9818568966457689,6.88823793845662e-16,***,757,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: zero / missing,share of wife-months (%),1.5664769787894464,,,,757,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: zero / missing,share of exits (%),1.4985014985014982,,,,757,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: rise > 25%,annual exit (%),9.891947517365578,0.33861051108298296,1.312462834037821e-187,***,7774,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: rise > 25%,share of wife-months (%),16.086911536471806,,,,7774,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: rise > 25%,share of exits (%),19.205794205794206,,,,7774,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: fall > 25%,annual exit (%),8.411626541397533,0.3362968851913477,4.4698435348317635e-138,***,6812,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: fall > 25%,share of wife-months (%),14.096223486808071,,,,6812,
+PSID,i,"wives 25-59, husband working (annual exit)",his labor income t -> t+1: fall > 25%,share of exits (%),14.31068931068931,,,,6812,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 25-29,annual exit (%),11.155977087050427,0.3050798337206553,9.433554043032537e-293,***,10649,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 25-29,share of wife-months (%),22.036213140196587,,,,10649,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 25-29,share of exits (%),29.670329670329668,,,,10649,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 50-54,annual exit (%),8.11990686845169,0.46597182713382257,5.2617393574966465e-68,***,3436,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 50-54,share of wife-months (%),7.110191412312468,,,,3436,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 50-54,share of exits (%),6.968031968031969,,,,3436,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 30-34,annual exit (%),8.950676061702532,0.27856739026103927,1.6224315454765175e-226,***,10502,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 30-34,share of wife-months (%),21.732022762545267,,,,10502,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 30-34,share of exits (%),23.476523476523475,,,,10502,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 35-39,annual exit (%),6.544561090015636,0.26135692313579384,2.2044034412932226e-138,***,8954,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 35-39,share of wife-months (%),18.52871184687015,,,,8954,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 35-39,share of exits (%),14.635364635364633,,,,8954,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 40-44,annual exit (%),6.281927378158221,0.28510109632882585,1.3591221537253563e-107,***,7243,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 40-44,share of wife-months (%),14.98810139679255,,,,7243,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 40-44,share of exits (%),11.363636363636362,,,,7243,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 45-49,annual exit (%),6.709385601206182,0.343460446352446,5.570757896809192e-85,***,5306,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 45-49,share of wife-months (%),10.97982410760476,,,,5306,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 45-49,share of exits (%),8.89110889110889,,,,5306,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 55-59,annual exit (%),8.94854586129754,0.6037830451345501,1.0750155245808127e-49,***,2235,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 55-59,share of wife-months (%),4.624935333678221,,,,2235,
+PSID,i,"wives 25-59, husband working (annual exit)",wife's age: 55-59,share of exits (%),4.9950049950049955,,,,2235,
+PSID,i,"wives 25-59, husband working (annual exit)",race (head): White,annual exit (%),8.347506064070037,0.14605048001920606,0.0,***,35867,
+PSID,i,"wives 25-59, husband working (annual exit)",race (head): White,share of wife-months (%),74.22038282462493,,,,35867,
+PSID,i,"wives 25-59, husband working (annual exit)",race (head): White,share of exits (%),74.77522477522477,,,,35867,
+PSID,i,"wives 25-59, husband working (annual exit)",race (head): Black,annual exit (%),8.107240327500401,0.24454174530504333,5.163154294716366e-241,***,12458,
+PSID,i,"wives 25-59, husband working (annual exit)",race (head): Black,share of wife-months (%),25.779617175375062,,,,12458,
+PSID,i,"wives 25-59, husband working (annual exit)",race (head): Black,share of exits (%),25.22477522477522,,,,12458,
+PSID,i,"wives 25-59, husband working (annual exit)",decade: 1968-79,annual exit (%),11.794660060556014,0.2675638636797365,0.0,***,14532,
+PSID,i,"wives 25-59, husband working (annual exit)",decade: 1968-79,share of wife-months (%),30.071391619244697,,,,14532,
+PSID,i,"wives 25-59, husband working (annual exit)",decade: 1968-79,share of exits (%),42.807192807192806,,,,14532,
+PSID,i,"wives 25-59, husband working (annual exit)",decade: 1980-89,annual exit (%),7.266816704176043,0.18358152906741274,0.0,***,19995,
+PSID,i,"wives 25-59, husband working (annual exit)",decade: 1980-89,share of wife-months (%),41.37609932747026,,,,19995,
+PSID,i,"wives 25-59, husband working (annual exit)",decade: 1980-89,share of exits (%),36.28871128871128,,,,19995,
+PSID,i,"wives 25-59, husband working (annual exit)",decade: 1990-95,annual exit (%),6.066096535729816,0.20321594137333227,8.649717325126879e-196,***,13798,
+PSID,i,"wives 25-59, husband working (annual exit)",decade: 1990-95,share of wife-months (%),28.552509053285046,,,,13798,
+PSID,i,"wives 25-59, husband working (annual exit)",decade: 1990-95,share of exits (%),20.9040959040959,,,,13798,
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",birth in t+1: yes,annual exit (pp),6.769202134191625,0.7628799828722338,7.106058041608509e-19,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",birth in t: yes,annual exit (pp),5.643567999444522,0.8774574859959638,1.2616124636420167e-10,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",youngest child (interview of t+1): 0,annual exit (pp),4.480743324007627,1.4607964448367414,0.00215980983228258,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",youngest child (interview of t+1): 1-2,annual exit (pp),0.8091134264665043,0.6407735191786492,0.20669213068665682,,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",youngest child (interview of t+1): 13-17,annual exit (pp),0.24764474092152827,0.36617529611163663,0.49884951987900183,,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",youngest child (interview of t+1): 3-5,annual exit (pp),0.6870719746914989,0.42706261043883714,0.10765309139297131,,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",youngest child (interview of t+1): 6-12,annual exit (pp),0.31034975210455124,0.3426443069805036,0.36506869942036135,,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",her hours in t: 1-499,annual exit (pp),24.99269389887166,0.66262025982903,0.0,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",her hours in t: 1000-1749,annual exit (pp),3.926473309490633,0.2570036226026078,1.0735942453538814e-52,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",her hours in t: 500-999,annual exit (pp),12.988959391666011,0.5240841605917812,1.3301906116417994e-135,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",his labor income t -> t+1: fall > 25%,annual exit (pp),0.5934519102883035,0.35573747205879985,0.09527008476966077,*,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",his labor income t -> t+1: rise > 25%,annual exit (pp),1.9579846337705062,0.35649177515461505,3.9657606677118704e-08,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",his labor income t -> t+1: zero / missing,annual exit (pp),1.9923759367386995,1.0482120025265051,0.05733639464128496,*,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",wife's age: 25-29,annual exit (pp),2.388825295117099,0.43148513443751807,3.0895215873372825e-08,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",wife's age: 30-34,annual exit (pp),1.0895936376407387,0.3821484785926362,0.004355030057959034,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",wife's age: 40-44,annual exit (pp),0.45405287395520344,0.37982315470039796,0.23191816547903565,,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",wife's age: 45-49,annual exit (pp),0.9383848644176008,0.44693726795745853,0.03576495354377376,**,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",wife's age: 50-54,annual exit (pp),2.174679505131357,0.559843913366087,0.00010256645849751676,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",wife's age: 55-59,annual exit (pp),2.90361545708154,0.7279592259594359,6.643464886108852e-05,***,48325,clusters=2646; mean=8.286
+PSID,ii,"wives 25-59, husband working (calendar-year FE)",race (head): Black,annual exit (pp),1.192247826982268,0.33217763167370057,0.00033171011316108324,***,48325,clusters=2646; mean=8.286
+PSID,ii,husband's labor income > 0 in t and t+1 (calendar-year FE),d log his labor income (x0.1),annual exit (pp),0.0675844657449043,0.030550252558584193,0.02695014283360291,**,47568,clusters=2642; mean=8.291
+PSID,v-status,all exits,working,status at the interview after the zero-hours year (%),11.485003657644477,0.6097821983804704,3.9308735090210417e-79,***,2734,
+PSID,v-status,all exits,temporarily laid off,status at the interview after the zero-hours year (%),0.43891733723482074,0.1264261515572239,0.0005171180646981233,***,2734,
+PSID,v-status,all exits,looking for work / unemployed,status at the interview after the zero-hours year (%),4.6452084857351865,0.4025080872649263,8.229255365397295e-31,***,2734,
+PSID,v-status,all exits,retired,status at the interview after the zero-hours year (%),1.4996342355523042,0.2324407883437797,1.1061491881162791e-10,***,2734,
+PSID,v-status,all exits,disabled,status at the interview after the zero-hours year (%),2.1580102414045355,0.2779010154245116,8.139328076079464e-15,***,2734,
+PSID,v-status,all exits,keeping house,status at the interview after the zero-hours year (%),75.60351133869788,0.8213634816311639,0.0,***,2734,
+PSID,v-status,all exits,student,status at the interview after the zero-hours year (%),3.9868324798829553,0.3741796267984975,1.6548900560416683e-26,***,2734,
+PSID,v-status,all exits,other,status at the interview after the zero-hours year (%),0.18288222384784197,0.08171259533213016,0.025213525968902323,**,2734,
+PSID,v-status,exits with a birth in t+1,working,status at the interview after the zero-hours year (%),6.111111111111111,1.262455095019627,1.294110759905e-06,***,360,
+PSID,v-status,exits with a birth in t+1,temporarily laid off,status at the interview after the zero-hours year (%),0.2777777777777778,0.2773917070175045,0.3166374321343728,,360,
+PSID,v-status,exits with a birth in t+1,looking for work / unemployed,status at the interview after the zero-hours year (%),2.5,0.8228507357554791,0.0023798164638097,***,360,
+PSID,v-status,exits with a birth in t+1,retired,status at the interview after the zero-hours year (%),0.2777777777777778,0.2773917070175045,0.3166374321343728,,360,
+PSID,v-status,exits with a birth in t+1,disabled,status at the interview after the zero-hours year (%),0.0,0.0,,,360,
+PSID,v-status,exits with a birth in t+1,keeping house,status at the interview after the zero-hours year (%),87.77777777777777,1.7262994350253955,0.0,***,360,
+PSID,v-status,exits with a birth in t+1,student,status at the interview after the zero-hours year (%),3.0555555555555554,0.9071002881625804,0.0007558195307259706,***,360,
+PSID,v-status,exits with a birth in t+1,other,status at the interview after the zero-hours year (%),0.0,0.0,,,360,
+PSID,v-status,exits without a birth in t or t+1,working,status at the interview after the zero-hours year (%),12.284163788850517,0.7290963579716816,1.0765001384254729e-63,***,2027,
+PSID,v-status,exits without a birth in t or t+1,temporarily laid off,status at the interview after the zero-hours year (%),0.39467192895905284,0.13926196856182368,0.004596570643218819,***,2027,
+PSID,v-status,exits without a birth in t or t+1,looking for work / unemployed,status at the interview after the zero-hours year (%),5.032067094227923,0.48555097413806486,3.629494005479383e-25,***,2027,
+PSID,v-status,exits without a birth in t or t+1,retired,status at the interview after the zero-hours year (%),1.973359644795264,0.3089216218107922,1.6818204006682846e-10,***,2027,
+PSID,v-status,exits without a birth in t or t+1,disabled,status at the interview after the zero-hours year (%),2.8613714849531324,0.3703021484740328,1.100014627040898e-14,***,2027,
+PSID,v-status,exits without a birth in t or t+1,keeping house,status at the interview after the zero-hours year (%),72.61963492846571,0.9904208480201047,0.0,***,2027,
+PSID,v-status,exits without a birth in t or t+1,student,status at the interview after the zero-hours year (%),4.588061174148988,0.4647175631035633,5.46210841209769e-23,***,2027,
+PSID,v-status,exits without a birth in t or t+1,other,status at the interview after the zero-hours year (%),0.246669955599408,0.11017801779753739,0.02516691804815931,**,2027,
+PSID,v-status,"exits, wife 55-59",working,status at the interview after the zero-hours year (%),3.597122302158273,1.5794838911163331,0.022762135237410983,**,139,
+PSID,v-status,"exits, wife 55-59",temporarily laid off,status at the interview after the zero-hours year (%),0.0,0.0,,,139,
+PSID,v-status,"exits, wife 55-59",looking for work / unemployed,status at the interview after the zero-hours year (%),3.597122302158273,1.5794838911163331,0.022762135237410983,**,139,
+PSID,v-status,"exits, wife 55-59",retired,status at the interview after the zero-hours year (%),15.107913669064748,3.037585077678243,6.570069207032501e-07,***,139,
+PSID,v-status,"exits, wife 55-59",disabled,status at the interview after the zero-hours year (%),4.316546762589928,1.7237697110070636,0.012275225430277639,**,139,
+PSID,v-status,"exits, wife 55-59",keeping house,status at the interview after the zero-hours year (%),71.22302158273382,3.839948436122262,8.478365675356555e-77,***,139,
+PSID,v-status,"exits, wife 55-59",student,status at the interview after the zero-hours year (%),1.4388489208633095,1.010073741411097,0.15430210691253599,,139,
+PSID,v-status,"exits, wife 55-59",other,status at the interview after the zero-hours year (%),0.7194244604316548,0.7168319314216839,0.3155634268331844,,139,
+PSID,v-return,all exits,return within 1 year (hours > 0 in t+2),share (%),38.48052660449808,0.8057836961447292,0.0,***,3646,
+PSID,v-return,exits with a birth in t+1,return within 1 year (hours > 0 in t+2),share (%),33.19587628865979,2.1383206756579654,2.3767843270304768e-54,***,485,
+PSID,v-return,exits without a birth in t or t+1,return within 1 year (hours > 0 in t+2),share (%),40.05158437730287,0.940575762966445,0.0,***,2714,
+PSID,v-return,all exits,return within 2 years (t+2..t+3),share (%),53.97063230446509,0.8628159289621533,0.0,***,3337,
+PSID,v-return,exits with a birth in t+1,return within 2 years (t+2..t+3),share (%),51.598173515981735,2.3878716767820913,1.4962993071336412e-103,***,438,
+PSID,v-return,exits without a birth in t or t+1,return within 2 years (t+2..t+3),share (%),55.22508038585209,0.9969202041654212,0.0,***,2488,
+PSID,v-return,all exits,return within 4 years (t+2..t+5),share (%),68.88250089831118,0.8776072310364137,0.0,***,2783,
+PSID,v-return,exits with a birth in t+1,return within 4 years (t+2..t+5),share (%),68.01075268817203,2.4183509819829307,5.159276348036627e-174,***,372,
+PSID,v-return,exits without a birth in t or t+1,return within 4 years (t+2..t+5),share (%),68.89322281813749,1.0221930639285048,0.0,***,2051,
+PSID,v-repeat,couples with at least one exit,all,share with 2+ exits (%),32.36269812016218,,,,2713,
+PSID,v-repeat,all exits,all,share of exits by wives with 2+ exits (%),54.17082917082917,,,,4004,
+PSID,v-repeat,couples,all,mean eligible wife-years per couple,7.145497560254325,,,,6763,
+PSID,vi,"persistence, no hours controls (wife-years after the first)",previous exit of the same wife,annual exit (pp),8.131948116361224,0.4138127079346222,5.637659989551814e-86,***,41562,clusters=2468; mean=7.305
+PSID,vi,"persistence, with her hours in t (wife-years after the first)",previous exit of the same wife,annual exit (pp),3.8387867796512474,0.38189732427550593,9.012958592559976e-24,***,41562,clusters=2468; mean=7.305

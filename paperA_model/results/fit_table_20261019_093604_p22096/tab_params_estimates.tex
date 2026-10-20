@@ -1,0 +1,49 @@
+\begin{table}[htbp]\centering\footnotesize
+\caption{Parameter estimates}\label{tab:params_estimates}
+\begin{tabular}{llrrrcrr}
+\toprule
+Parameter & & Start & Estimate & (s.e.) & Bounds & Indep.\ shocks & (s.e.) \\
+\midrule
+\multicolumn{8}{l}{\textit{Displacement risk}} \\
+delta\_w\_B & $\delta_w(B)$ & 0.00259 & 0.00259 &  & [1e-05, 0.03] & 0.00206 &  \\
+delta\_w\_W & $\delta_w(W)$ & 0.00167 & 0.00167 &  & [1e-05, 0.03] & 9.59e-04 &  \\
+delta\_h\_B & $\delta_h(B)$ & 0.00483 & 0.00483 &  & [1e-05, 0.03] & 0.00298 &  \\
+delta\_h\_W & $\delta_h(W)$ & 0.00259 & 0.00259 &  & [1e-05, 0.03] & 0.00197 &  \\
+pi\_c0 & $\pi_c(0)$ & 3.43e-05 & 3.43e-05 &  & [0, 0.002] & 4.33e-05 &  \\
+pi\_c1 & $\pi_c(1)$ & 2.81e-04 & 2.81e-04 &  & [0, 0.02] & 3.87e-04 &  \\
+pi\_c2 & $\pi_c(2)$ & 9.60e-04 & 9.60e-04 &  & [0, 0.05] & 9.75e-04 & fixed \\
+p\_H & $p_H$ & 0.02 & 0.02 &  & [0.01, 0.5] & 0.1 & fixed \\
+m\_H & $m_H$ & 15.952 & 15.952 &  & [1, 30] & 10.690 &  \\
+\multicolumn{8}{l}{\textit{Search friction}} \\
+lam\_w\_B & $\lambda_w(B)$ & 0.157 & 0.157 &  & [0.01, 0.9] & 0.157 & fixed \\
+lam\_w\_W & $\lambda_w(W)$ & 0.125 & 0.125 &  & [0.01, 0.9] & 0.125 & fixed \\
+lam\_h\_B & $\lambda_h(B)$ & 0.261 & 0.261 &  & [0.01, 0.9] & 0.258 &  \\
+lam\_h\_W & $\lambda_h(W)$ & 0.261 & 0.261 &  & [0.01, 0.9] & 0.287 &  \\
+\multicolumn{8}{l}{\textit{Human capital}} \\
+pi\_up\_w & $\pi^{up}_w$ & 0.00695 & 0.00695 &  & [0.0005, 0.06] & 0.00868 &  \\
+pi\_up\_h & $\pi^{up}_h$ & 0.00557 & 0.00557 &  & [0.0005, 0.06] & 0.00591 &  \\
+pi\_dn\_w & $\pi^{dn}_w$ & 0.0186 & 0.0186 &  & [0, 0.2] & 0.0168 &  \\
+pi\_dn\_h & $\pi^{dn}_h$ & 0.029 & 0.029 &  & [0, 0.2] & 0.0514 &  \\
+d\_w & $d_w$ & 0.0955 & 0.0955 &  & [0, 2] & 0.295 &  \\
+d\_h & $d_h$ & 0.0696 & 0.0696 &  & [0, 2] & 0.0456 &  \\
+\multicolumn{8}{l}{\textit{Work, safety net, marriage, credit}} \\
+phi\_F & $\phi_F$ & 0.308 & 0.308 &  & [-0.5, 1] & 0.311 & fixed \\
+phi\_P & $\phi_P$ & 0.153 & 0.153 &  & [-0.5, 1] & 0.155 & fixed \\
+theta\_05 & $\theta_{05}$ & -0.00136 & -0.00136 &  & [-0.5, 1] & 2.33e-04 & fixed \\
+theta\_617 & $\theta_{617}$ & 0.0403 & 0.0403 &  & [-0.5, 1] & 0.0414 & fixed \\
+phi\_h & $\phi_h$ & 0.128 & 0.128 &  & [-0.5, 1] & 0.13 & fixed \\
+F & $F$ & 0.101 & 0.101 &  & [0, 0.6] & 0.101 & fixed \\
+kappa\_S & $\kappa_S$ & 0.104 & 0.104 &  & [0, 1] & 2.639 & fixed \\
+sigma0\_B & $\sigma_0(B)$ & 0.00268 & 0.00268 &  & [0, 0.02] & 0.00117 &  \\
+sigma0\_W & $\sigma_0(W)$ & 0.00127 & 0.00127 &  & [0, 0.02] & 0.00107 &  \\
+sigmaJ\_B & $\sigma_J(B)$ & 0.00806 & 0.00806 &  & [0, 0.1] & 0.0118 &  \\
+sigmaJ\_W & $\sigma_J(W)$ & 0.00533 & 0.00533 &  & [0, 0.1] & 0.0144 &  \\
+a\_bar & $\underline a$ & 25.639 & 25.639 &  & [0, 60] & 25.639 & fixed \\
+\multicolumn{8}{l}{\textit{Extensions}} \\
+eta\_up & $\eta^{up}$ & 0.5 & 0.5 &  & [0, 3] &  &  \\
+c\_mem & $c_{mem}$ & 0 & 0 &  & [0, 50] &  &  \\
+sigma\_eps & $\sigma_\varepsilon$ &  & 0.05 &  & [0.02, 0.5] &  &  \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.95\textwidth}\footnotesize Standard errors: sandwich $(G'WG)^{-1}G'W\Omega WG(G'WG)^{-1}$ with the bootstrap covariance of the targets plus the simulation covariance ('fixed': not free in the run). Units as in Table~\ref{tab:model_params}.\end{minipage}
+\end{table}

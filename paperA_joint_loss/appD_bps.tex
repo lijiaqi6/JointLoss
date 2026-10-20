@@ -1,0 +1,25 @@
+\section{Reconciliation with Blundell, Pistaferri and Saporta-Eksten (2016)}\label{app:bps}
+
+This appendix reports the replication of \citet{blundell2016consumption} and the exercises summarised in
+Section~\ref{sec:literature}. Their do-files are run on their constructed PSID panel for 1999--2009; copies of the
+do-files, with every edit marked and listed, are in \texttt{IGE/bps\_reconciliation/code/}, and every number is in
+\texttt{IGE/bps\_reconciliation/bps\_reconciliation.md} and \texttt{.csv}.\footnote{The 1999 early-release income file
+needed to rebuild their panel from the raw PSID is not public, so the replication starts from their constructed panel;
+their sample and preparation code reproduce their estimation file exactly (10,479 household-years). The 1997 immigrant
+refresher, which their footnote 15 says is excluded, is kept by their code; dropping it changes nothing material
+(family share 0.626). Bootstrap standard errors use 50 replications against their 200.}
+
+Table~\ref{tab:bps_relax} reproduces their estimates in column 1---the wage process of their Table 3, the preference
+parameters of their Table 4, the elasticities of their Table 5 and the insurance chain (7.09, 6.33, 5.79, 3.88 and 3.16\%,
+a split of 19.4\% government, 62.3\% family labor supply and 18.3\% savings, and 70.6\% government among
+food-stamp-eligible households)---and relaxes one restriction at a time in the other columns. Without both trims, or
+with all relaxations together, the estimator is degenerate. Table~\ref{tab:bps_attrition} shows where the displaced
+couples leave their sample. Table~\ref{tab:bps_event} reports the event study of single and joint displacements on their
+residuals. Two further results: their extensive-margin added-worker response ($\theta_1=-0.168^{*}$) consists of entries
+into work ($-0.159^{**}$) rather than exits ($-0.009$); and separations follow a wife's displacement 2.9 percentage points
+more often ($p=0.033$), while a husband's displacement raises them by 1.0 point ($p=0.26$), and ending a couple's record
+only when the spouse's identity changes alters nothing.
+
+\input{tab_bps_relax}
+\input{tab_bps_attrition}
+\input{tab_bps_event}

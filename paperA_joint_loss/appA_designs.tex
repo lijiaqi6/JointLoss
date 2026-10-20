@@ -1,0 +1,24 @@
+\section{Designs That Did Not Identify Their Target}\label{app:designs}
+
+This appendix reports three designs that were run and did not identify what they were meant to, so that the reader
+can see every test behind the argument.
+
+\paragraph{Gender-specific labor-demand shocks at a birth.} To separate the mother's re-employment friction from the
+husband's risk, I built shift-share (Bartik) shocks to employment in women's and men's industries by state from the CPS
+Outgoing Rotation Groups (1979--2019, 16 sectors). In a split-sample test, the women's shock does not predict women's
+state employment growth ($-0.25$, s.e.\ 0.18), while the men's shock predicts men's (0.24, s.e.\ 0.11). With only 16
+sectors, the variation left after state and year fixed effects is small, and the leave-one-out construction adds
+mechanical noise from small CPS cells. The women's shock is therefore not used. Code: \texttt{IGE/8a.StateShocks.py},
+\texttt{IGE/8.FirstStage.py}.
+
+\paragraph{The Family and Medical Leave Act.} I compared births to NLSY79 mothers eligible for job-protected leave
+(employer of 50 or more at the location, 12 months of tenure, 1,250 hours) before and after August 1993. The
+difference-in-differences estimate on returning to the pre-birth employer within 12 weeks is $-0.073$ (s.e.\ 0.034), and
+the estimates at 26 and 52 weeks are not significant. The design is weak: eligible mothers were already near the
+ceiling of returning (0.88--0.93), the 1994 redesign of the NLSY79 coincides with the post period and changes the
+measured frequency of breaks, and returning within 12 weeks mechanically misses mothers who took the full 12 weeks of
+leave. Code: \texttt{IGE/12.FMLA.py}.
+
+\paragraph{State-by-sector shocks to husbands.} Employment growth in the husband's sector within his state has no
+first stage on the husband's hours or earnings (F below 1), even with split-sample instruments, so only national sector
+shocks are used in Appendix~\ref{sec:birthshocks}. Code: \texttt{IGE/18.HusbandIndustryShocks.py}.

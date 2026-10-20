@@ -1,0 +1,60 @@
+\section{Further Evidence on the Household}\label{app:other}
+
+This appendix reports evidence that bears on the model's assumptions but not on the headline fact.
+
+\subsection{Intergenerational mobility by race in the PSID}\label{sec:measurement}
+
+Following \citet{lee2009trends} and \citet{palomino2018one}, each year a son or daughter is observed at 25--65, his or
+her log family income is regressed on the log of parental family income averaged over the child's ages 13--19, with
+quartics in the parent's age and in the child's age minus 40 and their interactions with parental income, so that the
+coefficient is the IGE at age 40. The IGE of family income is 0.27 for Black and 0.47 for White sons, and 0.29 and 0.45
+for daughters; on the PSID's main sample, the pooled estimate for sons in 1980--2010 is 0.48, close to the 0.47 of
+\citet{palomino2018one}. Following \citet{chetty2020race}, the rank--rank slopes are similar for the two races (0.37 for
+Black and 0.39 for White children), but at the 25th percentile of parental income Black children reach a household
+income rank of 28.7 and White children 41.6, a gap of 12.9 percentiles, against 12.6 in \citet{chetty2020race}. The
+reliability ratio of a single year of family income is about 0.57 for both races \citep{bolt2024intergenerational}.
+Code: \texttt{IGE/6.IGEMain.py}, \texttt{IGE/5.CheckPMR.py}, \texttt{IGE/7.RankMobility.py}, \texttt{IGE/4.Estimates.py}.
+
+\subsection{Husbands' industry shocks around a birth}\label{sec:birthshocks}
+
+If mothers insured their husbands' risk in anticipation, their work around a birth would respond to shocks to the
+husband's industry. I relate married mothers' work after a birth to national employment growth of men in the husband's
+sector (leaving out his state) relative to its trend, with state, year and sector fixed effects. The shock moves the
+husband's own hours: one percentage point more growth in his sector raises his hours in the birth year by 5.6 (s.e.\
+2.6; wild-bootstrap $p=0.040$ with 16 sector clusters). His wife's work does not respond: the effect on her employment in
+the year after the birth is $-0.0004$ (s.e.\ 0.0018), and the 95\% confidence interval excludes effects larger than about
+1.2 percentage points per standard deviation of the shock. The response does not differ by race, by whether the mother
+worked before the birth, or with household liquid assets, and it does not vary with state AFDC/TANF generosity. A shock
+to the wife's own sector raises her employment with the usual labor-demand sign (0.4 points, $p=0.043$). The model
+therefore has no anticipatory insurance margin at a birth.\footnote{Placebos: the husband's shock two years before the
+birth, and the husband's shock for childless wives, have no effect. Code: \texttt{IGE/18.HusbandIndustryShocks.py}.}
+
+\subsection{Mothers' work in infancy and children's outcomes}\label{sec:time}
+
+A search friction could keep mothers at work after a birth, at a cost to children if parental time is most productive
+in infancy \citep{delboca2014household}. In the NLSY79 Children file, which links 7,594 children of Black and White
+mothers to their mothers' weekly employment histories, the mother's work in the child's first year is unrelated to the
+child's reading and mathematics scores at 5--8 for children of White mothers; for children of Black mothers it is
+associated with higher scores (a quarter of the year at work goes with 0.60 points more in mathematics, s.e.\ 0.23, and
+0.49 points more in reading recognition, s.e.\ 0.23, at 5--6), controlling for the mother's AFQT score, education, age
+and marital status at the birth, family income in early childhood, and the child's sex and birth year. In the PSID,
+whether the mother worked in the year after the birth is unrelated to children's Woodcock--Johnson scores and to their
+adult earnings (0.04 log points, s.e.\ 0.06, for Black children). These are associations; other studies find that early
+maternal employment and postpartum job loss harm children \citep{herbst2017are, willage2022postpartum}. The model's
+child block therefore puts no weight on the mother's time.\footnote{Code: \texttt{IGE/10.CYAOutcomes.py},
+\texttt{IGE/9.ChildExposure.py}, \texttt{IGE/9b.ChildDescriptives.py}.}
+
+Slack labor markets do not hold mothers at work. In the PSID, among 8,458 births in 1977--2021 to mothers who worked in
+the year before, one percentage point more state unemployment in the birth year lowers the probability that the mother
+works in the year after the birth by 1.5 points (s.e.\ 0.6, clustered by state; state and year fixed effects); mothers
+who were not working before are also less likely to start (1.5 points, s.e.\ 0.7).\footnote{Employment a year after the
+birth combines fewer exits with slower re-entry, and a slack market lowers re-entry, so this test cannot rule out that
+a friction deters exits; it shows that such deterrence, if present, is dominated. Code: \texttt{IGE/8.FirstStage.py}.}
+
+\subsection{Earnings that move together}
+
+Spouses' earnings also move together outside job losses. For Black couples, a change in the husband's log earnings goes
+with a change of 0.093 in the wife's (s.e.\ 0.020), through her hourly wage rather than her hours; for White couples the
+comovement is zero. Shared local wage shocks in the labor markets where Black couples live fit this pattern.\footnote{Annual
+waves 1968--1996; year and age fixed effects; standard errors clustered by woman. Code:
+\texttt{ReducedForm/51.SpouseEarningsChanges.py}.}

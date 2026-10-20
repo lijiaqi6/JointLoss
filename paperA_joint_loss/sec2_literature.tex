@@ -1,0 +1,186 @@
+\section{Related Literature}\label{sec:literature}
+
+\paragraph{The joint labor-market risk of spouses.} That spouses' outcomes are linked is known. Their earnings covary,
+mostly through permanent components \citep{hyslop2001rising}, more so in booms \citep{shore2010better}; couples sort on
+employer and industry, and about a tenth of dual-earner couples work at the same establishment
+\citep{hyatt2019coworking}; displacement studies observe couples displaced by the same plant event and drop them
+\citep{halla2020job}; and correlated unemployment has been offered as one of two explanations for the small
+added-worker response in the United States \citep{kawano2025who}. What has not been measured is the joint job loss
+itself: how much a husband's job loss raises his wife's own job-loss hazard, when, and through which channel.
+Table~\ref{tab:contribution} sets out what is known and what this paper adds.
+
+\paragraph{Insurance within the household.} Wives' earnings fall by up to 73 cents for each dollar of unemployment
+insurance their husbands receive \citep{cullen2000does}. In the PSID, wives' labor supply rises after a husband's
+displacement, slowly, replacing more than a quarter of his lost income in the long run \citep{stephens2002worker};
+family labor supply is a main channel of insurance against permanent wage shocks \citep{blundell2016consumption}. In
+Austria, wives replace a very small share of the household's loss, public transfers and taxes do more, and young
+children shape the response \citep{halla2020job}. \citet{birinci2019spousal} attributes the small US response to
+crowding out by transfers and, in a model with a frictional labor market and family labor supply, finds that optimal
+policy shifts transfers from means-tested to employment-tested; \citet{mankart2017household} also model household
+search as insurance. \citet{bacher2025joint} show in CPS couples that a non-participating spouse is 5.6 percentage points more likely to
+enter the labor force when the primary earner loses his job, 7.1 points at ages 26--35 and 1.4 at 56--65, and explain
+the decline with age in a monthly life-cycle model of joint search with assets, human capital and unemployment
+insurance; separation shocks in their model are independent across spouses, and they note that correlated shocks,
+from sorting into the same industries or occupations, are left out. This literature treats the wife's job as given
+when the husband's is lost. This paper adds the
+second earner's own risk and its timing.
+
+\paragraph{Why another paper after \citet{blundell2016consumption}.} The closest paper is
+\citet{blundell2016consumption}, who estimate a life-cycle model of two earners with correlated permanent and
+transitory wage shocks, nonseparable preferences and a progressive tax and transfer schedule that includes the Earned
+Income Tax Credit and food stamps, on PSID consumption, earnings and assets for 1999--2009. A 10\% permanent fall in the
+husband's wage lowers consumption by 3.2\%; of the 39 percentage points of consumption that are insured, 63\% are insured
+by family labor supply, 20\% by taxes and transfers and 17\% by savings, and a parameter for insurance outside these
+channels is not different from zero ($-0.137$, s.e.\ 0.270). The spouses' transitory wage shocks are correlated (0.31),
+their permanent shocks are not (covariance 0.0027, s.e.\ 0.0023). Read at face value, the wife is the household's main
+insurer; this paper finds that, against job loss, she largely is not.
+
+I rerun their code on their PSID panel (Appendix~\ref{app:bps}). Every point estimate is reproduced
+(Table~\ref{tab:bps_relax}, column 1), and the result does not rest on most of their sample choices. Their
+controls for both spouses' employment status do not affect the accounting, although they matter at the event itself
+(the wife's earnings residual in the interval of her own displacement is $-0.10$ with them and $-0.20^{***}$ without);
+adding the PSID's low-income sample raises the share of family labor supply to 0.68. The authors note that dropping
+husbands with long spells without work may understate or overstate added-worker effects
+\citep[p.~403]{blundell2016consumption}; dropping only the year without work, rather than the husband's whole record,
+measures this and lowers the family share from 0.62 to 0.56. The estimator itself is sensitive to the trim of years of
+collapse and recovery, a standard treatment of measurement error, which removes almost no displacement years.\footnote{Code:
+\texttt{IGE/bps\_reconciliation/} (copies of their do-files with every edit listed in \texttt{README.md}). The 1999
+early-release income file needed to rebuild their panel from the raw PSID is not public, so the replication starts from
+their constructed panel, which their own code reproduces exactly.}
+
+The difference lies in the shock and in how often it occurs. Their shocks are innovations to the hourly wages of
+husbands who keep working, measured as annual earnings over annual hours in two-year changes; a job loss appears as a
+fall in hours, and a coincidence of two job losses within a month cannot be seen. High-frequency administrative data
+show that this is where most earnings risk lies: \citet{ganong2026earnings} find, with payroll and bank-account records,
+that in three quarters of months a worker's pay differs from the month before and in a quarter of months by at least
+17\%, that the changes come from hours rather than wages, that about half of a typical worker's hours volatility is caused
+by firm-level fluctuations in total hours, that lower-income hourly workers face the most, that the volatility raises
+consumption volatility for workers with little liquidity, and that it is masked in annual data. Their analysis stays
+within ongoing jobs and studies workers rather than couples; the joint job loss is the household-level counterpart across
+jobs, a firm-driven fall of both spouses' hours to zero in the same month. In the panel of
+\citet{blundell2016consumption}, a husband is displaced in 4.4\% of couple-years and both spouses in 0.3\% (28
+couple-years); of 57 joint displacements among married couples with husbands aged 30--57, 28 reach their estimation file
+and 17 contribute a wage moment (Table~\ref{tab:bps_attrition}), most of the rest lost to the exclusion of the
+low-income sample, missing lagged observations and the requirement that husbands work in every year. An estimator built
+on average covariances of wage, earnings and consumption growth cannot see an event this rare, and their transitory
+wage covariance is not carried by displacement years (0.0063 without them). In the interval of a joint displacement the
+husband's earnings fall by 0.335 against 0.123 after a single displacement, and the wife's earnings by an arc change
+0.44 larger; consumption does not fall in that interval but falls by more in the following one after a joint than after
+a single displacement (Table~\ref{tab:bps_event}: $-0.138^{**}$ with the low-income sample, $-0.071$, $p=0.19$, in their
+sample). With 17 to 23 joint events this is suggestive; Section~\ref{sec:household} reports the consumption response in
+the full PSID for 1999--2021.
+
+Three further features matter for the comparison. The insurance that family labor supply provides in their accounting
+is the wife's hours response, a Marshallian cross-elasticity of $-0.75$ identified from wives who work in both years of
+the interval, in couples in which the husband keeps working. Applied to a displaced husband's permanent wage loss of
+15--20\%, it implies 190--250 more hours a year from wives who already work; on the extensive margin their estimates imply
+that 8.4\% of non-working wives enter work per 10\% permanent fall in the husband's wage, or 13--17\% after a displacement
+\citep[p.~428]{blundell2016consumption}. The responses to displacement measured here are smaller: 51 hours a year on
+average in the PSID and, from 1984, a gross 47 hours offset by 35 hours of joint job losses, and 4.2 (CPS) to 5.4 (SIPP)
+percentage points more employment among wives who were not working. The record of a couple ends when the spouse
+changes, and the job loss itself changes partners, so a sample of stable couples keeps the households in which the
+marriage survived the shock. And the safety net in their schedule is a function of positive family earnings with no
+unemployment insurance: the Earned Income Tax Credit pays nothing in the state in which both spouses have lost their
+jobs, which lies outside a framework built on positive hours, and the households who depend most on food stamps are
+largely excluded by dropping the low-income sample and husbands with a year without earnings, although 71\% of the
+insurance of the food-stamp-eligible households who remain comes from the government. The joint job loss puts these
+households and this state at the center: it ranks transfers by whether they pay when no one in the household works.
+
+The two sets of results are therefore complements. Family labor supply insures permanent wage shocks among stable,
+continuously employed couples, and it fails against the shock at which the second earner's job is lost with the first,
+in the month the household's income falls most. A model of family insurance has to deliver both: the model of
+Section~\ref{sec:model} contains correlated wage shocks and a progressive tax and transfer schedule as in
+\citet{blundell2016consumption}, adds a displacement hazard with a common component, the extensive margin, a search
+friction, unemployment insurance and separation, and is required to reproduce their estimates---the spouses' wage-shock
+covariances, the split of insurance between family labor supply, government and savings, and how these move when their
+restrictions are relaxed---when their sample selection, trims and two-year differencing are applied to simulated
+couples, and the joint job loss when they are not.
+
+\paragraph{Job loss, the family and children.} The costs of job loss go beyond earnings, to mortality
+\citep{sullivan2009job}, health \citep{black2015losing} and divorce \citep{charles2004job, eliason2012lost}, and they
+differ across workers, establishments and markets, with family linkages among the dimensions
+\citep{halla2020job, athey2026heterogeneous}. In this literature the unit hit by the shock is one worker, and the
+family enters as the spouse who responds. \citet{charles2004job} find in the PSID that a job loss of either the
+husband or the wife raises divorce, after layoffs but not after plant closings, and read it as news about the
+partner's fitness as a mate. What a job loss of both spouses does to the marriage has not been studied;
+Section~\ref{sec:household} confirms their finding for wives over 1984--2021 and shows that a joint loss gives the
+largest break-up response. Children whose fathers were displaced by plant closures in Canada earn about 9\% less as adults
+\citep{oreopoulos2008intergenerational}; in the PSID the loss is similar with layoffs but close to zero with closures
+only \citep{page2009parental}, and it is larger for Black youths' post-secondary education \citep{kalil2011parental}; in
+US tax data, fathers' layoffs when children are 12 to 29 sharply reduce family income but have small effects on college
+enrollment and early earnings \citep{hilger2016parental}; timing matters \citep{carneiro2022timing}. The PSID evidence in
+Section~\ref{sec:children} is consistent with this literature and does not extend it; the paper uses it to bound the
+child block of the model.
+
+\paragraph{The safety net as insurance.} Childhood exposure to food stamps and the Earned Income Tax Credit raises
+children's long-run outcomes \citep{hoynes2016long, bastian2018long, bailey2024social}. Unemployment insurance is the
+largest public buffer against job loss, but the lowest-income job losers are the least insured \citep{east2020how};
+more generous unemployment insurance reduces grade repetition among children of job losers \citep{regmi2018examining}
+and mitigates the rise in divorce after men's layoffs \citep{lindo2025stable}. These studies vary one program at a time.
+The joint job loss ranks programs by whether they pay when no one in the household works.
+
+\paragraph{Structural models of family insurance and mobility.} Dynastic models study how early investment, education
+aid and transfers shape intergenerational persistence \citep{lee2019intergenerational, caucutt2020early,
+abbott2019education, daruich2018macroeconomic}, and \citet{bolt2024intergenerational} decompose the IGE in estimated
+production functions and decision rules. In these models the risk parents face is at most their own earnings risk:
+none has a spouse's employment risk or insurance within the household. The models of family insurance that have both
+spouses \citep{blundell2016consumption, birinci2019spousal, mankart2017household} do not follow the household to the
+children. The model of Section~\ref{sec:model} joins the two with the correlation of the spouses' job losses at its
+center.
+
+\begin{table}[!htbp]\centering
+\caption{The joint labor-market risk of spouses: what is known and what this paper adds}\label{tab:contribution}
+\footnotesize
+\begin{tabular}{p{0.38\textwidth}p{0.30\textwidth}p{0.24\textwidth}}
+\toprule
+Finding & Prior evidence & This paper \\
+\midrule
+Spouses' earnings covary, mostly through permanent components & \citet{hyslop2001rising}; \citet{shore2010better} & Known \\
+\addlinespace
+Couples sort on employer and industry; about a tenth share an establishment & \citet{hyatt2019coworking} & Known \\
+\addlinespace
+Joint displacements by the same plant event exist & \citet{halla2020job} (couples dropped) & Known and named, not measured \\
+\addlinespace
+Non-participating spouses enter the labor force when the primary earner loses his job, more among young couples; joint
+search model with independent separation shocks & \citet{bacher2025joint} & Known; the separation shocks are correlated
+here \\
+\addlinespace
+Correlated unemployment mutes the US added-worker effect & \citet{kawano2025who} & Stated as one of two explanations, not decomposed \\
+\addlinespace
+Most earnings risk is monthly, from hours not wages, largely firm-driven, highest for low-income hourly workers,
+moves consumption, masked in annual data & \citet{ganong2026earnings} & Known for individual workers within jobs; the
+joint job loss is its household counterpart across jobs \\
+\addlinespace
+Family labor supply provides 63\% of the insurance of the husband's permanent wage shocks; spouses' transitory wage
+shocks correlated (0.31), permanent ones not & \citet{blundell2016consumption} & Known for wage shocks of continuously employed husbands; reconciled
+here with the failure against joint job loss (Section~\ref{sec:literature}) \\
+\addlinespace
+Monthly within-couple job-loss hazard: tenfold spike in the same month, 0.6--0.8 points in the months around it,
+1994--2023, 1.3 million couples, within state $\times$ month $\times$ wife's industry & None & New (Section~\ref{sec:jointloss},
+CPS) \\
+\addlinespace
+Excess displacement with each spouse's own reason for the job ending; future-displacement placebo; her employer closes
+when his does; concentration in the same three-digit industry; tetrachoric correlation 0.24, 0.50 in the same sector
+& None at this level & New (Section~\ref{sec:jointloss}, PSID) \\
+\addlinespace
+Timing: her own job loss peaks when the household's loss peaks, while added work arrives later & \citet{stephens2002worker}
+documents the build-up of the added-worker response & New: her own loss set next to the added-worker response \\
+\addlinespace
+Gross versus net added-worker effect & Suggested by \citet{kawano2025who} & New decomposition (Section~\ref{sec:household}) \\
+\addlinespace
+The excess is equal in both races & None & New \\
+\addlinespace
+Father's displacement and children's outcomes & \citet{oreopoulos2008intergenerational}; \citet{page2009parental};
+\citet{kalil2011parental}; \citet{hilger2016parental} & Replication with a reason-based displacement measure \\
+\addlinespace
+Divorce after job loss & \citet{charles2004job}; \citet{eliason2012lost} & Known for either spouse; new: a joint loss
+of both jobs gives the largest response (the wife's equal effect confirmed over 1984--2021) \\
+\addlinespace
+Mothers' work around a birth and children's outcomes & \citet{herbst2017are} and \citet{willage2022postpartum} find
+harm & Informative nulls (Appendix~\ref{app:other}) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The paper does not claim to be the first to show that a father's job loss lowers children's outcomes, that divorce
+rises after job loss, that spouses' earnings covary, or that public insurance crowds out spousal labor supply.

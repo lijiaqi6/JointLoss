@@ -1,0 +1,11 @@
+{
+ "p_c": 0.0009947341381433366,
+ "p_eps_w": 0.009046461146481827,
+ "p_eps_h": 0.004067533721235149,
+ "sig_nu_w": 0.11180339887498948,
+ "sig_nu_h": 0.16583123951776998,
+ "rho_nu": 0.31,
+ "status": "closed forms (plan Section 1.2) at the analytic pi_up and PLACEHOLDER psi; the one-time BPS-harness correction is not yet applied",
+ "psi_w": 0.457409120420379,
+ "psi_h": 0.4945049867626991
+}

@@ -1,0 +1,24 @@
+{
+ "wedge_monthly": 0.006604436879095843,
+ "wedge_annual": 0.08444639914811318,
+ "real_cc_rate_annual": 0.11444639914811318,
+ "nominal_cc_rate_annual": 0.13709259259259257,
+ "cpi_inflation_annual": 0.022646193444479424,
+ "quarters": 108,
+ "years": [
+  1995,
+  2021
+ ],
+ "saving_rate_annual": 0.03,
+ "check_accounts_assessed_interest": {
+  "real": 0.1223334361851502,
+  "nominal": 0.14497962962962962
+ },
+ "check_1997_2008": {
+  "real": 0.11240332139066182,
+  "nominal": 0.13906041666666666,
+  "quarters": 48
+ },
+ "source": "Federal Reserve G.19 via FRED: TERMCBCCALLNS (all accounts), TERMCBCCINTNS (accounts assessed interest), CPIAUCSL; real = nominal - 12-month CPI-U inflation, average over the quarters of the years; wedge = real credit-card rate - 3% real saving rate; monthly wedge = (1 + r_b)^(1/12) - (1 + r_s)^(1/12)",
+ "status": "coded calibrated input (not estimated)"
+}

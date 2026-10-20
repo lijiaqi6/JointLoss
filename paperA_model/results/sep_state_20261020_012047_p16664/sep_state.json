@@ -1,0 +1,139 @@
+{
+ "start": "analytic start",
+ "K": 3,
+ "size": "k_s2_era1_a20",
+ "seed": 20261018,
+ "couples": 37080,
+ "ever_separated_share": 0.32117044228694713,
+ "table": [
+  {
+   "group": "all",
+   "state": "separated",
+   "n_months": 1907282,
+   "n_women": 11909,
+   "emp": 0.9781705065113602,
+   "ft_share_of_emp": 0.9861619052264442
+  },
+  {
+   "group": "no child",
+   "state": "separated",
+   "n_months": 1046178,
+   "n_women": 9104,
+   "emp": 0.9792377587752753,
+   "ft_share_of_emp": 0.9829255888729347
+  },
+  {
+   "group": "youngest 0-5",
+   "state": "separated",
+   "n_months": 240374,
+   "n_women": 3570,
+   "emp": 0.9756629252747802,
+   "ft_share_of_emp": 0.9905468097081749
+  },
+  {
+   "group": "youngest 6-17",
+   "state": "separated",
+   "n_months": 620730,
+   "n_women": 6668,
+   "emp": 0.97734280605094,
+   "ft_share_of_emp": 0.9899318570679748
+  },
+  {
+   "group": "White",
+   "state": "separated",
+   "n_months": 994538,
+   "n_women": 6346,
+   "emp": 0.9786322895656073,
+   "ft_share_of_emp": 0.9836553863351715
+  },
+  {
+   "group": "Black",
+   "state": "separated",
+   "n_months": 912744,
+   "n_women": 5563,
+   "emp": 0.9776673415546966,
+   "ft_share_of_emp": 0.9888957371464432
+  },
+  {
+   "group": "all",
+   "state": "married",
+   "n_months": 6717526,
+   "n_women": 37080,
+   "emp": 0.9158158822161612,
+   "ft_share_of_emp": 0.7634817979209095
+  },
+  {
+   "group": "no child",
+   "state": "married",
+   "n_months": 3147493,
+   "n_women": 27043,
+   "emp": 0.91707082430366,
+   "ft_share_of_emp": 0.7409618101531488
+  },
+  {
+   "group": "youngest 0-5",
+   "state": "married",
+   "n_months": 1401892,
+   "n_women": 20417,
+   "emp": 0.9152937601470014,
+   "ft_share_of_emp": 0.7753578517748996
+  },
+  {
+   "group": "youngest 6-17",
+   "state": "married",
+   "n_months": 2168141,
+   "n_women": 23791,
+   "emp": 0.9143316786131529,
+   "ft_share_of_emp": 0.7885850484261501
+  },
+  {
+   "group": "White",
+   "state": "married",
+   "n_months": 4774174,
+   "n_women": 24678,
+   "emp": 0.9026019998433237,
+   "ft_share_of_emp": 0.7348170034245503
+  },
+  {
+   "group": "Black",
+   "state": "married",
+   "n_months": 1943352,
+   "n_women": 12402,
+   "emp": 0.9482780268319893,
+   "ft_share_of_emp": 0.8305097897916149
+  },
+  {
+   "group": "months 0-11 since separation",
+   "state": "separated",
+   "n_months": 139845,
+   "n_women": 11909,
+   "emp": 0.9526046694554685,
+   "ft_share_of_emp": 0.9924859439861279
+  },
+  {
+   "group": "months 12-35",
+   "state": "separated",
+   "n_months": 260027,
+   "n_women": 11324,
+   "emp": 0.9784330088798471,
+   "ft_share_of_emp": 0.9911956261128296
+  },
+  {
+   "group": "months 36+",
+   "state": "separated",
+   "n_months": 1507410,
+   "n_women": 10281,
+   "emp": 0.9804970114302015,
+   "ft_share_of_emp": 0.9847254181464143
+  },
+  {
+   "group": "12 months before separation (women who separate)",
+   "state": "married",
+   "n_months": 300149,
+   "n_women": 25456,
+   "emp": 0.9185237998460765,
+   "ft_share_of_emp": 0.7712209913890038
+  }
+ ],
+ "note": "model: no child support, no remarriage; employment = lw == 0 and hrs_w > 0; wife 25-59"
+}

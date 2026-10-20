@@ -1,0 +1,492 @@
+{
+ "table": [
+  {
+   "param": "delta_w_B",
+   "theta": 0.002592998757979549,
+   "norm_range": 34.45699332657201,
+   "norm_value": 2.9792244381297377,
+   "norm_z": 27.121278857036422,
+   "top_block": "Base hazards",
+   "top_share": 0.8465531449573936
+  },
+  {
+   "param": "delta_w_W",
+   "theta": 0.0016693265510455363,
+   "norm_range": 102.51086889477904,
+   "norm_value": 5.706039186955741,
+   "norm_z": 53.58037438435052,
+   "top_block": "Base hazards",
+   "top_share": 0.9393530331722675
+  },
+  {
+   "param": "delta_h_B",
+   "theta": 0.004826508028392728,
+   "norm_range": 23.265217560541213,
+   "norm_value": 3.744240057961175,
+   "norm_z": 31.363891192812986,
+   "top_block": "Base hazards",
+   "top_share": 0.9339630200203716
+  },
+  {
+   "param": "delta_h_W",
+   "theta": 0.0025942415984047352,
+   "norm_range": 91.68893622197992,
+   "norm_value": 7.931418888314072,
+   "norm_z": 72.20028973989666,
+   "top_block": "Base hazards",
+   "top_share": 0.9618604143966506
+  },
+  {
+   "param": "pi_c0",
+   "theta": 3.427951268432863e-05,
+   "norm_range": 30.709327800828547,
+   "norm_value": 0.5263503959378539,
+   "norm_z": 5.173288784008773,
+   "top_block": "Joint loss, monthly",
+   "top_share": 0.8612326883794451
+  },
+  {
+   "param": "pi_c1",
+   "theta": 0.0002812210655891035,
+   "norm_range": 70.38939733996754,
+   "norm_value": 0.9897490663060239,
+   "norm_z": 9.75832151951404,
+   "top_block": "Joint loss, monthly",
+   "top_share": 0.8685322230662114
+  },
+  {
+   "param": "p_H",
+   "theta": 0.02,
+   "norm_range": 58.13912130502325,
+   "norm_value": 2.3730253593887043,
+   "norm_z": 11.62298135210794,
+   "top_block": "Base hazards",
+   "top_share": 0.5944081911250213
+  },
+  {
+   "param": "m_H",
+   "theta": 15.951525651752098,
+   "norm_range": 5.010237222051549,
+   "norm_value": 2.7558940541006365,
+   "norm_z": 12.513447226486342,
+   "top_block": "Joint loss, annual",
+   "top_share": 0.3155957321120203
+  },
+  {
+   "param": "lam_w_B",
+   "theta": 0.156966071998908,
+   "norm_range": 9.947140762398941,
+   "norm_value": 1.7543411383078478,
+   "norm_z": 13.713363309488066,
+   "top_block": "Her search",
+   "top_share": 0.8351472694910977
+  },
+  {
+   "param": "lam_w_W",
+   "theta": 0.12515364098697118,
+   "norm_range": 15.375166716451318,
+   "norm_value": 2.1620877475793,
+   "norm_z": 17.319409916491097,
+   "top_block": "Her search",
+   "top_share": 0.6235199711875858
+  },
+  {
+   "param": "lam_h_B",
+   "theta": 0.26106147999907825,
+   "norm_range": 5.728107631452643,
+   "norm_value": 1.6802115234393724,
+   "norm_z": 11.600329161749146,
+   "top_block": "His search",
+   "top_share": 0.76399155345362
+  },
+  {
+   "param": "lam_h_W",
+   "theta": 0.26106147999907825,
+   "norm_range": 11.249555454389442,
+   "norm_value": 3.299804040735518,
+   "norm_z": 22.782139336507853,
+   "top_block": "His search",
+   "top_share": 0.8948999729265692
+  },
+  {
+   "param": "pi_up_w",
+   "theta": 0.006946687056807495,
+   "norm_range": 81.83167134995566,
+   "norm_value": 9.553932978212801,
+   "norm_z": 79.05631872162168,
+   "top_block": "Her search",
+   "top_share": 0.3783580581502132
+  },
+  {
+   "param": "pi_up_h",
+   "theta": 0.005571509830074589,
+   "norm_range": 67.96846300391059,
+   "norm_value": 6.364486718678131,
+   "norm_z": 52.99526603096636,
+   "top_block": "Employment levels",
+   "top_share": 0.3813140527712257
+  },
+  {
+   "param": "pi_dn_w",
+   "theta": 0.018560571289512884,
+   "norm_range": 20.079602855201266,
+   "norm_value": 1.8634445012953476,
+   "norm_z": 16.905115287436313,
+   "top_block": "Her exits",
+   "top_share": 0.6119911636732136
+  },
+  {
+   "param": "pi_dn_h",
+   "theta": 0.02895684667248854,
+   "norm_range": 4.107627100256108,
+   "norm_value": 0.5947196406493742,
+   "norm_z": 5.086136134123671,
+   "top_block": "Wage growth",
+   "top_share": 0.43111875850938775
+  },
+  {
+   "param": "d_w",
+   "theta": 0.0955477905273128,
+   "norm_range": 10.64462879316959,
+   "norm_value": 0.5085353810853852,
+   "norm_z": 4.842406650515485,
+   "top_block": "Her search",
+   "top_share": 0.32861649348996896
+  },
+  {
+   "param": "d_h",
+   "theta": 0.06962052823896311,
+   "norm_range": 11.580045018491653,
+   "norm_value": 0.4031044256091812,
+   "norm_z": 3.890722540859937,
+   "top_block": "Wage growth",
+   "top_share": 0.30419087670553596
+  },
+  {
+   "param": "phi_F",
+   "theta": 0.3076032239078258,
+   "norm_range": 96.0715642723816,
+   "norm_value": 19.70128193070164,
+   "norm_z": 238.7621192387368,
+   "top_block": "Employment levels",
+   "top_share": 0.8477749249357887
+  },
+  {
+   "param": "phi_P",
+   "theta": 0.1530548418478491,
+   "norm_range": 113.50480665888492,
+   "norm_value": 11.581640154764212,
+   "norm_z": 279.02086352078413,
+   "top_block": "Employment levels",
+   "top_share": 0.7143364419029857
+  },
+  {
+   "param": "theta_05",
+   "theta": -0.0013608967722231833,
+   "norm_range": 24.691890657028488,
+   "norm_value": 0.022402076196825233,
+   "norm_z": 54.79599129331931,
+   "top_block": "Her search",
+   "top_share": 0.5321962045203703
+  },
+  {
+   "param": "theta_617",
+   "theta": 0.040267024933373245,
+   "norm_range": 32.56248471868907,
+   "norm_value": 0.8741295893733587,
+   "norm_z": 75.04018513075158,
+   "top_block": "Her search",
+   "top_share": 0.7195091474665747
+  },
+  {
+   "param": "phi_h",
+   "theta": 0.12800789487592334,
+   "norm_range": 89.8275982872598,
+   "norm_value": 7.665761172341481,
+   "norm_z": 218.6275693219843,
+   "top_block": "Employment levels",
+   "top_share": 0.9896884872246088
+  },
+  {
+   "param": "F",
+   "theta": 0.10115986064931405,
+   "norm_range": 6.311602555491095,
+   "norm_value": 1.0641347249788895,
+   "norm_z": 8.84721857493955,
+   "top_block": "Her search",
+   "top_share": 0.3187965156481924
+  },
+  {
+   "param": "kappa_S",
+   "theta": 0.10400232790965615,
+   "norm_range": 6.693604786553101,
+   "norm_value": 0.6961504799087396,
+   "norm_z": 6.237492094228062,
+   "top_block": "Safety net",
+   "top_share": 0.8464688568356903
+  },
+  {
+   "param": "sigma0_B",
+   "theta": 0.0026794360377968523,
+   "norm_range": 20.16605812330444,
+   "norm_value": 2.701683143794394,
+   "norm_z": 23.39733784884844,
+   "top_block": "Separation",
+   "top_share": 0.599290282539487
+  },
+  {
+   "param": "sigma0_W",
+   "theta": 0.0012735730999470288,
+   "norm_range": 72.243554472506,
+   "norm_value": 4.600372381037075,
+   "norm_z": 43.07426855325671,
+   "top_block": "Her search",
+   "top_share": 0.4785671449906816
+  },
+  {
+   "param": "sigmaJ_B",
+   "theta": 0.008062164579300219,
+   "norm_range": 4.232116846536875,
+   "norm_value": 0.34120022535609323,
+   "norm_z": 3.1369210164294175,
+   "top_block": "Separation",
+   "top_share": 0.36126343351219437
+  },
+  {
+   "param": "sigmaJ_W",
+   "theta": 0.005333416370932801,
+   "norm_range": 6.7464122244728495,
+   "norm_value": 0.3598142540306466,
+   "norm_z": 3.4062386170122636,
+   "top_block": "Separation",
+   "top_share": 0.3723855437964144
+  },
+  {
+   "param": "a_bar",
+   "theta": 25.638766735251398,
+   "norm_range": 5.763229630298602,
+   "norm_value": 2.462701668881916,
+   "norm_z": 14.103577750989535,
+   "top_block": "Wealth",
+   "top_share": 0.9959954968511078
+  },
+  {
+   "param": "eta_up",
+   "theta": 0.5,
+   "norm_range": 9.755531589619142,
+   "norm_value": 1.6259219316031903,
+   "norm_z": 13.549349430026586,
+   "top_block": "Her search",
+   "top_share": 0.5985341420815542
+  }
+ ],
+ "singular_values": [
+  22.210679856184015,
+  12.439272282476141,
+  8.309023838708638,
+  7.6542509605025035,
+  5.782033805049299,
+  4.927841818450218,
+  3.8682092707353055,
+  3.632130972017091,
+  3.244603190670727,
+  2.975220478785269,
+  2.581239264251327,
+  2.4440055887678853,
+  2.3419536633182036,
+  1.8702395694648108,
+  1.5538010798273811,
+  1.3650577272585989,
+  1.0969448618452706,
+  0.9733461991204916,
+  0.714686324493838,
+  0.6657002954005441,
+  0.5916481756295996,
+  0.5242967400310766,
+  0.43108686080282393,
+  0.4058645664140304,
+  0.2746487126745623,
+  0.24346307597227926,
+  0.23527847648563655,
+  0.19791233364596622,
+  0.1815029989227342,
+  0.10569754781322552,
+  0.007229480457089802
+ ],
+ "condition": 3072.2373465167143,
+ "condition_range": 129.41201688789806,
+ "weak": [
+  {
+   "sv": 0.007229480457089802,
+   "loadings": {
+    "theta_05": -1.0,
+    "theta_617": -0.01,
+    "eta_up": -0.008,
+    "sigmaJ_W": -0.006
+   }
+  },
+  {
+   "sv": 0.10569754781322552,
+   "loadings": {
+    "d_h": -0.855,
+    "pi_dn_h": 0.493,
+    "eta_up": -0.083,
+    "sigmaJ_B": 0.074
+   }
+  },
+  {
+   "sv": 0.1815029989227342,
+   "loadings": {
+    "sigmaJ_W": 0.953,
+    "pi_c0": 0.164,
+    "sigmaJ_B": -0.138,
+    "p_H": 0.116
+   }
+  },
+  {
+   "sv": 0.19791233364596622,
+   "loadings": {
+    "sigmaJ_B": -0.844,
+    "d_w": -0.368,
+    "theta_617": -0.299,
+    "sigmaJ_W": -0.137
+   }
+  },
+  {
+   "sv": 0.23527847648563655,
+   "loadings": {
+    "theta_617": -0.836,
+    "sigmaJ_B": 0.422,
+    "d_w": -0.183,
+    "eta_up": -0.14
+   }
+  }
+ ],
+ "weak_range": [
+  {
+   "sv": 1.1284571484892116,
+   "loadings": {
+    "m_H": -0.807,
+    "eta_up": -0.45,
+    "lam_h_B": -0.251,
+    "F": -0.166
+   }
+  },
+  {
+   "sv": 1.2826800291870286,
+   "loadings": {
+    "pi_dn_h": 0.914,
+    "d_h": -0.326,
+    "m_H": 0.161,
+    "eta_up": -0.104
+   }
+  },
+  {
+   "sv": 2.098138173185168,
+   "loadings": {
+    "lam_h_B": -0.655,
+    "eta_up": 0.41,
+    "lam_h_W": 0.301,
+    "sigmaJ_B": -0.296
+   }
+  },
+  {
+   "sv": 2.144180233624409,
+   "loadings": {
+    "F": 0.727,
+    "sigmaJ_B": 0.346,
+    "m_H": -0.301,
+    "a_bar": 0.287
+   }
+  },
+  {
+   "sv": 2.314462313265302,
+   "loadings": {
+    "eta_up": 0.647,
+    "m_H": -0.395,
+    "F": -0.373,
+    "lam_h_B": 0.362
+   }
+  }
+ ],
+ "pairs": [
+  [
+   "pi_dn_h",
+   "d_h",
+   0.9185191057616199
+  ]
+ ],
+ "weak_norm": [
+  "delta_w_B",
+  "pi_c0",
+  "pi_c1",
+  "p_H",
+  "m_H",
+  "lam_w_B",
+  "lam_w_W",
+  "lam_h_B",
+  "pi_dn_w",
+  "pi_dn_h",
+  "d_w",
+  "d_h",
+  "theta_05",
+  "theta_617",
+  "F",
+  "kappa_S",
+  "sigma0_B",
+  "sigmaJ_B",
+  "sigmaJ_W",
+  "a_bar",
+  "eta_up"
+ ],
+ "md": "# Jacobian\n\nS = change of each moment in weighted units (sqrt of the objective weight) per 10% move of a parameter (value scaling: 10% of |theta|; range scaling: 10% of the bound range, the plan's protocol; z: per unit of the logistic coordinate). Moments in the objective with finite rows: 87 of 93.\n\n| parameter | theta | norm (10% of value) | norm (10% of range) | norm (per z) | top block | share |\n|---|---:|---:|---:|---:|---|---:|\n| delta_w_B | 0.002593 | 2.98 | 34.46 | 27.12 | Base hazards | 0.85 |\n| delta_w_W | 0.001669 | 5.71 | 102.51 | 53.58 | Base hazards | 0.94 |\n| delta_h_B | 0.004827 | 3.74 | 23.27 | 31.36 | Base hazards | 0.93 |\n| delta_h_W | 0.002594 | 7.93 | 91.69 | 72.20 | Base hazards | 0.96 |\n| pi_c0 | 3.428e-05 | 0.53 | 30.71 | 5.17 | Joint loss, monthly | 0.86 |\n| pi_c1 | 0.0002812 | 0.99 | 70.39 | 9.76 | Joint loss, monthly | 0.87 |\n| p_H | 0.02 | 2.37 | 58.14 | 11.62 | Base hazards | 0.59 |\n| m_H | 15.95 | 2.76 | 5.01 | 12.51 | Joint loss, annual | 0.32 |\n| lam_w_B | 0.157 | 1.75 | 9.95 | 13.71 | Her search | 0.84 |\n| lam_w_W | 0.1252 | 2.16 | 15.38 | 17.32 | Her search | 0.62 |\n| lam_h_B | 0.2611 | 1.68 | 5.73 | 11.60 | His search | 0.76 |\n| lam_h_W | 0.2611 | 3.30 | 11.25 | 22.78 | His search | 0.89 |\n| pi_up_w | 0.006947 | 9.55 | 81.83 | 79.06 | Her search | 0.38 |\n| pi_up_h | 0.005572 | 6.36 | 67.97 | 53.00 | Employment levels | 0.38 |\n| pi_dn_w | 0.01856 | 1.86 | 20.08 | 16.91 | Her exits | 0.61 |\n| pi_dn_h | 0.02896 | 0.59 | 4.11 | 5.09 | Wage growth | 0.43 |\n| d_w | 0.09555 | 0.51 | 10.64 | 4.84 | Her search | 0.33 |\n| d_h | 0.06962 | 0.40 | 11.58 | 3.89 | Wage growth | 0.30 |\n| phi_F | 0.3076 | 19.70 | 96.07 | 238.76 | Employment levels | 0.85 |\n| phi_P | 0.1531 | 11.58 | 113.50 | 279.02 | Employment levels | 0.71 |\n| theta_05 | -0.001361 | 0.02 | 24.69 | 54.80 | Her search | 0.53 |\n| theta_617 | 0.04027 | 0.87 | 32.56 | 75.04 | Her search | 0.72 |\n| phi_h | 0.128 | 7.67 | 89.83 | 218.63 | Employment levels | 0.99 |\n| F | 0.1012 | 1.06 | 6.31 | 8.85 | Her search | 0.32 |\n| kappa_S | 0.104 | 0.70 | 6.69 | 6.24 | Safety net | 0.85 |\n| sigma0_B | 0.002679 | 2.70 | 20.17 | 23.40 | Separation | 0.60 |\n| sigma0_W | 0.001274 | 4.60 | 72.24 | 43.07 | Her search | 0.48 |\n| sigmaJ_B | 0.008062 | 0.34 | 4.23 | 3.14 | Separation | 0.36 |\n| sigmaJ_W | 0.005333 | 0.36 | 6.75 | 3.41 | Separation | 0.37 |\n| a_bar | 25.64 | 2.46 | 5.76 | 14.10 | Wealth | 1.00 |\n| eta_up | 0.5 | 1.63 | 9.76 | 13.55 | Her search | 0.60 |\n\nSingular values (value scaling): 22.2, 12.4, 8.31, 7.65, 5.78, 4.93, 3.87, 3.63, 3.24, 2.98, 2.58, 2.44, 2.34, 1.87, 1.55, 1.37, 1.1, 0.973, 0.715, 0.666, 0.592, 0.524, 0.431, 0.406, 0.275, 0.243, 0.235, 0.198, 0.182, 0.106, 0.00723\nCondition number (value scaling): 3.07e+03; (range scaling): 129\n\nWeakest directions, value scaling (smallest singular values, largest loadings):\n- sv 0.00723: {'theta_05': -1.0, 'theta_617': -0.01, 'eta_up': -0.008, 'sigmaJ_W': -0.006}\n- sv 0.106: {'d_h': -0.855, 'pi_dn_h': 0.493, 'eta_up': -0.083, 'sigmaJ_B': 0.074}\n- sv 0.182: {'sigmaJ_W': 0.953, 'pi_c0': 0.164, 'sigmaJ_B': -0.138, 'p_H': 0.116}\n- sv 0.198: {'sigmaJ_B': -0.844, 'd_w': -0.368, 'theta_617': -0.299, 'sigmaJ_W': -0.137}\n- sv 0.235: {'theta_617': -0.836, 'sigmaJ_B': 0.422, 'd_w': -0.183, 'eta_up': -0.14}\n\nWeakest directions, range scaling:\n- sv 1.13: {'m_H': -0.807, 'eta_up': -0.45, 'lam_h_B': -0.251, 'F': -0.166}\n- sv 1.28: {'pi_dn_h': 0.914, 'd_h': -0.326, 'm_H': 0.161, 'eta_up': -0.104}\n- sv 2.1: {'lam_h_B': -0.655, 'eta_up': 0.41, 'lam_h_W': 0.301, 'sigmaJ_B': -0.296}\n- sv 2.14: {'F': 0.727, 'sigmaJ_B': 0.346, 'm_H': -0.301, 'a_bar': 0.287}\n- sv 2.31: {'eta_up': 0.647, 'm_H': -0.395, 'F': -0.373, 'lam_h_B': 0.362}\n\nNear-collinear pairs (|corr| of columns > 0.9):\n- pi_dn_h / d_h: +0.919\n\nParameters with norm < 3 (value scaling): ['delta_w_B', 'pi_c0', 'pi_c1', 'p_H', 'm_H', 'lam_w_B', 'lam_w_W', 'lam_h_B', 'pi_dn_w', 'pi_dn_h', 'd_w', 'd_h', 'theta_05', 'theta_617', 'F', 'kappa_S', 'sigma0_B', 'sigmaJ_B', 'sigmaJ_W', 'a_bar', 'eta_up']",
+ "Q_start": 11281.523835662423,
+ "minutes": 21.642819205919903,
+ "objective": {
+  "weighting": "diag_noise",
+  "obj_exclude": [
+   "cps_wife_hazard_pooled",
+   "cps_h_hazard_pooled",
+   "cps_entry_pooled",
+   "sipp_his_emp_s3_nosep",
+   "sipp_his_emp_s6_nosep",
+   "sipp_his_emp_s12_nosep"
+  ],
+  "obj_exclude_reasons": {
+   "cps_wife_hazard_pooled": "pooled duplicate: model value = race-share average of cps_wife_hazard_black/white",
+   "cps_h_hazard_pooled": "pooled duplicate: model value = race-share average of cps_h_hazard_B/W",
+   "cps_entry_pooled": "pooled duplicate: model value = race-share average of cps_entry_black/white",
+   "sipp_his_emp_s3_nosep": "not producible: husbands never quit (leave a job only by displacement)",
+   "sipp_his_emp_s6_nosep": "not producible: husbands never quit (leave a job only by displacement)",
+   "sipp_his_emp_s12_nosep": "not producible: husbands never quit (leave a job only by displacement)"
+  },
+  "n_in_objective": 87,
+  "set_fixed": {},
+  "ties": [],
+  "ext": {
+   "cps_classif": true,
+   "cs_memory": false,
+   "borrow_wedge": true,
+   "hc_eta": true
+  },
+  "noise_file": "moment_noise.csv",
+  "K_noise": 3.0,
+  "weight_shares": {
+   "Base hazards": 0.940939,
+   "Her exits": 0.053095,
+   "Separation": 0.002606,
+   "Joint loss, monthly": 0.001991,
+   "Wage growth": 0.000439,
+   "Employment levels": 0.0004,
+   "Wealth": 0.000228,
+   "Safety net": 0.000118,
+   "Her search": 0.000105,
+   "Joint loss, annual": 6.1e-05,
+   "His search": 8e-06,
+   "Consumption": 6e-06,
+   "Added work": 3e-06,
+   "His earnings": 0.0,
+   "Her earnings": 0.0
+  }
+ }
+}

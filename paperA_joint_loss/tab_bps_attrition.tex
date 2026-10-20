@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\centering
+\caption{Where the displaced couples leave the sample of Blundell, Pistaferri and Saporta-Eksten (2016)}
+\label{tab:bps_attrition}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Step & \begin{tabular}[b]{@{}c@{}}Couple-\\years\end{tabular} & \begin{tabular}[b]{@{}c@{}}Husband\\displaced\end{tabular} & \begin{tabular}[b]{@{}c@{}}Wife\\displaced\end{tabular} & \begin{tabular}[b]{@{}c@{}}Both\\displaced\end{tabular} \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Married couples, husband 30--57, SRC and low-income samples & 14,327 & 692 & 480 & 57 \\
+Drop the year of a change in family composition & 13,876 & 658 & 460 & 52 \\
+Drop if not married & 13,876 & 658 & 460 & 52 \\
+Drop if state missing & 13,811 & 654 & 456 & 51 \\
+Drop female heads, age always missing & 13,811 & 654 & 456 & 51 \\
+Drop net worth of \$20 million or more & 13,802 & 654 & 456 & 51 \\
+Keep ages 30--57 & 13,767 & 653 & 455 & 51 \\
+Drop the low-income (SEO) sample & 10,857 & 488 & 345 & 37 \\
+Drop if education missing & 10,157 & 449 & 317 & 33 \\
+Merge minimum wages and prices & 10,157 & 449 & 317 & 33 \\
+Drop husbands with any year without work (estimation file) & 9,148 & 404 & 283 & 28 \\
+Keep rows with a husband's wage-growth moment & 6,372 & 293 & 186 & 17 \\
+Keep rows with both spouses' wage-growth moments & 4,762 & 208 & 160 & 16 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Universe: married couples with husbands aged 30--57 in the PSID's SRC and low-income samples, waves 1999--2009. Their restrictions applied in their order; each row counts the couple-years left after the step. The last rows keep couple-years with a husband's wage-growth moment and with both spouses' wage-growth moments. Source: \texttt{IGE/bps\_reconciliation/} (\texttt{bps\_reconciliation.csv}); table built by \texttt{IGE/48.PaperATables.py}.\end{minipage}
+\end{table}

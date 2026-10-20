@@ -1,0 +1,21 @@
+[     0s] psid_wealth.family_wealth()
+[     4s] extra components (vehicles, home equity, IRA, tenure, mortgage)
+[     5s]   1984: id S101 '1984 FAMILY ID', veh S113, heq S120, ira None; family fam1984 id V10002 '1984 INTERVIEW NUMBER', own V10437, mortgage V10438; 6,918 families, 1.000 matched
+[     5s]   1989: id S201 '1989 FAMILY ID', veh S213, heq S220, ira None; family fam1989 id V16302 '1989 INTERVIEW NUMBER', own V16641, mortgage V16642; 7,114 families, 1.000 matched
+[     5s]   1994: id S301 '1994 FAMILY ID', veh S313, heq S320, ira None; family fam1994er id ER2002 '1994 INTERVIEW #', own ER2032, mortgage ER2036; 8,623 families, 1.000 matched
+[     5s]   1999: id S401 '1999 FAMILY ID', veh S413, heq S420, ira S419; family fam1999er id ER13002 '1999 FAMILY INTERVIEW (ID) NUMBER', own ER13040, mortgage ER13044; 6,997 families, 1.000 matched
+[     5s]   2001: id S501 '2001 FAMILY ID', veh S513, heq S520, ira S519; family fam2001er id ER17002 '2001 FAMILY INTERVIEW (ID) NUMBER', own ER17043, mortgage ER17049; 7,406 families, 1.000 matched
+[     5s]   2003: id S601 '2003 FAMILY ID', veh S613, heq S620, ira S619; family fam2003er id ER21002 '2003 FAMILY INTERVIEW (ID) NUMBER', own ER21042, mortgage ER21048; 7,822 families, 1.000 matched
+[     5s]   2005: id S701 '2005 FAMILY ID', veh S713, heq S720, ira S719; family fam2005er id ER25002 '2005 FAMILY INTERVIEW (ID) NUMBER', own ER25028, mortgage ER25039; 8,002 families, 1.000 matched
+[     5s]   2007: id S801 '2007 FAMILY ID', veh S813, heq S820, ira S819; family fam2007er id ER36002 '2007 FAMILY INTERVIEW (ID) NUMBER', own ER36028, mortgage ER36039; 8,289 families, 1.000 matched
+[     6s]   2009: id ER42002 '2009 FAMILY INTERVIEW (ID) NUMBER', veh ER46956, heq ER46966, ira ER46964; family fam2009er id ER42002 '2009 FAMILY INTERVIEW (ID) NUMBER', own ER42029, mortgage ER42040; 8,690 families, 1.000 matched
+[     6s]   2011: id ER47302 '2011 FAMILY INTERVIEW (ID) NUMBER', veh ER52360, heq ER52390, ira ER52368; family fam2011er id ER47302 '2011 FAMILY INTERVIEW (ID) NUMBER', own ER47329, mortgage ER47345; 8,907 families, 1.000 matched
+[     6s]   2013: id ER53002 '2013 FAMILY INTERVIEW (ID) NUMBER', veh ER58173, heq ER58207, ira ER58181; family fam2013er id ER53002 '2013 FAMILY INTERVIEW (ID) NUMBER', own ER53029, mortgage ER53045; 9,063 families, 1.000 matched
+[     7s]   2015: id ER60002 '2015 FAMILY INTERVIEW (ID) NUMBER', veh ER65370, heq ER65404, ira ER65378; family fam2015er id ER60002 '2015 FAMILY INTERVIEW (ID) NUMBER', own ER60030, mortgage ER60046; 9,048 families, 1.000 matched
+[     7s]   2017: id ER66002 '2017 FAMILY INTERVIEW (ID) NUMBER', veh ER71447, heq ER71481, ira ER71455; family fam2017er id ER66002 '2017 FAMILY INTERVIEW (ID) NUMBER', own ER66030, mortgage ER66048; 9,607 families, 1.000 matched
+[     7s]   2019: id ER72002 '2019 FAMILY INTERVIEW (ID) NUMBER', veh ER77473, heq ER77507, ira ER77481; family fam2019er id ER72002 '2019 FAMILY INTERVIEW (ID) NUMBER', own ER72030, mortgage ER72048; 9,569 families, 1.000 matched
+[     8s] 43,370 couple-waves, 2,348 1968 families
+[     8s] target check (IGE/60: N 14,261 / 13,814 / 15,295; le0 0.5681 / 0.4616 / 0.3810; hi 0.0344 / 0.0775 / 0.1772): 25-34: N 14,261, le0 0.5681, hi 0.0344; 35-44: N 13,814, le0 0.4616, hi 0.0775; 45-59: N 15,295, le0 0.3810, hi 0.1772
+[    10s] panel 1984-2019 done
+[    12s] panel 1999-2019 done
+[    12s] written IGE/output/wealth_definitions.csv, _diffs.csv, .md

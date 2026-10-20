@@ -1,0 +1,42 @@
+\begin{table}[!htbp]
+\centering
+\caption{Single and joint displacements in the panel of Blundell, Pistaferri and Saporta-Eksten (2016)}
+\label{tab:bps_event}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{lccc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Their\\sample\end{tabular} & \begin{tabular}[b]{@{}c@{}}Low-income\\sample in\end{tabular} & \begin{tabular}[b]{@{}c@{}}All\\relaxations\end{tabular} \\
+ & (1) & (2) & (3) \\
+\midrule
+\multicolumn{4}{l}{\textit{Consumption residual, interval of the displacement}} \\
+Husband displaced alone & $-0.022$ & $-0.019$ & $-0.017$ \\
+ & (0.020) & (0.019) & (0.019) \\
+Both displaced & $0.049$ & $0.047$ & $-0.009$ \\
+ & (0.087) & (0.072) & (0.073) \\
+Both $-$ husband alone & $0.071$ & $0.066$ & $0.008$ \\
+ & (0.089) & (0.074) & (0.075) \\
+\quad joint events & 17 & 23 & 25 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Consumption residual, next interval}} \\
+Husband displaced alone & $0.009$ & $0.028$ & $0.033^{*}$ \\
+ & (0.020) & (0.019) & (0.018) \\
+Both displaced & $-0.062$ & $-0.110^{*}$ & $-0.101^{*}$ \\
+ & (0.050) & (0.059) & (0.056) \\
+Both $-$ husband alone & $-0.071$ & $-0.138^{**}$ & $-0.134^{**}$ \\
+ & (0.054) & (0.062) & (0.059) \\
+\quad joint events & 18 & 21 & 22 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Husband's earnings residual, interval of the displacement}} \\
+Husband displaced alone & $-0.123^{***}$ & $-0.105^{***}$ & $-0.145^{***}$ \\
+ & (0.040) & (0.037) & (0.042) \\
+Both displaced & $-0.335^{*}$ & $-0.356^{**}$ & $-0.337^{**}$ \\
+ & (0.178) & (0.140) & (0.142) \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Wife's earnings, arc change, interval of the displacement}} \\
+Both $-$ husband alone & $-0.438^{***}$ & $-0.377^{***}$ & $-0.377^{**}$ \\
+ & (0.138) & (0.117) & (0.147) \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Biennial event study on their residuals (consumption and earnings growth net of their observables), PSID 1999--2009, with the PSID reason-for-job-end flags of Section~\ref{sec:data}: husband displaced alone, both spouses displaced, relative to couples without a displacement. Interval of the displacement: the two-year change that contains the job-end year; next interval: the following two-year change. Wife's earnings: arc change including zeros. Column (3) applies all relaxations of Table~\ref{tab:bps_relax} that leave the estimator defined. Standard errors clustered by household. Associations, with few joint events. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/bps\_reconciliation/} (\texttt{bps\_reconciliation.csv}); table built by \texttt{IGE/48.PaperATables.py}.\end{minipage}
+\end{table}

@@ -1,0 +1,9 @@
+{
+ "run": "IGE\\paperA_model\\results\\runs\\recovery_closed_20261018_151959",
+ "n_params": 19,
+ "within2_noise": 3,
+ "within2_data": 8,
+ "best_Q": 481.82251923736646,
+ "max_abs_z_noise": 34.56694133002069,
+ "max_abs_z_data": 10.480346832191575
+}

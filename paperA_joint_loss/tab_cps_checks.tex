@@ -1,0 +1,89 @@
+\begin{table}[!htbp]
+\centering
+\caption{Robustness of the same-month joint job loss (CPS basic monthly, 1994--2023)}
+\label{tab:cps_checks}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.78\textheight 0.78\textheight\else\totalheight\fi}{%
+\begin{tabular}{lccccc}
+\toprule
+Sample & \begin{tabular}[b]{@{}c@{}}Wife loses\\her job\end{tabular} & \begin{tabular}[b]{@{}c@{}}Wife loses her job,\\excluding 2020--21\end{tabular} & \begin{tabular}[b]{@{}c@{}}Wife's loss not a\\temporary layoff\end{tabular} & \begin{tabular}[b]{@{}c@{}}Wife still\\unemployed at $t+2$\end{tabular} & \begin{tabular}[b]{@{}c@{}}Base rate,\\\% a month\end{tabular} \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{l}{\textit{A. Who reports (month of the husband's job loss)}} \\
+All couples & $0.040^{***}$ & $0.035^{***}$ &  &  & 0.54 \\
+ & (0.002) & (0.001) &  &  & \\
+Wife reports for herself, husband by proxy & $0.038^{***}$ & $0.034^{***}$ &  &  & 0.60 \\
+ & (0.002) & (0.002) &  &  & \\
+\quad and the wife reports his job loss & $0.039^{***}$ & $0.034^{***}$ &  &  & 0.60 \\
+ & (0.002) & (0.002) &  &  & \\
+Husband reports for himself, wife by proxy & $0.038^{***}$ & $0.032^{***}$ &  &  & 0.47 \\
+ & (0.002) & (0.002) &  &  & \\
+\quad and the husband reports her job loss & $0.039^{***}$ & $0.032^{***}$ &  &  & 0.47 \\
+ & (0.002) & (0.002) &  &  & \\
+Wife self, husband proxy in both months & $0.037^{***}$ & $0.031^{***}$ &  &  & 0.59 \\
+ & (0.002) & (0.002) &  &  & \\
+Husband self, wife proxy in both months & $0.037^{***}$ & $0.030^{***}$ &  &  & 0.46 \\
+ & (0.003) & (0.002) &  &  & \\
+A third member reports both & $0.093^{***}$ & $0.084^{***}$ &  &  & 0.54 \\
+ & (0.010) & (0.010) &  &  & \\
+Third-member reports excluded & $0.038^{***}$ & $0.033^{***}$ &  &  & 0.54 \\
+ & (0.002) & (0.001) &  &  & \\
+\addlinespace
+\multicolumn{6}{l}{\textit{B. Temporary layoffs and the season}} \\
+All husband job losses & $0.040^{***}$ & $0.035^{***}$ & $0.015^{***}$ & $0.015^{***}$ & 0.54 \\
+ & (0.002) & (0.001) & (0.001) & (0.001) & \\
+His loss not a temporary layoff & $0.027^{***}$ & $0.027^{***}$ & $0.026^{***}$ & $0.012^{***}$ & 0.54 \\
+ & (0.002) & (0.002) & (0.002) & (0.001) & \\
+His loss a temporary layoff & $0.054^{***}$ & $0.044^{***}$ & $0.004^{***}$ & $0.017^{***}$ & 0.54 \\
+ & (0.002) & (0.002) & (0.001) & (0.002) & \\
+Not June--September & $0.037^{***}$ & $0.031^{***}$ & $0.015^{***}$ & $0.015^{***}$ & 0.48 \\
+ & (0.002) & (0.002) & (0.001) & (0.001) & \\
+Not a temporary layoff, not June--September & $0.026^{***}$ & $0.025^{***}$ & $0.025^{***}$ & $0.012^{***}$ & 0.48 \\
+ & (0.002) & (0.002) & (0.002) & (0.002) & \\
+\addlinespace
+\multicolumn{6}{l}{\textit{C. Persistent job losses (both observed two months later)}} \\
+All husband job losses & $0.038^{***}$ & $0.034^{***}$ & $0.014^{***}$ & $0.015^{***}$ & 0.54 \\
+ & (0.002) & (0.002) & (0.001) & (0.001) & \\
+His loss persistent & $0.033^{***}$ & $0.028^{***}$ & $0.017^{***}$ & $0.025^{***}$ & 0.54 \\
+ & (0.003) & (0.002) & (0.002) & (0.002) & \\
+Persistent, not a temporary layoff & $0.027^{***}$ & $0.026^{***}$ & $0.025^{***}$ & $0.018^{***}$ & 0.54 \\
+ & (0.003) & (0.003) & (0.003) & (0.002) & \\
+Persistent, not a temporary layoff, not June--September & $0.028^{***}$ & $0.026^{***}$ & $0.026^{***}$ & $0.017^{***}$ & 0.47 \\
+ & (0.004) & (0.004) & (0.003) & (0.003) & \\
+\addlinespace
+\multicolumn{6}{l}{\textit{D. Class of worker}} \\
+Both private & $0.041^{***}$ & $0.036^{***}$ & $0.017^{***}$ & $0.017^{***}$ & 0.59 \\
+ & (0.002) & (0.002) & (0.001) & (0.002) & \\
+Both private, his loss not a temporary layoff & $0.030^{***}$ & $0.030^{***}$ & $0.029^{***}$ & $0.015^{***}$ & 0.59 \\
+ & (0.002) & (0.002) & (0.002) & (0.002) & \\
+Both government & $0.153^{***}$ & $0.156^{***}$ & $0.013^{**}$ & $0.040^{***}$ & 0.38 \\
+ & (0.016) & (0.017) & (0.006) & (0.010) & \\
+Both self-employed & $0.159^{***}$ & $0.142^{***}$ & $0.073^{***}$ & $0.043^{***}$ & 0.30 \\
+ & (0.016) & (0.017) & (0.013) & (0.012) & \\
+Husband private, wife government & $0.013^{***}$ & $0.007^{***}$ & $0.002^{*}$ & $0.004^{**}$ & 0.60 \\
+ & (0.003) & (0.002) & (0.001) & (0.002) & \\
+Husband government, wife private & $0.027^{***}$ & $0.024^{***}$ & $0.008^{**}$ & $0.006$ & 0.46 \\
+ & (0.007) & (0.006) & (0.004) & (0.004) & \\
+\addlinespace
+\multicolumn{6}{l}{\textit{E. Shared workplace}} \\
+Same major industry & $0.166^{***}$ &  &  &  & 0.44 \\
+ & (0.007) &  &  &  & \\
+Same detailed industry & $0.211^{***}$ &  &  &  & 0.41 \\
+ & (0.009) &  &  &  & \\
+Same detailed industry and occupation & $0.315^{***}$ &  &  &  & 0.41 \\
+ & (0.014) &  &  &  & \\
+Same detailed industry, occupation and class & $0.337^{***}$ &  &  &  & 0.41 \\
+ & (0.015) &  &  &  & \\
+All other couples & $0.026^{***}$ &  &  &  & 0.55 \\
+ & (0.001) &  &  &  & \\
+\addlinespace
+\multicolumn{6}{l}{\textit{F. Attrition}} \\
+Couples observed in all four months & $0.038^{***}$ & $0.033^{***}$ &  &  & 0.54 \\
+ & (0.002) & (0.002) &  &  & \\
+Couples not observed in all four months & $0.052^{***}$ & $0.045^{***}$ &  &  & 0.57 \\
+ & (0.004) & (0.004) &  &  & \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Each cell is the coefficient on the husband losing his job in a linear probability model of the outcome in the column header, among married couples in which both spouses work in the previous month, with state $\times$ month fixed effects; standard errors clustered by household (state clustering gives the same significance). Column (5): the wife's job-loss rate when the husband does not lose his job. A job loser is unemployed after a layoff, a job loss or the end of a temporary job, having been employed the month before. Persistent: still unemployed two months later. Panel A: labor force information collected from the person (self) or from another household member (proxy); couples in which both spouses report for themselves cannot be formed because the CPS takes one respondent per household and month. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$. Source: \texttt{IGE/37.CPSJointLossChecks.py} (\texttt{output/cps\_joint\_loss\_checks.csv}); table built by \texttt{IGE/48.PaperATables.py}.\end{minipage}
+\end{table}

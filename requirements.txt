@@ -1,0 +1,18 @@
+# Python 3.12. Versions of the environment that produced the estimates (as in Selection-vs-risk, 2026-10-11).
+# Keep the HPC and the Mac on the same versions: numba and numpy differences can change floating-point results
+# slightly (objective values are then not exactly comparable across machines).
+
+# estimation (paperA_model/)
+numpy==2.5.3
+numba==0.67.0
+llvmlite==0.49.0
+pandas==3.0.5
+scipy==1.18.1
+cma==4.5.0
+PyYAML==6.0.3
+
+# reports, figures and the data scripts (not needed for an estimation job)
+matplotlib==3.11.1
+statsmodels==0.15.0
+tabulate==0.10.0
+pytest
