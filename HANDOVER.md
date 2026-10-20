@@ -32,8 +32,12 @@ HPC results (in `paperA_model/results/hpc_runs/`), from the old `~/joint` clone 
   hazards carry 92% of the weight, so the earnings loss, consumption, wealth and separation blocks misfit. Its plan,
   item 1: re-estimate with block-balanced weights, F fixed, sigmaJ pooled, a data-based borrowing limit, three
   workplace groups. Also needed: annual EITC timing in the model, and the counterfactuals (marginal-preserving
-  decorrelation; EITC against an unconditional transfer at equal cost). Two of its claims are not yet verified in the
-  code: that the model pays the EITC monthly, and that counterfactual (i) also removes ~22% of displacement risk.
+  decorrelation; EITC against an unconditional transfer at equal cost).
+- **Checked 2026-10-20** (`paperA_model/results/reestimate_plan_20261020.md`): EITC paid monthly, confirmed;
+  counterfactual (i) cuts each spouse's hazard by 24-26% (23 points from m_H = 1), confirmed. But Fable's "92% of
+  the weight" is a units artifact (raw 1/se^2 summed across units): in z^2 terms base hazards are 3% of Q, wealth
+  57%; the coded `--weighting block` has the same flaw (do not run Joint-smm-block). The note holds the step plan
+  (0-6) and the PI decisions it needs.
 - **Not yet done: the intake** (`paperA_model/results/INTAKE.md`): fit table and Q by block at the estimate,
   marriage diagnostics; the clean-spec BPS correction (sig_nu_h 0.166 -> 0.180, sig_nu_w 0.112 -> 0.134), baseline
   rerun and LM again.
