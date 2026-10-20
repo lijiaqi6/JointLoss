@@ -20,7 +20,7 @@ everything else from `c288c72`. The history before that date stays readable ther
 | `bps_reconciliation/` | Blundell, Pistaferri and Saporta-Eksten (2016) replication and the BPS-on-simulated-data harness (Paper A) |
 | `proposals/` | Fable memos, plans and evidence notes (file names say which paper) |
 | `EVIDENCE.md` | evidence ledger for both papers (sections tagged [Paper A] / [Paper B]) |
-| `HANDOVER_MAC.md` | Paper A state and next tasks (the move to a Mac was called off; the file name is historical) |
+| `HANDOVER.md` | Paper A state and next tasks (Paper B: `proposals/paperB_resume_20261020.md`) |
 
 ## One working copy per paper session
 
@@ -54,4 +54,4 @@ cd model && python regen.py --check           # Paper B: Section 8 tables unchan
 ## Rules
 
 Never commit person-level microdata; aggregates only. No branches. Commit messages end with
-`Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`. Full list in `HANDOVER_MAC.md`, section 5.
+`Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`. Full list in `HANDOVER.md`, section 5.
