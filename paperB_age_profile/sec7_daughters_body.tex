@@ -1,23 +1,28 @@
-A father's childhood layoff moves his sons' and his daughters' pay in opposite directions. In
-one reduced specification for both sexes, a father's teen layoff changes his son's hourly wage between 25--29 and 45--49
-by $-0.538^{**}$ and his daughter's by $+0.387^{*}$; within the same person the slopes are $-0.086$ (s.e.\ 0.096) and
-$+0.168^{**}$ ($p = 0.025$) (panel B of Table~\ref{tab:layoff_exog}). Stacking sons and daughters and testing the
-difference directly, it is 0.925$^{***}$ ($p = 0.001$) in the wage change and 1.294$^{***}$ in the earnings change, and
-0.254$^{**}$ ($p = 0.049$) and 0.380$^{**}$ ($p = 0.030$) a decade within person. With one job-end net in every wave the
-change differences are 1.295$^{**}$ and 1.753$^{**}$. The difference is positive in all three birth cohorts; the
-daughters' own gain is clear in those born before 1963 (0.221$^{*}$) and from 1976 (0.644$^{***}$) and nil in those born
-1963--75.\footnote{Sons and daughters of the same family share the cluster. Code: \texttt{107.LayoffSexDifference.py}.}
-A trait of the father passed on to all his children would lower both profiles. The two change differences survive a
-family-wise correction (adjusted $p$ 0.004 and 0.003); the within-person ones are borderline (0.061). The daughters' gain
-is not selection into who is observed: the father's layoff does not predict whether a daughter is observed with a wage at
-25--29 or 45--49, and weighting by the inverse of that probability leaves her slope at 0.176$^{**}$. It does not run
-through the mother: she does not work more in the father's layoff waves (0.011, s.e.\ 0.010), and the daughters' gain is
-the same whether she did or not. Schooling moves apart: a teen layoff goes with 0.89 more years of schooling for
-daughters than for sons ($p = 0.069$) (panel C of Table~\ref{tab:layoff_referee}). Nor is it selection into
-work or marriage: their employment does not change, and the within-person wage slope is $0.169^{**}$ with partnership
-and full-year work held fixed. It does not reach their earnings with zero years kept (a change of 0.188, s.e.\ 0.418,
-in a Poisson model, against $-0.523^{**}$ for sons), and their family income rises at 45--49 because their partners earn
-more ($0.677^{***}$) (panel D of Table~\ref{tab:layoff_mechanism}). Why daughters of laid-off fathers are paid more when
-they work, and partner with higher earners, the data here do not explain.\footnote{145 daughters with a teen layoff year
-are observed at 45--49. Code: \texttt{92.LayoffDaughters.py}, \texttt{105.DaughtersMechanism.py}.}
+\paragraph{The contrast.} A father's childhood layoff moves his sons' and his daughters' pay in opposite directions, as
+Figure~\ref{fig:layoffbands} shows. In one reduced specification for both sexes, a father's teen layoff changes his
+son's hourly wage between 25--29 and 45--49 by $-0.538^{**}$ and his daughter's by $+0.387^{*}$; within the same person
+the slopes are $-0.086$ (s.e.\ 0.096) and $+0.168^{**}$ ($p = 0.025$) (panel B of Table~\ref{tab:layoff_exog}).
+Stacking sons and daughters and testing the difference directly, it is 0.925$^{***}$ ($p = 0.001$) in the wage change and
+1.294$^{***}$ in the earnings change, and 0.254$^{**}$ ($p = 0.049$) and 0.380$^{**}$ ($p = 0.030$) a decade within
+person. The two change differences survive a family-wise correction (adjusted $p$ 0.004 and 0.003); the within-person ones
+are borderline (0.061). With one job-end rule in every wave the change differences are 1.295$^{**}$ and 1.753$^{**}$. The
+difference is positive in all three birth cohorts; the daughters' own gain is clear in those born before 1963
+(0.221$^{*}$) and from 1976 (0.644$^{***}$) and nil in those born 1963--75.\footnote{Sons and daughters of the same family
+share the cluster. 145 daughters with a teen layoff year are observed at 45--49. Code: \texttt{92.LayoffDaughters.py},
+\texttt{107.LayoffSexDifference.py}.} A trait of the father passed on to all his children alike would lower both profiles.
 
+\paragraph{Not selection.} The daughters' gain is not selection into who is observed, into work or into marriage, and it
+does not run through the mother. The father's layoff does not predict whether a daughter is observed with a wage at
+25--29 or 45--49, and weighting by the inverse of that probability leaves her slope at 0.176$^{**}$. Her employment does
+not change, and the within-person wage slope is 0.169$^{**}$ with partnership and full-year work held fixed. The mother
+does not work more in the father's layoff waves (0.011, s.e.\ 0.010), and the daughters' gain is the same whether she did
+or not (panel C of Table~\ref{tab:layoff_referee}).\footnote{Code: \texttt{105.DaughtersMechanism.py},
+\texttt{109.DaughtersRefereeChecks.py}.}
+
+\paragraph{Schooling and partners.} Two facts point to where the contrast may come from, without settling it. Schooling
+moves apart: a teen layoff goes with 0.89 more years of schooling for daughters than for sons ($p = 0.069$). And
+daughters of laid-off fathers partner with men who earn more: their partners' earnings rise by 0.677$^{***}$ at 45--49,
+which is why their family income rises (panel D of Table~\ref{tab:layoff_mechanism}). The gain does not reach the
+daughters' earnings with zero years kept (a change of 0.188, s.e.\ 0.418, in a Poisson model, against $-0.523^{**}$ for
+sons): it is a higher wage when they work. Why daughters of laid-off fathers are paid more and partner with higher
+earners, the data here do not explain.
