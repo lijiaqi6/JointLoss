@@ -158,6 +158,24 @@ paths of `~/jointloss`).
 inverse-variance weights already let every block pin its own parameters, and that the blocks Fable wants to up-weight
 carry little information. This departs from Fable's item 1 and is the PI's decision.
 
+## 4b. Progress (2026-10-20)
+
+PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items of HANDOVER section 2 for step 5.
+
+- Step 0: done by the PI. `~/jointloss` cloned with its own deploy key; Joint-test 11875253 queued (snapshot from before
+  steps 1-2, so its check uses the old EXPECTED_Q 11,733.7).
+- Step 1: done (commit fcf5356). Scale-free block weights, z-unit weight shares, an information table in the Jacobian
+  report, decorrelation hooks `decorr` = indep / mean and scenarios i_indep / i_mean. Tests 14/14 pass (new test 13:
+  marginal hazards preserved exactly; simulated rates within 1%, same-month joint losses 33 -> 4); Q at the analytic
+  start unchanged.
+- Step 2: inputs and baseline done. Clean-spec BPS at the LM estimate (`bps_trim_20261020_120418`): him transitory
+  0.0227, her 0.0073, permanent 0.0253 / 0.0318, covariance 0.0027. Applied (`bps_check.py --apply-from`):
+  sig_nu_h 0.166 -> 0.180, sig_nu_w 0.112 -> 0.133, p_eps_w and p_eps_h x1.20, p_c x0.99. New baseline: Q 11,866.0 at
+  the analytic start (EXPECTED_Q), 1,692.5 at the LM estimate (was 1,359.6). The rise is wealth (775 -> 1,103): more
+  transitory risk means more precautionary saving, so even fewer couples hold liquid wealth <= 0 (45-59: 0.167 model vs
+  0.381 data). Next: Joint-gn-bps on the HPC after Joint-test passes.
+- Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
+
 ## 5. PI decisions this note needs
 
 1. Approve the step order (0 -> 6) and the move of block-balanced weights from the main specification to robustness.
