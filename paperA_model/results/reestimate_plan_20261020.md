@@ -176,6 +176,17 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   0.381 data). Joint-test 11875253 reproduced Q 11,733.6 on the old inputs (new clone and .venv fine). Joint-gn-bps
   11876676 submitted 2026-10-20 ~13:30 from the LM estimate 11865967 (a first submission, 11876602, had a broken
   --start and was cancelled). Its warm-up Q should be 1,692.5. Its best.json starts step 3.
+- Step 2 estimate: done on the PC instead (Stanage fair share 0.008, queue ~3 days; 11876676 cancelled, and it would
+  have been refused at the start: pi_dn_w, d_h, sigmaJ_W and a_bar lie within 1% of a bound). A first PC run moved
+  those four 2% inside their bounds: LM stalled at Q 2,910 (d_h and pi_dn_w cannot return through the flat logistic
+  region), so it was dropped. `runs/polish_bps_pc2_20261020_173143_p30300` ran from the exact estimate with
+  `--bound-margin 0` (7 workers x 2 threads, ~50 min per iteration): Q 1,692.5 -> 1,691.4 -> 1,691.2, stopped after
+  2 iterations; every parameter within 2% of 11865967 (d_h 0.00034 -> 0.00040). Fresh seeds 1,694-1,748 (was
+  1,355-1,409). Q by block (`evaluate_20261020_195708_p29328`): wealth 1,102 (65%), wage growth 180, his search 56,
+  his earnings 52, safety net 52, employment levels 50, base hazards 48; every block within 1 of the start. The BPS
+  correction changes no parameter; it adds wealth misfit that no parameter can absorb, which step 5 (net-worth
+  target, smoothing technology) has to address. Its best.json starts step 3, run on the PC one job after another
+  (each with `--bound-margin 0`).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
