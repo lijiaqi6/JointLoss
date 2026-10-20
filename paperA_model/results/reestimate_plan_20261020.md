@@ -187,6 +187,12 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   correction changes no parameter; it adds wealth misfit that no parameter can absorb, which step 5 (net-worth
   target, smoothing technology) has to address. Its best.json starts step 3, run on the PC one job after another
   (each with `--bound-margin 0`).
+- Step 3, fixF (`runs/polish_fixF_20261020_195801_p26672`): F = 0.101 is rejected. At the step-2 estimate F is
+  0.570 (s.e. 0.028; Wald z = 16.6, p < 0.001***), its information is 71% employment levels and 18% her search, and
+  fixing it raises Q from 1,691 to 7,832. LM with the other 30 free crawled at maximum damping (7,832 -> 7,660 in 8
+  iterations, ~20 per iteration, cond 4e10) and was stopped at 00:59 on 2026-10-21. The step-3 premise for F ("its
+  moments are within 1.5 se of zero") does not hold at this estimate: F is well identified (norm 9.5, value
+  scaling). F stays free; PI to confirm. Chain continues: sigJ, abar, lamh.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
