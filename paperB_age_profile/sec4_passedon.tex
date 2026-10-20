@@ -22,7 +22,7 @@ enters a family-structure row, so that no component is a copy of a flag.\footnot
 income over at least three years of their ages 13--19 (4,770 sons, 46,540 son-years), PSID weights, single-age dummies
 in every band, standard errors from 200 cluster-bootstrap draws of 1968 families. The father's closures and layoffs are
 the PSID's reasons a job ended (plant closed or moved; laid off or fired) in the interview year or the one before. Code:
-\texttt{IGE/75.WhatIsPassedOn.py} (\texttt{output/what\_is\_passed\_on.md}).} The split is accounting: the components are
+\texttt{75.WhatIsPassedOn.py} (\texttt{output/what\_is\_passed\_on.md}).} The split is accounting: the components are
 correlated choices and outcomes, and Section~\ref{sec:stability} separates the spells the family did not choose.
 
 \input{tab_passed_on}
@@ -61,7 +61,7 @@ resources---their schooling, the family's income from assets, transfers and othe
 AFDC or TANF and the number of children---brings the rest down to 47.6\%$^{***}$ (panel B).\footnote{PSID family files
 1968--2011: head-and-wife taxable and transfer income, AFDC/TANF receipt of the head or wife, own/rent, children in the
 family unit; parents' years of schooling. Shares are of family income in the same file. Code:
-\texttt{IGE/80.WhatIsPassedOnRest.py}.} Two resources carry precise shares. The parents' schooling carries
+\texttt{80.WhatIsPassedOnRest.py}.} Two resources carry precise shares. The parents' schooling carries
 12.9\%$^{***}$ ($p<0.001$), all of it the father's (0.054$^{***}$; the mother's $-0.003$), and like the wage its
 contribution grows with the son's age, from 0.014 at 25--29 to 0.075$^{***}$ at 45--49. Years on AFDC or TANF carry
 0.026$^{**}$ ($p = 0.015$), 6.6\% of the IGE. Asset income, home ownership, other members' income and family size carry
@@ -77,12 +77,12 @@ The split replicates where the data measure the components over several years an
 weekly work history covers every week of the child's teens, the parents' spells carry 7.6\%$^{***}$ ($p = 0.005$) of the
 IGE of the children's earnings at 26--35, against 6.0\%$^{**}$ in the PSID at 25--29; there they are the mother's weeks
 unemployed and her jobs ending in a firing.\footnote{3,675 children of 2,090 mothers; components over the child's ages
-13--17; outcome = mean earnings at 26--35. Code: \texttt{IGE/83.CYAWhatIsPassedOn.py}.} In the NLSY79 youths, whose
+13--17; outcome = mean earnings at 26--35. Code: \texttt{83.CYAWhatIsPassedOn.py}.} In the NLSY79 youths, whose
 parents are described once, for the household at 14, the parents' schooling carries 25.0\%$^{***}$ and an occupation-based
 wage 1.1\% ($p = 0.35$). In the NLSY97, whose parent interview reports one year of wages and usual hours and the
 parents' employment breaks without their reason, wage, hours and breaks carry $-0.5$\%, 0.5\% and $-1.0$\%, while the
-parents' schooling and the 1996 transfers carry 22.2\%$^{***}$.\footnote{Code: \texttt{IGE/86.NLSY79YouthWhatIsPassedOn.py}
-and \texttt{IGE/85.NLSY97WhatIsPassedOn.py}.} A component measured in one year does not carry the IGE at equal parental
+parents' schooling and the 1996 transfers carry 22.2\%$^{***}$.\footnote{Code: \texttt{86.NLSY79YouthWhatIsPassedOn.py}
+and \texttt{85.NLSY97WhatIsPassedOn.py}.} A component measured in one year does not carry the IGE at equal parental
 income, as one year of parental income understates it \citep{solon1992intergenerational, mazumder2005fortunate}; the
 parents' schooling, measured once but fixed, carries a fifth to a quarter in both NLS cohorts.
 
@@ -93,5 +93,5 @@ The components differ by race in two places. The spells component opens with age
 layoffs are not concentrated in low-income families (Section~\ref{sec:stability}); and the father's schooling carries
 0.065$^{***}$ of the White and 0.002 of the Black IGE. For Black sons family structure carries 60.2\%$^{***}$ of the IGE
 and the rest nothing ($-0.008$, $p = 0.92$): the absence of a parent, not parental income at equal parents, is what
-the Black IGE transmits.\footnote{Code: \texttt{IGE/75.WhatIsPassedOn.py}, \texttt{IGE/80.WhatIsPassedOnRest.py},
-\texttt{IGE/81.StabilityOpeningByRace.py}.}
+the Black IGE transmits.\footnote{Code: \texttt{75.WhatIsPassedOn.py}, \texttt{80.WhatIsPassedOnRest.py},
+\texttt{81.StabilityOpeningByRace.py}.}

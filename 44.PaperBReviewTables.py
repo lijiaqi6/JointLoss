@@ -63,7 +63,7 @@ def gapchg(df, data, block, spec, sex, outcome, bandset="25-49"):
              stat=GC, bandset=bandset)
 
 
-SRC41 = r"Source: \texttt{IGE/41.AgeProfileMeasurement.py} (\texttt{output/age\_profile\_measurement.csv})"
+SRC41 = r"Source: \texttt{41.AgeProfileMeasurement.py} (\texttt{output/age\_profile\_measurement.csv})"
 
 
 # ------------------------------------------------------------------------------------------------ robustness
@@ -133,7 +133,7 @@ def tab_gap_robust():
           "profile without the years at 25--26. PPML: Poisson pseudo-maximum likelihood on the income level. Position: pooled quantiles of parental income "
           "over Black and White sons; re-weighting by the ratio of Black to White shares in 20 parental-income bins, band "
           "by band. Ranks: rank--rank slope of band-mean family income (column 2: sons and daughters). " + STARS +
-          " " + SRC41 + r", \texttt{IGE/46.AgeProfileRound2.py} and \texttt{IGE/33.AgeProfileRobustness.py}.")
+          " " + SRC41 + r", \texttt{46.AgeProfileRound2.py} and \texttt{33.AgeProfileRobustness.py}.")
 
 
 def tab_three_data_v1():
@@ -173,7 +173,7 @@ def tab_three_data_v1():
           "known. Main measures: PSID mean over child ages 13--19, NLSY79 1978--80 mean, NLSY97 1996. Pooled: inverse-"
           "variance weighted average of the three; the $Q$ row gives the p-value of the test that the three changes "
           "are equal (one-year and corrected rows). " + STARS + " " + SRC41 +
-          r" and \texttt{IGE/33.AgeProfileRobustness.py}.")
+          r" and \texttt{33.AgeProfileRobustness.py}.")
 
 
 def pool(vals):
@@ -225,7 +225,7 @@ def tab_three_data():
           "measures are not pooled because the four differ in reliability. NLSY79 children: wage and salary income, "
           "children of NLSY79 mothers, few observed at 35--44 (93 White and 120 Black sons at 40--44, born "
           "when their mothers were 23 or younger). Pooled: inverse-variance weighted. " + STARS + " " + SRC41 +
-          r", \texttt{IGE/46.AgeProfileRound2.py} and \texttt{IGE/33.AgeProfileRobustness.py}.")
+          r", \texttt{46.AgeProfileRound2.py} and \texttt{33.AgeProfileRobustness.py}.")
 
 
 def tab_within_cell():
@@ -256,7 +256,7 @@ def tab_within_cell():
           "and the rise is net of the calendar trend of the return; column (5) keeps sons born 1955--69. The NLSY79 is "
           "one cohort, so (4)--(5) are not defined there. All columns use the same son-years (early cell known). "
           "Standard errors clustered by 1968 family (PSID) or 1979 household (NLSY79). " + STARS +
-          r" Source: \texttt{IGE/45.WithinCellIdentification.py} (\texttt{output/within\_cell\_identification.csv}).")
+          r" Source: \texttt{45.WithinCellIdentification.py} (\texttt{output/within\_cell\_identification.csv}).")
 
 
 def tab_afqt_growth():
@@ -293,7 +293,7 @@ def tab_afqt_growth():
           "within birth year) alone (1), schooling alone (2) or both (3), by age band; rise = mean over bands from 35 "
           "minus mean below 35. Employer learning predicts that with both included the schooling coefficient falls "
           "and the AFQT coefficient rises with experience. Controls: quartic in age, year (round) fixed effects. "
-          + STARS + r" Source: \texttt{IGE/45.WithinCellIdentification.py}.")
+          + STARS + r" Source: \texttt{45.WithinCellIdentification.py}.")
 
 
 def tab_experience():
@@ -316,12 +316,12 @@ def tab_experience():
           "schooling $-$ 6). Each cell: White $-$ Black difference of the band-specific log IGEs (stacked, clustered "
           "by 1968 family); controls: quartic in the parent's age and single-year age or experience dummies. At "
           "25--29, sons of top-tercile White parents have 4.8 years of potential experience, other sons 6.0--7.0. "
-          + STARS + r" Source: \texttt{IGE/46.AgeProfileRound2.py} (\texttt{output/age\_profile\_round2.md}).")
+          + STARS + r" Source: \texttt{46.AgeProfileRound2.py} (\texttt{output/age\_profile\_round2.md}).")
 
 
 # ------------------------------------------------------------------------------------------------ policies and shocks
 P49 = pd.read_csv(OUT / "paperB_policy_shocks.csv")
-SRC49 = r" Source: \texttt{IGE/49.PaperBPolicyShocks.py} (\texttt{output/paperB\_policy\_shocks.csv})."
+SRC49 = r" Source: \texttt{49.PaperBPolicyShocks.py} (\texttt{output/paperB\_policy\_shocks.csv})."
 
 
 def p49(**kw):
@@ -443,7 +443,7 @@ def tab_schooling():
           "the education gradient in parental income). Change row: mean over the bands from 35 minus mean over the "
           "bands below 35. White $-$ Black: difference of the separate regressions, standard errors from joint "
           "influence functions, clustered by 1968 family (PSID) or 1979 household (NLSY79). " + STARS +
-          r" Source: \texttt{IGE/42.SchoolingAndJobGrowth.py} (\texttt{output/schooling\_job\_growth.csv}).")
+          r" Source: \texttt{42.SchoolingAndJobGrowth.py} (\texttt{output/schooling\_job\_growth.csv}).")
 
 
 def s36(tab, sample, outcome, term):
@@ -478,7 +478,7 @@ def tab_growth_ladder():
           "covers both income years. NLSY79 columns: common sample with AFQT and education known; AFQT standardised "
           "within birth year. White $-$ Black: difference of the separate regressions, joint influence functions, "
           "clustered by 1968 family (PSID) or 1979 household (NLSY79). " + STARS +
-          r" Source: \texttt{IGE/36.SameEmployerGrowthChecks.py} (\texttt{output/same\_employer\_growth\_checks.csv}).")
+          r" Source: \texttt{36.SameEmployerGrowthChecks.py} (\texttt{output/same\_employer\_growth\_checks.csv}).")
 
 
 def tab_job_moves():
@@ -503,7 +503,7 @@ def tab_job_moves():
           "contributions); (5)--(6) linear probabilities; (7)--(8) growth conditional on the event. Each cell: "
           "coefficient on log parental income; controls: quartic in age, year fixed effects; standard errors "
           "clustered by 1968 family. " + STARS +
-          r" Source: \texttt{IGE/42.SchoolingAndJobGrowth.py} (\texttt{output/schooling\_job\_growth.csv}).")
+          r" Source: \texttt{42.SchoolingAndJobGrowth.py} (\texttt{output/schooling\_job\_growth.csv}).")
 
 
 def tab_father_se():
@@ -549,8 +549,8 @@ def tab_father_se():
           "job, out of it in their modal 35--55 job, on log parental income and a quadratic in birth cohort. These estimates "
           "use sons with a father's self-employment code (and, for leaving, a cohort quadratic and no weights); on all "
           "sons with a father's cell the same contrasts are 0.131$^{***}$ (0.038) for rich White $-$ rich Black and "
-          "$-0.167^{**}$ (0.067) for leaving (\texttt{IGE/35.EarlyIndustryLatePayoff.py}, Section F). " + STARS +
-          r" Source: \texttt{IGE/43.FatherJobSelfEmployment.py} (\texttt{output/father\_job\_selfemp.csv}).")
+          "$-0.167^{**}$ (0.067) for leaving (\texttt{35.EarlyIndustryLatePayoff.py}, Section F). " + STARS +
+          r" Source: \texttt{43.FatherJobSelfEmployment.py} (\texttt{output/father\_job\_selfemp.csv}).")
 
 
 # ------------------------------------------------------------------------------------------------ appendix

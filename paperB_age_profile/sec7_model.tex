@@ -50,7 +50,7 @@ choice. He enters the labor market at $18 + \max(e - 12, 0)$. He is risk neutral
 whether to accept job offers.\footnote{Risk neutrality is standard in job-search models with human capital
 \citep[e.g.][]{bagger2014tenure}; the targets are wages, moves and displacements, not consumption. The son's hours carry
 0.010 of the 0.220 (Black) and 0.012 of the 0.389 (White) elasticity of earnings at 40, so hours are not a margin. Code:
-\texttt{IGE/24.IGEDecomposition.py}.}
+\texttt{24.IGEDecomposition.py}.}
 
 \paragraph{Jobs, access and search frictions.} Jobs are of two types, $j \in \{G, O\}$, defined in the data and in the
 simulation in the same way: $G$ is an occupation $\times$ industry cell in the top quartile of men's employment by both
@@ -66,7 +66,7 @@ term: the racial difference in the parental-income gradient of access is $-0.022
 schooling and the father's job are held fixed. The search friction on the job is common to both races: move rates at
 25--34 are 0.125 (Black) and 0.130 (White). $G$ jobs carry no premium in the match component: estimated freely it is
 $-0.15$ (0.17, $p = 0.38$) and fixing it at zero raises $Q$ by 2.8, within the optimiser's error; $G$ jobs differ from
-$O$ jobs in accumulation. Code: \texttt{IGE/35.EarlyIndustryLatePayoff.py}, \texttt{IGE/42.SchoolingAndJobGrowth.py},
+$O$ jobs in accumulation. Code: \texttt{35.EarlyIndustryLatePayoff.py}, \texttt{42.SchoolingAndJobGrowth.py},
 \texttt{model/hpc\_runs/ige\_full\_20261018\_200456\_j11859363}.} The on-the-job search friction declines with age,
 $\lambda_e(a) = \Lambda(\ell_e + \lambda_a (a - 30)/10)$, and jobs end by displacement with probability
 \begin{equation}\label{eq:modeldelta}
@@ -120,8 +120,8 @@ so parental income enters the starting position directly as well as through scho
 of H3 is $b_1(B) - b_1(W)$.\footnote{Holding schooling fixed, the parental-income gradient of log wages at 25--29 is
 0.174$^{***}$ (White) and 0.137$^{***}$ (Black), $p < 0.01$; at 25--29 the return to a year of schooling is 0.124$^{***}$
 (Black) and 0.045$^{***}$ (White) in earnings, and the difference survives fixed effects for the son's early job
-(0.061$^{***}$) in the PSID but not in the NLSY79 (0.008). Code: \texttt{IGE/42.SchoolingAndJobGrowth.py},
-\texttt{IGE/45.WithinCellIdentification.py}.}
+(0.061$^{***}$) in the PSID but not in the NLSY79 (0.008). Code: \texttt{42.SchoolingAndJobGrowth.py},
+\texttt{45.WithinCellIdentification.py}.}
 
 \paragraph{Decisions.} With $\theta = (r, x, e)$, the values of an employed son with human capital level $h$ in a job
 $(m, j)$ and of a son out of work are
@@ -279,7 +279,7 @@ s_{xy}$, with $S$ the covariance of parental income and schooling and $D$ the me
 income at the reliability ratio (PSID one year 0.585 White, 0.565 Black; NLSY79 one year 0.552 and 0.556, which
 over-corrects its three-year mean). The PSID sample of sons born 1957--64, the NLSY79's cohorts, has 385 White
 sons at ten years and 271 at twenty; its estimates are reported in the table and not interpreted. Code:
-\texttt{IGE/67.LongDifferenceH4.py}, \texttt{IGE/68.LongDifferenceMeasurement.py}; output
+\texttt{67.LongDifferenceH4.py}, \texttt{68.LongDifferenceMeasurement.py}; output
 \texttt{output/long\_difference\_measures.md}.}
 
 \textit{H2 and H3 are one finding.} Neither the pay-off of schooling in accumulation nor the entry return to schooling
@@ -437,16 +437,16 @@ son's friction (shares of years displaced, unemployed or with zero hours), sons 
 cluster-bootstrap draws of 1968 families. Leaving out the pairs in which both generations had such years lowers the
 White wage IGE by 0.032$^{***}$ to 0.066$^{***}$ across bands and the Black earnings IGE by 0.076$^{**}$ to
 0.140$^{**}$, equally by race in the opening ($-0.014$, s.e.\ 0.049): these pairs carry the level of persistence, not
-its racial rise. Code: \texttt{IGE/73.SharedFriction.py}; output \texttt{output/shared\_friction.md}.} The racial
+its racial rise. Code: \texttt{73.SharedFriction.py}; output \texttt{output/shared\_friction.md}.} The racial
 difference in that pay-off is not a matter of how Black fathers' income is measured: with the father's years of
 schooling, fixed before he meets the labor market, as the background measure, a year of it adds 0.021$^{***}$ (s.e.\
 0.006, $p < 0.001$) to White sons' ten-year wage growth at equal own schooling and 0.000 to Black sons', a difference of
 0.021$^{*}$ ($p = 0.051$), and 0.025$^{**}$ ($p = 0.033$) with parental income held fixed.\footnote{Sons 25--55,
 log-wage IGE by five-year band with single-age dummies, s.e.\ clustered by 1968 family; the changes in the opening are
 from 200 cluster-bootstrap draws of families. Father's shares and clean-year income over the son's childhood window
-(Section~\ref{sec:fathers}; \texttt{IGE/24.IGEDecomposition.py}); state at 17 from the family file, 1976 onward. In levels the father's
+(Section~\ref{sec:fathers}; \texttt{24.IGEDecomposition.py}); state at 17 from the family file, 1976 onward. In levels the father's
 schooling coefficient rises with age for both races (0.046$^{***}$ White, 0.033$^{***}$ Black, from 25--29 to 45--49);
-the racial difference is in the growth of the same sons' wages. Code: \texttt{IGE/72.FrictionGenerations.py}; output
+the racial difference is in the growth of the same sons' wages. Code: \texttt{72.FrictionGenerations.py}; output
 \texttt{output/friction\_generations.md} and \texttt{friction\_generations\_boot.json}.}
 
 
@@ -479,8 +479,8 @@ NLSY79, where the growth gradient at equal schooling is itself not significant (
 union coverage does not (0.021, s.e.\ 0.015), and holding training, union coverage, employer size and tenure fixed
 leaves the gradient unchanged (0.007; explained 0.000, s.e.\ 0.001); a job found through friends or relatives grows
 more slowly ($-0.014^{***}$, s.e.\ 0.004) and accounts for 0.001$^{**}$ of the gradient; and in the PSID, following the
-father's industry raises the starting wage, not its growth.\footnote{Code: \texttt{IGE/36.SameEmployerGrowthChecks.py}
-(Section C, NLSY79 same-employer pairs) and \texttt{IGE/32.IndustryCareers.py} (following the father's industry,
+father's industry raises the starting wage, not its growth.\footnote{Code: \texttt{36.SameEmployerGrowthChecks.py}
+(Section C, NLSY79 same-employer pairs) and \texttt{32.IndustryCareers.py} (following the father's industry,
 PSID).} A policy aimed at the channel would have to act on what happens to equally schooled men inside their jobs over
 the first twenty years of the career; the public data name the channel and bound it, but do not observe the employer.
 
@@ -509,7 +509,7 @@ tenure and in $O$ jobs; the PSID's one-year parental measure keeps it at 25--34 
 NLSY79, with five times as many Black movers, does not show it (0.006, s.e.\ 0.013, at 25--34; $-0.002$ at 35--55;
 also at equal schooling and AFQT), so the data sets differ, not the measures; the model does not target
 it.\footnote{Consecutive interviews one to two years apart with a wage at both; PSID moves exclude displacement,
-NLSY79 moves are employer changes between rounds. Code: \texttt{IGE/71.MoveGainAnatomy.py}; output
+NLSY79 moves are employer changes between rounds. Code: \texttt{71.MoveGainAnatomy.py}; output
 \texttt{output/move\_gain\_anatomy.md}.} The share in good jobs after 35 asks for a
 lower job-loss rate in $G$ jobs, not for access that rises with age; the step is coded with the four shares at 35--55 as
 added targets, and its estimation is the next one.

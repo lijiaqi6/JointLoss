@@ -12,7 +12,7 @@ samples or age bands as row panels, coefficient with stars and the standard erro
 the bottom of each panel. *** p<0.01, ** p<0.05, * p<0.1 (p-values as saved by the source script). Multi-line headers
 use nested tabulars, never \shortstack. Every table is wrapped in \resizebox (shrunk to the text width when wider).
 
-Run:  python IGE/28.PaperBTables.py
+Run:  python 28.PaperBTables.py
 """
 from pathlib import Path
 
@@ -226,9 +226,9 @@ def kids(**kw):
     return " / ".join(out)
 
 
-SRC_A = r"Source: \texttt{IGE/26.IGEByAge.py} (\texttt{output/ige\_by\_age.csv}); table built by \texttt{IGE/28.PaperBTables.py}."
-SRC_D = (r"Source: \texttt{IGE/24.IGEDecomposition.py} (\texttt{output/ige\_decomposition.csv}); table built by "
-         r"\texttt{IGE/28.PaperBTables.py}.")
+SRC_A = r"Source: \texttt{26.IGEByAge.py} (\texttt{output/ige\_by\_age.csv}); table built by \texttt{28.PaperBTables.py}."
+SRC_D = (r"Source: \texttt{24.IGEDecomposition.py} (\texttt{output/ige\_decomposition.csv}); table built by "
+         r"\texttt{28.PaperBTables.py}.")
 STARS = r"$^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$."
 
 
@@ -575,8 +575,8 @@ def tab_decomposition():
 
 
 # ================================================================================================ 27.CareerWageGrowth
-SRC_C = (r"Source: \texttt{IGE/27.CareerWageGrowth.py} (\texttt{output/career\_wage\_growth.csv}); table built by "
-         r"\texttt{IGE/28.PaperBTables.py}.")
+SRC_C = (r"Source: \texttt{27.CareerWageGrowth.py} (\texttt{output/career\_wage\_growth.csv}); table built by "
+         r"\texttt{28.PaperBTables.py}.")
 CGROUPS = ["Pooled (weighted)", "Black", "White", "Black - White"]
 CGLAB = {"Pooled (weighted)": "Pooled (weighted)", "Black": "Black", "White": "White",
          "Black - White": "White $-$ Black", "Black + White": "Black and White"}
@@ -781,8 +781,8 @@ def tab_nlsy_career():
 
 # ------------------------------------------------------------------------------------------------ industry (32)
 I = pd.read_csv(OUT / "industry_careers.csv")                    # 32.IndustryCareers.py
-SRC_I = (r"Source: \texttt{IGE/32.IndustryCareers.py} (\texttt{output/industry\_careers.csv}); table built by "
-         r"\texttt{IGE/28.PaperBTables.py}.")
+SRC_I = (r"Source: \texttt{32.IndustryCareers.py} (\texttt{output/industry\_careers.csv}); table built by "
+         r"\texttt{28.PaperBTables.py}.")
 IND = ("Industries harmonised to the ind1990ddx scheme (222 industries, 33 groups). Industry level $P_j$ and career "
        "slope $B_j$ from CPS MORG men aged 25--64, 1992--2002 (743,983 observations): relative log wage $= f(\\text{age}) "
        "+ P_j + B_j(\\text{age}-40)/10$, both employment-weighted mean zero. ")
@@ -943,8 +943,8 @@ def tab_industry_groups():
 
 # ------------------------------------------------------------------------------------------------ family income vs earnings (34)
 F = pd.read_csv(OUT / "income_vs_earnings_ige.csv")              # 34.IncomeVsEarningsIGE.py
-SRC_F = (r"Source: \texttt{IGE/34.IncomeVsEarningsIGE.py} (\texttt{output/income\_vs\_earnings\_ige.csv}); table "
-         r"built by \texttt{IGE/28.PaperBTables.py}.")
+SRC_F = (r"Source: \texttt{34.IncomeVsEarningsIGE.py} (\texttt{output/income\_vs\_earnings\_ige.csv}); table "
+         r"built by \texttt{28.PaperBTables.py}.")
 FGROUPS = ["Black", "White", "White - Black", "Pooled (weighted)"]
 
 
@@ -1016,8 +1016,8 @@ def tab_income_channels():
 
 # ------------------------------------------------------------------------------------------------ early job (35)
 E = pd.read_csv(OUT / "early_industry_late_payoff.csv")          # 35.EarlyIndustryLatePayoff.py
-SRC_E = (r"Source: \texttt{IGE/35.EarlyIndustryLatePayoff.py} (\texttt{output/early\_industry\_late\_payoff.csv}); "
-         r"table built by \texttt{IGE/28.PaperBTables.py}.")
+SRC_E = (r"Source: \texttt{35.EarlyIndustryLatePayoff.py} (\texttt{output/early\_industry\_late\_payoff.csv}); "
+         r"table built by \texttt{28.PaperBTables.py}.")
 
 
 def e_coef(dec=3, **kw):

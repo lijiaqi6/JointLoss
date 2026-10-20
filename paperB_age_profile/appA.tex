@@ -13,7 +13,7 @@ family-income IGE is 0.007 at 25--29, 0.133 at 30--34, 0.189$^{**}$ at 35--39, 0
 at 45--49, with a trend of 0.101$^{**}$ (0.046). A panel of sons observed in every band from 35 to 55 keeps only 351
 Black and 745 White sons, selected on staying in the survey for two decades; its estimates are too imprecise to be
 informative about later changes ($\chi^2(3)=2.32$, $p=0.510$).\footnote{\texttt{output/ige\_by\_age.md}, Sections 1b,
-1c and 2. Code: \texttt{IGE/26.IGEByAge.py}.}
+1c and 2. Code: \texttt{26.IGEByAge.py}.}
 
 \paragraph{Single ages and growth of the same sons.} Figure~\ref{fig:ageprofile} shows the band estimates and the
 Lee--Solon single-age curves for sons and daughters in the PSID and the NLSY79. Following the same sons from 25--29 to
@@ -32,7 +32,7 @@ mobility statistics by age band.
 \begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Points: band-specific estimates with 95\% confidence
 intervals (unbalanced samples); dotted lines: Lee--Solon age-interacted IGE; shaded: the 31--37 window of
 \citet{chetty2020race}. Columns: log IGE of family income, log IGE of own earnings, rank--rank slope of family income.
-Rows: PSID sons, PSID daughters, NLSY79 sons, NLSY79 daughters. Code: \texttt{IGE/26.IGEByAge.py}.\end{minipage}
+Rows: PSID sons, PSID daughters, NLSY79 sons, NLSY79 daughters. Code: \texttt{26.IGEByAge.py}.\end{minipage}
 \end{figure}
 
 \input{tab_attrition}
@@ -71,7 +71,7 @@ composition term is the parametric counterpart of the position evidence of Figur
 father's (or parental) measure, Lee--Solon design at age 40, by race, with 95\% bootstrap confidence intervals; clean
 years A exclude displacement and unemployment, B also reduced hours. Right: decomposition of the racial gap (plotted as Black $-$ White in this figure) in
 the father-earnings IGE for sons 25--55 and 35--55 (Table~\ref{tab:decomposition}). This figure colours Black
-estimates blue and White estimates orange. Code: \texttt{IGE/24.IGEDecomposition.py}.\end{minipage}
+estimates blue and White estimates orange. Code: \texttt{24.IGEDecomposition.py}.\end{minipage}
 \end{figure}
 
 \subsection{Designs that were not informative}
@@ -79,7 +79,7 @@ estimates blue and White estimates orange. Code: \texttt{IGE/24.IGEDecomposition
 \paragraph{Lifetime means.} Averaging each son's earnings over his whole observed career averages the ages before
 and after the divergence. In the lifetime-mean design the White--Black gap in the father-earnings IGE is 0.044
 (0.050), against 0.169$^{**}$ (0.074) at age 40 in the age-interacted design.\footnote{\texttt{output/ige\_decomposition.md},
-Sections 2 and 7. Code: \texttt{IGE/24.IGEDecomposition.py}.}
+Sections 2 and 7. Code: \texttt{24.IGEDecomposition.py}.}
 
 \paragraph{Father's working-life measure.} Measuring the father's earnings over his own working life (25--55) mixes
 years after the son has left home; the gap is 0.129 (0.083). The childhood-window measure is the one the question
@@ -94,7 +94,7 @@ versions.
 \paragraph{Coded occupation changes.} Moves to higher-paying occupations coded from consecutive interviews fall with
 parental income ($-0.031^{***}$), because PSID occupations are coded independently in each wave after 1980 and coded
 changes contain much churning and coding noise. The level decomposition of Section~\ref{sec:careers} is used
-instead.\footnote{\texttt{output/career\_wage\_growth.md}, Section 4. Code: \texttt{IGE/27.CareerWageGrowth.py}.}
+instead.\footnote{\texttt{output/career\_wage\_growth.md}, Section 4. Code: \texttt{27.CareerWageGrowth.py}.}
 
 \paragraph{A fast track inside well-paid cells.} The parental-income gradient of wage growth inside well-paid,
 fast-growing cells (0.146$^{**}$) is larger than outside them (0.043), but the difference, 0.103 ($p=0.113$), is

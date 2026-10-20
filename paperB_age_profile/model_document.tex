@@ -73,7 +73,7 @@ work.\footnote{Risk neutrality is the standard assumption of job-ladder models w
 \citep[e.g.][]{bagger2014tenure}; the paper's moments are wages, job moves and displacements, not consumption or assets
 (consumption is not a target of the companion structural work either). The son's hours carry 0.010 of the 0.220 (Black)
 and 0.012 of the 0.389 (White) elasticity of earnings with respect to fathers' earnings at 40, so hours are not a margin.
-Code: \code{IGE/24.IGEDecomposition.py}. Decision~\ref{dec:prefs}.} The only decisions are whether to accept a job
+Code: \code{24.IGEDecomposition.py}. Decision~\ref{dec:prefs}.} The only decisions are whether to accept a job
 offer, when employed and when not employed.
 
 % =====================================================================================================
@@ -89,7 +89,7 @@ against 5.7\% of Black sons; at equal parental income White sons are 4.2 points 
 four sets by pay and later growth accounts for 0.271$^{***}$ (s.e.\ 0.067) of the pooled rise of persistence after 35 and
 0.237$^{***}$ (0.087) of the racial divergence, about half of what the 11 $\times$ 33 early cell accounts for (0.405$^{***}$
 and 0.493$^{***}$; paper Table 7), so two job types capture a large part, not all, of the early-job channel; the rest is
-carried by the match component and $h$. Decision~\ref{dec:types}. Code: \code{IGE/35.EarlyIndustryLatePayoff.py}, Section D3.} Jobs differ in two ways: the mean of the match
+carried by the match component and $h$. Decision~\ref{dec:types}. Code: \code{35.EarlyIndustryLatePayoff.py}, Section D3.} Jobs differ in two ways: the mean of the match
 component (Section~\ref{sec:wages}) and the rate at which human capital accumulates on them.
 
 \paragraph{Offers.} An employed son of age $a$ receives an outside offer with probability $\lambda_e(a) =
@@ -107,12 +107,12 @@ One access function governs the whole career, so one race parameter, $\alpha_3$,
 race $\times$ parental-income term: the racial difference in the parental-income gradient of access is
 $-0.022$ (s.e.\ 0.024) once schooling and the father's job are held fixed. The logistic form lets access depend
 nonlinearly on parental income, which is how position in the parental distribution can account for part of the racial
-divergence before race is asked to (paper Section 3.4). Code: \code{IGE/35.EarlyIndustryLatePayoff.py}.} The search
+divergence before race is asked to (paper Section 3.4). Code: \code{35.EarlyIndustryLatePayoff.py}.} The search
 friction $\lambda_e(a)$ is common to both races and both job types.\footnote{Rates of moving to a new employer without
 displacement are 0.125 (Black) and 0.130 (White) per year at 25--34; Black sons of richer parents gain less at a move
 (racial difference in the parental-income gradient of the gain 0.069$^{**}$, s.e.\ 0.028), which a common access
 function produces through fewer $G$ offers. A race-specific search friction on the job \citep[as in][]{bowlus2002discrimination}
-is added only if the move moments cannot be matched without it. Code: \code{IGE/42.SchoolingAndJobGrowth.py}, Section C.}
+is added only if the move moments cannot be matched without it. Code: \code{42.SchoolingAndJobGrowth.py}, Section C.}
 
 \paragraph{Displacement.} An employed son loses his job, with its match component, with probability
 \begin{equation}\label{eq:delta}
@@ -122,7 +122,7 @@ is added only if the move moments cannot be matched without it. Code: \code{IGE/
 where $u_t$ is the national unemployment rate (Section~\ref{sec:agg}).\footnote{At 25--34, 17.6\% of Black and 10.3\% of
 White sons' interview pairs include a displacement (plant closure or move, layoff or firing); the probability falls with
 parental income by 0.037$^{***}$ (s.e.\ 0.009) for White and 0.038$^{***}$ (s.e.\ 0.014) for Black sons, so $\delta_1$ is
-common. Code: \code{IGE/42.SchoolingAndJobGrowth.py}, Section C.} The age slope $\delta_a$ is step 2 of the model's development (Decision~\ref{dec:age}): displacement per interview
+common. Code: \code{42.SchoolingAndJobGrowth.py}, Section C.} The age slope $\delta_a$ is step 2 of the model's development (Decision~\ref{dec:age}): displacement per interview
 pair falls from 0.173 (Black) and 0.102 (White) at 25--34 to 0.111 and 0.076 at 35--55. There are no voluntary quits
 into non-employment. A son displaced in a year can be re-employed in the same year: he draws an out-of-work offer with
 probability $\lambda_u(t)$ and accepts it by the rule for a son out of work (step 3, Decision~\ref{dec:rehire}).
@@ -141,12 +141,12 @@ accumulation (step 4, Decision~\ref{dec:xacc}), $d_u$ the depreciation of human 
 in the estimated model, Decision~\ref{dec:fixed}), and $\eta \sim N(0, \sigma_\eta^2)$ a permanent shock. Accumulation loads on schooling and, through $\gamma_x(r)$, on parental income; not on measured ability.\footnote{Once schooling is held fixed, the parental-income gradient of
 same-employer wage growth at 25--34 is 0.008 ($p=0.17$) in the PSID and 0.002 ($p=0.73$) in the NLSY79; in the NLSY79 the
 rise of the AFQT return with age does not differ by race ($-0.031$, s.e.\ 0.025) while the racial difference in the rise
-of the schooling return survives the AFQT (0.021$^{**}$, s.e.\ 0.009). Code: \code{IGE/36.SameEmployerGrowthChecks.py},
-\code{IGE/45.WithinCellIdentification.py}.} The race-specific pay-off $\gamma_1(r)$ is a parameter of accumulation, not of
+of the schooling return survives the AFQT (0.021$^{**}$, s.e.\ 0.009). Code: \code{36.SameEmployerGrowthChecks.py},
+\code{45.WithinCellIdentification.py}.} The race-specific pay-off $\gamma_1(r)$ is a parameter of accumulation, not of
 access.\footnote{The racial difference in the rise of the return to schooling with age is 0.058$^{***}$ (s.e.\ 0.014) in
 earnings without job controls, 0.061$^{***}$ (0.018) with fixed effects for the son's job at 25--34 and 0.066$^{***}$
 (0.016) with fixed effects for his current job; it is 0.063$^{**}$ (0.027) net of the calendar trend of the return.
-Code: \code{IGE/45.WithinCellIdentification.py}.}
+Code: \code{45.WithinCellIdentification.py}.}
 
 \paragraph{Wages and earnings.} The log hourly wage is
 \begin{equation}\label{eq:wage}
@@ -209,7 +209,7 @@ shock and no shifter of access by entry conditions.\footnote{The state unemploym
 jobs unchanged (0.004, s.e.\ 0.008 per point), so access gets no aggregate shifter; the observed national path of each
 cohort, fed through $\lambda_u(t)$ and $\delta(t)$, must reproduce the entry scar (wages at 25--34 $-0.013^{**}$, s.e.\
 0.005, per point) and the larger racial opening after slack entries (0.362$^{***}$ against 0.208$^{**}$) without a
-parameter of its own. Code: \code{IGE/49.PaperBPolicyShocks.py}, design D1.}
+parameter of its own. Code: \code{49.PaperBPolicyShocks.py}, design D1.}
 
 % =====================================================================================================
 \section{Initial conditions}\label{sec:init}
@@ -221,11 +221,11 @@ h_0 = b_0 + b_x\, (x - \bar x) + b_1(r)\, (e - 12) + \nu, \qquad \nu \sim N(0, \
 Parental income enters the starting position directly as well as through schooling and access.\footnote{The
 parental-income gradient of sons' log wages at 25--29 is 0.220$^{***}$ (White) and 0.174$^{***}$ (Black); holding years of
 schooling fixed it is 0.174$^{***}$ and 0.137$^{***}$. Access to $G$ jobs at entry carries part of the rest; $b_x$ carries
-the remainder, common by race unless the nested models require otherwise. Code: \code{IGE/42.SchoolingAndJobGrowth.py},
+the remainder, common by race unless the nested models require otherwise. Code: \code{42.SchoolingAndJobGrowth.py},
 Section B.} The entry return to schooling may differ by race.\footnote{At 25--29 the return to a year of schooling in
 earnings is 0.124$^{***}$ (Black) against 0.045$^{***}$ (White), and the difference survives fixed effects for the son's
 early job (0.061$^{***}$, s.e.\ 0.015) in the PSID but not in the NLSY79 (0.008). $b_1(B) - b_1(W)$ is therefore
-optional (model D). Code: \code{IGE/45.WithinCellIdentification.py}.} At entry the son receives one offer from
+optional (model D). Code: \code{45.WithinCellIdentification.py}.} At entry the son receives one offer from
 (\ref{eq:access}).
 
 The simulated population is drawn from the PSID sons with replacement: race, log parental income (13--19 mean), years of
@@ -384,7 +384,7 @@ Race at equal parental income (White $-$ Black) & \multicolumn{2}{c}{0.042$^{***
 \bottomrule
 \end{tabular}
 \par\smallskip
-{\footnotesize Source: \code{IGE/35.EarlyIndustryLatePayoff.py}, Section D3. $^{***}$ $p<0.01$.}
+{\footnotesize Source: \code{35.EarlyIndustryLatePayoff.py}, Section D3. $^{***}$ $p<0.01$.}
 \end{table}
 
 \paragraph{Weighting and estimation.} The weighting matrix is diagonal, with the inverse of each moment's bootstrap
@@ -453,7 +453,7 @@ over ten simulation seeds; \code{model/validation\_run.py}):
   (\code{core.routes}, \code{core.levels}, \code{model/panel\_diag.py});
   \item the change of a son's own mean log wage from 25--29 to 35--39 and to 45--49 on parental income, raw and net of
   schooling, with the 13--19 mean and with a one-year measure of parental income (\code{core.longdiff},
-  \code{IGE/67.LongDifferenceH4.py}, \code{IGE/68.LongDifferenceMeasurement.py}).
+  \code{67.LongDifferenceH4.py}, \code{68.LongDifferenceMeasurement.py}).
 \end{itemize}
 Not computed, because the model does not contain the object: the NLSY79 and NLSY97 profiles (they need a types file and
 the reliability correction of the NLSY parental measures), the earnings IGE (no hours margin) and the opening among
