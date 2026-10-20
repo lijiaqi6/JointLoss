@@ -88,6 +88,12 @@ def main():
             RES[f"{lab}|{lab_c[k]}"] = {"b0": list(b0[:2]), "b": list(b[:2]), "share": list(sh[:2]),
                                         "wealth": list(wc[:2]) if wc else None, "wealth_share": list(ws[:2]) if ws else None}
         RES[f"{lab}|groups"] = {g: list(est(res, 6, f"c:{g}", 0, share=True)[:2]) for g in G if g != "structure"}
+        for k in cells:
+            if k in res:
+                st = lambda g: "b" if g == "b" else f"c:{g}"  # noqa: E731
+                RES[f"{lab}|groups|{lab_c[k]}"] = {g: list(est(res, k, st(g), 0, share=True)[:2])
+                                                   for g in list(G) + ["b"] if g != "structure"
+                                                   and est(res, k, st(g), 0, share=True)}
     md += ["", "Group shares of the 25-55 IGE (split B / + wealth rank / + wealth asinh):", "",
            "| group | split B | + wealth rank | + asinh |", "|---|---|---|---|"]
     gl = list(RES["split B (no wealth)|groups"]) + ["wealth"]

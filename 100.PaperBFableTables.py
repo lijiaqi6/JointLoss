@@ -300,6 +300,38 @@ def t_referee():
                                                                                   "110.MultipleTesting.py"))
 
 
+def t_split_main():
+    F = J("what_is_passed_on_rest")
+    W = J("parental_wealth")
+    k = "+ wealth: within-birth-year rank|groups|"
+    rows_def = [("wage", "Parents' hourly wage"), ("parents' schooling", "Parents' schooling"), ("wealth", "Parents' net worth"),
+                ("stability", "Parents' spells out of work"), ("hours", "Parents' hours"), ("group", "State labor market"),
+                ("transfers", "Transfers (AFDC/TANF years, transfer share)"), ("assets", "Asset income, home ownership"),
+                ("earnings", "Labor income beyond wage and hours"), ("others", "Other members' income"),
+                ("family size", "Family size"), ("b", "Rest: parental income at equal measures")]
+    heads = ["All sons, 25--55", "Born 1964+, 25--29", "Born 1964+, 35--39", "Born 1964+, 25--55"]
+    rows = []
+    for g, lab in rows_def:
+        full = F.get(f"pooled|ly|{g}", {}).get("B_share") if g != "wealth" else None
+        cells = [cell(full, pct=True) if full else "---"]
+        for c_ in ("25-29", "35-39", "25-55"):
+            v = W[k + c_].get(g)
+            cells.append(cell(v, pct=True) if v else "")
+        rows.append((lab, cells))
+    rows.append(("IGE of ln earnings", [cell(F["pooled|ly|b0"][3])] +
+                 [cell(W[f"+ wealth: within-birth-year rank|{c_}"]["b0"]) for c_ in ("25-29", "35-39", "25-55")]))
+    table("tab_split_main", "What parents pass on: shares of the IGE of sons' earnings (PSID)", "tab:split_main", heads,
+          [("Share of the IGE (\\%)", rows)],
+          "Exact Gelbach split of the IGE of sons' ln earnings into parental components (means over the son's ages "
+          "13--19) and the rest, parental income at equal measures. Column 1: all sons, without wealth (the PSID measures "
+          "net worth only from 1984). Columns 2--4: sons born 1964 and later, whose teens fall in the wealth waves, with "
+          "parental net worth (rank within the son's birth year, mean over the wealth waves at 12--20). What holds in every "
+          "version (Appendix~B: the original split, the measurement-error correction, four data sets): the parents' wage "
+          "carries a fifth or more, wealth three tenths where it is measured, the parents' schooling an eighth without "
+          "wealth and less with it, spells a few percent, hours and place nothing. PSID weights; "
+          "200 cluster-bootstrap draws of 1968 families. " + src("80.WhatIsPassedOnRest.py", "98.ParentalWealth.py"))
+
+
 if __name__ == "__main__":
     t_layoff_selection()
     t_layoff_exog()
@@ -308,3 +340,4 @@ if __name__ == "__main__":
     t_eitc()
     t_layoff_mechanism()
     t_referee()
+    t_split_main()
