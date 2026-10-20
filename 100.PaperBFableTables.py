@@ -254,6 +254,52 @@ def t_layoff_mechanism():
           "panel B. " + src("104.FatherPathRecession.py", "105.DaughtersMechanism.py", "106.LayoffCareerMechanism.py"))
 
 
+def t_referee():
+    Q = J("layoff_referee_checks")
+    D = J("daughters_referee_checks")
+    MT = J("multiple_testing")
+    heads = ["Estimate"]
+    E = Q["event"]
+    rows_e = [(f"Father's ln earnings, event time {k}", [cell(E["ly"]["coef"][str(k)])]) for k in (-6, -4, -3, -2, 0, 1, 3, 6)]
+    rows_e.append(("\\quad pre-event coefficients jointly zero: $p$", [f"{E['ly']['pre_wald'][2]:.3f}"]))
+    rows_e.append(("Father employed, event time +1", [cell(E["emp"]["coef"]["1"])]))
+    rows_e.append(("\\quad pre-event coefficients jointly zero: $p$", [f"{E['emp']['pre_wald'][2]:.3f}"]))
+    P = Q["placebo27"]
+    cb = Q["closure_bound"]
+    rows_p = [("Layoff share at the son's 27--35 $\\times$ age", [cell(P["later"])]),
+              ("\\quad teen layoff share $\\times$ age, same sons", [cell(P["teen"])]),
+              ("Largest closure cost in the 95\\% interval, as a share of the layoff change", [f"{cb['share_of_layoff']:.0%}".replace("%", "\\%")]),
+              ("Minimum detectable layoff change / within-son slope", [f"{cb['mde_layoff']:.3f} / {cb['mde_fe']:.3f}"]),
+              ("Rank change (percentiles), 45--49 minus 25--29", [cell(Q["rank|f_sh_layoff"]["ch"])])]
+    rows_d = [("Mother employed in the father's layoff waves (child FE)", [cell(D["mother|m_emp"])]),
+              ("Daughters' slope $\\times$ (mother worked more after the layoff)", [cell(D["momup|daughters"]["inter"])]),
+              ("Daughters observed with a wage at 45--49, on the layoff share", [cell(D["observed|daughters|4"][:2])]),
+              ("Daughters' within-person wage slope, inverse-probability weighted", [cell(D["ipw|daughters"][1])]),
+              ("Sons' within-person wage slope, inverse-probability weighted", [cell(D["ipw|sons"][1])]),
+              ("Years of schooling, daughters minus sons", [cell(D["schooling"]["diff"])])]
+    rows_m = []
+    for k, lab in (("A. The layoff cost|layoff band change (91)", "Layoff change (family of 6, Holm)"),
+                   ("A. The layoff cost|layoff within-son slope (88)", "Within-son slope (family of 6, Holm)"),
+                   ("B. Sons vs daughters|daughters - sons, wage change", "Daughters $-$ sons, wage change (family of 4, Holm)"),
+                   ("B. Sons vs daughters|daughters - sons, wage within person", "Daughters $-$ sons, wage within person (Holm)")):
+        rows_m.append((lab, [f"{MT[k]['p']:.4f} $\\to$ {MT[k]['adj']:.4f}"]))
+    table("tab_layoff_referee", "Pre-trends, a later-layoff placebo, bounds, ranks, the daughters' selection and multiple testing (PSID)",
+          "tab:layoff_referee", heads,
+          [("A. The father around his first layoff in a son's teens (event study; reference: one year before)", rows_e),
+           ("B. Placebo, bounds and ranks", rows_p),
+           ("C. The daughters: the mother, who is observed, schooling", rows_d),
+           ("D. Multiple testing: $p$ $\\to$ adjusted $p$", rows_m)],
+          "Panel A: father-years at 25--64 of the fathers of father-present sons; father and calendar-year fixed effects and "
+          "single-age dummies; event time binned at $-6$ and $+6$; treated = the 212 fathers with a layoff in a son's "
+          "teen window. Panel B: within-son design of Table~\\ref{tab:layoff_selection}; minimum detectable effects for 80\\% "
+          "power at 5\\%; ranks are weighted percentiles within single year of age $\\times$ calendar year. Panel C: the "
+          "reduced specification of Table~\\ref{tab:layoff_exog} panel B; inverse-probability weights from a logit of being "
+          "observed with a wage in the band. Panel D: families fixed before adjusting (six tests of the layoff cost; four "
+          "of the sons--daughters difference). Clustered by 1968 family. " + src("108.LayoffRefereeChecks.py",
+                                                                                  "109.DaughtersRefereeChecks.py",
+                                                                                  "110.MultipleTesting.py"))
+
+
 if __name__ == "__main__":
     t_layoff_selection()
     t_layoff_exog()
@@ -261,3 +307,4 @@ if __name__ == "__main__":
     t_age_period()
     t_eitc()
     t_layoff_mechanism()
+    t_referee()
