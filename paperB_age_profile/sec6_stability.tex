@@ -103,6 +103,21 @@ spells would carry it.
 
 \input{tab_layoff_selection}
 
+\paragraph{What kind of father.} The costly layoff marks a father whose employment stays unstable. When his son is
+20--24, a unit of teen layoff share goes with more years unemployed (0.289$^{***}$) and more new layoffs (0.132$^{***}$),
+at equal parental income and the father's own teen-window wage and hours, and with somewhat lower earnings
+($-0.193^{*}$); his employment does not change. The small-loss layoffs, which carry the son's cost, are the ones
+followed by new layoffs (0.220$^{***}$, against 0.057 after a large loss) (panel A of Table~\ref{tab:layoff_mechanism}).
+
+\paragraph{Layoffs in bad times.} Layoffs that fall when the father's sector or his state is in decline, and so say
+less about him \citep{gibbons1991layoffs}, still cost the son, about half as much. Classing each teen layoff year as bad
+times when national employment of the father's sector fell or his state's unemployment rate was at least a point above
+its mean (53 percent of layoff years, against 44 percent of all window years), the change between 25--29 and 45--49 is
+$-0.675^{**}$ ($p = 0.035$) for bad-times layoffs and $-1.400^{***}$ for the others; within the same son $-0.166$ ($p =
+0.27$) and $-0.408^{***}$; the two do not differ significantly ($p = 0.26$; panel B).\footnote{With the sector's decline
+alone: $-0.664^{*}$ against $-1.143^{***}$, $p = 0.66$ for equality within son. Code: \texttt{104.FatherPathRecession.py}.}
+The cost is therefore not selection alone, but the layoffs that are the father's own carry more of it.
+
 \paragraph{Shocks the father did not choose.} A national decline of the father's industry during the son's teens raises
 the father's unemployment but carries no cost to the son. With sector and birth-year fixed effects, the share of the
 son's 12--18 in which national employment of the father's sector fell raises the father's unemployment share by
@@ -116,13 +131,34 @@ his first teen wave, in 15 sectors; national employment from the BLS Current Emp
 sons, 632 sector $\times$ birth-year clusters. Code: \texttt{93.LayoffIndustryShocks.py}.}
 
 \paragraph{Daughters.} The cost is specific to sons. In one reduced specification for both sexes, a father's teen layoff
-lowers his son's hourly wage at 45--49 relative to 25--29 by 0.538$^{**}$ and raises his daughter's by 0.387$^{*}$;
-within the same daughter, her wage grows faster by 0.168$^{**}$ ($p = 0.025$) a decade (panel B). A trait of the father
-passed on to all his children would lower both profiles. That daughters of laid-off fathers gain with age---through
-attachment to work, schooling or occupation---is a finding the data here do not explain.\footnote{145 daughters with a
-teen layoff year are observed at 45--49. Code: \texttt{92.LayoffDaughters.py}.}
+changes his son's hourly wage between 25--29 and 45--49 by $-0.538^{**}$ and his daughter's by $+0.387^{*}$; within the
+same person the slopes are $-0.086$ (s.e.\ 0.096) and $+0.168^{**}$ ($p = 0.025$) (panel B of Table~\ref{tab:layoff_exog}).
+A trait of the father passed on to all his children would lower both profiles. The daughters' gain is not selection into
+work or marriage: their employment does not change, and the within-person wage slope is $0.169^{**}$ with partnership
+and full-year work held fixed. It does not reach their earnings with zero years kept (a change of 0.188, s.e.\ 0.418,
+in a Poisson model, against $-0.523^{**}$ for sons), and their family income rises at 45--49 because their partners earn
+more ($0.677^{***}$) (panel D of Table~\ref{tab:layoff_mechanism}). Why daughters of laid-off fathers are paid more when
+they work, and partner with higher earners, the data here do not explain.\footnote{145 daughters with a teen layoff year
+are observed at 45--49. Code: \texttt{92.LayoffDaughters.py}, \texttt{105.DaughtersMechanism.py}.}
 
 \input{tab_layoff_exog}
+
+\subsection{Where in the son's career the cost shows}
+
+The cost is a lower wage within the son's occupation in mid-career; it is not where he starts and not his own
+instability. Splitting his log wage into the CPS wage score of his occupation and his wage within it, the layoff's change
+of $-0.603^{***}$ between 25--29 and 45--49 is $-0.392^{**}$ within the occupation and $-0.171^{**}$ between occupations
+(panel C of Table~\ref{tab:layoff_mechanism}). Section~\ref{sec:skill} found that the job a son holds at 25--34 predicts
+how far he pulls away; the layoff does not work through it. A teen layoff lowers the chance of starting in a well-paid,
+fast-growing job by only 0.041 ($p = 0.15$), and holding the son's early industry and occupation group fixed leaves the
+within-son cost at $-0.225^{**}$ (against $-0.240^{**}$). Nor does the son repeat his father's instability: his own
+displacement, unemployment, job changes and same-employer wage growth do not move with his father's teen layoffs. The one
+trace is tenure, shorter by 4.2 years per unit share at 45--49 ($p = 0.093$), about seven months for one layoff
+year.\footnote{Code: \texttt{106.LayoffCareerMechanism.py}.} What lowers the pay of these sons within their
+occupation in their forties---skills, effort, health, or the jobs within an occupation they hold---the data here do not
+separate.
+
+\input{tab_layoff_mechanism}
 
 \subsection{Which parental income is passed on}
 

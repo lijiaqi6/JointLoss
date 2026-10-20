@@ -209,9 +209,55 @@ def t_age_period():
                                                                       "87.NLSY79YouthAFQT.py"))
 
 
+def t_layoff_mechanism():
+    P = J("father_path_recession")
+    D = J("daughters_mechanism")
+    M = J("layoff_career_mechanism")
+    heads = ["Estimate"]
+    rows_p = [("Father unemployed (share of years)", [cell(P["path|f_sh_layoff"]["fp_unemp"])]),
+              ("Father laid off again (share of years)", [cell(P["path|f_sh_layoff"]["fp_lay"])]),
+              ("Father's ln earnings", [cell(P["path|f_sh_layoff"]["fp_ly"])]),
+              ("Father employed (share of years)", [cell(P["path|f_sh_layoff"]["fp_emp"])])]
+    k1 = "bad|bad times (sector decline or high state unemployment)|"
+    rows_b = [("Bad-times layoffs: change 45--49 minus 25--29", [cell(P[k1 + "lay_bad"]["ch"])]),
+              ("Other layoffs: change 45--49 minus 25--29", [cell(P[k1 + "lay_good"]["ch"])]),
+              ("Bad-times layoffs: within son $\\times$ age", [cell(P[k1 + "lay_bad"]["fe"])]),
+              ("Other layoffs: within son $\\times$ age", [cell(P[k1 + "lay_good"]["fe"])]),
+              ("\\quad equal within son: $p$", [f"{P[k1 + 'wald'][2]:.3f}"])]
+    rows_m = [("ln hourly wage", [cell(M["ln hourly wage"]["ch"])]),
+              ("\\quad occupation wage score (between occupations)", [cell(M["occupation wage score (between)"]["ch"])]),
+              ("\\quad wage within the occupation", [cell(M["wage within the occupation (within)"]["ch"])]),
+              ("Same-employer annual wage growth", [cell(M["same-employer annual wage growth"]["ch"])]),
+              ("Displaced in the year", [cell(M["displaced (closure / layoff) in the year"]["ch"])]),
+              ("Tenure with the employer (years), at 45--49", [cell(M["tenure with the employer (years)"]["b"])]),
+              ("Good job at 25--34 (one row per son)", [cell(M["G25"])]),
+              ("Within-son ln earnings slope, early job held fixed", [cell(M["fe_early"]["early_fixed"])])]
+    rows_d = [("Daughters: ln wage within person, + partnered and full year", [cell(D["daughters|ln hourly wage | partnered, full year"]["fe"])]),
+              ("Daughters: employed, within person", [cell(D["daughters|employed"]["fe"])]),
+              ("Daughters: partner's ln earnings, change", [cell(D["daughters|partner's ln earnings"]["change"])]),
+              ("Daughters: earnings with zeros (Poisson), change", [cell(D["daughters|ppml"]["change"])]),
+              ("Sons: earnings with zeros (Poisson), change", [cell(D["sons|ppml"]["change"])])]
+    table("tab_layoff_mechanism", "What kind of father, which layoffs, where in the son's career, and the daughters (PSID)",
+          "tab:layoff_mechanism", heads,
+          [("A. The father at the son's 20--24, on the teen layoff share", rows_p),
+           ("B. Layoffs in bad times (sector decline or high state unemployment) and other layoffs, son's ln earnings", rows_b),
+           ("C. The son's career: change 45--49 minus 25--29 unless stated", rows_m),
+           ("D. Daughters and sons, one reduced specification", rows_d)],
+          "Coefficients of the father's teen layoff share (per unit share; one layoff year = one seventh). Panel A: one "
+          "row per father-present son, with ln parental income, the father's teen-window ln wage and ln hours and "
+          "cohort dummies. Panels B--C: at equal ln parental income and every component of Table~\\ref{tab:passed_on} "
+          "panel A; band changes with 200 common bootstrap draws, within-son slopes clustered by 1968 family. Panel B: "
+          "a bad-times layoff year is one in which national employment of the father's sector fell or his state's "
+          "unemployment rate was at least a point above its 1976--2023 mean. Panel C: the son's ln wage is his "
+          "occupation's CPS wage score plus his wage within it; a good job is a modal occupation $\\times$ industry cell "
+          "at 25--34 in the well-paid, fast-growing set. Panel D: the specification of Table~\\ref{tab:layoff_exog} "
+          "panel B. " + src("104.FatherPathRecession.py", "105.DaughtersMechanism.py", "106.LayoffCareerMechanism.py"))
+
+
 if __name__ == "__main__":
     t_layoff_selection()
     t_layoff_exog()
     t_split_robust()
     t_age_period()
     t_eitc()
+    t_layoff_mechanism()

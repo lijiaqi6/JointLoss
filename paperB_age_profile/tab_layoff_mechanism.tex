@@ -1,0 +1,81 @@
+\begin{table}[!htbp]
+\centering
+\caption{What kind of father, which layoffs, where in the son's career, and the daughters (PSID)}
+\label{tab:layoff_mechanism}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Estimate\end{tabular} \\
+ & (1) \\
+\midrule
+\multicolumn{2}{l}{\textit{A. The father at the son's 20--24, on the teen layoff share}} \\
+Father unemployed (share of years) & $0.289^{***}$ \\
+ & (0.061) \\
+Father laid off again (share of years) & $0.132^{***}$ \\
+ & (0.035) \\
+Father's ln earnings & $-0.193^{*}$ \\
+ & (0.117) \\
+Father employed (share of years) & $0.020$ \\
+ & (0.052) \\
+\addlinespace
+\multicolumn{2}{l}{\textit{B. Layoffs in bad times (sector decline or high state unemployment) and other layoffs, son's ln earnings}} \\
+Bad-times layoffs: change 45--49 minus 25--29 & $-0.675^{**}$ \\
+ & (0.320) \\
+Other layoffs: change 45--49 minus 25--29 & $-1.400^{***}$ \\
+ & (0.378) \\
+Bad-times layoffs: within son $\times$ age & $-0.166$ \\
+ & (0.149) \\
+Other layoffs: within son $\times$ age & $-0.408^{***}$ \\
+ & (0.139) \\
+\quad equal within son: $p$ & 0.263 \\
+\addlinespace
+\multicolumn{2}{l}{\textit{C. The son's career: change 45--49 minus 25--29 unless stated}} \\
+ln hourly wage & $-0.603^{***}$ \\
+ & (0.203) \\
+\quad occupation wage score (between occupations) & $-0.171^{**}$ \\
+ & (0.076) \\
+\quad wage within the occupation & $-0.392^{**}$ \\
+ & (0.188) \\
+Same-employer annual wage growth & $0.028$ \\
+ & (0.064) \\
+Displaced in the year & $-0.038$ \\
+ & (0.067) \\
+Tenure with the employer (years), at 45--49 & $-4.214^{*}$ \\
+ & (2.506) \\
+Good job at 25--34 (one row per son) & $-0.041$ \\
+ & (0.028) \\
+Within-son ln earnings slope, early job held fixed & $-0.225^{**}$ \\
+ & (0.095) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Continued on the next table; notes below its last part.}\end{minipage}
+\end{table}
+\begin{table}[!htbp]
+\centering
+\addtocounter{table}{-1}
+\caption{What kind of father, which layoffs, where in the son's career, and the daughters (PSID) (continued)}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Estimate\end{tabular} \\
+ & (1) \\
+\midrule
+\multicolumn{2}{l}{\textit{D. Daughters and sons, one reduced specification}} \\
+Daughters: ln wage within person, + partnered and full year & $0.169^{**}$ \\
+ & (0.075) \\
+Daughters: employed, within person & $-0.073$ \\
+ & (0.052) \\
+Daughters: partner's ln earnings, change & $0.764^{***}$ \\
+ & (0.240) \\
+Daughters: earnings with zeros (Poisson), change & $0.188$ \\
+ & (0.418) \\
+Sons: earnings with zeros (Poisson), change & $-0.523^{**}$ \\
+ & (0.243) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Coefficients of the father's teen layoff share (per unit share; one layoff year = one seventh). Panel A: one row per father-present son, with ln parental income, the father's teen-window ln wage and ln hours and cohort dummies. Panels B--C: at equal ln parental income and every component of Table~\ref{tab:passed_on} panel A; band changes with 200 common bootstrap draws, within-son slopes clustered by 1968 family. Panel B: a bad-times layoff year is one in which national employment of the father's sector fell or his state's unemployment rate was at least a point above its 1976--2023 mean. Panel C: the son's ln wage is his occupation's CPS wage score plus his wage within it; a good job is a modal occupation $\times$ industry cell at 25--34 in the well-paid, fast-growing set. Panel D: the specification of Table~\ref{tab:layoff_exog} panel B. Source: \texttt{104.FatherPathRecession.py}, \texttt{105.DaughtersMechanism.py}, \texttt{106.LayoffCareerMechanism.py}; table built by \texttt{100.PaperBFableTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}
