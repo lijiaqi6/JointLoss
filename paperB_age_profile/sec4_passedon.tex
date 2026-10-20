@@ -67,8 +67,24 @@ contribution grows with the son's age, from 0.014 at 25--29 to 0.075$^{***}$ at 
 0.026$^{**}$ ($p = 0.015$), 6.6\% of the IGE. Asset income, home ownership, other members' income and family size carry
 nothing. With the father's schooling in, the wage component falls from 19.0\% to 12.0\%$^{**}$: part of what the wage
 row measured is the schooling behind it. Half of the IGE remains parental income at equal measured wage, hours, spells,
-place, schooling, transfers, assets and family size: money, or what it buys, which these data do not measure
-\citep{cardak2013intergenerational, pfeffer2018generations}.
+place, schooling, transfers, assets and family size.
+
+Three checks say what this half is and is not. First, it is not an accounting artefact: the parents' labor income and
+the income shares by source predict two thirds of the variance of log parental income, and without them the rest is
+53.0\%$^{***}$; it is identified by the 17 percent of that variance that no measured component or resource predicts.
+Second, part of it is measurement error in the components. Measuring each component on two halves of the son's teen
+waves and instrumenting one half with the other raises the parents' wage share from 28.0\%$^{***}$ to 36.8\%$^{***}$ and
+lowers the rest from 64.0\%$^{***}$ to 55.2\%$^{***}$ in that split; the spells share falls (4.2\%$^{**}$ to 2.7\%), because
+layoffs in alternate years are different events and the instrument keeps only the father's persistent propensity
+(panel A of Table~\ref{tab:split_robust}). Third, where wealth is measured it carries much of what is left. For the
+2,828 sons born 1964 and later, whose teens fall in the PSID's wealth waves, the components and resources leave a rest
+of 11.4\% (n.s.), and the parents' net worth, ranked within the son's birth year, carries 29.1\%$^{***}$ of the IGE, its
+contribution doubling from 0.062$^{**}$ at 25--29 to 0.127$^{***}$ at 35--39; it takes over the asset-income share, part of
+the wage share and most of the rest (panel C) \citep{pfeffer2018generations}.\footnote{Net worth with home equity, mean
+over the wealth waves (1984, 1989, 1994, 1999 on) at the son's 12--20. Code: \texttt{96.SplitMeasurementError.py},
+\texttt{97.RestIdentification.py}, \texttt{98.ParentalWealth.py}.}
+
+\input{tab_split_robust}
 
 \subsection{Four data sets}
 

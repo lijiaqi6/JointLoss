@@ -1,0 +1,59 @@
+\begin{table}[!htbp]
+\centering
+\caption{Layoffs the father did not choose, daughters, and insurance at the father's wage (PSID)}
+\label{tab:layoff_exog}
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\resizebox*{!}{\ifdim\totalheight>0.85\textheight 0.85\textheight\else\totalheight\fi}{%
+\begin{tabular}{lc}
+\toprule
+ & \begin{tabular}[b]{@{}c@{}}Estimate\end{tabular} \\
+ & (1) \\
+\midrule
+\multicolumn{2}{l}{\textit{A. National employment decline of the father's sector at the son's 12--18}} \\
+First stage: father's layoff share on the decline & $0.030^{*}$ \\
+ & (0.017) \\
+First stage: father's unemployment share on the decline & $0.080^{**}$ \\
+ & (0.033) \\
+First stage: father's closure share on the decline & $-0.006$ \\
+ & (0.014) \\
+Reduced form: son's ln earnings, change 45--49 minus 25--29 & $0.241$ \\
+ & (0.203) \\
+Reduced form within son: decline at 12--18 $\times$ age & $0.143^{**}$ \\
+ & (0.063) \\
+\quad placebo: decline at 5--11 $\times$ age & $-0.058$ \\
+ & (0.066) \\
+\quad placebo: decline at 19--25 $\times$ age & $0.093$ \\
+ & (0.061) \\
+OLS within son: layoff share $\times$ age, same sons & $-0.211^{**}$ \\
+ & (0.096) \\
+\addlinespace
+\multicolumn{2}{l}{\textit{B. Sons and daughters, one reduced specification}} \\
+Sons, ln hourly wage: layoff 45--49 minus 25--29 & $-0.538^{**}$ \\
+ & (0.213) \\
+Sons, ln hourly wage: within person, layoff $\times$ age & $-0.086$ \\
+ & (0.096) \\
+Sons, ln earnings: layoff 45--49 minus 25--29 & $-0.855^{***}$ \\
+ & (0.257) \\
+Sons, ln earnings: within person, layoff $\times$ age & $-0.180^{*}$ \\
+ & (0.108) \\
+Daughters, ln hourly wage: layoff 45--49 minus 25--29 & $0.387^{*}$ \\
+ & (0.214) \\
+Daughters, ln hourly wage: within person, layoff $\times$ age & $0.168^{**}$ \\
+ & (0.075) \\
+Daughters, ln earnings: layoff 45--49 minus 25--29 & $0.439$ \\
+ & (0.285) \\
+Daughters, ln earnings: within person, layoff $\times$ age & $0.200$ \\
+ & (0.130) \\
+\addlinespace
+\multicolumn{2}{l}{\textit{C. Unemployment insurance simulated at the father's wage, within son}} \\
+Layoff share $\times$ replacement rate $\times$ age & $-0.218^{*}$ \\
+ & (0.129) \\
+\quad + layoff share $\times$ father's ln wage $\times$ age & $-0.038$ \\
+ & (0.187) \\
+Placebo: father's ln wage $\times$ replacement rate $\times$ age & $0.027$ \\
+ & (0.032) \\
+\bottomrule
+\end{tabular}}}
+\par\smallskip
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Panel A: 3,145 father-present sons; decline = share of the seven years at the son's 12--18 in which national employment (BLS CES) of the father's sector fell; sector and birth-year fixed effects; standard errors clustered by sector $\times$ birth year (632 clusters); first-stage $F$ for the layoff share 2.9. Panel B: the outcome on ln parental income and the father's teen-window wage, hours, unemployment, zero hours, volatility, closure and layoff shares; father present; clustered by 1968 family. Panel C: the benefit the state's law would have paid the father (half his weekly earnings between the state's minimum and maximum), over his weekly earnings, mean over the son's 12--18 (1976 and later), standardised; within-son design of Table~\ref{tab:layoff_selection}, with state-at-17 $\times$ age. Source: \texttt{93.LayoffIndustryShocks.py}, \texttt{92.LayoffDaughters.py}, \texttt{99.SimulatedReplacementRate.py}; table built by \texttt{100.PaperBFableTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\end{table}
