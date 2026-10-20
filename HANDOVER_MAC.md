@@ -1,5 +1,12 @@
 # Paper A hand-over: Windows PC -> MacBook, Selection-vs-risk -> JointLoss (2026-10-20)
 
+> **Update 2026-10-20 (PI): the move to the Mac is off.** Paper A stays on the Windows PC, worked on in
+> `G:\My Drive\JointLoss` (this repository). The repository split stands. Sections 1 (Mac set-up) and the "no Stata"
+> parts of section 4 apply only if Paper A moves later. On the PC, Stata 19 is available: Bacher check 1 can run
+> their own Stata CPS code, and the BPS harness keeps running in Stata (no port needed). The PC has no Fortran
+> compiler, so Bacher check 2 needs one installed first (PI's decision). Priority is Fable's plan item 1
+> (`proposals/fable_top5_distance_paperA.md`): a reportable re-estimate.
+
 Paper A ("The Insurer Is Hit Too: Joint Job Loss of Spouses and the Limits of Family Insurance") now has its own
 private repository, github.com/lijiaqi6/JointLoss, and moves to the PI's MacBook. Paper 1 and Paper B stay in
 Selection-vs-risk on the Windows PC. The Claude session on the Mac starts cold: read this file, then `README.md`,
