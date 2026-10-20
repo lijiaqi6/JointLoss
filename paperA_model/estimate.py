@@ -37,8 +37,10 @@ Objective: moments.OBJ_EXCLUDE (pooled CPS duplicates, SIPP 'no separation' rows
 Weighting (--weighting): 'diag_noise' (default) = 1 / (se^2 + var_sim), var_sim = the simulation variance of each moment
 at the run's K (--noise-file, default inputs/moment_noise.csv, scaled by K_noise / K); 'diag' = 1 / se^2 of the
 bootstrap standard errors in output/paperA_targets.csv (the within-source bootstrap covariances are used only in
-Omega of the sandwich); 'block' = equal total weight per block (robustness run); 'vcov' = inverse of the block-diagonal
-bootstrap covariance (diagnostics).
+Omega of the sandwich); 'block' = equal total weight per block in z^2 units, the diag_noise weights times
+N / (B n_b) (robustness run); 'vcov' = inverse of the block-diagonal bootstrap covariance (diagnostics). The logged
+'weight shares by block' are in z units (w se^2); the Jacobian report adds each block's share of each parameter's
+information.
 Parameters: the 31 of params.PARAMS plus the optional params.EXTRA_PARAMS (sigma_eps), carried in every theta vector
 (32 entries); sigma_eps is fixed at its input value unless --free-extra sigma_eps. --set-fixed name=value changes a
 FIXED_DEFAULTS entry (e.g. sigma_eps=0.1); --fix name=value holds an estimated parameter; --tie a=b sets b = a (b not
@@ -682,8 +684,19 @@ def jacobian_report(G, T, th, idx, free, m0=None, W=None):
         (["- none"] if not pairs else [])
     weak_norm = tab[tab["norm_value"] < 3]["param"].tolist()
     md += ["", f"Parameters with norm < 3 (value scaling): {weak_norm if weak_norm else 'none'}"]
+    # information by block (2026-10-20): each block's share of each parameter's sum of squared sensitivities S_val
+    info = pd.DataFrame(S_val ** 2, columns=free).groupby(bl).sum()
+    info = info / info.sum().replace(0.0, np.nan)
+    mean_sh = info.mean(axis=1).sort_values(ascending=False)
+    md += ["", "Information by block: share of each parameter's sum of squared sensitivities (value scaling), percent; "
+           "last row = mean over parameters.", "",
+           "| parameter | " + " | ".join(mean_sh.index) + " |", "|---|" + "---:|" * len(mean_sh)]
+    for p in free:
+        md.append(f"| {p} | " + " | ".join(f"{100 * info.at[b, p]:.0f}" for b in mean_sh.index) + " |")
+    md.append("| mean | " + " | ".join(f"{100 * v:.1f}" for v in mean_sh) + " |")
     return dict(table=rows, singular_values=s.tolist(), condition=cond, condition_range=cond_r, weak=weak,
-                weak_range=weak_r, pairs=pairs, weak_norm=weak_norm, md="\n".join(md))
+                weak_range=weak_r, pairs=pairs, weak_norm=weak_norm, md="\n".join(md),
+                info_share={b: {p: float(info.at[b, p]) for p in free} for b in info.index})
 
 
 def pseudo_targets(args, truth, out):

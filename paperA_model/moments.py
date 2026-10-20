@@ -12,8 +12,8 @@ Objective (estimate.py): Q(theta) = (m_sim - m_data)' W (m_sim - m_data) over th
 (weights()): 'diag_noise' (estimate.py default since 2026-10-18) = diag(1 / (se^2 + var_sim)), var_sim the simulation
 variance of each moment at the run's K (from a noise file: inputs/moment_noise.csv, written by estimate.py noise
 --save-noise-input, scaled by K_noise / K); 'diag' = diag(1 / se^2) (the bootstrap standard errors of the targets file:
-the identification plan's inverse-variance weighting); 'block' = equal total weight per block with inverse variances
-inside a block (robustness run, plan Section 3); 'vcov' = the inverse of the within-source bootstrap covariance
+the identification plan's inverse-variance weighting); 'block' = equal total weight per block in z^2 units: the
+diag_noise weights times N / (B n_b) (robustness run, plan Section 3; scale-free since 2026-10-20); 'vcov' = the inverse of the within-source bootstrap covariance
 (block-diagonal across sources; diagnostics only: 200 replications for 56 PSID moments make the inverse noisy).
 Moments in OBJ_EXCLUDE (and any --drop) get zero weight: they stay in moments.csv and the fit tables, marked
 in_objective = 0. A moment in the objective that the simulation cannot produce (empty sample) adds MISSING_PENALTY.
@@ -153,13 +153,16 @@ def weights(targets: pd.DataFrame, kind="diag", exclude=None, noise_file=None, K
     if kind == "diag":
         return np.diag(np.where(keep, 1.0 / se ** 2, 0.0))
     if kind == "block":
-        w = np.where(keep, 1.0 / se ** 2, 0.0)
-        out = np.zeros_like(w)
+        # equal weight per block in z^2 units (2026-10-20 fix; the earlier version equalised raw 1/se^2 sums, which
+        # depend on each moment's units): the diag_noise weights times N / (B n_b), so a block of n_b moments counts
+        # as N / B moments whatever its units and size
+        w = np.diag(weights(targets, "diag_noise", exclude, noise_file, K))
         blocks = targets["block"].to_numpy()
         ub = np.unique(blocks[keep])
+        out = np.zeros_like(w)
         for b in ub:
             mk = (blocks == b) & keep
-            out[mk] = w[mk] / w[mk].sum() * keep.sum() / len(ub)
+            out[mk] = w[mk] * keep.sum() / (len(ub) * mk.sum())
         return np.diag(out)
     if kind == "vcov":
         V = load_vcov(targets["id"])
@@ -174,8 +177,10 @@ def weights(targets: pd.DataFrame, kind="diag", exclude=None, noise_file=None, K
 
 
 def weight_shares(targets: pd.DataFrame, W) -> pd.DataFrame:
-    """Share of the total diagonal weight by block (and the number of moments in the objective)."""
-    w = np.diag(W)
+    """Share of the total weight by block in z units, w_i se_i^2 (unit-free: 1 per moment under 'diag', a little less
+    under 'diag_noise', N / (B n_b) under 'block'), and the number of moments in the objective. Raw diagonal weights
+    are not summed: they carry each moment's units (2026-10-20)."""
+    w = np.diag(W) * targets["se"].to_numpy(float) ** 2
     d = pd.DataFrame({"block": targets["block"], "w": w, "in_obj": w > 0})
     g = d.groupby("block", sort=False).agg(moments=("in_obj", "size"), in_objective=("in_obj", "sum"), w=("w", "sum"))
     g["share"] = g["w"] / g["w"].sum()

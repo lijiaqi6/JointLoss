@@ -4,7 +4,15 @@ Each scenario re-solves and re-simulates the model on the same draws (CRN seed o
 and, with --indep <best.json>, at the independent-shock estimate (pi_c = 0, m_H = 1). Implemented now (theta or
 existing Model-override changes only; nothing on the estimation code path is touched):
   base             the estimate itself
-  i_common_off     (i) pi_c0 = pi_c1 = pi_c2 = 0 and m_H = 1 (no common shock, no couple type)
+  i_mean           (i) marginal-preserving decorrelation, mean version (Model override decorr='mean'): pi_c = 0 and
+                   each spouse's hazard = the marginal pi_c(s) + (1 - pi_c(s)) E[m_tau] delta_j(r); independent
+                   displacements, every couple at the mean risk
+  i_indep          (i) the paper's experiment (decorr='indep'): each spouse draws an own type (wife CRN slot 40 as in
+                   the base, husband slot 44) and an own common-shock draw; each spouse's hazard distribution is
+                   unchanged, only the joint distribution goes
+  i_common_off     (i) pi_c0 = pi_c1 = pi_c2 = 0 and m_H = 1 with delta unchanged: also cuts each spouse's hazard by
+                   24-26% at the LM estimate 11865967 (results/reestimate_plan_20261020.md), so it mixes less
+                   correlation with less risk; kept for comparison only
   ii_ui12          (ii) UI expiry hazard 1/6 -> 1/12 (52 weeks) for both spouses: Model override ui_exp (the solver's
                    outcome tables and the simulator both read Model.ui_exp)
   ii_ui12_pic2     (ii) the same with pi_c doubled (the recession excess)
@@ -68,7 +76,7 @@ import pandas as pd
 
 import post_common as PC
 
-SCENARIOS = ["base", "i_common_off", "ii_ui12", "ii_ui12_pic2", "v_haz", "v_sep", "v_haz_sep"]
+SCENARIOS = ["base", "i_indep", "i_mean", "i_common_off", "ii_ui12", "ii_ui12_pic2", "v_haz", "v_sep", "v_haz_sep"]
 NOT_IMPLEMENTED = {"ii_both_entitled": "hook (ii-b)", "iii_eitc_vs_transfer": "hook (iii)",
                    "iv_childcare": "hook (iv)"}
 
@@ -79,6 +87,10 @@ def scenario(name, th: dict):
     ov = None
     if name == "base":
         pass
+    elif name == "i_mean":
+        ov = {"decorr": "mean"}
+    elif name == "i_indep":
+        ov = {"decorr": "indep"}
     elif name == "i_common_off":
         t.update(pi_c0=0.0, pi_c1=0.0, pi_c2=0.0, m_H=1.0)
     elif name == "ii_ui12":
@@ -155,7 +167,10 @@ def score(res, th, fx, merge_s12):
                "share_no_earner": float(noearn[gm].sum() / max(mm.sum(), 1)),
                "share_no_earner_no_credit": float(nocred[gm].sum() / max(mm.sum(), 1)),
                "U_cons": float(U[gm].sum()), "n_couples": int(gm.sum()),
-               "his_losses": int(ev.sum()), "joint_losses": int(ej.sum())}
+               "his_losses": int(ev.sum()), "joint_losses": int(ej.sum()),
+               # all displacements per married working month (the marginal hazards the decorrelation holds fixed)
+               "disp_h_rate": float(dh[gm].sum() / max((wh[gm]).sum(), 1)),
+               "disp_w_rate": float((dwj & mar)[gm].sum() / max((ww[gm]).sum(), 1))}
         for lab, e_ in (("his", ev), ("joint", ej)):
             if e_.sum() > 0:
                 rec[f"c_pre_{lab}"] = float(pre[e_].mean())
@@ -207,7 +222,7 @@ def main():
     L.to_csv(out / "scores.csv", index=False)
     info["total_minutes"] = (time.time() - t0) / 60
     PC.write_json(out / "counterfactuals.json", info)
-    show = ["dlog_c_loss_his", "dlog_c_12m_his", "dlog_c_loss_joint", "dlog_c_12m_joint", "share_no_earner",
+    show = ["disp_h_rate", "disp_w_rate", "dlog_c_loss_his", "dlog_c_12m_his", "dlog_c_loss_joint", "dlog_c_12m_joint", "share_no_earner",
             "share_no_earner_no_credit", "ce_cons_pct", "his_losses", "joint_losses"]
     md = [f"# Counterfactuals ({a.size}, K = {a.K})", "",
           "Consumption: household consumption, mean log change from the 6 months before his displacement to the loss "
