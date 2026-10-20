@@ -173,7 +173,9 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   sig_nu_h 0.166 -> 0.180, sig_nu_w 0.112 -> 0.133, p_eps_w and p_eps_h x1.20, p_c x0.99. New baseline: Q 11,866.0 at
   the analytic start (EXPECTED_Q), 1,692.5 at the LM estimate (was 1,359.6). The rise is wealth (775 -> 1,103): more
   transitory risk means more precautionary saving, so even fewer couples hold liquid wealth <= 0 (45-59: 0.167 model vs
-  0.381 data). Next: Joint-gn-bps on the HPC after Joint-test passes.
+  0.381 data). Joint-test 11875253 reproduced Q 11,733.6 on the old inputs (new clone and .venv fine). Joint-gn-bps
+  11876676 submitted 2026-10-20 ~13:30 from the LM estimate 11865967 (a first submission, 11876602, had a broken
+  --start and was cancelled). Its warm-up Q should be 1,692.5. Its best.json starts step 3.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
