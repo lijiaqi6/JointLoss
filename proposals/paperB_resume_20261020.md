@@ -26,7 +26,7 @@ sessions never share a working folder. Exchange through GitHub only: commit on m
 - Repo-relative `IGE/<folder>` prefixes are gone (`IGE/model` -> `model`, etc.), in code, shell scripts, table notes
   (`model/tables.py`) and the matching `.tex`; HPC run records untouched.
 - Environment variables (defaults suit this PC): `DROPBOX` (raw data, `~/Dropbox`); `IGE_DATA` (person-level caches;
-  set as a Windows user variable to `G:\My Drive\Selection vs risk\IGE\data`); `NLSY79_DIR` (scripts 10, 12, 18, 21
+  set as a Windows user variable to `G:\My Drive\IGE_data` since the caches moved there later on 2026-10-20); `NLSY79_DIR` (scripts 10, 12, 18, 21
   read Selection-vs-risk's `NLSY79/`; default `G:\My Drive\Selection vs risk\NLSY79`).
 - `model/steps_summary.py`: ROOT is the repository root.
 - `model/hpc_ige.sh`: paths without `IGE/`. Before the next IGE- job the PI must move the old Stanage `~/ige` aside
