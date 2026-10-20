@@ -154,7 +154,7 @@ UNTRACKED_LINKS = [ENTRY, MODEL / "inputs" / "psid_entry_couples_25_30.csv", MOD
 # moments there (inputs/expected_start_moments.csv): the reproducibility check of --test passes if every moment agrees to
 # a relative 1e-6 or Q to a relative 1e-3 (Numba reductions differ across CPUs). Update both (estimate.py evaluate, then
 # copy moments.csv's id and sim columns) when the code, the inputs or the targets change.
-EXPECTED_Q = 11733.7   # clean numba build on the PC 11,733.703 (cached 11,733.685); Stanage 11,733.6 (job 11863423); the earlier 11,726.0 came from a stale PC cache
+EXPECTED_Q = 11866.0   # 2026-10-20 after the BPS correction (wage_process.json from bps_trim_20261020_120418, spec F): PC 11,865.98; before it 11,733.7 (PC) / 11,733.6 (Stanage, job 11863423)
 EXPECTED_MOMENTS = MODEL / "inputs" / "expected_start_moments.csv"
 SCP = ('scp "G:/My Drive/JointLoss/paperA_model/inputs/psid_entry_couples.csv" '
        'cm1jil@stanage.shef.ac.uk:~/jointloss/paperA_model/inputs/')

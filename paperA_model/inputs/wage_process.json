@@ -1,11 +1,49 @@
 {
- "p_c": 0.0009947341381433366,
- "p_eps_w": 0.009046461146481827,
- "p_eps_h": 0.004067533721235149,
- "sig_nu_w": 0.11180339887498948,
- "sig_nu_h": 0.16583123951776998,
+ "p_c": 0.0009812483500389203,
+ "p_eps_w": 0.010857664826619942,
+ "p_eps_h": 0.004872741245327537,
+ "sig_nu_w": 0.13322511243995744,
+ "sig_nu_h": 0.17985577664898755,
  "rho_nu": 0.31,
- "status": "closed forms (plan Section 1.2) at the analytic pi_up and PLACEHOLDER psi; the one-time BPS-harness correction is not yet applied",
+ "status": "closed forms + one-time BPS-harness correction on bps_trim_test spec F_none_shipped (bps_check.py --apply-from)",
  "psi_w": 0.457409120420379,
- "psi_h": 0.4945049867626991
+ "psi_h": 0.4945049867626991,
+ "bps_correction": {
+  "date": "2026-10-20T12:33:21.912501",
+  "before": {
+   "p_c": 0.0009947341381433366,
+   "p_eps_w": 0.009046461146481827,
+   "p_eps_h": 0.004067533721235149,
+   "sig_nu_w": 0.11180339887498948,
+   "sig_nu_h": 0.16583123951776998,
+   "rho_nu": 0.31
+  },
+  "source": "paperA_model/results/bps_trim_20261020_120418/bps_trim.json",
+  "spec": "F_none_shipped",
+  "start": "paperA_model/results/hpc_runs/polish_main_20261020_040752_j11865967/best.json",
+  "K": 3,
+  "bps_on_sim": {
+   "T3_s_u1": 0.0226518996059895,
+   "T3_s_v1": 0.025293005630374,
+   "T3_s_u2": 0.0072510694153607,
+   "T3_s_v2": 0.0318277291953564,
+   "T3_c_u1u2": 0.0047684391029179,
+   "T3_c_v1v2": 0.0027371074538678,
+   "T3_s_u1_se": 0.0004385858483147,
+   "T3_s_v1_se": 0.0004518176428974,
+   "T3_s_u2_se": 0.0004144705017097,
+   "T3_s_v2_se": 0.0005075316294096,
+   "T3_c_u1u2_se": 0.0003484561457299,
+   "T3_c_v1v2_se": 0.0003449846117292
+  },
+  "bps_published": {
+   "s_v1": 0.0303,
+   "s_v2": 0.0382,
+   "c_v1v2": 0.0027,
+   "s_u1": 0.0275,
+   "s_u2": 0.0125,
+   "c_u1u2": 0.0058
+  },
+  "rule": "plan Section 1.2: sigma^2 = max(0.5 s2, 2 s2 - hat); p_eps, p_c rescaled by target / recovered permanent (co)variance"
+ }
 }
