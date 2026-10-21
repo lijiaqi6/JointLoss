@@ -192,7 +192,8 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   fixing it raises Q from 1,691 to 7,832. LM with the other 30 free crawled at maximum damping (7,832 -> 7,660 in 8
   iterations, ~20 per iteration, cond 4e10) and was stopped at 00:59 on 2026-10-21. The step-3 premise for F ("its
   moments are within 1.5 se of zero") does not hold at this estimate: F is well identified (norm 9.5, value
-  scaling). F stays free; PI to confirm. Chain continues: sigJ, abar, lamh.
+  scaling). F stays free (PI confirmed 2026-10-21; replaces decision 3 below). Its upper bound 0.6 (F at 95% of
+  the range) is to be checked once the step-5 features are in. Chain continues: sigJ, abar, lamh.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
