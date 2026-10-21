@@ -200,6 +200,12 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   net-worth wealth target (script 77), the largest fit lever (wealth 65% of Q).
 - 2026-10-21 morning: chain restarted on the PC (PI), sigJ -> abar -> lamh one after another, each from the step-2
   best.json with `--bound-margin 0`, 7 workers x 2 threads, up to 15 LM iterations.
+- Step 3, sigJ (`runs/polish_sigJ_20261021_083743_p35704`): passes. Q 1,693.2 -> 1,691.07 in 3 iterations (step 2
+  free: 1,691.2); pooled sigmaJ 0.0012 (s.e. 0.002). sigmaJ_B = sigmaJ_W goes into Joint-gn-restr.
+- Step 3, abar (`runs/polish_abar_20261021_114749_p20884`): rejected. Q 2,216.4 -> 1,932.35 in 7 iterations (+241 over
+  the free estimate; Wald z 8.6***); stopped by the PI at iteration 7, still falling ~3 per iteration. Absorbed by
+  theta_617 0.0079 -> 0.0008, theta_05 0.022 -> 0.013, sigmaJ_W and d_h halved; none of these moves the wealth
+  moments. a_bar stays free until step 5.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
