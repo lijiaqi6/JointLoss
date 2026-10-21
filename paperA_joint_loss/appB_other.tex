@@ -58,3 +58,24 @@ with a change of 0.093 in the wife's (s.e.\ 0.020), through her hourly wage rath
 comovement is zero. Shared local wage shocks in the labor markets where Black couples live fit this pattern.\footnote{Annual
 waves 1968--1996; year and age fixed effects; standard errors clustered by woman. Code:
 \texttt{ReducedForm/51.SpouseEarningsChanges.py}.}
+
+\subsection{Wealth around the husband's displacement}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{fig_psid_wealth_event.pdf}
+\caption{Wealth around the husband's displacement (PSID wealth waves 1999--2019)}\label{fig:wealth_event}
+\begin{minipage}{0.95\textwidth}\footnotesize Stacked event study of the husband's first displacement (closure,
+layoff or firing) in 2000--2018, by wealth interview relative to the job-end year (reference: the last interview
+before it; interview bins as in Figure~\ref{fig:consumption}), for husbands displaced alone (wife not displaced in the
+three years around his job loss), against couples without a displacement; married couples with the wife aged 25--59;
+father $\times$ stack and wave $\times$ stack fixed effects; 95\% confidence intervals for all couples clustered by
+1968 family (473 displaced husbands, 51 of them with a joint loss estimated separately, 15{,}741 control stacks);
+dashed lines: Black and White couples. (a) Liquid wealth (checking and savings, bonds, stocks, minus unsecured debt)
+of zero or less, in points; (b)--(d) inverse hyperbolic sine of liquid wealth, of net worth excluding home equity and
+vehicles, and of net worth, in 2000 dollars. Means over the first three interviews after the job loss: (a)
+$-2.4$ (s.e.\ 3.0, $p=0.41$); (b) $0.15$ (0.53, $p=0.78$); (c) $-0.34$ (0.52, $p=0.51$); (d) $-0.62$ (0.48,
+$p=0.19$). At the last interview before the loss, 59.5\% of the displaced husbands' families hold liquid wealth of
+zero or less. Unsecured debt is netted in liquid wealth and not shown separately. Code:
+\texttt{47.PSIDConsumptionEvent.py --wealth} with the definitions of \texttt{77.WealthDefinitions.py}
+(\texttt{output/psid\_wealth\_event.csv}).\end{minipage}
+\end{figure}

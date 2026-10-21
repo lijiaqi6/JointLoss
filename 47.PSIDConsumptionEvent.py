@@ -799,5 +799,108 @@ def summary(RES, agree, tot_agree, Md):
     return out
 
 
+WYS = [("liq_le0", "(a) Liquid wealth $\\leq$ 0 (pp)", "share with liquid wealth <= 0 (pp)"),
+       ("ihs_a", "(b) Liquid wealth (IHS)", "IHS of liquid wealth (2000 $)"),
+       ("ihs_cv", "(c) Net worth excl. home and vehicles (IHS)", "IHS of net worth excl. home equity and vehicles"),
+       ("ihs_d", "(d) Net worth (IHS)", "IHS of net worth (2000 $)")]
+WAVES_W = list(range(1999, 2020, 2))
+
+
+def wealth_main():
+    """Paper A figure (Fable's figure 5, proposals/fable_event_study_figures_paperA.md, 2026-10-21): wealth around
+    the husband's displacement, 47's wave-time design with 77's definitions (60's wealth sample: wife 25-59; PSID
+    wealth waves 1999-2019, biennial; 2000 $). Events ev = 2000-2018 (bracketed by the waves); k bins and reference
+    k = -1 as for consumption; all married couples; 'husband displaced alone' (the interaction model's single term,
+    J as in main()), pooled and by the head's race. Unsecured debt is not separable in estimation/psid_wealth.py (it
+    is netted in liquid wealth), so it is not shown. Writes output/psid_wealth_event.csv and
+    paperA_joint_loss/fig_psid_wealth_event.pdf."""
+    M77 = _load("p77", "77.WealthDefinitions.py")
+    wl = M77.build()
+    Wf = wl[["wave", "int", "a", "cv", "d"]].drop_duplicates(["wave", "int"])
+    py = pd.read_pickle(DATA / "psid_person_year.pkl")
+    E = P23.extras()
+    fam = psid9.family()
+    d = pd.read_pickle(DATA / "psid_displacement.pkl")
+    ev_sets = P25.wife_events(py, E["R"])
+    m = P19.men_panel(py, fam)
+    U = P25.build_units(m, d)
+    U = P25.add_wife_outcomes(U, m, ev_sets)
+    U = U[U["pseudo"] == 0]
+    Uj = U[["pid", "ev", "wemp0", "main_W"]].copy()
+    Uj["J"] = np.where(Uj["wemp0"] == 0, 0.0, Uj["main_W"])
+    Uj = Uj[["pid", "ev", "J"]].drop_duplicates(["pid", "ev"])
+    P = P19.stacks(m, d, "main")
+    u = P.drop_duplicates(["pid", "ev"])[["pid", "ev", "treat", "hrace", "w0", "fam68"]]
+    u = u[u["ev"].between(2000, 2018) & u["w0"].notna()].merge(Uj, on=["pid", "ev"], how="left")
+    mm = m[m["wave"].isin(WAVES_W)][["pid", "wave", "int", "w_pid"]].drop_duplicates(["pid", "wave"])
+    q = u.merge(mm, on="pid").merge(Wf, on=["wave", "int"], how="inner")
+    q["tau"] = q["wave"] - q["ev"]
+    q = q[q["tau"].between(-4, 6) & (q["w_pid"] == q["w0"])].copy()
+    q["k"] = q["tau"].map(KBIN)
+    q["liq_le0"] = 100 * (q["a"] <= 0).astype(float)
+    q["ihs_a"], q["ihs_cv"], q["ihs_d"] = np.arcsinh(q["a"]), np.arcsinh(q["cv"]), np.arcsinh(q["d"])
+    q["unit"] = pd.factorize(q["pid"].astype(np.int64) * 10000 + q["ev"].astype(np.int64))[0]
+    q["cell"] = pd.factorize(q["wave"].astype(np.int64) * 10000 + q["ev"].astype(np.int64))[0]
+    q = q.reset_index(drop=True)
+    rows = []
+    for race, fr in (("All", lambda x: x), ("Black", lambda x: x[x["hrace"] == "Black"]),
+                     ("White", lambda x: x[x["hrace"] == "White"])):
+        for y, _, ylab in WYS:
+            b, V, xs, info = regress(fr(q), y)
+            for k in KS:
+                for t, (bb, se) in terms(b, V, xs, [k]).items():
+                    rows.append(dict(race=race, outcome=y, label=ylab, term=f"k={k:+d}", group=t, coef=bb, se=se,
+                                     p=pv(bb, se), stars=stars(pv(bb, se)), n=info["n"], n_disp=info["n_disp"],
+                                     n_joint=info["n_joint"], n_ctrl=info["n_ctrl"]))
+            for lab, ks in SUMS:
+                for t, (bb, se) in terms(b, V, xs, ks).items():
+                    rows.append(dict(race=race, outcome=y, label=ylab, term=lab, group=t, coef=bb, se=se,
+                                     p=pv(bb, se), stars=stars(pv(bb, se)), n=info["n"], n_disp=info["n_disp"],
+                                     n_joint=info["n_joint"], n_ctrl=info["n_ctrl"]))
+            pre = fr(q)
+            pre = pre[(pre["k"] == -1) & (pre["treat"] == 1) & (pre["J"] == 0)]
+            rows.append(dict(race=race, outcome=y, label=ylab, term="mean at k=-1, husband displaced alone",
+                             group="level", coef=float(pre[y].mean()), se=np.nan, p=np.nan, stars="",
+                             n=len(pre)))
+        print(race, "done", flush=True)
+    D = pd.DataFrame(rows)
+    D.to_csv(OUT / "psid_wealth_event.csv", index=False)
+    print(D[(D.group == "single") & D.term.str.startswith("mean")].to_string(), flush=True)
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    col = {"All": "#0b0b0b", "Black": "#eb6834", "White": "#2a78d6"}
+    fig, axs = plt.subplots(1, 4, figsize=(14, 3.9))
+    for ax, (y, title, _) in zip(axs, WYS):
+        for j, race in enumerate(("All", "Black", "White")):
+            x = D[(D.race == race) & (D.outcome == y) & (D.group == "single") & D.term.str.startswith("k=")].copy()
+            x["k"] = x.term.str.replace("k=", "").astype(int)
+            x = pd.concat([x, pd.DataFrame({"k": [-1], "coef": [0.0], "se": [0.0]})]).sort_values("k")
+            xx = x.k.to_numpy() + (j - 1) * 0.1
+            if race == "All":
+                ax.errorbar(xx, x.coef, yerr=1.96 * x.se, color=col[race], lw=2, marker="o", ms=4, capsize=0,
+                            label="all (95% CI)")
+            else:
+                ax.plot(xx, x.coef, color=col[race], lw=1.2, marker="o", ms=3, ls="--", label=race)
+        ax.axhline(0, color="#555555", lw=0.7)
+        ax.axvline(-0.5, color="#999999", lw=0.8, ls=":")
+        ax.set_xticks(KS[:1] + [-1] + KS[1:])
+        ax.set_title(title, fontsize=10)
+        ax.set_xlabel("interview relative to his job loss")
+        ax.grid(axis="y", color="#e5e5e5", lw=0.6)
+        for sp in ("top", "right"):
+            ax.spines[sp].set_visible(False)
+    h, lb = axs[0].get_legend_handles_labels()
+    fig.legend(h, lb, frameon=False, fontsize=9, loc="lower center", ncol=3)
+    fig.tight_layout(rect=(0, 0.07, 1, 1))
+    fig.savefig(PAPER / "fig_psid_wealth_event.pdf")
+    fig.savefig(PAPER / "fig_psid_wealth_event.png", dpi=160)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    if "--wealth" in sys.argv:
+        wealth_main()
+    else:
+        main()

@@ -50,6 +50,9 @@ from pathlib import Path                      # noqa: E402
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent))
+# estimation/psid_wealth.py lives in the Selection-vs-risk repository (this script was written inside it as IGE/77);
+# since the move to JointLoss (2026-10-20) it is found through SVR_REPO, default the sibling folder
+sys.path.insert(0, os.environ.get("SVR_REPO", str(HERE.parent / "Selection vs risk")))
 
 import numpy as np                            # noqa: E402
 import pandas as pd                           # noqa: E402
