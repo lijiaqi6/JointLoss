@@ -198,6 +198,8 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   step 2); abar and lamh not started. To resume: rerun sigJ, abar, lamh from the step-2 best.json with
   `--bound-margin 0` (Wald at step 2 already rejects abar, z 8.6***, and lamh, z ~7.2***). Next to discuss: the
   net-worth wealth target (script 77), the largest fit lever (wealth 65% of Q).
+- 2026-10-21 morning: chain restarted on the PC (PI), sigJ -> abar -> lamh one after another, each from the step-2
+  best.json with `--bound-margin 0`, 7 workers x 2 threads, up to 15 LM iterations.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
