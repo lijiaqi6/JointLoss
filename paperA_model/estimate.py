@@ -528,8 +528,16 @@ def eval_logger(out, new):
 def log_evals(logf, counter, gen, thetas, res):
     for th, (q, miss, dt, err, _m) in zip(thetas, res):
         counter += 1
-        logf.write(f"{counter},{gen},{q},{miss},{dt:.1f},{err[:300].replace(',', ';')},"
-                   + ",".join(f"{v:.8g}" for v in th) + "\n")
+        line = (f"{counter},{gen},{q},{miss},{dt:.1f},{err[:300].replace(',', ';')},"
+                + ",".join(f"{v:.8g}" for v in th) + "\n")
+        try:
+            logf.write(line)
+        except OSError:             # Google Drive for Desktop can refuse a write on an open handle (Errno 22, 2026-10-21)
+            try:
+                with open(logf.name, "a") as f:
+                    f.write(line)
+            except OSError as e:
+                print(f"evals.csv: eval {counter} not logged ({e})", flush=True)
     return counter
 
 
