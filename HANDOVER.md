@@ -43,6 +43,14 @@ HPC results (in `paperA_model/results/hpc_runs/`), from the old `~/joint` clone 
   marriage diagnostics; the clean-spec BPS correction (sig_nu_h 0.166 -> 0.180, sig_nu_w 0.112 -> 0.134), baseline
   rerun and LM again.
 
+- **Event-study figures (2026-10-21 night, PI request; Fable's advice in
+  `proposals/fable_event_study_figures_paperA.md`):** all six added to the paper (66 pages, compiles): SIPP household
+  month by month (5.8), the wife's monthly response (5.2), AWE and joint loss by age (4), still together after his /
+  her / joint loss (5.6), the wife's displacement and the family (new 5.5), wealth around his displacement (Appendix B
+  + paragraph in 5.7 'Consumption and wealth'). EVIDENCE 3.100-3.103. Fable's redesigns of the existing figures
+  (cut father_displacement_es to four panels, joint_job_loss_es pooled, gross_net hours only) are NOT done: PI to decide.
+  The step-3 LM chain is paused (sigJ, abar, lamh to rerun; fixF rejected, F free).
+
 Proposed next step (PI to confirm): verify Fable's two claims (reading code only), then design the re-estimate,
 one change at a time on one moment set, with the HPC commands for the PI.
 
