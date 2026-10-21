@@ -212,6 +212,26 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   fixed until now at 0.96 a year) with a_bar fixed at 25.639, from the abar estimate (warm-up Q must equal 1,932.35:
   beta starts at its fixed value); (2) the Bacher nesting check on the model side (no correlated loss, no children,
   UI only, no separation; their AWE 5.55, 7.12 / 1.40 by age); (3) one combined LM with sigJ and the result of (1).
+- Wealth step 1, beta free (`runs/polish_beta_20261021_173842_p29748`; a first start died on a Google Drive write
+  error, Errno 22 in evals.csv, fixed 9f7538b): warm-up 1,932.4 = the abar estimate (code check passed); 5 LM
+  iterations to Q 1,882.7 but beta 0.9600 -> 0.9597 a year: the gradient points strongly to a lower beta (beta column
+  norm 68 vs median 27) but LM is damped (mu 10-100, cond 2e10). Stopped by the PI. beta profile instead (evaluate,
+  every other parameter at that best point, a_bar 25.639; `evaluate_20261021_2104*`):
+
+  | beta (a year) | 0.96 | 0.95 | 0.94 | 0.93 | 0.92 | 0.91 |
+  |---|---|---|---|---|---|---|
+  | Q | 1,922.9 | 1,246.2 | 1,540.4 | 2,483.5 | 3,986.6 | 5,816.0 |
+  | Wealth | 1,330.3 | 439.1 | 302.4 | 727.1 | 1,569.6 | 2,698.9 |
+  | Employment levels | 62.9 | 139.2 | 416.3 | 790.3 | 1,226.2 | 1,672.1 |
+  | Her exits | 6.8 | 126.6 | 207.3 | 277.2 | 447.8 | 646.7 |
+  | Liquid <= 0, 45-59 (data 0.381) | 0.155 | 0.232 | 0.320 | 0.409 | 0.488 | 0.561 |
+  | Liquid <= 0, 25-34 (data 0.568) | 0.460 | 0.524 | 0.590 | 0.653 | 0.711 | 0.764 |
+
+  The fixed beta was the wealth misfit: at 0.95 Q is 1,246, below the free-a_bar estimate (1,691) with a_bar at
+  its data value. A parabola through 0.94-0.96 puts the minimum at ~0.948 (Bacher et al.: 0.947). A lower beta costs
+  employment levels and her exits (less precautionary work), which the work parameters can absorb in LM. One beta
+  cannot match the flat data age profile of liquid wealth <= 0 (0.568 -> 0.381; model at 0.93: 0.653 -> 0.409).
+  Next LM `beta95`: beta free from 0.95 (`--set-fixed beta=0.95^(1/12)`), a_bar 25.639.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
