@@ -109,7 +109,24 @@ non-participating spouse, primary earner's transition from employment to unemplo
 classification-error adjustment of \citet{bacher2025joint}, 1994--2020; oldest minus youngest $-5.13^{***}$ (s.e.\ 1.03).
 Joint job loss: state $\times$ month fixed effects; the same-month joint rate is 6.1 times its value under independence
 at 20--25 and 10.7 times at 56--62. Code: \texttt{IGE/50.CPSAddedWorkerByAge.py} (\texttt{output/cps\_awe\_by\_age.md}).}
-Older couples, whose non-working spouse barely enters the labor force, remain exposed to the loss of both earners.
+Older couples, whose non-working spouse barely enters the labor force, remain exposed to the loss of both earners
+(Figure~\ref{fig:age_awe_jointloss}).
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{fig_cps_age_awe_jointloss.pdf}
+\caption{The added worker effect and the joint job loss by age (CPS)}\label{fig:age_awe_jointloss}
+\begin{minipage}{0.95\textwidth}\footnotesize (a) Added worker effect: the probability that a non-participating spouse
+enters the labor force when the working spouse moves from employment to unemployment, minus the same probability when
+the working spouse stays employed, by the non-participating spouse's age, with the classification-error adjustment of
+\citet{bacher2025joint}, 1994--2020; open squares: their Table~2 (their oldest group is 56--65). Oldest minus youngest
+$-5.13^{***}$ (s.e.\ 1.03, $p<0.001$). (b) Excess probability that the working wife loses her job in the month her
+husband loses his, by her age; linear probability models with state $\times$ month fixed effects, 1994--2023; open
+squares exclude losses on temporary layoff of either spouse. Oldest minus 26--35: all losses 1.45$^{**}$ points (s.e.\
+0.63, $p=0.021$; equality across all ages $p=0.11$), losses not on temporary layoff $-0.05$ (s.e.\ 0.68, $p=0.94$;
+equality across all ages $p=0.77$). 95\% confidence
+intervals clustered by household. Code: \texttt{50.CPSAddedWorkerByAge.py} (\texttt{output/cps\_awe\_by\_age.csv}).
+\end{minipage}
+\end{figure}
 
 \subsection{Magnitudes for the model}
 

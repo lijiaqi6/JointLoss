@@ -972,8 +972,68 @@ def plot(ev, aw, gn, path):
     plt.close(fig)
 
 
+def plot_paper(path):
+    """Paper A figure (Fable's figure 2, proposals/fable_event_study_figures_paperA.md), drawn from the saved
+    output/sipp_joint_loss.csv and output/cps_joint_loss_checks.csv (no re-estimation). (a) Wives not employed at
+    tau-1, all: effect of his involuntary separation on her employment and on looking / on layoff, s = -6..36 (SIPP,
+    reference s = -1), with the CPS estimates at t+1..t+3 and t+12 (his job loss at t+1, so t+k ~ s = k-1) as markers.
+    (b) Change in her employment since tau-1: wives without a job at tau-1 (gross entry), all wives (net) and wives
+    employed at tau-1. 95% CIs (household clusters)."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    d = pd.read_csv(OUT / "sipp_joint_loss.csv")
+    c = pd.read_csv(OUT / "cps_joint_loss_checks.csv")
+    blue, orange, green = "#2a78d6", "#eb6834", "#1baf7a"
+
+    def path_of(table, sample, outcome):
+        q = d[(d.table == table) & (d["sample"] == sample) & (d.outcome == outcome)].copy()
+        q["s"] = q.term.str.replace("s=", "").astype(int)
+        if not (q.s == -1).any():          # zero by construction at tau-1 (no job, or change since tau-1)
+            q = pd.concat([q, pd.DataFrame({"s": [-1], "b": [0.0], "se": [0.0]})])
+        q = q.sort_values("s")
+        return q.s.to_numpy(), 100 * q.b.to_numpy(), 100 * q.se.to_numpy()
+
+    fig, axs = plt.subplots(1, 2, figsize=(12, 4.4))
+    ax = axs[0]
+    for o, col, lab, cps_o, mk in (("LK_w", orange, "looking for work or on layoff",
+                                    "wife unemployed (looking / layoff)", "s"),
+                                   ("E_w", blue, "employed", "wife employed", "o")):
+        s, b, se = path_of("4", "non-employed wives: All", o)
+        ax.fill_between(s, b - 1.96 * se, b + 1.96 * se, color=col, alpha=0.15, lw=0)
+        ax.plot(s, b, color=col, lw=1.8, label=f"SIPP: {lab}")
+        q = c[(c.table == "5_awe") & (c.outcome == cps_o)]
+        k = q["sample"].str.replace("t+", "", regex=False).astype(int).to_numpy()
+        ax.errorbar(k - 1, 100 * q.coef, yerr=196 * q.se_hh, fmt=mk, ms=6, color=col, mfc="white", mew=1.5,
+                    elinewidth=1.2, capsize=0, label=f"CPS: {lab}")
+    ax.set_title("(a) Wives not employed before his loss (pp)", fontsize=10)
+    ax.legend(frameon=False, fontsize=8, loc="upper right")
+    ax = axs[1]
+    for smp, col, lab in (("Gross entry: wives without a job at tau-1", blue, "wives without a job before (gross)"),
+                          ("Net: all wives", orange, "all wives (net)"),
+                          ("Wives employed at tau-1", green, "wives employed before")):
+        s, b, se = path_of("4b", smp, "E_w")
+        ax.fill_between(s, b - 1.96 * se, b + 1.96 * se, color=col, alpha=0.15, lw=0)
+        ax.plot(s, b, color=col, lw=1.8, label=lab)
+    ax.set_title("(b) Change in the wife's employment since the month before (pp)", fontsize=10)
+    ax.legend(frameon=False, fontsize=8, loc="upper left")
+    for ax in axs:
+        ax.axhline(0, color="#555555", lw=0.7)
+        ax.axvline(-0.5, color="#999999", lw=0.8, ls=":")
+        ax.set_xlabel("months since his involuntary separation")
+        ax.grid(axis="y", color="#e5e5e5", lw=0.6)
+        for sp in ("top", "right"):
+            ax.spines[sp].set_visible(False)
+    fig.tight_layout()
+    fig.savefig(path)
+    fig.savefig(Path(path).with_suffix(".png"), dpi=160)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
-    if "--download-only" in sys.argv:
+    if "--plot-paper" in sys.argv:
+        plot_paper(HERE / "paperA_joint_loss" / "fig_sipp_wife_response.pdf")
+    elif "--download-only" in sys.argv:
         download()
     elif "--extract-only" in sys.argv:
         for panel, nw in PANELS.items():

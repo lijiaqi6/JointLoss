@@ -758,8 +758,58 @@ def plot(mm, jw, jh, oldest, path):
     plt.close(fig)
 
 
+def plot_paper(path):
+    """Paper A figure (Fable's figure 6, proposals/fable_event_study_figures_paperA.md), drawn from the saved
+    output/cps_awe_by_age.csv (no re-estimation): A, AWE by the spouse's age (main variant) with BGN's Table 2;
+    B, the wife's excess same-month job loss by her age, all losses and losses not on layoff. 95% CIs (household)."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    d = pd.read_csv(OUT / "cps_awe_by_age.csv")
+    blue, orange = "#2a78d6", "#eb6834"
+    fig, axs = plt.subplots(1, 2, figsize=(11, 4.2))
+    q = d[(d.table == "1_awe") & (d.outcome == "LF") & d["sample"].str.startswith("main: spouse")]
+    q = q.drop_duplicates("sample")
+    x = np.arange(len(q))
+    ax = axs[0]
+    ax.errorbar(x - 0.06, 100 * q.coef, yerr=196 * q.se_hh, color=blue, lw=1.8, marker="o", ms=6, capsize=0,
+                label="CPS couples, this paper")
+    ax.plot(x + 0.06, [7.12, 6.83, 4.57, 1.40], color=orange, lw=1.5, marker="s", ms=6, ls="--", mfc="white",
+            label="Bacher, Grubener and Nord (2025), Table 2")
+    ax.set_xticks(x)
+    ax.set_xticklabels([s.split("spouse ")[1] for s in q["sample"]])
+    ax.set_xlabel("age of the non-participating spouse")
+    ax.set_title("(a) Added-worker effect (pp)", fontsize=10)
+    ax.legend(frameon=False, fontsize=8)
+    ax = axs[1]
+    for sh, outc, colr, mk, nm in ((-0.06, "wife job loser at t+1", blue, "o", "all job losses"),
+                                   (0.06, "wife job loser not on layoff (his loss not on layoff)", orange, "s",
+                                    "losses not on temporary layoff")):
+        r = d[(d.table == "2_joint_loss_age") & (d.outcome == outc) & d["sample"].str.startswith("Wife aged")]
+        r = r.drop_duplicates("sample")
+        xx = np.arange(len(r))
+        ax.errorbar(xx + sh, 100 * r.coef, yerr=196 * r.se_hh, color=colr, lw=1.8, marker=mk, ms=6, capsize=0,
+                    label=nm, mfc="white" if mk == "s" else colr)
+    ax.set_xticks(xx)
+    ax.set_xticklabels([s.split("aged ")[1] for s in r["sample"]])
+    ax.set_xlabel("age of the wife")
+    ax.set_title("(b) Wife's excess same-month job loss (pp)", fontsize=10)
+    ax.legend(frameon=False, fontsize=8, loc="upper left")
+    for ax in axs:
+        ax.axhline(0, color="#555555", lw=0.7)
+        ax.grid(axis="y", color="#e5e5e5", lw=0.6)
+        for sp in ("top", "right"):
+            ax.spines[sp].set_visible(False)
+    fig.tight_layout()
+    fig.savefig(path)
+    fig.savefig(Path(path).with_suffix(".png"), dpi=160)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
-    if "--build-only" in sys.argv:
+    if "--plot-paper" in sys.argv:
+        plot_paper(HERE / "paperA_joint_loss" / "fig_cps_age_awe_jointloss.pdf")
+    elif "--build-only" in sys.argv:
         build_panel62()
     else:
         main(panel60="--panel60" in sys.argv)

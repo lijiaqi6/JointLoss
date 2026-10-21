@@ -40,12 +40,32 @@ mothers of young children (3.6 points after one month, against 0.4 for wives wit
 for Black wives (4.7 points after one month and 10.0 after twelve, against 1.8 and 3.4 for White wives). Wives who were
 already unemployed when their husband lost his job become less likely to find work ($-0.020^{*}$ after one month,
 $-0.050^{**}$ after three): their own labor market has been hit too. The SIPP, which follows wives for three years, shows the same
-pattern over a longer horizon: among wives with no job the month before, looking for work rises at once (5.3 points)
-and employment builds up over about six months, from 1.9 points in the month of the husband's separation to 5.4 points
-after six months, and stays about 4.4 points higher after two years; because wives who were working lose their own jobs
-in the same months, the net change in all wives' employment is about zero for a year (Appendix~\ref{app:robust}). The
+pattern over a longer horizon (Figure~\ref{fig:sipp_wife}): among wives with no job the month before, employment
+builds up over about six months, from 1.9 points in the month of the husband's separation to 5.4 points after six
+months, and stays about 4.4 points higher after two years. These wives were already more often looking for work before
+his separation (4.4 points in the month before), so the SIPP's rise in looking at the separation is small (to 5.3
+points); the CPS, which records search in the reference week, shows the jump. Because wives who were working lose their
+own jobs in the same months, the net change in all wives' employment is about zero for a year
+(Appendix~\ref{app:robust}). The
 PSID's annual interview-week status does not show a rise in looking for work a year after the job loss (for all wives $-0.001$, s.e.\ 0.008), because by then the search
 spell has ended in a job or in leaving the labor force; the annual snapshot misses what the monthly data show.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{fig_sipp_wife_response.pdf}
+\caption{The wife's response month by month (SIPP and CPS)}\label{fig:sipp_wife}
+\begin{minipage}{0.95\textwidth}\footnotesize (a) Wives with no job in the month before the husband's involuntary
+separation: difference in the probability of being employed and of looking for work or being on layoff between wives
+whose husband separates in month 0 and wives whose husband stays employed, by month (one linear probability model per
+month, base panel $\times$ month fixed effects; SIPP 2004, 2008 and 2014 panels). Employed at $s=0$: 1.9$^{***}$
+points (s.e.\ 0.5); $s=6$: 5.4$^{***}$ (1.0); $s=24$: 4.4$^{***}$ (1.6, $p=0.007$). Looking: 4.4$^{***}$ (0.8) at $s=-1$, 5.3$^{***}$
+(0.8) at $s=0$. Markers: CPS basic monthly 1994--2023, wives not employed in month $t$, husband's job loss at $t+1$,
+plotted at $s=k-1$ for $t+k$; state $\times$ month fixed effects; looking at $t+1$: 8.8$^{***}$ (0.4); employed at
+$t+3$: 4.2$^{***}$ (0.7) and at $t+12$: 4.0$^{***}$ (0.8). (b) Change in the wife's employment since the month before
+his separation: wives without a job before (gross entry), all wives (net) and wives employed before (their own job
+loss). 95\% confidence intervals clustered by household. Code: \texttt{40.SIPPJointLoss.py},
+\texttt{37.CPSJointLossChecks.py} (\texttt{output/sipp\_joint\_loss.csv}, \texttt{output/cps\_joint\_loss\_checks.csv}).
+\end{minipage}
+\end{figure}
 
 \subsection{Gross and net added work}
 
