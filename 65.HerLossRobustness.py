@@ -597,5 +597,178 @@ def main():
     print("written", flush=True)
 
 
+def figure_main():
+    """Paper A figure (Fable's figure 3, proposals/fable_event_study_figures_paperA.md, 2026-10-21): 'still with the
+    baseline spouse' by event year after his displacement alone, hers alone and a joint loss, in one stacked
+    regression with one clustered covariance. His design (19's male heads, controls without her displacement in
+    ev-3..ev+6) gives 'his alone' (wife not displaced in ev-1..ev+1) and 'joint' (wife displaced in ev-1..ev+1); her
+    design (64's M3, controls without his displacement in ev-3..ev+6) gives 'her alone', dropping wives whose husband
+    was displaced in ev-1..ev+1 (they are the joint couples of his design). Cells, units and FE separate by design as
+    in block 1. Writes output/separation_three_events.csv and paperA_joint_loss/fig_psid_separation_events.pdf."""
+    py = pd.read_pickle(DATA / "psid_person_year.pkl")
+    fam = psid9.family()
+    d = pd.read_pickle(DATA / "psid_displacement.pkl")
+    m = P19.men_panel(py, fam)
+    first, src = P64.her_events(py, fam)
+    w = women_panel_x(py, fam)
+    H = her_stacks_x(w, first)
+    his_years = d.loc[d["main"] == 1, ["pid", "year"]].astype({"pid": np.int64, "year": int})
+    her_years = her_all_years(py, fam)
+    P0 = P19.stacks(m, d, "main")
+    P0 = P0[P0["w0"].notna() & P0["ev"].between(EV_LO, EV_HI) & (P0["year"] <= Y_HI)].copy()
+    P0["w0"] = P0["w0"].astype(np.int64)
+    UH = H.drop_duplicates("unit")[["unit", "h0", "ev"]]
+    fl = pd.concat([UH["unit"], window_flags(UH, "h0", his_years, -1, 1, "his_near"),
+                    window_flags(UH, "h0", his_years, -3, 6, "his_win")], axis=1)
+    H2 = H.merge(fl, on="unit", how="left")
+    UM = P0.drop_duplicates("unit")[["unit", "w0", "ev"]]
+    fm_ = pd.concat([UM["unit"], window_flags(UM, "w0", her_years, -1, 1, "her_near"),
+                     window_flags(UM, "w0", her_years, -3, 6, "her_win")], axis=1)
+    P2 = P0.merge(fm_, on="unit", how="left")
+    Hc = H2[~((H2["treat"] == 0) & (H2["his_win"] == 1)) & ~((H2["treat"] == 1) & (H2["his_near"] == 1))]
+    Pc = P2[~((P2["treat"] == 0) & (P2["her_win"] == 1))]
+    a = Hc[["unit", "cell", "fam68", "treat", "e", "bh_present"]].rename(columns={"bh_present": "stay"})
+    a = a.assign(g="her alone", unit=a["unit"].astype(str) + "h", cell=a["cell"].astype(str) + "h")
+    b = Pc[["unit", "cell", "fam68", "treat", "e", "bw_present", "her_near"]].rename(columns={"bw_present": "stay"})
+    b = b.assign(g=np.where(b["her_near"] == 1, "joint", "his alone"), unit=b["unit"].astype(str) + "m",
+                 cell=b["cell"].astype(str) + "m").drop(columns="her_near")
+    q = pd.concat([a, b], ignore_index=True)
+    q["unit"] = pd.factorize(q["unit"])[0]
+    q["cell"] = pd.factorize(q["cell"])[0]
+    r = est(q, "stay", tg="g", tag="6 figure", sample="his alone / her alone / joint, one regression")
+    rows = []
+    for g in r["groups"]:
+        for e in ES_E:
+            bb, se = r[(g, f"e={e:+d}")]
+            rows.append(dict(group=g, term=f"e={e:+d}", coef=bb, se=se, p=pv(bb, se), stars=stars(pv(bb, se)),
+                             treated=r["n_tr"][g], n=r["info"]["n"], clusters=r["info"]["clusters"]))
+        for k in W:
+            bb, se = r[(g, k)]
+            rows.append(dict(group=g, term=f"mean {k}", coef=bb, se=se, p=pv(bb, se), stars=stars(pv(bb, se)),
+                             treated=r["n_tr"][g], n=r["info"]["n"], clusters=r["info"]["clusters"]))
+    for g1, g2 in (("joint", "his alone"), ("her alone", "his alone"), ("joint", "her alone")):
+        for k in W:
+            bb, se = diff(r, g1, g2, k)
+            rows.append(dict(group=f"{g1} - {g2}", term=f"mean {k}", coef=bb, se=se, p=pv(bb, se),
+                             stars=stars(pv(bb, se)), n=r["info"]["n"], clusters=r["info"]["clusters"]))
+    D = pd.DataFrame(rows)
+    D.to_csv(OUT / "separation_three_events.csv", index=False)
+    print(D.to_string(), flush=True)
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    col = {"his alone": "#2a78d6", "her alone": "#1baf7a", "joint": "#eb6834"}
+    lab = {"his alone": "his displacement alone", "her alone": "her displacement alone",
+           "joint": "joint (both within a year)"}
+    fig, ax = plt.subplots(figsize=(7, 4.2))
+    for k, g in enumerate(("his alone", "her alone", "joint")):
+        x = D[(D.group == g) & D.term.str.startswith("e=")].copy()
+        x["e"] = x.term.str.replace("e=", "").astype(int)
+        x = pd.concat([x, pd.DataFrame({"e": [-2], "coef": [0.0], "se": [0.0]})]).sort_values("e")
+        xx = x.e.to_numpy() + (k - 1) * 0.12
+        n = int(D.loc[D.group == g, "treated"].dropna().iloc[0])
+        ax.errorbar(xx, 100 * x.coef, yerr=196 * x.se, color=col[g], lw=1.6, marker="o", ms=4, capsize=0,
+                    label=f"{lab[g]} ({n:,} events)")
+    ax.axhline(0, color="#555555", lw=0.7)
+    ax.axvline(-0.5, color="#999999", lw=0.8, ls=":")
+    ax.set_xlabel("years since the displacement")
+    ax.set_ylabel("still with the spouse of before (pp)")
+    ax.grid(axis="y", color="#e5e5e5", lw=0.6)
+    for sp in ("top", "right"):
+        ax.spines[sp].set_visible(False)
+    ax.legend(frameon=False, fontsize=8, loc="lower left")
+    fig.tight_layout()
+    path = HERE / "paperA_joint_loss" / "fig_psid_separation_events.pdf"
+    fig.savefig(path)
+    fig.savefig(path.with_suffix(".png"), dpi=160)
+    plt.close(fig)
+
+
+HER_OUT = [("own_hrs", "(a) Her annual hours", 1), ("earn", "(b) Her labor income (2000 $)", 1),
+           ("h_hrs", "(c) His annual hours", 1), ("h_earn", "(d) His labor income (2000 $)", 1),
+           ("faminc", "(e) Family income (2000 $)", 1), ("fs", "(f) Food stamps (pp)", 100)]
+
+
+def figure_her_main():
+    """Paper A figure (Fable's figure 4, 2026-10-21): her first displacement as the event (64's M3 design, as
+    her_stacks_x), outcomes her hours and labor income, his hours and labor income (while still with the baseline
+    husband), her family's income and food-stamp receipt (2000 $ from IGE/1); pooled and by the head's race (cells x
+    race in one covariance). Writes output/her_displacement_family.csv and paperA_joint_loss/fig_psid_her_displacement.pdf."""
+    py = pd.read_pickle(DATA / "psid_person_year.pkl")
+    fam = psid9.family()
+    first, src = P64.her_events(py, fam)
+    w = women_panel_x(py, fam)
+    H = her_stacks_x(w, first)
+    hd = py[py["head"]][["wave", "int", "faminc"]].drop_duplicates(["wave", "int"])
+    H = H.merge(hd, on=["wave", "int"], how="left").merge(
+        fam[["wave", "int", "fs"]].drop_duplicates(["wave", "int"]), on=["wave", "int"], how="left")
+    H = H.merge(w[["pid", "wave", "h_earn"]].drop_duplicates(["pid", "wave"]), on=["pid", "wave"], how="left")
+    same = H["h_pid"] == H["h0"]
+    H["h_hrs"] = H["h_hrs"].where(same)
+    H["h_earn"] = H["h_earn"].where(same)
+    rows = []
+    for y, _, _ in HER_OUT:
+        for lab, kw in (("All", {}), ("by race", {"cg": "hrace"})):
+            r = est(H, y, tag="7 her figure", sample=lab, **kw)
+            for g in r["groups"]:
+                for e in ES_E:
+                    bb, se = r[(g, f"e={e:+d}")]
+                    rows.append(dict(outcome=y, group=g, term=f"e={e:+d}", coef=bb, se=se, p=pv(bb, se),
+                                     stars=stars(pv(bb, se)), treated=r["n_tr"][g], n=r["info"]["n"],
+                                     clusters=r["info"]["clusters"]))
+                for k in W:
+                    bb, se = r[(g, k)]
+                    rows.append(dict(outcome=y, group=g, term=f"mean {k}", coef=bb, se=se, p=pv(bb, se),
+                                     stars=stars(pv(bb, se)), treated=r["n_tr"][g], n=r["info"]["n"],
+                                     clusters=r["info"]["clusters"]))
+            if kw:
+                for k in W:
+                    bb, se = diff(r, "Black", "White", k)
+                    rows.append(dict(outcome=y, group="Black - White", term=f"mean {k}", coef=bb, se=se,
+                                     p=pv(bb, se), stars=stars(pv(bb, se)), n=r["info"]["n"],
+                                     clusters=r["info"]["clusters"]))
+        print(y, "done", flush=True)
+    D = pd.DataFrame(rows)
+    D.to_csv(OUT / "her_displacement_family.csv", index=False)
+    print(D[D.term.str.startswith("mean")].to_string(), flush=True)
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    col = {"all": "#0b0b0b", "Black": "#eb6834", "White": "#2a78d6"}
+    fig, axs = plt.subplots(2, 3, figsize=(12.5, 7.2))
+    for ax, (y, title, sc) in zip(axs.ravel(), HER_OUT):
+        for k, g in enumerate(("all", "Black", "White")):
+            x = D[(D.outcome == y) & (D.group == g) & D.term.str.startswith("e=")].copy()
+            x["e"] = x.term.str.replace("e=", "").astype(int)
+            x = pd.concat([x, pd.DataFrame({"e": [-2], "coef": [0.0], "se": [0.0]})]).sort_values("e")
+            xx = x.e.to_numpy() + (k - 1) * 0.12
+            if g == "all":
+                ax.fill_between(xx, sc * (x.coef - 1.96 * x.se), sc * (x.coef + 1.96 * x.se), color=col[g],
+                                alpha=0.12, lw=0)
+                ax.plot(xx, sc * x.coef, color=col[g], lw=2, marker="o", ms=3.5, label="all")
+            else:
+                ax.plot(xx, sc * x.coef, color=col[g], lw=1.2, marker="o", ms=3, ls="--", label=g)
+        ax.axhline(0, color="#555555", lw=0.7)
+        ax.axvline(-0.5, color="#999999", lw=0.8, ls=":")
+        ax.set_title(title, fontsize=10)
+        ax.set_xlabel("years since her displacement")
+        ax.grid(axis="y", color="#e5e5e5", lw=0.6)
+        for sp in ("top", "right"):
+            ax.spines[sp].set_visible(False)
+    h, lb = axs[0, 0].get_legend_handles_labels()
+    fig.legend(h, ["all (95% CI)", "Black", "White"], frameon=False, fontsize=9, loc="lower center", ncol=3)
+    fig.tight_layout(rect=(0, 0.05, 1, 1))
+    path = HERE / "paperA_joint_loss" / "fig_psid_her_displacement.pdf"
+    fig.savefig(path)
+    fig.savefig(path.with_suffix(".png"), dpi=160)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    if "--figure-her" in sys.argv:
+        figure_her_main()
+    elif "--figure" in sys.argv:
+        figure_main()
+    else:
+        main()

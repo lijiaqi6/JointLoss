@@ -109,6 +109,39 @@ frequent, so correlated shocks do not explain this difference. A search friction
 preferences, including the value of time with young children, remain as explanations; the model separates them by
 their implications for women's search and employment over the life cycle.
 
+\subsection{The wife's job loss}
+
+When the wife is the one displaced, the family loses her earnings and the husband barely makes them up
+(Figure~\ref{fig:her_displacement}). With the roles of the stacked event study reversed (the wife's first
+displacement, wives of male heads with children who worked before; events 1984--2021; 1,205 displaced wives), her
+labor income falls by \$4,140 a year over years 1 to 3 ($-4{,}140^{***}$, s.e.\ 602) and is still \$2,960 lower in
+years 4 to 6 ($-2{,}960^{***}$), and her hours fall by 127 a year over years 1 to 3 ($-127^{***}$, s.e.\ 38). Her
+husband, while still with her, works 61 more hours a year ($+61^{*}$, s.e.\ 32, $p=0.061$), about 3\% of his annual
+hours, and his labor income does not rise ($-797$, $p=0.52$). Her family's income falls by \$6,440 over years 1 to 3
+($-6{,}440^{***}$), more than her own earnings, because the outcome follows her into a new family when the marriage
+ends (next subsection) and because her husband's earnings were already lower in the year before her displacement
+($-2{,}360^{*}$, $p=0.052$). Food stamp receipt does not change ($+1.7$ points, $p=0.19$). The model needs the
+husband's response to his wife's job loss to be small; it is not targeted, so it is a check on the model's husband
+block.\footnote{Same design and controls as
+Figure~\ref{fig:separation_events} (her design), reference year $-2$; his hours and earnings while she is still with
+the husband of before; family income and food stamps of her family. Her hours are 115 higher in year $-1$
+($p<0.001$), a rise before the job loss rather than a dip; her earnings show no pre-trend ($-425$, $p=0.39$). By race,
+over years 1--3: her earnings Black $-3{,}174^{***}$, White $-4{,}600^{***}$ (difference $p=0.20$); his hours Black
+$+100^{*}$ ($p=0.079$), White $+43$ ($p=0.28$); family income Black $-4{,}842^{***}$, White $-6{,}650^{***}$
+(difference $p=0.45$). Code: \texttt{65.HerLossRobustness.py --figure-her}
+(\texttt{output/her\_displacement\_family.csv}).}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{fig_psid_her_displacement.pdf}
+\caption{The wife's displacement and the family (PSID, events 1984--2021)}\label{fig:her_displacement}
+\begin{minipage}{0.95\textwidth}\footnotesize Stacked event study of the wife's first displacement (closure, layoff or
+firing), by year relative to the event (reference year $-2$): wives of male heads with a child under 18 and positive
+hours at baseline; clean controls not displaced to year $+6$; person $\times$ stack and calendar year $\times$ stack
+fixed effects; 95\% confidence intervals for all couples (shaded) clustered by 1968 family; dashed lines: Black and
+White couples (head's race), estimated in one regression. His hours and earnings while she is with the husband of
+before. 2000 dollars. Code: \texttt{65.HerLossRobustness.py --figure-her}.\end{minipage}
+\end{figure}
+
 \subsection{The marriage}
 
 The job loss also strains the marriage. The share of displaced fathers still living with the wife they had before the
@@ -135,7 +168,8 @@ against $-0.036$ over years 1 to 3, difference $p=0.54$; $-0.090$ against $-0.05
 three of five of these break-ups it is the husband who leaves the family. A joint loss, both spouses displaced within a
 year, gives the largest response: over the six years after the husband's displacement, the share still together is 9.5
 points lower when his wife lost her job too ($-0.095^{***}$, $p=0.009$) and 4.1 points lower when she kept hers
-($-0.041^{***}$); with 174 joint events the difference is not statistically significant ($p=0.15$). The response
+($-0.041^{***}$); with 174 joint events the difference is not statistically significant ($p=0.15$)
+(Figure~\ref{fig:separation_events}). The response
 survives baseline characteristics interacted with event time ($-0.033^{***}$ over years 1 to 3), dropping the couples
 who lost both jobs, and requiring that both displaced and control wives be interviewed when the job loss would be
 reported ($-0.050^{***}$). Two caveats remain. As for the husband's displacement, the outcome equals one before the
@@ -162,6 +196,22 @@ separations after her displacement and 65\% among controls, she moves out in 15\
 ($-0.002$, $p=0.44$). Requiring both groups to be interviewed at the first interview after the event year (a displaced
 wife must be to report the job loss) makes later attrition equal (0.011, $p=0.36$); filling the outcome from his side
 when she is not interviewed then gives $-0.051^{***}$.}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.8\textwidth]{fig_psid_separation_events.pdf}
+\caption{Still together after his, her and a joint displacement (PSID, events 1984--2021)}\label{fig:separation_events}
+\begin{minipage}{0.95\textwidth}\footnotesize Probability that the displaced spouse still lives with the spouse of
+before the event, by year relative to the displacement (reference year $-2$), in one stacked regression with one
+clustered covariance: the husband's displacement when his wife was not displaced within a year of it (his alone), the
+same when she was (joint), and the wife's first displacement when her husband was not displaced within a year (her
+alone); clean controls free of the other spouse's displacement in years $-3$ to $+6$; person $\times$ stack and
+calendar year $\times$ stack fixed effects; 95\% confidence intervals clustered by 1968 family ($N=373{,}394$, 2{,}080
+clusters). The outcome equals one at baseline by construction, so the coefficients before year 0 are not a placebo
+test. Mean over years 1--6: his alone $-0.041^{***}$ (s.e.\ 0.013), her alone $-0.070^{***}$ (0.015), joint
+$-0.095^{***}$ (0.036); joint minus his alone $-0.054$ (0.038, $p=0.15$), her alone minus his alone $-0.030$ (0.019,
+$p=0.12$), joint minus her alone $-0.025$ (0.039, $p=0.53$). Code: \texttt{65.HerLossRobustness.py --figure}
+(\texttt{output/separation\_three\_events.csv}).\end{minipage}
+\end{figure}
 
 The insurance that survives the marriage is hit as well. A separated mother with children receives \$132 (Black) or
 \$327 (White) a month in child support on average; when her husband had been displaced in the two years before the
