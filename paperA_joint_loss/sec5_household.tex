@@ -268,7 +268,17 @@ loss); 95\% confidence intervals clustered by 1968 family. Code: \texttt{IGE/47.
 
 Food stamp receipt rises by 4.2 points for Black and 3.3 points for White families after the father's displacement,
 while AFDC/TANF receipt barely moves. The joint job loss determines which programs can respond, and the monthly SIPP
-shows how. When the husband loses his job alone, unemployment insurance reaches him at once: his receipt rises by 23
+shows how (Figure~\ref{fig:sipp_household}). A joint loss deepens the fall in the family's earnings for about half a
+year: over the first three months, family earnings fall by 17\% of their pre-loss level after his loss alone and by
+27\% after a joint loss (a difference of \$440 a month, $-440^{**}$, $p=0.043$), and over months 3 to 5 by 21\% and
+33\% ($-483^{*}$, $p=0.058$); from month 6 the two paths are close ($-139$, $p=0.61$), as his re-employment drives
+both.\footnote{Family earnings: both spouses' monthly earnings (TPEARN, negative amounts set to zero), 2000 dollars;
+pre-loss levels in $s=-3,\dots,-1$: \$5,803 (his loss alone) and \$5,267 (joint loss) a month. Event-study bins
+relative to $s=-3,\dots,-1$: after his loss alone $-958^{***}$ (s.e.\ 58) in $s=0$--$2$, $-1{,}232^{***}$ (72) in
+$s=3$--$5$, $-880^{***}$ (80) in $s=6$--$11$; after a joint loss $-1{,}398^{***}$ (210), $-1{,}715^{***}$ (245),
+$-1{,}019^{***}$ (261). In $s=-6$ to $-4$ family earnings are lower ($-260^{***}$ alone, $-411^{**}$ joint) for the
+same reason as the employment pre-trend: both spouses are required to work at $s=-1$. Design as in the next footnote
+(\texttt{78.SafetyNetJointLoss.py}).} When the husband loses his job alone, unemployment insurance reaches him at once: his receipt rises by 23
 points in the first three months and stays 13 points higher half a year later, and the couple almost never goes
 without both earnings and benefits (1.0\% of couple-months in the first half year). When the wife loses her job too,
 his benefits rise by about as much, hers rise by 11 to 18 points, and yet 9.3\% of the couple-months in the first half
@@ -294,6 +304,20 @@ not employed: 24.0\% of the joint-loss couple-months (1.5\% after his loss alone
 38.7\%, food stamps 33.8\%, neither program 23.5\% (316 couple-months). After his loss alone, among couple-months with
 him not employed: UI for neither 51.2\%, food stamps 9.7\% (6{,}458 couple-months). Weighted by the wife's weight in
 $s = -1$ (\texttt{IGE/78.SafetyNetJointLoss.py}).}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{fig_sipp_household_months.pdf}
+\caption{The household month by month after his job loss alone and a joint loss (SIPP)}\label{fig:sipp_household}
+\begin{minipage}{0.95\textwidth}\footnotesize Event-study coefficients by month relative to the husband's involuntary
+separation ($s=0$), reference $s=-3,\dots,-1$, for his loss alone (2{,}644 events) and a joint loss (the wife's
+involuntary separation in $s=-3,\dots,+3$; 206 events), against clean controls (29{,}899 couples); dual-earner couples
+with the wife aged 25--59, SIPP 2004, 2008 and 2014 panels (reference months 2003--2016); couple and panel $\times$
+rotation $\times$ calendar-month fixed effects; 95\% confidence intervals clustered by household. Family earnings in
+percent of the group's pre-loss level. The pre-trends in employment and earnings in $s=-6$ to $-4$ follow from
+requiring both spouses to work at $s=-1$. No race split: six joint same-month events of Black couples. Estimates and
+bins in the footnotes of this subsection. Code: \texttt{78.SafetyNetJointLoss.py}
+(\texttt{output/safety\_net\_joint\_loss.csv}).\end{minipage}
+\end{figure}
 
 Food stamps respond less than the joint loss would suggest, because the couples who lose both jobs are already the
 couples on the program. In the three months before his loss, 19\% of joint-loss couples receive food stamps, against

@@ -43,6 +43,8 @@ OUTPUTS (aggregate only)
   output/safety_net_joint_loss.csv  every estimate: dataset, table, sample, cell, outcome, coef, se, p, stars, n
   output/safety_net_joint_loss.md   tables
   output/safety_net_joint_loss.png  monthly SNAP / UI paths around his loss alone vs a joint loss (SIPP)
+  paperA_joint_loss/fig_sipp_household_months.pdf (.png)  event-study coefficients by month, six outcomes (2026-10-21:
+                                    family earnings added; Fable's figure 1)
 Run from the repository root: .venv/Scripts/python.exe -I IGE/78.SafetyNetJointLoss.py [--only sipp,psid]
   [--scratch DIR] (the scratch of IGE/75; the extracts are built there if missing)
 """
@@ -149,8 +151,9 @@ BINS = {"pre s=-6..-4": range(-6, -3), "s=0..2": range(0, 3), "s=3..5": range(3,
 OUTC = {"snap": "SNAP receipt, household (%)", "snap_amt": "SNAP amount, household (2000 $ a month)",
         "ui_h": "UI receipt, husband (%)", "ui_w": "UI receipt, wife (%)", "ui_any": "UI receipt, either spouse (%)",
         "tanf": "TANF receipt, either spouse (%)", "noinc": "no earner and no UI in the month (%)",
-        "emp_h": "husband employed (%)", "emp_w": "wife employed (%)"}
-PCT = {k for k in OUTC if k != "snap_amt"}
+        "emp_h": "husband employed (%)", "emp_w": "wife employed (%)",
+        "earn": "family earnings, his + hers (2000 $ a month)"}
+PCT = {k for k in OUTC if k not in ("snap_amt", "earn")}
 
 
 def sipp_outcomes(P):
@@ -183,6 +186,9 @@ def sipp_outcomes(P):
     P["noinc"] = np.where(np.isfinite(P.ui_any), 100 * (noemp & (P.ui_any.to_numpy(float) == 0)), np.nan)
     P["emp_h"] = 100 * P.E_h.astype(float)
     P["emp_w"] = 100 * P.E_w.astype(float)
+    # monthly earnings of both spouses (TPEARN, total person earnings; negative self-employment amounts set to 0)
+    eh, ew = np.clip(f("earn_h"), 0, None), np.clip(f("earn_w"), 0, None)
+    P["earn"] = np.where(np.isfinite(eh) & np.isfinite(ew), (eh + ew) * defl, np.nan)
     return P
 
 
@@ -337,6 +343,51 @@ def plot(D, path):
     fig.legend(h, lb, frameon=False, fontsize=9, loc="lower center", ncol=2)
     fig.tight_layout(rect=(0, 0.08, 1, 1))
     fig.savefig(path, dpi=160)
+    plt.close(fig)
+
+
+def plot_es(D, path):
+    """Paper figure (Fable's figure 1, proposals/fable_event_study_figures_paperA.md): event-study coefficients by
+    month (reference s = -3..-1, unit + panel x rotation x month FE, 95% CIs from household-cluster s.e.), his loss
+    alone vs a joint loss. Family earnings in % of the group's weighted level in s = -3..-1."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    col = {"alone": "#2a78d6", "joint": "#eb6834"}
+    lab = {"alone": "his loss alone", "joint": "joint loss (her loss within 3 months)"}
+    panels = [("husband employed (%)", "(a) Husband employed (pp)", 1),
+              ("wife employed (%)", "(b) Wife employed (pp)", 1),
+              ("family earnings, his + hers (2000 $ a month)", "(c) Family earnings (% of pre-loss)", None),
+              ("UI receipt, either spouse (%)", "(d) UI receipt, either spouse (pp)", 1),
+              ("SNAP receipt, household (%)", "(e) SNAP receipt (pp)", 1),
+              ("no earner and no UI in the month (%)", "(f) No earner and no UI (pp)", 1)]
+    fig, axs = plt.subplots(2, 3, figsize=(12.5, 7.2))
+    for ax, (out, title, scale) in zip(axs.ravel(), panels):
+        for k, g in enumerate(("alone", "joint")):
+            q = D[(D.table == "es") & (D["sample"] == g) & (D.outcome == out)].copy()
+            q["s"] = q.cell.str.replace("s=", "").astype(int)
+            q = pd.concat([q, pd.DataFrame({"s": list(REF), "coef": 0.0, "se": 0.0})]).sort_values("s")
+            sc = scale
+            if sc is None:
+                ref = D[(D.table == "lev-bin") & (D["sample"] == g) & (D.cell == "ref s=-3..-1") & (D.outcome == out)]
+                sc = 100.0 / float(ref.coef.iloc[0])
+            x = q.s.to_numpy() + (k - 0.5) * 0.18
+            ax.fill_between(x, sc * (q.coef - 1.96 * q.se), sc * (q.coef + 1.96 * q.se), color=col[g], alpha=0.15,
+                            lw=0)
+            ax.plot(x, sc * q.coef, color=col[g], lw=1.8, marker="o", ms=3, label=lab[g])
+        ax.axhline(0, color="#555555", lw=0.7)
+        ax.axvline(-0.5, color="#999999", lw=0.8, ls=":")
+        ax.set_title(title, fontsize=10)
+        ax.set_xlabel("months since his job loss")
+        ax.set_xticks(range(S_MIN, S_MAX + 1, 3))
+        ax.grid(axis="y", color="#e5e5e5", lw=0.6)
+        for sp in ("top", "right"):
+            ax.spines[sp].set_visible(False)
+    h, lb = axs[0, 0].get_legend_handles_labels()
+    fig.legend(h, lb, frameon=False, fontsize=9.5, loc="lower center", ncol=2)
+    fig.tight_layout(rect=(0, 0.05, 1, 1))
+    fig.savefig(path)
+    fig.savefig(Path(path).with_suffix(".png"), dpi=160)
     plt.close(fig)
 
 
@@ -526,6 +577,8 @@ def main():
     write_md(D)
     if (D.table == "lev").any():
         plot(D, OUT / f"{TAG}.png")
+    if (D.table == "es").any():
+        plot_es(D, HERE / "paperA_joint_loss" / "fig_sipp_household_months.pdf")
     log(f"wrote {len(D)} rows")
 
 
