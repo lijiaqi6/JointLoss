@@ -206,6 +206,12 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   the free estimate; Wald z 8.6***); stopped by the PI at iteration 7, still falling ~3 per iteration. Absorbed by
   theta_617 0.0079 -> 0.0008, theta_05 0.022 -> 0.013, sigmaJ_W and d_h halved; none of these moves the wealth
   moments. a_bar stays free until step 5.
+- 2026-10-21 ~18:00, change of plan (PI): lamh stopped (step-2 Wald already rejects it, z ~7.2***); restriction tests
+  from now on by the Wald test at the current estimate, LM reruns only where it does not settle them. Next, in order:
+  (1) wealth Bacher et al.'s way: one discount factor beta estimated (`--free-extra beta`, bounds 0.90-0.995 a year;
+  fixed until now at 0.96 a year) with a_bar fixed at 25.639, from the abar estimate (warm-up Q must equal 1,932.35:
+  beta starts at its fixed value); (2) the Bacher nesting check on the model side (no correlated loss, no children,
+  UI only, no separation; their AWE 5.55, 7.12 / 1.40 by age); (3) one combined LM with sigJ and the result of (1).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
