@@ -194,6 +194,10 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   moments are within 1.5 se of zero") does not hold at this estimate: F is well identified (norm 9.5, value
   scaling). F stays free (PI confirmed 2026-10-21; replaces decision 3 below). Its upper bound 0.6 (F at 95% of
   the range) is to be checked once the step-5 features are in. Chain continues: sigJ, abar, lamh.
+- 2026-10-21 ~01:20: chain stopped at the PI's request (overnight pause). sigJ had only its warm-up (Q 1,693.2, +2 vs
+  step 2); abar and lamh not started. To resume: rerun sigJ, abar, lamh from the step-2 best.json with
+  `--bound-margin 0` (Wald at step 2 already rejects abar, z 8.6***, and lamh, z ~7.2***). Next to discuss: the
+  net-worth wealth target (script 77), the largest fit lever (wealth 65% of Q).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
