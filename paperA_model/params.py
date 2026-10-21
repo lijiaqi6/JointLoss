@@ -86,6 +86,9 @@ assert N_PARAMS == 33
 # start value is the fixed input of the same name (FIXED_DEFAULTS / inputs/fixed_inputs.json, or --set-fixed).
 EXTRA_PARAMS = [
     ("sigma_eps", 0.02, 0.5, "taste_shock"),      # scale of the extreme-value taste shocks (utility units)
+    # monthly discount factor, one for all couples (2026-10-21, PI): Bacher et al. (2025) calibrate it to liquid wealth
+    # by age (0.9955 a month); bounds 0.90 and 0.995 a year
+    ("beta", 0.90 ** (1 / 12), 0.995 ** (1 / 12), "preferences"),
 ]
 EXTRA_NAMES = [p[0] for p in EXTRA_PARAMS]
 

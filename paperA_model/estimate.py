@@ -41,8 +41,8 @@ Omega of the sandwich); 'block' = equal total weight per block in z^2 units, the
 N / (B n_b) (robustness run); 'vcov' = inverse of the block-diagonal bootstrap covariance (diagnostics). The logged
 'weight shares by block' are in z units (w se^2); the Jacobian report adds each block's share of each parameter's
 information.
-Parameters: the 31 of params.PARAMS plus the optional params.EXTRA_PARAMS (sigma_eps), carried in every theta vector
-(32 entries); sigma_eps is fixed at its input value unless --free-extra sigma_eps. --set-fixed name=value changes a
+Parameters: the 31 of params.PARAMS plus the optional params.EXTRA_PARAMS (sigma_eps, beta), carried in every theta
+vector; each extra is fixed at its input value unless --free-extra names it (e.g. --free-extra beta). --set-fixed name=value changes a
 FIXED_DEFAULTS entry (e.g. sigma_eps=0.1); --fix name=value holds an estimated parameter; --tie a=b sets b = a (b not
 free; not used by default). A start within 1% of the bound range of a free parameter is refused (--bound-margin).
 Extensions of 2026-10-19 (off by default): --new-job on (wife state 'new job', parameter xi_nj), --her-sep on
@@ -130,10 +130,15 @@ def pad_vec(x, fx=None) -> np.ndarray:
     x = np.asarray(x, float)
     if len(x) == len(NAMES):
         return x
+    nP = len(PARAM_NAMES)
+    fx = fx if fx is not None else load_fixed()
+    if len(x) in (nP + 1, nP + 1 + len(LATE_NAMES)):           # before beta joined the extras (2026-10-21)
+        x = np.concatenate([x[:nP + 1], [float(fx["beta"])], x[nP + 1:]])
     parts = [x]
-    if len(x) == len(PARAM_NAMES):
-        fx = fx if fx is not None else load_fixed()
+    if len(x) == nP:
         parts.append([float(fx[n]) for n in EXTRA_NAMES])
+    if len(x) == len(NAMES):
+        return x
     nested = {n: v for n, v in EXT_PARAM.values()}
     parts.append([nested[n] for n in LATE_NAMES])
     out = np.concatenate(parts)
