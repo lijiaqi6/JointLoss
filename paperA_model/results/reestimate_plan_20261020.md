@@ -248,6 +248,14 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   `restr` NOT launched: the PC is kept free for Paper 1 (PI). To start it later: polish --label restr --start
   runs/polish_beta95r_20261022_112516_p38836/best.json --fix a_bar=25.639 --free-extra beta --tie sigmaJ_B=sigmaJ_W
   --bound-margin 0 --workers 7 --threads 2 --iters 15.
+- Combined LM `restr` (`runs/polish_restr_20261022_153629_p12488`, PI go 2026-10-22 15:36 after Paper 1 finished):
+  warm-up 1,026.5 (sigmaJ pooled costs nothing), 1,025.57 -> 1,025.16 -> 1,025.04, converged (Q fell 0.53 over two
+  iterations). Sandwich s.e. at the end: beta 0.995719 a month (0.9498 a year; s.e. 0.00009 a month, ~0.001 a year);
+  sigmaJ 0.0011 (0.0021); F 0.5999 (0.035) AT its bound; lam_h_B 0.124 (0.012) vs lam_h_W 0.309 (0.019); lam_w_B
+  0.087 (0.013) vs lam_w_W 0.156 (0.016); theta_05 0.007 (0.010), theta_617 -0.003 (0.005); d_h 0.006 (0.037);
+  pi_dn_w 0.0003 (0.0008). This is the new reference estimate (30 free parameters, a_bar at its data value):
+  Q 1,025.0 against 1,691.2 at step 2. F (money cost of work, $ thousand a month per working spouse, model.py fc)
+  profile next.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
