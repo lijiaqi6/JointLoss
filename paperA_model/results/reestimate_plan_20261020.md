@@ -256,6 +256,16 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   pi_dn_w 0.0003 (0.0008). This is the new reference estimate (30 free parameters, a_bar at its data value):
   Q 1,025.0 against 1,691.2 at step 2. F (money cost of work, $ thousand a month per working spouse, model.py fc)
   profile next.
+- F profile at `restr` (evaluate, all else held; `evaluate_20261022_1813*`/`1814*`): Q 2,326 / 1,391 / 1,025 /
+  1,204 / 1,704 / 3,315 at F 0.4 / 0.5 / 0.6 / 0.7 / 0.8 / 1.0. Employment levels 1,037 / 363 / 75 / 220 / 667 / 2,142;
+  wealth 508 / 466 / 422 / 357 / 281 / 150; liquid <= 0 at 45-59 0.219 ... 0.290 (data 0.381). F is the only lever on
+  older wealth (a money cost of working lowers saving), so LM pushes it to the bound when the work parameters can
+  re-adjust: a missing margin, as a_bar was; do not widen the bound. Largest remaining Q at the estimate: liquid <= 0
+  at 45-59 293 (29%; data 0.381, model 0.234); wage growth 45-59 wives 45 (0.027 vs 0.051), husbands 40 (0.013 vs
+  0.037), 35-44 wives 38, husbands 27; liquid <= 0 at 35-44 44. Old couples hold too much liquid wealth and their
+  wages grow too fast after 35. Proposed (PI to decide): (1) eta_up profile (accumulation falling with the level,
+  0.55 now) for the late wage growth; (2) the script-77 wealth definition (liquid vs net worth excl. home and
+  vehicles): older families save in housing and retirement accounts, the model has one liquid asset.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
