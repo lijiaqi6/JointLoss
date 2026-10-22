@@ -243,8 +243,11 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   year (s.e. ~0.001); sigmaJ_B - sigmaJ_W -0.0016 (s.e. 0.0059, p = 0.79): pooling still passes; lam_h_B - lam_h_W
   -0.184 (0.030, z -6.2***): race-specific; F 0.5999 = AT its upper bound 0.6 (was 0.570): check F like beta (profile,
   which margin it stands in for) after the combined run, do not just widen the bound. Proposed to the PI: stop
-  beta95r, run the combined LM `restr` (beta free, sigmaJ_B = sigmaJ_W, a_bar 25.639) from its best point; queued
-  to start when beta95r ends.
+  beta95r, run the combined LM `restr` (beta free, sigmaJ_B = sigmaJ_W, a_bar 25.639) from its best point.
+- beta95r stopped by the PI 2026-10-22 15:27 at iteration 6: Q 1,028.0 (gains 5.0, 2.5, 3.3 in the last three).
+  `restr` NOT launched: the PC is kept free for Paper 1 (PI). To start it later: polish --label restr --start
+  runs/polish_beta95r_20261022_112516_p38836/best.json --fix a_bar=25.639 --free-extra beta --tie sigmaJ_B=sigmaJ_W
+  --bound-margin 0 --workers 7 --threads 2 --iters 15.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
