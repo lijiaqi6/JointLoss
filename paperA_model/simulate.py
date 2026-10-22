@@ -422,9 +422,9 @@ def sim_kernel(seed, uid, row, t_beg, t_end, m_off, st_a, st_lw, st_lh, st_hw, s
                     lw2 = lw
             recI[13, rw, m] = acc
             # human capital: own step, shared innovation, idiosyncratic innovation
-            hw2 = draw_row(Aw_idx[cat_w, hw], Aw_p[cat_w, hw], Aw_n[cat_w, hw], u01(seed, u_, t, 30))
+            hw2 = draw_row(Aw_idx[gq, cat_w, hw], Aw_p[gq, cat_w, hw], Aw_n[gq, cat_w, hw], u01(seed, u_, t, 30))
             if mar == 1:
-                hh2 = draw_row(Ah_idx[cat_h, hh], Ah_p[cat_h, hh], Ah_n[cat_h, hh], u01(seed, u_, t, 31))
+                hh2 = draw_row(Ah_idx[gq, cat_h, hh], Ah_p[gq, cat_h, hh], Ah_n[gq, cat_h, hh], u01(seed, u_, t, 31))
                 us = u01(seed, u_, t, 32)
                 if us < pc:
                     if us < 0.5 * pc:

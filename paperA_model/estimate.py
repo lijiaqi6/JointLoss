@@ -98,7 +98,7 @@ TIES: list = []                                      # (index of a, index of b):
 # step-by-step evidence in results/diagnostics_20261018.md. An extension's parameter (EXT_PARAM) is free when the
 # extension is on and held at its nested value when it is off.
 EXT_DEFAULTS = {"cps_persist": True, "cps_classif": False, "cs_memory": False, "borrow_wedge": True, "hc_eta": True,
-                "new_job": False, "her_sep": False, "her_sep_tie": False}
+                "new_job": False, "her_sep": False, "her_sep_tie": False, "hc_age": False}
 # Extensions pre-built 2026-10-19 (README 'Extensions 2026-10-19'), off by default: new_job = a wife labor state
 # 'employed on a job started less than ~a year ago' with an extra exit hazard xi_nj; her_sep = separation hazard
 # sigma_Jw while she is UI-entitled after her own displacement (her_sep_tie on: sigma_Jw = his sigma_J(r)). Their
@@ -110,7 +110,7 @@ EXT_TARGETS = ("new_job", "her_sep")
 CPS_FLOW_IDS = {True: ["cps_entry_p_black", "cps_entry_p_white", "cps_wife_exit_p"],
                 False: ["cps_entry_black", "cps_entry_white", "cps_wife_exit"]}
 EXT_PARAM = {"cs_memory": ("c_mem", 0.0), "hc_eta": ("eta_up", 0.0), "new_job": ("xi_nj", 0.0),
-             "her_sep": ("sigmaJw", 0.0)}
+             "her_sep": ("sigmaJw", 0.0), "hc_age": ("g_age", 0.0)}
 EXT_REPORT_REASON = "reported only (extension check, target = 0 in paperA_targets_ext.csv)"
 
 
@@ -125,26 +125,23 @@ def dict_vec(d: dict) -> np.ndarray:
 
 
 def pad_vec(x, fx=None) -> np.ndarray:
-    """A theta vector of an earlier run completed: without the extras (PARAMS only) by the extras' fixed values; without
-    the 2026-10-19 extension parameters by their nested values (EXT_PARAM)."""
+    """A theta vector of an earlier run completed: missing extras (sigma_eps, beta) by their fixed values, missing
+    extension parameters (xi_nj, sigmaJw, g_age) by their nested values (EXT_PARAM)."""
     x = np.asarray(x, float)
     if len(x) == len(NAMES):
         return x
-    nP = len(PARAM_NAMES)
     fx = fx if fx is not None else load_fixed()
-    if len(x) in (nP + 1, nP + 1 + len(LATE_NAMES)):           # before beta joined the extras (2026-10-21)
-        x = np.concatenate([x[:nP + 1], [float(fx["beta"])], x[nP + 1:]])
-    parts = [x]
-    if len(x) == nP:
-        parts.append([float(fx[n]) for n in EXTRA_NAMES])
-    if len(x) == len(NAMES):
-        return x
     nested = {n: v for n, v in EXT_PARAM.values()}
-    parts.append([nested[n] for n in LATE_NAMES])
-    out = np.concatenate(parts)
-    if len(out) != len(NAMES):
+    # layouts of earlier runs, by length: the names each carried (the rest take fixed or nested values)
+    nP = len(PARAM_NAMES)
+    layouts = {nP: PARAM_NAMES,
+               nP + 1: PARAM_NAMES + ["sigma_eps"],
+               nP + 3: PARAM_NAMES + ["sigma_eps", "xi_nj", "sigmaJw"],
+               nP + 4: PARAM_NAMES + ["sigma_eps", "beta", "xi_nj", "sigmaJw"]}      # until g_age (2026-10-22)
+    if len(x) not in layouts:
         raise ValueError(f"theta vector of length {len(x)} does not match {len(NAMES)} parameters")
-    return out
+    d = dict(zip(layouts[len(x)], x))
+    return np.array([d[n] if n in d else (float(fx[n]) if n in EXTRA_NAMES else nested[n]) for n in NAMES], float)
 
 
 # ----------------------------------------------------------------------------------------------------------------------

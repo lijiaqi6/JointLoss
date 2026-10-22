@@ -243,15 +243,28 @@ class Model:
         if "no_hc" in ov:                               # tests: freeze human capital
             up_w = up_h = dn_w = dn_h = d_w = d_h = p_c = p_ew = p_eh = 0.0
         self.p_c = p_c
-        self.Aw = np.stack([own_step_matrix(H, c, np.minimum(up_w * up_shape * (1 if c == CAT_F else ku), 1.0), dn_w,
-                                            d_w) for c in range(4)])
-        self.Ah = np.stack([own_step_matrix(H, c, np.minimum(up_h * up_shape * (1 if c == CAT_F else ku), 1.0), dn_h,
-                                            d_h) for c in range(4)])
+        # accumulation falling with age (2026-10-22; g_age = 0: none): x exp(-g_age x 5 x age group), the wife's 5-year
+        # group (0 = 25-29, factor 1), for both spouses; the step matrices are (age group, category, H, H)
+        g_age = float(th.get("g_age", 0.0))
+        self.up_age = np.exp(-g_age * 5.0 * np.arange(N_AGE_GROUPS))
+
+        def steps(up, dn, d):
+            return np.stack([np.stack([own_step_matrix(H, c, np.minimum(up * fa * up_shape * (1 if c == CAT_F else ku),
+                                                                        1.0), dn, d) for c in range(4)])
+                             for fa in self.up_age])
+
+        AwG, AhG = steps(up_w, dn_w, d_w), steps(up_h, dn_h, d_h)
+        self.Aw, self.Ah = AwG[0], AhG[0]                    # age group 0 (the only matrices when g_age = 0)
         self.Iw = innov_matrix(H, p_ew)
         self.Ih = innov_matrix(H, p_eh)
         self.Is = innov_matrix(H, min(p_c + p_ew, 1.0))      # separated wife: one innovation, prob p_c + p_eps_w
-        self.Aw_idx, self.Aw_p, self.Aw_n = map(np.stack, zip(*[sparse_rows(self.Aw[c]) for c in range(4)]))
-        self.Ah_idx, self.Ah_p, self.Ah_n = map(np.stack, zip(*[sparse_rows(self.Ah[c]) for c in range(4)]))
+        # sparse rows by (age group, category, level)
+        def sparse_by_age(AG):
+            rows = [[sparse_rows(A[c]) for c in range(4)] for A in AG]
+            return tuple(np.array([[r[c][i] for c in range(4)] for r in rows]) for i in range(3))
+
+        self.Aw_idx, self.Aw_p, self.Aw_n = sparse_by_age(AwG)
+        self.Ah_idx, self.Ah_p, self.Ah_n = sparse_by_age(AhG)
 
         # ---------------- child process ---------------------------------------------------------------------------
         b0 = np.array(fx["b0_annual"][R]) / 12.0

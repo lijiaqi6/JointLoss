@@ -100,6 +100,9 @@ EXTRA_NAMES = [p[0] for p in EXTRA_PARAMS]
 LATE_PARAMS = [
     ("xi_nj", 0.02, 0.0, 0.2, "her_exits"),       # extra monthly exit hazard of a wife on a new job (tenure state)
     ("sigmaJw", 0.01, 0.0, 0.10, "separation"),   # separation hazard added while she is UI-entitled after her loss
+    # accumulation falling with age (2026-10-22, PI; estimate.py --hc-age on): pi_up x exp(-g_age x 5 x age group), the
+    # wife's 5-year age group 0 (25-29) ... 6 (55-59), the same factor for both spouses; g_age per year of age
+    ("g_age", 0.03, 0.0, 0.20, "human_capital"),
 ]
 LATE_NAMES = [p[0] for p in LATE_PARAMS]
 

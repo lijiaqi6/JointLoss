@@ -1118,7 +1118,7 @@ def solve(m: Model, store: bool = True, t_stop: int = 0, keep_values=False) -> S
         P = m.Pk[g]
         t0 = time.perf_counter()
         # separated wife at t (uses V^S_{t+1})
-        k_sep_expect(VS1, DS1, jan, P, m.Is, m.ws_cat, m.ws_lw, m.Aw_idx, m.Aw_p, m.Aw_n, GSV, GSD)
+        k_sep_expect(VS1, DS1, jan, P, m.Is, m.ws_cat, m.ws_lw, m.Aw_idx[g], m.Aw_p[g], m.Aw_n[g], GSV, GSD)
         if m.ui_accept:
             k_offer_sep(GSV, GSD, nI, m.off_iE, m.off_iU, m.off_iN, m.ui_exp, m.sigma_eps, st_off,
                         sol.DltS[t] if st_off else dumDS)
@@ -1135,8 +1135,8 @@ def solve(m: Model, store: bool = True, t_stop: int = 0, keep_values=False) -> S
             k_tilde_w(VM1, DM1, VSh, DSh, sig_tab, jan, m.pnu, TV, TD)
         k_child(TV, TD, P)
         k_hc(TV, TD, m.Iw, m.Ih, m.p_c)
-        k_husb(TV, TD, m.hs_cat, m.hs_lh, m.Ah_idx, m.Ah_p, m.Ah_n, YV, YD)
-        k_wife(YV, YD, m.ws_cat, m.ws_lw, m.Aw_idx, m.Aw_p, m.Aw_n, GV, GD)
+        k_husb(TV, TD, m.hs_cat, m.hs_lh, m.Ah_idx[g], m.Ah_p[g], m.Ah_n[g], YV, YD)     # age group g (g_age)
+        k_wife(YV, YD, m.ws_cat, m.ws_lw, m.Aw_idx[g], m.Aw_p[g], m.Aw_n[g], GV, GD)
         if m.ui_accept:
             k_offer(GV, GD, nI, m.off_iE, m.off_iU, m.off_iN, m.ui_exp, m.sigma_eps, st_off,
                     sol.Dlt[t] if st_off else dumD)
