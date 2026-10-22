@@ -238,6 +238,13 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   its data value, against 1,691.2 at the step-2 estimate (a_bar at its bound 60). To resume: polish --label beta95r
   --start runs/polish_beta95_20261021_210510_p18444/best.json --fix a_bar=25.639 --free-extra beta --bound-margin 0
   (7 workers x 2 threads). Still to do at this point: Q by block, fit table, s.e. of beta.
+- 2026-10-22: resumed as `beta95r` (`runs/polish_beta95r_20261022_112516_p38836`), warm-up 1,049.3, iteration 1
+  -> 1,044.4. Approximate Wald from its saved Jacobian (diag W = 1/se^2, x2 for simulation noise): beta 0.9499 a
+  year (s.e. ~0.001); sigmaJ_B - sigmaJ_W -0.0016 (s.e. 0.0059, p = 0.79): pooling still passes; lam_h_B - lam_h_W
+  -0.184 (0.030, z -6.2***): race-specific; F 0.5999 = AT its upper bound 0.6 (was 0.570): check F like beta (profile,
+  which margin it stands in for) after the combined run, do not just widen the bound. Proposed to the PI: stop
+  beta95r, run the combined LM `restr` (beta free, sigmaJ_B = sigmaJ_W, a_bar 25.639) from its best point; queued
+  to start when beta95r ends.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
