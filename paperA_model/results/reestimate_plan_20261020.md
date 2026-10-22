@@ -277,6 +277,20 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   wage-growth moments already targeted; needs age-specific human capital matrices in solve/simulate; tests: g = 0
   reproduces Q 1,025 exactly, then a g profile, then LM. Also seen: her re-employment wage loss after displacement
   ~0 in the model vs -6 to -20% in the SIPP (q 17, wide s.e.; d_w 0.045, s.e. 0.047): look after the age profile.
+- Age term coded (PI agreed 2026-10-22; commit 0305e86, `--hc-age on`, g_age): off and on with g_age 0 both give
+  Q 1,025.0406 = the combined estimate (a first batch crashed on a numba cache race, six processes compiling at
+  once on Google Drive; reran once cached). Paper 1 (asked at the PI's suggestion): no age term in its accumulation;
+  its decline comes from a fixed age profile in the wage equation (w0_profile[E, age]) and curvature of the return
+  per level; pitfalls: selection (our moment uses the same continuously-employed sample in model and data), the top
+  of the grid, identification against pi_up. g_age profile at `restr` (all else held): Q 1,025 / 1,223 / 1,588 /
+  2,019 / 2,532 at g_age 0 / 0.01 / 0.02 / 0.03 / 0.04; wage growth 195 -> 125 / 87 / 70 / 68 (wives 45-54 0.051 ->
+  0.028 at 0.04, data 0.027; husbands 0.037 -> 0.015, data 0.013); but wealth 422 -> 634 / 897 / 1,135 / 1,374:
+  flatter late growth means MORE saving (le0 at 45-59 0.235 -> 0.145), the opposite of the conjecture above; and
+  wives work less (employment levels 75 -> 451, her exits 15 -> 157 at 0.04). Joint g_age x beta (a year): Q 1,521
+  (0.02, 0.94), 2,206 (0.02, 0.93), 1,891 (0.03, 0.94), 2,554 (0.03, 0.93), 2,386 (0.04, 0.94), 3,013 (0.04, 0.93);
+  lower beta restores wealth (le0 45-59 0.33 at 0.93) but costs employment further; the work parameters are held in
+  these scans. Next LM in two stages: (1) `hcage1`: g_age fixed 0.03, beta free from 0.94, sigmaJ pooled, a_bar
+  25.639, from `restr`; (2) g_age free from its best point (one coded run for all parameters).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
