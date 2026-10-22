@@ -232,6 +232,12 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   employment levels and her exits (less precautionary work), which the work parameters can absorb in LM. One beta
   cannot match the flat data age profile of liquid wealth <= 0 (0.568 -> 0.381; model at 0.93: 0.653 -> 0.409).
   Next LM `beta95`: beta free from 0.95 (`--set-fixed beta=0.95^(1/12)`), a_bar 25.639.
+- `beta95` (`runs/polish_beta95_20261021_210510_p18444`): Q 1,246.2 -> 1,211.5 -> 1,106.8 -> 1,084.0 -> ... ->
+  1,053.6 -> 1,049.3 in 8 iterations (~37 min each); beta 0.9499 a year (did not move: LM damped, mu 10); last gains
+  ~4-5 per iteration. Paused by the PI 2026-10-22 02:32 (iteration 9 lost). Best so far: Q 1,049.3 with a_bar at
+  its data value, against 1,691.2 at the step-2 estimate (a_bar at its bound 60). To resume: polish --label beta95r
+  --start runs/polish_beta95_20261021_210510_p18444/best.json --fix a_bar=25.639 --free-extra beta --bound-margin 0
+  (7 workers x 2 threads). Still to do at this point: Q by block, fit table, s.e. of beta.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
