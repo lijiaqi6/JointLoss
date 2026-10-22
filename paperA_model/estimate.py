@@ -66,6 +66,11 @@ import os
 
 for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):     # one BLAS thread per process
     os.environ.setdefault(_v, "1")
+# numba cache on the local disk (2026-10-23): parallel compiles into __pycache__ on Google Drive collided (WinError
+# 183, 2026-10-22); the HPC job script sets its own (hpc_job_a.py); spawned workers inherit the variable
+if os.name == "nt":
+    os.environ.setdefault("NUMBA_CACHE_DIR", os.path.join(os.environ.get("LOCALAPPDATA", os.path.expanduser("~")),
+                                                          "numba_cache_paperA"))
 
 import argparse                                                                # noqa: E402
 import json                                                                    # noqa: E402
@@ -588,6 +593,9 @@ def jacobian_at(args, th, idx, pool):
     their source. Returns m0, dM/dtheta (n_mom x len(idx)), the steps actually used, Q at th."""
     rng_ = HI - LO
     hs = np.where(args.step == "range", 0.05 * rng_, np.maximum(0.05 * np.abs(th), 0.01 * rng_))
+    # at most 5% of the range (2026-10-23, Fable review): 5% of beta's value (0.05 a month) spanned its whole range
+    # (0.0083), so its 'central difference' was the secant between the two bounds
+    hs = np.minimum(hs, 0.05 * rng_)
     thetas, steps = [th.copy()], []
     for j in idx:
         h = hs[j]
