@@ -266,6 +266,17 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   wages grow too fast after 35. Proposed (PI to decide): (1) eta_up profile (accumulation falling with the level,
   0.55 now) for the late wage growth; (2) the script-77 wealth definition (liquid vs net worth excl. home and
   vehicles): older families save in housing and retirement accounts, the model has one liquid asset.
+- eta_up profile at `restr` (PI go; `evaluate_20261022_1942*`): Q 1,077 / 1,026 / 1,048 / 1,156 / 1,809 / 2,627 at
+  eta_up 0.3 / 0.55 / 0.8 / 1.0 / 1.5 / 2.0: 0.55 is the minimum, and late wage growth does not respond (wives 45-54
+  0.051-0.053, data 0.027; husbands 0.036-0.038, data 0.013). Cause: accumulation depends on the human capital level
+  only, never on age (model.py human capital transitions: the same matrices at every age), so the model cannot
+  produce the concave age profile of wage growth (data wives 0.080 / 0.046 / 0.027, husbands 0.067 / 0.030 / 0.013 at
+  25-34 / 35-44 / 45-54; model 0.083 / 0.066 / 0.051 and 0.056 / 0.045 / 0.037). Direct cost ~150 of Q; it also
+  inflates late income and saving (older-wealth misfit 293, F at its bound). Proposed (PI to decide): accumulation
+  pi_up x exp(-g (age - 25)), one parameter g common to both spouses (g = 0 = the current model), identified by the
+  wage-growth moments already targeted; needs age-specific human capital matrices in solve/simulate; tests: g = 0
+  reproduces Q 1,025 exactly, then a g profile, then LM. Also seen: her re-employment wage loss after displacement
+  ~0 in the model vs -6 to -20% in the SIPP (q 17, wide s.e.; d_w 0.045, s.e. 0.047): look after the age profile.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
