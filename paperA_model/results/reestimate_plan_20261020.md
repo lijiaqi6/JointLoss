@@ -317,7 +317,10 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   worsen a little. Retirement income drives late saving. ss_rate is a policy input, not to be fitted: proposed
   (PI to decide) the progressive benefit formula (bend points, spousal benefit = max(own, half his)) as its own step.
 - `hcage1b` (2026-10-23 09:53, PI "continue now"): stage 1 resumed from the hcage1 best with the fixed beta step;
-  warm-up 877.6 (= hcage1 best).
+  warm-up 877.6 (= hcage1 best). Unattended supervisor (PI: "without me attending"): waits for hcage1b; a stage
+  that ends abnormally is relaunched from its newest best.json (labels hcage1r0.., hcage2r0..; at most 3 relaunches
+  per stage, then it stops for a code fix); stage 2 (`hcage2r*`, g_age free from 0.03, beta free, sigmaJ pooled,
+  a_bar 25.639) starts only after stage 1 ends normally. Log: step3_chain.log in the session scratchpad.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
