@@ -291,6 +291,18 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   lower beta restores wealth (le0 45-59 0.33 at 0.93) but costs employment further; the work parameters are held in
   these scans. Next LM in two stages: (1) `hcage1`: g_age fixed 0.03, beta free from 0.94, sigmaJ pooled, a_bar
   25.639, from `restr`; (2) g_age free from its best point (one coded run for all parameters).
+- `hcage1` (`runs/polish_hcage1_20261022_200222_p3920`): Q 1,890.6 -> 1,476.1 -> 964.2 -> 917.7 -> 885.9 -> 882.4
+  -> 881.5 -> 879.8 -> 878.3 -> 877.55 in 9 iterations; beta 0.9412 a year, eta_up 0.85, theta_05 -0.0007,
+  theta_617 -0.016, F 0.6. Stopped by the PI 2026-10-23 01:59 (pause). Fable code review the same night
+  (proposals/fable_code_review_paperA_20261023.md): finding A1 verified and fixed (f773882): the Jacobian step of
+  beta (5% of its value, 0.05 a month) spanned its whole range (0.0083), so every Jacobian evaluated beta at its two
+  bounds; LM could not move beta and its s.e. was wrong in every run since 2026-10-21 (the beta profile stands; the
+  LM betas 0.9498 / 0.9412 are where damped steps left them). Also fixed: NUMBA_CACHE_DIR local on Windows.
+  To resume: polish --label hcage1b --start runs/polish_hcage1_20261022_200222_p3920/best.json --hc-age on
+  --fix a_bar=25.639 g_age=0.03 --free-extra beta --tie sigmaJ_B=sigmaJ_W --bound-margin 0 (fixed step), then
+  stage 2 (g_age free). Open from the review: F frozen at its bound by the logistic transform (B2), bench.py and
+  --resume / --cma-stds-from index mapping (B3, B4), sep asset share hard-coded in the solver (B5), Broyden
+  updates for speed (C), wealth targets to net worth excl. home and vehicles (D1, PI to decide).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
