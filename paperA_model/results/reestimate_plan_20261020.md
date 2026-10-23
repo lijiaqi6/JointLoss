@@ -325,6 +325,9 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   10 h), label hcage2hpc, from results/hpc_starts/hcage1b_it9_best.json (hcage1b after iteration 9, Q 853.63;
   commit 62dffd7), --hc-age on --fix a_bar=25.639 --free-extra beta --tie sigmaJ_B=sigmaJ_W --bound-margin 0
   --iters 15 --push. The PC chain continues; whichever stage 2 ends first is used, the other stopped.
+  11917486 FAILED in 5 s: FileNotFoundError, the relative --start path (the code snapshot excludes
+  paperA_model/results; note added to hpc_job_a.py, 2a269b8). Resubmitted as Joint-hcage2 11917840 with
+  --start $HOME/jointloss/paperA_model/results/hpc_starts/hcage1b_it9_best.json (code 2a269b8).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
