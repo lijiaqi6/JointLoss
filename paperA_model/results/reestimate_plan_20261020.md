@@ -328,6 +328,11 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   11917486 FAILED in 5 s: FileNotFoundError, the relative --start path (the code snapshot excludes
   paperA_model/results; note added to hpc_job_a.py, 2a269b8). Resubmitted as Joint-hcage2 11917840 with
   --start $HOME/jointloss/paperA_model/results/hpc_starts/hcage1b_it9_best.json (code 2a269b8).
+- Also on Stanage (HPC empty, PI): Joint-rec-hcage 11917861 = pseudo-data recovery of the new specification (truth =
+  hcage1b_it9: g_age 0.03, beta 0.941/yr; start perturbed N(0, 0.5) in z; g_age, beta free, sigmaJ pooled, a_bar
+  fixed; 10 h): are beta and g_age identified (against pi_up, eta_up), are the negative theta_05/theta_617 real.
+  Joint-noise 11917862 = simulation noise at hcage1b_it9 (5 seeds, --hc-age on) for the weights (Fable B8; the
+  current file is from the 2026-10-18 start). Adopting it changes the objective: re-baseline before comparing Q.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
