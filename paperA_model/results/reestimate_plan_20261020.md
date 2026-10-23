@@ -333,6 +333,11 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   fixed; 10 h): are beta and g_age identified (against pi_up, eta_up), are the negative theta_05/theta_617 real.
   Joint-noise 11917862 = simulation noise at hcage1b_it9 (5 seeds, --hc-age on) for the weights (Fable B8; the
   current file is from the 2026-10-18 start). Adopting it changes the objective: re-baseline before comparing Q.
+- Joint-noise 11917862 done (hpc_runs/noise_20261023_160642_j11917862; Q under diag weights 1,022 / 1,038 / 1,079 /
+  1,044 / 1,024 over 5 seeds: simulation spread ~57). At the hcage1b best (iteration 12, Q 848.6 under the current
+  weights, reproduced exactly) the new noise file gives Q 904.6 (+56): median weight ratio 0.99; the weights rise on
+  the CPS persistent entry rates (Black x3.5, White x2.2: her search 33 -> 84), sipp_his_emp_s6_sep x2.1 (his
+  search 58 -> 74) and fall on cps_wife_exit_p (x0.58). Adopt for the final estimate and s.e. after stage 2 (PI).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
