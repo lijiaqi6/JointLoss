@@ -303,6 +303,14 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   stage 2 (g_age free). Open from the review: F frozen at its bound by the logistic transform (B2), bench.py and
   --resume / --cma-stds-from index mapping (B3, B4), sep asset share hard-coded in the solver (B5), Broyden
   updates for speed (C), wealth targets to net worth excl. home and vehicles (D1, PI to decide).
+- PI decision 2026-10-23: the wealth targets stay LIQUID (Fable D1 not adopted). Reason: D1 compared only the
+  shares <= 0. Under net worth excl. home and vehicles (output/wealth_definitions.md, IGE/77) the shares above one
+  year's earnings are 0.120 / 0.243 / 0.399 (25-34 / 35-44 / 45-59) against the model's 0.017 / 0.057 / 0.150 at
+  hcage1 (liquid data 0.034 / 0.077 / 0.177); z^2 with data s.e. ~2,600 vs ~550 under liquid. Re-estimating would
+  push beta back up and lose a_bar's data value; and the model's one asset is the buffer used after a job loss
+  (60% hold liquid <= 0 before his displacement). Net worth excl. home and vehicles goes in the paper as an
+  untargeted comparison. Next on older wealth: an ss_rate profile (0.4 -> 0.5, 0.6; evaluate only), since the
+  terminal value (annuity of assets + SS 40% of final earnings) drives late saving.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs

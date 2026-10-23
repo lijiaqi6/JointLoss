@@ -54,9 +54,11 @@ HPC results (in `paperA_model/results/hpc_runs/`), from the old `~/joint` clone 
 Proposed next step (PI to confirm): verify Fable's two claims (reading code only), then design the re-estimate,
 one change at a time on one moment set, with the HPC commands for the PI.
 
-PI decisions waiting: separated-wife inputs (child support, remarriage; script 76); wealth targets to net worth
-without home and vehicles (77); an exit feature for established wives (transitory work-cost state + birth jump; 75);
+PI decisions waiting: separated-wife inputs (child support, remarriage; script 76); an exit feature for established wives (transitory work-cost state + birth jump; 75);
 `--her-sep`; the BPS correction. `--new-job`: likely not.
+
+PI decision 2026-10-23: the wealth targets stay liquid (net worth excl. home and vehicles misfits the shares above
+one year's earnings badly: data 0.12 / 0.24 / 0.40 vs model 0.02 / 0.06 / 0.15); it is reported untargeted.
 
 Paper: `paperA_joint_loss/`. EITC wording: it pays nothing in the MONTHS without an earner; over the year the credit
 rises by $196*** after a joint loss. Charles and Stephens (2004) already show that either spouse's job loss raises
