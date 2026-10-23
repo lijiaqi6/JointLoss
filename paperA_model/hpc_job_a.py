@@ -114,6 +114,8 @@ scripts/hpc_job.py; a lock directory serialises pushes of jobs that end together
 (or scp the run folder). Nothing individual-level is pushed (es.pkl stays on scratch).
 Code snapshot: the job runs 'git archive' of one commit (default HEAD of ~/jointloss; --commit SHA pins another) in
 node-local storage; the git-ignored inputs are linked from the clone, so later pulls do not reach a queued job.
+The snapshot EXCLUDES paperA_model/results: give --start / --cma-stds-from as full paths into the clone, e.g.
+--start $HOME/jointloss/paperA_model/results/hpc_starts/<file>.json (a relative path failed job 11917486 at once).
 """
 import argparse
 import os
