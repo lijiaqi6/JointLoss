@@ -1,0 +1,13 @@
+repo /users/cm1jil/jointloss  commit 8f794e6
+python 3.12.13 at /users/cm1jil/jointloss/.venv/bin/python
+inputs present (entry couples: 12,360 rows)
+code snapshot 8f794e6 in /scratch/job.11917862/paperA_code_11917862; job 11917862: 32 cores -> 16 workers x 2 threads; results in /mnt/parscratch/users/cm1jil/joint_smm_results
+running: /users/cm1jil/jointloss/.venv/bin/python -u /scratch/job.11917862/paperA_code_11917862/paperA_model/estimate.py noise --workers 16 --threads 2 --start /users/cm1jil/jointloss/paperA_model/results/hpc_starts/hcage1b_it9_best.json --hc-age on --fix a_bar=25.639 --reps 5 --weighting diag
+warm-up evaluation (compiles before the workers start): Q 1,022.2  missing 0  343s 
+       seed            Q  missing     seconds
+0  20261018  1022.241248        0  342.959485
+1  20261019  1038.190822        0  251.891398
+2  20261020  1079.328978        0  251.881175
+3  20261021  1043.643743        0  251.804169
+4  20261022  1024.293217        0  251.885280
+Q mean 1,041.5 sd 23.0 (2.2%) -> /mnt/parscratch/users/cm1jil/joint_smm_results/noise_20261023_160642_j11917862
