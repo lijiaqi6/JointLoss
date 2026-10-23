@@ -321,6 +321,10 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   that ends abnormally is relaunched from its newest best.json (labels hcage1r0.., hcage2r0..; at most 3 relaunches
   per stage, then it stops for a code fix); stage 2 (`hcage2r*`, g_age free from 0.03, beta free, sigmaJ pooled,
   a_bar 25.639) starts only after stage 1 ends normally. Log: step3_chain.log in the session scratchpad.
+- 2026-10-23 ~15:00, Stanage nearly empty (PI): stage 2 also on the HPC, Joint-hcage2 11917486 (32 cores, 64G,
+  10 h), label hcage2hpc, from results/hpc_starts/hcage1b_it9_best.json (hcage1b after iteration 9, Q 853.63;
+  commit 62dffd7), --hc-age on --fix a_bar=25.639 --free-extra beta --tie sigmaJ_B=sigmaJ_W --bound-margin 0
+  --iters 15 --push. The PC chain continues; whichever stage 2 ends first is used, the other stopped.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
