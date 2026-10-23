@@ -311,6 +311,13 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   (60% hold liquid <= 0 before his displacement). Net worth excl. home and vehicles goes in the paper as an
   untargeted comparison. Next on older wealth: an ss_rate profile (0.4 -> 0.5, 0.6; evaluate only), since the
   terminal value (annuity of assets + SS 40% of final earnings) drives late saving.
+- ss_rate profile at the hcage1 point (`evaluate_20261023_0949*`/`0953*`, all else held): Q 877.6 / 828.8 / 872.4 /
+  929.3 at 0.4 / 0.5 / 0.6 / 0.7; wealth 448 / 365 / 371 / 384; liquid <= 0 at 45-59 0.232 / 0.281 / 0.311 / 0.343
+  (data 0.381) but above one year's earnings 0.150 / 0.117 / 0.097 / 0.085 (data 0.177); her exits and employment
+  worsen a little. Retirement income drives late saving. ss_rate is a policy input, not to be fitted: proposed
+  (PI to decide) the progressive benefit formula (bend points, spousal benefit = max(own, half his)) as its own step.
+- `hcage1b` (2026-10-23 09:53, PI "continue now"): stage 1 resumed from the hcage1 best with the fixed beta step;
+  warm-up 877.6 (= hcage1 best).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
