@@ -411,6 +411,8 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   overstates the bound's cost; Joint-F06 (F = 0.6, others re-optimised) would give the clean number (PI's call).
   sigmaJ and theta_05 are zero-compatible: impose both in the one final LM after the CMA-ES. Counterfactuals: add
   --K 9 (more events for i_indep) and 24G. Noise weights: report only now, adopt once at the final re-baseline.
+  Submitted: Joint-cf-F9 11928540 (counterfactuals at Ffree with --K 9, 8 cores, 24G, 2 h; pushed by hand). F06 not
+  submitted (the Wald answers it).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
