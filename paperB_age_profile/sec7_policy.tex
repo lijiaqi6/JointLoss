@@ -152,11 +152,19 @@ others, and the negative estimate at 25--29 is not there ($-0.005$, $p = 0.69$).
 1993--96 expansion for families with two or more children, gives the same direction, from $-0.079$ at 25--29 to
 $+0.046$ at 40--44, but no estimate is significant. Daughters gain early, as \citet{bastian2018long} find: $+0.028^{***}$
 ($p = 0.004$) in earnings at 25--29, with no growth after. The example therefore shows a profile of the credit's
-association with sons' earnings that grows with age in the families it reaches, not a change of sign.\footnote{Eligible
+association with sons' earnings that grows with age in the families it reaches, not a change of sign. It does not show
+a change in the IGE: the interaction of exposure with log parental income is $-0.0001$ ($p = 0.98$) at 25--29 and
+$-0.0044$ ($p = 0.54$) at 40--44, within son $-0.0016$ ($p = 0.68$), and the family's imputed credit carries at most
+0.02 of the IGE at any age; the designs exclude only effects larger than about 0.08 (25--29) and 0.14 (40--44) of the
+IGE per standard deviation of exposure.\footnote{Eligible
 = the family's earned income positive and below the end of the phase-out for its number of children (joint filers when
 a father is present); predicted by a logit on ln family income at the son's 6--12, the mother's schooling, father
 present, number of children and year (pseudo-$R^2$ 0.21); 54 percent of window years in the top tercile are eligible,
-against 10 percent in the others. Code: \texttt{126.EITCDesign.py} (\texttt{output/eitc\_design.md}).}
+against 10 percent in the others. Code: \texttt{126.EITCDesign.py} (\texttt{output/eitc\_design.md}). Exposure $\times$ (log parental income $-$ its mean), with birth-year,
+state-at-17 and number-of-children fixed effects; one standard deviation of exposure is \$6,890 over 13--18. Sons with
+more exposure than their birth year, state and number of children predict have an IGE that rises by 0.198$^{***}$
+between 25--29 and 40--44, against 0.103$^{*}$ for the others; the difference is not significant. Code:
+\texttt{128.EITCAndIGE.py} (\texttt{output/eitc\_ige.md}).}
 
 \input{tab_eitc_age}
 
