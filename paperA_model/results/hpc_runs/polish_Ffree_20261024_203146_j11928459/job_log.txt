@@ -1,0 +1,47 @@
+repo /users/cm1jil/jointloss  commit c67e92b
+python 3.12.13 at /users/cm1jil/jointloss/.venv/bin/python
+inputs present (entry couples: 12,360 rows)
+code snapshot c67e92b in /scratch/job.11928459/paperA_code_11928459; job 11928459: 32 cores -> 16 workers x 2 threads; results in /mnt/parscratch/users/cm1jil/joint_smm_results
+running: /users/cm1jil/jointloss/.venv/bin/python -u /scratch/job.11928459/paperA_code_11928459/paperA_model/estimate.py polish --workers 16 --threads 2 --label Ffree --start /users/cm1jil/jointloss/paperA_model/results/hpc_runs/polish_F07_20261024_133536_j11927827/best.json --noise-file /users/cm1jil/jointloss/paperA_model/results/hpc_runs/noise_20261023_160642_j11917862/moment_noise.csv --hc-age on --fix a_bar=25.639 --free-extra beta --tie sigmaJ_B=sigmaJ_W --bound-margin 0 --iters 20
+polish: 31 free parameters, LM multipliers [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0] -> /mnt/parscratch/users/cm1jil/joint_smm_results/runs/polish_Ffree_20261024_203146_j11928459
+weight shares by block: {"Wage growth": 0.159383, "Base hazards": 0.115236, "Joint loss, monthly": 0.108732, "Added work": 0.085722, "Wealth": 0.076988, "Employment levels": 0.061507, "His search": 0.059641, "Consumption": 0.055636, "Her search": 0.053364, "Joint loss, annual": 0.053147, "Separation": 0.052346, "Safety net": 0.051512, "His earnings": 0.049865, "Her earnings": 0.008943, "Her exits": 0.00798}
+warm-up evaluation (compiles before the workers start): Q 615.6  missing 0  359s 
+iter 0  Q 615.59
+  iter 1 attempt 0: no trial lowered Q (best 617.2 vs 615.6); mu 0.01 -> 100
+  iter 1 attempt 1: no trial lowered Q (best 615.6 vs 615.6); mu 100 -> 1e+06
+  iter 1 attempt 2: no trial lowered Q (best 615.6 vs 615.6); mu 1e+06 -> 1e+10
+iter 1  Q 615.59 -> 615.59  mu 1e+10  cond(G'WG) 3.11e+05  evals 85  37 min
+polish stopped: no descent after 3 attempts at iteration 1; best Q 615.59
+        param   estimate        se  se_sim_noise
+0   delta_w_B   0.003381  0.000127      0.000055
+1   delta_w_W   0.002202  0.000068      0.000021
+2   delta_h_B   0.004820  0.000174      0.000045
+3   delta_h_W   0.002754  0.000089      0.000040
+4       pi_c0   0.000037  0.000011      0.000008
+5       pi_c1   0.000388  0.000051      0.000036
+6         p_H   0.023480  0.005048      0.002384
+7         m_H  21.710179  2.495867      1.267207
+8     lam_w_B   0.138065  0.017123      0.006733
+9     lam_w_W   0.184274  0.014702      0.006871
+10    lam_h_B   0.139123  0.017169      0.004300
+11    lam_h_W   0.323398  0.023209      0.004742
+12    pi_up_w   0.008212  0.000403      0.000104
+13    pi_up_h   0.005612  0.000270      0.000101
+14    pi_dn_w   0.002207  0.000741      0.000348
+15    pi_dn_h   0.015745  0.007245      0.002428
+16        d_w   0.250734  0.023593      0.003167
+17        d_h   0.095314  0.039309      0.011773
+18      phi_F   0.342288  0.015864      0.006291
+19      phi_P   0.095118  0.012748      0.006543
+20   theta_05  -0.007899  0.011011      0.005438
+21  theta_617  -0.032804  0.005992      0.002851
+22      phi_h   0.168445  0.005980      0.002728
+23          F   0.700000  0.045198      0.025197
+24    kappa_S   0.170008  0.017315      0.007007
+25   sigma0_B   0.003001  0.000157      0.000059
+26   sigma0_W   0.001487  0.000050      0.000014
+27   sigmaJ_B   0.000943  0.001900      0.000420
+28     eta_up   0.819248  0.212670      0.094836
+29      g_age   0.021072  0.003025      0.000874
+30       beta   0.994446  0.000124      0.000048
+-> /mnt/parscratch/users/cm1jil/joint_smm_results/runs/polish_Ffree_20261024_203146_j11928459
