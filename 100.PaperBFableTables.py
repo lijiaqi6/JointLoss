@@ -290,27 +290,32 @@ def t_referee():
               ("Daughters' within-person wage slope, inverse-probability weighted", [cell(D["ipw|daughters"][1])]),
               ("Sons' within-person wage slope, inverse-probability weighted", [cell(D["ipw|sons"][1])]),
               ("Years of schooling, daughters minus sons", [cell(D["schooling"]["diff"])])]
+    RW = J("romano_wolf")
     rows_m = []
-    for k, lab in (("A. The layoff cost|layoff band change (91)", "Layoff change (family of 6, Holm)"),
-                   ("A. The layoff cost|layoff within-son slope (88)", "Within-son slope (family of 6, Holm)"),
-                   ("B. Sons vs daughters|daughters - sons, wage change", "Daughters $-$ sons, wage change (family of 4, Holm)"),
-                   ("B. Sons vs daughters|daughters - sons, wage within person", "Daughters $-$ sons, wage within person (Holm)")):
-        rows_m.append((lab, [f"{MT[k]['p']:.4f} $\\to$ {MT[k]['adj']:.4f}"]))
+    for k, kr, lab in (("A. The layoff cost|layoff band change (91)", "A. The layoff cost|layoff band change",
+                        "Layoff change (family of 6)"),
+                       ("A. The layoff cost|layoff within-son slope (88)", "A. The layoff cost|within-son slope",
+                        "Within-son slope (family of 6)"),
+                       ("B. Sons vs daughters|daughters - sons, wage change", "B. Sons vs daughters|daughters - sons, wage change",
+                        "Daughters $-$ sons, wage change (family of 4)"),
+                       ("B. Sons vs daughters|daughters - sons, wage within person",
+                        "B. Sons vs daughters|daughters - sons, wage within person", "Daughters $-$ sons, wage within person")):
+        rows_m.append((lab, [f"{MT[k]['p']:.4f} $\\to$ {MT[k]['adj']:.4f} / {RW[kr]['rw']:.4f}"]))
     table("tab_layoff_referee", "Pre-trends, a later-layoff placebo, bounds, ranks, the daughters' selection and multiple testing (PSID)",
           "tab:layoff_referee", heads,
           [("A. The father around his first layoff in a son's teens (event study; reference: one year before)", rows_e),
            ("B. Placebo, bounds and ranks", rows_p),
            ("C. The daughters: the mother, who is observed, schooling", rows_d),
-           ("D. Multiple testing: $p$ $\\to$ adjusted $p$", rows_m)],
+           ("D. Multiple testing: $p$ $\\to$ adjusted $p$ (Holm / Romano--Wolf)", rows_m)],
           "Panel A: father-years at 25--64 of the fathers of father-present sons; father and calendar-year fixed effects and "
           "single-age dummies; event time binned at $-6$ and $+6$; treated = the 212 fathers with a layoff in a son's "
           "teen window. Panel B: within-son design of Table~\\ref{tab:layoff_selection}; minimum detectable effects for 80\\% "
           "power at 5\\%; ranks are weighted percentiles within single year of age $\\times$ calendar year. Panel C: the "
           "reduced specification of Table~\\ref{tab:layoff_exog} panel B; inverse-probability weights from a logit of being "
           "observed with a wage in the band. Panel D: families fixed before adjusting (six tests of the layoff cost; four "
-          "of the sons--daughters difference). Clustered by 1968 family. " + src("108.LayoffRefereeChecks.py",
-                                                                                  "109.DaughtersRefereeChecks.py",
-                                                                                  "110.MultipleTesting.py"))
+          "of the sons--daughters difference); Romano--Wolf step-down from 1,000 joint cluster-bootstrap draws of 1968 "
+          "families. Clustered by 1968 family. " + src("108.LayoffRefereeChecks.py", "109.DaughtersRefereeChecks.py",
+                                                     "110.MultipleTesting.py", "114.RomanoWolf.py"))
 
 
 def t_split_main():

@@ -70,13 +70,13 @@ Years of schooling, daughters minus sons & $0.893^{*}$ \\
  & \begin{tabular}[b]{@{}c@{}}Estimate\end{tabular} \\
  & (1) \\
 \midrule
-\multicolumn{2}{l}{\textit{D. Multiple testing: $p$ $\to$ adjusted $p$}} \\
-Layoff change (family of 6, Holm) & 0.0002 $\to$ 0.0011 \\
-Within-son slope (family of 6, Holm) & 0.0219 $\to$ 0.0437 \\
-Daughters $-$ sons, wage change (family of 4, Holm) & 0.0014 $\to$ 0.0043 \\
-Daughters $-$ sons, wage within person (Holm) & 0.0489 $\to$ 0.0609 \\
+\multicolumn{2}{l}{\textit{D. Multiple testing: $p$ $\to$ adjusted $p$ (Holm / Romano--Wolf)}} \\
+Layoff change (family of 6) & 0.0002 $\to$ 0.0011 / 0.0030 \\
+Within-son slope (family of 6) & 0.0219 $\to$ 0.0437 / 0.0350 \\
+Daughters $-$ sons, wage change (family of 4) & 0.0014 $\to$ 0.0043 / 0.0180 \\
+Daughters $-$ sons, wage within person & 0.0489 $\to$ 0.0609 / 0.0550 \\
 \bottomrule
 \end{tabular}}}
 \par\smallskip
-\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Panel A: father-years at 25--64 of the fathers of father-present sons; father and calendar-year fixed effects and single-age dummies; event time binned at $-6$ and $+6$; treated = the 212 fathers with a layoff in a son's teen window. Panel B: within-son design of Table~\ref{tab:layoff_selection}; minimum detectable effects for 80\% power at 5\%; ranks are weighted percentiles within single year of age $\times$ calendar year. Panel C: the reduced specification of Table~\ref{tab:layoff_exog} panel B; inverse-probability weights from a logit of being observed with a wage in the band. Panel D: families fixed before adjusting (six tests of the layoff cost; four of the sons--daughters difference). Clustered by 1968 family. Source: \texttt{108.LayoffRefereeChecks.py}, \texttt{109.DaughtersRefereeChecks.py}, \texttt{110.MultipleTesting.py}; table built by \texttt{100.PaperBFableTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
+\begin{minipage}{\textwidth}\footnotesize \textit{Notes:} Panel A: father-years at 25--64 of the fathers of father-present sons; father and calendar-year fixed effects and single-age dummies; event time binned at $-6$ and $+6$; treated = the 212 fathers with a layoff in a son's teen window. Panel B: within-son design of Table~\ref{tab:layoff_selection}; minimum detectable effects for 80\% power at 5\%; ranks are weighted percentiles within single year of age $\times$ calendar year. Panel C: the reduced specification of Table~\ref{tab:layoff_exog} panel B; inverse-probability weights from a logit of being observed with a wage in the band. Panel D: families fixed before adjusting (six tests of the layoff cost; four of the sons--daughters difference); Romano--Wolf step-down from 1,000 joint cluster-bootstrap draws of 1968 families. Clustered by 1968 family. Source: \texttt{108.LayoffRefereeChecks.py}, \texttt{109.DaughtersRefereeChecks.py}, \texttt{110.MultipleTesting.py}, \texttt{114.RomanoWolf.py}; table built by \texttt{100.PaperBFableTables.py}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.1$.\end{minipage}
 \end{table}

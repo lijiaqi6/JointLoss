@@ -1,0 +1,63 @@
+{
+ "nboot": 1000,
+ "A. The layoff cost|layoff band change": {
+  "est": -0.914054606079794,
+  "se": 0.25910135824242875,
+  "p": 0.0004190479705654141,
+  "rw": 0.003
+ },
+ "A. The layoff cost|within-son slope": {
+  "est": -0.23555801098705847,
+  "se": 0.1073752758170136,
+  "p": 0.028251042819145075,
+  "rw": 0.035
+ },
+ "A. The layoff cost|layoff minus closure change": {
+  "est": -0.9142347441850973,
+  "se": 0.32937155978927696,
+  "p": 0.005508398319372017,
+  "rw": 0.024
+ },
+ "A. The layoff cost|band change, one job-end net": {
+  "est": -1.3924661256245712,
+  "se": 0.5140364601059125,
+  "p": 0.006750954939867852,
+  "rw": 0.024
+ },
+ "A. The layoff cost|within-son slope, one job-end net": {
+  "est": -0.3907627637105816,
+  "se": 0.17920807329707825,
+  "p": 0.02922060068155902,
+  "rw": 0.035
+ },
+ "A. The layoff cost|rank change": {
+  "est": -22.163471077857178,
+  "se": 8.095021186223091,
+  "p": 0.006183025996011504,
+  "rw": 0.024
+ },
+ "B. Sons vs daughters|daughters - sons, wage change": {
+  "est": 0.9251282070152655,
+  "se": 0.31821767175904014,
+  "p": 0.0036465873588359355,
+  "rw": 0.018
+ },
+ "B. Sons vs daughters|daughters - sons, earnings change": {
+  "est": 1.294010399581486,
+  "se": 0.40688911729800986,
+  "p": 0.0014714644242124657,
+  "rw": 0.011
+ },
+ "B. Sons vs daughters|daughters - sons, wage within person": {
+  "est": 0.253865460536813,
+  "se": 0.1291680025413262,
+  "p": 0.049369151800862716,
+  "rw": 0.055
+ },
+ "B. Sons vs daughters|daughters - sons, earnings within person": {
+  "est": 0.38021221300275637,
+  "se": 0.18028664748595344,
+  "p": 0.03495048369933794,
+  "rw": 0.055
+ }
+}
