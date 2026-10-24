@@ -122,8 +122,8 @@ def main():
             t45 = int(v[(v["band"] == 4) & (v[x] > 0) & pres.loc[v.index]]["pid"].nunique())
             md.append(f"| {x[4:]} | {fmt(g0[x])} | {fmt(g4[x])} | {fmt(ch)} | {c(fe)} | {t45} |")
             RES[f"{y}|{x}"] = {"ch": [float(ch[0]), sd(ch[1])], "fe": list(map(float, fe)), "t45": t45}
-        chd = ((g4["lay_sign"][0] - g0["lay_sign"][0]) - (g4["lay_nosign"][0] - g0["lay_nosign"][0]),
-               (g4["lay_sign"][1] - g0["lay_sign"][1]) - (g4["lay_nosign"][1] - g0["lay_nosign"][1]))
+        chd = ((g4["lay_nosign"][0] - g0["lay_nosign"][0]) - (g4["lay_sign"][0] - g0["lay_sign"][0]),
+               (g4["lay_nosign"][1] - g0["lay_nosign"][1]) - (g4["lay_sign"][1] - g0["lay_sign"][1]))
         d = R91.lincom(f, {"lay_nosign_xa": 1, "lay_sign_xa": -1})
         W = R91.wald(f, [1, -1], ["lay_nosign_xa", "lay_sign_xa"])
         md += [f"| no sign - sign | | | {fmt(chd)} | {c(d)} (Wald p={W[2]:.3f}) | |", ""]
