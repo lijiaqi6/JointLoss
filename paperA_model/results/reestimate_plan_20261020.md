@@ -402,6 +402,8 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   3.1e5): the F07 point is the LM optimum with F free. FINAL ESTIMATE (so far): Q 615.59, F 0.700 (0.045)***, every
   other value as F07 (sandwich s.e. now valid with F free). CMA-ES around it next (local-optimum check):
   Joint-cma-F 11928515 (from the Ffree best, stds from its Jacobian, sigma0 0.2, 2,400 evaluations, cma-seed 1, 16 h).
+  Joint-cf-F 11928516: counterfactuals.py at the Ffree run folder (size k_s2_era1_a20, 8 cores, live clone; results
+  in ~/jointloss/paperA_model/results/counterfactuals_<stamp>/, pushed by hand). Fable asked for further HPC advice.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
