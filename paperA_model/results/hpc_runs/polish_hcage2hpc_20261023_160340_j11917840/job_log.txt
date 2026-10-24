@@ -1,0 +1,58 @@
+repo /users/cm1jil/jointloss  commit 2a269b8
+python 3.12.13 at /users/cm1jil/jointloss/.venv/bin/python
+inputs present (entry couples: 12,360 rows)
+code snapshot 2a269b8 in /scratch/job.11917840/paperA_code_11917840; job 11917840: 32 cores -> 16 workers x 2 threads; results in /mnt/parscratch/users/cm1jil/joint_smm_results
+running: /users/cm1jil/jointloss/.venv/bin/python -u /scratch/job.11917840/paperA_code_11917840/paperA_model/estimate.py polish --workers 16 --threads 2 --label hcage2hpc --start /users/cm1jil/jointloss/paperA_model/results/hpc_starts/hcage1b_it9_best.json --hc-age on --fix a_bar=25.639 --free-extra beta --tie sigmaJ_B=sigmaJ_W --bound-margin 0 --iters 15
+polish: 31 free parameters, LM multipliers [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0] -> /mnt/parscratch/users/cm1jil/joint_smm_results/runs/polish_hcage2hpc_20261023_160340_j11917840
+weight shares by block: {"Wage growth": 0.155031, "Base hazards": 0.11796, "Joint loss, monthly": 0.112605, "Added work": 0.093742, "Wealth": 0.0785, "Employment levels": 0.06613, "Consumption": 0.058632, "Joint loss, annual": 0.057131, "His search": 0.053253, "Safety net": 0.052604, "Separation": 0.051583, "His earnings": 0.046875, "Her search": 0.029109, "Her exits": 0.013986, "Her earnings": 0.012857}
+warm-up evaluation (compiles before the workers start): Q 853.6  missing 0  371s 
+iter 0  Q 853.59
+iter 1  Q 853.59 -> 851.79  mu 10  cond(G'WG) 2.22e+10  evals 71  28 min
+iter 2  Q 851.79 -> 847.81  mu 1  cond(G'WG) 2.08e+10  evals 141  50 min
+iter 3  Q 847.81 -> 845.61  mu 1  cond(G'WG) 2.02e+10  evals 211  72 min
+iter 4  Q 845.61 -> 841.78  mu 10  cond(G'WG) 2.02e+10  evals 281  94 min
+iter 5  Q 841.78 -> 838.59  mu 10  cond(G'WG) 2.25e+10  evals 351  116 min
+iter 6  Q 838.59 -> 837.24  mu 1  cond(G'WG) 2.17e+10  evals 421  138 min
+iter 7  Q 837.24 -> 834.59  mu 10  cond(G'WG) 2.3e+10  evals 491  159 min
+iter 8  Q 834.59 -> 832.77  mu 10  cond(G'WG) 2.4e+10  evals 561  181 min
+iter 9  Q 832.77 -> 829.83  mu 10  cond(G'WG) 2.29e+10  evals 631  203 min
+iter 10  Q 829.83 -> 826.88  mu 10  cond(G'WG) 2.51e+10  evals 701  224 min
+iter 11  Q 826.88 -> 825.36  mu 10  cond(G'WG) 2.64e+10  evals 771  246 min
+iter 12  Q 825.36 -> 822.31  mu 10  cond(G'WG) 2.74e+10  evals 841  268 min
+iter 13  Q 822.31 -> 821.24  mu 10  cond(G'WG) 2.47e+10  evals 911  289 min
+iter 14  Q 821.24 -> 818.39  mu 10  cond(G'WG) 2.45e+10  evals 981  311 min
+iter 15  Q 818.39 -> 816.79  mu 100  cond(G'WG) 2.22e+10  evals 1051  333 min
+polish stopped: 15 iterations; best Q 816.79
+        param   estimate        se  se_sim_noise
+0   delta_w_B   0.002963  0.000123      0.000042
+1   delta_w_W   0.002050  0.000091      0.000051
+2   delta_h_B   0.004881  0.000233      0.000115
+3   delta_h_W   0.002779  0.000114      0.000056
+4       pi_c0   0.000044  0.000009      0.000007
+5       pi_c1   0.000383  0.000049      0.000034
+6         p_H   0.019293  0.005459      0.002007
+7         m_H  14.657149  2.298687      1.045482
+8     lam_w_B   0.079050  0.013606      0.003417
+9     lam_w_W   0.157169  0.016226      0.007704
+10    lam_h_B   0.123105  0.012034      0.004305
+11    lam_h_W   0.324747  0.023358      0.006049
+12    pi_up_w   0.008173  0.000382      0.000077
+13    pi_up_h   0.005461  0.000305      0.000141
+14    pi_dn_w   0.000661  0.000797      0.000284
+15    pi_dn_h   0.021581  0.004085      0.000781
+16        d_w   0.021461  0.035636      0.013286
+17        d_h   0.000247  0.038203      0.009909
+18      phi_F   0.359704  0.015759      0.005968
+19      phi_P   0.105218  0.013477      0.004891
+20   theta_05  -0.000408  0.008840      0.003744
+21  theta_617  -0.018238  0.005713      0.002447
+22      phi_h   0.170034  0.004999      0.001656
+23          F   0.599926  0.034245      0.011824
+24    kappa_S   0.124180  0.025663      0.006916
+25   sigma0_B   0.002883  0.000167      0.000081
+26   sigma0_W   0.001354  0.000049      0.000015
+27   sigmaJ_B   0.001285  0.002009      0.001447
+28     eta_up   0.858954  0.157446      0.052608
+29      g_age   0.028583  0.004058      0.000925
+30       beta   0.994876  0.000119      0.000032
+-> /mnt/parscratch/users/cm1jil/joint_smm_results/runs/polish_hcage2hpc_20261023_160340_j11917840
