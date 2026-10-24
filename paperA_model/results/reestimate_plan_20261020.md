@@ -359,6 +359,12 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   failed recovery repeated with --no-perturb beta (beta starts at the truth, every other start identical; code
   33b22c9). (3) Joint-cma-final 11927760: CMA-ES from hcage2r0, stds from its Jacobian, new noise weights, sigma0
   0.2, 2,400 evaluations, cma-seed 1, 16 h.
+- Fable's HPC advice (proposals/fable_hpc_acceleration_20261023.md), all three submitted by the PI 2026-10-24, from
+  hcage2r0 under the new noise weights: Joint-indep-final 11927825 (independent-shock model: pi_c0 = pi_c1 = 0,
+  m_H = 1, p_H held; the fit-table column and counterfactuals.py --indep); Joint-cf-smoke 11927826 (counterfactuals.py
+  at the hcage2r0 run folder, size k_s2_era1_a20, 8 cores, sbatch --wrap from the live clone: results in
+  ~/jointloss/paperA_model/results/counterfactuals_<stamp>/, NOT pushed automatically); Joint-F07 11927827 (LM with
+  F fixed at 0.7, outside the bound, 29 free: Q below final1 by more than ~57 = the bound binds).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
