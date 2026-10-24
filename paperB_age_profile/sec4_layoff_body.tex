@@ -8,7 +8,7 @@ a layoff year: 383 father-present sons with a teen layoff year are observed at 2
 or moved', in the interview year or the one before. Code: \texttt{88.LayoffCostByAge.py}
 (\texttt{output/layoff\_cost\_by\_age.md}).} It is 0.146 ($p = 0.19$) at 25--29, falls in
 every band, and reaches $-0.768^{***}$ ($p = 0.005$) at 45--49; the change between the two bands is $-0.914^{***}$
-($p<0.001$). The share is over seven years, so one layoff year lowers the son's earnings at 45--49 by 0.110 log points.
+($p<0.001$). The share is over seven years, so one layoff year goes with earnings lower by 11 log points (0.110) at 45--49.
 Five-year birth-cohort dummies leave the profile unchanged ($-0.739^{***}$ at 45--49, change $-0.866^{***}$), so it is
 not that later-born sons are observed only young. Keeping the years with zero earnings, in a Poisson regression of
 earnings in levels, the change is $-0.523^{**}$ (panel D of Table~\ref{tab:layoff_mechanism}), so the cost is not
@@ -20,7 +20,7 @@ different rules: from 1968 to 1983 only if the father's job was less than a year
 in the year, from 2003 a roster of jobs. With one rule applied to every wave---a job that ended within twelve months of
 the interview, reported by the employed or the unemployed father---the change is $-1.392^{***}$ ($p = 0.003$) and the
 within-son slope $-0.391^{**}$. The within-son slope is $-0.210^{*}$ for sons born before 1963, $-0.248$ ($p = 0.14$)
-for those born 1963--75, who reach 45--49 in 2008--25, and $-0.547^{**}$ for those born 1976 and later; equality across
+for those born 1963--75, who reach 45--49 in 2008--23, and $-0.547^{**}$ for those born 1976 and later; equality across
 the three cohorts is not rejected ($p = 0.73$).\footnote{The one-rule share correlates 0.88 with the main one. By the
 era of the father's teen-window layoffs the cost is clear for 1968--75 and from 1984, and imprecise for 1976--83, where
 fewer than 30 treated sons reach 45--49. Code: \texttt{103.LayoffCohortRegime.py}.}
@@ -30,13 +30,16 @@ fewer than 30 treated sons reach 45--49. Code: \texttt{103.LayoffCohortRegime.py
 The cost is in the wage. In panel C of Table~\ref{tab:layoff_age} the coefficient on the son's log hourly wage changes by $-0.603^{***}$ ($p = 0.003$)
 between 25--29 and 45--49, two thirds of the change in earnings, and that on his annual hours when employed by
 $-0.311^{**}$ ($p = 0.025$); his employment ($0.033$) and his share of years unemployed ($0.022$) do not change. A son
-whose father was laid off in his teens works as much as other sons at 45--49 and is paid less per hour.
+whose father was laid off in his teens is as often employed as other sons at 45--49, works fewer hours when employed and
+is paid less per hour.
 
 \paragraph{Within the same son.} The profile across bands compares different sons at different ages. Table~\ref{tab:layoff_fe}
 follows the same son: with son fixed effects, the father's layoff share interacted with the son's age measures how his
 earnings profile bends. A unit share lowers the growth of the same son's log earnings by 0.236$^{**}$ ($p = 0.022$) per
 ten years of age, 0.034 a decade for one layoff year, with every component, parental income, the family-structure flags
-and cohort dummies also interacted with age. Closures do not bend it ($-0.010$, s.e.\ 0.119). Because each son is
+and cohort dummies also interacted with age. His hourly wage bends by $-0.109$ ($p = 0.18$), so within the same son
+the bend is clearer in earnings than in the wage, and it sits in his self-employed years
+(Section~\ref{sec:career}). Closures do not bend it ($-0.010$, s.e.\ 0.119). Because each son is
 compared with himself, a fixed difference in the level of earnings between sons whose fathers were and were not laid
 off cannot produce the result. A fixed difference whose return grows with age---in skill, say---can, and
 Section~\ref{sec:standsfor} asks what the layoff stands for.
@@ -103,12 +106,13 @@ The comparison removes what all laid-off fathers share, not what distinguishes e
 
 \paragraph{Mothers who head their families.} The layoff analysis follows fathers, so it leaves out the families headed
 by a mother, the main recipients of the safety net. The PSID asks female heads the same job-end question, and a
-mother's layoffs during her children's teens go with a similar delayed cost. Among the 2,843 children of families
+mother's layoffs during her children's teens go with a delayed cost, for her daughters. Among the 2,843 children of families
 headed by a woman in at least three of their teen waves (74 percent Black; 507 with a teen layoff year of their
 mother), a unit of her teen layoff share bends the child's earnings profile by $-0.368^{**}$ ($p = 0.029$) a decade and
-the wage by $-0.236^{**}$ ($p = 0.030$) within the same child, the size of the father's cost for sons. The comparison
+the wage by $-0.236^{**}$ ($p = 0.030$) within the same child, about the size of the father's cost for sons. The comparison
 across bands is imprecise ($-0.215$ between 25--29 and 40--44, s.e.\ 0.275), and by sex the within-child cost is
-$-0.079$ ($p = 0.64$) for sons and $-0.561^{**}$ ($p = 0.027$) for daughters.\footnote{Female heads' job-end reports with
+$-0.079$ ($p = 0.64$) for sons and $-0.561^{**}$ ($p = 0.027$) for daughters: the pooled cost is the daughters', so a
+parent's layoff goes with lower profiles for the children of the parent's sex.\footnote{Female heads' job-end reports with
 the fathers' definitions and dating rules; layoff share over the child's teen waves with a female head (three or
 more), at equal log parental income and closure share; sons and daughters as heads or spouses at 25--55; 190 treated
 children are observed at 40--44. Code: \texttt{131.MotherLayoffs.py} (\texttt{output/mother\_layoffs.md}).}

@@ -1,19 +1,19 @@
 \subsection{What rises: the parents' wage, their wealth and the son's skill}
 
-The parents' wage and wealth carry most of what is measured in the IGE, and the son's skill at entry carries most of
-its rise with age. Writing the IGE as the coefficient $\beta$ of the son's log earnings on log parental income, and the
+The parents' wage and wealth carry two fifths to a half of what is measured in the IGE, and the son's skill at entry
+carries a large part of its rise with age. Writing the IGE as the coefficient $\beta$ of the son's log earnings on log parental income, and the
 same regression with parental components $m_k$ added as $\tilde\beta$ and $\gamma_k$, the split
 $\beta = \tilde\beta + \sum_k \gamma_k \delta_k$ assigns to each component the part of the IGE carried by
 parental-income differences that are differences in it, where $\delta_k$ is the component's gradient in parental income
 \citep{gelbach2016covariates}. Table~\ref{tab:split_main} reports it on all sons and on the sons born 1964 and later,
 whose teens fall in the PSID's wealth waves. What holds in every version of the split: the parents' hourly wage carries
-a fifth or more of the IGE (20.5\%$^{***}$ on the later cohorts; 37 percent once measurement error in the wage is
+an eighth to a fifth of the IGE (12.0\%$^{**}$ on all sons, 20.5\%$^{***}$ on the later cohorts; 37 percent once measurement error in the wage is
 corrected); the parents' net worth, where it is measured, carries between a seventh and three tenths, depending on how
 it enters (14.5\%$^{***}$ as the inverse hyperbolic sine, 29.1\%$^{***}$ as a rank), its contribution doubling from
 0.062$^{**}$ at 25--29 to 0.127$^{***}$ at 35--39, and most of it is housing; the parents' schooling carries an eighth without wealth
 and less with it; spells out of work carry a few percent; hours and the state's labor market nothing. With wealth in,
-little of the IGE is left as parental income at equal measures (3.5 percent); on all sons, without wealth, half
-is.\footnote{The full split---the original components and the rest, the four-by-four table of what passes to what, the
+little of the IGE is left as parental income at equal measures (3.5 percent, against 11.4 percent on the same sons
+without wealth); on all sons, without wealth, half is.\footnote{The full split---the original components and the rest, the four-by-four table of what passes to what, the
 same split in four data sets, the measurement-error correction and what identifies the rest---is in
 Appendix~\ref{sec:passedon}. Code: \texttt{75.WhatIsPassedOn.py}, \texttt{80.WhatIsPassedOnRest.py},
 \texttt{96.SplitMeasurementError.py}, \texttt{97.RestIdentification.py}, \texttt{98.ParentalWealth.py}.} The split is
@@ -21,8 +21,8 @@ accounting: the components are correlated choices and outcomes.
 
 \input{tab_split_main}
 
-The rise of the IGE with age is mostly the son's skill at entry paying more later. In the NLSY79 the earnings IGE rises
-from 0.340$^{***}$ at 25--29 to 0.506$^{***}$ at 50--54, and the son's AFQT, measured before he enters the labor market,
+The rise of the IGE with age is in large part the son's skill at entry paying more later. In the NLSY79 the earnings IGE rises
+from 0.340$^{***}$ at 25--29 to 0.506$^{***}$ at 50--54, and the son's AFQT, measured at 15--23, mostly before he enters the labor market,
 carries 0.103$^{***}$ of that rise, three fifths; the parents' schooling beyond it carries most of the rest. It is age,
 not the rise of the skill premium: in the NLSY97, whose sons reach the same ages twenty years later, the AFQT's
 contribution rises by the same factor (1.64 against 1.70 from 25--29 to 40--44), although it carries a quarter of the
@@ -33,7 +33,8 @@ rise is within occupations.\footnote{Appendix~\ref{sec:skill} has the AFQT split
 rise, the early job and the return to schooling. Code: \texttt{86.NLSY79YouthWhatIsPassedOn.py},
 \texttt{87.NLSY79YouthAFQT.py}, \texttt{94.NLSY97AFQT.py}.}
 
-One component's share rises with age: the parents' spells out of work, from 0.017$^{**}$ of the IGE at 25--29 to
+Among the components whose share rises with age, with the parents' wage and schooling, are the parents' spells
+out of work, from 0.017$^{**}$ of the IGE at 25--29 to
 0.060$^{***}$ at 45--49, 13.5\%$^{***}$ of it. It is the father's layoffs, and Sections~\ref{sec:stability}--\ref{sec:daughters}
 are about them. The son's own spells run the other way: they carry 30.9\%$^{***}$ of the earnings IGE at 25--29 and
 8.7\%$^{***}$ at 45--49, so that the IGE of a young man is in large part about whether he works and that of a man in
