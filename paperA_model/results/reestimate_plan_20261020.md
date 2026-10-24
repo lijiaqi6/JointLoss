@@ -365,6 +365,13 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   at the hcage2r0 run folder, size k_s2_era1_a20, 8 cores, sbatch --wrap from the live clone: results in
   ~/jointloss/paperA_model/results/counterfactuals_<stamp>/, NOT pushed automatically); Joint-F07 11927827 (LM with
   F fixed at 0.7, outside the bound, 29 free: Q below final1 by more than ~57 = the bound binds).
+- Joint-cf-smoke 11927826 done in 14 min (results/counterfactuals_20261024_133535_j11927826, pushed by the PI after a
+  merge). At hcage2r0, size k_s2_era1_a20, common draws. Black / White: consumption fall at his loss -7.4% / -4.1%,
+  at a joint loss -20.5% / -10.8%; married months with no earner 1.21% / 0.37%. i_indep: joint losses 157 -> 26 /
+  380 -> 22, CE (consumption only) +0.14% / +0.03%, no-earner 1.21 -> 1.00% / 0.37 -> 0.32%. ii_ui12: +0.29% /
+  +0.08%. v_haz (Black with White hazards): +1.81%, no-earner 1.21 -> 0.85% (43% of the race gap). v_sep = base by
+  construction (sigmaJ pooled): drop or redefine. i_indep joint-loss consumption falls rest on 26 / 22 events: not
+  readable. Final: full size at final1 with --indep (Joint-indep-final).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
