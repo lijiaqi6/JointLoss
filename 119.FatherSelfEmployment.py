@@ -217,11 +217,12 @@ def main():
     md += ["", "### 4b. The layoff profile of the son's self-employment", "",
            "| sample | 25-29 | 45-49 | change | within son x age | sons |", "|---|---|---|---|---|---|"]
     q0 = r.dropna(subset=["selfemp"])
+    BTs = Boot(r["fam68"].to_numpy(), r["race"].to_numpy())   # all son-years, as 118
     for lab, q, ctrl, xfe in (("(a) all sons", q0, (), ()), ("(b) without SE fathers", q0[q0["f_se"] == 0], (), ()),
                               ("(c) without fathers ever SE", q0[q0["f_se_any"] == 0], (), ()),
                               ("(d) all, father SE (x age) held fixed", q0, ("f_se", "f_se_na"), XS)):
-        a0 = R91.band_fit(q, "selfemp", 0, BT, COMPS, ["f_sh_layoff"], ctrl)["f_sh_layoff"]
-        a4 = R91.band_fit(q, "selfemp", 4, BT, COMPS, ["f_sh_layoff"], ctrl)["f_sh_layoff"]
+        a0 = R91.band_fit(q, "selfemp", 0, BTs, COMPS, ["f_sh_layoff"], ctrl)["f_sh_layoff"]
+        a4 = R91.band_fit(q, "selfemp", 4, BTs, COMPS, ["f_sh_layoff"], ctrl)["f_sh_layoff"]
         chs = (a4[0] - a0[0], a4[1] - a0[1])
         f = R91.fe_fit(q, "selfemp", XB + list(xfe))
         fe = (f["b"]["f_sh_layoff_xa"], float(np.sqrt(f["V"].loc["f_sh_layoff_xa", "f_sh_layoff_xa"])))
