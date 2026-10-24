@@ -21,8 +21,9 @@ SAMPLE: 75's sons (R75.build(): PSID sons 25-55 with parental income at 13-19), 
 DESIGN: (1) by band: the outcome on exposure, the fixed effects and single-age dummies, clustered by 1968 family; the
   change 40-44 minus 25-29 from one stacked regression (every regressor x band); (2) within son: exposure x (age-40)/10
   with son FE, birth-year and children FE x age, single-age dummies; (3) the same in sons whose mother had at most 12
-  years of schooling (the families the credit reaches). lyp is not controlled (the credit is part of parental income);
-  a check adds it.
+  years of schooling (the families the credit reaches). lyp is not controlled in the main rows; a check adds it, and
+  that is the column to report: the credit is NOT in PSID family income (pre-tax money income), so lyp is not a
+  mediator of it (committee memo Z5, 2026-10-24).
 Writes output/eitc_by_age.md / .json (aggregates only). DESCRIPTIVE.
 """
 import importlib.util

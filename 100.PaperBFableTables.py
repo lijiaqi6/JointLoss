@@ -338,7 +338,7 @@ def t_split_main():
         rows.append((lab, cells))
     rows.append(("IGE of ln earnings", [cell(F["pooled|ly|b0"][3])] +
                  [cell(W[f"+ wealth: within-birth-year rank|{c_}"]["b0"]) for c_ in ("25-29", "35-39", "25-55")]))
-    table("tab_split_main", "What parents pass on: shares of the IGE of sons' earnings (PSID)", "tab:split_main", heads,
+    table("tab_split_main", "The components of the IGE: shares of the IGE of sons' earnings (PSID)", "tab:split_main", heads,
           [("Share of the IGE (\\%)", rows)],
           "Exact Gelbach split of the IGE of sons' ln earnings into parental components (means over the son's ages "
           "13--19) and the rest, parental income at equal measures. Column 1: all sons, without wealth (the PSID measures "
