@@ -179,34 +179,47 @@ def t_split_robust():
                                                             "98.ParentalWealth.py"))
 
 
+def t_ige_baseline():
+    B = J("baseline_profile")
+    heads = ["Pooled", "White", "Black", "White $-$ Black", "Pooled, family income"]
+    rows = []
+    for b in ("25-29", "30-34", "35-39", "40-44", "45-49", "50-55"):
+        e, f = B["ly"][b], B["lfam"][b]
+        rows.append((b.replace("-", "--"), [cell(e["pooled"]), cell(e["white"]), cell(e["black"]), cell(e["gap"]),
+                                            cell(f["pooled"])]))
+    rows.append(("Change 45--49 minus 25--29", [cell(B["ly"]["change"]), "", "", "", cell(B["lfam"]["change"])]))
+    rows.append(("Sons at 25--29 / 45--49", [f"{B['ly']['25-29']['sons']:,} / {B['ly']['45-49']['sons']:,}", "", "", "", ""]))
+    rows_b = []
+    for lab, key in (("Born 1951--64", "born 1951-64"), ("Born 1965--79", "born 1965-79"),
+                     ("Born 1980--89 (to 40--44)", "born 1980-89"), ("Income-year fixed effects", "income-year fixed effects"),
+                     ("Income years 1990--2010 only", "income years 1990-2010 only")):
+        e = B[f"B|{key}"]
+        rows_b.append((lab, [cell(e["change"]), "", "", "", ""]))
+    table("tab_ige_baseline", "The IGE of sons' earnings by age at measurement, baseline sample (PSID)", "tab:ige_baseline",
+          heads, [("A. IGE of ln earnings by age band (column 5: ln family income)", rows),
+                  ("B. Change 45--49 minus 25--29 in the pooled earnings IGE, by cohort and net of calendar time", rows_b)],
+          "The paper's baseline sample: 4,770 sons with parental income over at least three of their ages 13--19, son-years "
+          "at 25--55 (earnings: valid years). Band regressions with single-age dummies; pooled estimates use PSID weights, "
+          "race-specific ones are unweighted; standard errors clustered by 1968 family. Appendix Table~\\ref{tab:ige_sons} "
+          "reports the profile on all sons with a measured parental income. " + src("113.BaselineProfile.py"))
+
+
 def t_age_period():
-    P = J("pooled_rise_checks")
     A = J("nlsy97_afqt")
     N = J("nlsy79_youth_afqt")
-    heads = ["25--29", "45--49", "Rise"]
-    rows_p = []
-    for lab, key in (("Baseline", "baseline"), ("Born 1951--64", "born 1951-64"), ("Born 1965--79", "born 1965-79"),
-                     ("Born 1980--89 (to 40--44)", "born 1980-89"), ("Income-year fixed effects", "income-year FE"),
-                     ("IGE $\\times$ cohort, at the 1965 cohort", "IGE x cohort (1965 cohort)"),
-                     ("Period-varying IGE, at 1995", "period-varying IGE (at 1995)"),
-                     ("Income years 1990--2010 only", "fixed window, income years 1990-2010")):
-        e = P[f"learn|{key}"]
-        rows_p.append((lab, [cell(e["first"][:2]), cell(e["last"][:2]), cell(e["rise"][:2])]))
+    heads = ["25--29", "40--44", ""]
     a97 = A["learn_v|B|c:afqt"]
     i97 = A["learn_v|A|b0"]
     n79 = N["sons|pooled|son's AFQT, B"]["bands"]
     rows_a = [("NLSY97 (born 1980--84): IGE", [cell(i97["25-29"]), cell(i97["40-44"]), ""]),
               ("NLSY97: son's AFQT contribution", [cell(a97["25-29"]), cell(a97["40-44"]), ""]),
               ("NLSY79 (born 1957--64): son's AFQT contribution", [cell(n79[0]), cell(n79[3]), ""])]
-    table("tab_age_period", "Age or period? The pooled rise of the IGE and the son's AFQT in two cohorts",
-          "tab:age_period", heads, [("A. PSID sons, ln earnings, IGE by band", rows_p),
-                                    ("B. The son's AFQT in the IGE of ln earnings (columns 1--2: 25--29 and 40--44)", rows_a)],
-          "Panel A: Black and White sons pooled with PSID weights, ages 25--49; single-age dummies and the parent's age "
-          "quartic; rise = 45--49 minus 25--29 (40--44 for the 1980--89 cohort); standard errors clustered by 1968 family. "
-          "Panel B: exact Gelbach split with the son's AFQT as its own group (NLSY97: ASVAB math-verbal percentile, "
-          "standardised within birth year; parental income = the 1996 parent report; NLSY79: AFQT-3, 1979--81 parental "
-          "income); 200 cluster-bootstrap draws of households. " + src("95.PooledRiseChecks.py", "94.NLSY97AFQT.py",
-                                                                      "87.NLSY79YouthAFQT.py"))
+    table("tab_age_period", "Age or period? The son's AFQT in the IGE in two cohorts twenty years apart",
+          "tab:age_period", heads[:2], [("The son's AFQT in the IGE of ln earnings, at 25--29 and 40--44",
+                                         [(lab, cells[:2]) for lab, cells in rows_a])],
+          "Exact Gelbach split with the son's AFQT as its own group (NLSY97: ASVAB math-verbal percentile, standardised "
+          "within birth year; parental income = the 1996 parent report; NLSY79: AFQT-3, 1979--81 parental income); 200 "
+          "cluster-bootstrap draws of households. " + src("94.NLSY97AFQT.py", "87.NLSY79YouthAFQT.py"))
 
 
 def t_layoff_mechanism():
@@ -341,3 +354,4 @@ if __name__ == "__main__":
     t_layoff_mechanism()
     t_referee()
     t_split_main()
+    t_ige_baseline()
