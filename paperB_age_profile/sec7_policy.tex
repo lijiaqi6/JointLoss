@@ -124,6 +124,22 @@ mothers with at most twelve years of schooling, the families the credit reaches,
 estimates imprecise.\footnote{Exposure is intent to treat: it depends only on the year, the state and the number of
 children, with birth-year, state and number-of-children fixed effects. Code: \texttt{101.EITCByAge.py}.}
 
+Three checks bound what the EITC example shows. First, the PSID does not show the first stage: with year, state and
+number-of-children fixed effects, a thousand dollars more of maximum credit in a window year does not move the mother's
+employment ($-0.009$, $p = 0.44$) or the family's earned income ($-0.041$, $p = 0.17$), even in the families predicted to
+be eligible ($+0.015$, $p = 0.51$). Second, the faster growth of sons' earnings sits in the families the credit
+reaches: in the third of sons whose families were most likely to have earned income in the credit's range, predicted
+from characteristics fixed before their teens, it is 0.064$^{***}$ a decade ($p<0.001$), against 0.017 ($p = 0.11$) in the
+others, and the negative estimate at 25--29 is not there ($-0.005$, $p = 0.69$). Third, the cleanest variation, the
+1993--96 expansion for families with two or more children, gives the same direction, from $-0.079$ at 25--29 to
+$+0.046$ at 40--44, but no estimate is significant. Daughters gain early, as \citet{bastian2018long} find: $+0.028^{***}$
+($p = 0.004$) in earnings at 25--29, with no growth after. The example therefore shows a profile of the credit's
+association with sons' earnings that grows with age in the families it reaches, not a change of sign.\footnote{Eligible
+= the family's earned income positive and below the end of the phase-out for its number of children (joint filers when
+a father is present); predicted by a logit on ln family income at the son's 6--12, the mother's schooling, father
+present, number of children and year (pseudo-$R^2$ 0.21); 54 percent of window years in the top tercile are eligible,
+against 10 percent in the others. Code: \texttt{126.EITCDesign.py} (\texttt{output/eitc\_design.md}).}
+
 \input{tab_eitc_age}
 
 \subsection{By race}
