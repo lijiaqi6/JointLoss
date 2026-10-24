@@ -124,10 +124,28 @@ mothers with at most twelve years of schooling, the families the credit reaches,
 estimates imprecise.\footnote{Exposure is intent to treat: it depends only on the year, the state and the number of
 children, with birth-year, state and number-of-children fixed effects. Code: \texttt{101.EITCByAge.py}.}
 
-Three checks bound what the EITC example shows. First, the PSID does not show the first stage: with year, state and
-number-of-children fixed effects, a thousand dollars more of maximum credit in a window year does not move the mother's
-employment ($-0.009$, $p = 0.44$) or the family's earned income ($-0.041$, $p = 0.17$), even in the families predicted to
-be eligible ($+0.015$, $p = 0.51$). Second, the faster growth of sons' earnings sits in the families the credit
+Three checks bound what the EITC example shows. First, the credit reaches these families, but not through more work by
+their mothers on average, because married and single mothers respond in opposite directions, as in
+\citet{eissa2004taxes} and \citet{eissa1996labor}. With year, state and number-of-children fixed effects, a thousand
+dollars more of maximum credit in a window year raises the credit the family would receive at its actual earnings by
+\$116$^{***}$ for married and \$498$^{***}$ for single mothers; it lowers married mothers' employment by
+0.032$^{**}$ ($p = 0.028$) and their hours by 71$^{**}$ a year, and raises single mothers' employment by 0.016
+($p = 0.48$) and their hours by 51 ($p = 0.33$), 92 ($p = 0.11$) in the families likely to be eligible; pooled, the two
+cancel ($-0.009$, $p = 0.44$). Most of these mothers already work (81 percent in the sons' window years), and those who
+do not are seldom looking for work: 9 percent of married and 37 percent of single non-working mothers report looking,
+and the credit does not change it. Asked why they are not looking, mothers of children under 18 name family
+responsibilities and child care (49 percent; 58 percent of married mothers) and disability (16 percent; 33 percent of
+single mothers), and hardly ever the labor market (3 percent: no work in the area, could not find any, transport);
+in 1971 most non-working wives were said to be able to find a job easily (60 percent), and whether they would work
+depended on the family and children (57 percent), not on jobs (7 percent).\footnote{Mothers = the wife or female head
+of the son's family unit in his window years 1979 on (employment status from the individual file); single = female
+head. The credit is imputed from the family's head and wife labor income, its number of children and the year's
+schedule (joint filers when married), times one plus the state rate; the PSID does not record receipt. Looking = status
+`unemployed, looking for work' among mothers not working at the interview. Reasons: `main reason not looking', asked
+from 2019 of heads and spouses not working and not looking, women with a child under 18 in all PSID families (1,554);
+1971: the head's answers about a non-working wife under 65 (782); in 1976 and 1981--83, 13 to 26 percent of wives out
+of the labor force who were thinking of a job had done anything in the last four weeks to find one. Code:
+\texttt{127.EITCMothers.py} (\texttt{output/eitc\_mothers.md}).} Second, the faster growth of sons' earnings sits in the families the credit
 reaches: in the third of sons whose families were most likely to have earned income in the credit's range, predicted
 from characteristics fixed before their teens, it is 0.064$^{***}$ a decade ($p<0.001$), against 0.017 ($p = 0.11$) in the
 others, and the negative estimate at 25--29 is not there ($-0.005$, $p = 0.69$). Third, the cleanest variation, the

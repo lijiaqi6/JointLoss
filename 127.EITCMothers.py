@@ -94,6 +94,37 @@ def reasons():
     return F
 
 
+def early_items():
+    """1971: non-working wives (< 65) asked whether they could find a job easily, whether they will work and why;
+    1976 / 1981-83: wives out of the labor force who think of getting a job, whether they did anything in the last four
+    weeks to find one. Families with a child under 18."""
+    py = pd.read_pickle(DATA / "psid_person_year.pkl")
+    kids = py[py["age"].between(0, 17)].groupby(["wave", "int"]).size().rename("nk").reset_index()
+    out = {}
+    do = next(f for f in (R18.FAM / "fam1971").glob("*.do") if "formats" not in f.name)
+    pos, labs = R18.layout(do)
+    idv = labs[1][0]
+    f = R18.read(do.with_suffix(".txt"), [idv, "V2080", "V2081", "V2082"], pos).rename(columns={idv: "int"})
+    f = f.assign(wave=1971).merge(kids, on=["wave", "int"], how="inner")
+    f = f[f["V2080"].between(1, 5)]
+    out["1971_find"] = {k: float((f["V2080"] == k).mean()) for k in range(1, 6)}
+    out["1971_future"] = {k: float((f["V2081"] == k).mean()) for k in (1, 3, 5)}
+    g = f[f["V2082"].between(1, 7)]
+    out["1971_why"] = {k: float((g["V2082"] == k).mean()) for k in range(1, 8)}
+    out["1971_n"] = (len(f), len(g))
+    look = []
+    for w, think, lk in ((1976, None, "V4982"), (1981, "V7949", "V7950"), (1982, None, "V8601"), (1983, None, "V9274")):
+        do = next(x for x in (R18.FAM / f"fam{w}").glob("*.do") if "formats" not in x.name)
+        pos, labs = R18.layout(do)
+        idv = labs[1][0]
+        q = R18.read(do.with_suffix(".txt"), [idv, lk], pos).rename(columns={idv: "int", lk: "lk"})
+        q = q.assign(wave=w).merge(kids, on=["wave", "int"], how="inner")
+        q = q[q["lk"].isin([1, 5])]
+        look.append((w, float((q["lk"] == 1).mean()), len(q)))
+    out["look_R"] = look
+    return out
+
+
 def main():
     r = R75.build()
     W = R126.window_years(r)
@@ -175,6 +206,19 @@ def main():
            f"schooling / training, 4 employers think too young or old, 5 other discrimination, 7 transportation): {lm}; "
            f"family: 8 family responsibilities {int((F['reason'] == 8).sum())}, 9 can't arrange child care "
            f"{int((F['reason'] == 9).sum())}.", ""]
+    E = early_items()
+    RES["early"] = E
+    fl = {1: "yes", 2: "yes, qualified", 3: "maybe / depends", 4: "no, qualified", 5: "no"}
+    wl = {1: "health, disability, age", 2: "family, children, home", 3: "education, training", 4: "job-related (pay, "
+          "no jobs in the area, transport)", 5: "need (no need now)", 6: "desire, husband objects", 7: "other"}
+    md += ["## 4. Earlier items: non-working wives in families with a child under 18", "",
+           f"1971 ({E['1971_n'][0]:,} wives not working, under 65): 'If your wife wanted to work, would she be able to find "
+           "a job easily?' " + "; ".join(f"{fl[k]} {v:.3f}" for k, v in E["1971_find"].items()) + ". 'Will she go to "
+           "work in the near future?' yes " + f"{E['1971_future'][1]:.3f}, depends {E['1971_future'][3]:.3f}, no "
+           f"{E['1971_future'][5]:.3f}. 'What does that depend on / why?' (first mention, {E['1971_n'][1]:,}): "
+           + "; ".join(f"{wl[k]} {v:.3f}" for k, v in E["1971_why"].items()) + ".", "",
+           "Wives out of the labor force who think of getting a job: did anything in the last four weeks to find one: "
+           + "; ".join(f"{w} {s:.3f} ({n:,})" for w, s, n in E["look_R"]) + ".", ""]
     (OUT / "eitc_mothers.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     json.dump(RES, open(OUT / "eitc_mothers.json", "w"), indent=1, default=float)
     print("\n".join(md))
