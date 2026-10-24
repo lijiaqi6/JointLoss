@@ -400,7 +400,8 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
 - Joint-Ffree 11928459 done in 50 min (`hpc_runs/polish_Ffree_20261024_203146_j11928459`): from the F07 best with F
   free (bound 2.0), no LM step lowers Q (Gauss-Newton trial 617.2 vs 615.6; mu 0.01 -> 1e10 in 3 attempts; cond
   3.1e5): the F07 point is the LM optimum with F free. FINAL ESTIMATE (so far): Q 615.59, F 0.700 (0.045)***, every
-  other value as F07 (sandwich s.e. now valid with F free). CMA-ES around it next (local-optimum check).
+  other value as F07 (sandwich s.e. now valid with F free). CMA-ES around it next (local-optimum check):
+  Joint-cma-F 11928515 (from the Ffree best, stds from its Jacobian, sigma0 0.2, 2,400 evaluations, cma-seed 1, 16 h).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
