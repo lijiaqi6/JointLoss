@@ -87,8 +87,8 @@ def main():
     one = r.drop_duplicates("pid")[["pid", "birth_year", "nk_mode", "st17", "lyp", "wt"]].copy()
     for lab, lo, hi in (("ex_teen", 13, 18), ("ex_pre", 6, 11), ("ex_post", 19, 24)):
         one[lab] = sched(one, lo, hi)
-    one["terc"] = one.groupby("birth_year")["lyp"].transform(lambda s: pd.qcut(s.rank(method="first"), 3, labels=False))
-    one["prank"] = one.groupby("birth_year")["lyp"].rank(pct=True)
+    one["pterc"] = one.groupby("birth_year")["lyp"].transform(lambda s: pd.qcut(s.rank(method="first"), 3, labels=False))
+    one["prk"] = one.groupby("birth_year")["lyp"].rank(pct=True)
     # likely eligible (126's logit, re-fit)
     import statsmodels.api as sm
     o2 = r.drop_duplicates("pid")[["pid", "m_educ0", "m_educ_na"]]
@@ -101,7 +101,7 @@ def main():
     Z["p"] = sm.Logit(Z["elig"], sm.add_constant(X)).fit(disp=0).predict(sm.add_constant(X))
     pe = Z.groupby("pid")["p"].mean()
     one["likely"] = one["pid"].map((pe >= pe.quantile(2 / 3)).astype(float))
-    r = r.merge(one[["pid", "ex_teen", "ex_pre", "ex_post", "terc", "prank", "likely"]], on="pid", how="left")
+    r = r.merge(one[["pid", "ex_teen", "ex_pre", "ex_post", "pterc", "prk", "likely"]], on="pid", how="left")
     v = r[r["lw"].notna() & r["band"].between(0, 4)].copy()
     md = ["# Are we sure the EITC has no effect on the IGE? (PI question)", "",
           "Built by `129.EITCChecks.py` (2026-10-24); design in its docstring. Exposure in thousands of 2000 dollars, "
@@ -125,8 +125,8 @@ def main():
     md.append("")
     # 2. by tercile
     for t in range(3):
-        v[f"ex_t{t}"] = v["eitc"] * (v["terc"] == t)
-        v[f"t{t}"] = (v["terc"] == t).astype(float)
+        v[f"ex_t{t}"] = v["eitc"] * (v["pterc"] == t)
+        v[f"t{t}"] = (v["pterc"] == t).astype(float)
     md += ["## 2. By parental-income tercile (within birth year)", "",
            "| | bottom | middle | top | bottom - top |", "|---|---|---|---|---|"]
     for k in (0, 4):
@@ -141,9 +141,9 @@ def main():
     RES["terc|fe"] = [list(map(float, x)) for x in g]
     # rank-rank
     v["srank"] = v.groupby(["birth_year", "band"])["ly"].rank(pct=True)
-    v["ex_pr"] = v["eitc"] * (v["prank"] - 0.5)
-    v["ex_bot"] = v["eitc"] * (v["terc"] == 0)
-    v["pr"] = v["prank"]
+    v["ex_pr"] = v["eitc"] * (v["prk"] - 0.5)
+    v["ex_bot"] = v["eitc"] * (v["pterc"] == 0)
+    v["pr"] = v["prk"]
     md += ["", "Rank-rank (son's earnings rank within birth year and band on parents' rank), per $1,000 of exposure:", "",
            "| band | rank-rank at mean exposure | exposure x parents' rank | exposure x bottom tercile |", "|---|---|---|---|"]
     for k in (0, 2, 4):
@@ -155,13 +155,13 @@ def main():
         RES[f"rank|{BL[k]}"] = [[float(b[i]), float(np.sqrt(V[i, i]))] for i in range(3)]
     md.append("")
     # 3. scaling and calibration
-    Wt = W.merge(one[["pid", "terc", "lyp"]], on="pid", how="inner")
+    Wt = W.merge(one[["pid", "pterc", "lyp"]], on="pid", how="inner")
     nom = (Wt["hlab"].fillna(0) + Wt["wlab"].fillna(0)) / Wt["defl"]
     Wt["credit"] = [R127.credit(e, int(n), int(y), f == 0) for e, n, y, f in zip(nom, Wt["nk"], Wt["year"], Wt["nofa"])]
     Wt["credit"] = Wt["credit"] * (1 + Wt["state_eitc_rate"]) * Wt["defl"]
     py = pd.read_pickle(DATA / "psid_person_year.pkl")[["wave", "int", "faminc"]].drop_duplicates(["wave", "int"])
     Wt = Wt.merge(py, on=["wave", "int"], how="left")
-    sh = Wt.groupby("terc").agg(elig=("elig", "mean"), credit=("credit", "mean"), faminc=("faminc", "mean"))
+    sh = Wt.groupby("pterc").agg(elig=("elig", "mean"), credit=("credit", "mean"), faminc=("faminc", "mean"))
     per = Wt.groupby("pid").agg(cr=("credit", "mean"), inc=("faminc", "mean"), lyp=("lyp", "first"))
     per = per[per["inc"] > 0]
     per["dl"] = np.log1p(per["cr"] / per["inc"])

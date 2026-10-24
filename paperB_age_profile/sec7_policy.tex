@@ -5,8 +5,9 @@ say that insurance as legislated does not reach it. Generous unemployment insura
 smaller stability component across states, but the difference is not significant, and insurance simulated at the
 father's own wage, in its level or its duration, does not weaken the layoff's cost. The search friction faced by the
 family's group---the job finding of men of its race in its state---carries a tenth of the IGE, entirely between races.
-And the components that grow with the son's age are invisible to evaluations that score children's outcomes around 30:
-the EITC, scored at 25--29, looks as if it lowered sons' earnings.
+And the components that grow with the son's age are invisible to evaluations that score children's outcomes around 30;
+the EITC, whose intent-to-treat exposure shows an age profile even where the credit barely reaches, is a caution about
+such designs, and it is too small to move the IGE.
 
 \subsection{What the layoff result asks of policy}
 
@@ -109,62 +110,56 @@ any of these---schooling, the stability of parents' employment, insurance in the
 before most of its effect has appeared. The son's own spells run the other way: a policy that raises young men's
 employment shows its effect on the IGE early, and its share falls with age.
 
-The EITC shows that the sign of an evaluation can depend on the age at which it is scored. Following
-\citet{bastian2018long}, a son's exposure is the maximum federal and state credit his family could receive, given its
-number of children, in each year of his 13--18; the variation comes from the federal schedule by year and number of
-children, which expanded most in 1993--96, and from the state credits. Scored at 25--29, a thousand dollars more of
-exposure goes with earnings lower by 0.016$^{*}$ ($p = 0.052$), and by 0.016$^{**}$ with log parental income held fixed
-(the credit is not in PSID family income); scored at 40--44, the coefficient is $-0.003$, and the change between the
-bands is not significant. Within the same son, exposure raises the growth of earnings by 0.029$^{***}$ ($p = 0.002$)
-and of employment by 0.009$^{***}$ a decade (Table~\ref{tab:eitc_age}). One reading is a credit that keeps teenagers in
-school and delays their entry into work, so that it looks costly at 25 and pays off later. \citet{bastian2018long} find
-more schooling, employment and earnings at 18--27 from the same variation; the samples and ages differ, and the
-estimates here are intent to treat on all families. In the sons of
-mothers with at most twelve years of schooling, the families the credit reaches, the signs are the same and the
-estimates imprecise.\footnote{Exposure is intent to treat: it depends only on the year, the state and the number of
-children, with birth-year, state and number-of-children fixed effects. Code: \texttt{101.EITCByAge.py}.}
+The EITC is a caution rather than an example. Following \citet{bastian2018long}, a son's exposure is the maximum
+federal and state credit his family could receive, given its number of children, in each year of his 13--18; the
+variation comes from the federal schedule by year and number of children, which expanded most in 1993--96, and from the
+state credits. Scored at 25--29, a thousand dollars more of exposure goes with earnings lower by 0.016$^{*}$
+($p = 0.052$), and by 0.016$^{**}$ with log parental income held fixed (the credit is not in PSID family income); scored
+at 40--44, the coefficient is $-0.003$; and within the same son exposure goes with faster earnings growth,
+0.029$^{***}$ ($p = 0.002$) a decade (Table~\ref{tab:eitc_age}). Read alone, this is a credit that looks costly at 25
+and pays off later. It is not the credit. The same profile appears where the credit barely reaches: within son,
+exposure goes with faster growth by 0.020$^{**}$ in the bottom third of parental income, where 55 percent of window
+years have earned income in the credit's range, and by 0.032$^{***}$ ($p<0.001$) in the top third, where 3 percent do
+and the credit the family would receive averages \$33 a year; the lower earnings at 25--29 are there too
+($-0.024^{***}$ in the bottom third, $-0.013$ in the top). Intent-to-treat exposure varies with the number of children
+and the birth year, and the sons of larger families in later cohorts follow different earnings profiles for reasons of
+their own; exposure measured the same way at the son's 6--11 or 19--24 is too closely correlated with the teen measure
+(0.81 and 0.88) to separate the two. What the example shows is how a schedule-based design scored at one age can
+suggest an effect of either sign that a check where the policy does not bind would not support.\footnote{Exposure is
+intent to treat: it depends only on the year, the state and the number of children, with birth-year, state and
+number-of-children fixed effects. Thirds of log parental income within birth year; earned income in the credit's range
+and the credit the family would receive at its actual earnings are imputed from the schedule. In the third of families
+most likely to be eligible, predicted from characteristics fixed before the son's teens, the growth is
+0.064$^{***}$ a decade, against 0.017 in the others; the 1993--96 expansion for families with two or more children
+gives $-0.079$ at 25--29 and $+0.046$ at 40--44, neither significant; daughters' earnings at 25--29 are higher by
+0.028$^{***}$, subject to the same caution. Code: \texttt{101.EITCByAge.py}, \texttt{126.EITCDesign.py},
+\texttt{129.EITCChecks.py} (\texttt{output/eitc\_checks.md}).}
 
-Three checks bound what the EITC example shows. First, the credit reaches these families, but not through more work by
-their mothers on average, because married and single mothers respond in opposite directions, as in
-\citet{eissa2004taxes} and \citet{eissa1996labor}. With year, state and number-of-children fixed effects, a thousand
-dollars more of maximum credit in a window year raises the credit the family would receive at its actual earnings by
-\$116$^{***}$ for married and \$498$^{***}$ for single mothers; it lowers married mothers' employment by
-0.032$^{**}$ ($p = 0.028$) and their hours by 71$^{**}$ a year, and raises single mothers' employment by 0.016
-($p = 0.48$) and their hours by 51 ($p = 0.33$), 92 ($p = 0.11$) in the families likely to be eligible; pooled, the two
-cancel ($-0.009$, $p = 0.44$). Most of these mothers already work (81 percent in the sons' window years), and those who
-do not are seldom looking for work: 9 percent of married and 37 percent of single non-working mothers report looking,
-and the credit does not change it. Asked why they are not looking, mothers of children under 18 name family
-responsibilities and child care (49 percent; 58 percent of married mothers) and disability (16 percent; 33 percent of
-single mothers), and hardly ever the labor market (3 percent: no work in the area, could not find any, transport);
-in 1971 most non-working wives were said to be able to find a job easily (60 percent), and whether they would work
-depended on the family and children (57 percent), not on jobs (7 percent).\footnote{Mothers = the wife or female head
-of the son's family unit in his window years 1979 on (employment status from the individual file); single = female
-head. The credit is imputed from the family's head and wife labor income, its number of children and the year's
-schedule (joint filers when married), times one plus the state rate; the PSID does not record receipt. Looking = status
-`unemployed, looking for work' among mothers not working at the interview. Reasons: `main reason not looking', asked
-from 2019 of heads and spouses not working and not looking, women with a child under 18 in all PSID families (1,554);
-1971: the head's answers about a non-working wife under 65 (782); in 1976 and 1981--83, 13 to 26 percent of wives out
-of the labor force who were thinking of a job had done anything in the last four weeks to find one. Code:
-\texttt{127.EITCMothers.py} (\texttt{output/eitc\_mothers.md}).} Second, the faster growth of sons' earnings sits in the families the credit
-reaches: in the third of sons whose families were most likely to have earned income in the credit's range, predicted
-from characteristics fixed before their teens, it is 0.064$^{***}$ a decade ($p<0.001$), against 0.017 ($p = 0.11$) in the
-others, and the negative estimate at 25--29 is not there ($-0.005$, $p = 0.69$). Third, the cleanest variation, the
-1993--96 expansion for families with two or more children, gives the same direction, from $-0.079$ at 25--29 to
-$+0.046$ at 40--44, but no estimate is significant. Daughters gain early, as \citet{bastian2018long} find: $+0.028^{***}$
-($p = 0.004$) in earnings at 25--29, with no growth after. The example therefore shows a profile of the credit's
-association with sons' earnings that grows with age in the families it reaches, not a change of sign. It does not show
-a change in the IGE: the interaction of exposure with log parental income is $-0.0001$ ($p = 0.98$) at 25--29 and
-$-0.0044$ ($p = 0.54$) at 40--44, within son $-0.0016$ ($p = 0.68$), and the family's imputed credit carries at most
-0.02 of the IGE at any age; the designs exclude only effects larger than about 0.08 (25--29) and 0.14 (40--44) of the
-IGE per standard deviation of exposure.\footnote{Eligible
-= the family's earned income positive and below the end of the phase-out for its number of children (joint filers when
-a father is present); predicted by a logit on ln family income at the son's 6--12, the mother's schooling, father
-present, number of children and year (pseudo-$R^2$ 0.21); 54 percent of window years in the top tercile are eligible,
-against 10 percent in the others. Code: \texttt{126.EITCDesign.py} (\texttt{output/eitc\_design.md}). Exposure $\times$ (log parental income $-$ its mean), with birth-year,
-state-at-17 and number-of-children fixed effects; one standard deviation of exposure is \$6,890 over 13--18. Sons with
-more exposure than their birth year, state and number of children predict have an IGE that rises by 0.198$^{***}$
-between 25--29 and 40--44, against 0.103$^{*}$ for the others; the difference is not significant. Code:
-\texttt{128.EITCAndIGE.py} (\texttt{output/eitc\_ige.md}).}
+The credit is also too small to move the IGE, and the data find no change in it. It reaches these families as income,
+not through more work by their mothers on average, because married and single mothers respond in opposite directions,
+as in \citet{eissa2004taxes} and \citet{eissa1996labor}: a thousand dollars more of maximum credit in a window year
+raises the credit the family would receive at its actual earnings by \$116$^{***}$ for married and \$498$^{***}$ for
+single mothers, lowers married mothers' employment by 0.032$^{**}$ ($p = 0.028$) and their hours by 71$^{**}$ a year,
+and raises single mothers' employment by 0.016 ($p = 0.48$) and their hours by 51 ($p = 0.33$); pooled, the two cancel
+($-0.009$, $p = 0.44$). Most of these mothers already work (81 percent in the sons' window years), and those who do not
+are seldom looking: 9 percent of married and 37 percent of single non-working mothers, unchanged by the credit. Asked
+why they are not looking, mothers of children under 18 name family responsibilities and child care (49 percent) and
+disability (16 percent), and hardly ever the labor market (3 percent); in 1971, most non-working wives were said to be
+able to find a job easily (60 percent). Even if the credit passed on to sons like other parental income, with the whole
+IGE as the pass-through, it would lower the IGE by 0.007 at 25--29 and 0.011 at 45--49, because it is a few hundred
+dollars a year in the bottom third of families (\$700, against family income of \$24,000). The data detect only
+changes several times larger, about 0.08 at 25--29 and 0.14 at 40--44 per standard deviation of exposure, and they find
+none: the interaction of exposure with log parental income is $-0.0001$ ($p = 0.98$) at 25--29 and $-0.0044$
+($p = 0.54$) at 40--44, and exposure does not change the rank--rank slope at any age.\footnote{Mothers = the wife or
+female head of the son's family unit in his window years 1979 on; single = female head. The credit is imputed from the
+family's head and wife labor income, its number of children and the year's schedule (joint filers when married), times
+one plus the state rate; the PSID does not record receipt. Looking = `unemployed, looking for work' among mothers not
+working at the interview. Reasons: `main reason not looking', asked from 2019 of heads and spouses not working and not
+looking, women with a child under 18 in all PSID families (1,554); 1971: the head's answers about a non-working wife
+under 65 (782); in 1976 and 1981--83, 13 to 26 percent of wives out of the labor force who were thinking of a job had
+done anything in the last four weeks to find one. Calibration: the son's gain is the IGE times
+$\ln(1 + \text{credit}/\text{family income})$, whose slope on log parental income is $-0.026$. Code:
+\texttt{127.EITCMothers.py}, \texttt{128.EITCAndIGE.py}, \texttt{129.EITCChecks.py}.}
 
 \input{tab_eitc_age}
 
