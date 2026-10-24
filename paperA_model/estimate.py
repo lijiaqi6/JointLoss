@@ -514,7 +514,14 @@ def start_z(args, base, idx):
     check_start_bounds(base, idx, args.bound_margin)
     z0 = to_z(base, idx)
     if args.pseudo or args.perturb:
-        z0 = z0 + np.random.default_rng(args.pseudo_seed).normal(0.0, args.start_noise, len(z0))
+        dz = np.random.default_rng(args.pseudo_seed).normal(0.0, args.start_noise, len(z0))
+        # --no-perturb names (2026-10-24): these start unperturbed; the others get the same draws as without it
+        keep = set(args.no_perturb or [])
+        bad = keep - {NAMES[j] for j in idx}
+        if bad:
+            raise SystemExit(f"--no-perturb {sorted(bad)}: not free parameters")
+        dz[[k for k, j in enumerate(idx) if NAMES[j] in keep]] = 0.0
+        z0 = z0 + dz
     return z0
 
 
@@ -1172,6 +1179,8 @@ def build_parser():
                     help="CRN seed of the pseudo targets (equal to --seed: optimiser / identification test only)")
     ap.add_argument("--pseudo-seed", dest="pseudo_seed", type=int, default=99, help="seed of the start perturbation")
     ap.add_argument("--start-noise", dest="start_noise", type=float, default=0.5)
+    ap.add_argument("--no-perturb", dest="no_perturb", nargs="*", default=None,
+                    help="free parameters that start unperturbed under --pseudo / --perturb (e.g. beta)")
     # polish
     ap.add_argument("--iters", type=int, default=15)
     ap.add_argument("--lm-mu0", dest="lm_mu0", type=float, default=0.01)
