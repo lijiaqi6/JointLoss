@@ -353,6 +353,12 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   specification's recovery (beta fixed) passed 31/31. Proposed (PI to decide): (1) finish stage 2 on the PC from
   809.61 under the new noise weights, no iteration cap; (2) recovery with beta started at the truth (diagnostic);
   (3) CMA-ES around the final estimate on the HPC (local-optimum check).
+- PI 2026-10-24: all three. (1) PC `final1` (`runs/polish_final1_20261024_130659_p42728`): from hcage2r0 under the
+  new noise weights (--noise-file hpc_runs/noise_20261023_160642_j11917862/moment_noise.csv), up to 40 iterations;
+  warm-up Q 863.2 (809.61 under the old weights): the NEW SCALE from here on. (2) Joint-rec-hcage-b 11927759: the
+  failed recovery repeated with --no-perturb beta (beta starts at the truth, every other start identical; code
+  33b22c9). (3) Joint-cma-final 11927760: CMA-ES from hcage2r0, stds from its Jacobian, new noise weights, sigma0
+  0.2, 2,400 evaluations, cma-seed 1, 16 h.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
