@@ -377,6 +377,26 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   iteration 7, Q 841.14; commit 62213e1), same flags and noise weights, --iters 33 (40 in all), 14 h, --push. The PC
   final1 continues; whichever ends first is used. A theta_617 = 0 LM was proposed and withdrawn (PI rule 2026-10-21:
   Wald, not LM reruns; z = -3.3***): its sign is read from the Jacobian at the final estimate instead.
+- Joint-F07 11927827 done (`hpc_runs/polish_F07_20261024_133536_j11927827`, F fixed at 0.7, 30 free, new noise
+  weights, from hcage2r0): Q 1,138.9 -> 615.59, converged (step below 1e-4 in z at iteration 12). final1 (F free at
+  its bound 0.6) is at 841.14: 225 lower at F = 0.7, ~4 noise sd (sd 57-92): THE BOUND BINDS. The LM ran
+  well-conditioned with F out of the free set (cond 1e5-1e8, mu 0.001-1, vs 2e10 and mu 10-1,000 in every run with F
+  at the bound: the frozen F, code review B2, is the likely cause of the slow LM). Estimates move (F07 vs final1):
+  d_w 0.026 -> 0.251 (0.024)***, d_h 0.004 -> 0.095 (0.039)**, lam_w_B 0.081 -> 0.138 (0.016), lam_w_W 0.158 -> 0.184
+  (0.014), lam_h_B 0.121 -> 0.139 (0.017) vs lam_h_W 0.324 (0.023), m_H 14.6 -> 21.7, pi_dn_w 0.0007 -> 0.0022
+  (0.0007)***, theta_617 -0.019 -> -0.033 (0.006)***, kappa_S 0.128 -> 0.170, g_age 0.028 -> 0.021 (0.003)***, beta
+  0.9944/month (0.935/yr). Final1 / Joint-final-hpc / CMA-ES / indep-final all sit at F = 0.6: to be redone at the
+  new optimum. Next (PI): widen F's bound and estimate F freely from the F07 best.
+- Joint-rec-hcage-b 11927759 done (`hpc_runs/recovery_gn_rec_hcage_b_20261024_131501_j11927759`): beta started at
+  its truth, recovery FAILS as before (Q 10,972 -> 10,470 in 15 iterations, mu 100-1,000; 11 of 31 within 2 noise
+  s.e., most estimates = their starts). beta is not the cause. The truth has F at its bound (0.5999), so this
+  recovery has the same frozen-F conditioning (cond 2-3e10) as every LM at the bound.
+- PI 2026-10-24 evening: cancelled Joint-final-hpc 11928212, Joint-cma-final 11927760, Joint-indep-final 11927825
+  (all at F = 0.6). F's upper bound 0.6 -> 2.0 (params.py, c67e92b). Submitted, all from the F07 best (Q 615.59),
+  F free, new noise weights, a_bar 25.639, beta free, sigmaJ pooled: Joint-Ffree 11928459 (final estimate, 20
+  iterations, 12 h); Joint-indep-F 11928460 (independent shocks: pi_c0 = pi_c1 = 0, m_H = 1, p_H = 0.02348 held;
+  12 h); Joint-rec-F 11928461 (recovery, truth = F07 best with F at 0.7 off the bound, start noise 0.5, beta at its
+  truth, 15 iterations, 10 h: does the recovery pass once F is not frozen?). CMA-ES waits for Ffree.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
