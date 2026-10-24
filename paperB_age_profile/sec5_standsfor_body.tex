@@ -19,7 +19,9 @@ first stage on layoffs is too weak to test the layoff cost itself: the cost the 
 $0.030 \times -0.24$, is a tenth of the reduced form's standard error. What the design shows is that demand-driven
 unemployment of the father, like a plant closure, is not passed on.\footnote{Father's sector: his 3-digit industry in the
 earliest wave at the son's 10--13 (85 percent) or his first teen wave, in 15 sectors; national employment from the BLS
-Current Employment Statistics, 1939--2025; 3,145 sons, 632 sector $\times$ birth-year clusters. Code:
+Current Employment Statistics, 1939--2025; 3,145 sons, 632 sector $\times$ birth-year clusters. With the decline of the
+father's sector in his own state (CPS MORG employment by state and sector, from 1980) the first stage is weaker still
+($F = 0.3$; 1,829 sons) and the reduced form 0.010 (s.e.\ 0.085) (\texttt{141.StateSectorShocks.py}). Code:
 \texttt{93.LayoffIndustryShocks.py}.}
 
 \paragraph{What kind of layoff.} The point estimates put the cost in the layoffs that look like unstable employment,
@@ -54,7 +56,10 @@ employer at a later interview, within three years, goes back past the year the j
 when it starts after it or he is self-employed; tenure is in months from 1976 and in categories before (none in 1974
 and 1978). Of 797 teen layoff years, 194 are recalls, 345 new-employer layoffs and 258 unknown. The classification is
 noisy: for the spells of 1980--82, for which the PSID asked whether the man returned to the same employer, it calls 41
-of 76 returns recalls and 48 of 402 non-returns recalls, so the recall--new difference is attenuated. Union membership
+of 76 returns recalls and 48 of 402 non-returns recalls, so the recall--new difference is attenuated. Of the rule's
+recalls 46 percent were returns and of its new-employer layoffs 9 percent; correcting the two slopes for these rates
+gives about $-0.39$ for recalls and $-0.13$ for new-employer layoffs, a difference of $-0.26$ with a standard error of
+about 0.61, so the split cannot distinguish the two. Union membership
 1969--72 and 1975 (member) and 1976 on (member or covered). Code: \texttt{120.LayoffRecall.py}
 (\texttt{output/layoff\_recall.md}).}
 
