@@ -67,8 +67,8 @@ def lincom(b, V, w):
     return float(w @ b), float(np.sqrt(w @ V @ w))
 
 
-def estimates(r, y, lay, clo):
-    X0 = ["lyp", "f_lw", "f_lh", "f_sh_unemp", "f_sh_zero", "f_vtr", clo, lay]
+def estimates(r, y, lay, clo, extra=()):
+    X0 = ["lyp", "f_lw", "f_lh", "f_sh_unemp", "f_sh_zero", "f_vtr", *extra, clo, lay]
     kL = X0.index(lay)
     d = r.dropna(subset=[y] + X0)
     out = {}
