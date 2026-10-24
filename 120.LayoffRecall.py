@@ -221,7 +221,7 @@ def father_job(r, py, F):
     pre = o[o["off"] <= 13].groupby("pid")["occ"].first()
     occ = pre.combine_first(o.groupby("pid")["occ"].first())
     un = rows.dropna(subset=["union"]).groupby("pid")["union"].max()
-    return pd.DataFrame({"f_occ": occ, "f_union": un})
+    return pd.DataFrame({"fj_occ": occ, "fj_union": un})
 
 
 def main():
@@ -243,15 +243,15 @@ def main():
     r = r.merge(father_job(r, py, F), left_on="pid", right_index=True, how="left")
     r["sgrp"] = r["h_sec"].map(SGRP)
     dums = []
-    for nm, col, K in (("sec", "h_sec", 16), ("occ", "f_occ", 9)):
+    for nm, col, K in (("sec", "h_sec", 16), ("occ", "fj_occ", 9)):
         for k in range(1, K):
             r[f"{nm}{k}"] = (r[col] == k).astype(float)
             dums.append(f"{nm}{k}")
         r[f"{nm}_na"] = (pres & r[col].isna()).astype(float)
         dums.append(f"{nm}_na")
-    r["union_na"] = (pres & r["f_union"].isna()).astype(float)
-    r["f_union"] = r["f_union"].fillna(0.0).where(pres, 0.0)
-    dums += ["f_union", "union_na"]
+    r["union_na"] = (pres & r["fj_union"].isna()).astype(float)
+    r["fj_union"] = r["fj_union"].fillna(0.0).where(pres, 0.0)
+    dums += ["fj_union", "union_na"]
     r["coh5"] = (r["birth_year"] // 5 * 5).astype(int)
     cohd = pd.get_dummies(r["coh5"], prefix="coh", drop_first=True).astype(float)
     r = pd.concat([r, cohd], axis=1)
@@ -325,7 +325,7 @@ def main():
            "| outcome | controls | 25-29 | 45-49 | change | within son x age | sons |", "|---|---|---|---|---|---|---|"]
     secd = [d for d in dums if d.startswith("sec")]
     occd = [d for d in dums if d.startswith("occ")]
-    unid = ["f_union", "union_na"]
+    unid = ["fj_union", "union_na"]
     for y in ("ly", "lw"):
         for lab, ctrl in (("none", []), ("sector", secd), ("occupation", occd), ("union", unid),
                           ("sector + occupation + union", dums)):
