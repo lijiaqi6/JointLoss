@@ -345,7 +345,7 @@ def t_split_main():
           "net worth only from 1984). Columns 2--4: sons born 1964 and later, whose teens fall in the wealth waves, with "
           "parental net worth (rank within the son's birth year, mean over the wealth waves at 12--20). What holds in every "
           "version (Appendix~B: the original split, the measurement-error correction, four data sets): the parents' wage "
-          "carries a fifth or more, wealth three tenths where it is measured, the parents' schooling an eighth without "
+          "carries a fifth or more, wealth between a seventh (inverse hyperbolic sine) and three tenths (rank) where it is measured, mostly housing, the parents' schooling an eighth without "
           "wealth and less with it, spells a few percent, hours and place nothing. PSID weights; "
           "200 cluster-bootstrap draws of 1968 families. " + src("80.WhatIsPassedOnRest.py", "98.ParentalWealth.py"))
 
