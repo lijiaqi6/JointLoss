@@ -1,0 +1,66 @@
+{
+ "all years|industry wage premium (outcome)": [
+  0.020238824192038794,
+  0.03263128584548016
+ ],
+ "all years|ln wage net of the premium": [
+  -0.1349904147305094,
+  0.07527559122883498
+ ],
+ "all years|ln earnings": [
+  -0.23478809018952268,
+  0.10380723198117346
+ ],
+ "all years|ln earnings, industry groups held fixed": [
+  -0.23290865694775753,
+  0.09437372859629138
+ ],
+ "all years|ln earnings, industry groups and x age": [
+  -0.21816496577950373,
+  0.08695904225551501
+ ],
+ "all years|ln wage": [
+  -0.11475159053847075,
+  0.0828561761292445
+ ],
+ "all years|ln wage, industry groups held fixed": [
+  -0.10978201083065998,
+  0.0771291063800237
+ ],
+ "all years|ln wage, industry groups and x age": [
+  -0.09290052566178109,
+  0.06895748147571495
+ ],
+ "employee years|industry wage premium (outcome)": [
+  0.00858074201156015,
+  0.0372403152781122
+ ],
+ "employee years|ln wage net of the premium": [
+  -0.024438578156450626,
+  0.07665934752298974
+ ],
+ "employee years|ln earnings": [
+  -0.08556473609938932,
+  0.10441184768457196
+ ],
+ "employee years|ln earnings, industry groups held fixed": [
+  -0.08457070576540497,
+  0.09704402130746778
+ ],
+ "employee years|ln earnings, industry groups and x age": [
+  -0.0936872538766359,
+  0.08486698830993551
+ ],
+ "employee years|ln wage": [
+  -0.015857836144890433,
+  0.0843710229729504
+ ],
+ "employee years|ln wage, industry groups held fixed": [
+  -0.013648448498632709,
+  0.07683801168726485
+ ],
+ "employee years|ln wage, industry groups and x age": [
+  -0.019247411682791662,
+  0.06509671892732384
+ ]
+}
