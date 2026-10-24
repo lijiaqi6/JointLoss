@@ -404,6 +404,13 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   Joint-cma-F 11928515 (from the Ffree best, stds from its Jacobian, sigma0 0.2, 2,400 evaluations, cma-seed 1, 16 h).
   Joint-cf-F 11928516: counterfactuals.py at the Ffree run folder (size k_s2_era1_a20, 8 cores, live clone; results
   in ~/jointloss/paperA_model/results/counterfactuals_<stamp>/, pushed by hand). Fable asked for further HPC advice.
+- Fable 2026-10-24 (proposals/fable_hpc_next_20261024.md): Ffree is a genuine optimum, not a stall: all 62 Jacobian
+  perturbations raise Q (beyond ~2 chatter); Q(F) = 663.8 / 615.6 / 641.9 at F = 0.665 / 0.70 / 0.735, vertex 0.705;
+  dtheta/dz for F 0.455 (not frozen). Report F 0.70 (0.045); Wald vs the old bound 0.6: z = 2.2**. CORRECTION to the
+  F07 entry: the "225" compares converged F07 with non-converged final1 (still falling ~3 per iteration), so it
+  overstates the bound's cost; Joint-F06 (F = 0.6, others re-optimised) would give the clean number (PI's call).
+  sigmaJ and theta_05 are zero-compatible: impose both in the one final LM after the CMA-ES. Counterfactuals: add
+  --K 9 (more events for i_indep) and 24G. Noise weights: report only now, adopt once at the final re-baseline.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
