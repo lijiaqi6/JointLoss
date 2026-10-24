@@ -68,7 +68,7 @@ def father_path(r, a, lay):
     return out[out["fp_n"] >= 2].reset_index()
 
 
-def bad_times_split(r, a, lay):
+def bad_times_split(r, a, lay, return_fw=False):
     S = R93.father_sector(r)[["pid", "h_sec"]]
     E, G = R93.ces_employment()
     st = pd.read_pickle(DATA / "husband_shocks_fam.pkl")[["wave", "int", "fips"]].drop_duplicates(["wave", "int"])
@@ -106,7 +106,7 @@ def bad_times_split(r, a, lay):
             "share_secdecl": float(fw.loc[fw["lay"] == 1, "sec_decl"].mean()),
             "share_all_years_bad": float(fw["bad"].mean())}
     out.index.name = "pid"
-    return out.reset_index(), info
+    return (out.reset_index(), info, fw) if return_fw else (out.reset_index(), info)
 
 
 def main():
