@@ -391,6 +391,12 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   its truth, recovery FAILS as before (Q 10,972 -> 10,470 in 15 iterations, mu 100-1,000; 11 of 31 within 2 noise
   s.e., most estimates = their starts). beta is not the cause. The truth has F at its bound (0.5999), so this
   recovery has the same frozen-F conditioning (cond 2-3e10) as every LM at the bound.
+- PI 2026-10-24 evening: cancelled Joint-final-hpc 11928212, Joint-cma-final 11927760, Joint-indep-final 11927825
+  (all at F = 0.6). F's upper bound 0.6 -> 2.0 (params.py, c67e92b). Submitted, all from the F07 best (Q 615.59),
+  F free, new noise weights, a_bar 25.639, beta free, sigmaJ pooled: Joint-Ffree 11928459 (final estimate, 20
+  iterations, 12 h); Joint-indep-F 11928460 (independent shocks: pi_c0 = pi_c1 = 0, m_H = 1, p_H = 0.02348 held;
+  12 h); Joint-rec-F 11928461 (recovery, truth = F07 best with F at 0.7 off the bound, start noise 0.5, beta at its
+  truth, 15 iterations, 10 h: does the recovery pass once F is not frozen?). CMA-ES waits for Ffree.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
