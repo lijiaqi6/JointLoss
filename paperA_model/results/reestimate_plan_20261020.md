@@ -338,6 +338,21 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   weights, reproduced exactly) the new noise file gives Q 904.6 (+56): median weight ratio 0.99; the weights rise on
   the CPS persistent entry rates (Black x3.5, White x2.2: her search 33 -> 84), sipp_his_emp_s6_sep x2.1 (his
   search 58 -> 74) and fall on cps_wife_exit_p (x0.58). Adopt for the final estimate and s.e. after stage 2 (PI).
+- Results 2026-10-24. PC chain: hcage1b ended normally 2026-10-23 20:02 (15 iterations); supervisor ran stage 2
+  `hcage2r0` (`runs/polish_hcage2r0_20261023_200316_p800`) to the 15-iteration cap, Q 809.61 (still gaining 1-3 per
+  iteration), ended 08:37. HPC stage 2 Joint-hcage2 11917840 (`hpc_runs/polish_hcage2hpc_20261023_160340_j11917840`,
+  from hcage1b_it9): Q 853.59 -> 816.79 at the cap; same parameters (beta 0.9402 vs 0.9400 a year, g_age 0.0286 vs
+  0.0287, eta_up 0.859, F 0.6). PC sandwich s.e. (fixed beta step): beta 0.994858 a month (s.e. 0.00012; 0.940 a
+  year, ~0.0014); g_age 0.0287 (0.0042)***; eta_up 0.859 (0.135)***: both kept; theta_05 -0.0004 (0.0087), theta_617
+  -0.0187 (0.0057)*** (negative: to explain); lam_h_B 0.123 (0.012) vs lam_h_W 0.325 (0.023); lam_w_B 0.079 (0.012)
+  vs lam_w_W 0.157 (0.016); sigmaJ 0.0013 (0.0020); d_w, d_h, pi_dn_w n.s.; F 0.6 at its bound.
+- Recovery Joint-rec-hcage 11917861 (`hpc_runs/recovery_gn_rec_hcage_20261023_161519_j11917861`) FAILED: Q 11,047 ->
+  10,892 in 15 iterations (truth = 0), mu 100-1,000, most estimates = their perturbed starts. Not evidence against
+  identification (noise / data s.e. at the truth small for all but pi_dn_w, d_w, d_h, sigmaJ); the optimiser cannot
+  come back from a start this far. Suspect beta: started 0.012/yr from the truth (z +27 noise s.e.); the old
+  specification's recovery (beta fixed) passed 31/31. Proposed (PI to decide): (1) finish stage 2 on the PC from
+  809.61 under the new noise weights, no iteration cap; (2) recovery with beta started at the truth (diagnostic);
+  (3) CMA-ES around the final estimate on the HPC (local-optimum check).
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
