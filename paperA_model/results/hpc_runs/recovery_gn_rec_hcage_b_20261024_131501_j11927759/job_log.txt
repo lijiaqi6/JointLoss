@@ -1,0 +1,99 @@
+repo /users/cm1jil/jointloss  commit 33b22c9
+python 3.12.13 at /users/cm1jil/jointloss/.venv/bin/python
+inputs present (entry couples: 12,360 rows)
+code snapshot 33b22c9 in /scratch/job.11927759/paperA_code_11927759; job 11927759: 32 cores -> 16 workers x 2 threads; results in /mnt/parscratch/users/cm1jil/joint_smm_results
+running: /users/cm1jil/jointloss/.venv/bin/python -u /scratch/job.11927759/paperA_code_11927759/paperA_model/estimate.py polish --workers 16 --threads 2 --pseudo --label rec_hcage_b --start /users/cm1jil/jointloss/paperA_model/results/hpc_starts/hcage1b_it9_best.json --start-noise 0.5 --no-perturb beta --hc-age on --fix a_bar=25.639 --free-extra beta --tie sigmaJ_B=sigmaJ_W --bound-margin 0 --iters 15
+polish: 31 free parameters, LM multipliers [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0] -> /mnt/parscratch/users/cm1jil/joint_smm_results/runs/recovery_gn_rec_hcage_b_20261024_131501_j11927759
+weight shares by block: {"Wage growth": 0.155031, "Base hazards": 0.11796, "Joint loss, monthly": 0.112605, "Added work": 0.093742, "Wealth": 0.0785, "Employment levels": 0.06613, "Consumption": 0.058632, "Joint loss, annual": 0.057131, "His search": 0.053253, "Safety net": 0.052604, "Separation": 0.051583, "His earnings": 0.046875, "Her search": 0.029109, "Her exits": 0.013986, "Her earnings": 0.012857}
+warm-up evaluation (compiles before the workers start): Q 10,972.5  missing 0  260s 
+iter 0  Q 10,972.53
+iter 1  Q 10,972.53 -> 10,951.71  mu 10  cond(G'WG) 3.59e+10  evals 71  33 min
+iter 2  Q 10,951.71 -> 10,912.38  mu 100  cond(G'WG) 3.22e+10  evals 141  63 min
+iter 3  Q 10,912.38 -> 10,869.64  mu 1e+03  cond(G'WG) 2.42e+10  evals 211  88 min
+iter 4  Q 10,869.64 -> 10,833.35  mu 1e+03  cond(G'WG) 2.33e+10  evals 281  112 min
+iter 5  Q 10,833.35 -> 10,808.64  mu 1e+03  cond(G'WG) 2.09e+10  evals 351  137 min
+iter 6  Q 10,808.64 -> 10,766.49  mu 100  cond(G'WG) 2.19e+10  evals 421  161 min
+iter 7  Q 10,766.49 -> 10,728.93  mu 1e+03  cond(G'WG) 2.67e+10  evals 491  185 min
+iter 8  Q 10,728.93 -> 10,697.59  mu 1e+03  cond(G'WG) 2.21e+10  evals 561  209 min
+iter 9  Q 10,697.59 -> 10,663.13  mu 1e+03  cond(G'WG) 2.41e+10  evals 631  233 min
+iter 10  Q 10,663.13 -> 10,633.10  mu 1e+03  cond(G'WG) 2.46e+10  evals 701  257 min
+iter 11  Q 10,633.10 -> 10,594.86  mu 1e+03  cond(G'WG) 2.53e+10  evals 771  281 min
+iter 12  Q 10,594.86 -> 10,563.95  mu 1e+03  cond(G'WG) 2.21e+10  evals 841  305 min
+iter 13  Q 10,563.95 -> 10,531.59  mu 100  cond(G'WG) 2.01e+10  evals 911  329 min
+iter 14  Q 10,531.59 -> 10,504.31  mu 1e+03  cond(G'WG) 2.66e+10  evals 981  353 min
+iter 15  Q 10,504.31 -> 10,469.77  mu 1e+03  cond(G'WG) 2.36e+10  evals 1051  378 min
+polish stopped: 15 iterations; best Q 10,469.77
+        param   estimate        se  se_sim_noise
+0   delta_w_B   0.003076  0.000136      0.000077
+1   delta_w_W   0.001650  0.000063      0.000022
+2   delta_h_B   0.004973  0.000196      0.000070
+3   delta_h_W   0.003758  0.000116      0.000040
+4       pi_c0   0.000018  0.000009      0.000002
+5       pi_c1   0.000861  0.000056      0.000023
+6         p_H   0.017252  0.005295      0.001096
+7         m_H  12.482087  2.320901      0.886592
+8     lam_w_B   0.051507  0.006577      0.001935
+9     lam_w_W   0.222827  0.031532      0.015554
+10    lam_h_B   0.161142  0.015285      0.006053
+11    lam_h_W   0.463672  0.050705      0.020405
+12    pi_up_w   0.011615  0.000464      0.000153
+13    pi_up_h   0.006094  0.000315      0.000093
+14    pi_dn_w   0.000727  0.001872      0.000783
+15    pi_dn_h   0.031939  0.008682      0.002294
+16        d_w   0.021994  0.048446      0.014388
+17        d_h   0.000247  0.041915      0.011786
+18      phi_F   0.429653  0.020597      0.006043
+19      phi_P   0.026177  0.018938      0.006746
+20   theta_05   0.126699  0.020304      0.011211
+21  theta_617  -0.070128  0.030249      0.006232
+22      phi_h   0.295790  0.008560      0.004865
+23          F   0.599926  0.040334      0.022481
+24    kappa_S   0.145506  0.022878      0.004669
+25   sigma0_B   0.001467  0.000173      0.000085
+26   sigma0_W   0.000887  0.000057      0.000021
+27   sigmaJ_B   0.002775  0.003463      0.001919
+28     eta_up   0.903558  0.210616      0.053516
+29      g_age   0.029485  0.003260      0.000412
+30       beta   0.994922  0.000113      0.000026
+# Recovery: recovery_gn_rec_hcage_b_20261024_131501_j11927759
+
+31 free parameters; truth = /users/cm1jil/jointloss/paperA_model/results/hpc_starts/hcage1b_it9_best.json; start = truth + N(0, 0.5) in logistic units (seed 99); targets = model moments at the truth with CRN seed 20261018 (estimation seed 20261018); 1051 evaluations in 15 generations (378 min). Best Q 1.05e+04 (Q at the truth = 0 when the target seed equals the estimation seed); noise band of Q at the real targets across 5 seeds: sd 91.9.
+
+z: (value - truth) / s.e.; noise s.e. = simulation noise only (the plan's yardstick); data s.e. = sandwich with the bootstrap covariance of the targets plus simulation noise (the precision of an estimate on real data).
+
+| parameter | truth | start | estimate | noise s.e. | z start | z estimate | within 2 noise s.e. | data s.e. | z estimate (data s.e.) |
+|---|---:|---:|---:|---:|---:|---:|---|---:|---:|
+| delta_w_B | 0.002957 | 0.003069 | 0.003076 | 7.74e-05 | +1.4 | +1.5 | yes | 0.000136 | +0.88 |
+| delta_w_W | 0.002048 | 0.001649 | 0.00165 | 2.23e-05 | -17.9 | -17.9 | NO | 6.29e-05 | -6.32 |
+| delta_h_B | 0.004878 | 0.004981 | 0.004973 | 6.99e-05 | +1.5 | +1.4 | yes | 0.000196 | +0.49 |
+| delta_h_W | 0.002778 | 0.003769 | 0.003758 | 3.96e-05 | +25.0 | +24.7 | NO | 0.000116 | +8.46 |
+| pi_c0 | 4.35e-05 | 1.83e-05 | 1.82e-05 | 1.92e-06 | -13.2 | -13.2 | NO | 8.7e-06 | -2.91 |
+| pi_c1 | 0.0003822 | 0.0008655 | 0.0008609 | 2.32e-05 | +20.8 | +20.6 | NO | 5.62e-05 | +8.51 |
+| p_H | 0.01933 | 0.01745 | 0.01725 | 0.0011 | -1.7 | -1.9 | yes | 0.00529 | -0.39 |
+| m_H | 14.69 | 12.57 | 12.48 | 0.887 | -2.4 | -2.5 | NO | 2.32 | -0.95 |
+| lam_w_B | 0.07967 | 0.05264 | 0.05151 | 0.00194 | -14.0 | -14.6 | NO | 0.00658 | -4.28 |
+| lam_w_W | 0.1573 | 0.2238 | 0.2228 | 0.0156 | +4.3 | +4.2 | NO | 0.0315 | +2.08 |
+| lam_h_B | 0.1231 | 0.1608 | 0.1611 | 0.00605 | +6.2 | +6.3 | NO | 0.0153 | +2.49 |
+| lam_h_W | 0.3246 | 0.4591 | 0.4637 | 0.0204 | +6.6 | +6.8 | NO | 0.0507 | +2.74 |
+| pi_up_w | 0.008162 | 0.01167 | 0.01161 | 0.000153 | +22.8 | +22.5 | NO | 0.000464 | +7.45 |
+| pi_up_h | 0.005427 | 0.006055 | 0.006094 | 9.29e-05 | +6.8 | +7.2 | NO | 0.000315 | +2.11 |
+| pi_dn_w | 0.0006423 | 0.0007566 | 0.0007266 | 0.000783 | +0.1 | +0.1 | yes | 0.00187 | +0.05 |
+| pi_dn_h | 0.02137 | 0.03206 | 0.03194 | 0.00229 | +4.7 | +4.6 | NO | 0.00868 | +1.22 |
+| d_w | 0.01883 | 0.01218 | 0.02199 | 0.0144 | -0.5 | +0.2 | yes | 0.0484 | +0.07 |
+| d_h | 0.0002468 | 0.0002412 | 0.0002468 | 0.0118 | -0.0 | +0.0 | yes | 0.0419 | +0.00 |
+| phi_F | 0.3603 | 0.4292 | 0.4297 | 0.00604 | +11.4 | +11.5 | NO | 0.0206 | +3.37 |
+| phi_P | 0.105 | 0.02544 | 0.02618 | 0.00675 | -11.8 | -11.7 | NO | 0.0189 | -4.16 |
+| theta_05 | -0.0007011 | 0.1257 | 0.1267 | 0.0112 | +11.3 | +11.4 | NO | 0.0203 | +6.27 |
+| theta_617 | -0.0176 | -0.07333 | -0.07013 | 0.00623 | -8.9 | -8.4 | NO | 0.0302 | -1.74 |
+| phi_h | 0.171 | 0.2968 | 0.2958 | 0.00486 | +25.9 | +25.7 | NO | 0.00856 | +14.58 |
+| F | 0.5999 | 0.5999 | 0.5999 | 0.0225 | +0.0 | +0.0 | yes | 0.0403 | +0.00 |
+| kappa_S | 0.1208 | 0.1475 | 0.1455 | 0.00467 | +5.7 | +5.3 | NO | 0.0229 | +1.08 |
+| sigma0_B | 0.002889 | 0.001465 | 0.001467 | 8.47e-05 | -16.8 | -16.8 | NO | 0.000173 | -8.23 |
+| sigma0_W | 0.00134 | 0.0008926 | 0.0008869 | 2.14e-05 | -20.9 | -21.1 | NO | 5.75e-05 | -7.89 |
+| sigmaJ_B | 0.001358 | 0.002626 | 0.002775 | 0.00192 | +0.7 | +0.7 | yes | 0.00346 | +0.41 |
+| eta_up | 0.8573 | 0.9128 | 0.9036 | 0.0535 | +1.0 | +0.9 | yes | 0.211 | +0.22 |
+| g_age | 0.03 | 0.02898 | 0.02949 | 0.000412 | -2.5 | -1.3 | yes | 0.00326 | -0.16 |
+| beta | 0.9949 | 0.9949 | 0.9949 | 2.57e-05 | +0.0 | +0.0 | yes | 0.000113 | +0.01 |
+
+Within 2 noise s.e.: 11 of 31; within 2 data s.e.: 15 of 31. Q by generation (best): 0: 1.1e+04, 1: 1.1e+04, 2: 1.09e+04, 3: 1.09e+04, 4: 1.08e+04, 5: 1.08e+04, 6: 1.08e+04, 7: 1.07e+04, 8: 1.07e+04, 9: 1.07e+04, 10: 1.06e+04, 11: 1.06e+04, 12: 1.06e+04, 13: 1.05e+04, 14: 1.05e+04, 15: 1.05e+04
+-> /mnt/parscratch/users/cm1jil/joint_smm_results/runs/recovery_gn_rec_hcage_b_20261024_131501_j11927759
