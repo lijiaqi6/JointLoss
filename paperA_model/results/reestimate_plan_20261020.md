@@ -372,6 +372,11 @@ PI approved the order 0-6, the step-1 code, F fixed at 0.101 and the open items 
   +0.08%. v_haz (Black with White hazards): +1.81%, no-earner 1.21 -> 0.85% (43% of the race gap). v_sep = base by
   construction (sigmaJ pooled): drop or redefine. i_indep joint-loss consumption falls rest on 26 / 22 events: not
   readable. Final: full size at final1 with --indep (Joint-indep-final).
+- PI 2026-10-24 ~18:00 (Stanage has ~1,500 free CPUs): Joint-final-hpc 11928212 = final1 continued on the HPC
+  (22 vs 37 min per iteration), label finalhpc, from results/hpc_starts/final1_it7_best.json (final1 after
+  iteration 7, Q 841.14; commit 62213e1), same flags and noise weights, --iters 33 (40 in all), 14 h, --push. The PC
+  final1 continues; whichever ends first is used. A theta_617 = 0 LM was proposed and withdrawn (PI rule 2026-10-21:
+  Wald, not LM reruns; z = -3.3***): its sign is read from the Jacobian at the final estimate instead.
 - Still open from INTAKE 2b: fix the harness's measurement-error layer before any Table 3 number is reported again.
 
 ## 5. PI decisions this note needs
