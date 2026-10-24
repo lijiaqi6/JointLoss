@@ -65,7 +65,8 @@ PARAMS = [
     ("theta_05", 0.05, -0.5, 1.0, "work"),
     ("theta_617", 0.0, -0.5, 1.0, "work"),
     ("phi_h", 0.05, -0.5, 1.0, "work"),
-    ("F", 0.08, 0.0, 0.6, "work"),
+    ("F", 0.08, 0.0, 2.0, "work"),                   # upper bound 0.6 -> 2.0 (2026-10-24): F sat at 0.6 in every
+                                                      # run and F07 (F = 0.7) lowered Q 841 -> 616: the bound bound
     ("kappa_S", 0.05, 0.0, 1.0, "safety_net"),
     ("sigma0_B", 0.0027, 0.0, 0.02, "separation"),
     ("sigma0_W", 0.0013, 0.0, 0.02, "separation"),
